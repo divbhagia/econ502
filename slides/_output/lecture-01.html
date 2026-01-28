@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="lecture-01_files/libs/clipboard/clipboard.min.js"></script>
+<script src="lecture-01_files/libs/quarto-html/tabby.min.js"></script>
+<script src="lecture-01_files/libs/quarto-html/popper.min.js"></script>
+<script src="lecture-01_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="lecture-01_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="lecture-01_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="lecture-01_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="lecture-01_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.56">
+
+  <meta name="author" content="Div Bhagia">
+  <title>Consumer Preferences  and Choice</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="lecture-01_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="lecture-01_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="lecture-01_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="lecture-01_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="lecture-01_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="lecture-01_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="lecture-01_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="lecture-01_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="lecture-01_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section class="quarto-title-block center">
+  <h1 class="title">Consumer Preferences<br> and Choice</h1>
+  <p class="subtitle">Lecture 1</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Div Bhagia 
+</div>
+</div>
+</div>
+
+</section>
+<section>
+<section class="title-slide slide level1 center" data-background-color="#1e5288">
+<h1>Introduction</h1>
+
+</section>
+<section class="slide level2">
+<h2>Why Study Microeconomics?</h2>
+<ul>
+<li><strong>Non-economists typically think of economics when it concerns the <em>macro</em> stuff</strong> (unemployment, inflation, growth, recessions etc.)</li>
+</ul>
+<div class="fragment">
+<ul>
+<li><p><strong>However, the macro economy is made up of millions of <em>micro</em> decisions.</strong></p>
+<ul>
+<li><strong>People:</strong> what to buy, how much to work, how much to save</li>
+<li><strong>Firms:</strong> pricing, hiring, location, investment</li>
+<li><strong>Government:</strong> infrastructure, regulation, tax policy</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><p><strong>Markets coordinate these decisions invisibly and <em>often</em> effectively</strong>.</p>
+<ul>
+<li>Gas is at the pump when you need it</li>
+<li>Jobs exist for qualified workers</li>
+<li>Products get delivered</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+<h2>Why Study Microeconomics?</h2>
+<ul>
+<li><p><strong>However, sometimes markets produce undesirable outcomes or fail.</strong></p>
+<ul>
+<li>Each micro failure may seem small (one shortage, one person unemployed, one overpriced good)</li>
+<li>But small failures add up to large macro consequences</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li><p><strong>In this course, we will study:</strong></p>
+<ul>
+<li>How individuals and firms make decisions?</li>
+<li>How markets coordinate these decisions?</li>
+<li>When markets work efficiently and when they fail?<br>
+</li>
+<li>What interventions can help?</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+<h2>Course Roadmap</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3>Competitive Markets</h3>
+<ul>
+<li>Consumer choice (1-2)</li>
+<li>Firm production (3)</li>
+<li>Market equilibrium (4)</li>
+<li>Efficiency and welfare (5)</li>
+</ul>
+<h3>Market Power</h3>
+<ul>
+<li>Monopoly and oligopoly (6-7)</li>
+<li>Labor markets and monopsony (8)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3>Market Failures</h3>
+<ul>
+<li>Information asymmetries (9)</li>
+<li>Externalities and public goods (10)</li>
+</ul>
+<h3>Uncertainty &amp; Strategy</h3>
+<ul>
+<li>Decisions under uncertainty (11)</li>
+<li>Game theory (12)</li>
+</ul>
+</div></div>
+</section>
+<section class="slide level2">
+<h2>Today’s Lecture</h2>
+<p><strong>Central question</strong>: How do individuals make choices?</p>
+<div class="fragment" style="margin-top: 1em;">
+<p><strong>Economic Approach to Choice</strong></p>
+<ul>
+<li>Individuals have <strong>preferences</strong> over outcomes</li>
+<li>These preferences are <strong>rational</strong> (satisfy certain axioms)</li>
+<li>We can represent preferences with a <strong>utility function</strong></li>
+<li>Given constraints, individuals <strong>maximize utility</strong></li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Does everyone really “maximize utility”?</strong></p>
+<ul>
+<li>Maybe not consciously—but people behave “as if” they do</li>
+<li>The model predicts behavior relatively well</li>
+<li>Alternative: behavioral economics (we’ll discuss limitations)</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section class="title-slide slide level1 center" data-background-color="#1e5288">
+<h1>Preferences and Utility</h1>
+
+</section>
+<section class="slide level2">
+<h2>Preferences: Basic Setup</h2>
+<p>We consider a consumer choosing between bundles of goods.</p>
+<ul>
+<li><strong>Consumption bundle</strong>: <span class="math inline">\((x, y)\)</span> where <span class="math inline">\(x, y \geq 0\)</span></li>
+<li><strong>Preference relation</strong>: <span class="math inline">\(\succeq\)</span> (weakly preferred to)
+<ul>
+<li><span class="math inline">\(A \succeq B\)</span>: Bundle <span class="math inline">\(A\)</span> is at least as good as bundle <span class="math inline">\(B\)</span></li>
+<li><span class="math inline">\(A \succ B\)</span>: Bundle <span class="math inline">\(A\)</span> is strictly preferred to <span class="math inline">\(B\)</span></li>
+<li><span class="math inline">\(A \sim B\)</span>: Consumer is indifferent between <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span></li>
+</ul></li>
+</ul>
+<p><strong>Key question</strong>: What properties should preferences satisfy for them to be “rational”?</p>
+</section>
+<section class="slide level2">
+<h2>Axioms of Rational Choice</h2>
+<h3>1. Completeness</h3>
+<p>For any two bundles <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, the consumer can state which is preferred or that they are indifferent: <span class="math display">\[A \succeq B, \quad B \succeq A, \quad \text{or both (indifference)}\]</span></p>
+<p><strong>Interpretation</strong>: Consumers can always make comparisons. Rules out indecision.</p>
+<div class="fragment" style="margin-top: 1em;">
+<!-- -->
+<h3>2. Transitivity</h3>
+<p>If <span class="math inline">\(A \succeq B\)</span> and <span class="math inline">\(B \succeq C\)</span>, then <span class="math inline">\(A \succeq C\)</span></p>
+<p><strong>Interpretation</strong>: Preferences are internally consistent. No cycles.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Axioms of Rational Choice (cont.)</h2>
+<h3>3. Continuity</h3>
+<p>Small changes in consumption bundles lead to small changes in preferences.</p>
+<p><strong>Technical</strong>: For any bundle <span class="math inline">\(A\)</span>, the sets <span class="math inline">\(\{B : B \succeq A\}\)</span> and <span class="math inline">\(\{B : A \succeq B\}\)</span> are closed.</p>
+<p><strong>Interpretation</strong>: No sudden jumps. Preferences are “smooth.”</p>
+<div class="fragment" style="margin-top: 1em;">
+<!-- -->
+<h3>4. Non-satiation (Monotonicity)</h3>
+<p>More is better: If <span class="math inline">\(A\)</span> has at least as much of everything as <span class="math inline">\(B\)</span>, and strictly more of at least one good, then <span class="math inline">\(A \succ B\)</span>.</p>
+<p><strong>Interpretation</strong>: Consumers always prefer more to less (at least weakly).</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Axioms of Rational Choice (cont.)</h2>
+<h3>5. Convexity</h3>
+<p>Averages are preferred to extremes. If <span class="math inline">\(A \sim B\)</span>, then: <span class="math display">\[\lambda A + (1-\lambda)B \succeq A \text{ for } \lambda \in [0,1]\]</span></p>
+<p><strong>Interpretation</strong>: Consumers prefer balanced consumption bundles. Diminishing marginal rate of substitution.</p>
+<p><strong>Example</strong>: If you’re indifferent between (5 apples, 0 oranges) and (0 apples, 5 oranges), you prefer (5 apples, 5 oranges) to either extreme.</p>
+</section>
+<section class="slide level2">
+<h2>When Do Axioms Fail?</h2>
+<h3>Behavioral Economics Violations</h3>
+<ul>
+<li><p><strong>Framing effects</strong>: Preferences change based on how options are presented</p></li>
+<li><p><strong>Intransitivity</strong>: Preference reversals in complex choices (Condorcet paradox)</p></li>
+<li><p><strong>Present bias</strong>: Time-inconsistent preferences (<span class="math inline">\(\beta\delta\)</span> model)</p></li>
+<li><p><strong>Reference dependence</strong>: Preferences depend on current endowment (loss aversion)</p></li>
+<li><p><strong>Bounded rationality</strong></p>
+<ul>
+<li>Too many options → choice paralysis</li>
+<li>Computational constraints</li>
+<li>Limited attention</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>From Preferences to Utility</h2>
+<p><strong>Key Theorem</strong>: If preferences satisfy completeness, transitivity, continuity, and monotonicity, then there exists a continuous <strong>utility function</strong> <span class="math inline">\(U(x,y)\)</span> that represents them: <span class="math display">\[A \succeq B \iff U(A) \geq U(B)\]</span></p>
+<p><strong>Interpretation</strong>: We can assign numbers to bundles such that higher numbers = more preferred.</p>
+<div class="fragment" style="margin-top: 1em;">
+<p><strong>Important</strong>: Utility is <strong>ordinal</strong>, not <strong>cardinal</strong></p>
+<ul>
+<li>Only the <strong>ranking</strong> matters, the magnitude of utility has no meaning.</li>
+<li><span class="math inline">\(U(A) = 10, U(B) = 5\)</span> tells us <span class="math inline">\(A \succ B\)</span>. It does NOT mean “<span class="math inline">\(A\)</span> is twice as good as <span class="math inline">\(B\)</span>”</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+<h2>Monotonic Transformations</h2>
+<ul>
+<li><p>Since utility is ordinal, we can apply any <strong>strictly increasing transformation</strong> without changing preferences:</p></li>
+<li><p>If <span class="math inline">\(U(x,y)\)</span> represents preferences, so does <span class="math inline">\(V(x,y) = f(U(x,y))\)</span> for any strictly increasing <span class="math inline">\(f\)</span>.</p></li>
+<li><p><strong>Examples</strong>:</p>
+<ul>
+<li><span class="math inline">\(U(x,y) = xy\)</span> and <span class="math inline">\(V(x,y) = \ln(xy)\)</span> represent the same preferences</li>
+<li><span class="math inline">\(U(x,y) = x^{0.5}y^{0.5}\)</span> and <span class="math inline">\(V(x,y) = xy\)</span> represent the same preferences</li>
+</ul></li>
+</ul>
+<p><strong>Why this matters</strong>: We can transform utility functions to make calculations easier.</p>
+</section></section>
+<section>
+<section class="title-slide slide level1 center" data-background-color="#1e5288">
+<h1>Indifference Curves &amp; MRS</h1>
+
+</section>
+<section class="slide level2">
+<h2>Indifference Curves</h2>
+<p>An <strong>indifference curve</strong> is the set of all bundles that give the same utility level:</p>
+<p><span class="math display">\[IC(U_0) = \{(x,y) : U(x,y) = U_0\}\]</span></p>
+<p><strong>Interpretation</strong>: The consumer is indifferent between any two points on the same curve.</p>
+<div class="fragment" style="margin-top: -1em;">
+<div id="75beebfa" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture-01_files/figure-revealjs/cell-2-output-1.png" width="566" height="398"></p>
+<figcaption>Indifference Curves for U(x,y) = xy</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>Properties of Indifference Curves</h2>
+<p><strong>Under our axioms, indifference curves must be</strong>:</p>
+<ol type="1">
+<li><p><strong>Downward sloping</strong> (from non-satiation)</p>
+<ul>
+<li>To keep utility constant, if <span class="math inline">\(x\)</span> increases, <span class="math inline">\(y\)</span> must decrease</li>
+</ul></li>
+<li><p><strong>Do not cross</strong> (from transitivity)</p>
+<ul>
+<li>If they crossed, we’d have <span class="math inline">\(A \sim B\)</span> and <span class="math inline">\(A \sim C\)</span> but <span class="math inline">\(B \not\sim C\)</span></li>
+</ul></li>
+<li><p><strong>Convex to the origin</strong> (from convexity of preferences)</p>
+<ul>
+<li>Averages preferred to extremes</li>
+<li>Equivalently: diminishing marginal rate of substitution</li>
+</ul></li>
+<li><p><strong>Higher curves represent higher utility</strong> (from monotonicity)</p></li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Marginal Rate of Substitution (MRS)</h2>
+<ul>
+<li><p>The <strong>marginal rate of substitution</strong> is the rate at which the consumer is willing to trade good <span class="math inline">\(Y\)</span> for good <span class="math inline">\(X\)</span> while maintaining constant utility.</p></li>
+<li><p><strong>Geometrically</strong>: MRS = -(slope of indifference curve)</p></li>
+</ul>
+<p><span class="math display">\[MRS = -\frac{dy}{dx}\bigg|_{U=const}\]</span></p>
+<ul>
+<li><p><strong>Interpretation</strong>: How many units of <span class="math inline">\(Y\)</span> are you willing to give up to get one more unit of <span class="math inline">\(X\)</span>?</p></li>
+<li><p><strong>Example</strong>: If MRS = 2, you’re willing to give up 2 units of <span class="math inline">\(Y\)</span> to get 1 more unit of <span class="math inline">\(X\)</span> (and remain indifferent).</p></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Deriving the MRS Formula</h2>
+<p>Along an indifference curve, utility is constant: <span class="math inline">\(U(x,y) = \bar{U}\)</span></p>
+<p>Taking the total differential: <span class="math display">\[dU = \frac{\partial U}{\partial x}dx + \frac{\partial U}{\partial y}dy = 0\]</span></p>
+<p>Rearranging: <span class="math display">\[\frac{\partial U}{\partial y}dy = -\frac{\partial U}{\partial x}dx \quad \rightarrow \quad \frac{dy}{dx} = -\frac{\partial U/\partial x}{\partial U/\partial y} = -\frac{MU_x}{MU_y}\]</span></p>
+<p>Therefore: <span class="math display">\[\boxed{MRS = -\frac{dy}{dx} = \frac{MU_x}{MU_y}}\]</span></p>
+</section>
+<section class="slide level2">
+<h2>Visualizing MRS</h2>
+<div id="2d9d9a43" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="lecture-01_files/figure-revealjs/cell-3-output-1.png" width="759" height="567"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>Diminishing MRS</h2>
+<p><strong>Convexity assumption</strong> → <strong>Diminishing MRS</strong></p>
+<p>As you consume more of good <span class="math inline">\(X\)</span> (moving right along an IC), the MRS decreases:</p>
+<ul>
+<li>When you have a lot of <span class="math inline">\(Y\)</span> and little <span class="math inline">\(X\)</span>: High MRS (willing to give up a lot of <span class="math inline">\(Y\)</span> for more <span class="math inline">\(X\)</span>)</li>
+<li>When you have a lot of <span class="math inline">\(X\)</span> and little <span class="math inline">\(Y\)</span>: Low MRS (not willing to give up much <span class="math inline">\(Y\)</span> for more <span class="math inline">\(X\)</span>)</li>
+</ul>
+<p><strong>Economic intuition</strong>: Scarcity increases value. The less you have of something, the more you value additional units.</p>
+</section>
+<section class="slide level2">
+<h2>Try It Yourself: Calculate MRS</h2>
+<p><strong>Exercise</strong>: Consider the utility function <span class="math inline">\(U(x,y) = x^{0.3}y^{0.7}\)</span></p>
+<ol type="1">
+<li>Find the marginal utilities <span class="math inline">\(MU_x\)</span> and <span class="math inline">\(MU_y\)</span></li>
+<li>Calculate the MRS</li>
+<li>Evaluate the MRS at the point <span class="math inline">\((x,y) = (10, 20)\)</span></li>
+<li>Interpret your answer: How many units of <span class="math inline">\(y\)</span> would the consumer give up for one more unit of <span class="math inline">\(x\)</span>?</li>
+</ol>
+<div class="fragment">
+<p><strong>Hint</strong>: <span class="math inline">\(MU_x = \frac{\partial U}{\partial x}\)</span>, and remember <span class="math inline">\(MRS = \frac{MU_x}{MU_y}\)</span></p>
+</div>
+</section></section>
+<section>
+<section class="title-slide slide level1 center" data-background-color="#1e5288">
+<h1>Common Utility Functions</h1>
+
+</section>
+<section class="slide level2">
+<h2>Perfect Substitutes</h2>
+<p>Goods that can be substituted at a constant rate.</p>
+<p><span class="math display">\[U(x,y) = ax + by\]</span></p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>Different brands of the same product (e.g., Coke vs Pepsi for some consumers)</li>
+<li>Coffee from different cafes</li>
+<li>Generic vs brand-name drugs (if truly equivalent)</li>
+</ul>
+<p><strong>Key features</strong>:</p>
+<ul>
+<li>Indifference curves are <strong>straight lines</strong></li>
+<li>MRS is <strong>constant</strong>: <span class="math inline">\(MRS = a/b\)</span></li>
+<li>Consumer willing to trade at fixed rate regardless of bundle</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Perfect Substitutes Graph</h2>
+<div id="ae8b16a1" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture-01_files/figure-revealjs/cell-4-output-1.png" width="759" height="567"></p>
+<figcaption>Perfect Substitutes: U = 2x + y</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>Perfect Complements</h2>
+<p>Goods that must be consumed in fixed proportions.</p>
+<p><span class="math display">\[U(x,y) = \min\{ax, by\}\]</span></p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>Left and right shoes</li>
+<li>Coffee and cream (for some)</li>
+<li>Cars and tires (need 4 tires per car)</li>
+<li>Computers and monitors</li>
+</ul>
+<p><strong>Key features</strong>:</p>
+<ul>
+<li>Indifference curves are <strong>L-shaped</strong></li>
+<li>Consumed in fixed ratio: <span class="math inline">\(x/y = b/a\)</span></li>
+<li>MRS is undefined (technically infinite or zero, depending on side)</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Perfect Complements Graph</h2>
+<div id="18ddac43" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture-01_files/figure-revealjs/cell-5-output-1.png" width="759" height="567"></p>
+<figcaption>Perfect Complements: U = min{x, y}</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>Cobb-Douglas Utility</h2>
+<p>The most widely used functional form in economics:</p>
+<p><span class="math display">\[U(x,y) = x^{\alpha}y^{\beta}\]</span></p>
+<p>Or equivalently (applying monotonic transformation):</p>
+<p><span class="math display">\[U(x,y) = \alpha \ln x + \beta \ln y\]</span></p>
+<p><strong>Key features</strong>:</p>
+<ul>
+<li>Smooth, convex indifference curves</li>
+<li>Interior solutions (typically)</li>
+<li>Constant expenditure shares</li>
+<li><span class="math inline">\(MRS = \frac{\alpha}{\beta}\cdot\frac{y}{x}\)</span></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Cobb-Douglas Graph</h2>
+<div id="6ba3350d" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture-01_files/figure-revealjs/cell-6-output-1.png" width="1191" height="520"></p>
+<figcaption>Cobb-Douglas Utility: <span class="math inline">\(U = x^α y^β\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>Cobb-Douglas: MRS Calculation</h2>
+<p>For <span class="math inline">\(U(x,y) = x^{\alpha}y^{\beta}\)</span>:</p>
+<p><strong>Step 1</strong>: Find marginal utilities <span class="math display">\[MU_x = \frac{\partial U}{\partial x} = \alpha x^{\alpha-1}y^{\beta}\]</span> <span class="math display">\[MU_y = \frac{\partial U}{\partial y} = \beta x^{\alpha}y^{\beta-1}\]</span></p>
+<p><strong>Step 2</strong>: Calculate MRS <span class="math display">\[MRS = \frac{MU_x}{MU_y} = \frac{\alpha x^{\alpha-1}y^{\beta}}{\beta x^{\alpha}y^{\beta-1}} = \frac{\alpha}{\beta} \cdot \frac{y}{x}\]</span></p>
+<p>MRS depends on the ratio <span class="math inline">\(y/x\)</span> and the preference parameters <span class="math inline">\(\alpha/\beta\)</span>.</p>
+</section>
+<section class="slide level2">
+<h2>CES Utility</h2>
+<p><strong>Constant Elasticity of Substitution (CES)</strong> utility function:</p>
+<p><span class="math display">\[U(x,y) = (ax^{\rho} + by^{\rho})^{1/\rho}, \quad \rho \leq 1, \rho \neq 0\]</span></p>
+<p><strong>Elasticity of substitution</strong>: <span class="math inline">\(\sigma = \frac{1}{1-\rho}\)</span></p>
+<p><strong>Special cases</strong>:</p>
+<ul>
+<li><span class="math inline">\(\rho \to -\infty\)</span>: Perfect complements (<span class="math inline">\(\sigma = 0\)</span>)</li>
+<li><span class="math inline">\(\rho = 0\)</span>: Cobb-Douglas (<span class="math inline">\(\sigma = 1\)</span>)<br>
+</li>
+<li><span class="math inline">\(\rho = 1\)</span>: Perfect substitutes (<span class="math inline">\(\sigma = \infty\)</span>)</li>
+</ul>
+<p><strong>Flexibility</strong>: CES nests all three cases mentioned.</p>
+</section></section>
+<section>
+<section class="title-slide slide level1 center" data-background-color="#1e5288">
+<h1>Budget Constraints</h1>
+
+</section>
+<section class="slide level2">
+<h2>The Budget Constraint</h2>
+<p>Consumers have limited income <span class="math inline">\(I\)</span> and face prices <span class="math inline">\(p_x, p_y\)</span> for goods:</p>
+<p><span class="math display">\[p_x \cdot x + p_y \cdot y \leq I\]</span></p>
+<p><strong>Budget line</strong>: Set of bundles that cost exactly <span class="math inline">\(I\)</span></p>
+<p><span class="math display">\[p_x \cdot x + p_y \cdot y = I\]</span></p>
+<p>Rearranging for <span class="math inline">\(y\)</span>:</p>
+<p><span class="math display">\[y = \frac{I}{p_y} - \frac{p_x}{p_y}x\]</span></p>
+<ul>
+<li><strong>Intercept</strong>: <span class="math inline">\(I/p_y\)</span> (max amount of <span class="math inline">\(y\)</span> if <span class="math inline">\(x=0\)</span>)</li>
+<li><strong>Slope</strong>: <span class="math inline">\(-p_x/p_y\)</span> (opportunity cost of <span class="math inline">\(x\)</span> in terms of <span class="math inline">\(y\)</span>)</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Budget Constraint Graph</h2>
+<div id="6ec392b5" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture-01_files/figure-revealjs/cell-7-output-1.png" width="759" height="567"></p>
+<figcaption>Budget Line with <span class="math inline">\(I = 100, p_x = 10, p_y = 5\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>Changes in Income</h2>
+<div id="9e6da6fc" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="lecture-01_files/figure-revealjs/cell-8-output-1.png" width="759" height="567"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>Changes in Prices</h2>
+<div id="21378a78" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="lecture-01_files/figure-revealjs/cell-9-output-1.png" width="759" height="567"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section class="title-slide slide level1 center" data-background-color="#1e5288">
+<h1>Utility Maximization</h1>
+
+</section>
+<section class="slide level2">
+<h2>The Consumer’s Problem</h2>
+<p>The consumer chooses <span class="math inline">\((x,y)\)</span> to:</p>
+<p><span class="math display">\[\max_{x,y} \quad U(x,y)\]</span></p>
+<p>subject to:</p>
+<p><span class="math display">\[p_x x + p_y y = I\]</span> <span class="math display">\[x \geq 0, \quad y \geq 0\]</span></p>
+<p><strong>Goal</strong>: Find the highest indifference curve that touches the budget line.</p>
+<p><strong>Intuition</strong>: Get as much utility as possible given your budget.</p>
+</section>
+<section class="slide level2">
+<h2>Graphical Solution</h2>
+<div id="7849728b" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="lecture-01_files/figure-revealjs/cell-10-output-1.png" width="807" height="615"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>Why Tangency is Optimal</h2>
+<p><strong>At the tangency point</strong>: MRS = <span class="math inline">\(p_x/p_y\)</span></p>
+<p><strong>Intuition</strong>: Consumer’s subjective tradeoff (MRS) equals market tradeoff</p>
+<ul>
+<li><strong>MRS</strong>: How much <span class="math inline">\(Y\)</span> you’re willing to give up for 1 unit of <span class="math inline">\(X\)</span></li>
+<li><strong><span class="math inline">\(p_x/p_y\)</span></strong>: How much <span class="math inline">\(Y\)</span> you must give up (in market) for 1 unit of <span class="math inline">\(X\)</span></li>
+</ul>
+<p><strong>If MRS <span class="math inline">\(&gt;\)</span> <span class="math inline">\(p_x/p_y\)</span></strong>:</p>
+<ul>
+<li>You value <span class="math inline">\(X\)</span> more than market does</li>
+<li>Should buy more <span class="math inline">\(X\)</span>, less <span class="math inline">\(Y\)</span></li>
+</ul>
+<p><strong>If MRS <span class="math inline">\(&lt;\)</span> <span class="math inline">\(p_x/p_y\)</span></strong>:</p>
+<ul>
+<li>You value <span class="math inline">\(X\)</span> less than market does<br>
+</li>
+<li>Should buy less <span class="math inline">\(X\)</span>, more <span class="math inline">\(Y\)</span></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>The Lagrangian Method</h2>
+<p>The consumer’s problem: <span class="math display">\[\max_{x,y} \quad U(x,y) \quad \text{subject to} \quad p_x x + p_y y = I\]</span></p>
+<p><strong>Lagrangian</strong>: <span class="math display">\[\mathcal{L}(x,y,\lambda) = U(x,y) + \lambda(I - p_x x - p_y y)\]</span></p>
+<p>where <span class="math inline">\(\lambda\)</span> is the <strong>Lagrange multiplier</strong>.</p>
+<p><strong>First-order conditions</strong> (FOCs):</p>
+<ol type="1">
+<li><span class="math inline">\(\frac{\partial \mathcal{L}}{\partial x} = \frac{\partial U}{\partial x} - \lambda p_x = 0\)</span></li>
+<li><span class="math inline">\(\frac{\partial \mathcal{L}}{\partial y} = \frac{\partial U}{\partial y} - \lambda p_y = 0\)</span></li>
+<li><span class="math inline">\(\frac{\partial \mathcal{L}}{\partial \lambda} = I - p_x x - p_y y = 0\)</span></li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>First-Order Conditions</h2>
+<p>From the first two FOCs: <span class="math display">\[MU_x = \lambda p_x \quad \text{and} \quad MU_y = \lambda p_y\]</span></p>
+<p>Dividing these: <span class="math display">\[\frac{MU_x}{MU_y} = \frac{p_x}{p_y}\]</span></p>
+<p>This is exactly the tangency condition: <strong>MRS = price ratio</strong>!</p>
+</section>
+<section class="slide level2">
+<h2>Interpretation of λ</h2>
+<p>From FOCs: <span class="math inline">\(\lambda = \frac{MU_x}{p_x} = \frac{MU_y}{p_y}\)</span></p>
+<p><strong>λ = marginal utility of income</strong></p>
+<ul>
+<li>How much utility increases if income increases by $1</li>
+<li>Measures the “value” of relaxing the budget constraint</li>
+<li>Important for welfare analysis</li>
+</ul>
+<p><strong>Example</strong>: If <span class="math inline">\(\lambda = 0.5\)</span>:</p>
+<ul>
+<li>$1 more of income increases utility by 0.5 utils</li>
+<li>Equivalently: consumer willing to pay $2 for 1 more util</li>
+</ul>
+<div class="fragment">
+<p><strong>Note</strong>: λ decreases as income increases (diminishing marginal utility of income)</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Example: Cobb-Douglas Utility</h2>
+<p><strong>Setup</strong>: <span class="math inline">\(U(x,y) = x^{\alpha}y^{\beta}\)</span>, budget: <span class="math inline">\(p_x x + p_y y = I\)</span></p>
+<p><strong>Step 1</strong>: Form the Lagrangian <span class="math display">\[\mathcal{L} = x^{\alpha}y^{\beta} + \lambda(I - p_x x - p_y y)\]</span></p>
+<p><strong>Step 2</strong>: Take FOCs <span class="math display">\[\frac{\partial \mathcal{L}}{\partial x} = \alpha x^{\alpha-1}y^{\beta} - \lambda p_x = 0\]</span> <span class="math display">\[\frac{\partial \mathcal{L}}{\partial y} = \beta x^{\alpha}y^{\beta-1} - \lambda p_y = 0\]</span> <span class="math display">\[\frac{\partial \mathcal{L}}{\partial \lambda} = I - p_x x - p_y y = 0\]</span></p>
+</section>
+<section class="slide level2">
+<h2>Example: Cobb-Douglas Utility (cont.)</h2>
+<p><strong>Step 3</strong>: Combine first two FOCs <span class="math display">\[\frac{\alpha x^{\alpha-1}y^{\beta}}{\beta x^{\alpha}y^{\beta-1}} = \frac{p_x}{p_y}\]</span></p>
+<p>Simplifying: <span class="math display">\[\frac{\alpha}{\beta} \cdot \frac{y}{x} = \frac{p_x}{p_y}\]</span></p>
+<p>Solving for <span class="math inline">\(y\)</span>: <span class="math display">\[y = \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot x\]</span></p>
+</section>
+<section class="slide level2">
+<h2>Example: Cobb-Douglas Utility (cont.)</h2>
+<p><strong>Step 4</strong>: Substitute into budget constraint <span class="math display">\[p_x x + p_y \cdot \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot x = I\]</span> <span class="math display">\[p_x x + \frac{\beta}{\alpha} p_x x = I\]</span> <span class="math display">\[p_x x \left(1 + \frac{\beta}{\alpha}\right) = I\]</span> <span class="math display">\[p_x x \cdot \frac{\alpha + \beta}{\alpha} = I\]</span></p>
+</section>
+<section class="slide level2">
+<h2>Example: Cobb-Douglas Utility (cont.)</h2>
+<p><strong>Step 5</strong>: Solve for <span class="math inline">\(x^*\)</span>: <span class="math display">\[x^* = \frac{\alpha I}{(\alpha + \beta)p_x}\]</span></p>
+<p>Substitute back to get <span class="math inline">\(y^*\)</span>: <span class="math display">\[y^* = \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot x^* = \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot \frac{\alpha I}{(\alpha + \beta)p_x} = \frac{\beta I}{(\alpha + \beta)p_y}\]</span></p>
+</section>
+<section class="slide level2">
+<h2>Example: Cobb-Douglas Utility (cont.)</h2>
+<p><span class="math display">\[\boxed{x^* = \frac{\alpha I}{(\alpha + \beta)p_x}, \quad y^* = \frac{\beta I}{(\alpha + \beta)p_y}}\]</span></p>
+<p><strong>Key results</strong>:</p>
+<ul>
+<li><strong>Expenditure on X</strong>: <span class="math inline">\(p_x x^* = \frac{\alpha I}{\alpha + \beta}\)</span></li>
+<li><strong>Expenditure on Y</strong>: <span class="math inline">\(p_y y^* = \frac{\beta I}{\alpha + \beta}\)</span></li>
+<li><strong>Expenditure shares are constant</strong>: <span class="math inline">\(\frac{\alpha}{\alpha+\beta}\)</span> and <span class="math inline">\(\frac{\beta}{\alpha+\beta}\)</span></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Constant Expenditure Shares</h2>
+<p><strong>Cobb-Douglas utility implies constant expenditure shares regardless of income or prices.</strong></p>
+<p>Which of the following goods do you think have roughly constant expenditure shares in real life?</p>
+<ol type="1">
+<li>Food</li>
+<li>Housing</li>
+<li>Travel</li>
+<li>Charitable giving</li>
+</ol>
+<div class="fragment">
+<p><strong>Engel’s Law</strong>: As income rises, the proportion spent on food decreases.</p>
+<p><strong>How to model this? </strong></p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Homogeneity of Demand Functions</h2>
+<p><strong>Homogeneity of degree zero</strong>: If all prices and income are multiplied by the same factor <span class="math inline">\(t &gt; 0\)</span>: <span class="math display">\[x^*(tp_x, tp_y, tI) = x^*(p_x, p_y, I)\]</span></p>
+<p><strong>Interpretation</strong>: Demand depends only on <strong>relative prices</strong>, not absolute price level.</p>
+<p><strong>Example</strong>: If all prices and income double (inflation), consumption bundles don’t change.</p>
+<div class="fragment">
+<p><strong>Why?</strong> The budget constraint becomes: <span class="math display">\[tp_x \cdot x + tp_y \cdot y = tI\]</span> <span class="math display">\[\Rightarrow p_x \cdot x + p_y \cdot y = I\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Indirect Utility Function</h2>
+<p>The <strong>indirect utility function</strong> <span class="math inline">\(V(p_x, p_y, I)\)</span> gives maximum achievable utility as a function of prices and income:</p>
+<p><span class="math display">\[V(p_x, p_y, I) = U(x^*(p_x, p_y, I), y^*(p_x, p_y, I))\]</span></p>
+<p><strong>Interpretation</strong>: Maximum utility you can achieve given market conditions.</p>
+<p><strong>Properties</strong>:</p>
+<ol type="1">
+<li>Increasing in <span class="math inline">\(I\)</span>: <span class="math inline">\(\frac{\partial V}{\partial I} &gt; 0\)</span> (more money = higher utility)</li>
+<li>Decreasing in prices: <span class="math inline">\(\frac{\partial V}{\partial p_x} &lt; 0, \frac{\partial V}{\partial p_y} &lt; 0\)</span> (higher prices = lower utility)</li>
+<li>Homogeneous of degree zero: <span class="math inline">\(V(tp_x, tp_y, tI) = V(p_x, p_y, I)\)</span></li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Cobb-Douglas Indirect Utility</h2>
+<p>For <span class="math inline">\(U(x,y) = x^{\alpha}y^{\beta}\)</span>:</p>
+<p>Substituting <span class="math inline">\(x^* = \frac{\alpha I}{(\alpha+\beta)p_x}\)</span> and <span class="math inline">\(y^* = \frac{\beta I}{(\alpha+\beta)p_y}\)</span>:</p>
+<p><span class="math display">\[V(p_x, p_y, I) = \left(\frac{\alpha I}{(\alpha+\beta)p_x}\right)^{\alpha} \left(\frac{\beta I}{(\alpha+\beta)p_y}\right)^{\beta}\]</span></p>
+<p>Simplifying: <span class="math display">\[V(p_x, p_y, I) = \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}} \cdot \frac{\alpha^{\alpha}\beta^{\beta}}{(\alpha+\beta)^{\alpha+\beta}}\]</span></p>
+<p><strong>Note</strong>: <span class="math inline">\(V\)</span> increases with <span class="math inline">\(I\)</span> and decreases with <span class="math inline">\(p_x\)</span> and <span class="math inline">\(p_y\)</span> ✓</p>
+</section>
+<section class="slide level2">
+<h2>Application: Gasoline Tax</h2>
+<ul>
+<li><p>Indirect utility is the tool for <strong>welfare analysis</strong> of price/income changes</p></li>
+<li><p><strong>Example</strong>: Government raises gas tax by $0.50/gallon. To compensate, gives everyone $200 cash transfer.</p>
+<ul>
+<li>To answer if people are better or worse off, compare indirect utility before and after policy.
+<ul>
+<li>Before: <span class="math display">\[V(p_{\text{gas}}, p_{\text{other}}, I)\]</span></li>
+<li>After: <span class="math display">\[V(p_{\text{gas}} + 0.50, p_{\text{other}}, I + 200)\]</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Application: Cash vs Food Stamps</h2>
+<p><strong>Policy question:</strong> Give $200 cash or $200 food stamps?</p>
+<p><strong>Setup:</strong></p>
+<ul>
+<li>Two goods: food (x) and other goods (y)</li>
+<li>Original income: I</li>
+</ul>
+<p><strong>With cash:</strong> Budget is <span class="math inline">\((p_x, p_y, I + 200)\)</span></p>
+<p><strong>With food stamps:</strong> Can buy up to <span class="math inline">\(200/p_x\)</span> extra food, but must spend at least that on food</p>
+</section>
+<section class="slide level2">
+<h2>Lump Sum Principle</h2>
+<div id="21e1bf31" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="lecture-01_files/figure-revealjs/cell-11-output-1.png" width="806" height="614"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>Cash vs In-Kind Transfers</h2>
+<p>Lump sum principle implies:</p>
+<ul>
+<li><strong>Cash transfers are at least as good as in-kind transfers</strong>, because they provide more flexibility</li>
+<li>If the in-kind transfer does not bind (i.e., the consumer would buy at least that much anyway), then cash and in-kind are equivalent</li>
+<li>If the in-kind transfer binds, cash is strictly better, as it allows the consumer to reach a higher indifference curve</li>
+</ul>
+<p><strong>Then why do governments use in-kind transfers like SNAP, housing vouchers, etc.?</strong></p>
+<div class="fragment">
+<p>Similar reasoning can be used to conclude that price subsidies are inferior to cash transfers.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Summary</h2>
+<p><strong>What we covered</strong>:</p>
+<ol type="1">
+<li><strong>Preferences</strong>: Axioms of rational choice, utility representation</li>
+<li><strong>Indifference curves</strong>: Properties, MRS, diminishing MRS</li>
+<li><strong>Common utility functions</strong>: Perfect substitutes, perfect complements, Cobb-Douglas</li>
+<li><strong>Budget constraints</strong>: Slope = price ratio, shifts vs rotations</li>
+<li><strong>Utility maximization</strong>: Tangency condition (MRS = <span class="math inline">\(p_x/p_y\)</span>), Lagrange method</li>
+<li><strong>Applications</strong>: Indirect utility, lump sum principle</li>
+</ol>
+</section>
+<section class="slide level2">
+
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="lecture-01_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="lecture-01_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="lecture-01_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="lecture-01_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="lecture-01_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="lecture-01_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="lecture-01_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="lecture-01_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="lecture-01_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="lecture-01_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="lecture-01_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

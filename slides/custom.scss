@@ -1,0 +1,164 @@
+/*-- scss:defaults --*/
+
+// Base colors
+$body-bg: #ffffff;
+$body-color: #1a1a1a;
+$link-color: #1e5288;
+$selection-bg: #16a085;
+
+// Headings
+$presentation-heading-color: #1e5288;
+$presentation-heading-font: Georgia, serif;
+
+// Code blocks
+$code-block-bg: #f8f9fa;
+$code-color: #1a1a1a;
+
+/*-- scss:rules --*/
+
+// Title slide
+.reveal .slide-background.title {
+  background-color: #1e5288;
+}
+
+// Section headers (dark blue background slides)
+.reveal .slide-background[data-background-color="#1e5288"],
+.reveal .slide-background[data-background-color="#16a085"] {
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+  }
+}
+
+// Improve readability
+.reveal {
+  font-size: 32px;
+  
+  h1 {
+    font-size: 1.75em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+  
+  h2 {
+    font-size: 1.65em;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #16a085;
+    margin-bottom: 0.3em;
+  }
+  
+    // Space before lists (after headings or paragraphs)
+  h1 + ul, h1 + ol,
+  h2 + ul, h2 + ol,
+  h3 + ul, h3 + ol,
+  h4 + ul, h4 + ol,
+  p + ul, p + ol,
+  strong + ul, strong + ol {
+    margin-top: -0.2em !important;  // Reduce space after headings
+  }
+  // Main list spacing 
+  ul, ol {
+    line-height: 1.2;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+  }
+
+  ul > li,
+  ol > li {
+    margin-bottom: 0.8em;  
+    margin-top: 0.8em; 
+  }
+
+  // Nested list
+  ul ul > li,
+  ol ol > li,
+  ul ol > li,
+  ol ul > li {
+    margin-bottom: 0.4em; 
+    margin-top: 0.2em;
+    line-height: 1.2;
+  }
+
+  // Better code blocks
+  pre {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+  
+  code {
+    font-size: 0.85em;
+  }
+  
+  // Fragments (incremental reveals)
+  .fragment {
+    opacity: 0.3;
+    
+    &.visible {
+      opacity: 1;
+    }
+  }
+  
+  // Boxed content
+  .boxed {
+    border: 2px solid #1e5288;
+    border-radius: 8px;
+    padding: 1em;
+    background-color: #e8f4f8;
+  }
+  
+  // Emphasis
+  strong {
+    color: #1e5288;
+    font-weight: 600;
+  }
+  
+  // Math
+  .math {
+    font-family: "Fira Math", sans-serif;  // Clean, modern
+    font-size: 1em;  //
+  }
+
+  // Inline math in paragraphs
+  p .math {
+    font-size: 1em;
+  }
+
+  // Display math (centered equations)
+  .math.display {
+    margin-top: 0.2em !important;
+    font-size: 1.1em;
+    line-height: 1.1;
+  }
+  p + .math.display {
+    margin-top: 0.2em !important;
+  }
+  
+}
+// Footer styling
+.reveal .footer {
+  font-size: 0.6em;
+  color: #6c757d;
+}
+
+// Columns
+.reveal .columns {
+  gap: 2em;
+}
+
+// Force center all figures
+.reveal img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reveal figure {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}

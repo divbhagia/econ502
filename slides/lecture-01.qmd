@@ -1,0 +1,1183 @@
+---
+title: "Consumer Preferences<br> and Choice"
+subtitle: "Lecture 1"
+author: "Div Bhagia"
+date: ""
+execute:
+  cache: true
+  freeze: auto
+---
+
+# Introduction {background-color="#1e5288"}
+---
+
+## Why Study Microeconomics?
+
+
+- **Non-economists typically think of economics when it concerns the *macro* stuff** (unemployment, inflation, growth, recessions etc.) 
+
+::: {.fragment}
+- **However, the macro economy is made up of millions of *micro* decisions.**
+
+  - **People:** what to buy, how much to work, how much to save
+  - **Firms:** pricing, hiring, location, investment
+  - **Government:** infrastructure, regulation, tax policy
+:::
+
+::: {.fragment}
+- **Markets coordinate these decisions invisibly and *often* effectively**.
+
+  - Gas is at the pump when you need it
+  - Jobs exist for qualified workers
+  - Products get delivered
+:::
+
+---
+
+## Why Study Microeconomics?
+- **However, sometimes markets produce undesirable outcomes or fail.**
+
+  - Each micro failure may seem small (one shortage, one person unemployed, one overpriced good)
+  -  But small failures add up to large macro consequences 
+
+::: {.fragment}
+- **In this course, we will study:**
+
+  -  How individuals and firms make decisions?
+  -  How markets coordinate these decisions?
+  -  When markets work efficiently and when they fail?  
+  -  What interventions can help?
+:::
+  
+---
+
+## Course Roadmap
+
+::: {.columns}
+::: {.column width="50%"}
+### Competitive Markets
+
+- Consumer choice (1-2)
+- Firm production (3)
+- Market equilibrium (4)
+- Efficiency and welfare (5)
+
+### Market Power
+
+- Monopoly and oligopoly (6-7)
+- Labor markets and monopsony (8)
+
+
+:::
+
+::: {.column width="50%"}
+### Market Failures
+
+- Information asymmetries (9)
+- Externalities and public goods (10)
+
+### Uncertainty & Strategy
+
+- Decisions under uncertainty (11)
+- Game theory (12)
+
+:::
+:::
+
+---
+
+## Today's Lecture
+
+**Central question**: How do individuals make choices?
+
+::: {.fragment style="margin-top: 1em;"}
+**Economic Approach to Choice**
+
+- Individuals have **preferences** over outcomes
+- These preferences are **rational** (satisfy certain axioms)
+- We can represent preferences with a **utility function**
+- Given constraints, individuals **maximize utility**
+:::
+
+::: {.fragment}
+**Does everyone really "maximize utility"?**
+
+- Maybe not consciously—but people behave "as if" they do
+- The model predicts behavior relatively well
+- Alternative: behavioral economics (we'll discuss limitations)
+:::
+
+# Preferences and Utility {background-color="#1e5288"}
+
+---
+
+
+## Preferences: Basic Setup
+
+We consider a consumer choosing between bundles of goods.
+
+- **Consumption bundle**: $(x, y)$ where $x, y \geq 0$
+- **Preference relation**: $\succeq$ (weakly preferred to)
+  - $A \succeq B$: Bundle $A$ is at least as good as bundle $B$
+  - $A \succ B$: Bundle $A$ is strictly preferred to $B$
+  - $A \sim B$: Consumer is indifferent between $A$ and $B$
+
+**Key question**: What properties should preferences satisfy for them to be "rational"?
+
+
+## Axioms of Rational Choice
+
+### 1. Completeness
+For any two bundles $A$ and $B$, the consumer can state which is preferred or that they are indifferent:
+$$A \succeq B, \quad B \succeq A, \quad \text{or both (indifference)}$$
+
+**Interpretation**: Consumers can always make comparisons. Rules out indecision.
+
+::: {.fragment style="margin-top: 1em;"}
+### 2. Transitivity
+If $A \succeq B$ and $B \succeq C$, then $A \succeq C$
+
+**Interpretation**: Preferences are internally consistent. No cycles.
+:::
+---
+
+## Axioms of Rational Choice (cont.)
+
+### 3. Continuity
+Small changes in consumption bundles lead to small changes in preferences.
+
+**Technical**: For any bundle $A$, the sets $\{B : B \succeq A\}$ and $\{B : A \succeq B\}$ are closed.
+
+**Interpretation**: No sudden jumps. Preferences are "smooth."
+
+::: {.fragment style="margin-top: 1em;"}
+### 4. Non-satiation (Monotonicity)
+More is better: If $A$ has at least as much of everything as $B$, and strictly more of at least one good, then $A \succ B$.
+
+**Interpretation**: Consumers always prefer more to less (at least weakly).
+:::
+
+---
+
+## Axioms of Rational Choice (cont.)
+
+### 5. Convexity
+Averages are preferred to extremes. If $A \sim B$, then:
+$$\lambda A + (1-\lambda)B \succeq A \text{ for } \lambda \in [0,1]$$
+
+**Interpretation**: Consumers prefer balanced consumption bundles. Diminishing marginal rate of substitution.
+
+**Example**: If you're indifferent between (5 apples, 0 oranges) and (0 apples, 5 oranges), you prefer (5 apples, 5 oranges) to either extreme.
+
+---
+
+## When Do Axioms Fail?
+
+### Behavioral Economics Violations
+
+- **Framing effects**: Preferences change based on how options are presented
+- **Intransitivity**: Preference reversals in complex choices (Condorcet paradox)
+- **Present bias**: Time-inconsistent preferences ($\beta\delta$ model)
+- **Reference dependence**: Preferences depend on current endowment (loss aversion)
+- **Bounded rationality**
+
+  - Too many options → choice paralysis 
+  - Computational constraints
+  - Limited attention
+
+---
+
+## From Preferences to Utility
+
+**Key Theorem**: If preferences satisfy completeness, transitivity, continuity, and monotonicity, then there exists a continuous **utility function** $U(x,y)$ that represents them:
+$$A \succeq B \iff U(A) \geq U(B)$$
+
+**Interpretation**: We can assign numbers to bundles such that higher numbers = more preferred.
+
+::: {.fragment style="margin-top: 1em;"}
+**Important**: Utility is **ordinal**, not **cardinal**
+
+- Only the **ranking** matters, the magnitude of utility has no meaning.
+- $U(A) = 10, U(B) = 5$ tells us $A \succ B$. It does NOT mean "$A$ is twice as good as $B$"
+:::
+
+---
+
+## Monotonic Transformations
+
+- Since utility is ordinal, we can apply any **strictly increasing transformation** without changing preferences:
+
+- If $U(x,y)$ represents preferences, so does $V(x,y) = f(U(x,y))$ for any strictly increasing $f$.
+
+- **Examples**:
+
+  - $U(x,y) = xy$ and $V(x,y) = \ln(xy)$ represent the same preferences
+  - $U(x,y) = x^{0.5}y^{0.5}$ and $V(x,y) = xy$ represent the same preferences
+
+**Why this matters**: We can transform utility functions to make calculations easier.
+
+# Indifference Curves & MRS {background-color="#1e5288"}
+
+---
+
+## Indifference Curves
+
+An **indifference curve** is the set of all bundles that give the same utility level:
+
+$$IC(U_0) = \{(x,y) : U(x,y) = U_0\}$$
+
+**Interpretation**: The consumer is indifferent between any two points on the same curve.
+
+::: {.fragment style="margin-top: -1em;"}
+```{python}
+#| echo: false
+#| fig-cap: "Indifference Curves for U(x,y) = xy"
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Create grid
+x = np.linspace(0.1, 10, 300)
+y = np.linspace(0.1, 10, 300)
+X, Y = np.meshgrid(x, y)
+
+# Cobb-Douglas utility: U = xy
+U = X * Y
+
+# Create plot
+fig, ax = plt.subplots(figsize=(6, 4.25))
+
+# Plot multiple indifference curves
+levels = [5, 10, 15]
+contours = ax.contour(X, Y, U, levels=levels, colors='#1e5288', linewidths=2)
+ax.clabel(contours, fontsize=10, fmt='U=%.1f')
+
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+ax.set_xlabel('Good X', fontsize=14)
+ax.set_ylabel('Good Y', fontsize=14)
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 10)
+ax.grid(True, alpha=0.3)
+
+# add caption
+# ax.set_title('Indifference Curves for U(x,y) = xy', fontsize=18)
+
+plt.tight_layout()
+plt.show()
+```
+:::
+---
+
+## Properties of Indifference Curves
+
+**Under our axioms, indifference curves must be**:
+
+1. **Downward sloping** (from non-satiation)
+   
+   - To keep utility constant, if $x$ increases, $y$ must decrease
+
+2. **Do not cross** (from transitivity)
+   
+   - If they crossed, we'd have $A \sim B$ and $A \sim C$ but $B \not\sim C$
+
+3. **Convex to the origin** (from convexity of preferences)
+   
+   - Averages preferred to extremes
+   - Equivalently: diminishing marginal rate of substitution
+
+4. **Higher curves represent higher utility** (from monotonicity)
+
+---
+
+## Marginal Rate of Substitution (MRS)
+
+- The **marginal rate of substitution** is the rate at which the consumer is willing to trade good $Y$ for good $X$ while maintaining constant utility.
+
+- **Geometrically**: MRS = -(slope of indifference curve)
+
+$$MRS = -\frac{dy}{dx}\bigg|_{U=const}$$
+
+- **Interpretation**: How many units of $Y$ are you willing to give up to get one more unit of $X$?
+
+- **Example**: If MRS = 2, you're willing to give up 2 units of $Y$ to get 1 more unit of $X$ (and remain indifferent).
+
+
+---
+
+## Deriving the MRS Formula
+
+Along an indifference curve, utility is constant: $U(x,y) = \bar{U}$
+
+Taking the total differential:
+$$dU = \frac{\partial U}{\partial x}dx + \frac{\partial U}{\partial y}dy = 0$$
+
+Rearranging:
+$$\frac{\partial U}{\partial y}dy = -\frac{\partial U}{\partial x}dx \quad \rightarrow \quad \frac{dy}{dx} = -\frac{\partial U/\partial x}{\partial U/\partial y} = -\frac{MU_x}{MU_y}$$
+
+Therefore: $$\boxed{MRS = -\frac{dy}{dx} = \frac{MU_x}{MU_y}}$$
+
+---
+
+## Visualizing MRS
+
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Create figure
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Single indifference curve for U = 4
+x = np.linspace(0.5, 8, 100)
+y = 16 / x  # From U = xy = 16, so y = 16/x
+
+ax.plot(x, y, 'k-', linewidth=2, label='U = 16')
+
+# Point A
+x_A, y_A = 2, 8
+ax.plot(x_A, y_A, 'ko', markersize=7.5, label='Point A')
+
+# Tangent line at A with slope = -y/x = -8/2 = -4
+x_tangent = np.linspace(1, 4, 100)
+y_tangent = y_A - 4*(x_tangent - x_A)  # slope = -4
+ax.plot(x_tangent, y_tangent, 'k--', linewidth=2, alpha=0.7, label='Tangent (slope = -4)')
+
+# Point B
+x_B, y_B = 4, 4
+ax.plot(x_B, y_B, 'ko', markersize=7.5, label='Point B')
+
+# Tangent line at B with slope = -y/x = -4/4 = -1
+x_tangent_B = np.linspace(2, 6, 100)
+y_tangent_B = y_B - 1*(x_tangent_B - x_B)  # slope = -1
+ax.plot(x_tangent_B, y_tangent_B, 'k--', linewidth=2, alpha=0.7, label='Tangent (slope = -1)')
+
+# Annotations
+ax.annotate('MRS = 4', xy=(x_A, y_A), xytext=(2.1, 8.2), 
+            fontsize=16, color='black')
+ax.annotate('MRS = 1', xy=(x_B, y_B), xytext=(4.15, 4.15), 
+            fontsize=16, color='black')
+
+ax.set_xlabel('Good X', fontsize=16)
+ax.set_ylabel('Good Y', fontsize=16)
+ax.set_xlim(0, 8)
+ax.set_ylim(0, 12)
+ax.grid(True, alpha=0.3)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+# ax.set_title('Diminishing MRS: U(x,y) = xy', fontsize=14)
+
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## Diminishing MRS
+
+**Convexity assumption** → **Diminishing MRS**
+
+As you consume more of good $X$ (moving right along an IC), the MRS decreases:
+
+- When you have a lot of $Y$ and little $X$: High MRS (willing to give up a lot of $Y$ for more $X$)
+- When you have a lot of $X$ and little $Y$: Low MRS (not willing to give up much $Y$ for more $X$)
+
+**Economic intuition**: Scarcity increases value. The less you have of something, the more you value additional units.
+
+---
+
+## Try It Yourself: Calculate MRS
+
+**Exercise**: Consider the utility function $U(x,y) = x^{0.3}y^{0.7}$
+
+1. Find the marginal utilities $MU_x$ and $MU_y$
+2. Calculate the MRS
+3. Evaluate the MRS at the point $(x,y) = (10, 20)$
+4. Interpret your answer: How many units of $y$ would the consumer give up for one more unit of $x$?
+
+::: {.fragment}
+**Hint**: $MU_x = \frac{\partial U}{\partial x}$, and remember $MRS = \frac{MU_x}{MU_y}$
+:::
+
+# Common Utility Functions {background-color="#1e5288"}
+
+---
+
+## Perfect Substitutes
+
+Goods that can be substituted at a constant rate.
+
+$$U(x,y) = ax + by$$
+
+**Examples**:
+
+- Different brands of the same product (e.g., Coke vs Pepsi for some consumers)
+- Coffee from different cafes
+- Generic vs brand-name drugs (if truly equivalent)
+
+**Key features**:
+
+- Indifference curves are **straight lines**
+- MRS is **constant**: $MRS = a/b$
+- Consumer willing to trade at fixed rate regardless of bundle
+
+---
+
+## Perfect Substitutes Graph
+
+```{python}
+#| echo: false
+#| fig-cap: "Perfect Substitutes: U = 2x + y"
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Perfect substitutes: U = 2x + y
+# For different utility levels, solve for y: y = U - 2x
+utility_levels = [10, 20, 30]
+x = np.linspace(0, 15, 100)
+
+colors = ['#1e5288', '#16a085', '#f39c12']
+for U, i in zip(utility_levels, range(len(utility_levels))):
+    y = U - 2*x
+    valid = y >= 0
+    ax.plot(x[valid], y[valid], color=colors[i], linewidth=2.5, label=f'U = {U}')
+
+
+ax.set_xlabel('Starbucks Coffee', fontsize=16)
+ax.set_ylabel('Chase Coffee', fontsize=16)
+ax.set_xlim(0, 15)
+ax.set_ylim(0, 32)
+ax.grid(True, alpha=0.3)
+ax.legend(fontsize=16)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## Perfect Complements
+
+Goods that must be consumed in fixed proportions.
+
+$$U(x,y) = \min\{ax, by\}$$
+
+**Examples**:
+
+- Left and right shoes
+- Coffee and cream (for some)
+- Cars and tires (need 4 tires per car)
+- Computers and monitors
+
+**Key features**:
+
+- Indifference curves are **L-shaped**
+- Consumed in fixed ratio: $x/y = b/a$
+- MRS is undefined (technically infinite or zero, depending on side)
+
+---
+
+## Perfect Complements Graph
+
+```{python}
+#| echo: false
+#| fig-cap: "Perfect Complements: U = min{x, y}"
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Perfect complements: U = min{x, y}
+utility_levels = [2, 4, 6]
+max_val = 12
+
+colors = ['#1e5288', '#16a085', '#f39c12']
+for U, i in zip(utility_levels, range(len(utility_levels))):
+    # Horizontal segment: y = U, x >= U
+    x_horizontal = np.array([U, max_val])
+    y_horizontal = np.array([U, U])
+    
+    # Vertical segment: x = U, y >= U  
+    x_vertical = np.array([U, U])
+    y_vertical = np.array([U, max_val])
+    
+    ax.plot(x_horizontal, y_horizontal, color=colors[i], linewidth=2.5)
+    ax.plot(x_vertical, y_vertical, color=colors[i], linewidth=2.5, label=f'U = {U}')
+
+ax.set_xlabel('Good X (left shoes)', fontsize=16)
+ax.set_ylabel('Good Y (right shoes)', fontsize=16)
+ax.set_xlim(0, max_val)
+ax.set_ylim(0, max_val)
+ax.grid(True, alpha=0.3)
+ax.legend(fontsize=16, loc='upper right')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## Cobb-Douglas Utility
+
+The most widely used functional form in economics:
+
+$$U(x,y) = x^{\alpha}y^{\beta}$$
+
+Or equivalently (applying monotonic transformation):
+
+$$U(x,y) = \alpha \ln x + \beta \ln y$$
+
+**Key features**:
+
+- Smooth, convex indifference curves
+- Interior solutions (typically)
+- Constant expenditure shares
+- $MRS = \frac{\alpha}{\beta}\cdot\frac{y}{x}$
+
+---
+
+## Cobb-Douglas Graph
+
+```{python}
+#| echo: false
+#| fig-cap: "Cobb-Douglas Utility: $U = x^α y^β$"
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12.5, 5.5))
+
+# Left plot: Standard Cobb-Douglas with α = β = 0.5
+x = np.linspace(0.1, 10, 300)
+y = np.linspace(0.1, 10, 300)
+X, Y = np.meshgrid(x, y)
+
+# U = x^0.5 * y^0.5
+U1 = X**0.5 * Y**0.5
+levels = [2,  3, 4]
+colors = ['#1e5288', '#16a085', '#f39c12']
+contours1 = ax1.contour(X, Y, U1, levels=levels, colors=colors, linewidths=2)
+ax1.clabel(contours1, inline=True, fontsize=16)
+ax1.set_xlabel('Good X', fontsize=16)
+ax1.set_ylabel('Good Y', fontsize=16)
+ax1.set_xlim(0, 10)
+ax1.set_ylim(0, 10)
+ax1.grid(True, alpha=0.3)
+ax1.spines['top'].set_visible(False)
+ax1.spines['right'].set_visible(False)
+ax1.set_title('α = 0.5, β = 0.5 (symmetric)', fontsize=16)
+
+# Right plot: Asymmetric Cobb-Douglas with α = 0.3, β = 0.7
+U2 = X**0.3 * Y**0.7
+contours2 = ax2.contour(X, Y, U2, levels=levels, colors=colors, linewidths=2)
+ax2.clabel(contours2, inline=True, fontsize=16)
+ax2.set_xlabel('Good X', fontsize=16)
+ax2.set_ylabel('Good Y', fontsize=16)
+ax2.set_xlim(0, 10)
+ax2.set_ylim(0, 10)
+ax2.grid(True, alpha=0.3)
+ax2.spines['top'].set_visible(False)
+ax2.spines['right'].set_visible(False)
+ax2.set_title('α = 0.3, β = 0.7 (prefers Y)', fontsize=16)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## Cobb-Douglas: MRS Calculation
+
+For $U(x,y) = x^{\alpha}y^{\beta}$:
+
+**Step 1**: Find marginal utilities
+$$MU_x = \frac{\partial U}{\partial x} = \alpha x^{\alpha-1}y^{\beta}$$
+$$MU_y = \frac{\partial U}{\partial y} = \beta x^{\alpha}y^{\beta-1}$$
+
+**Step 2**: Calculate MRS
+$$MRS = \frac{MU_x}{MU_y} = \frac{\alpha x^{\alpha-1}y^{\beta}}{\beta x^{\alpha}y^{\beta-1}} = \frac{\alpha}{\beta} \cdot \frac{y}{x}$$
+
+MRS depends on the ratio $y/x$ and the preference parameters $\alpha/\beta$.
+
+---
+
+## CES Utility
+
+**Constant Elasticity of Substitution (CES)** utility function:
+
+$$U(x,y) = (ax^{\rho} + by^{\rho})^{1/\rho}, \quad \rho \leq 1, \rho \neq 0$$
+
+**Elasticity of substitution**: $\sigma = \frac{1}{1-\rho}$
+
+**Special cases**:
+
+- $\rho \to -\infty$: Perfect complements ($\sigma = 0$)
+- $\rho = 0$: Cobb-Douglas ($\sigma = 1$)  
+- $\rho = 1$: Perfect substitutes ($\sigma = \infty$)
+
+**Flexibility**: CES nests all three cases mentioned.
+
+# Budget Constraints {background-color="#1e5288"}
+
+---
+
+## The Budget Constraint
+
+Consumers have limited income $I$ and face prices $p_x, p_y$ for goods:
+
+$$p_x \cdot x + p_y \cdot y \leq I$$
+
+**Budget line**: Set of bundles that cost exactly $I$
+
+$$p_x \cdot x + p_y \cdot y = I$$
+
+Rearranging for $y$:
+
+$$y = \frac{I}{p_y} - \frac{p_x}{p_y}x$$
+
+- **Intercept**: $I/p_y$ (max amount of $y$ if $x=0$)
+- **Slope**: $-p_x/p_y$ (opportunity cost of $x$ in terms of $y$)
+
+---
+
+## Budget Constraint Graph
+
+```{python}
+#| echo: false
+#| fig-cap: "Budget Line with $I = 100, p_x = 10, p_y = 5$"
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Budget: 10x + 5y = 100
+# y = 20 - 2x
+I = 100
+px = 10
+py = 5
+
+x = np.linspace(0, I/px, 100)
+y = (I - px*x) / py
+
+ax.plot(x, y, 'b-', linewidth=2, label=f'Budget Line: {px}x + {py}y = {I}', color='black')
+ax.fill_between(x, 0, y, alpha=0.2, color='black', label='Feasible Set')
+
+# Add slope annotation
+ax.annotate(f'Slope = -$p_x/p_y$ = -{px/py}', 
+            xy=(5, 10), xytext=(4.5, 12.5),
+            fontsize=16, color='black')
+
+ax.set_xlabel('Good X', fontsize=16)
+ax.set_ylabel('Good Y', fontsize=16)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.set_xlim(0, 11)
+ax.set_ylim(0, 22)
+ax.grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+```
+
+---
+## Changes in Income
+
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Budget: 10x + 5y = 100
+# y = 20 - 2x
+I = 100
+I2 = 50
+px = 10
+py = 5
+
+x = np.linspace(0, I/px, 100)
+y = (I - px*x) / py
+y2 = (I2 - px*x) / py
+
+ax.plot(x, y, 'b-', linewidth=2, label=f'{px}x + {py}y = {I}', color='black')
+ax.plot(x, y2, 'b-', linewidth=2, label=f'{px}x + {py}y = {I2}', color='black', linestyle='--')
+
+
+
+ax.set_xlabel('Good X', fontsize=16)
+ax.set_ylabel('Good Y', fontsize=16)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.set_xlim(0, 11)
+ax.set_ylim(0, 22)
+ax.legend(fontsize=16)
+ax.grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## Changes in Prices
+
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Budget: 10x + 5y = 100
+# y = 20 - 2x
+I = 100
+px = 10
+py = 5
+py2 = 10  # price of y increases
+
+x = np.linspace(0, I/px, 100)
+y = (I - px*x) / py
+y2 = (I - px*x) / py2
+
+ax.plot(x, y, 'b-', linewidth=2, label=f'{px}x + {py}y = {I}', color='black')
+ax.plot(x, y2, 'b-', linewidth=2, label=f'{px}x + {py2}y = {I}', color='black', linestyle='--')
+ax.set_xlabel('Good X', fontsize=16)
+ax.set_ylabel('Good Y', fontsize=16)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.set_xlim(0, 11)
+ax.set_ylim(0, 22)
+ax.legend(fontsize=16)
+ax.grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+```
+
+# Utility Maximization  {background-color="#1e5288"}
+
+---
+
+## The Consumer's Problem
+
+The consumer chooses $(x,y)$ to:
+
+$$\max_{x,y} \quad U(x,y)$$
+
+subject to:
+
+$$p_x x + p_y y = I$$
+$$x \geq 0, \quad y \geq 0$$
+
+**Goal**: Find the highest indifference curve that touches the budget line.
+
+**Intuition**: Get as much utility as possible given your budget.
+
+---
+
+## Graphical Solution
+
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import minimize_scalar
+
+fig, ax = plt.subplots(figsize=(8.5, 6.5))
+
+# Budget constraint
+I, px, py = 100, 10, 5
+x_budget = np.linspace(0, I/px, 100)
+y_budget = (I - px*x_budget) / py
+
+ax.plot(x_budget, y_budget, 'k-', linewidth=2, label='Budget Line')
+ax.fill_between(x_budget, 0, y_budget, alpha=0.1, color='black')
+
+# Cobb-Douglas utility: U = x^0.5 * y^0.5
+# Optimal bundle: x* = αI/px, y* = βI/py with α=β=0.5
+x_star = 0.5 * I / px  # = 5
+y_star = 0.5 * I / py  # = 10
+
+# Plot indifference curves
+x_ic = np.linspace(0.1, 12, 300)
+y_ic = np.linspace(0.1, 22, 300)
+X_ic, Y_ic = np.meshgrid(x_ic, y_ic)
+U_ic = X_ic**0.5 * Y_ic**0.5
+
+# IC through optimal point
+u_star = x_star**0.5 * y_star**0.5
+levels = [u_star * 0.7, u_star * 0.85, u_star, u_star * 1.15]
+colors_ic = ['gray', 'gray', 'red', 'gray']
+linewidths = [1.5, 1.5, 2, 1.5]
+linestyles = ['--', '--', '-', '--']
+
+for level, color, lw, ls in zip(levels, colors_ic, linewidths, linestyles):
+    contour = ax.contour(X_ic, Y_ic, U_ic, levels=[level], colors=color, linewidths=lw, linestyles=ls)
+    if level == u_star:
+        ax.clabel(contour, inline=True, fontsize=11, fmt='Optimal IC')
+
+# Mark optimal point
+ax.plot(x_star, y_star, 'ko', markersize=12, label=f'Optimum: ({x_star:.1f}, {y_star:.1f})', zorder=5)
+
+# Annotations
+ax.annotate('Tangency:\n$MRS = p_x/p_y$', xy=(x_star, y_star), xytext=(7, 14),
+            fontsize=16, color='black', fontweight='bold',
+            arrowprops=dict(arrowstyle='->', color='black', lw=2))
+
+ax.annotate('Too low utility\n(can do better)', xy=(3, 8), xytext=(1, 5),
+            fontsize=14, color='gray',
+            arrowprops=dict(arrowstyle='->', color='gray', lw=1.5))
+
+ax.annotate('Too high utility\n(not affordable)', xy=(3.9, 17.5), xytext=(5, 18),
+            fontsize=14, color='gray',
+            arrowprops=dict(arrowstyle='->', color='gray', lw=1.5))
+
+ax.set_xlabel('Good X', fontsize=16)
+ax.set_ylabel('Good Y', fontsize=16)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.set_xlim(0, 12)
+ax.set_ylim(0, 22)
+ax.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## Why Tangency is Optimal
+
+**At the tangency point**: MRS = $p_x/p_y$
+
+**Intuition**: Consumer's subjective tradeoff (MRS) equals market tradeoff
+
+- **MRS**: How much $Y$ you're willing to give up for 1 unit of $X$
+- **$p_x/p_y$**: How much $Y$ you must give up (in market) for 1 unit of $X$
+
+**If MRS $>$ $p_x/p_y$**:
+
+- You value $X$ more than market does
+- Should buy more $X$, less $Y$
+
+**If MRS $<$ $p_x/p_y$**:
+
+- You value $X$ less than market does  
+- Should buy less $X$, more $Y$
+
+---
+
+## The Lagrangian Method
+
+The consumer's problem:
+$$\max_{x,y} \quad U(x,y) \quad \text{subject to} \quad p_x x + p_y y = I$$
+
+**Lagrangian**:
+$$\mathcal{L}(x,y,\lambda) = U(x,y) + \lambda(I - p_x x - p_y y)$$
+
+where $\lambda$ is the **Lagrange multiplier**.
+
+**First-order conditions** (FOCs):
+
+1. $\frac{\partial \mathcal{L}}{\partial x} = \frac{\partial U}{\partial x} - \lambda p_x = 0$
+2. $\frac{\partial \mathcal{L}}{\partial y} = \frac{\partial U}{\partial y} - \lambda p_y = 0$
+3. $\frac{\partial \mathcal{L}}{\partial \lambda} = I - p_x x - p_y y = 0$
+
+---
+
+## First-Order Conditions
+
+From the first two FOCs:
+$$MU_x = \lambda p_x \quad \text{and} \quad MU_y = \lambda p_y$$
+
+Dividing these:
+$$\frac{MU_x}{MU_y} = \frac{p_x}{p_y}$$
+
+This is exactly the tangency condition: **MRS = price ratio**!
+
+---
+
+## Interpretation of λ 
+
+From FOCs: $\lambda = \frac{MU_x}{p_x} = \frac{MU_y}{p_y}$
+
+**λ = marginal utility of income**
+
+- How much utility increases if income increases by $1
+- Measures the "value" of relaxing the budget constraint
+- Important for welfare analysis
+
+**Example**: If $\lambda = 0.5$:
+
+- $1 more of income increases utility by 0.5 utils
+- Equivalently: consumer willing to pay $2 for 1 more util
+
+::: {.fragment}
+**Note**: λ decreases as income increases (diminishing marginal utility of income)
+:::
+
+---
+
+## Example: Cobb-Douglas Utility 
+
+**Setup**: $U(x,y) = x^{\alpha}y^{\beta}$, budget: $p_x x + p_y y = I$
+
+**Step 1**: Form the Lagrangian
+$$\mathcal{L} = x^{\alpha}y^{\beta} + \lambda(I - p_x x - p_y y)$$
+
+**Step 2**: Take FOCs
+$$\frac{\partial \mathcal{L}}{\partial x} = \alpha x^{\alpha-1}y^{\beta} - \lambda p_x = 0$$
+$$\frac{\partial \mathcal{L}}{\partial y} = \beta x^{\alpha}y^{\beta-1} - \lambda p_y = 0$$
+$$\frac{\partial \mathcal{L}}{\partial \lambda} = I - p_x x - p_y y = 0$$
+
+---
+
+## Example: Cobb-Douglas Utility (cont.)
+
+**Step 3**: Combine first two FOCs
+$$\frac{\alpha x^{\alpha-1}y^{\beta}}{\beta x^{\alpha}y^{\beta-1}} = \frac{p_x}{p_y}$$
+
+Simplifying:
+$$\frac{\alpha}{\beta} \cdot \frac{y}{x} = \frac{p_x}{p_y}$$
+
+Solving for $y$:
+$$y = \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot x$$
+
+## Example: Cobb-Douglas Utility (cont.)
+
+**Step 4**: Substitute into budget constraint
+$$p_x x + p_y \cdot \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot x = I$$
+$$p_x x + \frac{\beta}{\alpha} p_x x = I$$
+$$p_x x \left(1 + \frac{\beta}{\alpha}\right) = I$$
+$$p_x x \cdot \frac{\alpha + \beta}{\alpha} = I$$
+
+---
+
+## Example: Cobb-Douglas Utility (cont.)
+
+**Step 5**: Solve for $x^*$:
+$$x^* = \frac{\alpha I}{(\alpha + \beta)p_x}$$
+
+Substitute back to get $y^*$:
+$$y^* = \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot x^* = \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot \frac{\alpha I}{(\alpha + \beta)p_x} = \frac{\beta I}{(\alpha + \beta)p_y}$$
+
+## Example: Cobb-Douglas Utility (cont.)
+$$\boxed{x^* = \frac{\alpha I}{(\alpha + \beta)p_x}, \quad y^* = \frac{\beta I}{(\alpha + \beta)p_y}}$$
+
+**Key results**:
+
+- **Expenditure on X**: $p_x x^* = \frac{\alpha I}{\alpha + \beta}$
+- **Expenditure on Y**: $p_y y^* = \frac{\beta I}{\alpha + \beta}$
+- **Expenditure shares are constant**: $\frac{\alpha}{\alpha+\beta}$ and $\frac{\beta}{\alpha+\beta}$
+
+---
+
+## Constant Expenditure Shares
+
+**Cobb-Douglas utility implies constant expenditure shares regardless of income or prices.**
+
+Which of the following goods do you think have roughly constant expenditure shares in real life?
+
+1. Food
+2. Housing
+3. Travel
+4. Charitable giving
+
+::: {.fragment}
+**Engel's Law**: As income rises, the proportion spent on food decreases.
+
+**How to model this? **
+:::
+---
+
+## Homogeneity of Demand Functions
+
+**Homogeneity of degree zero**: If all prices and income are multiplied by the same factor $t > 0$:
+$$x^*(tp_x, tp_y, tI) = x^*(p_x, p_y, I)$$
+
+**Interpretation**: Demand depends only on **relative prices**, not absolute price level.
+
+**Example**: If all prices and income double (inflation), consumption bundles don't change.
+
+::: {.fragment}
+**Why?** The budget constraint becomes:
+$$tp_x \cdot x + tp_y \cdot y = tI$$
+$$\Rightarrow p_x \cdot x + p_y \cdot y = I$$
+:::
+
+---
+
+## Indirect Utility Function
+
+The **indirect utility function** $V(p_x, p_y, I)$ gives maximum achievable utility as a function of prices and income:
+
+$$V(p_x, p_y, I) = U(x^*(p_x, p_y, I), y^*(p_x, p_y, I))$$
+
+**Interpretation**: Maximum utility you can achieve given market conditions.
+
+**Properties**:
+
+1. Increasing in $I$: $\frac{\partial V}{\partial I} > 0$ (more money = higher utility)
+2. Decreasing in prices: $\frac{\partial V}{\partial p_x} < 0, \frac{\partial V}{\partial p_y} < 0$ (higher prices = lower utility)
+3. Homogeneous of degree zero: $V(tp_x, tp_y, tI) = V(p_x, p_y, I)$
+
+---
+
+## Cobb-Douglas Indirect Utility
+
+For $U(x,y) = x^{\alpha}y^{\beta}$:
+
+Substituting $x^* = \frac{\alpha I}{(\alpha+\beta)p_x}$ and $y^* = \frac{\beta I}{(\alpha+\beta)p_y}$:
+
+$$V(p_x, p_y, I) = \left(\frac{\alpha I}{(\alpha+\beta)p_x}\right)^{\alpha} \left(\frac{\beta I}{(\alpha+\beta)p_y}\right)^{\beta}$$
+
+Simplifying:
+$$V(p_x, p_y, I) = \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}} \cdot \frac{\alpha^{\alpha}\beta^{\beta}}{(\alpha+\beta)^{\alpha+\beta}}$$
+
+**Note**: $V$ increases with $I$ and decreases with $p_x$ and $p_y$ ✓
+
+---
+
+## Application: Gasoline Tax
+
+- Indirect utility is the tool for **welfare analysis** of price/income changes
+
+- **Example**: Government raises gas tax by $0.50/gallon. To compensate, gives everyone $200 cash transfer.
+  
+  - To answer if people are better or worse off, compare indirect utility before and after policy.
+    - Before: $$V(p_{\text{gas}}, p_{\text{other}}, I)$$
+    - After: $$V(p_{\text{gas}} + 0.50, p_{\text{other}}, I + 200)$$
+
+---
+
+## Application: Cash vs Food Stamps
+
+**Policy question:** Give $200 cash or $200 food stamps?
+
+**Setup:**
+
+- Two goods: food (x) and other goods (y)
+- Original income: I
+
+**With cash:** Budget is $(p_x, p_y, I + 200)$
+
+**With food stamps:** Can buy up to $200/p_x$ extra food, but must spend at least that on food
+
+---
+
+## Lump Sum Principle
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(8.5, 6.5))
+
+# Parameters
+I = 100
+transfer = 40
+px = 10
+py = 5
+
+# Original budget
+x_orig = np.linspace(0, I/px, 100)
+y_orig = (I - px*x_orig) / py
+ax.plot(x_orig, y_orig, 'gray', linewidth=2.5, linestyle='--', label='Original Budget', alpha=0.7)
+
+
+# In-kind transfer (food stamps): forces minimum x = transfer/px
+x_min = transfer / px  # Must buy at least 4 units of x
+# Kinked budget: vertical segment + remaining budget
+ax.plot([x_min, x_min], [0, I/py], 'red', linewidth=3)
+x_inkind = np.linspace(x_min, (I+transfer)/px, 100)
+y_inkind = (I - px*(x_inkind - x_min)) / py
+ax.plot(x_inkind, y_inkind, 'red', linewidth=3, label=f'In-Kind Transfer (${transfer} vouchers for X)')
+
+# Cash transfer budget
+x_cash = np.linspace(0, (I+transfer)/px, 100)
+y_cash = (I + transfer - px*x_cash) / py
+ax.plot(x_cash, y_cash, 'black', linewidth=3, label=f'Cash Transfer (${transfer})', linestyle='--')
+
+# Optimal with cash (assume Cobb-Douglas α=0.5)
+x_cash_opt = 0.5 * (I + transfer) / px
+y_cash_opt = 0.5 * (I + transfer) / py
+ax.plot(x_cash_opt, y_cash_opt, 'ko', markersize=10, label='Optimal with Cash', zorder=5)
+
+# With in-kind: if x_min < x_cash_opt, then not binding, achieve same point
+# But typically for demonstration, show case where it IS binding
+# Let's say consumer would prefer less x, more y
+# Optimal on in-kind budget (at the kink for demonstration)
+x_inkind_opt = x_min
+y_inkind_opt = I / py
+ax.plot(x_inkind_opt, y_inkind_opt, 'ro', markersize=10, label='Optimal with In-Kind', zorder=5)
+
+# Indifference curves
+x_ic = np.linspace(0.5, 16, 300)
+
+# IC through cash optimum
+U_cash = x_cash_opt**0.5 * y_cash_opt**0.5
+y_ic_cash = (U_cash**2) / x_ic
+ax.plot(x_ic, y_ic_cash, 'black', linewidth=2.5, linestyle='-')
+
+# IC through in-kind optimum
+U_inkind = x_inkind_opt**0.5 * y_inkind_opt**0.5
+y_ic_inkind = (U_inkind**2) / x_ic
+ax.plot(x_ic, y_ic_inkind, 'r', linewidth=2.5)
+
+# Mark the kink
+# ax.plot(x_min, I/py, 'rs', markersize=10, zorder=5)
+ax.axvline(x=x_min, color='red', linestyle=':', alpha=0.5, linewidth=2)
+ax.text(x_min-0.3, 2, f'Must buy\n≥{x_min:.0f} units', fontsize=10, color='red', 
+        ha='right', fontweight='bold')
+
+ax.set_xlabel('Good X (e.g., Food)', fontsize=14)
+ax.set_ylabel('Good Y (Other Goods)', fontsize=14)
+ax.set_xlim(0, 16)
+ax.set_ylim(0, 30)
+ax.grid(True, alpha=0.3)
+ax.legend(fontsize=16, loc='upper right')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## Cash vs In-Kind Transfers
+
+Lump sum principle implies:
+
+- **Cash transfers are at least as good as in-kind transfers**, because they provide more flexibility
+- If the in-kind transfer does not bind (i.e., the consumer would buy at least that much anyway), then cash and in-kind are equivalent
+- If the in-kind transfer binds, cash is strictly better, as it allows the consumer to reach a higher indifference curve
+
+**Then why do governments use in-kind transfers like SNAP, housing vouchers, etc.?**
+
+::: {.fragment}
+Similar reasoning can be used to conclude that price subsidies are inferior to cash transfers.
+:::
+
+
+## Summary
+
+**What we covered**:
+
+1. **Preferences**: Axioms of rational choice, utility representation
+2. **Indifference curves**: Properties, MRS, diminishing MRS
+3. **Common utility functions**: Perfect substitutes, perfect complements, Cobb-Douglas
+4. **Budget constraints**: Slope = price ratio, shifts vs rotations
+5. **Utility maximization**: Tangency condition (MRS = $p_x/p_y$), Lagrange method
+6. **Applications**: Indirect utility, lump sum principle
+
+---
+

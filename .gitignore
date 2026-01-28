@@ -1,0 +1,39 @@
+# Quarto cache files (regenerated automatically)
+slides/_freeze/
+slides/.quarto/
+# slides/_output/
+slides/.jupyter_cache/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# LaTeX temporary files
+syllabus/.texpadtmp/
+*.aux
+*.synctex.gz
+*.log
+*.out
+*.toc
+EOF
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*-temp.qmd
+*.log
+
+# Other folders
+references/
+
+# remove pdf for now as it's creating an issue
+*.pdf

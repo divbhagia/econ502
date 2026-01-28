@@ -1,0 +1,29 @@
+project:
+  type: default
+  output-dir: _output
+
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    
+    # Accessibility
+    navigation-mode: linear
+    hash-type: number
+    
+    # Navigation
+    slide-number: true
+    controls: true
+    progress: true
+    
+    # Appearance
+    transition: fade
+    transition-speed: fast
+    center: false
+    
+    # Code
+    code-overflow: wrap
+    highlight-style: a11y-dark
+
+    # Chalkboard
+    chalkboard: true
+    chalkboard-theme: dark
