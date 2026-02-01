@@ -1,0 +1,66 @@
+---
+title: "Syllabus"
+toc: false
+number-sections: false
+sidebar: false
+format: html
+---
+
+The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking [here](Syllabus/Econ502-Syllabus.pdf).
+
+::: {.panel-tabset}
+
+## Overview
+### Overview
+
+This course develops the core tools of microeconomic theory while connecting them to real-world applications and policy questions. 
+
+We begin by examining how consumers decide what to buy (lectures 1-2) and how firms organize production (lecture 3), then consider how these behaviors determine prices and quantities in competitive markets (lecture 4). From there, we explore what it means for a market to work efficiently and how to think about fairness (lecture 5). We then turn to market power (lectures 6-8): What happens when a single or a few large firms dominate the market? How does market power affect wages in labor markets? 
+
+In the second half of the course, we consider the need for government intervention when markets fail due to information asymmetries, externalities, or underprovision of public goods (lectures 9-10). Finally, we conclude by examining decision-making under uncertainty and strategic behavior through game theory (lectures 11-12).
+
+## Learning Goals
+### Learning Goals
+Upon successful completion of this course, students will:
+
+- Model consumer and firm behavior and derive equilibrium prices and quantities in competitive markets
+- Apply welfare criteria to assess market efficiency and analyze tradeoffs between efficiency and equity
+- Analyze how market power affects prices, output, and wages in product and labor markets
+- Diagnose market failures arising from information asymmetries, externalities, and public goods, and evaluate policy responses
+- Apply expected utility theory to model choice under uncertainty and use game theory to solve strategic interactions
+
+## Material
+### Course Material
+
+The following textbook is required for this course:<br>
+
+- *Microeconomic Theory: Basic Principles & Extensions by Walter Nicholson, Christopher Snyder, 13th Edition.*
+
+Previous editions are also acceptable. Lectures will loosely follow the textbook. Supplementary readings, lecture slides, and problem sets will be posted on the course website.
+
+## Grading
+
+### Grading Criteria
+
+Your grade will be determined according to the following breakdown:
+
+<table style="margin-left: auto; margin-right: auto; width: 50%;">
+  <tr>
+    <th style="width: 60%;">Component</th>
+    <th style="width: 40%;">Points</th>
+  </tr>
+  <tr>
+    <td>Problem Sets</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Midterm Exam</td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <td>Final Exam</td>
+    <td>50</td>
+  </tr>
+</table>
+
+:::

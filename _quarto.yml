@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: docs
+  render: 
+    - "*.qmd"
+    - "!project.qmd"
+  
+execute:
+  freeze: auto
+
+
+website:
+  title: "Advanced Microeconomics"
+  navbar:
+    right:
+      - text: "Home"
+        file: index.qmd
+      - text: "Syllabus"
+        file: syllabus.qmd
+      - text: "Content"
+        file: Lectures/Lecture1/lecture1.qmd
+      - icon: github
+        href: https://divbhagia.github.io/econ502/
+
+  sidebar:
+    - title: "Lectures"
+      style: "docked"
+      search: false
+      contents:
+      - section: "Part I"
+        contents:
+          - text: "Lecture 1"
+            file: lectures/lecture1/lecture1.qmd
+  
+  page-footer:
+      2026 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) |Made with [Quarto](https://quarto.org/)
+
+format:
+  html:
+    theme: assets/custom.scss
+    toc: true
+    link-external-newwindow: true
+    css: assets/styles.css

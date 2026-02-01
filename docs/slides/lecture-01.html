@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Div Bhagia">
+
+<title>Consumer Preferences  and Choice – Advanced Microeconomics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Advanced Microeconomics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Lectures/Lecture1/lecture1.qmd"> 
+<span class="menu-text">Content</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://divbhagia.github.io/econ502/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#why-study-microeconomics" id="toc-why-study-microeconomics" class="nav-link" data-scroll-target="#why-study-microeconomics">Why Study Microeconomics?</a></li>
+  <li><a href="#why-study-microeconomics-1" id="toc-why-study-microeconomics-1" class="nav-link" data-scroll-target="#why-study-microeconomics-1">Why Study Microeconomics?</a></li>
+  <li><a href="#course-roadmap" id="toc-course-roadmap" class="nav-link" data-scroll-target="#course-roadmap">Course Roadmap</a></li>
+  <li><a href="#todays-lecture" id="toc-todays-lecture" class="nav-link" data-scroll-target="#todays-lecture">Today’s Lecture</a></li>
+  </ul></li>
+  <li><a href="#preferences-and-utility" id="toc-preferences-and-utility" class="nav-link" data-scroll-target="#preferences-and-utility">Preferences and Utility</a>
+  <ul class="collapse">
+  <li><a href="#preferences-basic-setup" id="toc-preferences-basic-setup" class="nav-link" data-scroll-target="#preferences-basic-setup">Preferences: Basic Setup</a></li>
+  <li><a href="#axioms-of-rational-choice" id="toc-axioms-of-rational-choice" class="nav-link" data-scroll-target="#axioms-of-rational-choice">Axioms of Rational Choice</a>
+  <ul class="collapse">
+  <li><a href="#completeness" id="toc-completeness" class="nav-link" data-scroll-target="#completeness">1. Completeness</a></li>
+  <li><a href="#transitivity" id="toc-transitivity" class="nav-link" data-scroll-target="#transitivity">2. Transitivity</a></li>
+  </ul></li>
+  <li><a href="#axioms-of-rational-choice-cont." id="toc-axioms-of-rational-choice-cont." class="nav-link" data-scroll-target="#axioms-of-rational-choice-cont.">Axioms of Rational Choice (cont.)</a>
+  <ul class="collapse">
+  <li><a href="#continuity" id="toc-continuity" class="nav-link" data-scroll-target="#continuity">3. Continuity</a></li>
+  <li><a href="#non-satiation-monotonicity" id="toc-non-satiation-monotonicity" class="nav-link" data-scroll-target="#non-satiation-monotonicity">4. Non-satiation (Monotonicity)</a></li>
+  </ul></li>
+  <li><a href="#axioms-of-rational-choice-cont.-1" id="toc-axioms-of-rational-choice-cont.-1" class="nav-link" data-scroll-target="#axioms-of-rational-choice-cont.-1">Axioms of Rational Choice (cont.)</a>
+  <ul class="collapse">
+  <li><a href="#convexity" id="toc-convexity" class="nav-link" data-scroll-target="#convexity">5. Convexity</a></li>
+  </ul></li>
+  <li><a href="#when-do-axioms-fail" id="toc-when-do-axioms-fail" class="nav-link" data-scroll-target="#when-do-axioms-fail">When Do Axioms Fail?</a>
+  <ul class="collapse">
+  <li><a href="#behavioral-economics-violations" id="toc-behavioral-economics-violations" class="nav-link" data-scroll-target="#behavioral-economics-violations">Behavioral Economics Violations</a></li>
+  </ul></li>
+  <li><a href="#from-preferences-to-utility" id="toc-from-preferences-to-utility" class="nav-link" data-scroll-target="#from-preferences-to-utility">From Preferences to Utility</a></li>
+  <li><a href="#monotonic-transformations" id="toc-monotonic-transformations" class="nav-link" data-scroll-target="#monotonic-transformations">Monotonic Transformations</a></li>
+  </ul></li>
+  <li><a href="#indifference-curves-mrs" id="toc-indifference-curves-mrs" class="nav-link" data-scroll-target="#indifference-curves-mrs">Indifference Curves &amp; MRS</a>
+  <ul class="collapse">
+  <li><a href="#indifference-curves" id="toc-indifference-curves" class="nav-link" data-scroll-target="#indifference-curves">Indifference Curves</a></li>
+  <li><a href="#properties-of-indifference-curves" id="toc-properties-of-indifference-curves" class="nav-link" data-scroll-target="#properties-of-indifference-curves">Properties of Indifference Curves</a></li>
+  <li><a href="#marginal-rate-of-substitution-mrs" id="toc-marginal-rate-of-substitution-mrs" class="nav-link" data-scroll-target="#marginal-rate-of-substitution-mrs">Marginal Rate of Substitution (MRS)</a></li>
+  <li><a href="#deriving-the-mrs-formula" id="toc-deriving-the-mrs-formula" class="nav-link" data-scroll-target="#deriving-the-mrs-formula">Deriving the MRS Formula</a></li>
+  <li><a href="#visualizing-mrs" id="toc-visualizing-mrs" class="nav-link" data-scroll-target="#visualizing-mrs">Visualizing MRS</a></li>
+  <li><a href="#diminishing-mrs" id="toc-diminishing-mrs" class="nav-link" data-scroll-target="#diminishing-mrs">Diminishing MRS</a></li>
+  <li><a href="#try-it-yourself-calculate-mrs" id="toc-try-it-yourself-calculate-mrs" class="nav-link" data-scroll-target="#try-it-yourself-calculate-mrs">Try It Yourself: Calculate MRS</a></li>
+  </ul></li>
+  <li><a href="#common-utility-functions" id="toc-common-utility-functions" class="nav-link" data-scroll-target="#common-utility-functions">Common Utility Functions</a>
+  <ul class="collapse">
+  <li><a href="#perfect-substitutes" id="toc-perfect-substitutes" class="nav-link" data-scroll-target="#perfect-substitutes">Perfect Substitutes</a></li>
+  <li><a href="#perfect-substitutes-graph" id="toc-perfect-substitutes-graph" class="nav-link" data-scroll-target="#perfect-substitutes-graph">Perfect Substitutes Graph</a></li>
+  <li><a href="#perfect-complements" id="toc-perfect-complements" class="nav-link" data-scroll-target="#perfect-complements">Perfect Complements</a></li>
+  <li><a href="#perfect-complements-graph" id="toc-perfect-complements-graph" class="nav-link" data-scroll-target="#perfect-complements-graph">Perfect Complements Graph</a></li>
+  <li><a href="#cobb-douglas-utility" id="toc-cobb-douglas-utility" class="nav-link" data-scroll-target="#cobb-douglas-utility">Cobb-Douglas Utility</a></li>
+  <li><a href="#cobb-douglas-graph" id="toc-cobb-douglas-graph" class="nav-link" data-scroll-target="#cobb-douglas-graph">Cobb-Douglas Graph</a></li>
+  <li><a href="#cobb-douglas-mrs-calculation" id="toc-cobb-douglas-mrs-calculation" class="nav-link" data-scroll-target="#cobb-douglas-mrs-calculation">Cobb-Douglas: MRS Calculation</a></li>
+  <li><a href="#ces-utility" id="toc-ces-utility" class="nav-link" data-scroll-target="#ces-utility">CES Utility</a></li>
+  </ul></li>
+  <li><a href="#budget-constraints" id="toc-budget-constraints" class="nav-link" data-scroll-target="#budget-constraints">Budget Constraints</a>
+  <ul class="collapse">
+  <li><a href="#the-budget-constraint" id="toc-the-budget-constraint" class="nav-link" data-scroll-target="#the-budget-constraint">The Budget Constraint</a></li>
+  <li><a href="#budget-constraint-graph" id="toc-budget-constraint-graph" class="nav-link" data-scroll-target="#budget-constraint-graph">Budget Constraint Graph</a></li>
+  <li><a href="#changes-in-income" id="toc-changes-in-income" class="nav-link" data-scroll-target="#changes-in-income">Changes in Income</a></li>
+  <li><a href="#changes-in-prices" id="toc-changes-in-prices" class="nav-link" data-scroll-target="#changes-in-prices">Changes in Prices</a></li>
+  </ul></li>
+  <li><a href="#utility-maximization" id="toc-utility-maximization" class="nav-link" data-scroll-target="#utility-maximization">Utility Maximization</a>
+  <ul class="collapse">
+  <li><a href="#the-consumers-problem" id="toc-the-consumers-problem" class="nav-link" data-scroll-target="#the-consumers-problem">The Consumer’s Problem</a></li>
+  <li><a href="#graphical-solution" id="toc-graphical-solution" class="nav-link" data-scroll-target="#graphical-solution">Graphical Solution</a></li>
+  <li><a href="#why-tangency-is-optimal" id="toc-why-tangency-is-optimal" class="nav-link" data-scroll-target="#why-tangency-is-optimal">Why Tangency is Optimal</a></li>
+  <li><a href="#the-lagrangian-method" id="toc-the-lagrangian-method" class="nav-link" data-scroll-target="#the-lagrangian-method">The Lagrangian Method</a></li>
+  <li><a href="#first-order-conditions" id="toc-first-order-conditions" class="nav-link" data-scroll-target="#first-order-conditions">First-Order Conditions</a></li>
+  <li><a href="#interpretation-of-λ" id="toc-interpretation-of-λ" class="nav-link" data-scroll-target="#interpretation-of-λ">Interpretation of λ</a></li>
+  <li><a href="#example-cobb-douglas-utility" id="toc-example-cobb-douglas-utility" class="nav-link" data-scroll-target="#example-cobb-douglas-utility">Example: Cobb-Douglas Utility</a></li>
+  <li><a href="#example-cobb-douglas-utility-cont." id="toc-example-cobb-douglas-utility-cont." class="nav-link" data-scroll-target="#example-cobb-douglas-utility-cont.">Example: Cobb-Douglas Utility (cont.)</a></li>
+  <li><a href="#example-cobb-douglas-utility-cont.-1" id="toc-example-cobb-douglas-utility-cont.-1" class="nav-link" data-scroll-target="#example-cobb-douglas-utility-cont.-1">Example: Cobb-Douglas Utility (cont.)</a></li>
+  <li><a href="#example-cobb-douglas-utility-cont.-2" id="toc-example-cobb-douglas-utility-cont.-2" class="nav-link" data-scroll-target="#example-cobb-douglas-utility-cont.-2">Example: Cobb-Douglas Utility (cont.)</a></li>
+  <li><a href="#example-cobb-douglas-utility-cont.-3" id="toc-example-cobb-douglas-utility-cont.-3" class="nav-link" data-scroll-target="#example-cobb-douglas-utility-cont.-3">Example: Cobb-Douglas Utility (cont.)</a></li>
+  <li><a href="#constant-expenditure-shares" id="toc-constant-expenditure-shares" class="nav-link" data-scroll-target="#constant-expenditure-shares">Constant Expenditure Shares</a></li>
+  <li><a href="#homogeneity-of-demand-functions" id="toc-homogeneity-of-demand-functions" class="nav-link" data-scroll-target="#homogeneity-of-demand-functions">Homogeneity of Demand Functions</a></li>
+  <li><a href="#indirect-utility-function" id="toc-indirect-utility-function" class="nav-link" data-scroll-target="#indirect-utility-function">Indirect Utility Function</a></li>
+  <li><a href="#cobb-douglas-indirect-utility" id="toc-cobb-douglas-indirect-utility" class="nav-link" data-scroll-target="#cobb-douglas-indirect-utility">Cobb-Douglas Indirect Utility</a></li>
+  <li><a href="#application-gasoline-tax" id="toc-application-gasoline-tax" class="nav-link" data-scroll-target="#application-gasoline-tax">Application: Gasoline Tax</a></li>
+  <li><a href="#application-cash-vs-food-stamps" id="toc-application-cash-vs-food-stamps" class="nav-link" data-scroll-target="#application-cash-vs-food-stamps">Application: Cash vs Food Stamps</a></li>
+  <li><a href="#lump-sum-principle" id="toc-lump-sum-principle" class="nav-link" data-scroll-target="#lump-sum-principle">Lump Sum Principle</a></li>
+  <li><a href="#cash-vs-in-kind-transfers" id="toc-cash-vs-in-kind-transfers" class="nav-link" data-scroll-target="#cash-vs-in-kind-transfers">Cash vs In-Kind Transfers</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Consumer Preferences<br> and Choice</h1>
+<p class="subtitle lead">Lecture 1</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Div Bhagia </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1" data-background-color="#1e5288">
+<h1 data-background-color="#1e5288">Introduction</h1>
+<hr>
+<section id="why-study-microeconomics" class="level2">
+<h2 class="anchored" data-anchor-id="why-study-microeconomics">Why Study Microeconomics?</h2>
+<ul>
+<li><strong>Non-economists typically think of economics when it concerns the <em>macro</em> stuff</strong> (unemployment, inflation, growth, recessions etc.)</li>
+</ul>
+<div class="fragment">
+<ul>
+<li><p><strong>However, the macro economy is made up of millions of <em>micro</em> decisions.</strong></p>
+<ul>
+<li><strong>People:</strong> what to buy, how much to work, how much to save</li>
+<li><strong>Firms:</strong> pricing, hiring, location, investment</li>
+<li><strong>Government:</strong> infrastructure, regulation, tax policy</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><p><strong>Markets coordinate these decisions invisibly and <em>often</em> effectively</strong>.</p>
+<ul>
+<li>Gas is at the pump when you need it</li>
+<li>Jobs exist for qualified workers</li>
+<li>Products get delivered</li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="why-study-microeconomics-1" class="level2">
+<h2 class="anchored" data-anchor-id="why-study-microeconomics-1">Why Study Microeconomics?</h2>
+<ul>
+<li><p><strong>However, sometimes markets produce undesirable outcomes or fail.</strong></p>
+<ul>
+<li>Each micro failure may seem small (one shortage, one person unemployed, one overpriced good)</li>
+<li>But small failures add up to large macro consequences</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li><p><strong>In this course, we will study:</strong></p>
+<ul>
+<li>How individuals and firms make decisions?</li>
+<li>How markets coordinate these decisions?</li>
+<li>When markets work efficiently and when they fail?<br>
+</li>
+<li>What interventions can help?</li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="course-roadmap" class="level2">
+<h2 class="anchored" data-anchor-id="course-roadmap">Course Roadmap</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="competitive-markets" class="level3">
+<h3 class="anchored" data-anchor-id="competitive-markets">Competitive Markets</h3>
+<ul>
+<li>Consumer choice (1-2)</li>
+<li>Firm production (3)</li>
+<li>Market equilibrium (4)</li>
+<li>Efficiency and welfare (5)</li>
+</ul>
+</section>
+<section id="market-power" class="level3">
+<h3 class="anchored" data-anchor-id="market-power">Market Power</h3>
+<ul>
+<li>Monopoly and oligopoly (6-7)</li>
+<li>Labor markets and monopsony (8)</li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="market-failures" class="level3">
+<h3 class="anchored" data-anchor-id="market-failures">Market Failures</h3>
+<ul>
+<li>Information asymmetries (9)</li>
+<li>Externalities and public goods (10)</li>
+</ul>
+</section>
+<section id="uncertainty-strategy" class="level3">
+<h3 class="anchored" data-anchor-id="uncertainty-strategy">Uncertainty &amp; Strategy</h3>
+<ul>
+<li>Decisions under uncertainty (11)</li>
+<li>Game theory (12)</li>
+</ul>
+</section>
+</div>
+</div>
+<hr>
+</section>
+<section id="todays-lecture" class="level2">
+<h2 class="anchored" data-anchor-id="todays-lecture">Today’s Lecture</h2>
+<p><strong>Central question</strong>: How do individuals make choices?</p>
+<div class="fragment" style="margin-top: 1em;">
+<p><strong>Economic Approach to Choice</strong></p>
+<ul>
+<li>Individuals have <strong>preferences</strong> over outcomes</li>
+<li>These preferences are <strong>rational</strong> (satisfy certain axioms)</li>
+<li>We can represent preferences with a <strong>utility function</strong></li>
+<li>Given constraints, individuals <strong>maximize utility</strong></li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Does everyone really “maximize utility”?</strong></p>
+<ul>
+<li>Maybe not consciously—but people behave “as if” they do</li>
+<li>The model predicts behavior relatively well</li>
+<li>Alternative: behavioral economics (we’ll discuss limitations)</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="preferences-and-utility" class="level1" data-background-color="#1e5288">
+<h1 data-background-color="#1e5288">Preferences and Utility</h1>
+<hr>
+<section id="preferences-basic-setup" class="level2">
+<h2 class="anchored" data-anchor-id="preferences-basic-setup">Preferences: Basic Setup</h2>
+<p>We consider a consumer choosing between bundles of goods.</p>
+<ul>
+<li><strong>Consumption bundle</strong>: <span class="math inline">\((x, y)\)</span> where <span class="math inline">\(x, y \geq 0\)</span></li>
+<li><strong>Preference relation</strong>: <span class="math inline">\(\succeq\)</span> (weakly preferred to)
+<ul>
+<li><span class="math inline">\(A \succeq B\)</span>: Bundle <span class="math inline">\(A\)</span> is at least as good as bundle <span class="math inline">\(B\)</span></li>
+<li><span class="math inline">\(A \succ B\)</span>: Bundle <span class="math inline">\(A\)</span> is strictly preferred to <span class="math inline">\(B\)</span></li>
+<li><span class="math inline">\(A \sim B\)</span>: Consumer is indifferent between <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span></li>
+</ul></li>
+</ul>
+<p><strong>Key question</strong>: What properties should preferences satisfy for them to be “rational”?</p>
+</section>
+<section id="axioms-of-rational-choice" class="level2">
+<h2 class="anchored" data-anchor-id="axioms-of-rational-choice">Axioms of Rational Choice</h2>
+<section id="completeness" class="level3">
+<h3 class="anchored" data-anchor-id="completeness">1. Completeness</h3>
+<p>For any two bundles <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, the consumer can state which is preferred or that they are indifferent: <span class="math display">\[A \succeq B, \quad B \succeq A, \quad \text{or both (indifference)}\]</span></p>
+<p><strong>Interpretation</strong>: Consumers can always make comparisons. Rules out indecision.</p>
+</section>
+<div class="fragment" style="margin-top: 1em;">
+<section id="transitivity" class="level3">
+<h3 class="anchored" data-anchor-id="transitivity">2. Transitivity</h3>
+<p>If <span class="math inline">\(A \succeq B\)</span> and <span class="math inline">\(B \succeq C\)</span>, then <span class="math inline">\(A \succeq C\)</span></p>
+<p><strong>Interpretation</strong>: Preferences are internally consistent. No cycles.</p>
+</section>
+</div>
+<hr>
+</section>
+<section id="axioms-of-rational-choice-cont." class="level2">
+<h2 class="anchored" data-anchor-id="axioms-of-rational-choice-cont.">Axioms of Rational Choice (cont.)</h2>
+<section id="continuity" class="level3">
+<h3 class="anchored" data-anchor-id="continuity">3. Continuity</h3>
+<p>Small changes in consumption bundles lead to small changes in preferences.</p>
+<p><strong>Technical</strong>: For any bundle <span class="math inline">\(A\)</span>, the sets <span class="math inline">\(\{B : B \succeq A\}\)</span> and <span class="math inline">\(\{B : A \succeq B\}\)</span> are closed.</p>
+<p><strong>Interpretation</strong>: No sudden jumps. Preferences are “smooth.”</p>
+</section>
+<div class="fragment" style="margin-top: 1em;">
+<section id="non-satiation-monotonicity" class="level3">
+<h3 class="anchored" data-anchor-id="non-satiation-monotonicity">4. Non-satiation (Monotonicity)</h3>
+<p>More is better: If <span class="math inline">\(A\)</span> has at least as much of everything as <span class="math inline">\(B\)</span>, and strictly more of at least one good, then <span class="math inline">\(A \succ B\)</span>.</p>
+<p><strong>Interpretation</strong>: Consumers always prefer more to less (at least weakly).</p>
+</section>
+</div>
+<hr>
+</section>
+<section id="axioms-of-rational-choice-cont.-1" class="level2">
+<h2 class="anchored" data-anchor-id="axioms-of-rational-choice-cont.-1">Axioms of Rational Choice (cont.)</h2>
+<section id="convexity" class="level3">
+<h3 class="anchored" data-anchor-id="convexity">5. Convexity</h3>
+<p>Averages are preferred to extremes. If <span class="math inline">\(A \sim B\)</span>, then: <span class="math display">\[\lambda A + (1-\lambda)B \succeq A \text{ for } \lambda \in [0,1]\]</span></p>
+<p><strong>Interpretation</strong>: Consumers prefer balanced consumption bundles. Diminishing marginal rate of substitution.</p>
+<p><strong>Example</strong>: If you’re indifferent between (5 apples, 0 oranges) and (0 apples, 5 oranges), you prefer (5 apples, 5 oranges) to either extreme.</p>
+<hr>
+</section>
+</section>
+<section id="when-do-axioms-fail" class="level2">
+<h2 class="anchored" data-anchor-id="when-do-axioms-fail">When Do Axioms Fail?</h2>
+<section id="behavioral-economics-violations" class="level3">
+<h3 class="anchored" data-anchor-id="behavioral-economics-violations">Behavioral Economics Violations</h3>
+<ul>
+<li><p><strong>Framing effects</strong>: Preferences change based on how options are presented</p></li>
+<li><p><strong>Intransitivity</strong>: Preference reversals in complex choices (Condorcet paradox)</p></li>
+<li><p><strong>Present bias</strong>: Time-inconsistent preferences (<span class="math inline">\(\beta\delta\)</span> model)</p></li>
+<li><p><strong>Reference dependence</strong>: Preferences depend on current endowment (loss aversion)</p></li>
+<li><p><strong>Bounded rationality</strong></p>
+<ul>
+<li>Too many options → choice paralysis</li>
+<li>Computational constraints</li>
+<li>Limited attention</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="from-preferences-to-utility" class="level2">
+<h2 class="anchored" data-anchor-id="from-preferences-to-utility">From Preferences to Utility</h2>
+<p><strong>Key Theorem</strong>: If preferences satisfy completeness, transitivity, continuity, and monotonicity, then there exists a continuous <strong>utility function</strong> <span class="math inline">\(U(x,y)\)</span> that represents them: <span class="math display">\[A \succeq B \iff U(A) \geq U(B)\]</span></p>
+<p><strong>Interpretation</strong>: We can assign numbers to bundles such that higher numbers = more preferred.</p>
+<div class="fragment" style="margin-top: 1em;">
+<p><strong>Important</strong>: Utility is <strong>ordinal</strong>, not <strong>cardinal</strong></p>
+<ul>
+<li>Only the <strong>ranking</strong> matters, the magnitude of utility has no meaning.</li>
+<li><span class="math inline">\(U(A) = 10, U(B) = 5\)</span> tells us <span class="math inline">\(A \succ B\)</span>. It does NOT mean “<span class="math inline">\(A\)</span> is twice as good as <span class="math inline">\(B\)</span>”</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="monotonic-transformations" class="level2">
+<h2 class="anchored" data-anchor-id="monotonic-transformations">Monotonic Transformations</h2>
+<ul>
+<li><p>Since utility is ordinal, we can apply any <strong>strictly increasing transformation</strong> without changing preferences:</p></li>
+<li><p>If <span class="math inline">\(U(x,y)\)</span> represents preferences, so does <span class="math inline">\(V(x,y) = f(U(x,y))\)</span> for any strictly increasing <span class="math inline">\(f\)</span>.</p></li>
+<li><p><strong>Examples</strong>:</p>
+<ul>
+<li><span class="math inline">\(U(x,y) = xy\)</span> and <span class="math inline">\(V(x,y) = \ln(xy)\)</span> represent the same preferences</li>
+<li><span class="math inline">\(U(x,y) = x^{0.5}y^{0.5}\)</span> and <span class="math inline">\(V(x,y) = xy\)</span> represent the same preferences</li>
+</ul></li>
+</ul>
+<p><strong>Why this matters</strong>: We can transform utility functions to make calculations easier.</p>
+</section>
+</section>
+<section id="indifference-curves-mrs" class="level1" data-background-color="#1e5288">
+<h1 data-background-color="#1e5288">Indifference Curves &amp; MRS</h1>
+<hr>
+<section id="indifference-curves" class="level2">
+<h2 class="anchored" data-anchor-id="indifference-curves">Indifference Curves</h2>
+<p>An <strong>indifference curve</strong> is the set of all bundles that give the same utility level:</p>
+<p><span class="math display">\[IC(U_0) = \{(x,y) : U(x,y) = U_0\}\]</span></p>
+<p><strong>Interpretation</strong>: The consumer is indifferent between any two points on the same curve.</p>
+<div class="fragment" style="margin-top: -1em;">
+<div id="c06cc43b" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lecture-01_files/figure-html/cell-2-output-1.png" width="566" height="398" class="figure-img"></p>
+<figcaption>Indifference Curves for U(x,y) = xy</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="properties-of-indifference-curves" class="level2">
+<h2 class="anchored" data-anchor-id="properties-of-indifference-curves">Properties of Indifference Curves</h2>
+<p><strong>Under our axioms, indifference curves must be</strong>:</p>
+<ol type="1">
+<li><p><strong>Downward sloping</strong> (from non-satiation)</p>
+<ul>
+<li>To keep utility constant, if <span class="math inline">\(x\)</span> increases, <span class="math inline">\(y\)</span> must decrease</li>
+</ul></li>
+<li><p><strong>Do not cross</strong> (from transitivity)</p>
+<ul>
+<li>If they crossed, we’d have <span class="math inline">\(A \sim B\)</span> and <span class="math inline">\(A \sim C\)</span> but <span class="math inline">\(B \not\sim C\)</span></li>
+</ul></li>
+<li><p><strong>Convex to the origin</strong> (from convexity of preferences)</p>
+<ul>
+<li>Averages preferred to extremes</li>
+<li>Equivalently: diminishing marginal rate of substitution</li>
+</ul></li>
+<li><p><strong>Higher curves represent higher utility</strong> (from monotonicity)</p></li>
+</ol>
+<hr>
+</section>
+<section id="marginal-rate-of-substitution-mrs" class="level2">
+<h2 class="anchored" data-anchor-id="marginal-rate-of-substitution-mrs">Marginal Rate of Substitution (MRS)</h2>
+<ul>
+<li><p>The <strong>marginal rate of substitution</strong> is the rate at which the consumer is willing to trade good <span class="math inline">\(Y\)</span> for good <span class="math inline">\(X\)</span> while maintaining constant utility.</p></li>
+<li><p><strong>Geometrically</strong>: MRS = -(slope of indifference curve)</p></li>
+</ul>
+<p><span class="math display">\[MRS = -\frac{dy}{dx}\bigg|_{U=const}\]</span></p>
+<ul>
+<li><p><strong>Interpretation</strong>: How many units of <span class="math inline">\(Y\)</span> are you willing to give up to get one more unit of <span class="math inline">\(X\)</span>?</p></li>
+<li><p><strong>Example</strong>: If MRS = 2, you’re willing to give up 2 units of <span class="math inline">\(Y\)</span> to get 1 more unit of <span class="math inline">\(X\)</span> (and remain indifferent).</p></li>
+</ul>
+<hr>
+</section>
+<section id="deriving-the-mrs-formula" class="level2">
+<h2 class="anchored" data-anchor-id="deriving-the-mrs-formula">Deriving the MRS Formula</h2>
+<p>Along an indifference curve, utility is constant: <span class="math inline">\(U(x,y) = \bar{U}\)</span></p>
+<p>Taking the total differential: <span class="math display">\[dU = \frac{\partial U}{\partial x}dx + \frac{\partial U}{\partial y}dy = 0\]</span></p>
+<p>Rearranging: <span class="math display">\[\frac{\partial U}{\partial y}dy = -\frac{\partial U}{\partial x}dx \quad \rightarrow \quad \frac{dy}{dx} = -\frac{\partial U/\partial x}{\partial U/\partial y} = -\frac{MU_x}{MU_y}\]</span></p>
+<p>Therefore: <span class="math display">\[\boxed{MRS = -\frac{dy}{dx} = \frac{MU_x}{MU_y}}\]</span></p>
+<hr>
+</section>
+<section id="visualizing-mrs" class="level2">
+<h2 class="anchored" data-anchor-id="visualizing-mrs">Visualizing MRS</h2>
+<div id="6c2ec90c" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture-01_files/figure-html/cell-3-output-1.png" width="759" height="567" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="diminishing-mrs" class="level2">
+<h2 class="anchored" data-anchor-id="diminishing-mrs">Diminishing MRS</h2>
+<p><strong>Convexity assumption</strong> → <strong>Diminishing MRS</strong></p>
+<p>As you consume more of good <span class="math inline">\(X\)</span> (moving right along an IC), the MRS decreases:</p>
+<ul>
+<li>When you have a lot of <span class="math inline">\(Y\)</span> and little <span class="math inline">\(X\)</span>: High MRS (willing to give up a lot of <span class="math inline">\(Y\)</span> for more <span class="math inline">\(X\)</span>)</li>
+<li>When you have a lot of <span class="math inline">\(X\)</span> and little <span class="math inline">\(Y\)</span>: Low MRS (not willing to give up much <span class="math inline">\(Y\)</span> for more <span class="math inline">\(X\)</span>)</li>
+</ul>
+<p><strong>Economic intuition</strong>: Scarcity increases value. The less you have of something, the more you value additional units.</p>
+<hr>
+</section>
+<section id="try-it-yourself-calculate-mrs" class="level2">
+<h2 class="anchored" data-anchor-id="try-it-yourself-calculate-mrs">Try It Yourself: Calculate MRS</h2>
+<p><strong>Exercise</strong>: Consider the utility function <span class="math inline">\(U(x,y) = x^{0.3}y^{0.7}\)</span></p>
+<ol type="1">
+<li>Find the marginal utilities <span class="math inline">\(MU_x\)</span> and <span class="math inline">\(MU_y\)</span></li>
+<li>Calculate the MRS</li>
+<li>Evaluate the MRS at the point <span class="math inline">\((x,y) = (10, 20)\)</span></li>
+<li>Interpret your answer: How many units of <span class="math inline">\(y\)</span> would the consumer give up for one more unit of <span class="math inline">\(x\)</span>?</li>
+</ol>
+<div class="fragment">
+<p><strong>Hint</strong>: <span class="math inline">\(MU_x = \frac{\partial U}{\partial x}\)</span>, and remember <span class="math inline">\(MRS = \frac{MU_x}{MU_y}\)</span></p>
+</div>
+</section>
+</section>
+<section id="common-utility-functions" class="level1" data-background-color="#1e5288">
+<h1 data-background-color="#1e5288">Common Utility Functions</h1>
+<hr>
+<section id="perfect-substitutes" class="level2">
+<h2 class="anchored" data-anchor-id="perfect-substitutes">Perfect Substitutes</h2>
+<p>Goods that can be substituted at a constant rate.</p>
+<p><span class="math display">\[U(x,y) = ax + by\]</span></p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>Different brands of the same product (e.g., Coke vs Pepsi for some consumers)</li>
+<li>Coffee from different cafes</li>
+<li>Generic vs brand-name drugs (if truly equivalent)</li>
+</ul>
+<p><strong>Key features</strong>:</p>
+<ul>
+<li>Indifference curves are <strong>straight lines</strong></li>
+<li>MRS is <strong>constant</strong>: <span class="math inline">\(MRS = a/b\)</span></li>
+<li>Consumer willing to trade at fixed rate regardless of bundle</li>
+</ul>
+<hr>
+</section>
+<section id="perfect-substitutes-graph" class="level2">
+<h2 class="anchored" data-anchor-id="perfect-substitutes-graph">Perfect Substitutes Graph</h2>
+<div id="5a40bcea" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lecture-01_files/figure-html/cell-4-output-1.png" width="759" height="567" class="figure-img"></p>
+<figcaption>Perfect Substitutes: U = 2x + y</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="perfect-complements" class="level2">
+<h2 class="anchored" data-anchor-id="perfect-complements">Perfect Complements</h2>
+<p>Goods that must be consumed in fixed proportions.</p>
+<p><span class="math display">\[U(x,y) = \min\{ax, by\}\]</span></p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>Left and right shoes</li>
+<li>Coffee and cream (for some)</li>
+<li>Cars and tires (need 4 tires per car)</li>
+<li>Computers and monitors</li>
+</ul>
+<p><strong>Key features</strong>:</p>
+<ul>
+<li>Indifference curves are <strong>L-shaped</strong></li>
+<li>Consumed in fixed ratio: <span class="math inline">\(x/y = b/a\)</span></li>
+<li>MRS is undefined (technically infinite or zero, depending on side)</li>
+</ul>
+<hr>
+</section>
+<section id="perfect-complements-graph" class="level2">
+<h2 class="anchored" data-anchor-id="perfect-complements-graph">Perfect Complements Graph</h2>
+<div id="ac2ee7b3" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lecture-01_files/figure-html/cell-5-output-1.png" width="759" height="567" class="figure-img"></p>
+<figcaption>Perfect Complements: U = min{x, y}</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="cobb-douglas-utility" class="level2">
+<h2 class="anchored" data-anchor-id="cobb-douglas-utility">Cobb-Douglas Utility</h2>
+<p>The most widely used functional form in economics:</p>
+<p><span class="math display">\[U(x,y) = x^{\alpha}y^{\beta}\]</span></p>
+<p>Or equivalently (applying monotonic transformation):</p>
+<p><span class="math display">\[U(x,y) = \alpha \ln x + \beta \ln y\]</span></p>
+<p><strong>Key features</strong>:</p>
+<ul>
+<li>Smooth, convex indifference curves</li>
+<li>Interior solutions (typically)</li>
+<li>Constant expenditure shares</li>
+<li><span class="math inline">\(MRS = \frac{\alpha}{\beta}\cdot\frac{y}{x}\)</span></li>
+</ul>
+<hr>
+</section>
+<section id="cobb-douglas-graph" class="level2">
+<h2 class="anchored" data-anchor-id="cobb-douglas-graph">Cobb-Douglas Graph</h2>
+<div id="190ce2b7" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lecture-01_files/figure-html/cell-6-output-1.png" width="1191" height="520" class="figure-img"></p>
+<figcaption>Cobb-Douglas Utility: <span class="math inline">\(U = x^α y^β\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="cobb-douglas-mrs-calculation" class="level2">
+<h2 class="anchored" data-anchor-id="cobb-douglas-mrs-calculation">Cobb-Douglas: MRS Calculation</h2>
+<p>For <span class="math inline">\(U(x,y) = x^{\alpha}y^{\beta}\)</span>:</p>
+<p><strong>Step 1</strong>: Find marginal utilities <span class="math display">\[MU_x = \frac{\partial U}{\partial x} = \alpha x^{\alpha-1}y^{\beta}\]</span> <span class="math display">\[MU_y = \frac{\partial U}{\partial y} = \beta x^{\alpha}y^{\beta-1}\]</span></p>
+<p><strong>Step 2</strong>: Calculate MRS <span class="math display">\[MRS = \frac{MU_x}{MU_y} = \frac{\alpha x^{\alpha-1}y^{\beta}}{\beta x^{\alpha}y^{\beta-1}} = \frac{\alpha}{\beta} \cdot \frac{y}{x}\]</span></p>
+<p>MRS depends on the ratio <span class="math inline">\(y/x\)</span> and the preference parameters <span class="math inline">\(\alpha/\beta\)</span>.</p>
+<hr>
+</section>
+<section id="ces-utility" class="level2">
+<h2 class="anchored" data-anchor-id="ces-utility">CES Utility</h2>
+<p><strong>Constant Elasticity of Substitution (CES)</strong> utility function:</p>
+<p><span class="math display">\[U(x,y) = (ax^{\rho} + by^{\rho})^{1/\rho}, \quad \rho \leq 1, \rho \neq 0\]</span></p>
+<p><strong>Elasticity of substitution</strong>: <span class="math inline">\(\sigma = \frac{1}{1-\rho}\)</span></p>
+<p><strong>Special cases</strong>:</p>
+<ul>
+<li><span class="math inline">\(\rho \to -\infty\)</span>: Perfect complements (<span class="math inline">\(\sigma = 0\)</span>)</li>
+<li><span class="math inline">\(\rho = 0\)</span>: Cobb-Douglas (<span class="math inline">\(\sigma = 1\)</span>)<br>
+</li>
+<li><span class="math inline">\(\rho = 1\)</span>: Perfect substitutes (<span class="math inline">\(\sigma = \infty\)</span>)</li>
+</ul>
+<p><strong>Flexibility</strong>: CES nests all three cases mentioned.</p>
+</section>
+</section>
+<section id="budget-constraints" class="level1" data-background-color="#1e5288">
+<h1 data-background-color="#1e5288">Budget Constraints</h1>
+<hr>
+<section id="the-budget-constraint" class="level2">
+<h2 class="anchored" data-anchor-id="the-budget-constraint">The Budget Constraint</h2>
+<p>Consumers have limited income <span class="math inline">\(I\)</span> and face prices <span class="math inline">\(p_x, p_y\)</span> for goods:</p>
+<p><span class="math display">\[p_x \cdot x + p_y \cdot y \leq I\]</span></p>
+<p><strong>Budget line</strong>: Set of bundles that cost exactly <span class="math inline">\(I\)</span></p>
+<p><span class="math display">\[p_x \cdot x + p_y \cdot y = I\]</span></p>
+<p>Rearranging for <span class="math inline">\(y\)</span>:</p>
+<p><span class="math display">\[y = \frac{I}{p_y} - \frac{p_x}{p_y}x\]</span></p>
+<ul>
+<li><strong>Intercept</strong>: <span class="math inline">\(I/p_y\)</span> (max amount of <span class="math inline">\(y\)</span> if <span class="math inline">\(x=0\)</span>)</li>
+<li><strong>Slope</strong>: <span class="math inline">\(-p_x/p_y\)</span> (opportunity cost of <span class="math inline">\(x\)</span> in terms of <span class="math inline">\(y\)</span>)</li>
+</ul>
+<hr>
+</section>
+<section id="budget-constraint-graph" class="level2">
+<h2 class="anchored" data-anchor-id="budget-constraint-graph">Budget Constraint Graph</h2>
+<div id="3257ed7d" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/2017705670.py:15: UserWarning:
+
+color is redundantly defined by the 'color' keyword argument and the fmt string "b-" (-&gt; color='b'). The keyword argument will take precedence.
+</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lecture-01_files/figure-html/cell-7-output-2.png" width="759" height="567" class="figure-img"></p>
+<figcaption>Budget Line with <span class="math inline">\(I = 100, p_x = 10, p_y = 5\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="changes-in-income" class="level2">
+<h2 class="anchored" data-anchor-id="changes-in-income">Changes in Income</h2>
+<div id="5d3db2e1" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/2310646763.py:17: UserWarning:
+
+color is redundantly defined by the 'color' keyword argument and the fmt string "b-" (-&gt; color='b'). The keyword argument will take precedence.
+
+/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/2310646763.py:18: UserWarning:
+
+linestyle is redundantly defined by the 'linestyle' keyword argument and the fmt string "b-" (-&gt; linestyle='-'). The keyword argument will take precedence.
+
+/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/2310646763.py:18: UserWarning:
+
+color is redundantly defined by the 'color' keyword argument and the fmt string "b-" (-&gt; color='b'). The keyword argument will take precedence.
+</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture-01_files/figure-html/cell-8-output-2.png" width="759" height="567" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="changes-in-prices" class="level2">
+<h2 class="anchored" data-anchor-id="changes-in-prices">Changes in Prices</h2>
+<div id="bdf877f1" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/3859235418.py:17: UserWarning:
+
+color is redundantly defined by the 'color' keyword argument and the fmt string "b-" (-&gt; color='b'). The keyword argument will take precedence.
+
+/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/3859235418.py:18: UserWarning:
+
+linestyle is redundantly defined by the 'linestyle' keyword argument and the fmt string "b-" (-&gt; linestyle='-'). The keyword argument will take precedence.
+
+/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/3859235418.py:18: UserWarning:
+
+color is redundantly defined by the 'color' keyword argument and the fmt string "b-" (-&gt; color='b'). The keyword argument will take precedence.
+</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture-01_files/figure-html/cell-9-output-2.png" width="759" height="567" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="utility-maximization" class="level1" data-background-color="#1e5288">
+<h1 data-background-color="#1e5288">Utility Maximization</h1>
+<hr>
+<section id="the-consumers-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-consumers-problem">The Consumer’s Problem</h2>
+<p>The consumer chooses <span class="math inline">\((x,y)\)</span> to:</p>
+<p><span class="math display">\[\max_{x,y} \quad U(x,y)\]</span></p>
+<p>subject to:</p>
+<p><span class="math display">\[p_x x + p_y y = I\]</span> <span class="math display">\[x \geq 0, \quad y \geq 0\]</span></p>
+<p><strong>Goal</strong>: Find the highest indifference curve that touches the budget line.</p>
+<p><strong>Intuition</strong>: Get as much utility as possible given your budget.</p>
+<hr>
+</section>
+<section id="graphical-solution" class="level2">
+<h2 class="anchored" data-anchor-id="graphical-solution">Graphical Solution</h2>
+<div id="f4f97c85" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture-01_files/figure-html/cell-10-output-1.png" width="807" height="615" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="why-tangency-is-optimal" class="level2">
+<h2 class="anchored" data-anchor-id="why-tangency-is-optimal">Why Tangency is Optimal</h2>
+<p><strong>At the tangency point</strong>: MRS = <span class="math inline">\(p_x/p_y\)</span></p>
+<p><strong>Intuition</strong>: Consumer’s subjective tradeoff (MRS) equals market tradeoff</p>
+<ul>
+<li><strong>MRS</strong>: How much <span class="math inline">\(Y\)</span> you’re willing to give up for 1 unit of <span class="math inline">\(X\)</span></li>
+<li><strong><span class="math inline">\(p_x/p_y\)</span></strong>: How much <span class="math inline">\(Y\)</span> you must give up (in market) for 1 unit of <span class="math inline">\(X\)</span></li>
+</ul>
+<p><strong>If MRS <span class="math inline">\(&gt;\)</span> <span class="math inline">\(p_x/p_y\)</span></strong>:</p>
+<ul>
+<li>You value <span class="math inline">\(X\)</span> more than market does</li>
+<li>Should buy more <span class="math inline">\(X\)</span>, less <span class="math inline">\(Y\)</span></li>
+</ul>
+<p><strong>If MRS <span class="math inline">\(&lt;\)</span> <span class="math inline">\(p_x/p_y\)</span></strong>:</p>
+<ul>
+<li>You value <span class="math inline">\(X\)</span> less than market does<br>
+</li>
+<li>Should buy less <span class="math inline">\(X\)</span>, more <span class="math inline">\(Y\)</span></li>
+</ul>
+<hr>
+</section>
+<section id="the-lagrangian-method" class="level2">
+<h2 class="anchored" data-anchor-id="the-lagrangian-method">The Lagrangian Method</h2>
+<p>The consumer’s problem: <span class="math display">\[\max_{x,y} \quad U(x,y) \quad \text{subject to} \quad p_x x + p_y y = I\]</span></p>
+<p><strong>Lagrangian</strong>: <span class="math display">\[\mathcal{L}(x,y,\lambda) = U(x,y) + \lambda(I - p_x x - p_y y)\]</span></p>
+<p>where <span class="math inline">\(\lambda\)</span> is the <strong>Lagrange multiplier</strong>.</p>
+<p><strong>First-order conditions</strong> (FOCs):</p>
+<ol type="1">
+<li><span class="math inline">\(\frac{\partial \mathcal{L}}{\partial x} = \frac{\partial U}{\partial x} - \lambda p_x = 0\)</span></li>
+<li><span class="math inline">\(\frac{\partial \mathcal{L}}{\partial y} = \frac{\partial U}{\partial y} - \lambda p_y = 0\)</span></li>
+<li><span class="math inline">\(\frac{\partial \mathcal{L}}{\partial \lambda} = I - p_x x - p_y y = 0\)</span></li>
+</ol>
+<hr>
+</section>
+<section id="first-order-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="first-order-conditions">First-Order Conditions</h2>
+<p>From the first two FOCs: <span class="math display">\[MU_x = \lambda p_x \quad \text{and} \quad MU_y = \lambda p_y\]</span></p>
+<p>Dividing these: <span class="math display">\[\frac{MU_x}{MU_y} = \frac{p_x}{p_y}\]</span></p>
+<p>This is exactly the tangency condition: <strong>MRS = price ratio</strong>!</p>
+<hr>
+</section>
+<section id="interpretation-of-λ" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation-of-λ">Interpretation of λ</h2>
+<p>From FOCs: <span class="math inline">\(\lambda = \frac{MU_x}{p_x} = \frac{MU_y}{p_y}\)</span></p>
+<p><strong>λ = marginal utility of income</strong></p>
+<ul>
+<li>How much utility increases if income increases by $1</li>
+<li>Measures the “value” of relaxing the budget constraint</li>
+<li>Important for welfare analysis</li>
+</ul>
+<p><strong>Example</strong>: If <span class="math inline">\(\lambda = 0.5\)</span>:</p>
+<ul>
+<li>$1 more of income increases utility by 0.5 utils</li>
+<li>Equivalently: consumer willing to pay $2 for 1 more util</li>
+</ul>
+<div class="fragment">
+<p><strong>Note</strong>: λ decreases as income increases (diminishing marginal utility of income)</p>
+</div>
+<hr>
+</section>
+<section id="example-cobb-douglas-utility" class="level2">
+<h2 class="anchored" data-anchor-id="example-cobb-douglas-utility">Example: Cobb-Douglas Utility</h2>
+<p><strong>Setup</strong>: <span class="math inline">\(U(x,y) = x^{\alpha}y^{\beta}\)</span>, budget: <span class="math inline">\(p_x x + p_y y = I\)</span></p>
+<p><strong>Step 1</strong>: Form the Lagrangian <span class="math display">\[\mathcal{L} = x^{\alpha}y^{\beta} + \lambda(I - p_x x - p_y y)\]</span></p>
+<p><strong>Step 2</strong>: Take FOCs <span class="math display">\[\frac{\partial \mathcal{L}}{\partial x} = \alpha x^{\alpha-1}y^{\beta} - \lambda p_x = 0\]</span> <span class="math display">\[\frac{\partial \mathcal{L}}{\partial y} = \beta x^{\alpha}y^{\beta-1} - \lambda p_y = 0\]</span> <span class="math display">\[\frac{\partial \mathcal{L}}{\partial \lambda} = I - p_x x - p_y y = 0\]</span></p>
+<hr>
+</section>
+<section id="example-cobb-douglas-utility-cont." class="level2">
+<h2 class="anchored" data-anchor-id="example-cobb-douglas-utility-cont.">Example: Cobb-Douglas Utility (cont.)</h2>
+<p><strong>Step 3</strong>: Combine first two FOCs <span class="math display">\[\frac{\alpha x^{\alpha-1}y^{\beta}}{\beta x^{\alpha}y^{\beta-1}} = \frac{p_x}{p_y}\]</span></p>
+<p>Simplifying: <span class="math display">\[\frac{\alpha}{\beta} \cdot \frac{y}{x} = \frac{p_x}{p_y}\]</span></p>
+<p>Solving for <span class="math inline">\(y\)</span>: <span class="math display">\[y = \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot x\]</span></p>
+</section>
+<section id="example-cobb-douglas-utility-cont.-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-cobb-douglas-utility-cont.-1">Example: Cobb-Douglas Utility (cont.)</h2>
+<p><strong>Step 4</strong>: Substitute into budget constraint <span class="math display">\[p_x x + p_y \cdot \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot x = I\]</span> <span class="math display">\[p_x x + \frac{\beta}{\alpha} p_x x = I\]</span> <span class="math display">\[p_x x \left(1 + \frac{\beta}{\alpha}\right) = I\]</span> <span class="math display">\[p_x x \cdot \frac{\alpha + \beta}{\alpha} = I\]</span></p>
+<hr>
+</section>
+<section id="example-cobb-douglas-utility-cont.-2" class="level2">
+<h2 class="anchored" data-anchor-id="example-cobb-douglas-utility-cont.-2">Example: Cobb-Douglas Utility (cont.)</h2>
+<p><strong>Step 5</strong>: Solve for <span class="math inline">\(x^*\)</span>: <span class="math display">\[x^* = \frac{\alpha I}{(\alpha + \beta)p_x}\]</span></p>
+<p>Substitute back to get <span class="math inline">\(y^*\)</span>: <span class="math display">\[y^* = \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot x^* = \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot \frac{\alpha I}{(\alpha + \beta)p_x} = \frac{\beta I}{(\alpha + \beta)p_y}\]</span></p>
+</section>
+<section id="example-cobb-douglas-utility-cont.-3" class="level2">
+<h2 class="anchored" data-anchor-id="example-cobb-douglas-utility-cont.-3">Example: Cobb-Douglas Utility (cont.)</h2>
+<p><span class="math display">\[\boxed{x^* = \frac{\alpha I}{(\alpha + \beta)p_x}, \quad y^* = \frac{\beta I}{(\alpha + \beta)p_y}}\]</span></p>
+<p><strong>Key results</strong>:</p>
+<ul>
+<li><strong>Expenditure on X</strong>: <span class="math inline">\(p_x x^* = \frac{\alpha I}{\alpha + \beta}\)</span></li>
+<li><strong>Expenditure on Y</strong>: <span class="math inline">\(p_y y^* = \frac{\beta I}{\alpha + \beta}\)</span></li>
+<li><strong>Expenditure shares are constant</strong>: <span class="math inline">\(\frac{\alpha}{\alpha+\beta}\)</span> and <span class="math inline">\(\frac{\beta}{\alpha+\beta}\)</span></li>
+</ul>
+<hr>
+</section>
+<section id="constant-expenditure-shares" class="level2">
+<h2 class="anchored" data-anchor-id="constant-expenditure-shares">Constant Expenditure Shares</h2>
+<p><strong>Cobb-Douglas utility implies constant expenditure shares regardless of income or prices.</strong></p>
+<p>Which of the following goods do you think have roughly constant expenditure shares in real life?</p>
+<ol type="1">
+<li>Food</li>
+<li>Housing</li>
+<li>Travel</li>
+<li>Charitable giving</li>
+</ol>
+<div class="fragment">
+<p><strong>Engel’s Law</strong>: As income rises, the proportion spent on food decreases.</p>
+<p><strong>How to model this? </strong></p>
+</div>
+<hr>
+</section>
+<section id="homogeneity-of-demand-functions" class="level2">
+<h2 class="anchored" data-anchor-id="homogeneity-of-demand-functions">Homogeneity of Demand Functions</h2>
+<p><strong>Homogeneity of degree zero</strong>: If all prices and income are multiplied by the same factor <span class="math inline">\(t &gt; 0\)</span>: <span class="math display">\[x^*(tp_x, tp_y, tI) = x^*(p_x, p_y, I)\]</span></p>
+<p><strong>Interpretation</strong>: Demand depends only on <strong>relative prices</strong>, not absolute price level.</p>
+<p><strong>Example</strong>: If all prices and income double (inflation), consumption bundles don’t change.</p>
+<div class="fragment">
+<p><strong>Why?</strong> The budget constraint becomes: <span class="math display">\[tp_x \cdot x + tp_y \cdot y = tI\]</span> <span class="math display">\[\Rightarrow p_x \cdot x + p_y \cdot y = I\]</span></p>
+</div>
+<hr>
+</section>
+<section id="indirect-utility-function" class="level2">
+<h2 class="anchored" data-anchor-id="indirect-utility-function">Indirect Utility Function</h2>
+<p>The <strong>indirect utility function</strong> <span class="math inline">\(V(p_x, p_y, I)\)</span> gives maximum achievable utility as a function of prices and income:</p>
+<p><span class="math display">\[V(p_x, p_y, I) = U(x^*(p_x, p_y, I), y^*(p_x, p_y, I))\]</span></p>
+<p><strong>Interpretation</strong>: Maximum utility you can achieve given market conditions.</p>
+<p><strong>Properties</strong>:</p>
+<ol type="1">
+<li>Increasing in <span class="math inline">\(I\)</span>: <span class="math inline">\(\frac{\partial V}{\partial I} &gt; 0\)</span> (more money = higher utility)</li>
+<li>Decreasing in prices: <span class="math inline">\(\frac{\partial V}{\partial p_x} &lt; 0, \frac{\partial V}{\partial p_y} &lt; 0\)</span> (higher prices = lower utility)</li>
+<li>Homogeneous of degree zero: <span class="math inline">\(V(tp_x, tp_y, tI) = V(p_x, p_y, I)\)</span></li>
+</ol>
+<hr>
+</section>
+<section id="cobb-douglas-indirect-utility" class="level2">
+<h2 class="anchored" data-anchor-id="cobb-douglas-indirect-utility">Cobb-Douglas Indirect Utility</h2>
+<p>For <span class="math inline">\(U(x,y) = x^{\alpha}y^{\beta}\)</span>:</p>
+<p>Substituting <span class="math inline">\(x^* = \frac{\alpha I}{(\alpha+\beta)p_x}\)</span> and <span class="math inline">\(y^* = \frac{\beta I}{(\alpha+\beta)p_y}\)</span>:</p>
+<p><span class="math display">\[V(p_x, p_y, I) = \left(\frac{\alpha I}{(\alpha+\beta)p_x}\right)^{\alpha} \left(\frac{\beta I}{(\alpha+\beta)p_y}\right)^{\beta}\]</span></p>
+<p>Simplifying: <span class="math display">\[V(p_x, p_y, I) = \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}} \cdot \frac{\alpha^{\alpha}\beta^{\beta}}{(\alpha+\beta)^{\alpha+\beta}}\]</span></p>
+<p><strong>Note</strong>: <span class="math inline">\(V\)</span> increases with <span class="math inline">\(I\)</span> and decreases with <span class="math inline">\(p_x\)</span> and <span class="math inline">\(p_y\)</span> ✓</p>
+<hr>
+</section>
+<section id="application-gasoline-tax" class="level2">
+<h2 class="anchored" data-anchor-id="application-gasoline-tax">Application: Gasoline Tax</h2>
+<ul>
+<li><p>Indirect utility is the tool for <strong>welfare analysis</strong> of price/income changes</p></li>
+<li><p><strong>Example</strong>: Government raises gas tax by $0.50/gallon. To compensate, gives everyone $200 cash transfer.</p>
+<ul>
+<li>To answer if people are better or worse off, compare indirect utility before and after policy.
+<ul>
+<li>Before: <span class="math display">\[V(p_{\text{gas}}, p_{\text{other}}, I)\]</span></li>
+<li>After: <span class="math display">\[V(p_{\text{gas}} + 0.50, p_{\text{other}}, I + 200)\]</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="application-cash-vs-food-stamps" class="level2">
+<h2 class="anchored" data-anchor-id="application-cash-vs-food-stamps">Application: Cash vs Food Stamps</h2>
+<p><strong>Policy question:</strong> Give $200 cash or $200 food stamps?</p>
+<p><strong>Setup:</strong></p>
+<ul>
+<li>Two goods: food (x) and other goods (y)</li>
+<li>Original income: I</li>
+</ul>
+<p><strong>With cash:</strong> Budget is <span class="math inline">\((p_x, p_y, I + 200)\)</span></p>
+<p><strong>With food stamps:</strong> Can buy up to <span class="math inline">\(200/p_x\)</span> extra food, but must spend at least that on food</p>
+<hr>
+</section>
+<section id="lump-sum-principle" class="level2">
+<h2 class="anchored" data-anchor-id="lump-sum-principle">Lump Sum Principle</h2>
+<div id="1e731174" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture-01_files/figure-html/cell-11-output-1.png" width="806" height="614" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="cash-vs-in-kind-transfers" class="level2">
+<h2 class="anchored" data-anchor-id="cash-vs-in-kind-transfers">Cash vs In-Kind Transfers</h2>
+<p>Lump sum principle implies:</p>
+<ul>
+<li><strong>Cash transfers are at least as good as in-kind transfers</strong>, because they provide more flexibility</li>
+<li>If the in-kind transfer does not bind (i.e., the consumer would buy at least that much anyway), then cash and in-kind are equivalent</li>
+<li>If the in-kind transfer binds, cash is strictly better, as it allows the consumer to reach a higher indifference curve</li>
+</ul>
+<p><strong>Then why do governments use in-kind transfers like SNAP, housing vouchers, etc.?</strong></p>
+<div class="fragment">
+<p>Similar reasoning can be used to conclude that price subsidies are inferior to cash transfers.</p>
+</div>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p><strong>What we covered</strong>:</p>
+<ol type="1">
+<li><strong>Preferences</strong>: Axioms of rational choice, utility representation</li>
+<li><strong>Indifference curves</strong>: Properties, MRS, diminishing MRS</li>
+<li><strong>Common utility functions</strong>: Perfect substitutes, perfect complements, Cobb-Douglas</li>
+<li><strong>Budget constraints</strong>: Slope = price ratio, shifts vs rotations</li>
+<li><strong>Utility maximization</strong>: Tangency condition (MRS = <span class="math inline">\(p_x/p_y\)</span>), Lagrange method</li>
+<li><strong>Applications</strong>: Indirect utility, lump sum principle</li>
+</ol>
+<hr>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>2026 Div Bhagia | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 License</a> |Made with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

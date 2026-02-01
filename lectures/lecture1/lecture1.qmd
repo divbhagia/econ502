@@ -1,0 +1,18 @@
+---
+title: "Lecture 1"
+nav-sidebar: false
+---
+
+## Topics 
+
+**Textbook references**: 
+
+## Slides 
+The slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+
+<p style="text-align:center;">
+  <a class="btn btn-primary" href="/slides/_output/lecture-01.html" target="_blank" role="button">View slides in new window</a>
+  <a class="btn btn-primary" href="/slides/_output/lecture-01.pdf" target="_blank" role="button">Download PDF</a>
+</p>
+
+<iframe src="/slides/_output/lecture-01.html" width="100%" height="500" style="border:none;"></iframe>

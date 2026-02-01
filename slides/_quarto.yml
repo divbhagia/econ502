@@ -5,6 +5,8 @@ project:
 format:
   revealjs:
     theme: [default, custom.scss]
+    embed-resources: true
+    pdf-separate-fragments: false
     
     # Accessibility
     navigation-mode: linear
@@ -25,5 +27,5 @@ format:
     highlight-style: a11y-dark
 
     # Chalkboard
-    chalkboard: true
+    chalkboard: false
     chalkboard-theme: dark

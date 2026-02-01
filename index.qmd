@@ -1,0 +1,36 @@
+---
+title: "Advanced Microeconomics"
+sidebar: false
+toc: false
+---
+
+<p style="font-size:1.25em;">
+Learn how individuals, firms, and markets interact through the lens of microeconomic theory, with applications to real-world economic problems.
+</p>
+
+ECON 502 | Spring 2026 | College of Business and Economics | California State University
+
+::: {.grid .course-details}
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-5}
+#### Instructor
+{{< fa user >}} &nbsp; [Dr. Div Bhagia](https://www.dbhagia.com) <br>
+{{< fa university >}} &nbsp; Office: SGMH 3361 <br>
+{{< fa envelope >}} &nbsp; [dbhagia@fullerton.edu](mailto:dbhagia@fullerton.edu) <br>
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-7}
+#### Course Details
+{{< fa location-dot >}} &nbsp; SGMH 2501, Mondays, 7-9:45 PM <br>
+{{< fa clock >}} &nbsp; Office hours: 
+<ul style="margin-top: 0; margin-left: -1.5em;">
+- Mondays, 5-6.45 PM, or
+- By appointment (in-person or on [Zoom](https://fullerton.zoom.us/j/81895171931))
+</ul>
+:::
+
+:::
+
+
+
+

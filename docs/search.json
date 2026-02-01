@@ -1,0 +1,406 @@
+[
+  {
+    "objectID": "slides/lecture-01.html",
+    "href": "slides/lecture-01.html",
+    "title": "Consumer Preferences and Choice",
+    "section": "",
+    "text": "Non-economists typically think of economics when it concerns the macro stuff (unemployment, inflation, growth, recessions etc.)\n\n\n\nHowever, the macro economy is made up of millions of micro decisions.\n\nPeople: what to buy, how much to work, how much to save\nFirms: pricing, hiring, location, investment\nGovernment: infrastructure, regulation, tax policy\n\n\n\n\n\nMarkets coordinate these decisions invisibly and often effectively.\n\nGas is at the pump when you need it\nJobs exist for qualified workers\nProducts get delivered\n\n\n\n\n\n\n\n\nHowever, sometimes markets produce undesirable outcomes or fail.\n\nEach micro failure may seem small (one shortage, one person unemployed, one overpriced good)\nBut small failures add up to large macro consequences\n\n\n\n\nIn this course, we will study:\n\nHow individuals and firms make decisions?\nHow markets coordinate these decisions?\nWhen markets work efficiently and when they fail?\n\nWhat interventions can help?\n\n\n\n\n\n\n\n\n\n\n\n\nConsumer choice (1-2)\nFirm production (3)\nMarket equilibrium (4)\nEfficiency and welfare (5)\n\n\n\n\n\nMonopoly and oligopoly (6-7)\nLabor markets and monopsony (8)\n\n\n\n\n\n\nInformation asymmetries (9)\nExternalities and public goods (10)\n\n\n\n\n\nDecisions under uncertainty (11)\nGame theory (12)\n\n\n\n\n\n\n\n\nCentral question: How do individuals make choices?\n\nEconomic Approach to Choice\n\nIndividuals have preferences over outcomes\nThese preferences are rational (satisfy certain axioms)\nWe can represent preferences with a utility function\nGiven constraints, individuals maximize utility\n\n\n\nDoes everyone really “maximize utility”?\n\nMaybe not consciously—but people behave “as if” they do\nThe model predicts behavior relatively well\nAlternative: behavioral economics (we’ll discuss limitations)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#why-study-microeconomics",
+    "href": "slides/lecture-01.html#why-study-microeconomics",
+    "title": "Consumer Preferences and Choice",
+    "section": "",
+    "text": "Non-economists typically think of economics when it concerns the macro stuff (unemployment, inflation, growth, recessions etc.)\n\n\n\nHowever, the macro economy is made up of millions of micro decisions.\n\nPeople: what to buy, how much to work, how much to save\nFirms: pricing, hiring, location, investment\nGovernment: infrastructure, regulation, tax policy\n\n\n\n\n\nMarkets coordinate these decisions invisibly and often effectively.\n\nGas is at the pump when you need it\nJobs exist for qualified workers\nProducts get delivered"
+  },
+  {
+    "objectID": "slides/lecture-01.html#why-study-microeconomics-1",
+    "href": "slides/lecture-01.html#why-study-microeconomics-1",
+    "title": "Consumer Preferences and Choice",
+    "section": "",
+    "text": "However, sometimes markets produce undesirable outcomes or fail.\n\nEach micro failure may seem small (one shortage, one person unemployed, one overpriced good)\nBut small failures add up to large macro consequences\n\n\n\n\nIn this course, we will study:\n\nHow individuals and firms make decisions?\nHow markets coordinate these decisions?\nWhen markets work efficiently and when they fail?\n\nWhat interventions can help?"
+  },
+  {
+    "objectID": "slides/lecture-01.html#course-roadmap",
+    "href": "slides/lecture-01.html#course-roadmap",
+    "title": "Consumer Preferences and Choice",
+    "section": "",
+    "text": "Consumer choice (1-2)\nFirm production (3)\nMarket equilibrium (4)\nEfficiency and welfare (5)\n\n\n\n\n\nMonopoly and oligopoly (6-7)\nLabor markets and monopsony (8)\n\n\n\n\n\n\nInformation asymmetries (9)\nExternalities and public goods (10)\n\n\n\n\n\nDecisions under uncertainty (11)\nGame theory (12)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#todays-lecture",
+    "href": "slides/lecture-01.html#todays-lecture",
+    "title": "Consumer Preferences and Choice",
+    "section": "",
+    "text": "Central question: How do individuals make choices?\n\nEconomic Approach to Choice\n\nIndividuals have preferences over outcomes\nThese preferences are rational (satisfy certain axioms)\nWe can represent preferences with a utility function\nGiven constraints, individuals maximize utility\n\n\n\nDoes everyone really “maximize utility”?\n\nMaybe not consciously—but people behave “as if” they do\nThe model predicts behavior relatively well\nAlternative: behavioral economics (we’ll discuss limitations)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#preferences-basic-setup",
+    "href": "slides/lecture-01.html#preferences-basic-setup",
+    "title": "Consumer Preferences and Choice",
+    "section": "Preferences: Basic Setup",
+    "text": "Preferences: Basic Setup\nWe consider a consumer choosing between bundles of goods.\n\nConsumption bundle: \\((x, y)\\) where \\(x, y \\geq 0\\)\nPreference relation: \\(\\succeq\\) (weakly preferred to)\n\n\\(A \\succeq B\\): Bundle \\(A\\) is at least as good as bundle \\(B\\)\n\\(A \\succ B\\): Bundle \\(A\\) is strictly preferred to \\(B\\)\n\\(A \\sim B\\): Consumer is indifferent between \\(A\\) and \\(B\\)\n\n\nKey question: What properties should preferences satisfy for them to be “rational”?"
+  },
+  {
+    "objectID": "slides/lecture-01.html#axioms-of-rational-choice",
+    "href": "slides/lecture-01.html#axioms-of-rational-choice",
+    "title": "Consumer Preferences and Choice",
+    "section": "Axioms of Rational Choice",
+    "text": "Axioms of Rational Choice\n\n1. Completeness\nFor any two bundles \\(A\\) and \\(B\\), the consumer can state which is preferred or that they are indifferent: \\[A \\succeq B, \\quad B \\succeq A, \\quad \\text{or both (indifference)}\\]\nInterpretation: Consumers can always make comparisons. Rules out indecision.\n\n\n\n2. Transitivity\nIf \\(A \\succeq B\\) and \\(B \\succeq C\\), then \\(A \\succeq C\\)\nInterpretation: Preferences are internally consistent. No cycles."
+  },
+  {
+    "objectID": "slides/lecture-01.html#axioms-of-rational-choice-cont.",
+    "href": "slides/lecture-01.html#axioms-of-rational-choice-cont.",
+    "title": "Consumer Preferences and Choice",
+    "section": "Axioms of Rational Choice (cont.)",
+    "text": "Axioms of Rational Choice (cont.)\n\n3. Continuity\nSmall changes in consumption bundles lead to small changes in preferences.\nTechnical: For any bundle \\(A\\), the sets \\(\\{B : B \\succeq A\\}\\) and \\(\\{B : A \\succeq B\\}\\) are closed.\nInterpretation: No sudden jumps. Preferences are “smooth.”\n\n\n\n4. Non-satiation (Monotonicity)\nMore is better: If \\(A\\) has at least as much of everything as \\(B\\), and strictly more of at least one good, then \\(A \\succ B\\).\nInterpretation: Consumers always prefer more to less (at least weakly)."
+  },
+  {
+    "objectID": "slides/lecture-01.html#axioms-of-rational-choice-cont.-1",
+    "href": "slides/lecture-01.html#axioms-of-rational-choice-cont.-1",
+    "title": "Consumer Preferences and Choice",
+    "section": "Axioms of Rational Choice (cont.)",
+    "text": "Axioms of Rational Choice (cont.)\n\n5. Convexity\nAverages are preferred to extremes. If \\(A \\sim B\\), then: \\[\\lambda A + (1-\\lambda)B \\succeq A \\text{ for } \\lambda \\in [0,1]\\]\nInterpretation: Consumers prefer balanced consumption bundles. Diminishing marginal rate of substitution.\nExample: If you’re indifferent between (5 apples, 0 oranges) and (0 apples, 5 oranges), you prefer (5 apples, 5 oranges) to either extreme."
+  },
+  {
+    "objectID": "slides/lecture-01.html#when-do-axioms-fail",
+    "href": "slides/lecture-01.html#when-do-axioms-fail",
+    "title": "Consumer Preferences and Choice",
+    "section": "When Do Axioms Fail?",
+    "text": "When Do Axioms Fail?\n\nBehavioral Economics Violations\n\nFraming effects: Preferences change based on how options are presented\nIntransitivity: Preference reversals in complex choices (Condorcet paradox)\nPresent bias: Time-inconsistent preferences (\\(\\beta\\delta\\) model)\nReference dependence: Preferences depend on current endowment (loss aversion)\nBounded rationality\n\nToo many options → choice paralysis\nComputational constraints\nLimited attention"
+  },
+  {
+    "objectID": "slides/lecture-01.html#from-preferences-to-utility",
+    "href": "slides/lecture-01.html#from-preferences-to-utility",
+    "title": "Consumer Preferences and Choice",
+    "section": "From Preferences to Utility",
+    "text": "From Preferences to Utility\nKey Theorem: If preferences satisfy completeness, transitivity, continuity, and monotonicity, then there exists a continuous utility function \\(U(x,y)\\) that represents them: \\[A \\succeq B \\iff U(A) \\geq U(B)\\]\nInterpretation: We can assign numbers to bundles such that higher numbers = more preferred.\n\nImportant: Utility is ordinal, not cardinal\n\nOnly the ranking matters, the magnitude of utility has no meaning.\n\\(U(A) = 10, U(B) = 5\\) tells us \\(A \\succ B\\). It does NOT mean “\\(A\\) is twice as good as \\(B\\)”"
+  },
+  {
+    "objectID": "slides/lecture-01.html#monotonic-transformations",
+    "href": "slides/lecture-01.html#monotonic-transformations",
+    "title": "Consumer Preferences and Choice",
+    "section": "Monotonic Transformations",
+    "text": "Monotonic Transformations\n\nSince utility is ordinal, we can apply any strictly increasing transformation without changing preferences:\nIf \\(U(x,y)\\) represents preferences, so does \\(V(x,y) = f(U(x,y))\\) for any strictly increasing \\(f\\).\nExamples:\n\n\\(U(x,y) = xy\\) and \\(V(x,y) = \\ln(xy)\\) represent the same preferences\n\\(U(x,y) = x^{0.5}y^{0.5}\\) and \\(V(x,y) = xy\\) represent the same preferences\n\n\nWhy this matters: We can transform utility functions to make calculations easier."
+  },
+  {
+    "objectID": "slides/lecture-01.html#indifference-curves",
+    "href": "slides/lecture-01.html#indifference-curves",
+    "title": "Consumer Preferences and Choice",
+    "section": "Indifference Curves",
+    "text": "Indifference Curves\nAn indifference curve is the set of all bundles that give the same utility level:\n\\[IC(U_0) = \\{(x,y) : U(x,y) = U_0\\}\\]\nInterpretation: The consumer is indifferent between any two points on the same curve.\n\n\n\n\n\n\nIndifference Curves for U(x,y) = xy"
+  },
+  {
+    "objectID": "slides/lecture-01.html#properties-of-indifference-curves",
+    "href": "slides/lecture-01.html#properties-of-indifference-curves",
+    "title": "Consumer Preferences and Choice",
+    "section": "Properties of Indifference Curves",
+    "text": "Properties of Indifference Curves\nUnder our axioms, indifference curves must be:\n\nDownward sloping (from non-satiation)\n\nTo keep utility constant, if \\(x\\) increases, \\(y\\) must decrease\n\nDo not cross (from transitivity)\n\nIf they crossed, we’d have \\(A \\sim B\\) and \\(A \\sim C\\) but \\(B \\not\\sim C\\)\n\nConvex to the origin (from convexity of preferences)\n\nAverages preferred to extremes\nEquivalently: diminishing marginal rate of substitution\n\nHigher curves represent higher utility (from monotonicity)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#marginal-rate-of-substitution-mrs",
+    "href": "slides/lecture-01.html#marginal-rate-of-substitution-mrs",
+    "title": "Consumer Preferences and Choice",
+    "section": "Marginal Rate of Substitution (MRS)",
+    "text": "Marginal Rate of Substitution (MRS)\n\nThe marginal rate of substitution is the rate at which the consumer is willing to trade good \\(Y\\) for good \\(X\\) while maintaining constant utility.\nGeometrically: MRS = -(slope of indifference curve)\n\n\\[MRS = -\\frac{dy}{dx}\\bigg|_{U=const}\\]\n\nInterpretation: How many units of \\(Y\\) are you willing to give up to get one more unit of \\(X\\)?\nExample: If MRS = 2, you’re willing to give up 2 units of \\(Y\\) to get 1 more unit of \\(X\\) (and remain indifferent)."
+  },
+  {
+    "objectID": "slides/lecture-01.html#deriving-the-mrs-formula",
+    "href": "slides/lecture-01.html#deriving-the-mrs-formula",
+    "title": "Consumer Preferences and Choice",
+    "section": "Deriving the MRS Formula",
+    "text": "Deriving the MRS Formula\nAlong an indifference curve, utility is constant: \\(U(x,y) = \\bar{U}\\)\nTaking the total differential: \\[dU = \\frac{\\partial U}{\\partial x}dx + \\frac{\\partial U}{\\partial y}dy = 0\\]\nRearranging: \\[\\frac{\\partial U}{\\partial y}dy = -\\frac{\\partial U}{\\partial x}dx \\quad \\rightarrow \\quad \\frac{dy}{dx} = -\\frac{\\partial U/\\partial x}{\\partial U/\\partial y} = -\\frac{MU_x}{MU_y}\\]\nTherefore: \\[\\boxed{MRS = -\\frac{dy}{dx} = \\frac{MU_x}{MU_y}}\\]"
+  },
+  {
+    "objectID": "slides/lecture-01.html#visualizing-mrs",
+    "href": "slides/lecture-01.html#visualizing-mrs",
+    "title": "Consumer Preferences and Choice",
+    "section": "Visualizing MRS",
+    "text": "Visualizing MRS"
+  },
+  {
+    "objectID": "slides/lecture-01.html#diminishing-mrs",
+    "href": "slides/lecture-01.html#diminishing-mrs",
+    "title": "Consumer Preferences and Choice",
+    "section": "Diminishing MRS",
+    "text": "Diminishing MRS\nConvexity assumption → Diminishing MRS\nAs you consume more of good \\(X\\) (moving right along an IC), the MRS decreases:\n\nWhen you have a lot of \\(Y\\) and little \\(X\\): High MRS (willing to give up a lot of \\(Y\\) for more \\(X\\))\nWhen you have a lot of \\(X\\) and little \\(Y\\): Low MRS (not willing to give up much \\(Y\\) for more \\(X\\))\n\nEconomic intuition: Scarcity increases value. The less you have of something, the more you value additional units."
+  },
+  {
+    "objectID": "slides/lecture-01.html#try-it-yourself-calculate-mrs",
+    "href": "slides/lecture-01.html#try-it-yourself-calculate-mrs",
+    "title": "Consumer Preferences and Choice",
+    "section": "Try It Yourself: Calculate MRS",
+    "text": "Try It Yourself: Calculate MRS\nExercise: Consider the utility function \\(U(x,y) = x^{0.3}y^{0.7}\\)\n\nFind the marginal utilities \\(MU_x\\) and \\(MU_y\\)\nCalculate the MRS\nEvaluate the MRS at the point \\((x,y) = (10, 20)\\)\nInterpret your answer: How many units of \\(y\\) would the consumer give up for one more unit of \\(x\\)?\n\n\nHint: \\(MU_x = \\frac{\\partial U}{\\partial x}\\), and remember \\(MRS = \\frac{MU_x}{MU_y}\\)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#perfect-substitutes",
+    "href": "slides/lecture-01.html#perfect-substitutes",
+    "title": "Consumer Preferences and Choice",
+    "section": "Perfect Substitutes",
+    "text": "Perfect Substitutes\nGoods that can be substituted at a constant rate.\n\\[U(x,y) = ax + by\\]\nExamples:\n\nDifferent brands of the same product (e.g., Coke vs Pepsi for some consumers)\nCoffee from different cafes\nGeneric vs brand-name drugs (if truly equivalent)\n\nKey features:\n\nIndifference curves are straight lines\nMRS is constant: \\(MRS = a/b\\)\nConsumer willing to trade at fixed rate regardless of bundle"
+  },
+  {
+    "objectID": "slides/lecture-01.html#perfect-substitutes-graph",
+    "href": "slides/lecture-01.html#perfect-substitutes-graph",
+    "title": "Consumer Preferences and Choice",
+    "section": "Perfect Substitutes Graph",
+    "text": "Perfect Substitutes Graph\n\n\n\n\n\nPerfect Substitutes: U = 2x + y"
+  },
+  {
+    "objectID": "slides/lecture-01.html#perfect-complements",
+    "href": "slides/lecture-01.html#perfect-complements",
+    "title": "Consumer Preferences and Choice",
+    "section": "Perfect Complements",
+    "text": "Perfect Complements\nGoods that must be consumed in fixed proportions.\n\\[U(x,y) = \\min\\{ax, by\\}\\]\nExamples:\n\nLeft and right shoes\nCoffee and cream (for some)\nCars and tires (need 4 tires per car)\nComputers and monitors\n\nKey features:\n\nIndifference curves are L-shaped\nConsumed in fixed ratio: \\(x/y = b/a\\)\nMRS is undefined (technically infinite or zero, depending on side)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#perfect-complements-graph",
+    "href": "slides/lecture-01.html#perfect-complements-graph",
+    "title": "Consumer Preferences and Choice",
+    "section": "Perfect Complements Graph",
+    "text": "Perfect Complements Graph\n\n\n\n\n\nPerfect Complements: U = min{x, y}"
+  },
+  {
+    "objectID": "slides/lecture-01.html#cobb-douglas-utility",
+    "href": "slides/lecture-01.html#cobb-douglas-utility",
+    "title": "Consumer Preferences and Choice",
+    "section": "Cobb-Douglas Utility",
+    "text": "Cobb-Douglas Utility\nThe most widely used functional form in economics:\n\\[U(x,y) = x^{\\alpha}y^{\\beta}\\]\nOr equivalently (applying monotonic transformation):\n\\[U(x,y) = \\alpha \\ln x + \\beta \\ln y\\]\nKey features:\n\nSmooth, convex indifference curves\nInterior solutions (typically)\nConstant expenditure shares\n\\(MRS = \\frac{\\alpha}{\\beta}\\cdot\\frac{y}{x}\\)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#cobb-douglas-graph",
+    "href": "slides/lecture-01.html#cobb-douglas-graph",
+    "title": "Consumer Preferences and Choice",
+    "section": "Cobb-Douglas Graph",
+    "text": "Cobb-Douglas Graph\n\n\n\n\n\nCobb-Douglas Utility: \\(U = x^α y^β\\)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#cobb-douglas-mrs-calculation",
+    "href": "slides/lecture-01.html#cobb-douglas-mrs-calculation",
+    "title": "Consumer Preferences and Choice",
+    "section": "Cobb-Douglas: MRS Calculation",
+    "text": "Cobb-Douglas: MRS Calculation\nFor \\(U(x,y) = x^{\\alpha}y^{\\beta}\\):\nStep 1: Find marginal utilities \\[MU_x = \\frac{\\partial U}{\\partial x} = \\alpha x^{\\alpha-1}y^{\\beta}\\] \\[MU_y = \\frac{\\partial U}{\\partial y} = \\beta x^{\\alpha}y^{\\beta-1}\\]\nStep 2: Calculate MRS \\[MRS = \\frac{MU_x}{MU_y} = \\frac{\\alpha x^{\\alpha-1}y^{\\beta}}{\\beta x^{\\alpha}y^{\\beta-1}} = \\frac{\\alpha}{\\beta} \\cdot \\frac{y}{x}\\]\nMRS depends on the ratio \\(y/x\\) and the preference parameters \\(\\alpha/\\beta\\)."
+  },
+  {
+    "objectID": "slides/lecture-01.html#ces-utility",
+    "href": "slides/lecture-01.html#ces-utility",
+    "title": "Consumer Preferences and Choice",
+    "section": "CES Utility",
+    "text": "CES Utility\nConstant Elasticity of Substitution (CES) utility function:\n\\[U(x,y) = (ax^{\\rho} + by^{\\rho})^{1/\\rho}, \\quad \\rho \\leq 1, \\rho \\neq 0\\]\nElasticity of substitution: \\(\\sigma = \\frac{1}{1-\\rho}\\)\nSpecial cases:\n\n\\(\\rho \\to -\\infty\\): Perfect complements (\\(\\sigma = 0\\))\n\\(\\rho = 0\\): Cobb-Douglas (\\(\\sigma = 1\\))\n\n\\(\\rho = 1\\): Perfect substitutes (\\(\\sigma = \\infty\\))\n\nFlexibility: CES nests all three cases mentioned."
+  },
+  {
+    "objectID": "slides/lecture-01.html#the-budget-constraint",
+    "href": "slides/lecture-01.html#the-budget-constraint",
+    "title": "Consumer Preferences and Choice",
+    "section": "The Budget Constraint",
+    "text": "The Budget Constraint\nConsumers have limited income \\(I\\) and face prices \\(p_x, p_y\\) for goods:\n\\[p_x \\cdot x + p_y \\cdot y \\leq I\\]\nBudget line: Set of bundles that cost exactly \\(I\\)\n\\[p_x \\cdot x + p_y \\cdot y = I\\]\nRearranging for \\(y\\):\n\\[y = \\frac{I}{p_y} - \\frac{p_x}{p_y}x\\]\n\nIntercept: \\(I/p_y\\) (max amount of \\(y\\) if \\(x=0\\))\nSlope: \\(-p_x/p_y\\) (opportunity cost of \\(x\\) in terms of \\(y\\))"
+  },
+  {
+    "objectID": "slides/lecture-01.html#budget-constraint-graph",
+    "href": "slides/lecture-01.html#budget-constraint-graph",
+    "title": "Consumer Preferences and Choice",
+    "section": "Budget Constraint Graph",
+    "text": "Budget Constraint Graph\n\n\n/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/2017705670.py:15: UserWarning:\n\ncolor is redundantly defined by the 'color' keyword argument and the fmt string \"b-\" (-&gt; color='b'). The keyword argument will take precedence.\n\n\n\n\n\n\nBudget Line with \\(I = 100, p_x = 10, p_y = 5\\)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#changes-in-income",
+    "href": "slides/lecture-01.html#changes-in-income",
+    "title": "Consumer Preferences and Choice",
+    "section": "Changes in Income",
+    "text": "Changes in Income\n\n\n/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/2310646763.py:17: UserWarning:\n\ncolor is redundantly defined by the 'color' keyword argument and the fmt string \"b-\" (-&gt; color='b'). The keyword argument will take precedence.\n\n/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/2310646763.py:18: UserWarning:\n\nlinestyle is redundantly defined by the 'linestyle' keyword argument and the fmt string \"b-\" (-&gt; linestyle='-'). The keyword argument will take precedence.\n\n/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/2310646763.py:18: UserWarning:\n\ncolor is redundantly defined by the 'color' keyword argument and the fmt string \"b-\" (-&gt; color='b'). The keyword argument will take precedence."
+  },
+  {
+    "objectID": "slides/lecture-01.html#changes-in-prices",
+    "href": "slides/lecture-01.html#changes-in-prices",
+    "title": "Consumer Preferences and Choice",
+    "section": "Changes in Prices",
+    "text": "Changes in Prices\n\n\n/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/3859235418.py:17: UserWarning:\n\ncolor is redundantly defined by the 'color' keyword argument and the fmt string \"b-\" (-&gt; color='b'). The keyword argument will take precedence.\n\n/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/3859235418.py:18: UserWarning:\n\nlinestyle is redundantly defined by the 'linestyle' keyword argument and the fmt string \"b-\" (-&gt; linestyle='-'). The keyword argument will take precedence.\n\n/var/folders/m0/81ww_p5n651_dc02g0cwpk2w0000gq/T/ipykernel_53325/3859235418.py:18: UserWarning:\n\ncolor is redundantly defined by the 'color' keyword argument and the fmt string \"b-\" (-&gt; color='b'). The keyword argument will take precedence."
+  },
+  {
+    "objectID": "slides/lecture-01.html#the-consumers-problem",
+    "href": "slides/lecture-01.html#the-consumers-problem",
+    "title": "Consumer Preferences and Choice",
+    "section": "The Consumer’s Problem",
+    "text": "The Consumer’s Problem\nThe consumer chooses \\((x,y)\\) to:\n\\[\\max_{x,y} \\quad U(x,y)\\]\nsubject to:\n\\[p_x x + p_y y = I\\] \\[x \\geq 0, \\quad y \\geq 0\\]\nGoal: Find the highest indifference curve that touches the budget line.\nIntuition: Get as much utility as possible given your budget."
+  },
+  {
+    "objectID": "slides/lecture-01.html#graphical-solution",
+    "href": "slides/lecture-01.html#graphical-solution",
+    "title": "Consumer Preferences and Choice",
+    "section": "Graphical Solution",
+    "text": "Graphical Solution"
+  },
+  {
+    "objectID": "slides/lecture-01.html#why-tangency-is-optimal",
+    "href": "slides/lecture-01.html#why-tangency-is-optimal",
+    "title": "Consumer Preferences and Choice",
+    "section": "Why Tangency is Optimal",
+    "text": "Why Tangency is Optimal\nAt the tangency point: MRS = \\(p_x/p_y\\)\nIntuition: Consumer’s subjective tradeoff (MRS) equals market tradeoff\n\nMRS: How much \\(Y\\) you’re willing to give up for 1 unit of \\(X\\)\n\\(p_x/p_y\\): How much \\(Y\\) you must give up (in market) for 1 unit of \\(X\\)\n\nIf MRS \\(&gt;\\) \\(p_x/p_y\\):\n\nYou value \\(X\\) more than market does\nShould buy more \\(X\\), less \\(Y\\)\n\nIf MRS \\(&lt;\\) \\(p_x/p_y\\):\n\nYou value \\(X\\) less than market does\n\nShould buy less \\(X\\), more \\(Y\\)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#the-lagrangian-method",
+    "href": "slides/lecture-01.html#the-lagrangian-method",
+    "title": "Consumer Preferences and Choice",
+    "section": "The Lagrangian Method",
+    "text": "The Lagrangian Method\nThe consumer’s problem: \\[\\max_{x,y} \\quad U(x,y) \\quad \\text{subject to} \\quad p_x x + p_y y = I\\]\nLagrangian: \\[\\mathcal{L}(x,y,\\lambda) = U(x,y) + \\lambda(I - p_x x - p_y y)\\]\nwhere \\(\\lambda\\) is the Lagrange multiplier.\nFirst-order conditions (FOCs):\n\n\\(\\frac{\\partial \\mathcal{L}}{\\partial x} = \\frac{\\partial U}{\\partial x} - \\lambda p_x = 0\\)\n\\(\\frac{\\partial \\mathcal{L}}{\\partial y} = \\frac{\\partial U}{\\partial y} - \\lambda p_y = 0\\)\n\\(\\frac{\\partial \\mathcal{L}}{\\partial \\lambda} = I - p_x x - p_y y = 0\\)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#first-order-conditions",
+    "href": "slides/lecture-01.html#first-order-conditions",
+    "title": "Consumer Preferences and Choice",
+    "section": "First-Order Conditions",
+    "text": "First-Order Conditions\nFrom the first two FOCs: \\[MU_x = \\lambda p_x \\quad \\text{and} \\quad MU_y = \\lambda p_y\\]\nDividing these: \\[\\frac{MU_x}{MU_y} = \\frac{p_x}{p_y}\\]\nThis is exactly the tangency condition: MRS = price ratio!"
+  },
+  {
+    "objectID": "slides/lecture-01.html#interpretation-of-λ",
+    "href": "slides/lecture-01.html#interpretation-of-λ",
+    "title": "Consumer Preferences and Choice",
+    "section": "Interpretation of λ",
+    "text": "Interpretation of λ\nFrom FOCs: \\(\\lambda = \\frac{MU_x}{p_x} = \\frac{MU_y}{p_y}\\)\nλ = marginal utility of income\n\nHow much utility increases if income increases by $1\nMeasures the “value” of relaxing the budget constraint\nImportant for welfare analysis\n\nExample: If \\(\\lambda = 0.5\\):\n\n$1 more of income increases utility by 0.5 utils\nEquivalently: consumer willing to pay $2 for 1 more util\n\n\nNote: λ decreases as income increases (diminishing marginal utility of income)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#example-cobb-douglas-utility",
+    "href": "slides/lecture-01.html#example-cobb-douglas-utility",
+    "title": "Consumer Preferences and Choice",
+    "section": "Example: Cobb-Douglas Utility",
+    "text": "Example: Cobb-Douglas Utility\nSetup: \\(U(x,y) = x^{\\alpha}y^{\\beta}\\), budget: \\(p_x x + p_y y = I\\)\nStep 1: Form the Lagrangian \\[\\mathcal{L} = x^{\\alpha}y^{\\beta} + \\lambda(I - p_x x - p_y y)\\]\nStep 2: Take FOCs \\[\\frac{\\partial \\mathcal{L}}{\\partial x} = \\alpha x^{\\alpha-1}y^{\\beta} - \\lambda p_x = 0\\] \\[\\frac{\\partial \\mathcal{L}}{\\partial y} = \\beta x^{\\alpha}y^{\\beta-1} - \\lambda p_y = 0\\] \\[\\frac{\\partial \\mathcal{L}}{\\partial \\lambda} = I - p_x x - p_y y = 0\\]"
+  },
+  {
+    "objectID": "slides/lecture-01.html#example-cobb-douglas-utility-cont.",
+    "href": "slides/lecture-01.html#example-cobb-douglas-utility-cont.",
+    "title": "Consumer Preferences and Choice",
+    "section": "Example: Cobb-Douglas Utility (cont.)",
+    "text": "Example: Cobb-Douglas Utility (cont.)\nStep 3: Combine first two FOCs \\[\\frac{\\alpha x^{\\alpha-1}y^{\\beta}}{\\beta x^{\\alpha}y^{\\beta-1}} = \\frac{p_x}{p_y}\\]\nSimplifying: \\[\\frac{\\alpha}{\\beta} \\cdot \\frac{y}{x} = \\frac{p_x}{p_y}\\]\nSolving for \\(y\\): \\[y = \\frac{\\beta}{\\alpha} \\cdot \\frac{p_x}{p_y} \\cdot x\\]"
+  },
+  {
+    "objectID": "slides/lecture-01.html#example-cobb-douglas-utility-cont.-1",
+    "href": "slides/lecture-01.html#example-cobb-douglas-utility-cont.-1",
+    "title": "Consumer Preferences and Choice",
+    "section": "Example: Cobb-Douglas Utility (cont.)",
+    "text": "Example: Cobb-Douglas Utility (cont.)\nStep 4: Substitute into budget constraint \\[p_x x + p_y \\cdot \\frac{\\beta}{\\alpha} \\cdot \\frac{p_x}{p_y} \\cdot x = I\\] \\[p_x x + \\frac{\\beta}{\\alpha} p_x x = I\\] \\[p_x x \\left(1 + \\frac{\\beta}{\\alpha}\\right) = I\\] \\[p_x x \\cdot \\frac{\\alpha + \\beta}{\\alpha} = I\\]"
+  },
+  {
+    "objectID": "slides/lecture-01.html#example-cobb-douglas-utility-cont.-2",
+    "href": "slides/lecture-01.html#example-cobb-douglas-utility-cont.-2",
+    "title": "Consumer Preferences and Choice",
+    "section": "Example: Cobb-Douglas Utility (cont.)",
+    "text": "Example: Cobb-Douglas Utility (cont.)\nStep 5: Solve for \\(x^*\\): \\[x^* = \\frac{\\alpha I}{(\\alpha + \\beta)p_x}\\]\nSubstitute back to get \\(y^*\\): \\[y^* = \\frac{\\beta}{\\alpha} \\cdot \\frac{p_x}{p_y} \\cdot x^* = \\frac{\\beta}{\\alpha} \\cdot \\frac{p_x}{p_y} \\cdot \\frac{\\alpha I}{(\\alpha + \\beta)p_x} = \\frac{\\beta I}{(\\alpha + \\beta)p_y}\\]"
+  },
+  {
+    "objectID": "slides/lecture-01.html#example-cobb-douglas-utility-cont.-3",
+    "href": "slides/lecture-01.html#example-cobb-douglas-utility-cont.-3",
+    "title": "Consumer Preferences and Choice",
+    "section": "Example: Cobb-Douglas Utility (cont.)",
+    "text": "Example: Cobb-Douglas Utility (cont.)\n\\[\\boxed{x^* = \\frac{\\alpha I}{(\\alpha + \\beta)p_x}, \\quad y^* = \\frac{\\beta I}{(\\alpha + \\beta)p_y}}\\]\nKey results:\n\nExpenditure on X: \\(p_x x^* = \\frac{\\alpha I}{\\alpha + \\beta}\\)\nExpenditure on Y: \\(p_y y^* = \\frac{\\beta I}{\\alpha + \\beta}\\)\nExpenditure shares are constant: \\(\\frac{\\alpha}{\\alpha+\\beta}\\) and \\(\\frac{\\beta}{\\alpha+\\beta}\\)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#constant-expenditure-shares",
+    "href": "slides/lecture-01.html#constant-expenditure-shares",
+    "title": "Consumer Preferences and Choice",
+    "section": "Constant Expenditure Shares",
+    "text": "Constant Expenditure Shares\nCobb-Douglas utility implies constant expenditure shares regardless of income or prices.\nWhich of the following goods do you think have roughly constant expenditure shares in real life?\n\nFood\nHousing\nTravel\nCharitable giving\n\n\nEngel’s Law: As income rises, the proportion spent on food decreases.\nHow to model this?"
+  },
+  {
+    "objectID": "slides/lecture-01.html#homogeneity-of-demand-functions",
+    "href": "slides/lecture-01.html#homogeneity-of-demand-functions",
+    "title": "Consumer Preferences and Choice",
+    "section": "Homogeneity of Demand Functions",
+    "text": "Homogeneity of Demand Functions\nHomogeneity of degree zero: If all prices and income are multiplied by the same factor \\(t &gt; 0\\): \\[x^*(tp_x, tp_y, tI) = x^*(p_x, p_y, I)\\]\nInterpretation: Demand depends only on relative prices, not absolute price level.\nExample: If all prices and income double (inflation), consumption bundles don’t change.\n\nWhy? The budget constraint becomes: \\[tp_x \\cdot x + tp_y \\cdot y = tI\\] \\[\\Rightarrow p_x \\cdot x + p_y \\cdot y = I\\]"
+  },
+  {
+    "objectID": "slides/lecture-01.html#indirect-utility-function",
+    "href": "slides/lecture-01.html#indirect-utility-function",
+    "title": "Consumer Preferences and Choice",
+    "section": "Indirect Utility Function",
+    "text": "Indirect Utility Function\nThe indirect utility function \\(V(p_x, p_y, I)\\) gives maximum achievable utility as a function of prices and income:\n\\[V(p_x, p_y, I) = U(x^*(p_x, p_y, I), y^*(p_x, p_y, I))\\]\nInterpretation: Maximum utility you can achieve given market conditions.\nProperties:\n\nIncreasing in \\(I\\): \\(\\frac{\\partial V}{\\partial I} &gt; 0\\) (more money = higher utility)\nDecreasing in prices: \\(\\frac{\\partial V}{\\partial p_x} &lt; 0, \\frac{\\partial V}{\\partial p_y} &lt; 0\\) (higher prices = lower utility)\nHomogeneous of degree zero: \\(V(tp_x, tp_y, tI) = V(p_x, p_y, I)\\)"
+  },
+  {
+    "objectID": "slides/lecture-01.html#cobb-douglas-indirect-utility",
+    "href": "slides/lecture-01.html#cobb-douglas-indirect-utility",
+    "title": "Consumer Preferences and Choice",
+    "section": "Cobb-Douglas Indirect Utility",
+    "text": "Cobb-Douglas Indirect Utility\nFor \\(U(x,y) = x^{\\alpha}y^{\\beta}\\):\nSubstituting \\(x^* = \\frac{\\alpha I}{(\\alpha+\\beta)p_x}\\) and \\(y^* = \\frac{\\beta I}{(\\alpha+\\beta)p_y}\\):\n\\[V(p_x, p_y, I) = \\left(\\frac{\\alpha I}{(\\alpha+\\beta)p_x}\\right)^{\\alpha} \\left(\\frac{\\beta I}{(\\alpha+\\beta)p_y}\\right)^{\\beta}\\]\nSimplifying: \\[V(p_x, p_y, I) = \\frac{I^{\\alpha+\\beta}}{p_x^{\\alpha}p_y^{\\beta}} \\cdot \\frac{\\alpha^{\\alpha}\\beta^{\\beta}}{(\\alpha+\\beta)^{\\alpha+\\beta}}\\]\nNote: \\(V\\) increases with \\(I\\) and decreases with \\(p_x\\) and \\(p_y\\) ✓"
+  },
+  {
+    "objectID": "slides/lecture-01.html#application-gasoline-tax",
+    "href": "slides/lecture-01.html#application-gasoline-tax",
+    "title": "Consumer Preferences and Choice",
+    "section": "Application: Gasoline Tax",
+    "text": "Application: Gasoline Tax\n\nIndirect utility is the tool for welfare analysis of price/income changes\nExample: Government raises gas tax by $0.50/gallon. To compensate, gives everyone $200 cash transfer.\n\nTo answer if people are better or worse off, compare indirect utility before and after policy.\n\nBefore: \\[V(p_{\\text{gas}}, p_{\\text{other}}, I)\\]\nAfter: \\[V(p_{\\text{gas}} + 0.50, p_{\\text{other}}, I + 200)\\]"
+  },
+  {
+    "objectID": "slides/lecture-01.html#application-cash-vs-food-stamps",
+    "href": "slides/lecture-01.html#application-cash-vs-food-stamps",
+    "title": "Consumer Preferences and Choice",
+    "section": "Application: Cash vs Food Stamps",
+    "text": "Application: Cash vs Food Stamps\nPolicy question: Give $200 cash or $200 food stamps?\nSetup:\n\nTwo goods: food (x) and other goods (y)\nOriginal income: I\n\nWith cash: Budget is \\((p_x, p_y, I + 200)\\)\nWith food stamps: Can buy up to \\(200/p_x\\) extra food, but must spend at least that on food"
+  },
+  {
+    "objectID": "slides/lecture-01.html#lump-sum-principle",
+    "href": "slides/lecture-01.html#lump-sum-principle",
+    "title": "Consumer Preferences and Choice",
+    "section": "Lump Sum Principle",
+    "text": "Lump Sum Principle"
+  },
+  {
+    "objectID": "slides/lecture-01.html#cash-vs-in-kind-transfers",
+    "href": "slides/lecture-01.html#cash-vs-in-kind-transfers",
+    "title": "Consumer Preferences and Choice",
+    "section": "Cash vs In-Kind Transfers",
+    "text": "Cash vs In-Kind Transfers\nLump sum principle implies:\n\nCash transfers are at least as good as in-kind transfers, because they provide more flexibility\nIf the in-kind transfer does not bind (i.e., the consumer would buy at least that much anyway), then cash and in-kind are equivalent\nIf the in-kind transfer binds, cash is strictly better, as it allows the consumer to reach a higher indifference curve\n\nThen why do governments use in-kind transfers like SNAP, housing vouchers, etc.?\n\nSimilar reasoning can be used to conclude that price subsidies are inferior to cash transfers."
+  },
+  {
+    "objectID": "slides/lecture-01.html#summary",
+    "href": "slides/lecture-01.html#summary",
+    "title": "Consumer Preferences and Choice",
+    "section": "Summary",
+    "text": "Summary\nWhat we covered:\n\nPreferences: Axioms of rational choice, utility representation\nIndifference curves: Properties, MRS, diminishing MRS\nCommon utility functions: Perfect substitutes, perfect complements, Cobb-Douglas\nBudget constraints: Slope = price ratio, shifts vs rotations\nUtility maximization: Tangency condition (MRS = \\(p_x/p_y\\)), Lagrange method\nApplications: Indirect utility, lump sum principle"
+  },
+  {
+    "objectID": "lectures/lecture1/lecture1.html",
+    "href": "lectures/lecture1/lecture1.html",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Part I",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture1/lecture1.html#topics",
+    "href": "lectures/lecture1/lecture1.html#topics",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Part I",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture1/lecture1.html#slides",
+    "href": "lectures/lecture1/lecture1.html#slides",
+    "title": "Lecture 1",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
+    "crumbs": [
+      "Part I",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Advanced Microeconomics",
+    "section": "",
+    "text": "Learn how individuals, firms, and markets interact through the lens of microeconomic theory, with applications to real-world economic problems.\n\nECON 502 | Spring 2026 | College of Business and Economics | California State University\n\n\nInstructor\n   Dr. Div Bhagia     Office: SGMH 3361     dbhagia@fullerton.edu \n\n\nCourse Details\n   SGMH 2501, Mondays, 7-9:45 PM     Office hours:\n\n\nMondays, 5-6.45 PM, or\nBy appointment (in-person or on Zoom)"
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking here.\n\nOverviewLearning GoalsMaterialGrading\n\n\n\nOverview\nThis course develops the core tools of microeconomic theory while connecting them to real-world applications and policy questions.\nWe begin by examining how consumers decide what to buy (lectures 1-2) and how firms organize production (lecture 3), then consider how these behaviors determine prices and quantities in competitive markets (lecture 4). From there, we explore what it means for a market to work efficiently and how to think about fairness (lecture 5). We then turn to market power (lectures 6-8): What happens when a single or a few large firms dominate the market? How does market power affect wages in labor markets?\nIn the second half of the course, we consider the need for government intervention when markets fail due to information asymmetries, externalities, or underprovision of public goods (lectures 9-10). Finally, we conclude by examining decision-making under uncertainty and strategic behavior through game theory (lectures 11-12).\n\n\n\n\nLearning Goals\nUpon successful completion of this course, students will:\n\nModel consumer and firm behavior and derive equilibrium prices and quantities in competitive markets\nApply welfare criteria to assess market efficiency and analyze tradeoffs between efficiency and equity\nAnalyze how market power affects prices, output, and wages in product and labor markets\nDiagnose market failures arising from information asymmetries, externalities, and public goods, and evaluate policy responses\nApply expected utility theory to model choice under uncertainty and use game theory to solve strategic interactions\n\n\n\n\n\nCourse Material\nThe following textbook is required for this course:\n\nMicroeconomic Theory: Basic Principles & Extensions by Walter Nicholson, Christopher Snyder, 13th Edition.\n\nPrevious editions are also acceptable. Lectures will loosely follow the textbook. Supplementary readings, lecture slides, and problem sets will be posted on the course website.\n\n\n\n\nGrading Criteria\nYour grade will be determined according to the following breakdown:\n\n\n\nComponent\n\n\nPoints\n\n\n\n\nProblem Sets\n\n\n10\n\n\n\n\nMidterm Exam\n\n\n40\n\n\n\n\nFinal Exam\n\n\n50"
+  }
+]
