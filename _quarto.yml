@@ -18,7 +18,7 @@ website:
       - text: "Syllabus"
         file: syllabus.qmd
       - text: "Content"
-        file: Lectures/Lecture1/lecture1.qmd
+        file: lectures/lecture1/lecture1.qmd
       - icon: github
         href: https://divbhagia.github.io/econ502/
 
