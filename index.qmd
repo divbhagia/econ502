@@ -2,6 +2,7 @@
 title: "Advanced Microeconomics"
 sidebar: false
 toc: false
+format: html
 ---
 
 <p style="font-size:1.25em;">

@@ -1,27 +1,10 @@
 ---
-title: "Consumer Preferences<br> and Choice"
+title: "Consumer Preferences and Choice"
 subtitle: "Lecture 1"
 author: "Div Bhagia"
-date: ""
 format:
   revealjs:
     theme: [default, ../assets/slides.scss]
-    embed-resources: true
-    pdf-separate-fragments: false
-    navigation-mode: linear
-    hash-type: number
-    slide-number: true
-    controls: true
-    progress: true
-    transition: fade
-    transition-speed: fast
-    center: false
-    code-overflow: wrap
-    highlight-style: a11y-dark
-    chalkboard: false
-# execute:
-#   cache: true
-#   freeze: auto
 ---
 
 # Introduction {background-color="#1e5288"}
@@ -897,15 +880,15 @@ The consumer's problem:
 $$\max_{x,y} \quad U(x,y) \quad \text{subject to} \quad p_x x + p_y y = I$$
 
 **Lagrangian**:
-$$\mathcal{L}(x,y,\lambda) = U(x,y) + \lambda(I - p_x x - p_y y)$$
+$$L(x,y,\lambda) = U(x,y) + \lambda(I - p_x x - p_y y)$$
 
 where $\lambda$ is the **Lagrange multiplier**.
 
 **First-order conditions** (FOCs):
 
-1. $\frac{\partial \mathcal{L}}{\partial x} = \frac{\partial U}{\partial x} - \lambda p_x = 0$
-2. $\frac{\partial \mathcal{L}}{\partial y} = \frac{\partial U}{\partial y} - \lambda p_y = 0$
-3. $\frac{\partial \mathcal{L}}{\partial \lambda} = I - p_x x - p_y y = 0$
+1. $\frac{\partial L}{\partial x} = \frac{\partial U}{\partial x} - \lambda p_x = 0$
+2. $\frac{\partial L}{\partial y} = \frac{\partial U}{\partial y} - \lambda p_y = 0$
+3. $\frac{\partial L}{\partial \lambda} = I - p_x x - p_y y = 0$
 
 ---
 
@@ -947,12 +930,12 @@ From FOCs: $\lambda = \frac{MU_x}{p_x} = \frac{MU_y}{p_y}$
 **Setup**: $U(x,y) = x^{\alpha}y^{\beta}$, budget: $p_x x + p_y y = I$
 
 **Step 1**: Form the Lagrangian
-$$\mathcal{L} = x^{\alpha}y^{\beta} + \lambda(I - p_x x - p_y y)$$
+$$L = x^{\alpha}y^{\beta} + \lambda(I - p_x x - p_y y)$$
 
 **Step 2**: Take FOCs
-$$\frac{\partial \mathcal{L}}{\partial x} = \alpha x^{\alpha-1}y^{\beta} - \lambda p_x = 0$$
-$$\frac{\partial \mathcal{L}}{\partial y} = \beta x^{\alpha}y^{\beta-1} - \lambda p_y = 0$$
-$$\frac{\partial \mathcal{L}}{\partial \lambda} = I - p_x x - p_y y = 0$$
+$$\frac{\partial L}{\partial x} = \alpha x^{\alpha-1}y^{\beta} - \lambda p_x = 0$$
+$$\frac{\partial L}{\partial y} = \beta x^{\alpha}y^{\beta-1} - \lambda p_y = 0$$
+$$\frac{\partial L}{\partial \lambda} = I - p_x x - p_y y = 0$$
 
 ---
 
@@ -1194,6 +1177,4 @@ Similar reasoning can be used to conclude that price subsidies are inferior to c
 4. **Budget constraints**: Slope = price ratio, shifts vs rotations
 5. **Utility maximization**: Tangency condition (MRS = $p_x/p_y$), Lagrange method
 6. **Applications**: Indirect utility, lump sum principle
-
----
 

@@ -3,11 +3,10 @@ project:
   output-dir: docs
   render: 
     - "*.qmd"
-    - "!project.qmd"
   
 execute:
   freeze: auto
-
+  cache: true
 
 website:
   title: "Advanced Microeconomics"
@@ -41,3 +40,23 @@ format:
     toc: true
     link-external-newwindow: true
     css: assets/styles.css
+  revealjs:
+    embed-resources: true
+    pdf-separate-fragments: false
+    navigation-mode: linear
+    hash-type: number
+    slide-number: true
+    controls: true
+    progress: true
+    transition: fade
+    transition-speed: fast
+    center: false
+    code-overflow: wrap
+    highlight-style: a11y-dark
+    chalkboard: false
+    mathjax: true
+    mathjax-config:
+      output:
+        font: mathjax-tex
+      tex:
+        packages: {'[+]': ['ams']}
