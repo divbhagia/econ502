@@ -18,7 +18,7 @@ website:
       - text: "Syllabus"
         file: syllabus.qmd
       - text: "Content"
-        file: lectures/lecture1/lecture1.qmd
+        file: content/lecture1.qmd
       - icon: github
         href: https://divbhagia.github.io/econ502/
 
@@ -30,14 +30,14 @@ website:
       - section: "Part I"
         contents:
           - text: "Lecture 1"
-            file: lectures/lecture1/lecture1.qmd
+            file: content/lecture1.qmd
   
   page-footer:
       2026 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) |Made with [Quarto](https://quarto.org/)
 
 format:
   html:
-    theme: assets/custom.scss
+    theme: assets/website.scss
     toc: true
     link-external-newwindow: true
     css: assets/styles.css
