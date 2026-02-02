@@ -1,5 +1,5 @@
 ---
-title: "Consumer Preferences and Choice"
+title: "Consumer Preferences<br> and Choice"
 subtitle: "Lecture 1"
 author: "Div Bhagia"
 format:
@@ -7,7 +7,7 @@ format:
     theme: [default, ../assets/slides.scss]
 ---
 
-# Introduction {background-color="#1e5288"}
+# Introduction 
 ---
 
 ## Why Study Microeconomics?
@@ -103,10 +103,10 @@ format:
 
 - Maybe not consciously—but people behave "as if" they do
 - The model predicts behavior relatively well
-- Alternative: behavioral economics (we'll discuss limitations)
+- Alternative: behavioral economics 
 :::
 
-# Preferences and Utility {background-color="#1e5288"}
+# Preferences and Utility 
 
 ---
 
@@ -166,7 +166,7 @@ $$\lambda A + (1-\lambda)B \succeq A \text{ for } \lambda \in [0,1]$$
 
 **Interpretation**: Consumers prefer balanced consumption bundles. Diminishing marginal rate of substitution.
 
-**Example**: If you're indifferent between (5 apples, 0 oranges) and (0 apples, 5 oranges), you prefer (5 apples, 5 oranges) to either extreme.
+**Example**: If you're indifferent between (6 apples, 0 oranges) and (0 apples, 6 oranges), you prefer (3 apples, 3 oranges) to either extreme.
 
 ---
 
@@ -175,8 +175,8 @@ $$\lambda A + (1-\lambda)B \succeq A \text{ for } \lambda \in [0,1]$$
 ### Behavioral Economics Violations
 
 - **Framing effects**: Preferences change based on how options are presented
-- **Intransitivity**: Preference reversals in complex choices (Condorcet paradox)
-- **Present bias**: Time-inconsistent preferences ($\beta\delta$ model)
+- **Intransitivity**: Preference reversals in complex choices 
+- **Present bias**: Time-inconsistent preferences
 - **Reference dependence**: Preferences depend on current endowment (loss aversion)
 - **Bounded rationality**
 
@@ -215,7 +215,7 @@ $$A \succeq B \iff U(A) \geq U(B)$$
 
 **Why this matters**: We can transform utility functions to make calculations easier.
 
-# Indifference Curves & MRS {background-color="#1e5288"}
+# Indifference Curves & MRS 
 
 ---
 
@@ -306,9 +306,7 @@ $$MRS = -\frac{dy}{dx}\bigg|_{U=const}$$
 
 ## Deriving the MRS Formula
 
-Along an indifference curve, utility is constant: $U(x,y) = \bar{U}$
-
-Taking the total differential:
+Along an indifference curve, utility is constant: $U(x,y) = \bar{U}$. Taking the total differential:
 $$dU = \frac{\partial U}{\partial x}dx + \frac{\partial U}{\partial y}dy = 0$$
 
 Rearranging:
@@ -326,7 +324,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Create figure
-fig, ax = plt.subplots(figsize=(8, 6))
+fig, ax = plt.subplots(figsize=(8, 5.85))
 
 # Single indifference curve for U = 4
 x = np.linspace(0.5, 8, 100)
@@ -399,7 +397,7 @@ As you consume more of good $X$ (moving right along an IC), the MRS decreases:
 **Hint**: $MU_x = \frac{\partial U}{\partial x}$, and remember $MRS = \frac{MU_x}{MU_y}$
 :::
 
-# Common Utility Functions {background-color="#1e5288"}
+# Common Utility Functions 
 
 ---
 
@@ -411,7 +409,7 @@ $$U(x,y) = ax + by$$
 
 **Examples**:
 
-- Different brands of the same product (e.g., Coke vs Pepsi for some consumers)
+- Different brands of the same product (e.g., Coke vs Pepsi for some)
 - Coffee from different cafes
 - Generic vs brand-name drugs (if truly equivalent)
 
@@ -431,7 +429,7 @@ $$U(x,y) = ax + by$$
 import numpy as np
 import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(figsize=(8, 6))
+fig, ax = plt.subplots(figsize=(8, 5.75))
 
 # Perfect substitutes: U = 2x + y
 # For different utility levels, solve for y: y = U - 2x
@@ -445,8 +443,8 @@ for U, i in zip(utility_levels, range(len(utility_levels))):
     ax.plot(x[valid], y[valid], color=colors[i], linewidth=2.5, label=f'U = {U}')
 
 
-ax.set_xlabel('Starbucks Coffee', fontsize=16)
-ax.set_ylabel('Chase Coffee', fontsize=16)
+ax.set_xlabel('Chase Coffee', fontsize=16)
+ax.set_ylabel('Starbucks Coffee', fontsize=16)
 ax.set_xlim(0, 15)
 ax.set_ylim(0, 32)
 ax.grid(True, alpha=0.3)
@@ -469,7 +467,6 @@ $$U(x,y) = \min\{ax, by\}$$
 **Examples**:
 
 - Left and right shoes
-- Coffee and cream (for some)
 - Cars and tires (need 4 tires per car)
 - Computers and monitors
 
@@ -489,7 +486,7 @@ $$U(x,y) = \min\{ax, by\}$$
 import numpy as np
 import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(figsize=(8, 6))
+fig, ax = plt.subplots(figsize=(8, 5.85))
 
 # Perfect complements: U = min{x, y}
 utility_levels = [2, 4, 6]
@@ -598,8 +595,7 @@ plt.show()
 For $U(x,y) = x^{\alpha}y^{\beta}$:
 
 **Step 1**: Find marginal utilities
-$$MU_x = \frac{\partial U}{\partial x} = \alpha x^{\alpha-1}y^{\beta}$$
-$$MU_y = \frac{\partial U}{\partial y} = \beta x^{\alpha}y^{\beta-1}$$
+$$MU_x = \frac{\partial U}{\partial x} = \alpha x^{\alpha-1}y^{\beta}, \quad \quad MU_y = \frac{\partial U}{\partial y} = \beta x^{\alpha}y^{\beta-1}$$
 
 **Step 2**: Calculate MRS
 $$MRS = \frac{MU_x}{MU_y} = \frac{\alpha x^{\alpha-1}y^{\beta}}{\beta x^{\alpha}y^{\beta-1}} = \frac{\alpha}{\beta} \cdot \frac{y}{x}$$
@@ -624,23 +620,17 @@ $$U(x,y) = (ax^{\rho} + by^{\rho})^{1/\rho}, \quad \rho \leq 1, \rho \neq 0$$
 
 **Flexibility**: CES nests all three cases mentioned.
 
-# Budget Constraints {background-color="#1e5288"}
+# Budget Constraints 
 
 ---
 
 ## The Budget Constraint
 
-Consumers have limited income $I$ and face prices $p_x, p_y$ for goods:
+Consumers have limited income $I$ and face prices $p_x, p_y$ for goods: $p_x \cdot x + p_y \cdot y \leq I$
 
-$$p_x \cdot x + p_y \cdot y \leq I$$
+**Budget line**: Set of bundles that cost exactly $I$: $$p_x \cdot x + p_y \cdot y = I$$
 
-**Budget line**: Set of bundles that cost exactly $I$
-
-$$p_x \cdot x + p_y \cdot y = I$$
-
-Rearranging for $y$:
-
-$$y = \frac{I}{p_y} - \frac{p_x}{p_y}x$$
+Rearranging for $y$: $y = \frac{I}{p_y} - \frac{p_x}{p_y}x$
 
 - **Intercept**: $I/p_y$ (max amount of $y$ if $x=0$)
 - **Slope**: $-p_x/p_y$ (opportunity cost of $x$ in terms of $y$)
@@ -655,7 +645,7 @@ $$y = \frac{I}{p_y} - \frac{p_x}{p_y}x$$
 import numpy as np
 import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(figsize=(8, 6))
+fig, ax = plt.subplots(figsize=(8, 5.85))
 
 # Budget: 10x + 5y = 100
 # y = 20 - 2x
@@ -694,7 +684,7 @@ plt.show()
 import numpy as np
 import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(figsize=(8, 6))
+fig, ax = plt.subplots(figsize=(8, 5.85))
 
 # Budget: 10x + 5y = 100
 # y = 20 - 2x
@@ -734,7 +724,7 @@ plt.show()
 import numpy as np
 import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(figsize=(8, 6))
+fig, ax = plt.subplots(figsize=(8, 5.85))
 
 # Budget: 10x + 5y = 100
 # y = 20 - 2x
@@ -762,7 +752,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-# Utility Maximization  {background-color="#1e5288"}
+# Utility Maximization  
 
 ---
 
@@ -879,10 +869,8 @@ plt.show()
 The consumer's problem:
 $$\max_{x,y} \quad U(x,y) \quad \text{subject to} \quad p_x x + p_y y = I$$
 
-**Lagrangian**:
+Denote $\lambda$ as the **Lagrange multiplier** and setup the **Lagrangian**:
 $$L(x,y,\lambda) = U(x,y) + \lambda(I - p_x x - p_y y)$$
-
-where $\lambda$ is the **Lagrange multiplier**.
 
 **First-order conditions** (FOCs):
 
@@ -996,6 +984,8 @@ Which of the following goods do you think have roughly constant expenditure shar
 **How to model this? **
 :::
 ---
+
+## Applications
 
 ## Homogeneity of Demand Functions
 

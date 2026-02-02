@@ -16,19 +16,6 @@ $code-color: #1a1a1a;
 
 /*-- scss:rules --*/
 
-// Title slide
-.reveal .slide-background.title {
-  background-color: #1e5288;
-}
-
-// Section headers (dark blue background slides)
-.reveal .slide-background[data-background-color="#1e5288"],
-.reveal .slide-background[data-background-color="#16a085"] {
-  h1, h2, h3, h4, h5, h6 {
-    color: #ffffff;
-  }
-}
-
 // Improve readability
 .reveal {
   font-size: 32px;
@@ -37,6 +24,7 @@ $code-color: #1a1a1a;
     font-size: 1.75em;
     font-weight: 700;
     margin-bottom: 0.5em;
+    text-align: center;
   }
   
   h2 {
@@ -50,6 +38,7 @@ $code-color: #1a1a1a;
     font-weight: 600;
     color: #16a085;
     margin-bottom: 0.3em;
+    text-align: left;
   }
   
     // Space before lists (after headings or paragraphs)
@@ -131,8 +120,8 @@ $code-color: #1a1a1a;
   // Display math (centered equations)
   .math.display {
     margin-top: 0.2em !important;
-    font-size: 1.1em;
-    line-height: 1.1;
+    font-size: 1em;
+    line-height: 1;
   }
   p + .math.display {
     margin-top: 0.2em !important;
