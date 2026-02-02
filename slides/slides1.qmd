@@ -8,7 +8,6 @@ format:
 ---
 
 # Introduction 
----
 
 ## Why Study Microeconomics?
 
@@ -107,9 +106,6 @@ format:
 :::
 
 # Preferences and Utility 
-
----
-
 
 ## Preferences: Basic Setup
 
@@ -217,8 +213,6 @@ $$A \succeq B \iff U(A) \geq U(B)$$
 
 # Indifference Curves & MRS 
 
----
-
 ## Indifference Curves
 
 An **indifference curve** is the set of all bundles that give the same utility level:
@@ -243,7 +237,7 @@ X, Y = np.meshgrid(x, y)
 U = X * Y
 
 # Create plot
-fig, ax = plt.subplots(figsize=(6, 4.25))
+fig, ax = plt.subplots(figsize=(5.75, 3.9))
 
 # Plot multiple indifference curves
 levels = [5, 10, 15]
@@ -398,8 +392,6 @@ As you consume more of good $X$ (moving right along an IC), the MRS decreases:
 :::
 
 # Common Utility Functions 
-
----
 
 ## Perfect Substitutes
 
@@ -622,8 +614,6 @@ $$U(x,y) = (ax^{\rho} + by^{\rho})^{1/\rho}, \quad \rho \leq 1, \rho \neq 0$$
 
 # Budget Constraints 
 
----
-
 ## The Budget Constraint
 
 Consumers have limited income $I$ and face prices $p_x, p_y$ for goods: $p_x \cdot x + p_y \cdot y \leq I$
@@ -753,8 +743,6 @@ plt.show()
 ```
 
 # Utility Maximization  
-
----
 
 ## The Consumer's Problem
 
@@ -983,9 +971,8 @@ Which of the following goods do you think have roughly constant expenditure shar
 
 **How to model this? **
 :::
----
 
-## Applications
+# Applications
 
 ## Homogeneity of Demand Functions
 
