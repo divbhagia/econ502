@@ -496,12 +496,11 @@ $$\varepsilon_{x,p_x}^c = \frac{\partial x^h}{\partial p_x} \cdot \frac{p_x}{x^h
 $$\varepsilon_{x,p_y}^c = \frac{\partial x^h}{\partial p_y} \cdot \frac{p_y}{x^h}$$
 
 ::: {.fragment}
-**Key properties:**
-
 - $\varepsilon_{x,p_x}^c \leq 0$ always (substitution effect)
 - $\varepsilon_{x,p_x}^c$ is less negative than $\varepsilon_{x,p_x}$ for normal goods
 - Compensated elasticities are symmetric: $\varepsilon_{x,p_y}^c \cdot s_x = \varepsilon_{y,p_x}^c \cdot s_y$
 :::
+
 ---
 
 ## The Slutsky Equation in Elasticities
@@ -592,17 +591,8 @@ $$EV = \int_{p_0}^{p_1} x^h(p, p_y, U_1) \, dp$$
 $$CS = \int_{p_0}^{p_1} x(p, p_y, I) \, dp$$
 
 ::: {.fragment}
-**Advantages:**
-
-- Easy to estimate from market data
-- Don't need to know utility function
-- Widely used in applied work
-
-**Disadvantages:**
-
-- Only an approximation (not exact welfare measure)
-- Mixes income and substitution effects
-- Can differ substantially from CV and EV for large changes
+- **Advantage:** Easy to estimate from market data
+- **Disadvantage:** Only an approximation of welfare change
 :::
 
 ---
