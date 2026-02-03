@@ -612,7 +612,8 @@ $$U(x,y) = (ax^{\rho} + by^{\rho})^{1/\rho}, \quad \rho \leq 1, \rho \neq 0$$
 
 **Flexibility**: CES nests all three cases mentioned.
 
-# Budget Constraints 
+
+# Utility Maximization  
 
 ## The Budget Constraint
 
@@ -620,7 +621,7 @@ Consumers have limited income $I$ and face prices $p_x, p_y$ for goods: $p_x \cd
 
 **Budget line**: Set of bundles that cost exactly $I$: $$p_x \cdot x + p_y \cdot y = I$$
 
-Rearranging for $y$: $y = \frac{I}{p_y} - \frac{p_x}{p_y}x$
+Rearranging for $y$: $$y = \frac{I}{p_y} - \frac{p_x}{p_y}x$$
 
 - **Intercept**: $I/p_y$ (max amount of $y$ if $x=0$)
 - **Slope**: $-p_x/p_y$ (opportunity cost of $x$ in terms of $y$)
@@ -666,83 +667,6 @@ plt.tight_layout()
 plt.show()
 ```
 
----
-## Changes in Income
-
-```{python}
-#| echo: false
-import numpy as np
-import matplotlib.pyplot as plt
-
-fig, ax = plt.subplots(figsize=(8, 5.85))
-
-# Budget: 10x + 5y = 100
-# y = 20 - 2x
-I = 100
-I2 = 50
-px = 10
-py = 5
-
-x = np.linspace(0, I/px, 100)
-y = (I - px*x) / py
-y2 = (I2 - px*x) / py
-
-ax.plot(x, y, 'b-', linewidth=2, label=f'{px}x + {py}y = {I}', color='black')
-ax.plot(x, y2, 'b-', linewidth=2, label=f'{px}x + {py}y = {I2}', color='black', linestyle='--')
-
-
-
-ax.set_xlabel('Good X', fontsize=16)
-ax.set_ylabel('Good Y', fontsize=16)
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.set_xlim(0, 11)
-ax.set_ylim(0, 22)
-ax.legend(fontsize=16)
-ax.grid(True, alpha=0.3)
-
-plt.tight_layout()
-plt.show()
-```
-
----
-
-## Changes in Prices
-
-```{python}
-#| echo: false
-import numpy as np
-import matplotlib.pyplot as plt
-
-fig, ax = plt.subplots(figsize=(8, 5.85))
-
-# Budget: 10x + 5y = 100
-# y = 20 - 2x
-I = 100
-px = 10
-py = 5
-py2 = 10  # price of y increases
-
-x = np.linspace(0, I/px, 100)
-y = (I - px*x) / py
-y2 = (I - px*x) / py2
-
-ax.plot(x, y, 'b-', linewidth=2, label=f'{px}x + {py}y = {I}', color='black')
-ax.plot(x, y2, 'b-', linewidth=2, label=f'{px}x + {py2}y = {I}', color='black', linestyle='--')
-ax.set_xlabel('Good X', fontsize=16)
-ax.set_ylabel('Good Y', fontsize=16)
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.set_xlim(0, 11)
-ax.set_ylim(0, 22)
-ax.legend(fontsize=16)
-ax.grid(True, alpha=0.3)
-
-plt.tight_layout()
-plt.show()
-```
-
-# Utility Maximization  
 
 ## The Consumer's Problem
 
@@ -917,35 +841,10 @@ $$\frac{\partial L}{\partial \lambda} = I - p_x x - p_y y = 0$$
 
 ## Example: Cobb-Douglas Utility (cont.)
 
-**Step 3**: Combine first two FOCs
-$$\frac{\alpha x^{\alpha-1}y^{\beta}}{\beta x^{\alpha}y^{\beta-1}} = \frac{p_x}{p_y}$$
-
-Simplifying:
-$$\frac{\alpha}{\beta} \cdot \frac{y}{x} = \frac{p_x}{p_y}$$
-
-Solving for $y$:
-$$y = \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot x$$
-
-## Example: Cobb-Douglas Utility (cont.)
-
-**Step 4**: Substitute into budget constraint
-$$p_x x + p_y \cdot \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot x = I$$
-$$p_x x + \frac{\beta}{\alpha} p_x x = I$$
-$$p_x x \left(1 + \frac{\beta}{\alpha}\right) = I$$
-$$p_x x \cdot \frac{\alpha + \beta}{\alpha} = I$$
-
----
-
-## Example: Cobb-Douglas Utility (cont.)
-
-**Step 5**: Solve for $x^*$:
-$$x^* = \frac{\alpha I}{(\alpha + \beta)p_x}$$
-
-Substitute back to get $y^*$:
-$$y^* = \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot x^* = \frac{\beta}{\alpha} \cdot \frac{p_x}{p_y} \cdot \frac{\alpha I}{(\alpha + \beta)p_x} = \frac{\beta I}{(\alpha + \beta)p_y}$$
-
-## Example: Cobb-Douglas Utility (cont.)
+**Step 3**: Solve the system of equations to find $x^*$, $y^*$, and $\lambda^*$.
 $$\boxed{x^* = \frac{\alpha I}{(\alpha + \beta)p_x}, \quad y^* = \frac{\beta I}{(\alpha + \beta)p_y}}$$
+
+*See handout for full derivation.*
 
 **Key results**:
 
@@ -972,7 +871,7 @@ Which of the following goods do you think have roughly constant expenditure shar
 **How to model this? **
 :::
 
-# Applications
+---
 
 ## Homogeneity of Demand Functions
 
@@ -1020,11 +919,11 @@ $$V(p_x, p_y, I) = \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}} \cdot \frac{
 
 **Note**: $V$ increases with $I$ and decreases with $p_x$ and $p_y$ ✓
 
----
+# Applications
 
 ## Application: Gasoline Tax
 
-- Indirect utility is the tool for **welfare analysis** of price/income changes
+- Indirect utility as a tool for **welfare analysis** of price/income changes
 
 - **Example**: Government raises gas tax by $0.50/gallon. To compensate, gives everyone $200 cash transfer.
   
@@ -1049,7 +948,7 @@ $$V(p_x, p_y, I) = \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}} \cdot \frac{
 
 ---
 
-## Lump Sum Principle
+## Cash vs Food Stamps on a Graph
 ```{python}
 #| echo: false
 import numpy as np
@@ -1131,16 +1030,19 @@ plt.show()
 
 ## Cash vs In-Kind Transfers
 
-Lump sum principle implies:
 
-- **Cash transfers are at least as good as in-kind transfers**, because they provide more flexibility
-- If the in-kind transfer does not bind (i.e., the consumer would buy at least that much anyway), then cash and in-kind are equivalent
-- If the in-kind transfer binds, cash is strictly better, as it allows the consumer to reach a higher indifference curve
+**Key insight:** Cash transfers are at least as good as in-kind transfers (eg. SNAP, housing vouchers, energy assistance etc.)
 
-**Then why do governments use in-kind transfers like SNAP, housing vouchers, etc.?**
+- More flexibility → reach higher indifference curve (or same)
+- If in-kind doesn't bind, cash and in-kind are equivalent
+- If in-kind binds, cash is strictly better
 
-::: {.fragment}
-Similar reasoning can be used to conclude that price subsidies are inferior to cash transfers.
+**Then why use in-kind transfers?**
+
+::: {.fragment style="margin-top: -0.5em;"}
+- Paternalism (society values food/housing more than recipients)
+- Political economy (easier to justify to voters)
+- Externalities (e.g., nutrition benefits for children)
 :::
 
 
@@ -1149,9 +1051,8 @@ Similar reasoning can be used to conclude that price subsidies are inferior to c
 **What we covered**:
 
 1. **Preferences**: Axioms of rational choice, utility representation
-2. **Indifference curves**: Properties, MRS, diminishing MRS
-3. **Common utility functions**: Perfect substitutes, perfect complements, Cobb-Douglas
-4. **Budget constraints**: Slope = price ratio, shifts vs rotations
-5. **Utility maximization**: Tangency condition (MRS = $p_x/p_y$), Lagrange method
-6. **Applications**: Indirect utility, lump sum principle
+2. **Indifference curves**: Properties, MRS 
+3. **Common utility functions**: Perfect substitutes, perfect complements, Cobb-Douglas, CES
+4. **Utility maximization**: Tangency condition (MRS = $p_x/p_y$), Lagrange method, Indirect utility
+5. **Applications**: Taxes, cash vs in-kind transfers
 

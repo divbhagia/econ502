@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Advanced Microeconomics",
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
     "section": "",
-    "text": "Learn how individuals, firms, and markets interact through the lens of microeconomic theory, with applications to real-world economic problems.\n\nECON 502 | Spring 2026 | College of Business and Economics | California State University\n\n\nInstructor\n   Dr. Div Bhagia     Office: SGMH 3361     dbhagia@fullerton.edu \n\n\nCourse Details\n   SGMH 2501, Mondays, 7-9:45 PM     Office hours:\n\n\nMondays, 5-6.45 PM, or\nBy appointment (in-person or on Zoom)"
+    "text": "The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking here.\n\nOverviewLearning GoalsMaterialGrading\n\n\n\nOverview\nThis course develops the core tools of microeconomic theory while connecting them to real-world applications and policy questions.\nWe begin by examining how consumers decide what to buy (lectures 1-2) and how firms organize production (lecture 3), then consider how these behaviors determine prices and quantities in competitive markets (lecture 4). From there, we explore what it means for a market to work efficiently and how to think about fairness (lecture 5). We then turn to market power (lectures 6-8): What happens when a single or a few large firms dominate the market? How does market power affect wages in labor markets?\nIn the second half of the course, we consider the need for government intervention when markets fail due to information asymmetries, externalities, or underprovision of public goods (lectures 9-10). Finally, we conclude by examining decision-making under uncertainty and strategic behavior through game theory (lectures 11-12).\n\n\n\n\nLearning Goals\nUpon successful completion of this course, students will:\n\nModel consumer and firm behavior and derive equilibrium prices and quantities in competitive markets\nApply welfare criteria to assess market efficiency and analyze tradeoffs between efficiency and equity\nAnalyze how market power affects prices, output, and wages in product and labor markets\nDiagnose market failures arising from information asymmetries, externalities, and public goods, and evaluate policy responses\nApply expected utility theory to model choice under uncertainty and use game theory to solve strategic interactions\n\n\n\n\n\nCourse Material\nThe following textbook is required for this course:\n\nMicroeconomic Theory: Basic Principles & Extensions by Walter Nicholson, Christopher Snyder, 13th Edition.\n\nPrevious editions are also acceptable. Lectures will loosely follow the textbook. Supplementary readings, lecture slides, and problem sets will be posted on the course website.\n\n\n\n\nGrading Criteria\nYour grade will be determined according to the following breakdown:\n\n\n\nComponent\n\n\nPoints\n\n\n\n\nProblem Sets\n\n\n10\n\n\n\n\nMidterm Exam\n\n\n40\n\n\n\n\nFinal Exam\n\n\n50"
   },
   {
     "objectID": "content/lecture1.html",
     "href": "content/lecture1.html",
     "title": "Lecture 1",
     "section": "",
-    "text": "Introduction to the course\nPreferences and utility functions\nIndifference curves and marginal rate of substitution (MRS)\nBudget constraints\nUtility maximization: graphical and Lagrangian methods\nApplications\n\nTextbook references: - Sections 3.1-3.6 - Sections 4.1-4.5",
+    "text": "Introduction to the course\nPreferences and utility functions\nIndifference curves and marginal rate of substitution (MRS)\nUtility maximization\nApplications\n\nTextbook references: Sections 3.1-3.6; Sections 4.1-4.5",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
@@ -23,7 +23,7 @@
     "href": "content/lecture1.html#topics",
     "title": "Lecture 1",
     "section": "",
-    "text": "Introduction to the course\nPreferences and utility functions\nIndifference curves and marginal rate of substitution (MRS)\nBudget constraints\nUtility maximization: graphical and Lagrangian methods\nApplications\n\nTextbook references: - Sections 3.1-3.6 - Sections 4.1-4.5",
+    "text": "Introduction to the course\nPreferences and utility functions\nIndifference curves and marginal rate of substitution (MRS)\nUtility maximization\nApplications\n\nTextbook references: Sections 3.1-3.6; Sections 4.1-4.5",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
@@ -43,10 +43,46 @@
     ]
   },
   {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus",
+    "objectID": "content/lecture2.html",
+    "href": "content/lecture2.html",
+    "title": "Lecture 1",
     "section": "",
-    "text": "The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking here.\n\nOverviewLearning GoalsMaterialGrading\n\n\n\nOverview\nThis course develops the core tools of microeconomic theory while connecting them to real-world applications and policy questions.\nWe begin by examining how consumers decide what to buy (lectures 1-2) and how firms organize production (lecture 3), then consider how these behaviors determine prices and quantities in competitive markets (lecture 4). From there, we explore what it means for a market to work efficiently and how to think about fairness (lecture 5). We then turn to market power (lectures 6-8): What happens when a single or a few large firms dominate the market? How does market power affect wages in labor markets?\nIn the second half of the course, we consider the need for government intervention when markets fail due to information asymmetries, externalities, or underprovision of public goods (lectures 9-10). Finally, we conclude by examining decision-making under uncertainty and strategic behavior through game theory (lectures 11-12).\n\n\n\n\nLearning Goals\nUpon successful completion of this course, students will:\n\nModel consumer and firm behavior and derive equilibrium prices and quantities in competitive markets\nApply welfare criteria to assess market efficiency and analyze tradeoffs between efficiency and equity\nAnalyze how market power affects prices, output, and wages in product and labor markets\nDiagnose market failures arising from information asymmetries, externalities, and public goods, and evaluate policy responses\nApply expected utility theory to model choice under uncertainty and use game theory to solve strategic interactions\n\n\n\n\n\nCourse Material\nThe following textbook is required for this course:\n\nMicroeconomic Theory: Basic Principles & Extensions by Walter Nicholson, Christopher Snyder, 13th Edition.\n\nPrevious editions are also acceptable. Lectures will loosely follow the textbook. Supplementary readings, lecture slides, and problem sets will be posted on the course website.\n\n\n\n\nGrading Criteria\nYour grade will be determined according to the following breakdown:\n\n\n\nComponent\n\n\nPoints\n\n\n\n\nProblem Sets\n\n\n10\n\n\n\n\nMidterm Exam\n\n\n40\n\n\n\n\nFinal Exam\n\n\n50"
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "content/lecture2.html#topics",
+    "href": "content/lecture2.html#topics",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "content/lecture2.html#slides",
+    "href": "content/lecture2.html#slides",
+    "title": "Lecture 1",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Advanced Microeconomics",
+    "section": "",
+    "text": "Learn how individuals, firms, and markets interact through the lens of microeconomic theory, with applications to real-world economic problems.\n\nECON 502 | Spring 2026 | College of Business and Economics | California State University\n\n\nInstructor\n   Dr. Div Bhagia     Office: SGMH 3361     dbhagia@fullerton.edu \n\n\nCourse Details\n   SGMH 2501, Mondays, 7-9:45 PM     Office hours:\n\n\nMondays, 5-6.45 PM, or\nBy appointment (in-person or on Zoom)"
   }
 ]

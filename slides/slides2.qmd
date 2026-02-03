@@ -1,0 +1,609 @@
+---
+title: "Demand Analysis and<br> Consumer Welfare"
+subtitle: "Lecture 2"
+author: "Div Bhagia"
+format:
+  revealjs:
+    theme: [default, ../assets/slides.scss]
+---
+
+# From the Last Class
+
+## Utility Maximization
+
+Consumer's problem:
+$$\max_{x,y} U(x,y) \quad \text{subject to} \quad p_x x + p_y y = I$$
+
+Set up the Lagrangian:
+$$L = U(x,y) + \lambda(I - p_x x - p_y y)$$
+
+First-order conditions → demand functions:
+ $$x^*(p_x, p_y, I) \quad \quad y^*(p_x, p_y, I)$$
+
+Note: These are called **Marshallian (uncompensated) demand** functions.
+
+---
+
+## Indirect Utility Function
+
+**Definition:** Maximum utility as a function of prices and income
+
+$$V(p_x, p_y, I) = \max_{x,y} U(x,y) \text{ s.t. } p_x x + p_y y = I$$
+
+Or equivalently:
+$$V(p_x, p_y, I) = U(x^*(p_x, p_y, I), y^*(p_x, p_y, I))$$
+
+**Properties:**
+
+1. Increasing in $I$: $\frac{\partial V}{\partial I} > 0$
+2. Decreasing in prices: $\frac{\partial V}{\partial p_i} \leq 0$
+3. Homogeneous of degree zero: $V(tp_x, tp_y, tI) = V(p_x, p_y, I)$
+
+---
+
+## Application: Gasoline Tax
+
+- Indirect utility as a tool for **welfare analysis** of price/income changes
+
+- **Example**: Government raises gas tax by $0.50/gallon. To compensate, gives everyone $200 cash transfer.
+  
+  - To answer if people are better or worse off, compare indirect utility before and after policy.
+    - Before: $V(p_{\text{gas}}, p_{\text{other}}, I)$
+    - After: $V(p_{\text{gas}} + 0.50, p_{\text{other}}, I + 200)$
+
+**Question**: Would it be better if we could measure welfare in dollars rather than abstract "*utils*"?
+
+# Expenditure Minimization 
+
+## The Dual Problem
+
+*Two ways to think about consumer choice.*
+
+**I. Utility Maximization:** Given prices and income, maximize utility
+
+$$\max_{x,y} \ U(x,y) \quad \text{s.t.} \quad p_x x + p_y y = I$$
+
+$\rightarrow$ **Marshallian (uncompensated) demand** and **Indirect Utility Function**.
+
+::: {.fragment}
+**II. Expenditure Minimization:** Given prices and a utility target, minimize expenditure
+
+$$\min_{x,y} \ p_x x + p_y y \quad \text{s.t.} \quad U(x,y) = \bar{U}$$
+
+$\rightarrow$ **Hicksian (compensated) demand** and **Expenditure Function**. 
+:::
+
+---
+
+## Visualizing Duality
+
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 5.25))
+
+# Parameters
+I = 100
+px = 10
+py = 5
+
+# Primal: Utility maximization
+x_budget = np.linspace(0, I/px, 100)
+y_budget = (I - px*x_budget) / py
+
+# Optimal point (Cobb-Douglas α=β=0.5)
+x_opt = 0.5 * I / px  # = 5
+y_opt = 0.5 * I / py  # = 10
+
+# Indifference curves
+x_ic = np.linspace(0.1, 12, 300)
+U_opt = x_opt**0.5 * y_opt**0.5
+
+# Indifference curves for primal
+for u_frac in [0.7, 0.85, 1.0, 1.15]:
+    u_temp = U_opt * u_frac
+    y_ic_temp = (u_temp**2) / x_ic
+    if u_frac == 1.0:
+        ax1.plot(x_ic, y_ic_temp, 'r-', linewidth=2.5, label=f'Max U at (x*, y*)')
+    else:
+        ax1.plot(x_ic, y_ic_temp, 'r-', linewidth=1.5, alpha=0.4)
+
+ax1.plot(x_budget, y_budget, 'k', linewidth=2.5, label='Budget constraint')
+ax1.plot(x_opt, y_opt, 'ko', markersize=12, zorder=5)
+ax1.set_xlabel('Good X', fontsize=14)
+ax1.set_ylabel('Good Y', fontsize=14)
+ax1.set_xlim(0, 13)
+ax1.set_ylim(0, 25)
+ax1.set_title('Utility Maximization', fontsize=15)
+ax1.grid(True, alpha=0.3)
+ax1.spines['top'].set_visible(False)
+ax1.spines['right'].set_visible(False)
+
+# Dual: Expenditure minimization
+# Fix utility at U_opt, vary expenditure
+
+# Multiple budget lines
+for I_temp in [60, 80, 100, 120]:
+    x_temp = np.linspace(0, I_temp/px, 100)
+    y_temp = (I_temp - px*x_temp) / py
+    if I_temp == I:
+        ax2.plot(x_temp, y_temp, 'k-', linewidth=2.5, label=f'Min E at (x*, y*)')
+    else:
+        ax2.plot(x_temp, y_temp, 'gray', linewidth=1.5, alpha=0.5)
+
+ax2.plot(x_ic, (U_opt**2) / x_ic, 'r-', linewidth=2.5, label='U = U*')
+ax2.plot(x_opt, y_opt, 'ko', markersize=12, zorder=5)
+ax2.set_xlabel('Good X', fontsize=14)
+ax2.set_ylabel('Good Y', fontsize=14)
+ax2.set_xlim(0, 13)
+ax2.set_ylim(0, 25)
+ax2.set_title('Expenditure minimization', fontsize=15)
+ax2.grid(True, alpha=0.3)
+ax2.spines['top'].set_visible(False)
+ax2.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## Expenditure Minimization 
+Consumer's problem:
+$$\min_{x,y} p_x x + p_y y \quad \text{subject to} \quad U(x, y) = \bar{U}$$
+
+Set up the Lagrangian:
+$$L = p_x x + p_y y + \mu(\bar{U}-U(x, y))$$
+
+FOCs give us **Hicksian (compensated) demand functions**: $$x^h(p_x, p_y, \bar{U}) \quad \quad y^h(p_x, p_y, \bar{U}) $$
+
+---
+
+## Expenditure Function
+
+**Definition:** Minimum expenditure needed to reach $\bar{U}$ at prices $(p_x, p_y)$
+
+$$E(p_x, p_y, \bar{U}) = \min_{x,y} \ p_x x + p_y y \text{ s.t. } U(x,y) = \bar{U}$$
+
+Or equivalently:
+$$E(p_x, p_y, \bar{U}) = p_x x^h + p_y y^h$$
+
+**Properties:**
+
+1. Increasing in $\bar{U}$: $\frac{\partial E}{\partial \bar{U}} > 0$
+2. Increasing in prices: $\frac{\partial E}{\partial p_i} \geq 0$
+3. Homogeneous of degree 1 in prices: $E(tp_x, tp_y, \bar{U}) = t \cdot E(p_x, p_y, \bar{U})$
+4. Concave in prices
+
+## Duality: Inverse Relationship
+
+**The indirect utility and expenditure functions are inverses.**
+
+$$V(p_x, p_y, E(p_x, p_y, \bar{U})) = \bar{U}$$
+
+$$E(p_x, p_y, V(p_x, p_y, I)) = I$$
+
+::: {.fragment}
+**Practical implications:**
+
+- Can work with whichever function is more convenient
+- Welfare analysis: easier to use expenditure function
+- Demand analysis: easier to use indirect utility
+:::
+
+---
+
+## Gasoline Tax Revisited
+
+**Example**: Government raises gas tax by $0.50/gallon.
+
+How much will the consumer need to be compensated to reach their original utility level $\bar{U}$?
+
+$$ E(p_{\text{gas}} + 0.50, p_{\text{other}}, \bar{U}) - E(p_{\text{gas}}, p_{\text{other}}, \bar{U}) $$
+
+Now we have a way of measuring how much worse off the consumer is in **dollar terms**.
+
+
+# Demand Functions
+
+## Two Types of Demand
+
+**Marshallian (uncompensated) demand:** $x(p_x, p_y, I)$
+
+- From utility maximization
+- Holds income fixed as prices change
+- Reflects both substitution and income effects
+
+::: {.fragment}
+**Hicksian (compensated) demand:** $x^h(p_x, p_y, \bar{U})$
+
+- From expenditure minimization
+- *Compensates* the consumer for price changes to keep utility constant
+- Reflects only substitution effects
+- Sometimes written as $x^c$ for "compensated"
+
+:::
+---
+
+## Relationship Between Two Demands
+
+At optimal consumption, the two demand functions give the same quantity:
+
+$$x(p_x, p_y, I) = x^h(p_x, p_y, V(p_x, p_y, I))$$
+
+where $V(p_x, p_y, I)$ is the maximum utility achieved at income $I$.
+
+::: {.fragment}
+**In other words:**
+
+- Start with $(p_x, p_y, I)$
+- Marshallian demand: $x^* = x(p_x, p_y, I)$
+- Maximum utility: $\bar{U} = V(p_x, p_y, I)$
+- Hicksian demand at this utility: $x^h(p_x, p_y, \bar{U}) = x^*$
+:::
+---
+
+## Graphical: Marshallian Demand 
+
+```{python}
+#| echo: false
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 5.5))
+
+# Parameters for Cobb-Douglas
+I = 100
+alpha = 0.5
+beta = 0.5
+py = 5
+
+# Panel (a): Budget lines and optimal choices
+px_vals = [10, 5]
+blue = '#0072B2'
+orange = '#E69F00'
+colors = [blue, orange]
+linestyles = ['-', '--']
+markerstyles = ['o', 's']
+labels = ['$p_x = 10$', '$p_x = 5$']
+
+for i, px in enumerate(px_vals):
+    # Budget line
+    x_budget = np.linspace(0, I/px, 100)
+    y_budget = (I - px*x_budget) / py
+    ax1.plot(x_budget, y_budget, color=colors[i],
+             linewidth=2.5, linestyle=linestyles[i])
+
+    # Marshallian optimal choice
+    x_opt = alpha * I / px
+    y_opt = beta * I / py
+    ax1.plot(x_opt, y_opt, markerstyles[i], color=colors[i], markersize=10)
+
+    # Indifference curve through optimal bundle
+    U = x_opt**alpha * y_opt**beta
+    x_ic = np.linspace(0.1, 30, 400)
+    y_ic = (U / x_ic**alpha)**(1/beta)
+    ax1.plot(x_ic, y_ic, color=colors[i], linewidth=2.5, label=labels[i],
+    linestyle = linestyles[i])
+
+ax1.set_xlabel('Good X', fontsize=14)
+ax1.set_ylabel('Good Y', fontsize=14)
+ax1.set_xlim(0, 25)
+ax1.set_ylim(0, 25)
+ax1.set_title('(a) Income-Constant Price Changes', fontsize=14, fontweight='bold')
+ax1.grid(True, alpha=0.3)
+ax1.legend(fontsize=16, loc='upper right')
+ax1.spines['top'].set_visible(False)
+ax1.spines['right'].set_visible(False)
+
+# Panel (b): Marshallian demand curve
+px_range = np.linspace(2, 20, 100)
+x_marshallian = alpha * I / px_range
+
+ax2.plot(x_marshallian, px_range, linewidth=3,
+         color='black',
+         label='Marshallian demand $x(p_x; I, p_y)$')
+
+ax2.set_xlabel('Quantity of X', fontsize=14)
+ax2.set_ylabel('Price ($p_x$)', fontsize=14)
+ax2.set_xlim(0, 20)
+ax2.set_ylim(0, 20)
+ax2.set_title('(b) Marshallian Demand Curve', fontsize=14, fontweight='bold')
+ax2.grid(True, alpha=0.3)
+ax2.spines['top'].set_visible(False)
+ax2.spines['right'].set_visible(False)
+
+# Mark observed price points
+for i, px in enumerate(px_vals):
+    x_m = alpha * I / px
+    ax2.plot(x_m, px, markerstyles[i], color=colors[i], markersize=10)
+
+plt.tight_layout()
+plt.show()
+```
+---
+
+## Decomposing Price Effects
+
+When $p_x$ changes, quantity demanded changes for two reasons:
+
+1. **Substitution effect:** Relative prices change → reallocate consumption
+2. **Income effect:** Real purchasing power changes → change consumption
+
+Hicksian demand isolates the substitution effect by holding utility constant.
+
+---
+
+## Graphical: Hicksian Demand 
+
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 5.5))
+
+# Parameters for Cobb-Douglas
+I = 100
+alpha = 0.5
+beta = 0.5
+py = 5
+
+# Panel (a): Indifference curve map showing compensated changes
+px_vals_map = [10, 5]  # Two price levels
+blue = '#0072B2'
+orange = '#E69F00'
+colors = [blue, orange]
+linestyles = ['-', '--']
+markerstyles = ['o', 's']
+labels = ['$p_x = 10$', '$p_x = 5$']
+
+for i, px in enumerate(px_vals_map):
+    # Budget line
+    x_budget = np.linspace(0, I/px, 100)
+    y_budget = (I - px*x_budget) / py
+    ax1.plot(x_budget, y_budget, color=colors[i], linewidth=2.5, linestyle=linestyles[i])
+    
+    # Optimal point
+    x_opt = alpha * I / px
+    y_opt = beta * I / py
+    ax1.plot(x_opt, y_opt, markerstyles[i], color=colors[i], markersize=10)
+    
+    # Indifference curve through this point
+    U_opt = x_opt**alpha * y_opt**beta
+    x_ic = np.linspace(0.1, 25, 300)
+    y_ic = (U_opt / x_ic**alpha)**(1/beta)
+    ax1.plot(x_ic, y_ic, color=colors[i], linewidth=2.5, label=labels[i], linestyle=linestyles[i])
+
+# Compensated budget line (same utility as higher price, lower price ratio)
+# Find point on U1 (at px=10) with slope from px=5
+U1 = (alpha * I / px_vals_map[0])**alpha * (beta * I / py)**beta
+# At tangency with new price ratio: MRS = px_new/py
+# For C-D: MRS = (alpha/beta)*(y/x) = px/py
+# So y/x = (beta/alpha)*(px/py)
+x_comp = (U1 / ((beta * py / (alpha * px_vals_map[1]))**beta))**(1/(alpha+beta))
+y_comp = (beta/alpha) * (px_vals_map[1]/py) * x_comp
+
+# Budget line through compensated point with new slope
+E_comp = px_vals_map[1] * x_comp + py * y_comp
+x_budget_comp = np.linspace(0, E_comp/px_vals_map[1], 100)
+y_budget_comp = (E_comp - px_vals_map[1]*x_budget_comp) / py
+ax1.plot(x_budget_comp, y_budget_comp, 'r--', linewidth=2.5, label='Compensated')
+ax1.plot(x_comp, y_comp, 'D', color = 'red', markersize=10)
+
+ax1.set_xlabel('Good X', fontsize=14)
+ax1.set_ylabel('Good Y', fontsize=14)
+ax1.set_xlim(0, 25)
+ax1.set_ylim(0, 25)
+ax1.set_title('(a) Compensated Price Changes', fontsize=14, fontweight='bold')
+ax1.grid(True, alpha=0.3)
+ax1.legend(fontsize=16, loc='upper right')
+ax1.spines['top'].set_visible(False)
+ax1.spines['right'].set_visible(False)
+
+# Panel (b): Hicksian demand curve
+px_range = np.linspace(2, 20, 100)
+# For Cobb-Douglas at fixed utility U1
+# From FOCs: alpha*U1^(1/alpha+beta) * px^(-beta/(alpha+beta)) * py^(beta/(alpha+beta))
+x_hicksian = ((alpha/beta) * (py/px_range))**(beta/(alpha+beta)) * U1**(1/(alpha+beta))
+
+ax2.plot(x_hicksian, px_range, linewidth=3, color='black', label='Hicksian demand $x^h(p_x; p_y, \\bar{U})$')
+ax2.set_xlabel('Quantity of X', fontsize=14)
+ax2.set_ylabel('Price ($p_x$)', fontsize=14)
+ax2.set_xlim(0, 20)
+ax2.set_ylim(0, 20)
+ax2.set_title('(b) Hicksian Demand Curve', fontsize=14, fontweight='bold')
+ax2.grid(True, alpha=0.3)
+ax2.spines['top'].set_visible(False)
+ax2.spines['right'].set_visible(False)
+
+# Mark the two price points
+markerstyles = ['o', 's']
+colors = [blue, 'red']
+for i, px in enumerate(px_vals_map):
+    x_h = ((alpha/beta) * (py/px))**(beta/(alpha+beta)) * U1**(1/(alpha+beta))
+    ax2.plot(x_h, px, markerstyles[i], color=colors[i], markersize=10)
+
+plt.tight_layout()
+plt.show()
+```
+
+
+## The Slutsky Equation
+$$\underbrace{\frac{\partial x}{\partial p_x}}_{\text{Total effect}} = \underbrace{\frac{\partial x^h}{\partial p_x}}_{\text{Substitution effect (SE)}} - \underbrace{x \cdot \frac{\partial x}{\partial I}}_{\text{Income effect (IE)}}$$
+
+**Substitution effect:**
+
+- Always negative (or zero)
+- Pure effect of relative price change
+- Movement along indifference curve
+
+**Income effect:** 
+
+- Sign depends on whether good is normal or inferior
+- Effect of change in real purchasing power
+- Movement to different indifference curve
+
+---
+
+## Three Cases
+
+$$\underbrace{\frac{\partial x}{\partial p_x}}_{TE} = \underbrace{\frac{\partial x^h}{\partial p_x}}_{SE \leq 0} - \underbrace{x \cdot \frac{\partial x}{\partial I}}_{IE}$$
+
+### 1. Normal Good 
+- $\partial x/\partial I > 0$ (buy more as income rises)
+- TE: Strongly negative
+
+### 2. Inferior Good 
+- $\partial x/\partial I < 0$ (buy less as income rises)
+- |IE| < |SE| → TE: Negative (but smaller than normal good)
+
+---
+
+## Three Cases (Contd.)
+
+$$\underbrace{\frac{\partial x}{\partial p_x}}_{TE} = \underbrace{\frac{\partial x^h}{\partial p_x}}_{SE \leq 0} - \underbrace{x \cdot \frac{\partial x}{\partial I}}_{IE}$$
+
+
+### 3. Giffen Good 
+- $\partial x/\partial I < 0$ (inferior good)
+- |IE| > |SE| → TE: *Positive* (buy less when price falls)
+
+---
+
+##  Demand Elasticities
+
+**Own-price elasticity (Marshallian):**
+$$\varepsilon_{x,p_x} = \frac{\partial x}{\partial p_x} \cdot \frac{p_x}{x}$$
+
+**Income elasticity:**
+$$\varepsilon_{x,I} = \frac{\partial x}{\partial I} \cdot \frac{I}{x}$$
+
+**Cross-price elasticity:**
+$$\varepsilon_{x,p_y} = \frac{\partial x}{\partial p_y} \cdot \frac{p_y}{x}$$
+
+---
+
+## Compensated Elasticities
+
+**Compensated own-price elasticity:**
+$$\varepsilon_{x,p_x}^c = \frac{\partial x^h}{\partial p_x} \cdot \frac{p_x}{x^h}$$
+
+**Compensated cross-price elasticity:**
+$$\varepsilon_{x,p_y}^c = \frac{\partial x^h}{\partial p_y} \cdot \frac{p_y}{x^h}$$
+
+::: {.fragment}
+**Key properties:**
+
+- $\varepsilon_{x,p_x}^c \leq 0$ always (substitution effect)
+- $\varepsilon_{x,p_x}^c$ is less negative than $\varepsilon_{x,p_x}$ for normal goods
+- Compensated elasticities are symmetric: $\varepsilon_{x,p_y}^c \cdot s_x = \varepsilon_{y,p_x}^c \cdot s_y$
+:::
+---
+
+## The Slutsky Equation in Elasticities
+
+Dividing by $x$ and multiplying by $p_x$:
+
+$$\boxed{\varepsilon_{x,p_x} = \varepsilon_{x,p_x}^c - s_x \cdot \varepsilon_{x,I}}$$
+
+where:
+
+- $\varepsilon_{x,p_x}$ = Marshallian price elasticity
+- $\varepsilon_{x,p_x}^c$ = compensated price elasticity  
+- $s_x = \frac{p_x x}{I}$ = budget share of good x
+- $\varepsilon_{x,I}$ = income elasticity
+
+**Interpretation:** Total elasticity = substitution elasticity - budget share × income elasticity
+
+
+# Substitutes and Complements
+
+## Gross (Marshallian) Substitutes and Complements
+
+- Two goods $x$ and $y$ are **gross substitutes** if an increase in the price of $y$ leads to an increase in the demand for $x$:
+  $$\frac{\partial x}{\partial p_y} > 0$$
+- They are **gross complements** if an increase in the price of $y$ leads to a decrease in the demand for $x$:
+  $$\frac{\partial x}{\partial p_y} < 0$$
+
+---
+
+## Net (Hicksian) Substitutes and Complements
+
+- Two goods $x$ and $y$ are **net substitutes** if an increase in the price of $y$ leads to an increase in the compensated demand for $x$:
+  $$\frac{\partial x^h}{\partial p_y} > 0$$
+- They are **net complements** if an increase in the price of $y$ leads to a decrease in the compensated demand for $x$:
+  $$\frac{\partial x^h}{\partial p_y} < 0$$
+
+# Welfare
+
+## Measuring Welfare Changes
+
+**Question:** How much is a consumer hurt by a price increase?
+
+**Three approaches:**
+
+1. **Compensating Variation (CV):** Money needed to restore original utility after price change
+
+2. **Equivalent Variation (EV):** Money equivalent to price change (willingness to pay to avoid it)
+
+3. **Consumer Surplus (CS):** Area under demand curve
+
+All three approximate welfare changes, but differ in treatment of income effects.
+
+---
+
+## Compensating Variation
+
+**Definition:** Income needed to compensate for price increase to maintain original utility
+
+For price increase from $p_0$ to $p_1$:
+
+$$CV = E(p_1, p_y, U_0) - E(p_0, p_y, U_0)$$
+
+where $U_0$ is utility before the price change.
+
+::: {.fragment}
+**Graphically:** Area under Hicksian demand curve
+$$CV = \int_{p_0}^{p_1} x^h(p, p_y, U_0) \, dp$$
+:::
+
+---
+## Equivalent Variation
+**Definition:** Income change equivalent to price change in terms of utility
+
+For price increase from $p_0$ to $p_1$:
+$$EV = E(p_1, p_y, U_1) - E(p_0, p_y, U_1)$$
+
+where $U_1$ is utility after the price change.
+
+::: {.fragment}
+***Graphically:** Area under Hicksian demand curve
+$$EV = \int_{p_0}^{p_1} x^h(p, p_y, U_1) \, dp$$
+:::
+
+---
+
+## Consumer Surplus 
+**Definition:** Area under Marshallian demand curve between two prices
+$$CS = \int_{p_0}^{p_1} x(p, p_y, I) \, dp$$
+
+::: {.fragment}
+**Advantages:**
+
+- Easy to estimate from market data
+- Don't need to know utility function
+- Widely used in applied work
+
+**Disadvantages:**
+
+- Only an approximation (not exact welfare measure)
+- Mixes income and substitution effects
+- Can differ substantially from CV and EV for large changes
+:::
+
+---
+

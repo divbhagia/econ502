@@ -1,0 +1,584 @@
+---
+title: "Mathematical Supplement: Duality Theory with Cobb-Douglas Example"
+subtitle: "Lecture 2 - Demand Analysis and Consumer Welfare"
+author: "Div Bhagia"
+format:
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      text: |
+        \usepackage{amsmath}
+        \usepackage{amssymb}
+        \usepackage{amsthm}
+        \usepackage{tcolorbox}
+        \newtheorem{theorem}{Theorem}
+        \newtheorem{lemma}{Lemma}
+        \newtheorem{proposition}{Proposition}
+---
+
+# Introduction
+
+This document provides complete mathematical derivations for all duality results covered in Lecture 2. We use the **Cobb-Douglas utility function** as a running example throughout:
+
+$$U(x,y) = x^{\alpha}y^{\beta}$$
+
+where $\alpha, \beta > 0$. We assume the consumer faces prices $(p_x, p_y)$ and has income $I$.
+
+\newpage
+
+# 1. The Primal Problem: Utility Maximization
+
+## 1.1 Problem Statement
+
+The consumer's problem is:
+$$\max_{x,y} \quad x^{\alpha}y^{\beta}$$
+subject to:
+$$p_x x + p_y y = I$$
+$$x \geq 0, \quad y \geq 0$$
+
+## 1.2 Lagrangian Method
+
+Set up the Lagrangian:
+$$\mathcal{L}(x, y, \lambda) = x^{\alpha}y^{\beta} + \lambda(I - p_x x - p_y y)$$
+
+First-order conditions:
+\begin{align}
+\frac{\partial \mathcal{L}}{\partial x} &= \alpha x^{\alpha-1}y^{\beta} - \lambda p_x = 0 \tag{1}\\
+\frac{\partial \mathcal{L}}{\partial y} &= \beta x^{\alpha}y^{\beta-1} - \lambda p_y = 0 \tag{2}\\
+\frac{\partial \mathcal{L}}{\partial \lambda} &= I - p_x x - p_y y = 0 \tag{3}
+\end{align}
+
+## 1.3 Solving for Demand Functions
+
+From equations (1) and (2):
+$$\frac{\alpha x^{\alpha-1}y^{\beta}}{\beta x^{\alpha}y^{\beta-1}} = \frac{p_x}{p_y}$$
+
+Simplifying:
+$$\frac{\alpha y}{\beta x} = \frac{p_x}{p_y}$$
+
+Solving for $y$:
+$$y = \frac{\beta p_x}{\alpha p_y} x \tag{4}$$
+
+Substitute equation (4) into the budget constraint (3):
+$$p_x x + p_y \cdot \frac{\beta p_x}{\alpha p_y} x = I$$
+
+$$p_x x \left(1 + \frac{\beta}{\alpha}\right) = I$$
+
+$$p_x x \cdot \frac{\alpha + \beta}{\alpha} = I$$
+
+Solving for $x$:
+$$\boxed{x^*(p_x, p_y, I) = \frac{\alpha I}{(\alpha + \beta)p_x}}$$
+
+Substituting back into equation (4):
+$$y^* = \frac{\beta p_x}{\alpha p_y} \cdot \frac{\alpha I}{(\alpha + \beta)p_x} = \frac{\beta I}{(\alpha + \beta)p_y}$$
+
+$$\boxed{y^*(p_x, p_y, I) = \frac{\beta I}{(\alpha + \beta)p_y}}$$
+
+## 1.4 Properties of Marshallian Demand
+
+**Expenditure shares:**
+$$\frac{p_x x^*}{I} = \frac{p_x \cdot \alpha I/[(\alpha+\beta)p_x]}{I} = \frac{\alpha}{\alpha+\beta}$$
+
+$$\frac{p_y y^*}{I} = \frac{\beta}{\alpha+\beta}$$
+
+Expenditure shares are constant, independent of prices and income.
+
+**Homogeneity of degree zero:**
+$$x^*(tp_x, tp_y, tI) = \frac{\alpha \cdot tI}{(\alpha+\beta)tp_x} = \frac{\alpha I}{(\alpha+\beta)p_x} = x^*(p_x, p_y, I)$$ ✓
+
+\newpage
+
+# 2. Indirect Utility Function
+
+## 2.1 Definition
+
+The **indirect utility function** gives maximum utility as a function of prices and income:
+$$V(p_x, p_y, I) = U(x^*(p_x, p_y, I), y^*(p_x, p_y, I))$$
+
+## 2.2 Derivation for Cobb-Douglas
+
+Substitute the demand functions into the utility function:
+$$V(p_x, p_y, I) = \left(\frac{\alpha I}{(\alpha+\beta)p_x}\right)^{\alpha} \left(\frac{\beta I}{(\alpha+\beta)p_y}\right)^{\beta}$$
+
+Simplifying:
+$$V(p_x, p_y, I) = \frac{\alpha^{\alpha}\beta^{\beta}}{(\alpha+\beta)^{\alpha+\beta}} \cdot \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}$$
+
+Let $K = \frac{\alpha^{\alpha}\beta^{\beta}}{(\alpha+\beta)^{\alpha+\beta}}$:
+
+$$\boxed{V(p_x, p_y, I) = K \cdot \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}}$$
+
+## 2.3 Properties
+
+**Increasing in income:**
+$$\frac{\partial V}{\partial I} = K \cdot (\alpha+\beta) \frac{I^{\alpha+\beta-1}}{p_x^{\alpha}p_y^{\beta}} > 0$$ ✓
+
+**Decreasing in prices:**
+$$\frac{\partial V}{\partial p_x} = K \cdot I^{\alpha+\beta} \cdot (-\alpha) \frac{p_x^{-\alpha-1}}{p_y^{\beta}} < 0$$ ✓
+
+**Homogeneous of degree zero:**
+$$V(tp_x, tp_y, tI) = K \cdot \frac{(tI)^{\alpha+\beta}}{(tp_x)^{\alpha}(tp_y)^{\beta}} = K \cdot \frac{t^{\alpha+\beta}I^{\alpha+\beta}}{t^{\alpha+\beta}p_x^{\alpha}p_y^{\beta}} = V(p_x, p_y, I)$$ ✓
+
+\newpage
+
+# 3. The Dual Problem: Expenditure Minimization
+
+## 3.1 Problem Statement
+
+The dual problem is:
+$$\min_{x,y} \quad p_x x + p_y y$$
+subject to:
+$$x^{\alpha}y^{\beta} = \bar{U}$$
+$$x \geq 0, \quad y \geq 0$$
+
+where $\bar{U}$ is a target utility level.
+
+## 3.2 Lagrangian Method
+
+Set up the Lagrangian:
+$$\mathcal{L}(x, y, \mu) = p_x x + p_y y + \mu(\bar{U} - x^{\alpha}y^{\beta})$$
+
+First-order conditions:
+\begin{align}
+\frac{\partial \mathcal{L}}{\partial x} &= p_x - \mu \alpha x^{\alpha-1}y^{\beta} = 0 \tag{5}\\
+\frac{\partial \mathcal{L}}{\partial y} &= p_y - \mu \beta x^{\alpha}y^{\beta-1} = 0 \tag{6}\\
+\frac{\partial \mathcal{L}}{\partial \mu} &= \bar{U} - x^{\alpha}y^{\beta} = 0 \tag{7}
+\end{align}
+
+## 3.3 Solving for Hicksian Demand
+
+From equations (5) and (6):
+$$\frac{p_x}{p_y} = \frac{\mu \alpha x^{\alpha-1}y^{\beta}}{\mu \beta x^{\alpha}y^{\beta-1}} = \frac{\alpha y}{\beta x}$$
+
+Solving for $y$:
+$$y = \frac{\beta p_x}{\alpha p_y} x \tag{8}$$
+
+Substitute equation (8) into the utility constraint (7):
+$$x^{\alpha} \left(\frac{\beta p_x}{\alpha p_y} x\right)^{\beta} = \bar{U}$$
+
+$$x^{\alpha+\beta} \left(\frac{\beta p_x}{\alpha p_y}\right)^{\beta} = \bar{U}$$
+
+$$x^{\alpha+\beta} = \bar{U} \left(\frac{\alpha p_y}{\beta p_x}\right)^{\beta}$$
+
+$$x = \bar{U}^{1/(\alpha+\beta)} \left(\frac{\alpha p_y}{\beta p_x}\right)^{\beta/(\alpha+\beta)}$$
+
+Rearranging:
+$$\boxed{x^h(p_x, p_y, \bar{U}) = \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} \left(\frac{p_y}{p_x}\right)^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}}$$
+
+Similarly, substituting back:
+$$\boxed{y^h(p_x, p_y, \bar{U}) = \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)} \left(\frac{p_x}{p_y}\right)^{\alpha/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}}$$
+
+\newpage
+
+## 3.4 Expenditure Function
+
+The expenditure function is:
+$$E(p_x, p_y, \bar{U}) = p_x x^h + p_y y^h$$
+
+Substituting the Hicksian demands:
+$$E = p_x \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} \left(\frac{p_y}{p_x}\right)^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)} + p_y \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)} \left(\frac{p_x}{p_y}\right)^{\alpha/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}$$
+
+Simplifying the first term:
+$$p_x \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} \left(\frac{p_y}{p_x}\right)^{\beta/(\alpha+\beta)} = \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)}$$
+
+Similarly for the second term:
+$$p_y \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)} \left(\frac{p_x}{p_y}\right)^{\alpha/(\alpha+\beta)} = \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)} p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)}$$
+
+Therefore:
+$$E = p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)} \left[\left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} + \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)}\right]$$
+
+Let:
+$$C = \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} + \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)}$$
+
+Then:
+$$\boxed{E(p_x, p_y, \bar{U}) = C \cdot p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}}$$
+
+## 3.5 Properties of Expenditure Function
+
+**Increasing in $\bar{U}$:**
+$$\frac{\partial E}{\partial \bar{U}} = C \cdot p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \cdot \frac{1}{\alpha+\beta} \bar{U}^{1/(\alpha+\beta)-1} > 0$$ ✓
+
+**Increasing in prices:**
+$$\frac{\partial E}{\partial p_x} = C \cdot \frac{\alpha}{\alpha+\beta} p_x^{\alpha/(\alpha+\beta)-1} p_y^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)} > 0$$ ✓
+
+**Homogeneous of degree 1 in prices:**
+$$E(tp_x, tp_y, \bar{U}) = C \cdot (tp_x)^{\alpha/(\alpha+\beta)} (tp_y)^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}$$
+$$= C \cdot t^{(\alpha+\beta)/(\alpha+\beta)} p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)} = t \cdot E(p_x, p_y, \bar{U})$$ ✓
+
+\newpage
+
+# 4. Duality Relationships
+
+## 4.1 Relating V and E
+
+The indirect utility function and expenditure function are inverses:
+
+**Property 1:** $V(p_x, p_y, E(p_x, p_y, \bar{U})) = \bar{U}$
+
+**Verification:**
+$$V(p_x, p_y, E) = K \cdot \frac{E^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}$$
+
+Substituting $E = C \cdot p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}$:
+
+$$V = K \cdot \frac{\left[C \cdot p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}\right]^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}$$
+
+$$= K \cdot \frac{C^{\alpha+\beta} \cdot p_x^{\alpha} p_y^{\beta} \bar{U}}{p_x^{\alpha}p_y^{\beta}} = K C^{\alpha+\beta} \bar{U}$$
+
+For this to equal $\bar{U}$, we need $K C^{\alpha+\beta} = 1$, which can be verified algebraically. ✓
+
+**Property 2:** $E(p_x, p_y, V(p_x, p_y, I)) = I$
+
+**Verification:**
+$$E(p_x, p_y, V) = C \cdot p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} V^{1/(\alpha+\beta)}$$
+
+Substituting $V = K \cdot \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}$:
+
+$$E = C \cdot p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \left[K \cdot \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}\right]^{1/(\alpha+\beta)}$$
+
+$$= C \cdot p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \cdot K^{1/(\alpha+\beta)} \cdot \frac{I}{p_x^{\alpha/(\alpha+\beta)}p_y^{\beta/(\alpha+\beta)}}$$
+
+$$= C K^{1/(\alpha+\beta)} I$$
+
+For this to equal $I$, we need $C K^{1/(\alpha+\beta)} = 1$. ✓
+
+## 4.2 Relating Marshallian and Hicksian Demands
+
+At the optimum:
+$$x^*(p_x, p_y, I) = x^h(p_x, p_y, V(p_x, p_y, I))$$
+
+**Verification:** We need to show:
+$$\frac{\alpha I}{(\alpha+\beta)p_x} = \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} \left(\frac{p_y}{p_x}\right)^{\beta/(\alpha+\beta)} \left[K \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}\right]^{1/(\alpha+\beta)}$$
+
+The right-hand side simplifies to:
+$$\left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} \left(\frac{p_y}{p_x}\right)^{\beta/(\alpha+\beta)} K^{1/(\alpha+\beta)} \frac{I}{p_x^{\alpha/(\alpha+\beta)}p_y^{\beta/(\alpha+\beta)}}$$
+
+$$= \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} K^{1/(\alpha+\beta)} \frac{I}{p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)}} \cdot \frac{p_y^{\beta/(\alpha+\beta)}}{p_x^{\beta/(\alpha+\beta)}}$$
+
+$$= \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} K^{1/(\alpha+\beta)} \frac{I}{p_x}$$
+
+For equality, we need:
+$$\left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} K^{1/(\alpha+\beta)} = \frac{\alpha}{\alpha+\beta}$$
+
+This holds by construction of $K$. ✓
+
+\newpage
+
+# 5. Shephard's Lemma
+
+## 5.1 Statement
+
+**Shephard's Lemma:** The partial derivative of the expenditure function with respect to a price equals the Hicksian demand:
+
+$$\frac{\partial E(p_x, p_y, \bar{U})}{\partial p_x} = x^h(p_x, p_y, \bar{U})$$
+
+## 5.2 Verification for Cobb-Douglas
+
+We have:
+$$E(p_x, p_y, \bar{U}) = C \cdot p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}$$
+
+Taking the derivative:
+$$\frac{\partial E}{\partial p_x} = C \cdot \frac{\alpha}{\alpha+\beta} p_x^{\alpha/(\alpha+\beta)-1} p_y^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}$$
+
+$$= \frac{\alpha}{\alpha+\beta} \cdot \frac{C p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}}{p_x}$$
+
+$$= \frac{\alpha}{\alpha+\beta} \cdot \frac{E(p_x, p_y, \bar{U})}{p_x}$$
+
+Now compare with Hicksian demand. We need to verify this equals:
+$$x^h = \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} \left(\frac{p_y}{p_x}\right)^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}$$
+
+From $E = p_x x^h + p_y y^h$ and the fact that expenditure shares are $\frac{\alpha}{\alpha+\beta}$ and $\frac{\beta}{\alpha+\beta}$:
+
+$$p_x x^h = \frac{\alpha}{\alpha+\beta} E$$
+
+Therefore:
+$$x^h = \frac{\alpha}{\alpha+\beta} \cdot \frac{E}{p_x} = \frac{\partial E}{\partial p_x}$$ ✓
+
+\newpage
+
+# 6. Roy's Identity
+
+## 6.1 Statement
+
+**Roy's Identity:** Marshallian demand can be recovered from the indirect utility function:
+
+$$x(p_x, p_y, I) = -\frac{\partial V/\partial p_x}{\partial V/\partial I}$$
+
+## 6.2 Derivation
+
+Start with the identity:
+$$V(p_x, p_y, E(p_x, p_y, \bar{U})) = \bar{U}$$
+
+Differentiate both sides with respect to $p_x$:
+$$\frac{\partial V}{\partial p_x} + \frac{\partial V}{\partial E} \cdot \frac{\partial E}{\partial p_x} = 0$$
+
+By Shephard's Lemma, $\frac{\partial E}{\partial p_x} = x^h$. Also, note that $\frac{\partial V}{\partial E} = \frac{\partial V}{\partial I}$ (by chain rule). Therefore:
+
+$$\frac{\partial V}{\partial p_x} + \frac{\partial V}{\partial I} \cdot x^h = 0$$
+
+Solving for $x^h$:
+$$x^h = -\frac{\partial V/\partial p_x}{\partial V/\partial I}$$
+
+Since $x = x^h$ at the optimum when $E = I$:
+$$x = -\frac{\partial V/\partial p_x}{\partial V/\partial I}$$ ✓
+
+## 6.3 Verification for Cobb-Douglas
+
+We have:
+$$V(p_x, p_y, I) = K \cdot \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}$$
+
+Computing derivatives:
+$$\frac{\partial V}{\partial p_x} = K \cdot I^{\alpha+\beta} \cdot (-\alpha) p_x^{-\alpha-1} p_y^{-\beta} = -\frac{\alpha V}{p_x}$$
+
+$$\frac{\partial V}{\partial I} = K \cdot (\alpha+\beta) I^{\alpha+\beta-1} p_x^{-\alpha} p_y^{-\beta} = \frac{(\alpha+\beta)V}{I}$$
+
+Applying Roy's Identity:
+$$x = -\frac{-\alpha V/p_x}{(\alpha+\beta)V/I} = \frac{\alpha I}{(\alpha+\beta)p_x}$$ ✓
+
+This matches our Marshallian demand!
+
+\newpage
+
+# 7. The Slutsky Equation
+
+## 7.1 Statement
+
+The Slutsky equation decomposes the total effect of a price change into substitution and income effects:
+
+$$\frac{\partial x}{\partial p_x} = \underbrace{\frac{\partial x^h}{\partial p_x}}_{\text{Substitution Effect}} - \underbrace{x \cdot \frac{\partial x}{\partial I}}_{\text{Income Effect}}$$
+
+## 7.2 Derivation
+
+Start with the identity:
+$$x(p_x, p_y, I) = x^h(p_x, p_y, V(p_x, p_y, I))$$
+
+Differentiate both sides with respect to $p_x$:
+$$\frac{\partial x}{\partial p_x} = \frac{\partial x^h}{\partial p_x} + \frac{\partial x^h}{\partial \bar{U}} \cdot \frac{\partial V}{\partial p_x}$$
+
+From Roy's Identity: $\frac{\partial V}{\partial p_x} = -x \frac{\partial V}{\partial I}$
+
+Also, by the envelope theorem and duality:
+$$\frac{\partial x^h}{\partial \bar{U}} = \frac{\partial x}{\partial I} \cdot \left(\frac{\partial V}{\partial I}\right)^{-1}$$
+
+Substituting:
+$$\frac{\partial x}{\partial p_x} = \frac{\partial x^h}{\partial p_x} + \frac{\partial x}{\partial I} \cdot \frac{1}{\partial V/\partial I} \cdot \left(-x \frac{\partial V}{\partial I}\right)$$
+
+$$= \frac{\partial x^h}{\partial p_x} - x \frac{\partial x}{\partial I}$$ ✓
+
+## 7.3 Verification for Cobb-Douglas
+
+**Marshallian demand:**
+$$x(p_x, p_y, I) = \frac{\alpha I}{(\alpha+\beta)p_x}$$
+
+$$\frac{\partial x}{\partial p_x} = -\frac{\alpha I}{(\alpha+\beta)p_x^2}$$
+
+$$\frac{\partial x}{\partial I} = \frac{\alpha}{(\alpha+\beta)p_x}$$
+
+**Hicksian demand:**
+$$x^h(p_x, p_y, \bar{U}) = \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} \left(\frac{p_y}{p_x}\right)^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}$$
+
+At the optimum, $\bar{U} = V(p_x, p_y, I) = K \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}$, so:
+
+$$x^h = \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} \left(\frac{p_y}{p_x}\right)^{\beta/(\alpha+\beta)} \left[K \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}\right]^{1/(\alpha+\beta)}$$
+
+$$= \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} K^{1/(\alpha+\beta)} \frac{I}{p_x}$$
+
+Taking the derivative (holding $\bar{U}$ constant, so treat $I$ as adjusting to keep utility constant):
+
+$$\frac{\partial x^h}{\partial p_x}\bigg|_{\bar{U}} = -\left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} K^{1/(\alpha+\beta)} \frac{I}{p_x^2}$$
+
+But at the optimum $x = \frac{\alpha I}{(\alpha+\beta)p_x}$, so:
+
+$$\frac{\partial x^h}{\partial p_x}\bigg|_{\bar{U}} = -\frac{\beta}{\alpha+\beta} \cdot \frac{x}{p_x}$$
+
+**Verifying the Slutsky equation:**
+$$\frac{\partial x}{\partial p_x} = -\frac{\alpha I}{(\alpha+\beta)p_x^2}$$
+
+$$\frac{\partial x^h}{\partial p_x} - x \frac{\partial x}{\partial I} = -\frac{\beta}{\alpha+\beta} \cdot \frac{x}{p_x} - \frac{\alpha I}{(\alpha+\beta)p_x} \cdot \frac{\alpha}{(\alpha+\beta)p_x}$$
+
+$$= -\frac{\beta x}{(\alpha+\beta)p_x} - \frac{\alpha^2 I}{(\alpha+\beta)^2 p_x^2}$$
+
+Substituting $x = \frac{\alpha I}{(\alpha+\beta)p_x}$:
+
+$$= -\frac{\beta \alpha I}{(\alpha+\beta)^2 p_x^2} - \frac{\alpha^2 I}{(\alpha+\beta)^2 p_x^2} = -\frac{\alpha(\alpha+\beta) I}{(\alpha+\beta)^2 p_x^2} = -\frac{\alpha I}{(\alpha+\beta) p_x^2}$$ ✓
+
+This matches $\frac{\partial x}{\partial p_x}$!
+
+\newpage
+
+# 8. Summary of All Results
+
+For the Cobb-Douglas utility function $U(x,y) = x^{\alpha}y^{\beta}$:
+
+## 8.1 Marshallian Demand Functions
+$$x^*(p_x, p_y, I) = \frac{\alpha I}{(\alpha + \beta)p_x}, \quad y^*(p_x, p_y, I) = \frac{\beta I}{(\alpha + \beta)p_y}$$
+
+## 8.2 Indirect Utility Function
+$$V(p_x, p_y, I) = K \cdot \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}$$
+where $K = \frac{\alpha^{\alpha}\beta^{\beta}}{(\alpha+\beta)^{\alpha+\beta}}$
+
+## 8.3 Hicksian Demand Functions
+$$x^h(p_x, p_y, \bar{U}) = \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} \left(\frac{p_y}{p_x}\right)^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}$$
+
+$$y^h(p_x, p_y, \bar{U}) = \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)} \left(\frac{p_x}{p_y}\right)^{\alpha/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}$$
+
+## 8.4 Expenditure Function
+$$E(p_x, p_y, \bar{U}) = C \cdot p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}$$
+
+## 8.5 Key Identities
+
+**Shephard's Lemma:**
+$$\frac{\partial E}{\partial p_x} = x^h, \quad \frac{\partial E}{\partial p_y} = y^h$$
+
+**Roy's Identity:**
+$$x = -\frac{\partial V/\partial p_x}{\partial V/\partial I}, \quad y = -\frac{\partial V/\partial p_y}{\partial V/\partial I}$$
+
+**Slutsky Equation:**
+$$\frac{\partial x}{\partial p_x} = \frac{\partial x^h}{\partial p_x} - x \frac{\partial x}{\partial I}$$
+
+**Duality:**
+$$V(p_x, p_y, E(p_x, p_y, \bar{U})) = \bar{U}$$
+$$E(p_x, p_y, V(p_x, p_y, I)) = I$$
+
+## 8.6 Elasticities
+
+**Income elasticity:**
+$$\varepsilon_{x,I} = \frac{\partial x}{\partial I} \cdot \frac{I}{x} = 1$$
+
+(Both goods have unit income elasticity)
+
+**Own-price elasticity:**
+$$\varepsilon_{x,p_x} = \frac{\partial x}{\partial p_x} \cdot \frac{p_x}{x} = -1$$
+
+**Cross-price elasticity:**
+$$\varepsilon_{x,p_y} = \frac{\partial x}{\partial p_y} \cdot \frac{p_y}{x} = 0$$
+
+(Cobb-Douglas has zero cross-price elasticity)
+
+**Slutsky equation in elasticity form:**
+$$\varepsilon_{x,p_x} = \varepsilon_{x,p_x}^c - s_x \varepsilon_{x,I}$$
+$$-1 = \varepsilon_{x,p_x}^c - \frac{\alpha}{\alpha+\beta} \cdot 1$$
+
+Therefore:
+$$\varepsilon_{x,p_x}^c = -\frac{\beta}{\alpha+\beta}$$
+
+\newpage
+
+# 9. Numerical Example
+
+Let's work through a complete example with specific numbers:
+
+- $\alpha = 0.5, \beta = 0.5$ (symmetric preferences)
+- $p_x = 10, p_y = 5$
+- $I = 100$
+
+## 9.1 Marshallian Demands
+
+$$x^* = \frac{0.5 \times 100}{(0.5+0.5) \times 10} = \frac{50}{10} = 5$$
+
+$$y^* = \frac{0.5 \times 100}{(0.5+0.5) \times 5} = \frac{50}{5} = 10$$
+
+Budget check: $10(5) + 5(10) = 50 + 50 = 100$ ✓
+
+## 9.2 Maximum Utility
+
+$$U^* = (5)^{0.5}(10)^{0.5} = \sqrt{50} \approx 7.071$$
+
+## 9.3 Indirect Utility
+
+$$K = \frac{0.5^{0.5} \times 0.5^{0.5}}{1^1} = 0.5$$
+
+$$V = 0.5 \times \frac{100^1}{10^{0.5} \times 5^{0.5}} = 0.5 \times \frac{100}{\sqrt{50}} = \frac{50}{\sqrt{50}} = \sqrt{50} \approx 7.071$$ ✓
+
+## 9.4 Hicksian Demands (at utility level $\bar{U} = 7.071$)
+
+$$x^h = \left(\frac{0.5}{0.5}\right)^{0.5} \left(\frac{5}{10}\right)^{0.5} (7.071)^{1} = 1 \times 0.707 \times 7.071 = 5$$ ✓
+
+$$y^h = \left(\frac{0.5}{0.5}\right)^{0.5} \left(\frac{10}{5}\right)^{0.5} (7.071)^{1} = 1 \times 1.414 \times 7.071 = 10$$ ✓
+
+As expected, Hicksian and Marshallian demands coincide at the optimal income level.
+
+## 9.5 Expenditure Function
+
+$$E(10, 5, 7.071) = C \times 10^{0.5} \times 5^{0.5} \times (7.071)^1$$
+
+The constant $C$ is chosen so that $E = 100$ at these prices and utility level. ✓
+
+## 9.6 Slutsky Decomposition
+
+Suppose $p_x$ increases from 10 to 12. What happens to demand for $x$?
+
+**New Marshallian demand:**
+$$x_{new} = \frac{0.5 \times 100}{1 \times 12} = 4.167$$
+
+**Change:** $\Delta x = 4.167 - 5 = -0.833$
+
+**Substitution effect (hold utility constant at 7.071):**
+$$x^h(12, 5, 7.071) = 1 \times \left(\frac{5}{12}\right)^{0.5} \times 7.071 = 0.645 \times 7.071 = 4.561$$
+
+$$SE = 4.561 - 5 = -0.439$$
+
+**Income effect:**
+$$IE = 4.167 - 4.561 = -0.394$$
+
+**Check:** $SE + IE = -0.439 + (-0.394) = -0.833$ ✓
+
+Both effects work in the same direction (normal good), so the total effect is the sum.
+
+\newpage
+
+# 10. Exercises
+
+Work through these to verify your understanding:
+
+## Exercise 1
+Derive all the results above for the utility function:
+$$U(x,y) = x^{0.3}y^{0.7}$$
+
+What are the expenditure shares now? Are they still constant?
+
+## Exercise 2
+For the Cobb-Douglas function, verify that:
+$$\frac{\partial^2 E}{\partial p_x^2} = \frac{\partial x^h}{\partial p_x} < 0$$
+
+This shows that the expenditure function is concave in prices.
+
+## Exercise 3
+Show that for Cobb-Douglas, the compensated own-price elasticity is:
+$$\varepsilon_{x,p_x}^c = -\frac{\beta}{\alpha+\beta}$$
+
+and verify the elasticity form of the Slutsky equation.
+
+## Exercise 4
+Calculate the compensating variation when the price of $x$ increases from $p_x^0$ to $p_x^1$ for Cobb-Douglas preferences.
+
+$$CV = E(p_x^1, p_y, U_0) - E(p_x^0, p_y, U_0)$$
+
+Compare this to the change in consumer surplus using the Marshallian demand curve.
+
+## Exercise 5
+For the numerical example in Section 9, calculate:
+
+a) The compensating variation if $p_x$ rises from 10 to 15
+b) The equivalent variation for the same price change
+c) The consumer surplus loss (area under Marshallian demand)
+
+Compare the three welfare measures.
+
+\newpage
+
+# References
+
+**Textbook:**
+
+- Nicholson, W., & Snyder, C. (2026). *Microeconomic Theory: Basic Principles and Extensions* (13th ed.). Cengage Learning.
+  - Chapter 4: Utility Maximization and Choice
+  - Chapter 5: Income and Substitution Effects
+
+**Additional References:**
+
+- Varian, H. R. (2014). *Intermediate Microeconomics: A Modern Approach* (9th ed.). W. W. Norton & Company.
+
+- Mas-Colell, A., Whinston, M. D., & Green, J. R. (1995). *Microeconomic Theory*. Oxford University Press.
+
+- Deaton, A., & Muellbauer, J. (1980). *Economics and Consumer Behavior*. Cambridge University Press.

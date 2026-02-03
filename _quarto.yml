@@ -30,6 +30,8 @@ website:
         contents:
           - text: "Lecture 1"
             file: content/lecture1.qmd
+          - text: "Lecture 2"
+            file: content/lecture2.qmd
   
   page-footer:
       2026 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) |Made with [Quarto](https://quarto.org/)
