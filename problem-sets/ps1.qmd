@@ -1,0 +1,65 @@
+---
+title: "Problem Set 1"
+subtitle: "Econ 502: Advanced Microeconomics"
+format: pdf
+---
+
+## Problem 1: Altruism (Textbook Exercise 4.14)
+
+Michele, who has a relatively high income $I$, has altruistic feelings toward Sofia, who lives in such poverty that she essentially has no income. Suppose Michele's preferences are represented by the utility function
+
+$$U_1(c_1, c_2) = c_1^{1-a}c_2^a,$$
+
+where $c_1$ and $c_2$ are Michele and Sofia's consumption levels, appearing as goods in a standard Cobb-Douglas utility function. Assume that Michele can spend her income either on her own or Sofia's consumption (through charitable donations) and that \$1 buys a unit of consumption for either (thus, the "prices" of consumption are $p_1 = p_2 = 1$).
+
+a. Argue that the exponent $a$ can be taken as a measure of the degree of Michele's altruism by providing an interpretation of extremes values $a = 0$ and $a = 1$. What value would make her a perfect altruist (regarding others the same as oneself)?
+
+b. Solve for Michele's optimal choices and demonstrate how they change with $a$.
+
+c. Solve for Michele's optimal choices under an income tax at rate $t$. How do her choices change if there is a charitable deduction (so income spent on charitable deductions is not taxed)? Does the charitable deduction have a bigger incentive effect on more or less altruistic people?
+
+## Problem 2: Elasticities and Logarithms (Textbook Exercise 5.8)
+
+Because natural logarithms measure proportional changes, they correspond well to elasticity concepts. Here you are asked to show a few of these connections.
+
+a. Show that $e_{x,p_x} = \dfrac{\partial \ln x}{\partial \ln p_x}$
+
+b. For the constant elasticity demand function $x = a(p_x)^m$ where $m < 0$, show that $e_{x,p_x} = m$.
+
+## Problem 3: Welfare Analysis of a Sugar-Sweetened Beverage Tax
+
+Cities like Philadelphia and Berkeley have implemented taxes on sugar-sweetened beverages (SSBs) to reduce consumption and improve public health. Consider a consumer with preferences over sugary drinks ($s$, measured in ounces per month) and a *composite* good ($x$) given by:
+
+$$U(s, x) = s^{0.3} x^{0.7}$$
+
+The consumer has income $I = \$300$ per month. Initially, the price of sugary drinks is $p_s = \$0.05$ per ounce and the price of the composite good is $p_x = \$1$.
+
+The city proposes a tax of $t = \$0.015$ per ounce on sugary drinks (similar to Philadelphia's 2017 tax), raising the consumer price to $p_s' = \$0.065$ per ounce.
+
+*Note*: Parts (a), (b), and (d) require the Marshallian demand functions, which you derive from utility maximization. On the other hand, part (c) requires the expenditure function/Hicksian demand, which you derive from expenditure minimization.
+
+a. Calculate the consumer's initial optimal consumption bundle $(s^*, x^*)$ and utility level $U_0$.
+
+b. Calculate the new optimal consumption bundle $(s^{**}, x^{**})$ after the tax is implemented.
+
+c. **Compensating Variation (CV)**: Calculate how much additional income the consumer would need after the tax to achieve the original utility level $U_0$. This represents the money-metric loss in welfare from the consumer's perspective. 
+
+d. **Consumer Surplus:** Using the demand function for sugary drinks, calculate the approximate loss in consumer surplus from the tax. Compare this to the CV. (If you don't know how to integrate, you can approximate the area using a trapezoid or rectangle method or use a scientific calculator.)
+
+f. **Tax Revenue and Deadweight Loss:** Calculate:
+   i. Total tax revenue collected: $R = t \cdot s^{**}$
+   ii. Deadweight loss: $DWL = CV - R$
+   
+   Interpret these results. Is the tax efficient if consuming sugary drinks creates a negative health externality of $e = \$0.01$ per ounce (in terms of future healthcare costs and lost productivity)?
+
+g. **Revenue Recycling:** Suppose instead of keeping the tax revenue, the government rebates it back to the consumer as a lump-sum transfer (equal to the tax revenue collected). 
+   i. What is the consumer's new budget constraint?
+   ii. What is their optimal consumption?
+   iii. What is their utility level?
+   iv. Compare this to parts (a) and (b). Is the consumer better or worse off than with no policy? Why?
+
+h. **Policy Discussion:** Discuss the following:
+   i. Which welfare measure (CV vs CS) is most appropriate for policy analysis? Why might they differ?
+   ii. Is the sugary drink tax regressive (hurts poor households more)? How would you empirically test this?
+   iii. Evidence from Philadelphia shows substantial cross-border shopping reduced the tax's effectiveness. How does this affect your welfare calculations? What does it suggest about optimal policy design?
+   iv. If consumers exhibit present bias (underweight future health costs), does this justify a higher or lower tax than your calculation in part (f) suggests? How would you modify the welfare analysis to account for behavioral biases?

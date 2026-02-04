@@ -41,11 +41,7 @@ preview:
 	sleep 4
 
 $(OUTPUT_DIR)/$(SLIDES_DIR)/%.pdf: $(OUTPUT_DIR)/$(SLIDES_DIR)/%.html
-	$(CHROME) --headless --disable-gpu \
-	--run-all-compositor-stages-before-draw \
-	--virtual-time-budget=15000 \
-	--print-to-pdf=$@ \
-	"http://localhost:$(PORT)/$(SLIDES_DIR)/$*.html?print-pdf"
+	decktape reveal "http://localhost:$(PORT)/$(SLIDES_DIR)/$*.html" $@
 
 stop:
 	pkill -f "quarto preview" || true

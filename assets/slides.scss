@@ -16,6 +16,19 @@ $code-color: #1a1a1a;
 
 /*-- scss:rules --*/
 
+/*-- scss:rules --*/
+
+// Section slide heading style
+.section-slide h1 {
+  font-family: Georgia, serif !important;
+  font-size: 1.75em !important;
+}
+
+// Hide slide number on section slides
+.reveal.no-slide-num .slide-number {
+  display: none !important;
+}
+
 // Improve readability
 .reveal {
   font-size: 32px;
@@ -28,7 +41,7 @@ $code-color: #1a1a1a;
   }
   
   h2 {
-    font-size: 1.65em;
+    font-size: 1.5em;
     font-weight: 600;
     margin-bottom: 0.4em;
   }
@@ -150,4 +163,11 @@ $code-color: #1a1a1a;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+// Hide section slides in print-pdf mode
+@media print {
+  .section-slide {
+    display: none !important;
+  }
 }

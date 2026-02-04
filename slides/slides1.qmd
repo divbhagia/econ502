@@ -5,6 +5,9 @@ author: "Div Bhagia"
 format:
   revealjs:
     theme: [default, ../assets/slides.scss]
+    embed-resources: true
+    filters:
+      - ../assets/section-slides.lua
 ---
 
 # Introduction 
@@ -376,9 +379,7 @@ As you consume more of good $X$ (moving right along an IC), the MRS decreases:
 
 **Economic intuition**: Scarcity increases value. The less you have of something, the more you value additional units.
 
----
-
-## Try It Yourself: Calculate MRS
+<!-- ## Try It Yourself: Calculate MRS
 
 **Exercise**: Consider the utility function $U(x,y) = x^{0.3}y^{0.7}$
 
@@ -389,7 +390,7 @@ As you consume more of good $X$ (moving right along an IC), the MRS decreases:
 
 ::: {.fragment}
 **Hint**: $MU_x = \frac{\partial U}{\partial x}$, and remember $MRS = \frac{MU_x}{MU_y}$
-:::
+::: -->
 
 # Common Utility Functions 
 
@@ -800,7 +801,9 @@ $$MU_x = \lambda p_x \quad \text{and} \quad MU_y = \lambda p_y$$
 Dividing these:
 $$\frac{MU_x}{MU_y} = \frac{p_x}{p_y}$$
 
-This is exactly the tangency condition: **MRS = price ratio**!
+This is exactly the tangency condition: **MRS = price ratio**! <br>
+
+<br> Solving the system of equations given by the FOCs yields the optimal consumption bundle $(x^*, y^*)$ and the multiplier $\lambda^*$.
 
 ---
 
@@ -871,80 +874,20 @@ Which of the following goods do you think have roughly constant expenditure shar
 **How to model this? **
 :::
 
----
+# Application: Cash vs In-Kind Transfers
 
-## Homogeneity of Demand Functions
+## Food Stamps
 
-**Homogeneity of degree zero**: If all prices and income are multiplied by the same factor $t > 0$:
-$$x^*(tp_x, tp_y, tI) = x^*(p_x, p_y, I)$$
-
-**Interpretation**: Demand depends only on **relative prices**, not absolute price level.
-
-**Example**: If all prices and income double (inflation), consumption bundles don't change.
-
-::: {.fragment}
-**Why?** The budget constraint becomes:
-$$tp_x \cdot x + tp_y \cdot y = tI$$
-$$\Rightarrow p_x \cdot x + p_y \cdot y = I$$
-:::
-
----
-
-## Indirect Utility Function
-
-The **indirect utility function** $V(p_x, p_y, I)$ gives maximum achievable utility as a function of prices and income:
-
-$$V(p_x, p_y, I) = U(x^*(p_x, p_y, I), y^*(p_x, p_y, I))$$
-
-**Interpretation**: Maximum utility you can achieve given market conditions.
-
-**Properties**:
-
-1. Increasing in $I$: $\frac{\partial V}{\partial I} > 0$ (more money = higher utility)
-2. Decreasing in prices: $\frac{\partial V}{\partial p_x} < 0, \frac{\partial V}{\partial p_y} < 0$ (higher prices = lower utility)
-3. Homogeneous of degree zero: $V(tp_x, tp_y, tI) = V(p_x, p_y, I)$
-
----
-
-## Cobb-Douglas Indirect Utility
-
-For $U(x,y) = x^{\alpha}y^{\beta}$:
-
-Substituting $x^* = \frac{\alpha I}{(\alpha+\beta)p_x}$ and $y^* = \frac{\beta I}{(\alpha+\beta)p_y}$:
-
-$$V(p_x, p_y, I) = \left(\frac{\alpha I}{(\alpha+\beta)p_x}\right)^{\alpha} \left(\frac{\beta I}{(\alpha+\beta)p_y}\right)^{\beta}$$
-
-Simplifying:
-$$V(p_x, p_y, I) = \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}} \cdot \frac{\alpha^{\alpha}\beta^{\beta}}{(\alpha+\beta)^{\alpha+\beta}}$$
-
-**Note**: $V$ increases with $I$ and decreases with $p_x$ and $p_y$ ✓
-
-# Applications
-
-## Application: Gasoline Tax
-
-- Indirect utility as a tool for **welfare analysis** of price/income changes
-
-- **Example**: Government raises gas tax by $0.50/gallon. To compensate, gives everyone $200 cash transfer.
-  
-  - To answer if people are better or worse off, compare indirect utility before and after policy.
-    - Before: $$V(p_{\text{gas}}, p_{\text{other}}, I)$$
-    - After: $$V(p_{\text{gas}} + 0.50, p_{\text{other}}, I + 200)$$
-
----
-
-## Application: Cash vs Food Stamps
-
-**Policy question:** Give $200 cash or $200 food stamps?
+**Policy question:** Give $100 cash or $100 food stamps?
 
 **Setup:**
 
 - Two goods: food (x) and other goods (y)
 - Original income: I
 
-**With cash:** Budget is $(p_x, p_y, I + 200)$
+**With cash:** Budget is $(p_x, p_y, I + 100)$
 
-**With food stamps:** Can buy up to $200/p_x$ extra food, but must spend at least that on food
+**With food stamps:** Can buy up to $100/p_x$ extra food, but must spend at least that on food
 
 ---
 
@@ -958,32 +901,32 @@ fig, ax = plt.subplots(figsize=(8.5, 6.5))
 
 # Parameters
 I = 100
-transfer = 40
+transfer = 100
 px = 10
 py = 5
+orange = '#E69F00'
 
 # Original budget
 x_orig = np.linspace(0, I/px, 100)
 y_orig = (I - px*x_orig) / py
-ax.plot(x_orig, y_orig, 'gray', linewidth=2.5, linestyle='--', label='Original Budget', alpha=0.7)
-
-
-# In-kind transfer (food stamps): forces minimum x = transfer/px
-x_min = transfer / px  # Must buy at least 4 units of x
-# Kinked budget: vertical segment + remaining budget
-ax.plot([x_min, x_min], [0, I/py], 'red', linewidth=3)
-x_inkind = np.linspace(x_min, (I+transfer)/px, 100)
-y_inkind = (I - px*(x_inkind - x_min)) / py
-ax.plot(x_inkind, y_inkind, 'red', linewidth=3, label=f'In-Kind Transfer (${transfer} vouchers for X)')
+ax.plot(x_orig, y_orig, 'gray', linewidth=2.5, linestyle='--', label=f'Original Budget: {px}x + {py}y = {I}', alpha=0.7)
 
 # Cash transfer budget
 x_cash = np.linspace(0, (I+transfer)/px, 100)
 y_cash = (I + transfer - px*x_cash) / py
-ax.plot(x_cash, y_cash, 'black', linewidth=3, label=f'Cash Transfer (${transfer})', linestyle='--')
+ax.plot(x_cash, y_cash, 'black', linewidth=3, label=f'Cash Transfer (${transfer})')
+
+# In-kind transfer (food stamps): forces minimum x = transfer/px
+x_min = transfer / px  # Must buy at least 4 units of x
+# Kinked budget: vertical segment + remaining budget
+x_inkind = np.linspace(x_min, (I+transfer)/px, 100)
+y_inkind = (I - px*(x_inkind - x_min)) / py
+ax.plot(x_inkind, y_inkind, 'red', linewidth=10, label=f'In-Kind Transfer (${transfer} vouchers for X)', alpha=0.35)
 
 # Optimal with cash (assume Cobb-Douglas α=0.5)
-x_cash_opt = 0.5 * (I + transfer) / px
-y_cash_opt = 0.5 * (I + transfer) / py
+alpha = 0.3
+x_cash_opt = alpha * (I + transfer) / px
+y_cash_opt = (1-alpha) * (I + transfer) / py
 ax.plot(x_cash_opt, y_cash_opt, 'ko', markersize=10, label='Optimal with Cash', zorder=5)
 
 # With in-kind: if x_min < x_cash_opt, then not binding, achieve same point
@@ -995,32 +938,33 @@ y_inkind_opt = I / py
 ax.plot(x_inkind_opt, y_inkind_opt, 'ro', markersize=10, label='Optimal with In-Kind', zorder=5)
 
 # Indifference curves
-x_ic = np.linspace(0.5, 16, 300)
+x_ic = np.linspace(0.5, 30, 300)
 
 # IC through cash optimum
-U_cash = x_cash_opt**0.5 * y_cash_opt**0.5
-y_ic_cash = (U_cash**2) / x_ic
+U_cash = x_cash_opt**alpha* y_cash_opt**(1-alpha)
+y_ic_cash = (U_cash / x_ic**alpha)**(1/(1-alpha))
 ax.plot(x_ic, y_ic_cash, 'black', linewidth=2.5, linestyle='-')
 
 # IC through in-kind optimum
-U_inkind = x_inkind_opt**0.5 * y_inkind_opt**0.5
-y_ic_inkind = (U_inkind**2) / x_ic
+U_inkind = x_inkind_opt**alpha* y_inkind_opt**(1-alpha)
+y_ic_inkind = (U_inkind / x_ic**alpha) **(1/(1-alpha))
 ax.plot(x_ic, y_ic_inkind, 'r', linewidth=2.5)
 
 # Mark the kink
 # ax.plot(x_min, I/py, 'rs', markersize=10, zorder=5)
 ax.axvline(x=x_min, color='red', linestyle=':', alpha=0.5, linewidth=2)
-ax.text(x_min-0.3, 2, f'Must buy\n≥{x_min:.0f} units', fontsize=10, color='red', 
-        ha='right', fontweight='bold')
+ax.text(x_min-0.3, 12, f'Must buy\n≥{x_min:.0f} units', fontsize=10, color='red', ha='right', fontweight='bold')
 
 ax.set_xlabel('Good X (e.g., Food)', fontsize=14)
 ax.set_ylabel('Good Y (Other Goods)', fontsize=14)
-ax.set_xlim(0, 16)
-ax.set_ylim(0, 30)
+ax.set_xlim(0, 22)
+ax.set_ylim(0, 42)
 ax.grid(True, alpha=0.3)
 ax.legend(fontsize=16, loc='upper right')
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
+
+# add title to plot
 
 plt.tight_layout()
 plt.show()
@@ -1054,5 +998,5 @@ plt.show()
 2. **Indifference curves**: Properties, MRS 
 3. **Common utility functions**: Perfect substitutes, perfect complements, Cobb-Douglas, CES
 4. **Utility maximization**: Tangency condition (MRS = $p_x/p_y$), Lagrange method, Indirect utility
-5. **Applications**: Taxes, cash vs in-kind transfers
+5. **Application**: Cash vs in-kind transfers
 

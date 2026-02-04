@@ -5,9 +5,12 @@ author: "Div Bhagia"
 format:
   revealjs:
     theme: [default, ../assets/slides.scss]
+    embed-resources: true
+    filters:
+      - ../assets/section-slides.lua
 ---
 
-# From the Last Class
+# Utility Maximization (contd.)
 
 ## Utility Maximization
 
@@ -586,14 +589,13 @@ $$EV = \int_{p_0}^{p_1} x^h(p, p_y, U_1) \, dp$$
 
 ---
 
-## Consumer Surplus 
+## (Change in) Consumer Surplus 
 **Definition:** Area under Marshallian demand curve between two prices
-$$CS = \int_{p_0}^{p_1} x(p, p_y, I) \, dp$$
+$$ \Delta CS = \int_{p_0}^{p_1} x(p, p_y, I) \, dp$$
 
 ::: {.fragment}
 - **Advantage:** Easy to estimate from market data
 - **Disadvantage:** Only an approximation of welfare change
 :::
 
----
 

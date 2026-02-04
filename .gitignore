@@ -37,3 +37,5 @@ references/
 
 # remove pdf for now as it's creating an issue
 /.quarto/
+
+/.luarc.json

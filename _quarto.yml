@@ -18,6 +18,8 @@ website:
         file: syllabus.qmd
       - text: "Content"
         file: content/lecture1.qmd
+      - text: "Problem Sets"
+        file: problem-sets.qmd
       - icon: github
         href: https://divbhagia.github.io/econ502/
 
@@ -32,6 +34,9 @@ website:
             file: content/lecture1.qmd
           - text: "Lecture 2"
             file: content/lecture2.qmd
+          - text: "Additional Handouts"
+            file: content/part1-add-handouts.qmd
+    
   
   page-footer:
       2026 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) |Made with [Quarto](https://quarto.org/)
