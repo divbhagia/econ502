@@ -1,0 +1,604 @@
+---
+title: "Production, Costs, and<br> Firm Supply"
+subtitle: "Lecture 3"
+author: "Div Bhagia"
+format:
+  revealjs:
+    theme: [default, ../assets/slides.scss]
+    embed-resources: true
+    filters:
+      - ../assets/section-slides.lua
+---
+
+# Production Functions
+
+## The Firm's Production Function 
+
+A firm turns inputs into outputs. The **production function** summarizes this:
+
+$$Q = f(K, L)$$
+
+- $Q$: output per period
+- $K$: capital (machine-hours)
+- $L$: labor (labor-hours)
+
+Shows the *maximum* output from each input combination (efficient production).
+
+---
+
+## Marginal Productivity
+
+The **marginal product** of an input is the additional output from one more unit of that input, holding other inputs constant:
+
+$$MP_L = \frac{\partial f}{\partial L} = f_l, \qquad MP_K = \frac{\partial f}{\partial K} = f_k$$
+
+::: {.fragment}
+**Diminishing marginal productivity:** We assume that marginal products eventually decrease
+
+$$\frac{\partial^2 f}{\partial L^2} = f_{ll} < 0, \qquad \frac{\partial^2 f}{\partial K^2} = f_{kk} < 0$$
+
+Holding capital fixed, each additional worker adds less and less output.
+:::
+
+---
+
+## Average vs. Marginal Productivity
+
+**Average product of labor:**
+$$AP_l = \frac{Q}{L} = \frac{f(K,L)}{L}$$
+
+- What people usually mean by "labor productivity"
+- Depends on how much capital workers have
+
+::: {.fragment}
+**Important:** $AP_l$ depends on $K$ too. When we say "U.S. workers are more productive than Indian workers," much of that reflects more capital per worker, not inherently more productive labor.
+:::
+
+::: {.fragment}
+**Cross-productivity effects:** Typically $f_{kl} > 0$ — more capital makes labor more productive and vice versa.
+:::
+
+---
+
+## Isoquants and the RTS
+
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(7, 6))
+
+# Cobb-Douglas isoquants: Q = K^0.5 * L^0.5
+l_vals = np.linspace(0.3, 16, 300)
+
+for q_level, label in [(3, '$Q = 3$'), (4, '$Q = 4$'), (5, '$Q = 5$')]:
+    k_vals = (q_level**2) / l_vals
+    ax.plot(l_vals, k_vals, linewidth=2.5, label=label)
+
+# Show RTS at a point on Q=5
+l_pt = 3
+k_pt = (3**2) / l_pt
+slope = -k_pt / l_pt  # RTS for Cobb-Douglas with equal exponents
+l_tangent = np.linspace(1.5, 5.5, 100)
+k_tangent = k_pt + slope * (l_tangent - l_pt)
+ax.plot(l_tangent, k_tangent, 'k--', linewidth=1.5, alpha=0.7)
+ax.plot(l_pt, k_pt, 'ko', markersize=8)
+ax.annotate('Slope $= -RTS$', xy=(0.5, 1.5), fontsize=16, style='italic')
+ax.grid(alpha=0.3)
+ax.set_xlabel('Labor ($L$)', fontsize=14)
+ax.set_ylabel('Capital ($K$)', fontsize=14)
+ax.set_xlim(0, 12.5)
+ax.set_ylim(0, 12.5)
+ax.legend(fontsize=13, loc='upper right')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+plt.tight_layout()
+plt.show()
+```
+
+--- 
+
+## Analogy to Consumer Theory
+
+<br>
+
+| Consumer | Producer |
+|----------|----------|
+| Utility $U(x,y)$ | Output $f(K,L)$ |
+| Budget constraint | Cost constraint |
+| Indifference curves | Isoquants |
+| MRS | RTS |
+|
+
+---
+
+## Marginal Rate of Technical Substitution
+
+The **RTS** (rate of technical substitution) is the rate at which labor can substitute for capital, holding output constant:
+
+$$RTS = -\frac{dk}{dl}\bigg|_{Q = \bar{Q}} = \frac{MP_L}{MP_K} = \frac{f_l}{f_k}$$
+
+::: {.fragment}
+**Derivation:** Total differential along an isoquant ($dQ = 0$):
+$$dQ = f_l \, dl + f_k \, dk = 0 \implies \frac{dk}{dl} = -\frac{f_l}{f_k}$$
+:::
+
+::: {.fragment}
+**Diminishing RTS:** As we move along an isoquant (more $L$, less $K$), the RTS falls. This means isoquants are **convex** — same logic as diminishing MRS for consumers.
+:::
+
+---
+
+
+## Elasticity of Substitution
+
+Along an isoquant, RTS decreases as capital-labor ($K/L$) ratio decreases
+
+The **elasticity of substitution** $\sigma$ measures responsiveness of RTS to changes in $K/L$:
+  
+$$\sigma = \frac{\%\Delta(K/L)}{\%\Delta RTS} = \frac{d\ln(K/L)}{d\ln(RTS)}$$
+
+$\sigma$ captures how easily the firm can substitute between inputs. 
+
+- Higher $\sigma$: inputs are easily substitutable (flatter isoquants)
+- Lower $\sigma$: inputs are harder to substitute (more curved isoquants)
+
+
+## Key Production Functions 
+
+| Function | Formula | $\sigma$ | 
+|----------|---------|----------|
+| Linear | $Q = \alpha K + \beta L$ | $\infty$ | 
+| Leontief | $Q = \min(\alpha K, \beta L)$ | $0$ | 
+| Cobb-Douglas | $Q = K^\alpha L^\beta$ | $1$ | 
+| CES | $Q = (\alpha K^\rho + \beta L^\rho)^{\gamma/\rho}$ | $\frac{1}{1-\rho}$ | 
+|
+
+::: {.fragment}
+CES is appropriate for most applications because it nests the other three as special cases.
+:::
+
+---
+
+## CES Function: Alternative Formulation
+
+The CES function can also be written as:
+
+$$Q = \left[\alpha K^{\frac{\sigma - 1}{\sigma}} + \beta L^{\frac{\sigma - 1}{\sigma}}\right]^{\frac{\sigma}{\sigma - 1}}$$
+
+where $\sigma$ is the elasticity of substitution.
+
+**Applications**:
+
+- Robots vs. human labor: $\sigma$ estimates how easily firms can replace workers with automation
+- Energy inputs: $\sigma$ estimates substitutability between fossil fuels and renewables
+- International trade: $\sigma$ estimates substitutability between domestic and foreign goods in production
+
+## Returns to Scale
+
+How does output respond when *all* inputs scale proportionally?
+
+
+| Condition | Returns to Scale |
+|-----------|-----------------|
+| $f(tk, tl) = t \cdot f(K,L)$ | Constant (CRS) |
+| $f(tk, tl) < t \cdot f(K,L)$ | Decreasing (DRS) |
+| $f(tk, tl) > t \cdot f(K,L)$ | Increasing (IRS) |
+|
+
+::: {.fragment}
+**CRS** implies:
+
+- Production function is homogeneous of degree 1
+- Marginal products depend only on the *ratio* $K/L$, not on scale
+
+**Why this matters:** Returns to scale determine the shape of long-run cost curves and industry structure.
+:::
+
+# Cost Functions
+
+## Economic vs. Accounting Costs
+
+Economists and accountants think about costs differently:
+
+**Accounting costs:** Out-of-pocket expenses, historical prices, depreciation
+
+**Economic costs:** Opportunity costs i.e. the payment required to keep an input in its present use
+
+::: {.fragment}
+**Key differences:**
+
+- **Labor:** Both agree it is wages $w$ per labor-hour.
+- **Capital:** Accountant uses historical price + depreciation. Economist uses *rental rate* $r$.
+- **Entrepreneurial services:** Accountant counts as profit. Economist recognizes the opportunity cost of the owner's time and funds.
+
+Total economic cost: $\quad C = rK + wL$
+:::
+
+
+---
+
+## The Cost-Minimization Problem
+
+$$\min_{K,L} \; rK + wL \quad \text{s.t.} \quad f(K,L) = q_0$$
+
+::: {.fragment}
+**Lagrangian:**
+$$\mathcal{L} = rK + wL + \lambda[q_0 - f(K,L)]$$
+
+**First-order conditions:**
+$$r = \lambda f_k, \qquad w = \lambda f_l, \qquad f(K,L) = q_0$$ 
+:::
+
+::: {.fragment}
+Dividing the first two:
+$$\frac{f_l}{f_k} = \frac{w}{r} \qquad \Longrightarrow \qquad RTS = \frac{w}{r}$$
+:::
+
+
+---
+
+## Cost Minimization: Graphically
+
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(8, 5.5))
+
+# Parameters
+w, r = 1, 2
+q0 = 5  # Cobb-Douglas Q = K^0.5 * L^0.5
+
+# Isoquant
+l_vals = np.linspace(0.3, 20, 300)
+k_iso = (q0**2) / l_vals
+
+# Cost-minimizing point: RTS = w/r => K/L = w/r => K = (w/r)*L
+# Combined with q0 = K^0.5 * L^0.5:
+l_star = q0 * np.sqrt(r/w)
+k_star = q0 * np.sqrt(w/r)
+C_star = r * k_star + w * l_star
+
+# Isocost lines
+for C_val, style, alpha_val in [(C_star * 0.7, '--', 0.4), (C_star, '-', 1.0), (C_star * 1.4, '--', 0.4)]:
+    l_iso = np.linspace(0, C_val/w, 100)
+    k_iso_line = (C_val - w * l_iso) / r
+    ax.plot(l_iso, k_iso_line, 'gray', linewidth=1.5, linestyle=style, alpha=alpha_val)
+
+ax.plot(l_vals, k_iso, linewidth=2.5, color='#1e5288')
+ax.plot(l_star, k_star, 'ko', markersize=10, zorder=5)
+ax.annotate(f'$RTS= w/r$', xy=(l_star, k_star), 
+            xytext=(l_star + 1.5, k_star + 2.5), fontsize=16,
+            arrowprops=dict(arrowstyle='->', color='black', lw=1.5))
+ax.grid(alpha=0.3)
+ax.set_xlabel('Labor ($L$)', fontsize=14)
+ax.set_ylabel('Capital ($K$)', fontsize=14)
+ax.set_xlim(0, 20.5)
+ax.set_ylim(0, 12)
+ax.legend(fontsize=13)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+plt.tight_layout()
+plt.show()
+```
+
+The optimal point is where the isoquant is tangent to the lowest isocost line.
+
+---
+
+## Interpreting the Lagrange Multiplier
+
+From the first-order conditions:
+
+$$\frac{f_l}{w} = \frac{f_k}{r} = \frac{1}{\lambda}$$
+
+**Interpretation of $\lambda$:**
+
+- Marginal cost of output: $\lambda = \frac{\partial C}{\partial q_0}$
+- The extra cost of producing one more unit
+- Equal marginal productivity per dollar across all inputs
+
+---
+
+## Cost Function
+
+The cost function $C(r, w, Q)$ gives the minimum cost of producing $Q$ units given input prices:
+
+$$C(r, w, Q) = rK^*(r,w,Q) + wL^*(r,w,Q)$$
+
+where $K^*$ and $L^*$ are the cost-minimizing input choices from the previous problem.
+
+---
+
+
+## Average and Marginal Cost
+
+**Average cost:** $\quad AC = \frac{C(Q)}{Q}$
+
+**Marginal cost:** $\quad MC = \frac{\partial C}{\partial Q}$
+
+::: {.fragment}
+**Key relationships:**
+
+- When $MC < AC$: average cost is falling
+- When $MC > AC$: average cost is rising
+- When $MC = AC$: average cost is at its minimum
+
+**Intuition:** Same as batting average, if your latest at-bat (marginal) is above your average, it pulls the average up.
+:::
+
+---
+
+## Example: Cost Function for Cobb-Douglas
+
+For Cobb-Douglas $Q = K^{0.5} L^{0.5}$, the cost-minimizing inputs are:
+
+$$K^* = \frac{Q}{\sqrt{w/r}}, \qquad L^* = Q \sqrt{w/r}$$
+
+Plugging into the cost function:
+$$C(r, w, Q) = rK^* + wL^* = r \cdot \frac{Q}{\sqrt{w/r}} + w \cdot Q \sqrt{w/r} = 2Q\sqrt{rw}$$
+
+Average and marginal cost:
+
+$$AC = \frac{C}{Q} = 2\sqrt{rw}, \qquad MC = \frac{\partial C}{\partial Q} = 2\sqrt{rw}$$
+
+$AC=MC$ and both are constant in $Q$ always for CRS.
+
+---
+
+## Short-Run vs. Long-Run Costs
+
+**Long run:** All inputs are variable. The firm chooses the cost-minimizing $(K, L)$.
+
+**Short run:** Capital is fixed at $\bar{K}$. The firm can only adjust labor.
+
+$$SC(\bar{K}, w, Q) = r\bar{K} + wL(Q, \bar{K})$$
+
+::: {.fragment}
+- **Fixed costs ($r\bar{K}$):** incurred regardless of output
+- **Variable costs ($wL$):** vary with output level
+
+**Key result:** Short-run costs $\geq$ long-run costs, with equality only at the output level for which $\bar{K}$ is optimal.
+
+$$SC(Q) \geq C(Q), \qquad SC(q) = C(q) \text{ where } \bar{K} = K^*(q)$$
+:::
+
+---
+
+## Cobb-Douglas: Short-Run Costs
+
+$$\min_L r\bar{K} + wL \quad \text{s.t.} \quad Q = \bar{K}^{0.5} L^{0.5}$$
+
+In the short-run: $L^* = Q^2/\bar{K}$, so the short-run cost function is:
+$$SC(\bar{K}, w, Q) = r\bar{K} + w \cdot \frac{Q^2}{\bar{K}}$$
+
+Short-run average, marginal, and average variable cost:
+
+$$SAC = \frac{SC}{Q} = \frac{r\bar{K}}{Q} + w \cdot \frac{Q}{\bar{K}}, \quad SMC = \frac{\partial SC}{\partial Q} = 2w \cdot \frac{Q}{\bar{K}}, \quad SAVC = w \cdot \frac{Q}{\bar{K}}$$
+
+SAC is U-shaped because of the fixed cost component.
+
+# Profit Maximization and Supply
+
+---
+
+## Profit Maximization
+
+The firm chooses output $Q$ to maximize **economic profit**:
+
+$$\pi = R(Q) - C(Q) = pQ - C(Q)$$
+
+where $R(Q)$ is total revenue and $C(Q)$ is total (economic) cost.
+
+::: {.fragment}
+**First-order condition:**
+$$\frac{d\pi}{dQ} = \frac{dR}{dQ} - \frac{dC}{dQ} = 0 \implies MR = MC$$
+
+**Second-order condition:**
+$$\frac{d^2\pi}{dQ^2} < 0 \implies \frac{dMR}{dQ} < \frac{dMC}{dQ}$$
+
+At the optimum, $MC$ must be rising faster than $MR$.
+:::
+
+
+---
+
+## Marginal Revenue
+
+**Marginal revenue** is the extra revenue from selling one more unit:
+
+$$MR = \frac{dR}{dQ} = \frac{d(p(Q)\cdot Q)}{dQ} = p + Q\cdot\frac{dp}{dQ}$$
+
+::: {.fragment}
+
+In terms of demand elasticity $e_{Q,p} = \frac{dQ}{dp} \cdot \frac{p}{Q}$, we can rewrite MR as:
+
+$$MR = p\left(1 - \frac{1}{|e_{Q,p}|}\right)$$
+
+For a **price-taking firm**, demand is infinitely elastic 
+
+$$|e_{Q,p}| \to \infty \implies MR \to p$$
+
+:::
+
+---
+
+## The Lerner Index
+
+From $MR = MC$ and the MR-elasticity relationship:
+
+$$p\left(1 - \frac{1}{|e_{Q,p}|}\right) = MC$$
+
+Rearranging:
+
+$$\frac{p - MC}{p} = \frac{1}{|e_{Q,p}|}$$
+
+This is the **Lerner index**, a measure of market power. It captures the percentage markup of price over marginal cost.
+
+---
+
+## Interpreting the Lerner Index
+
+$$LI = \frac{p - MC}{p} = \frac{1}{|e_{Q,p}|}$$
+
+Ranges from 0 (perfect competition) to 1.
+
+<br>
+
+::: {.fragment}
+**What determines market power?**
+
+- Firms facing very elastic demand ($|e_{Q,p}|$ large) can't mark up much as consumers are price-sensitive
+- Firms facing inelastic demand ($|e_{Q,p}|$ small) can charge a large markup
+:::
+
+---
+
+## Short-Run Supply: Price-Taking Firm
+
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(8, 5.5))
+
+Q = np.linspace(0.5, 10, 200)
+
+# SMC = 0.3q^2 - 2q + 5
+smc = 0.3*Q**2 - 2*Q + 5
+# SAVC = 0.1q^2 - Q + 5  
+savc = 0.1*Q**2 - Q + 5
+# SAC 
+sac = savc + 3/Q  # adding fixed cost/Q
+
+ax.plot(Q, smc, linewidth=2.5, color='#a23b72', label='$SMC$', linestyle='--')
+ax.plot(Q, savc, linewidth=2.5, color='#2e86ab', label='$SAVC$')
+ax.plot(Q, sac, linewidth=2.5, color='gray', linestyle='--', label='$SAC$')
+
+# Min SAVC (shutdown price)
+q_shut = 5  # min of SAVC at Q = -(-1)/(2*0.1) = 5
+p_shut = 0.1*25 - 5 + 5
+ax.axhline(y=p_shut, color='black', linewidth=1, linestyle=':', alpha=1)
+ax.annotate('Shutdown\nprice', xy=(q_shut, p_shut), xytext=(0.85, 2.25),
+            fontsize=10, ha='center')
+
+
+# Highlight supply curve (SMC above SAVC)
+mask = smc >= savc
+ax.plot(Q[mask], smc[mask], linewidth=4, color='#a23b72', alpha=1.0, label='Supply curve')
+ax.plot([0, 0], [0, p_shut-0.1], linewidth=8, color='#a23b72', zorder=10)
+
+
+ax.set_xlabel('Output ($Q$)', fontsize=14)
+ax.set_ylabel('Price, Cost', fontsize=14)
+ax.set_title('Short-Run Supply Curve', fontsize=15, fontweight='bold')
+ax.set_ylim(0, 8)
+ax.set_xlim(0, 10)
+ax.legend(fontsize=12)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+
+---
+
+## The Supply Decision
+
+For a **price-taking firm** ($MR = P$), the profit-maximizing rule $MR = MC$ becomes 
+$$P = MC$$
+
+**Short-run supply curve:** The upward-sloping portion of $SMC$ above minimum $SAVC$.
+
+---
+
+## The Supply Decision (cont.)
+
+- If $P < \min(SAVC)$: produce nothing (shut down)
+  - Revenue doesn't even cover variable costs
+  - Losses are minimized by not producing (lose only fixed costs)
+- If $\min(SAVC) \leq P < \min(SAC)$: produce, but at a loss
+  - Revenue covers variable costs and some fixed costs
+  - Better than shutting down
+- If $P \geq \min(SAC)$: produce at a profit
+
+---
+
+## Producer Surplus
+
+**Producer surplus** measures the benefit to the firm from producing at the market price versus not producing at all.
+
+$$PS = \int_{P_s}^{P} Q(P') \, dP' $$
+
+
+Producer surplus is the area below the market price and above the supply curve. It's the surplus that producers earn above their minimum willingness to supply.
+
+# Input Demand
+
+---
+
+## Profit Maximization and Input Demand
+
+We can also think of the firm as choosing inputs directly:
+
+$$\max_{K,L} \; pf(K,L) - rK - wL$$
+
+::: {.fragment}
+**First-order conditions:**
+
+$$p \cdot MP_L = w \qquad \text{and} \qquad p \cdot MP_K = r$$
+
+Hire each input until its **marginal revenue product** equals its price.
+
+- $MRP_l = p \cdot MP_L$: extra revenue from one more unit of labor
+- If $MRP_l > w$: hire more labor (adds more revenue than cost)
+- If $MRP_l < w$: hire less labor
+:::
+
+
+---
+
+## Substitution and Output Effects
+
+What happens when the wage $w$ falls?
+
+**Two effects (parallel to consumer theory):**
+
+::: {.fragment}
+**1. Substitution effect** (holding output constant)
+
+- Lower $w$ makes labor relatively cheaper
+- Firm substitutes toward labor, away from capital
+- Always increases labor demand
+:::
+
+::: {.fragment}
+**2. Output effect** (adjusting output)
+
+- Lower $w$ reduces marginal cost
+- Firm produces more output
+- More output requires more of both inputs (typically)
+- Also increases labor demand
+:::
+
+---
+
+## Cross-Price Effects
+
+What about the effect of a wage decrease on *capital* demand?
+
+$$\frac{\partial K}{\partial w} = \; ?$$
+
+::: {.fragment}
+**Substitution effect:** $w$ falls → substitute *toward* labor, *away from* capital → less $K$
+
+**Output effect:** $w$ falls → lower costs → more output → more $K$ needed
+
+These work in *opposite* directions. The net effect is ambiguous.
+:::

@@ -34,8 +34,40 @@ website:
             file: content/lecture1.qmd
           - text: "Lecture 2"
             file: content/lecture2.qmd
+          - text: "Lecture 3"
+            file: content/lecture3.qmd
+          - text: "Lecture 4"
+            file: content/lecture4.qmd
+          - text: "Lecture 5"
+            file: content/lecture5.qmd
           - text: "Additional Handouts"
             file: content/part1-add-handouts.qmd
+      - section: "II. Market Power"
+        contents:
+          - text: "Lecture 6"
+            file: content/lecture6.qmd
+          - text: "Lecture 7"
+            file: content/lecture7.qmd
+          - text: "Lecture 8"
+            file: content/lecture8.qmd
+          - text: "Additional Handouts"
+            file: content/part2-add-handouts.qmd
+      - section: "III. Market Failures"
+        contents:
+          - text: "Lecture 9"
+            file: content/lecture9.qmd
+          - text: "Lecture 10"
+            file: content/lecture10.qmd
+          - text: "Additional Handouts"
+            file: content/part3-add-handouts.qmd
+      - section: "IV. Uncertainty and Strategy"
+        contents:
+          - text: "Lecture 11"
+            file: content/lecture11.qmd
+          - text: "Lecture 12"
+            file: content/lecture12.qmd
+          - text: "Additional Handouts"
+            file: content/part4-add-handouts.qmd
     
   
   page-footer:

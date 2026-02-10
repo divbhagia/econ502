@@ -6,8 +6,14 @@ format: html
 
 ## Topics 
 
+- Indirect utility function
+- Expenditure minimization and expenditure function
+- Marshallian and Hicksian demand
+- Slutsky equation
+- Measuring welfare: CV, EV, and consumer surplus
 
-**Textbook references**: 
+
+**Textbook references**: 4.4; 4.7; 5.1-5.8; 6.1-6.3 
 
 ## Slides 
 The slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.

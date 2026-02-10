@@ -1,0 +1,746 @@
+---
+title: "Welfare Analysis<br> and Efficiency"
+subtitle: "Lecture 5"
+author: "Div Bhagia"
+format:
+  revealjs:
+    theme: [default, ../assets/slides.scss]
+    embed-resources: true
+    filters:
+      - ../assets/section-slides.lua
+---
+
+# Recap from Last Time
+
+---
+
+## Quick Review: Competitive Market Equilibrium
+
+**Short-run equilibrium:**
+$$Q^D(P^*) = Q^S(P^*)$$
+
+**Long-run equilibrium:** Free entry → $P = MC = \min AC$, zero economic profits
+
+**Welfare result:** Competitive equilibrium maximizes $CS + PS$
+
+**Tax incidence:** The more inelastic side bears more of the tax
+
+**Today:** What happens when markets are interconnected?
+
+---
+
+## Why Move Beyond Partial Equilibrium?
+
+**Partial equilibrium** analyzes one market in isolation — useful but limited
+
+**Example:** A tax on gasoline
+
+- In the gas market: price rises, quantity falls, DWL
+- But what about the car market? The labor market for oil workers? The market for public transit?
+
+Changes in one market ripple through others. **General equilibrium** accounts for all these interconnections simultaneously.
+
+# General Equilibrium: Setup
+
+---
+
+## A Simple Economy
+
+**Two goods:** $x$ and $y$
+
+**Two inputs:** Labor ($L$) and Capital ($K$) — fixed total amounts $\bar{L}$ and $\bar{K}$
+
+**Firms:** Produce $x$ and $y$ using $L$ and $K$, maximize profits
+
+**Consumers:** All have identical preferences, maximize utility
+
+**All markets are perfectly competitive:** Everyone is a price-taker, law of one price holds, no transaction costs, perfect information
+
+---
+
+## The Edgeworth Box for Production
+
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 7
+#| fig-height: 5.5
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, ax = plt.subplots(figsize=(7, 5.5))
+
+# Draw box
+box_w, box_h = 10, 8
+ax.plot([0, box_w, box_w, 0, 0], [0, 0, box_h, box_h, 0], 'k-', linewidth=1.5)
+
+# Labels for origins
+ax.annotate('$O_x$', xy=(0, 0), xytext=(-0.6, -0.4), fontsize=14, fontweight='bold')
+ax.annotate('$O_y$', xy=(box_w, box_h), xytext=(box_w + 0.1, box_h + 0.1), fontsize=14, fontweight='bold')
+
+# Axis labels
+ax.annotate('Labor in $x$ production →', xy=(box_w/2, -0.8), fontsize=11, ha='center')
+ax.annotate('← Labor in $y$ production', xy=(box_w/2, box_h + 0.6), fontsize=11, ha='center')
+ax.annotate('Capital in\n$x$ production →', xy=(-1.5, box_h/2), fontsize=10, ha='center', rotation=90)
+ax.annotate('← Capital in\n$y$ production', xy=(box_w + 1.5, box_h/2), fontsize=10, ha='center', rotation=90)
+
+# Contract curve
+t = np.linspace(0, 1, 100)
+cc_x = box_w * t**0.8
+cc_y = box_h * t**1.2
+ax.plot(cc_x, cc_y, 'k-', linewidth=2.5, label='Contract curve')
+
+# Isoquants for x (from O_x)
+for level in [0.3, 0.5, 0.7]:
+    theta = np.linspace(0.1, np.pi/2 - 0.1, 50)
+    r = level * 5
+    ix = r * np.cos(theta)**0.6 * box_w/5
+    iy = r * np.sin(theta)**0.6 * box_h/5
+    ax.plot(ix, iy, 'b-', alpha=0.4, linewidth=1)
+
+# Isoquants for y (from O_y)
+for level in [0.3, 0.5, 0.7]:
+    theta = np.linspace(0.1, np.pi/2 - 0.1, 50)
+    r = level * 5
+    ix = box_w - r * np.cos(theta)**0.6 * box_w/5
+    iy = box_h - r * np.sin(theta)**0.6 * box_h/5
+    ax.plot(ix, iy, 'r-', alpha=0.4, linewidth=1)
+
+# Points on the contract curve
+for i, (tx, label) in enumerate(zip([0.3, 0.55, 0.8], ['$P_1$', '$P_2$', '$P_3$'])):
+    px = box_w * tx**0.8
+    py = box_h * tx**1.2
+    ax.plot(px, py, 'ko', markersize=6)
+    offset = [(0.3, -0.5), (0.3, 0.3), (-0.7, 0.3)]
+    ax.annotate(label, xy=(px, py), xytext=(px + offset[i][0], py + offset[i][1]), fontsize=12)
+
+# An inefficient point
+ax.plot(4, 2.5, 's', color='orange', markersize=8)
+ax.annotate('$A$ (inefficient)', xy=(4, 2.5), xytext=(4.5, 1.5), fontsize=11, color='orange',
+           arrowprops=dict(arrowstyle='->', color='orange'))
+
+ax.set_xlim(-2, box_w + 2)
+ax.set_ylim(-1.2, box_h + 1.2)
+ax.set_aspect('equal')
+ax.axis('off')
+ax.legend(fontsize=10, frameon=False, loc='lower right')
+
+plt.tight_layout()
+plt.show()
+```
+
+Every point in the box is a full allocation of $\bar{L}$ and $\bar{K}$ between producing $x$ and $y$. Efficient allocations lie on the **contract curve** where isoquants are tangent (RTS equal across industries).
+
+---
+
+## Efficiency in Production
+
+**Efficient allocation** requires:
+
+$$RTS_{x}(L \text{ for } K) = RTS_{y}(L \text{ for } K)$$
+
+If the rates of technical substitution aren't equal, we can reallocate inputs to produce more of both goods
+
+**At point A** in the previous figure: isoquants cross, so we can produce more $x$ without sacrificing $y$ (or vice versa) by moving to the contract curve
+
+---
+
+## Production Possibility Frontier
+
+The **contract curve** maps into the **production possibility frontier** (PPF):
+
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 7
+#| fig-height: 5
+
+fig, ax = plt.subplots(figsize=(7, 5))
+
+# PPF
+t = np.linspace(0, 1, 200)
+x_ppf = 10 * t
+y_ppf = 8 * np.sqrt(1 - t**2)
+
+ax.plot(x_ppf, y_ppf, 'k-', linewidth=2.5)
+
+# Points
+points = [(2, 8*np.sqrt(1 - 0.04)), (5, 8*np.sqrt(1 - 0.25)), (8, 8*np.sqrt(1 - 0.64))]
+labels = ['$P_1$', '$P_2$', '$P_3$']
+for (px, py), lab in zip(points, labels):
+    ax.plot(px, py, 'ko', markersize=6)
+    ax.annotate(lab, xy=(px, py), xytext=(px + 0.3, py + 0.2), fontsize=12)
+
+# Inefficient point
+ax.plot(4, 3, 's', color='orange', markersize=8)
+ax.annotate('$A$ (inefficient)', xy=(4, 3), xytext=(4.8, 2.2), fontsize=11, color='orange',
+           arrowprops=dict(arrowstyle='->', color='orange'))
+
+# Tangent line at P2
+slope = -5/8 * 0.5 / np.sqrt(1 - 0.25)  # approximate
+x_tan = np.linspace(3, 7, 50)
+y_tan = points[1][1] + slope * (x_tan - points[1][0])
+ax.plot(x_tan, y_tan, 'gray', linestyle='--', linewidth=1.5)
+ax.annotate('Slope = $-RPT$', xy=(6.5, y_tan[40] + 0.2), fontsize=11, color='gray')
+
+ax.set_xlabel('Quantity of $x$', fontsize=12)
+ax.set_ylabel('Quantity of $y$', fontsize=12)
+ax.set_xlim(0, 11)
+ax.set_ylim(0, 9)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+The PPF shows the maximum output of $y$ for each level of $x$ when inputs are efficiently allocated
+
+---
+
+## Rate of Product Transformation
+
+The **rate of product transformation (RPT)** is the negative of the slope of the PPF:
+
+$$RPT = -\frac{dy}{dx} = \frac{MC_x}{MC_y}$$
+
+**Interpretation:** The opportunity cost of producing one more unit of $x$ in terms of foregone $y$
+
+**The PPF is concave** (RPT increases) because:
+
+- Diminishing returns: as we shift inputs toward $x$, marginal productivity of inputs in $x$ falls
+- Factor intensity differences: goods use inputs in different proportions
+
+---
+
+## Deriving RPT = MC_x / MC_y
+
+Set up the constrained maximization: for given $\bar{x}$, maximize $y$ subject to resource constraints
+
+**Lagrangian:**
+$$\mathcal{L} = f_y(L_y, K_y) + \lambda_L(\bar{L} - L_x - L_y) + \lambda_K(\bar{K} - K_x - K_y) + \lambda_x(f_x(L_x, K_x) - \bar{x})$$
+
+**From the FOCs:** $\lambda_L / \lambda_K = RTS$ in both industries (efficiency condition)
+
+**By the envelope theorem:**
+$$\frac{dy^*}{d\bar{x}} = -\lambda_x = -\frac{\lambda_L}{MP_L^x} = -\frac{MC_x}{MC_y}$$
+
+# Equilibrium Prices
+
+---
+
+## Determination of General Equilibrium
+
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 7
+#| fig-height: 5.5
+
+fig, ax = plt.subplots(figsize=(7, 5.5))
+
+# PPF
+t = np.linspace(0, 1, 200)
+x_ppf = 10 * t
+y_ppf = 8 * np.sqrt(1 - t**2)
+ax.plot(x_ppf, y_ppf, 'k-', linewidth=2.5, label='PPF')
+
+# Equilibrium point
+xe, ye = 5.5, 8*np.sqrt(1 - 0.55**2)
+ax.plot(xe, ye, 'ko', markersize=8)
+ax.annotate('$E^*$', xy=(xe, ye), xytext=(xe + 0.3, ye + 0.3), fontsize=13, fontweight='bold')
+
+# Budget line / price line tangent to PPF at E*
+slope_e = -0.55 * 8 / (10 * np.sqrt(1 - 0.55**2))
+x_bl = np.linspace(1, 9.5, 50)
+y_bl = ye + slope_e * (x_bl - xe)
+ax.plot(x_bl, y_bl, 'gray', linestyle='--', linewidth=1.5)
+ax.annotate('slope $= -p_x^*/p_y^*$', xy=(8, y_bl[40] - 0.5), fontsize=11, color='gray')
+
+# Indifference curve tangent at E*
+theta_ic = np.linspace(0.2, 1.3, 100)
+ic_x = xe + 3.5*np.cos(theta_ic) - 1.5
+ic_y = ye + 2.5*np.sin(theta_ic) - 2.2
+ax.plot(ic_x, ic_y, 'r-', linewidth=1.5, alpha=0.7, label='$U^*$')
+
+# Non-equilibrium point
+x_ne = 3
+y_ne = 8*np.sqrt(1 - 0.3**2)
+ax.plot(x_ne, y_ne, 'o', color='gray', markersize=6)
+
+slope_ne = -0.3 * 8 / (10 * np.sqrt(1 - 0.3**2))
+x_bl2 = np.linspace(0.5, 8, 50)
+y_bl2 = y_ne + slope_ne * (x_bl2 - x_ne)
+ax.plot(x_bl2, y_bl2, color='lightgray', linestyle=':', linewidth=1.5)
+
+ax.set_xlabel('Quantity of $x$', fontsize=12)
+ax.set_ylabel('Quantity of $y$', fontsize=12)
+ax.set_xlim(0, 11)
+ax.set_ylim(0, 9)
+ax.legend(fontsize=10, frameon=False, loc='upper right')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+At equilibrium $E^*$: the price line is tangent to both the PPF and the highest attainable indifference curve. $RPT = p_x^*/p_y^* = MRS$.
+
+---
+
+## Three Conditions for General Equilibrium
+
+For the competitive equilibrium to hold simultaneously:
+
+**1. Profit maximization by firms:**
+$$RPT = \frac{MC_x}{MC_y} = \frac{p_x}{p_y}$$
+
+**2. Utility maximization by consumers:**
+$$MRS = \frac{p_x}{p_y}$$
+
+**3. Market clearing:** Supply = demand for all goods and inputs
+
+**Together these imply:** $RPT = MRS$ — the rate at which the economy *can* transform $x$ into $y$ equals the rate at which consumers are *willing* to trade $x$ for $y$
+
+---
+
+## Comparative Statics
+
+**Shift in preferences toward $x$:**
+
+- $p_x/p_y$ increases
+- Economy moves along the PPF: more $x$, less $y$ produced
+- Both income and substitution effects at work
+
+**Technical progress in $x$ production:**
+
+- PPF shifts outward (asymmetrically)
+- $p_x/p_y$ decreases
+- More $x$ consumed; effect on $y$ is ambiguous (income vs. substitution)
+
+---
+
+## Application: The Corn Laws Debate
+
+**Historical context:** Britain imposed high tariffs on grain after the Napoleonic wars (1815–1846)
+
+**Ricardo and the landlords:**
+
+- Tariffs kept grain prices high → more land devoted to grain
+- Landowners (capital-intensive grain production) benefited
+- Manufacturers wanted cheap grain so workers could accept lower wages
+
+**General equilibrium insight:** Trade policy changes affect *all* factor prices, not just the product market. Opening trade shifts production along the PPF, changing the demand for capital vs. labor.
+
+---
+
+## Application: Trade and Factor Prices
+
+The **Stolper-Samuelson theorem** generalizes the Corn Laws logic:
+
+- Opening trade increases the real return to the factor used intensively in the export sector
+- Decreases the real return to the factor used intensively in the import-competing sector
+
+**U.S. implications:**
+
+- U.S. exports tend to be skilled-labor intensive
+- Imports tend to be unskilled-labor intensive
+- Trade liberalization increases the skill premium
+
+This helps explain why unions of skilled workers tend to favor free trade while unions of unskilled workers tend to oppose it
+
+# Welfare Theorems
+
+---
+
+## Pareto Efficiency
+
+An allocation is **Pareto efficient** if there is no way to make someone better off without making someone else worse off
+
+**Three conditions for Pareto efficiency:**
+
+- **Exchange efficiency:** $MRS^A = MRS^B$ for all consumers $A$ and $B$
+- **Production efficiency:** $RTS_x = RTS_y$ for all inputs across industries
+- **Output efficiency:** $RPT = MRS$ for all consumers
+
+Competitive equilibrium satisfies all three!
+
+---
+
+## The Edgeworth Box for Exchange
+
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 7
+#| fig-height: 5.5
+
+fig, ax = plt.subplots(figsize=(7, 5.5))
+
+box_w, box_h = 10, 8
+ax.plot([0, box_w, box_w, 0, 0], [0, 0, box_h, box_h, 0], 'k-', linewidth=1.5)
+
+ax.annotate('$O^A$', xy=(0, 0), xytext=(-0.6, -0.4), fontsize=14, fontweight='bold')
+ax.annotate('$O^B$', xy=(box_w, box_h), xytext=(box_w + 0.1, box_h + 0.1), fontsize=14, fontweight='bold')
+
+ax.annotate("$A$'s $x$ →", xy=(box_w/2, -0.7), fontsize=11, ha='center')
+ax.annotate("← $B$'s $x$", xy=(box_w/2, box_h + 0.5), fontsize=11, ha='center')
+
+# Contract curve
+t = np.linspace(0, 1, 100)
+cc_x = box_w * t
+cc_y = box_h * (t**0.7)
+ax.plot(cc_x, cc_y, 'k-', linewidth=2.5, label='Contract curve\n(Pareto efficient)')
+
+# Endowment point
+ex, ey = 3, 5
+ax.plot(ex, ey, 's', color='orange', markersize=10)
+ax.annotate('$E$ (endowment)', xy=(ex, ey), xytext=(ex + 0.5, ey + 0.5), fontsize=11, color='orange')
+
+# Equilibrium on contract curve
+eq_t = 0.5
+eq_x = box_w * eq_t
+eq_y = box_h * eq_t**0.7
+ax.plot(eq_x, eq_y, 'ko', markersize=8)
+ax.annotate('$E^*$ (equilibrium)', xy=(eq_x, eq_y), xytext=(eq_x + 0.5, eq_y - 0.8), fontsize=11)
+
+# Price line through E and E*
+slope = (eq_y - ey) / (eq_x - ex)
+x_pl = np.linspace(1, 8, 50)
+y_pl = ey + slope * (x_pl - ex)
+ax.plot(x_pl, y_pl, 'gray', linestyle='--', linewidth=1.5)
+
+# Indifference curves at E*
+for r, color in [(2.0, 'blue'), (2.0, 'red')]:
+    theta = np.linspace(0.2, np.pi/2 - 0.2, 50)
+    if color == 'blue':
+        ic_x = eq_x - r*np.cos(theta) + r*0.5
+        ic_y = eq_y - r*np.sin(theta) + r*0.5
+    else:
+        ic_x = eq_x + r*np.cos(theta) - r*0.5
+        ic_y = eq_y + r*np.sin(theta) - r*0.5
+    ax.plot(ic_x, ic_y, color=color, alpha=0.4, linewidth=1.5)
+
+ax.set_xlim(-1.5, box_w + 1.5)
+ax.set_ylim(-1.2, box_h + 1.2)
+ax.set_aspect('equal')
+ax.axis('off')
+ax.legend(fontsize=10, frameon=False, loc='lower right')
+
+plt.tight_layout()
+plt.show()
+```
+
+Starting from endowment $E$, individuals trade along the price line to reach $E^*$ on the contract curve — a Pareto efficient allocation
+
+---
+
+## First Theorem of Welfare Economics
+
+::: {style="border-left: 4px solid #1e5288; padding-left: 1em; margin: 1em 0;"}
+**First Welfare Theorem:** Every Walrasian (competitive) equilibrium is Pareto efficient.
+:::
+
+**Proof sketch:** Suppose equilibrium allocation is *not* Pareto efficient. Then there exists a feasible reallocation making someone better off without hurting anyone. But if person $i$ prefers bundle $x'_i$ to their equilibrium bundle $x_i^*$, then $x'_i$ must cost more than $x_i^*$ at equilibrium prices (otherwise they would have chosen it). Summing over all individuals contradicts the feasibility constraint.
+
+**Powerful result:** No central planner needed — competitive markets achieve efficiency on their own
+
+---
+
+## What the First Welfare Theorem Does *Not* Say
+
+The First Welfare Theorem says competitive markets are **efficient**, but:
+
+- It says nothing about **equity** or **fairness**
+- An allocation where one person has everything and others starve can be Pareto efficient
+- Efficiency ≠ desirability
+
+**Also requires strong assumptions:**
+
+- Perfect competition (price-taking)
+- Complete markets (no externalities, public goods)
+- Perfect information
+- No transaction costs
+
+When these fail, markets may not achieve efficiency → **market failures** (Lectures 9–10)
+
+---
+
+## Second Theorem of Welfare Economics
+
+::: {style="border-left: 4px solid #1e5288; padding-left: 1em; margin: 1em 0;"}
+**Second Welfare Theorem:** For any Pareto efficient allocation, there exists a set of prices and a redistribution of initial endowments such that this allocation is a Walrasian equilibrium.
+:::
+
+**Implication:** Efficiency and equity are *separable* problems
+
+- Use lump-sum transfers to achieve desired distribution of endowments
+- Then let markets work to achieve efficiency
+
+**In practice:** Lump-sum transfers are difficult (require information about ability, not just income), so redistribution typically involves distortionary taxes → tradeoff between efficiency and equity
+
+---
+
+## Visualizing the Second Welfare Theorem
+
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 7
+#| fig-height: 5.5
+
+fig, ax = plt.subplots(figsize=(7, 5.5))
+
+box_w, box_h = 10, 8
+ax.plot([0, box_w, box_w, 0, 0], [0, 0, box_h, box_h, 0], 'k-', linewidth=1.5)
+
+ax.annotate('$O^A$', xy=(0, 0), xytext=(-0.6, -0.4), fontsize=14, fontweight='bold')
+ax.annotate('$O^B$', xy=(box_w, box_h), xytext=(box_w + 0.1, box_h + 0.1), fontsize=14, fontweight='bold')
+
+# Contract curve
+t = np.linspace(0, 1, 100)
+cc_x = box_w * t
+cc_y = box_h * (t**0.7)
+ax.plot(cc_x, cc_y, 'k-', linewidth=2, alpha=0.5)
+
+# Original equilibrium E*
+eq1_t = 0.35
+eq1_x = box_w * eq1_t
+eq1_y = box_h * eq1_t**0.7
+ax.plot(eq1_x, eq1_y, 'ko', markersize=7)
+ax.annotate('$E^*$', xy=(eq1_x, eq1_y), xytext=(eq1_x - 1, eq1_y + 0.4), fontsize=12)
+
+# Desired allocation Q*
+eq2_t = 0.6
+eq2_x = box_w * eq2_t
+eq2_y = box_h * eq2_t**0.7
+ax.plot(eq2_x, eq2_y, 'ro', markersize=8)
+ax.annotate('$Q^*$ (socially\npreferred)', xy=(eq2_x, eq2_y), xytext=(eq2_x + 0.5, eq2_y - 1), fontsize=11, color='red',
+           arrowprops=dict(arrowstyle='->', color='red'))
+
+# Price line through Q*
+slope2 = -0.5
+x_pl2 = np.linspace(2, 9, 50)
+y_pl2 = eq2_y + slope2 * (x_pl2 - eq2_x)
+ax.plot(x_pl2, y_pl2, 'r--', linewidth=1.5, alpha=0.7, label="$P'P'$")
+
+# Endowment that supports Q*
+qbar_x = 4.5
+qbar_y = eq2_y + slope2 * (qbar_x - eq2_x)
+ax.plot(qbar_x, qbar_y, 's', color='green', markersize=8)
+ax.annotate("$\\bar{Q}$ (new\nendowment)", xy=(qbar_x, qbar_y), xytext=(qbar_x - 2.5, qbar_y - 1), fontsize=11, color='green',
+           arrowprops=dict(arrowstyle='->', color='green'))
+
+# Arrow from E* to Q* showing redistribution
+ax.annotate('', xy=(eq2_x - 0.3, eq2_y - 0.3), xytext=(eq1_x + 0.3, eq1_y + 0.3),
+           arrowprops=dict(arrowstyle='->', color='purple', linewidth=2, linestyle='dotted'))
+ax.annotate('Redistribute\nendowments', xy=((eq1_x + eq2_x)/2, (eq1_y + eq2_y)/2 + 0.8),
+           fontsize=10, color='purple', ha='center')
+
+ax.set_xlim(-1.5, box_w + 1.5)
+ax.set_ylim(-1.2, box_h + 1.2)
+ax.set_aspect('equal')
+ax.axis('off')
+ax.legend(fontsize=10, frameon=False, loc='lower right')
+
+plt.tight_layout()
+plt.show()
+```
+
+If $Q^*$ is the socially preferred allocation, redistribute endowments to $\bar{Q}$ on the price line $P'P'$. Markets then achieve $Q^*$ as a competitive equilibrium.
+
+# Social Welfare
+
+---
+
+## Social Welfare Functions
+
+How do we choose among Pareto efficient allocations?
+
+A **social welfare function** ranks allocations based on individuals' utilities:
+
+$$SW = f(U_1, U_2, \ldots, U_m)$$
+
+**CES form:**
+$$SW = \left[\sum_{i=1}^m U_i^R\right]^{1/R}, \quad R \leq 1$$
+
+---
+
+## Special Cases of Social Welfare Functions
+
+**Utilitarian ($R = 1$):**
+$$SW = \sum_i U_i$$
+
+Maximize total utility — treats a dollar the same regardless of who gets it
+
+**Rawlsian ($R \to -\infty$):**
+$$SW = \min_i \{U_i\}$$
+
+Maximize the utility of the worst-off person — "maximin" criterion
+
+**Rawls's argument:** Behind a "veil of ignorance" (not knowing your position in society), risk-averse individuals would choose the maximin criterion
+
+---
+
+## Choosing a Social Welfare Function
+
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 7
+#| fig-height: 5
+
+fig, ax = plt.subplots(figsize=(7, 5))
+
+# Utility possibility frontier
+t = np.linspace(0, 1, 200)
+u1 = 10 * np.sqrt(1 - t**2)
+u2 = 10 * t
+
+ax.plot(u1, u2, 'k-', linewidth=2.5, label='Utility Possibility Frontier')
+
+# Utilitarian
+slope_util = -1
+u1_util = 10/np.sqrt(2)
+u2_util = 10/np.sqrt(2)
+x_line = np.linspace(2, 9, 50)
+y_line = u2_util + slope_util * (x_line - u1_util)
+ax.plot(x_line, y_line, 'b--', alpha=0.5, linewidth=1)
+ax.plot(u1_util, u2_util, 'bo', markersize=8)
+ax.annotate('Utilitarian', xy=(u1_util, u2_util), xytext=(u1_util + 0.5, u2_util + 0.8), fontsize=11, color='blue')
+
+# Rawlsian (45-degree line)
+ax.plot([0, 10], [0, 10], 'gray', linestyle=':', alpha=0.5)
+# Find intersection of UPF with 45-degree line
+idx = np.argmin(np.abs(u1 - u2))
+u1_raw, u2_raw = u1[idx], u2[idx]
+ax.plot(u1_raw, u2_raw, 'rs', markersize=8)
+ax.annotate('Rawlsian', xy=(u1_raw, u2_raw), xytext=(u1_raw - 2, u2_raw + 0.8), fontsize=11, color='red')
+
+# Unequal but efficient
+ax.plot(9, 10*np.sqrt(1 - 0.81)/10*10*0.1, 'o', color='gray', markersize=6)
+
+ax.set_xlabel('$U_1$', fontsize=13)
+ax.set_ylabel('$U_2$', fontsize=13)
+ax.set_xlim(0, 11)
+ax.set_ylim(0, 11)
+ax.legend(fontsize=10, frameon=False, loc='upper right')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+Every point on the utility possibility frontier is Pareto efficient. The social welfare function selects which efficient point society "should" be at.
+
+---
+
+## Application: Evaluating Tax Reform
+
+The welfare theorems provide a framework for policy evaluation:
+
+**Efficiency question (1st Welfare Theorem):** Does the policy move us closer to or further from Pareto efficiency?
+
+**Equity question (2nd Welfare Theorem):** Can we achieve the desired distribution through lump-sum transfers, or do we need distortionary policies?
+
+**In practice:** Most policies involve tradeoffs between efficiency and equity because lump-sum transfers are infeasible. The debate is about how much inefficiency is worth accepting for more equitable outcomes.
+
+# Computable General Equilibrium
+
+---
+
+## CGE Models: Taking Theory to Data
+
+**Computable general equilibrium (CGE) models** apply the theoretical framework to real economies:
+
+- Specify utility and production functions with estimated parameters
+- Calibrate to actual economic data (national accounts, trade flows)
+- Solve for equilibrium prices and quantities
+- Simulate policy changes (tax reform, trade liberalization, environmental regulation)
+
+**Two key advances:** Rich institutional detail + computational power
+
+---
+
+## Applications of CGE Models
+
+**Trade policy:** Nearly all CGE models found NAFTA offered welfare gains to all member countries, though distributional effects varied across sectors and skill groups
+
+**Tax policy:** Simulate effects of tax reforms on labor supply, capital allocation, and income distribution. The Dutch MIMIC model emphasizes interactions with social welfare programs.
+
+**Environmental policy:** Assess economic costs of emissions targets, compare carbon tax vs. cap-and-trade. Results depend heavily on how government revenue is recycled — a "double dividend" may arise if carbon tax revenue replaces distortionary income taxes
+
+---
+
+## Application: Carbon Tax and General Equilibrium
+
+**Partial equilibrium view:** Tax on carbon → higher energy prices → less pollution. Simple.
+
+**General equilibrium view:** Much more complex:
+
+- Higher energy costs raise production costs across all sectors
+- Workers in carbon-intensive industries lose jobs
+- Revenue can be recycled: cut income taxes? fund transfers? reduce deficit?
+- International competitiveness effects (carbon leakage)
+
+**Optimal carbon tax** depends on how environmental damage interacts with other forms of capital — this requires general equilibrium thinking
+
+---
+
+## Try It Yourself
+
+Consider an economy with two goods ($x$ and $y$) and the production possibility frontier:
+
+$$x^2 + y^2 = 100$$
+
+Consumers have utility $U(x, y) = x \cdot y$
+
+1. What is the RPT at a general point on the PPF?
+2. Set up the conditions for general equilibrium: $RPT = MRS$
+3. Solve for the equilibrium quantities of $x$ and $y$
+4. What is the equilibrium price ratio $p_x/p_y$?
+
+# Summary
+
+---
+
+## Key Takeaways
+
+**General equilibrium:**
+
+- All markets are interconnected — changes in one affect all others
+- The Edgeworth box illustrates efficient input allocation
+- The PPF shows the tradeoff between outputs; slope = $RPT = MC_x/MC_y$
+- Equilibrium requires $RPT = MRS = p_x/p_y$ simultaneously
+
+---
+
+## Key Takeaways (cont.)
+
+**Welfare theorems:**
+
+- **1st Welfare Theorem:** Competitive equilibria are Pareto efficient — markets "get it right" under ideal conditions
+- **2nd Welfare Theorem:** Any efficient allocation can be decentralized through markets with appropriate redistribution
+- **Implication:** Efficiency and equity are conceptually separable, though practically intertwined
+
+**Looking ahead:**
+
+- When assumptions of the welfare theorems fail → market failures
+- Monopoly power, externalities, public goods, asymmetric information
+
+---
+
+## Next Time
+
+**Lecture 6: Monopoly and Market Power**
+
+- Barriers to entry and sources of market power
+- Monopoly pricing and output
+- Deadweight loss of monopoly
+- Price discrimination
+- Regulation
+
+**Reading:** Chapter 14

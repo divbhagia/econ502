@@ -1,0 +1,8 @@
+---
+title: "Additional Handouts"
+nav-sidebar: false
+format: html
+---
+
+You can find additional handouts and reference materials for Part II: Market Power below.
+
