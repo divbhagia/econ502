@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Problem Set 1: Solutions – Advanced Microeconomics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Advanced Microeconomics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/lecture1.html"> 
+<span class="menu-text">Content</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../problem-sets.html"> 
+<span class="menu-text">Problem Sets</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://divbhagia.github.io/econ502/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-1-altruism-textbook-ex-4.14" id="toc-problem-1-altruism-textbook-ex-4.14" class="nav-link active" data-scroll-target="#problem-1-altruism-textbook-ex-4.14">Problem 1: Altruism (Textbook Ex 4.14)</a>
+  <ul class="collapse">
+  <li><a href="#part-a-interpreting-the-altruism-parameter-a" id="toc-part-a-interpreting-the-altruism-parameter-a" class="nav-link" data-scroll-target="#part-a-interpreting-the-altruism-parameter-a">Part (a): Interpreting the altruism parameter <span class="math inline">\(a\)</span></a></li>
+  <li><a href="#part-b-optimal-choices" id="toc-part-b-optimal-choices" class="nav-link" data-scroll-target="#part-b-optimal-choices">Part (b): Optimal choices</a></li>
+  <li><a href="#part-c-income-tax-and-charitable-deduction" id="toc-part-c-income-tax-and-charitable-deduction" class="nav-link" data-scroll-target="#part-c-income-tax-and-charitable-deduction">Part (c): Income tax and charitable deduction</a></li>
+  </ul></li>
+  <li><a href="#problem-2-elasticities-and-logs-textbook-ex-5.8" id="toc-problem-2-elasticities-and-logs-textbook-ex-5.8" class="nav-link" data-scroll-target="#problem-2-elasticities-and-logs-textbook-ex-5.8">Problem 2: Elasticities and Logs (Textbook Ex 5.8)</a>
+  <ul class="collapse">
+  <li><a href="#part-a-show-that-e_xp_x-fracd-ln-xd-ln-p_x" id="toc-part-a-show-that-e_xp_x-fracd-ln-xd-ln-p_x" class="nav-link" data-scroll-target="#part-a-show-that-e_xp_x-fracd-ln-xd-ln-p_x">Part (a): Show that <span class="math inline">\(e_{x,p_x} = \frac{d \ln x}{d \ln p_x}\)</span></a></li>
+  <li><a href="#part-b-constant-elasticity-demand" id="toc-part-b-constant-elasticity-demand" class="nav-link" data-scroll-target="#part-b-constant-elasticity-demand">Part (b): Constant elasticity demand</a></li>
+  </ul></li>
+  <li><a href="#problem-3-sugar-sweetened-beverage-tax" id="toc-problem-3-sugar-sweetened-beverage-tax" class="nav-link" data-scroll-target="#problem-3-sugar-sweetened-beverage-tax">Problem 3: Sugar-Sweetened Beverage Tax</a>
+  <ul class="collapse">
+  <li><a href="#part-a-initial-optimal-bundle" id="toc-part-a-initial-optimal-bundle" class="nav-link" data-scroll-target="#part-a-initial-optimal-bundle">Part (a): Initial optimal bundle</a></li>
+  <li><a href="#part-b-bundle-after-tax" id="toc-part-b-bundle-after-tax" class="nav-link" data-scroll-target="#part-b-bundle-after-tax">Part (b): Bundle after tax</a></li>
+  <li><a href="#part-c-consumer-surplus" id="toc-part-c-consumer-surplus" class="nav-link" data-scroll-target="#part-c-consumer-surplus">Part (c): Consumer Surplus</a></li>
+  <li><a href="#part-d-compensating-variation" id="toc-part-d-compensating-variation" class="nav-link" data-scroll-target="#part-d-compensating-variation">Part (d): Compensating Variation</a></li>
+  <li><a href="#part-f-tax-revenue-and-deadweight-loss" id="toc-part-f-tax-revenue-and-deadweight-loss" class="nav-link" data-scroll-target="#part-f-tax-revenue-and-deadweight-loss">Part (f): Tax Revenue and Deadweight Loss</a></li>
+  <li><a href="#part-g-revenue-recycling" id="toc-part-g-revenue-recycling" class="nav-link" data-scroll-target="#part-g-revenue-recycling">Part (g): Revenue Recycling</a></li>
+  <li><a href="#part-h-policy-discussion" id="toc-part-h-policy-discussion" class="nav-link" data-scroll-target="#part-h-policy-discussion">Part (h): Policy Discussion</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ps1-solutions.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Problem Set 1: Solutions</h1>
+<p class="subtitle lead">Econ 502: Advanced Microeconomics</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="problem-1-altruism-textbook-ex-4.14" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1-altruism-textbook-ex-4.14">Problem 1: Altruism (Textbook Ex 4.14)</h2>
+<p>Michele’s utility function: <span class="math inline">\(U_1(c_1, c_2) = c_1^{1-a}c_2^a\)</span>, with budget constraint <span class="math inline">\(c_1 + c_2 = I\)</span>.</p>
+<section id="part-a-interpreting-the-altruism-parameter-a" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-interpreting-the-altruism-parameter-a">Part (a): Interpreting the altruism parameter <span class="math inline">\(a\)</span></h3>
+<ul>
+<li>When <span class="math inline">\(a = 0\)</span>: <span class="math inline">\(U_1 = c_1\)</span>. Michele is completely selfish and cares only about her own consumption.</li>
+<li>When <span class="math inline">\(a = 1\)</span>: <span class="math inline">\(U_1 = c_2\)</span>. Michele is completely selfless and cares only about Sofia’s consumption.</li>
+<li>When <span class="math inline">\(a = 0.5\)</span>: <span class="math inline">\(U_1 = c_1^{0.5}c_2^{0.5}\)</span>. Michele is a <strong>perfect altruist</strong> and weights her own and Sofia’s consumption equally.</li>
+</ul>
+<p>The exponent <span class="math inline">\(a\)</span> represents the share of Michele’s “concern” (or budget) allocated to Sofia. Higher <span class="math inline">\(a\)</span> means more altruistic.</p>
+</section>
+<section id="part-b-optimal-choices" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-optimal-choices">Part (b): Optimal choices</h3>
+<p>This is a standard Cobb-Douglas maximization problem with <span class="math inline">\(p_1 = p_2 = 1\)</span>. Using the Cobb-Douglas demand functions: <span class="math display">\[c_1^* = \frac{(1-a) \cdot I}{(1-a+a) \cdot 1} = (1-a)I\]</span> <span class="math display">\[c_2^* = \frac{a \cdot I}{(1-a+a) \cdot 1} = aI\]</span></p>
+<p><span class="math display">\[\boxed{c_1^* = (1-a)I, \qquad c_2^* = aI}\]</span></p>
+<p>As <span class="math inline">\(a\)</span> increases, Michele donates more to Sofia (<span class="math inline">\(c_2^*\)</span> rises) and keeps less for herself (<span class="math inline">\(c_1^*\)</span> falls). The share spent on Sofia is exactly <span class="math inline">\(a\)</span>.</p>
+</section>
+<section id="part-c-income-tax-and-charitable-deduction" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-income-tax-and-charitable-deduction">Part (c): Income tax and charitable deduction</h3>
+<p><strong>With income tax (no deduction):</strong></p>
+<p>After-tax income is <span class="math inline">\((1-t)I\)</span>. The problem is unchanged except income falls to <span class="math inline">\((1-t)I\)</span>: <span class="math display">\[c_1^* = (1-a)(1-t)I, \qquad c_2^* = a(1-t)I\]</span></p>
+<p>Both consumption levels fall proportionally. The share devoted to charity is still <span class="math inline">\(a\)</span>.</p>
+<p><strong>With income tax and charitable deduction:</strong></p>
+<p>If charitable donations are tax-deductible, Michele pays tax only on non-donated income. Her taxable income is <span class="math inline">\(I - c_2\)</span> (charitable donations are deducted), so her tax bill is <span class="math inline">\(t(I - c_2)\)</span>. The budget constraint is: <span class="math display">\[c_1 + c_2 = I - t(I - c_2)\]</span> <span class="math display">\[c_1 + c_2 = (1-t)I + tc_2\]</span> <span class="math display">\[c_1 + (1-t)c_2 = (1-t)I\]</span></p>
+<p>So the effective prices are <span class="math inline">\(p_1 = 1\)</span> for own consumption and <span class="math inline">\(p_2 = (1-t)\)</span> for donations (out of after-tax income <span class="math inline">\((1-t)I\)</span>). Equivalently, dividing through by <span class="math inline">\((1-t)\)</span>:</p>
+<p><span class="math display">\[ \frac{c_1}{1-t} + c_2 = I\]</span></p>
+<p>Applying Cobb-Douglas demands with <span class="math inline">\(p_1 = 1/(1-t)\)</span> and <span class="math inline">\(p_2 = 1\)</span>: <span class="math display">\[ c_1^* = \frac{(1-a)I}{1/(1-t)} = (1-a)(1-t)I\]</span> <span class="math display">\[ c_2^* = \frac{aI}{1} = aI\]</span></p>
+<p><span class="math display">\[\boxed{c_1^* = (1-a)(1-t)I, \qquad c_2^* = aI}\]</span></p>
+<p><strong>Key result:</strong> With the charitable deduction, donations return to the no-tax level (<span class="math inline">\(aI\)</span>), while own-consumption still falls due to taxes. The deduction fully offsets the tax’s effect on giving.</p>
+<p><strong>Comparing tax only vs.&nbsp;tax with deduction:</strong></p>
+<ul>
+<li>Without deduction: <span class="math inline">\(c_2 = a(1-t)I\)</span></li>
+<li>With deduction: <span class="math inline">\(c_2 = aI\)</span></li>
+</ul>
+<p>The increase in donations due to the deduction is <span class="math inline">\(aI - a(1-t)I = atI\)</span>. This is <strong>larger for more altruistic people</strong> (higher <span class="math inline">\(a\)</span>), so the charitable deduction has a bigger incentive effect on more altruistic individuals.</p>
+</section>
+</section>
+<section id="problem-2-elasticities-and-logs-textbook-ex-5.8" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2-elasticities-and-logs-textbook-ex-5.8">Problem 2: Elasticities and Logs (Textbook Ex 5.8)</h2>
+<section id="part-a-show-that-e_xp_x-fracd-ln-xd-ln-p_x" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-show-that-e_xp_x-fracd-ln-xd-ln-p_x">Part (a): Show that <span class="math inline">\(e_{x,p_x} = \frac{d \ln x}{d \ln p_x}\)</span></h3>
+<p>First note that price elasticity of demand is defined as: <span class="math display">\[e_{x,p_x} = \frac{d x}{d p_x} \cdot \frac{p_x}{x}\]</span></p>
+<p>Now note that for <span class="math inline">\(u = \ln x\)</span>, we have <span class="math inline">\(\dfrac{d u}{d x} = \dfrac{1}{x}\)</span>, rearranging this gives <span class="math inline">\(du = \dfrac{1}{x} dx\)</span>. Noting that <span class="math inline">\(du = d \ln x\)</span> we have: <span class="math display">\[d \ln x = \frac{1}{x} dx\]</span></p>
+<p>Similarly, we can write <span class="math display">\[d \ln p_x = \frac{1}{p_x} dp_x\]</span></p>
+<p>Therefore, we have: <span class="math display">\[\frac{d \ln x}{d \ln p_x} = \frac{ \frac{1}{x} dx}{\frac{1}{p_x} dp_x} = \frac{dx}{dp_x} \cdot \frac{p_x}{x} = e_{x,p_x}\]</span></p>
+</section>
+<section id="part-b-constant-elasticity-demand" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-constant-elasticity-demand">Part (b): Constant elasticity demand</h3>
+<p>Given <span class="math inline">\(x = a(p_x)^m\)</span>, take the natural log of both sides: <span class="math display">\[\ln x = \ln a + m \ln p_x\]</span></p>
+<p>Differentiate with respect to <span class="math inline">\(\ln p_x\)</span>: <span class="math display">\[e_{x,p_x} = \frac{d \ln x}{d \ln p_x} = m\]</span></p>
+<p>This functional form is called the “constant elasticity” demand function as the elasticity equals <span class="math inline">\(m\)</span> regardless of the price level.</p>
+</section>
+</section>
+<section id="problem-3-sugar-sweetened-beverage-tax" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3-sugar-sweetened-beverage-tax">Problem 3: Sugar-Sweetened Beverage Tax</h2>
+<p>Given: <span class="math inline">\(U(s, x) = s^{0.3}x^{0.7}\)</span>, <span class="math inline">\(I = 300\)</span>, <span class="math inline">\(p_s = 0.05\)</span>, <span class="math inline">\(p_x = 1\)</span>, tax <span class="math inline">\(t = 0.015\)</span>, so <span class="math inline">\(p_s' = 0.065\)</span>.</p>
+<p>Since <span class="math inline">\(\alpha + \beta = 0.3 + 0.7 = 1\)</span>, the Cobb-Douglas demands simplify to standard expenditure shares.</p>
+<section id="part-a-initial-optimal-bundle" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-initial-optimal-bundle">Part (a): Initial optimal bundle</h3>
+<p>Using Cobb-Douglas Marshallian demands: <span class="math display">\[s^* = \frac{0.3 \cdot I}{p_s} = \frac{0.3 \times 300}{0.05} = \frac{90}{0.05} = 1800 \text{ oz}\]</span></p>
+<p><span class="math display">\[x^* = \frac{0.7 \cdot I}{p_x} = \frac{0.7 \times 300}{1} = 210\]</span></p>
+<p>Utility: <span class="math display">\[U_0 = (1800)^{0.3}(210)^{0.7} \approx 400\]</span></p>
+</section>
+<section id="part-b-bundle-after-tax" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-bundle-after-tax">Part (b): Bundle after tax</h3>
+<p>With <span class="math inline">\(p_s' = 0.065\)</span>: <span class="math display">\[s^{**} = \frac{0.3 \times 300}{0.065} = \frac{90}{0.065} \approx 1384.6 \text{ oz}\]</span></p>
+<p><span class="math display">\[x^{**} = \frac{0.7 \times 300}{1} = 210\]</span></p>
+<p>Note that <span class="math inline">\(x^{**}\)</span> is unchanged because Cobb-Douglas utility implies each good receives a fixed expenditure share, and <span class="math inline">\(p_x\)</span> did not change.</p>
+<p><span class="math display">\[\boxed{s^{**} \approx 1384.6, \quad x^{**} = 210}\]</span></p>
+<p>New utility: <span class="math inline">\(U_1 = (1384.6)^{0.3}(210)^{0.7} \approx 370\)</span></p>
+</section>
+<section id="part-c-consumer-surplus" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-consumer-surplus">Part (c): Consumer Surplus</h3>
+<p>The Marshallian demand for sugary drinks is <span class="math inline">\(s = \frac{0.3 \cdot I}{p_s} = \frac{90}{p_s}\)</span>.</p>
+<p>The change in consumer surplus is: <span class="math display">\[\Delta CS = -\int_{0.05}^{0.065} s(p_s) \, dp_s = -\int_{0.05}^{0.065} \frac{90}{p_s} \, dp_s\]</span></p>
+<p><span class="math display">\[= -90 \left[\ln p_s\right]_{0.05}^{0.065} = -90(\ln 0.065 - \ln 0.05) = -90 \ln\left(\frac{0.065}{0.05}\right)\]</span></p>
+<p><span class="math display">\[= -90 \ln(1.3) = -90 \times 0.2624 = -23.6\]</span></p>
+<p><span class="math display">\[\boxed{\Delta CS \approx -\$23.62}\]</span></p>
+<p><strong>Trapezoid approximation</strong> (for students who cannot integrate): The area under the demand curve between the two prices can be approximated as: <span class="math display">\[\Delta CS \approx -\frac{1}{2}(s^* + s^{**}) \times (p_s' - p_s) = -\frac{1}{2}(1800 + 1384.6)(0.015) \approx -\$23.88\]</span></p>
+</section>
+<section id="part-d-compensating-variation" class="level3">
+<h3 class="anchored" data-anchor-id="part-d-compensating-variation">Part (d): Compensating Variation</h3>
+<p>The CV is the additional income needed at new prices to achieve the original utility <span class="math inline">\(U_0\)</span>. We need the expenditure function.</p>
+<p>For Cobb-Douglas <span class="math inline">\(U = s^{\alpha}x^{\beta}\)</span> with <span class="math inline">\(\alpha + \beta = 1\)</span>, the expenditure function is: <span class="math display">\[E(p_s, p_x, \bar{U}) = \bar{U} \cdot \left(\frac{p_s}{\alpha}\right)^{\alpha}\left(\frac{p_x}{\beta}\right)^{\beta} = \bar{U} \cdot K \cdot p_s^{\alpha}p_x^{\beta}\]</span></p>
+<p>where <span class="math inline">\(K = \alpha^{-\alpha}\beta^{-\beta} = (0.3)^{-0.3}(0.7)^{-0.7} = 1.842\)</span>.</p>
+<p>Expenditure at original prices and <span class="math inline">\(U_0\)</span>: <span class="math display">\[E(0.05, 1, 400) = 400 \cdot 1.842 \cdot (0.05)^{0.3}(1)^{0.7} \approx 300\]</span></p>
+<p>Expenditure at new prices and <span class="math inline">\(U_0\)</span>: <span class="math display">\[E(0.065, 1, 400) = 400 \cdot 1.842 \cdot (0.065)^{0.3}(1)^{0.7} \approx 324 \]</span></p>
+<p><span class="math display">\[\boxed{CV = E(p_s', p_x, U_0) - E(p_s, p_x, U_0) = 324 - 300 = \$24}\]</span></p>
+<p>The consumer would need $24 in additional income to be as well off as before the tax.</p>
+<p>The CS approximation is very close to the CV. They are similar because the income effect of this price change is small (sugary drinks are a small share of the budget).</p>
+</section>
+<section id="part-f-tax-revenue-and-deadweight-loss" class="level3">
+<h3 class="anchored" data-anchor-id="part-f-tax-revenue-and-deadweight-loss">Part (f): Tax Revenue and Deadweight Loss</h3>
+<p><strong>(i) Tax revenue:</strong> <span class="math display">\[R = t \cdot s^{**} = 0.015 \times 1384.6 \approx \$20.77\]</span></p>
+<p><strong>(ii) Deadweight loss:</strong> <span class="math display">\[DWL = CV - R = 24 - 20.77 = \$3.23\]</span></p>
+<p><strong>Interpretation:</strong> Of the $24 welfare loss to the consumer, $20.77 is transferred to the government as tax revenue and $3.23 is pure efficiency loss (deadweight loss).</p>
+<p><strong>Externality justification:</strong> The negative externality is <span class="math inline">\(e = \$0.01\)</span> per ounce. The reduction in externality from the tax is: <span class="math display">\[\Delta \text{Externality} = e \times (s^* - s^{**}) = 0.01 \times (1800 - 1384.6) = 0.01 \times 415.4 = \$4.15\]</span></p>
+<p>The tax generates $20.77 in revenue and reduces externalities by $4.15, while creating only $3.23 in deadweight loss. Since the externality reduction ($4.15) exceeds the DWL ($3.23), the tax improves overall welfare somewhat.</p>
+</section>
+<section id="part-g-revenue-recycling" class="level3">
+<h3 class="anchored" data-anchor-id="part-g-revenue-recycling">Part (g): Revenue Recycling</h3>
+<p><strong>(i) New budget constraint:</strong></p>
+<p>The consumer faces the taxed price <span class="math inline">\(p_s' = 0.065\)</span> but receives a lump-sum rebate <span class="math inline">\(R\)</span> equal to the tax revenue collected. The budget constraint is: <span class="math display">\[p_s' \cdot s + x = I + R\]</span> <span class="math display">\[0.065s + x = 300 + R\]</span></p>
+<p>Note that while <span class="math inline">\(R = t \cdot s\)</span>, the consumer takes <span class="math inline">\(R\)</span> as given when choosing <span class="math inline">\(s\)</span> and <span class="math inline">\(x\)</span> (they do not internalize that their choice of <span class="math inline">\(s\)</span> affects <span class="math inline">\(R\)</span>). If they did internalize it, then the consumer’s problem would remain unchanged from the no-tax case.</p>
+<p><strong>(ii) Optimal consumption:</strong></p>
+<p>Applying the Cobb-Douglas demand functions: <span class="math display">\[s(R) = \frac{0.3(300 + R)}{0.065} \]</span> <span class="math display">\[x(R) = 0.7(300 + R)\]</span></p>
+<p>In equilibrium, the rebate equals the tax revenue: <span class="math inline">\(R = t \cdot s(R)\)</span>. Substituting: <span class="math display">\[R = 0.015 \cdot \frac{0.3(300 + R)}{0.065}\]</span></p>
+<p><span class="math display">\[0.065R = 1.35 + 0.0045R\]</span></p>
+<p><span class="math display">\[0.0605R = 1.35\]</span></p>
+<p><span class="math display">\[R = \frac{1.35}{0.0605} \approx 22.31\]</span></p>
+<p>Therefore, equilibrium consumption is: <span class="math display">\[s_R = \frac{0.3(300 + 22.31)}{0.065} \approx 1487.6 \text{ oz}\]</span> <span class="math display">\[x_R = 0.7(300 + 22.31) \approx 225.6\]</span></p>
+<p><strong>(iii) New utility level:</strong></p>
+<p>The new utility level is: <span class="math display">\[U_R = (s_R)^{0.3}(x_R)^{0.7} \approx 397\]</span></p>
+<p><strong>(iv) Comparison:</strong></p>
+<p>Under the tax-and-rebate scheme, the consumer reaches utility <span class="math inline">\(U_R \approx 397\)</span>, between the no-tax level (<span class="math inline">\(U_0 \approx 400\)</span>) and the tax-only level (<span class="math inline">\(U_1 \approx 370\)</span>). The policy is largely successful: sugary drink consumption falls meaningfully from 1800 to about 1488 ounces, achieving the public health goal, while the rebate returns most of the welfare cost to the consumer. The consumer loses only about 3 utils compared to 30 under the tax alone. Composite good consumption actually rises from 210 to 226, since the rebate provides additional purchasing power that gets redirected toward untaxed goods. The small residual welfare loss (<span class="math inline">\(400 - 397\)</span>) is the unavoidable deadweight loss from distorting relative prices, but it is far smaller than the welfare cost of the tax without revenue recycling.</p>
+</section>
+<section id="part-h-policy-discussion" class="level3">
+<h3 class="anchored" data-anchor-id="part-h-policy-discussion">Part (h): Policy Discussion</h3>
+<p><strong>(i) CV vs CS:</strong></p>
+<p>The CV is generally preferred for welfare analysis because it is based on well-defined utility theory and the expenditure function. CS relies on the Marshallian demand curve, which conflates income and substitution effects. However, in this case they give nearly identical results because the income effect is small (sugary drinks are a small budget share). CS is often used in practice because it is easier to estimate empirically (only requires observable demand data, not utility parameters).</p>
+<p><strong>(ii) Regressivity:</strong></p>
+<p>The tax is likely regressive because lower-income households spend a larger share of their income on taxed beverages. To test this empirically, one could:</p>
+<ul>
+<li>Compare pre- and post-tax spending on SSBs across income quintiles using household expenditure surveys</li>
+<li>Estimate demand elasticities by income group (lower-income consumers may be more price-elastic, partially offsetting regressivity)</li>
+<li>Calculate the tax burden as a share of income across the distribution</li>
+</ul>
+<p>Revenue recycling (as in part g) can mitigate regressivity if the lump-sum rebate represents a larger share of income for poorer households.</p>
+<p><strong>(iii) Cross-border shopping:</strong></p>
+<p>With cross-border shopping, the consumer’s effective price lies somewhere between <span class="math inline">\(p_s\)</span> and <span class="math inline">\(p_s'\)</span>: they can avoid the tax by traveling to a neighboring jurisdiction, but incur transport and time costs to do so. Call this effective price <span class="math inline">\(\tilde{p}_s \in (p_s, p_s')\)</span>. This has two offsetting effects on welfare:</p>
+<ul>
+<li><strong>Smaller welfare loss to the consumer:</strong> Since <span class="math inline">\(\tilde{p}_s &lt; p_s'\)</span>, the consumer faces a smaller effective price increase, so the reduction in consumer surplus (and CV) is smaller than our calculation suggests.</li>
+<li><strong>Much lower tax revenue:</strong> The consumer purchases fewer taxed ounces within the city, so revenue <span class="math inline">\(R = t \cdot s_{\text{local}}\)</span> falls substantially if most purchases shift across the border.</li>
+</ul>
+<p>The net effect on deadweight loss (<span class="math inline">\(DWL = CV - R\)</span>) is ambiguous but likely <em>higher</em>: the CV falls somewhat, but revenue falls by more, since the government collects nothing on cross-border purchases while the consumer still bears the cost of traveling to avoid the tax. In the extreme, if all purchases move across the border, <span class="math inline">\(R = 0\)</span> and the entire welfare loss (including transport costs) is pure deadweight loss.</p>
+<p>This suggests that the optimal policy would be implemented at a broader geographic level (state or federal) to minimize cross-border leakage.</p>
+<p><strong>(iv) Present bias and behavioral considerations:</strong></p>
+<p>If consumers exhibit present bias, they overweight the immediate pleasure of sugary drinks relative to future health costs. In this case, their <em>experienced</em> utility from reduced consumption may be higher than their <em>decision</em> utility suggests and they would thank their future selves for consuming less.</p>
+<p>To modify the welfare analysis, one would need to distinguish between decision utility (the preferences consumers act on, which reflect present bias) and experienced utility (their true long-run well-being). Our CV calculation uses decision utility, which overstates the welfare cost of the tax: some of what appears as lost consumer welfare is actually a gain from correcting overconsumption. Under experienced utility, the DWL would be smaller, and the tax may even be welfare-improving if it helps consumers overcome self-control problems. In this case, a higher tax than the one calculated under standard assumptions may be justified to achieve the socially optimal level of consumption.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>2026 Div Bhagia | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 License</a> |Made with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

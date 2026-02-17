@@ -1,10 +1,18 @@
 ---
 title: "Problem Set 1"
 subtitle: "Econ 502: Advanced Microeconomics"
-format: pdf
+format:
+  html: default
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      file: ../assets/pset-preamble.tex
+format-links: [pdf]
 ---
 
-## Problem 1: Altruism (Textbook Exercise 4.14)
+## Problem 1: Altruism (Textbook Ex 4.14)
 
 Michele, who has a relatively high income $I$, has altruistic feelings toward Sofia, who lives in such poverty that she essentially has no income. Suppose Michele's preferences are represented by the utility function
 
@@ -18,7 +26,7 @@ b. Solve for Michele's optimal choices and demonstrate how they change with $a$.
 
 c. Solve for Michele's optimal choices under an income tax at rate $t$. How do her choices change if there is a charitable deduction (so income spent on charitable deductions is not taxed)? Does the charitable deduction have a bigger incentive effect on more or less altruistic people?
 
-## Problem 2: Elasticities and Logarithms (Textbook Exercise 5.8)
+## Problem 2: Elasticities and Logs (Textbook Ex 5.8)
 
 Because natural logarithms measure proportional changes, they correspond well to elasticity concepts. Here you are asked to show a few of these connections.
 
@@ -26,7 +34,7 @@ a. Show that $e_{x,p_x} = \dfrac{\partial \ln x}{\partial \ln p_x}$
 
 b. For the constant elasticity demand function $x = a(p_x)^m$ where $m < 0$, show that $e_{x,p_x} = m$.
 
-## Problem 3: Welfare Analysis of a Sugar-Sweetened Beverage Tax
+## Problem 3: Sugar-Sweetened Beverage Tax 
 
 Cities like Philadelphia and Berkeley have implemented taxes on sugar-sweetened beverages (SSBs) to reduce consumption and improve public health. Consider a consumer with preferences over sugary drinks ($s$, measured in ounces per month) and a *composite* good ($x$) given by:
 
@@ -42,9 +50,9 @@ a. Calculate the consumer's initial optimal consumption bundle $(s^*, x^*)$ and 
 
 b. Calculate the new optimal consumption bundle $(s^{**}, x^{**})$ after the tax is implemented.
 
-c. **Compensating Variation (CV)**: Calculate how much additional income the consumer would need after the tax to achieve the original utility level $U_0$. This represents the money-metric loss in welfare from the consumer's perspective. 
+c. **Consumer Surplus:** Using the demand function for sugary drinks, calculate the approximate loss in consumer surplus from the tax. Compare this to the CV. (If you don't know how to integrate, you can approximate the area using a trapezoid or rectangle method or use a scientific calculator.)
 
-d. **Consumer Surplus:** Using the demand function for sugary drinks, calculate the approximate loss in consumer surplus from the tax. Compare this to the CV. (If you don't know how to integrate, you can approximate the area using a trapezoid or rectangle method or use a scientific calculator.)
+d. **Compensating Variation (CV)**: Calculate how much additional income the consumer would need after the tax to achieve the original utility level $U_0$. This represents the money-metric loss in welfare from the consumer's perspective. 
 
 f. **Tax Revenue and Deadweight Loss:** Calculate:
    i. Total tax revenue collected: $R = t \cdot s^{**}$

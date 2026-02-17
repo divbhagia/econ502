@@ -1,13 +1,13 @@
 ---
-title: "Additional Handouts"
+title: "Additional Content"
 nav-sidebar: false
 format: html
 ---
 
-You can find additional handouts and reference materials for Part I: Competetive Markets below.
+You can find additional content and reference materials for Part I: Competetive Markets below.
 
 ## Consumer Theory (Lectures 1 and 2)
 
-- [Cobb-Douglas Demand Derivations (PDF)](/handouts/lec1-2_cd_derivations.pdf)
+- [Cobb-Douglas Demand Derivations](/handouts/lec1-2_cd_derivations.qmd)
     - This handout provides step-by-step derivations of the Marshallian (uncompensated) and Hicksian (compensated) demand functions for Cobb-Douglas preferences.
 

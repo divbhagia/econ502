@@ -1,0 +1,13 @@
+---
+title: "Problem Set 2"
+subtitle: "Econ 502: Advanced Microeconomics"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      file: ../assets/pset-preamble.tex
+format-links: [pdf]
+---

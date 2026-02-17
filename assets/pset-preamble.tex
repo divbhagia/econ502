@@ -1,0 +1,135 @@
+% ============================================================
+%  Econ 502 — Problem Set / Handout Theme
+% ============================================================
+
+% ---------- packages ----------
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+
+\tcbuselibrary{skins, breakable}
+
+% ---------- colors ----------
+\definecolor{csufblue}{HTML}{1E5288}
+\definecolor{csufnavy}{HTML}{00274C}
+\definecolor{accentteal}{HTML}{16A085}
+\definecolor{lightgray}{HTML}{F5F5F5}
+\definecolor{medgray}{HTML}{E0E0E0}
+\definecolor{darktext}{HTML}{1A1A1A}
+
+% ---------- page style ----------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.8pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{csufblue}\leaders\hrule height \headrulewidth\hfill}}
+\fancyhead[L]{\small\color{csufblue}\textbf{Econ 502: Advanced Microeconomics}}
+\fancyhead[R]{\small\color{csufblue}\thepage}
+\fancyfoot{}
+
+% first page: colored footer only
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[C]{\small\color{csufblue}\thepage}
+}
+
+% ---------- title block ----------
+% Hook into Pandoc's \maketitle: add ruled lines around the title
+\makeatletter
+\renewcommand{\maketitle}{%
+  \thispagestyle{plain}
+  \begin{center}
+    {\color{csufblue}\rule{\textwidth}{1.5pt}}\par
+    \vspace{10pt}
+    {\LARGE\bfseries\color{csufnavy}\@title\par}
+    \vspace{8pt}
+    {\color{csufblue}\rule{\textwidth}{1.5pt}}
+  \end{center}
+  \vspace{12pt}
+}
+\makeatother
+
+% ---------- section headings ----------
+\titleformat{\section}
+  {\Large\bfseries\color{csufnavy}}
+  {}{0pt}{}
+  [\vspace{2pt}{\color{csufblue}\titlerule[0.8pt]}]
+
+\titleformat{\subsection}
+  {\large\bfseries\color{csufblue}}
+  {}{0pt}{}
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\color{accentteal}}
+  {}{0pt}{}
+
+\titlespacing*{\section}{0pt}{16pt}{8pt}
+\titlespacing*{\subsection}{0pt}{12pt}{4pt}
+\titlespacing*{\subsubsection}{0pt}{8pt}{4pt}
+
+% ---------- tcolorbox environments ----------
+
+% Answer/solution box (blue)
+\newtcolorbox{answer}{
+  colback   = csufblue!5,
+  colframe  = csufblue,
+  arc       = 3pt,
+  boxrule   = 0.8pt,
+  left      = 8pt,
+  right     = 8pt,
+  top       = 6pt,
+  bottom    = 6pt,
+  breakable,
+}
+
+% Key result box (teal, with optional title)
+\newtcolorbox{keyresult}[1][]{
+  colback      = accentteal!5,
+  colframe     = accentteal,
+  arc          = 3pt,
+  boxrule      = 0.8pt,
+  left         = 8pt,
+  right        = 8pt,
+  top          = 6pt,
+  bottom       = 6pt,
+  fonttitle    = \bfseries\color{white},
+  coltitle     = white,
+  colbacktitle = accentteal,
+  title        = {#1},
+  breakable,
+}
+
+% Note box (light gray)
+\newtcolorbox{note}{
+  colback  = lightgray,
+  colframe = medgray,
+  arc      = 3pt,
+  boxrule  = 0.6pt,
+  left     = 8pt,
+  right    = 8pt,
+  top      = 6pt,
+  bottom   = 6pt,
+  breakable,
+}
+
+% ---------- list styling ----------
+\setlist[enumerate, 1]{label=(\alph*), leftmargin=*, topsep=4pt, itemsep=4pt}
+\setlist[enumerate, 2]{label=(\roman*), leftmargin=*, topsep=2pt, itemsep=2pt}
+\setlist[itemize]{leftmargin=*, topsep=4pt, itemsep=3pt}
+
+% ---------- boxed answers ----------
+% Colored \boxed command
+\renewcommand{\boxed}[1]{\fcolorbox{csufblue}{csufblue!4}{$\displaystyle #1$}}
+
+% ---------- hyperlink colors ----------
+\AtBeginDocument{%
+  \hypersetup{
+    colorlinks = true,
+    linkcolor  = csufblue,
+    urlcolor   = accentteal,
+    citecolor  = csufnavy,
+  }%
+}

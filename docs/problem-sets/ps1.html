@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Additional Handouts – Advanced Microeconomics</title>
+<title>Problem Set 1 – Advanced Microeconomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,11 +67,40 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -97,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../content/lecture1.html" aria-current="page"> 
+    <a class="nav-link" href="../content/lecture1.html"> 
 <span class="menu-text">Content</span></a>
   </li>  
   <li class="nav-item">
@@ -115,183 +144,29 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/lecture1.html">I. Competitive Markets</a></li><li class="breadcrumb-item"><a href="../content/part1-add-handouts.html">Additional Handouts</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">I. Competitive Markets</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 2</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 3</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 4</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 5</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/part1-add-handouts.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Additional Handouts</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">II. Market Power</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 6</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 7</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 8</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/part2-add-handouts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Additional Handouts</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">III. Market Failures</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 9</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 10</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/part3-add-handouts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Additional Handouts</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">IV. Uncertainty and Strategy</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 11</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 12</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/part4-add-handouts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Additional Handouts</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#consumer-theory-lectures-1-and-2" id="toc-consumer-theory-lectures-1-and-2" class="nav-link active" data-scroll-target="#consumer-theory-lectures-1-and-2">Consumer Theory (Lectures 1 and 2)</a></li>
+  <li><a href="#problem-1-altruism-textbook-ex-4.14" id="toc-problem-1-altruism-textbook-ex-4.14" class="nav-link active" data-scroll-target="#problem-1-altruism-textbook-ex-4.14">Problem 1: Altruism (Textbook Ex 4.14)</a></li>
+  <li><a href="#problem-2-elasticities-and-logs-textbook-ex-5.8" id="toc-problem-2-elasticities-and-logs-textbook-ex-5.8" class="nav-link" data-scroll-target="#problem-2-elasticities-and-logs-textbook-ex-5.8">Problem 2: Elasticities and Logs (Textbook Ex 5.8)</a></li>
+  <li><a href="#problem-3-sugar-sweetened-beverage-tax" id="toc-problem-3-sugar-sweetened-beverage-tax" class="nav-link" data-scroll-target="#problem-3-sugar-sweetened-beverage-tax">Problem 3: Sugar-Sweetened Beverage Tax</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ps1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/lecture1.html">I. Competitive Markets</a></li><li class="breadcrumb-item"><a href="../content/part1-add-handouts.html">Additional Handouts</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Additional Handouts</h1>
+<h1 class="title">Problem Set 1</h1>
+<p class="subtitle lead">Econ 502: Advanced Microeconomics</p>
 </div>
 
 
@@ -308,15 +183,58 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>You can find additional handouts and reference materials for Part I: Competetive Markets below.</p>
-<section id="consumer-theory-lectures-1-and-2" class="level2">
-<h2 class="anchored" data-anchor-id="consumer-theory-lectures-1-and-2">Consumer Theory (Lectures 1 and 2)</h2>
-<ul>
-<li><a href="../handouts/lec1-2_cd_derivations.pdf">Cobb-Douglas Demand Derivations (PDF)</a>
-<ul>
-<li>This handout provides step-by-step derivations of the Marshallian (uncompensated) and Hicksian (compensated) demand functions for Cobb-Douglas preferences.</li>
-</ul></li>
-</ul>
+<section id="problem-1-altruism-textbook-ex-4.14" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1-altruism-textbook-ex-4.14">Problem 1: Altruism (Textbook Ex 4.14)</h2>
+<p>Michele, who has a relatively high income <span class="math inline">\(I\)</span>, has altruistic feelings toward Sofia, who lives in such poverty that she essentially has no income. Suppose Michele’s preferences are represented by the utility function</p>
+<p><span class="math display">\[U_1(c_1, c_2) = c_1^{1-a}c_2^a,\]</span></p>
+<p>where <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span> are Michele and Sofia’s consumption levels, appearing as goods in a standard Cobb-Douglas utility function. Assume that Michele can spend her income either on her own or Sofia’s consumption (through charitable donations) and that $1 buys a unit of consumption for either (thus, the “prices” of consumption are <span class="math inline">\(p_1 = p_2 = 1\)</span>).</p>
+<ol type="a">
+<li><p>Argue that the exponent <span class="math inline">\(a\)</span> can be taken as a measure of the degree of Michele’s altruism by providing an interpretation of extremes values <span class="math inline">\(a = 0\)</span> and <span class="math inline">\(a = 1\)</span>. What value would make her a perfect altruist (regarding others the same as oneself)?</p></li>
+<li><p>Solve for Michele’s optimal choices and demonstrate how they change with <span class="math inline">\(a\)</span>.</p></li>
+<li><p>Solve for Michele’s optimal choices under an income tax at rate <span class="math inline">\(t\)</span>. How do her choices change if there is a charitable deduction (so income spent on charitable deductions is not taxed)? Does the charitable deduction have a bigger incentive effect on more or less altruistic people?</p></li>
+</ol>
+</section>
+<section id="problem-2-elasticities-and-logs-textbook-ex-5.8" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2-elasticities-and-logs-textbook-ex-5.8">Problem 2: Elasticities and Logs (Textbook Ex 5.8)</h2>
+<p>Because natural logarithms measure proportional changes, they correspond well to elasticity concepts. Here you are asked to show a few of these connections.</p>
+<ol type="a">
+<li><p>Show that <span class="math inline">\(e_{x,p_x} = \dfrac{\partial \ln x}{\partial \ln p_x}\)</span></p></li>
+<li><p>For the constant elasticity demand function <span class="math inline">\(x = a(p_x)^m\)</span> where <span class="math inline">\(m &lt; 0\)</span>, show that <span class="math inline">\(e_{x,p_x} = m\)</span>.</p></li>
+</ol>
+</section>
+<section id="problem-3-sugar-sweetened-beverage-tax" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3-sugar-sweetened-beverage-tax">Problem 3: Sugar-Sweetened Beverage Tax</h2>
+<p>Cities like Philadelphia and Berkeley have implemented taxes on sugar-sweetened beverages (SSBs) to reduce consumption and improve public health. Consider a consumer with preferences over sugary drinks (<span class="math inline">\(s\)</span>, measured in ounces per month) and a <em>composite</em> good (<span class="math inline">\(x\)</span>) given by:</p>
+<p><span class="math display">\[U(s, x) = s^{0.3} x^{0.7}\]</span></p>
+<p>The consumer has income <span class="math inline">\(I = \$300\)</span> per month. Initially, the price of sugary drinks is <span class="math inline">\(p_s = \$0.05\)</span> per ounce and the price of the composite good is <span class="math inline">\(p_x = \$1\)</span>.</p>
+<p>The city proposes a tax of <span class="math inline">\(t = \$0.015\)</span> per ounce on sugary drinks (similar to Philadelphia’s 2017 tax), raising the consumer price to <span class="math inline">\(p_s' = \$0.065\)</span> per ounce.</p>
+<p><em>Note</em>: Parts (a), (b), and (d) require the Marshallian demand functions, which you derive from utility maximization. On the other hand, part (c) requires the expenditure function/Hicksian demand, which you derive from expenditure minimization.</p>
+<ol type="a">
+<li><p>Calculate the consumer’s initial optimal consumption bundle <span class="math inline">\((s^*, x^*)\)</span> and utility level <span class="math inline">\(U_0\)</span>.</p></li>
+<li><p>Calculate the new optimal consumption bundle <span class="math inline">\((s^{**}, x^{**})\)</span> after the tax is implemented.</p></li>
+<li><p><strong>Consumer Surplus:</strong> Using the demand function for sugary drinks, calculate the approximate loss in consumer surplus from the tax. Compare this to the CV. (If you don’t know how to integrate, you can approximate the area using a trapezoid or rectangle method or use a scientific calculator.)</p></li>
+<li><p><strong>Compensating Variation (CV)</strong>: Calculate how much additional income the consumer would need after the tax to achieve the original utility level <span class="math inline">\(U_0\)</span>. This represents the money-metric loss in welfare from the consumer’s perspective.</p></li>
+<li><p><strong>Tax Revenue and Deadweight Loss:</strong> Calculate:</p>
+<ol type="i">
+<li>Total tax revenue collected: <span class="math inline">\(R = t \cdot s^{**}\)</span></li>
+<li>Deadweight loss: <span class="math inline">\(DWL = CV - R\)</span></li>
+</ol>
+<p>Interpret these results. Is the tax efficient if consuming sugary drinks creates a negative health externality of <span class="math inline">\(e = \$0.01\)</span> per ounce (in terms of future healthcare costs and lost productivity)?</p></li>
+<li><p><strong>Revenue Recycling:</strong> Suppose instead of keeping the tax revenue, the government rebates it back to the consumer as a lump-sum transfer (equal to the tax revenue collected).</p>
+<ol type="i">
+<li>What is the consumer’s new budget constraint?</li>
+<li>What is their optimal consumption?</li>
+<li>What is their utility level?</li>
+<li>Compare this to parts (a) and (b). Is the consumer better or worse off than with no policy? Why?</li>
+</ol></li>
+<li><p><strong>Policy Discussion:</strong> Discuss the following:</p>
+<ol type="i">
+<li>Which welfare measure (CV vs CS) is most appropriate for policy analysis? Why might they differ?</li>
+<li>Is the sugary drink tax regressive (hurts poor households more)? How would you empirically test this?</li>
+<li>Evidence from Philadelphia shows substantial cross-border shopping reduced the tax’s effectiveness. How does this affect your welfare calculations? What does it suggest about optimal policy design?</li>
+<li>If consumers exhibit present bias (underweight future health costs), does this justify a higher or lower tax than your calculation in part (f) suggests? How would you modify the welfare analysis to account for behavioral biases?</li>
+</ol></li>
+</ol>
 
 
 </section>

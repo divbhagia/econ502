@@ -165,9 +165,3 @@ $code-color: #1a1a1a;
   margin-right: auto;
 }
 
-// Hide section slides in print-pdf mode
-@media print {
-  .section-slide {
-    display: none !important;
-  }
-}

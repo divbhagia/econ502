@@ -1,0 +1,261 @@
+---
+title: "Problem Set 1: Solutions"
+subtitle: "Econ 502: Advanced Microeconomics"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      file: ../assets/pset-preamble.tex
+format-links: [pdf]
+---
+
+## Problem 1: Altruism (Textbook Ex 4.14)
+
+Michele's utility function: $U_1(c_1, c_2) = c_1^{1-a}c_2^a$, with budget constraint $c_1 + c_2 = I$.
+
+### Part (a): Interpreting the altruism parameter $a$
+
+- When $a = 0$: $U_1 = c_1$. Michele is completely selfish and cares only about her own consumption.
+- When $a = 1$: $U_1 = c_2$. Michele is completely selfless and cares only about Sofia's consumption.
+- When $a = 0.5$: $U_1 = c_1^{0.5}c_2^{0.5}$. Michele is a **perfect altruist** and weights her own and Sofia's consumption equally.
+
+The exponent $a$ represents the share of Michele's "concern" (or budget) allocated to Sofia. Higher $a$ means more altruistic.
+
+### Part (b): Optimal choices
+
+This is a standard Cobb-Douglas maximization problem with $p_1 = p_2 = 1$. Using the Cobb-Douglas demand functions:
+$$c_1^* = \frac{(1-a) \cdot I}{(1-a+a) \cdot 1} = (1-a)I$$
+$$c_2^* = \frac{a \cdot I}{(1-a+a) \cdot 1} = aI$$
+
+$$\boxed{c_1^* = (1-a)I, \qquad c_2^* = aI}$$
+
+As $a$ increases, Michele donates more to Sofia ($c_2^*$ rises) and keeps less for herself ($c_1^*$ falls). The share spent on Sofia is exactly $a$.
+
+### Part (c): Income tax and charitable deduction
+
+**With income tax (no deduction):**
+
+After-tax income is $(1-t)I$. The problem is unchanged except income falls to $(1-t)I$:
+$$c_1^* = (1-a)(1-t)I, \qquad c_2^* = a(1-t)I$$
+
+Both consumption levels fall proportionally. The share devoted to charity is still $a$.
+
+**With income tax and charitable deduction:**
+
+If charitable donations are tax-deductible, Michele pays tax only on non-donated income. Her taxable income is $I - c_2$ (charitable donations are deducted), so her tax bill is $t(I - c_2)$. The budget constraint is:
+$$c_1 + c_2 = I - t(I - c_2)$$
+$$c_1 + c_2 = (1-t)I + tc_2$$
+$$c_1 + (1-t)c_2 = (1-t)I$$
+
+So the effective prices are $p_1 = 1$ for own consumption and $p_2 = (1-t)$ for donations (out of after-tax income $(1-t)I$). Equivalently, dividing through by $(1-t)$:
+
+$$ \frac{c_1}{1-t} + c_2 = I$$
+
+Applying Cobb-Douglas demands with $p_1 = 1/(1-t)$ and $p_2 = 1$:
+$$ c_1^* = \frac{(1-a)I}{1/(1-t)} = (1-a)(1-t)I$$
+$$ c_2^* = \frac{aI}{1} = aI$$
+
+$$\boxed{c_1^* = (1-a)(1-t)I, \qquad c_2^* = aI}$$
+
+**Key result:** With the charitable deduction, donations return to the no-tax level ($aI$), while own-consumption still falls due to taxes. The deduction fully offsets the tax's effect on giving.
+
+**Comparing tax only vs. tax with deduction:**
+
+- Without deduction: $c_2 = a(1-t)I$
+- With deduction: $c_2 = aI$
+
+The increase in donations due to the deduction is $aI - a(1-t)I = atI$. This is **larger for more altruistic people** (higher $a$), so the charitable deduction has a bigger incentive effect on more altruistic individuals.
+
+
+\newpage
+
+## Problem 2: Elasticities and Logs (Textbook Ex 5.8)
+
+### Part (a): Show that $e_{x,p_x} = \frac{d \ln x}{d \ln p_x}$
+
+First note that price elasticity of demand is defined as:
+$$e_{x,p_x} = \frac{d x}{d p_x} \cdot \frac{p_x}{x}$$
+
+Now note that for $u = \ln x$, we have $\dfrac{d u}{d x} = \dfrac{1}{x}$, rearranging this gives $du = \dfrac{1}{x} dx$. Noting that $du = d \ln x$ we have:
+$$d \ln x = \frac{1}{x} dx$$
+
+Similarly, we can write $$d \ln p_x = \frac{1}{p_x} dp_x$$
+
+Therefore, we have:
+$$\frac{d \ln x}{d \ln p_x} = \frac{ \frac{1}{x} dx}{\frac{1}{p_x} dp_x} = \frac{dx}{dp_x} \cdot \frac{p_x}{x} = e_{x,p_x}$$
+
+
+### Part (b): Constant elasticity demand
+
+Given $x = a(p_x)^m$, take the natural log of both sides:
+$$\ln x = \ln a + m \ln p_x$$
+
+Differentiate with respect to $\ln p_x$:
+$$e_{x,p_x} = \frac{d \ln x}{d \ln p_x} = m$$
+
+This functional form is called the "constant elasticity" demand function as the elasticity equals $m$ regardless of the price level.
+
+
+\newpage
+
+## Problem 3: Sugar-Sweetened Beverage Tax 
+
+Given: $U(s, x) = s^{0.3}x^{0.7}$, $I = 300$, $p_s = 0.05$, $p_x = 1$, tax $t = 0.015$, so $p_s' = 0.065$.
+
+Since $\alpha + \beta = 0.3 + 0.7 = 1$, the Cobb-Douglas demands simplify to standard expenditure shares.
+
+### Part (a): Initial optimal bundle
+
+Using Cobb-Douglas Marshallian demands:
+$$s^* = \frac{0.3 \cdot I}{p_s} = \frac{0.3 \times 300}{0.05} = \frac{90}{0.05} = 1800 \text{ oz}$$
+
+$$x^* = \frac{0.7 \cdot I}{p_x} = \frac{0.7 \times 300}{1} = 210$$
+
+Utility:
+$$U_0 = (1800)^{0.3}(210)^{0.7} \approx 400$$
+
+
+### Part (b): Bundle after tax
+
+With $p_s' = 0.065$:
+$$s^{**} = \frac{0.3 \times 300}{0.065} = \frac{90}{0.065} \approx 1384.6 \text{ oz}$$
+
+$$x^{**} = \frac{0.7 \times 300}{1} = 210$$
+
+Note that $x^{**}$ is unchanged because Cobb-Douglas utility implies each good receives a fixed expenditure share, and $p_x$ did not change.
+
+$$\boxed{s^{**} \approx 1384.6, \quad x^{**} = 210}$$
+
+New utility: $U_1 = (1384.6)^{0.3}(210)^{0.7} \approx 370$
+
+
+### Part (c): Consumer Surplus
+
+The Marshallian demand for sugary drinks is $s = \frac{0.3 \cdot I}{p_s} = \frac{90}{p_s}$.
+
+The change in consumer surplus is:
+$$\Delta CS = -\int_{0.05}^{0.065} s(p_s) \, dp_s = -\int_{0.05}^{0.065} \frac{90}{p_s} \, dp_s$$
+
+$$= -90 \left[\ln p_s\right]_{0.05}^{0.065} = -90(\ln 0.065 - \ln 0.05) = -90 \ln\left(\frac{0.065}{0.05}\right)$$
+
+$$= -90 \ln(1.3) = -90 \times 0.2624 = -23.6$$
+
+$$\boxed{\Delta CS \approx -\$23.62}$$
+
+**Trapezoid approximation** (for students who cannot integrate): The area under the demand curve between the two prices can be approximated as:
+$$\Delta CS \approx -\frac{1}{2}(s^* + s^{**}) \times (p_s' - p_s) = -\frac{1}{2}(1800 + 1384.6)(0.015) \approx -\$23.88$$
+
+
+### Part (d): Compensating Variation
+
+The CV is the additional income needed at new prices to achieve the original utility $U_0$. We need the expenditure function.
+
+For Cobb-Douglas $U = s^{\alpha}x^{\beta}$ with $\alpha + \beta = 1$, the expenditure function is:
+$$E(p_s, p_x, \bar{U}) = \bar{U} \cdot \left(\frac{p_s}{\alpha}\right)^{\alpha}\left(\frac{p_x}{\beta}\right)^{\beta} = \bar{U} \cdot K \cdot p_s^{\alpha}p_x^{\beta}$$
+
+where $K = \alpha^{-\alpha}\beta^{-\beta} = (0.3)^{-0.3}(0.7)^{-0.7} = 1.842$. 
+
+Expenditure at original prices and $U_0$:
+$$E(0.05, 1, 400) = 400 \cdot 1.842 \cdot (0.05)^{0.3}(1)^{0.7} \approx 300$$
+
+Expenditure at new prices and $U_0$:
+$$E(0.065, 1, 400) = 400 \cdot 1.842 \cdot (0.065)^{0.3}(1)^{0.7} \approx 324 $$
+
+$$\boxed{CV = E(p_s', p_x, U_0) - E(p_s, p_x, U_0) = 324 - 300 = \$24}$$
+
+The consumer would need \$24 in additional income to be as well off as before the tax.
+
+The CS approximation is very close to the CV. They are similar because the income effect of this price change is small (sugary drinks are a small share of the budget).
+
+
+### Part (f): Tax Revenue and Deadweight Loss
+
+**(i) Tax revenue:**
+$$R = t \cdot s^{**} = 0.015 \times 1384.6 \approx \$20.77$$
+
+**(ii) Deadweight loss:**
+$$DWL = CV - R = 24 - 20.77 = \$3.23$$
+
+**Interpretation:** Of the \$24 welfare loss to the consumer, \$20.77 is transferred to the government as tax revenue and \$3.23 is pure efficiency loss (deadweight loss).
+
+**Externality justification:** The negative externality is $e = \$0.01$ per ounce. The reduction in externality from the tax is:
+$$\Delta \text{Externality} = e \times (s^* - s^{**}) = 0.01 \times (1800 - 1384.6) = 0.01 \times 415.4 = \$4.15$$
+
+The tax generates \$20.77 in revenue and reduces externalities by \$4.15, while creating only \$3.23 in deadweight loss. Since the externality reduction (\$4.15) exceeds the DWL (\$3.23), the tax improves overall welfare somewhat.
+
+
+### Part (g): Revenue Recycling
+
+**(i) New budget constraint:**
+
+The consumer faces the taxed price $p_s' = 0.065$ but receives a lump-sum rebate $R$ equal to the tax revenue collected. The budget constraint is:
+$$p_s' \cdot s + x = I + R$$
+$$0.065s + x = 300 + R$$
+
+Note that while $R = t \cdot s$, the consumer takes $R$ as given when choosing $s$ and $x$ (they do not internalize that their choice of $s$ affects $R$). If they did internalize it, then the consumer's problem would remain unchanged from the no-tax case. 
+
+**(ii) Optimal consumption:**
+
+Applying the Cobb-Douglas demand functions:
+$$s(R) = \frac{0.3(300 + R)}{0.065} $$
+$$x(R) = 0.7(300 + R)$$
+
+
+In equilibrium, the rebate equals the tax revenue: $R = t \cdot s(R)$. Substituting:
+$$R = 0.015 \cdot \frac{0.3(300 + R)}{0.065}$$
+
+$$0.065R = 1.35 + 0.0045R$$
+
+$$0.0605R = 1.35$$
+
+$$R = \frac{1.35}{0.0605} \approx 22.31$$
+
+Therefore, equilibrium consumption is:
+$$s_R = \frac{0.3(300 + 22.31)}{0.065} \approx 1487.6 \text{ oz}$$
+$$x_R = 0.7(300 + 22.31) \approx 225.6$$
+
+**(iii) New utility level:**
+
+The new utility level is:
+$$U_R = (s_R)^{0.3}(x_R)^{0.7} \approx 397$$
+
+**(iv) Comparison:**
+
+Under the tax-and-rebate scheme, the consumer reaches utility $U_R \approx 397$, between the no-tax level ($U_0 \approx 400$) and the tax-only level ($U_1 \approx 370$). The policy is largely successful: sugary drink consumption falls meaningfully from 1800 to about 1488 ounces, achieving the public health goal, while the rebate returns most of the welfare cost to the consumer. The consumer loses only about 3 utils compared to 30 under the tax alone. Composite good consumption actually rises from 210 to 226, since the rebate provides additional purchasing power that gets redirected toward untaxed goods. The small residual welfare loss ($400 - 397$) is the unavoidable deadweight loss from distorting relative prices, but it is far smaller than the welfare cost of the tax without revenue recycling.
+
+
+### Part (h): Policy Discussion
+
+**(i) CV vs CS:**
+
+The CV is generally preferred for welfare analysis because it is based on well-defined utility theory and the expenditure function. CS relies on the Marshallian demand curve, which conflates income and substitution effects. However, in this case they give nearly identical results because the income effect is small (sugary drinks are a small budget share). CS is often used in practice because it is easier to estimate empirically (only requires observable demand data, not utility parameters).
+
+**(ii) Regressivity:**
+
+The tax is likely regressive because lower-income households spend a larger share of their income on taxed beverages. To test this empirically, one could:
+
+- Compare pre- and post-tax spending on SSBs across income quintiles using household expenditure surveys
+- Estimate demand elasticities by income group (lower-income consumers may be more price-elastic, partially offsetting regressivity)
+- Calculate the tax burden as a share of income across the distribution
+
+Revenue recycling (as in part g) can mitigate regressivity if the lump-sum rebate represents a larger share of income for poorer households.
+
+**(iii) Cross-border shopping:**
+
+With cross-border shopping, the consumer's effective price lies somewhere between $p_s$ and $p_s'$: they can avoid the tax by traveling to a neighboring jurisdiction, but incur transport and time costs to do so. Call this effective price $\tilde{p}_s \in (p_s, p_s')$. This has two offsetting effects on welfare:
+
+- **Smaller welfare loss to the consumer:** Since $\tilde{p}_s < p_s'$, the consumer faces a smaller effective price increase, so the reduction in consumer surplus (and CV) is smaller than our calculation suggests.
+- **Much lower tax revenue:** The consumer purchases fewer taxed ounces within the city, so revenue $R = t \cdot s_{\text{local}}$ falls substantially if most purchases shift across the border.
+
+The net effect on deadweight loss ($DWL = CV - R$) is ambiguous but likely *higher*: the CV falls somewhat, but revenue falls by more, since the government collects nothing on cross-border purchases while the consumer still bears the cost of traveling to avoid the tax. In the extreme, if all purchases move across the border, $R = 0$ and the entire welfare loss (including transport costs) is pure deadweight loss.
+
+This suggests that the optimal policy would be implemented at a broader geographic level (state or federal) to minimize cross-border leakage.
+
+**(iv) Present bias and behavioral considerations:**
+
+If consumers exhibit present bias, they overweight the immediate pleasure of sugary drinks relative to future health costs. In this case, their *experienced* utility from reduced consumption may be higher than their *decision* utility suggests and they would thank their future selves for consuming less.
+
+To modify the welfare analysis, one would need to distinguish between decision utility (the preferences consumers act on, which reflect present bias) and experienced utility (their true long-run well-being). Our CV calculation uses decision utility, which overstates the welfare cost of the tax: some of what appears as lost consumer welfare is actually a gain from correcting overconsumption. Under experienced utility, the DWL would be smaller, and the tax may even be welfare-improving if it helps consumers overcome self-control problems. In this case, a higher tax than the one calculated under standard assumptions may be justified to achieve the socially optimal level of consumption.

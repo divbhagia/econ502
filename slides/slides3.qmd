@@ -30,12 +30,12 @@ Shows the *maximum* output from each input combination (efficient production).
 
 The **marginal product** of an input is the additional output from one more unit of that input, holding other inputs constant:
 
-$$MP_L = \frac{\partial f}{\partial L} = f_l, \qquad MP_K = \frac{\partial f}{\partial K} = f_k$$
+$$MP_L = \frac{\partial f}{\partial L} = f_L, \qquad MP_K = \frac{\partial f}{\partial K} = f_K$$
 
 ::: {.fragment}
 **Diminishing marginal productivity:** We assume that marginal products eventually decrease
 
-$$\frac{\partial^2 f}{\partial L^2} = f_{ll} < 0, \qquad \frac{\partial^2 f}{\partial K^2} = f_{kk} < 0$$
+$$\frac{\partial^2 f}{\partial L^2} = f_{LL} < 0, \qquad \frac{\partial^2 f}{\partial K^2} = f_{KK} < 0$$
 
 Holding capital fixed, each additional worker adds less and less output.
 :::
@@ -45,17 +45,17 @@ Holding capital fixed, each additional worker adds less and less output.
 ## Average vs. Marginal Productivity
 
 **Average product of labor:**
-$$AP_l = \frac{Q}{L} = \frac{f(K,L)}{L}$$
+$$AP_L = \frac{Q}{L} = \frac{f(K,L)}{L}$$
 
 - What people usually mean by "labor productivity"
 - Depends on how much capital workers have
 
 ::: {.fragment}
-**Important:** $AP_l$ depends on $K$ too. When we say "U.S. workers are more productive than Indian workers," much of that reflects more capital per worker, not inherently more productive labor.
+**Important:** $AP_L$ depends on $K$ too. When we say "U.S. workers are more productive than Indian workers," much of that reflects more capital per worker, not inherently more productive labor.
 :::
 
 ::: {.fragment}
-**Cross-productivity effects:** Typically $f_{kl} > 0$ — more capital makes labor more productive and vice versa.
+**Cross-productivity effects:** Typically $f_{KL} > 0$ — more capital makes labor more productive and vice versa.
 :::
 
 ---
@@ -117,11 +117,11 @@ plt.show()
 
 The **RTS** (rate of technical substitution) is the rate at which labor can substitute for capital, holding output constant:
 
-$$RTS = -\frac{dk}{dl}\bigg|_{Q = \bar{Q}} = \frac{MP_L}{MP_K} = \frac{f_l}{f_k}$$
+$$RTS = -\frac{dK}{dL}\bigg|_{Q = \bar{Q}} = \frac{MP_L}{MP_K} = \frac{f_L}{f_K}$$
 
 ::: {.fragment}
 **Derivation:** Total differential along an isoquant ($dQ = 0$):
-$$dQ = f_l \, dl + f_k \, dk = 0 \implies \frac{dk}{dl} = -\frac{f_l}{f_k}$$
+$$dQ = f_L \, dL + f_K \, dK = 0 \implies \frac{dK}{dL} = -\frac{f_L}{f_K}$$
 :::
 
 ::: {.fragment}
@@ -182,9 +182,9 @@ How does output respond when *all* inputs scale proportionally?
 
 | Condition | Returns to Scale |
 |-----------|-----------------|
-| $f(tk, tl) = t \cdot f(K,L)$ | Constant (CRS) |
-| $f(tk, tl) < t \cdot f(K,L)$ | Decreasing (DRS) |
-| $f(tk, tl) > t \cdot f(K,L)$ | Increasing (IRS) |
+| $f(tK, tL) = t \cdot f(K,L)$ | Constant (CRS) |
+| $f(tK, tL) < t \cdot f(K,L)$ | Decreasing (DRS) |
+| $f(tK, tL) > t \cdot f(K,L)$ | Increasing (IRS) |
 |
 
 ::: {.fragment}
@@ -228,12 +228,12 @@ $$\min_{K,L} \; rK + wL \quad \text{s.t.} \quad f(K,L) = q_0$$
 $$\mathcal{L} = rK + wL + \lambda[q_0 - f(K,L)]$$
 
 **First-order conditions:**
-$$r = \lambda f_k, \qquad w = \lambda f_l, \qquad f(K,L) = q_0$$ 
+$$r = \lambda f_K, \qquad w = \lambda f_L, \qquad f(K,L) = q_0$$ 
 :::
 
 ::: {.fragment}
 Dividing the first two:
-$$\frac{f_l}{f_k} = \frac{w}{r} \qquad \Longrightarrow \qquad RTS = \frac{w}{r}$$
+$$\frac{f_L}{f_K} = \frac{w}{r} \qquad \Longrightarrow \qquad RTS = \frac{w}{r}$$
 :::
 
 
@@ -293,7 +293,7 @@ The optimal point is where the isoquant is tangent to the lowest isocost line.
 
 From the first-order conditions:
 
-$$\frac{f_l}{w} = \frac{f_k}{r} = \frac{1}{\lambda}$$
+$$\frac{f_L}{w} = \frac{f_K}{r} = \frac{1}{\lambda}$$
 
 **Interpretation of $\lambda$:**
 
@@ -336,10 +336,10 @@ where $K^*$ and $L^*$ are the cost-minimizing input choices from the previous pr
 
 For Cobb-Douglas $Q = K^{0.5} L^{0.5}$, the cost-minimizing inputs are:
 
-$$K^* = \frac{Q}{\sqrt{w/r}}, \qquad L^* = Q \sqrt{w/r}$$
+$$L^* = \frac{Q}{\sqrt{w/r}}, \qquad K^* = Q \sqrt{w/r}$$
 
 Plugging into the cost function:
-$$C(r, w, Q) = rK^* + wL^* = r \cdot \frac{Q}{\sqrt{w/r}} + w \cdot Q \sqrt{w/r} = 2Q\sqrt{rw}$$
+$$C(r, w, Q) = wL^* + rK^* = w \cdot \frac{Q}{\sqrt{w/r}} + r \cdot Q \sqrt{w/r} = 2Q\sqrt{rw}$$
 
 Average and marginal cost:
 
@@ -358,7 +358,7 @@ $AC=MC$ and both are constant in $Q$ always for CRS.
 $$SC(\bar{K}, w, Q) = r\bar{K} + wL(Q, \bar{K})$$
 
 ::: {.fragment}
-- **Fixed costs ($r\bar{K}$):** incurred regardless of output
+- **Fixed costs ($r\bar{K}$):** incurred regardLess of output
 - **Variable costs ($wL$):** vary with output level
 
 **Key result:** Short-run costs $\geq$ long-run costs, with equality only at the output level for which $\bar{K}$ is optimal.
@@ -556,9 +556,9 @@ $$p \cdot MP_L = w \qquad \text{and} \qquad p \cdot MP_K = r$$
 
 Hire each input until its **marginal revenue product** equals its price.
 
-- $MRP_l = p \cdot MP_L$: extra revenue from one more unit of labor
-- If $MRP_l > w$: hire more labor (adds more revenue than cost)
-- If $MRP_l < w$: hire less labor
+- $MRP_L = p \cdot MP_L$: extra revenue from one more unit of labor
+- If $MRP_L > w$: hire more labor (adds more revenue than cost)
+- If $MRP_L < w$: hire less labor
 :::
 
 
@@ -566,7 +566,7 @@ Hire each input until its **marginal revenue product** equals its price.
 
 ## Substitution and Output Effects
 
-What happens when the wage $w$ falls?
+What happens to labor demand when the wage $w$ falls?
 
 **Two effects (parallel to consumer theory):**
 

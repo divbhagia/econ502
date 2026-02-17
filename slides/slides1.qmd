@@ -648,7 +648,7 @@ py = 5
 x = np.linspace(0, I/px, 100)
 y = (I - px*x) / py
 
-ax.plot(x, y, 'b-', linewidth=2, label=f'Budget Line: {px}x + {py}y = {I}', color='black')
+ax.plot(x, y, '-', linewidth=2, label=f'Budget Line: {px}x + {py}y = {I}', color='black')
 ax.fill_between(x, 0, y, alpha=0.2, color='black', label='Feasible Set')
 
 # Add slope annotation
