@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
@@ -121,8 +150,17 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ps2.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-1-automation-and-labor-demand" id="toc-problem-1-automation-and-labor-demand" class="nav-link active" data-scroll-target="#problem-1-automation-and-labor-demand">Problem 1: Automation and Labor Demand</a></li>
+  <li><a href="#problem-2-profit-maximization-and-taxation" id="toc-problem-2-profit-maximization-and-taxation" class="nav-link" data-scroll-target="#problem-2-profit-maximization-and-taxation">Problem 2: Profit Maximization and Taxation</a></li>
+  <li><a href="#problem-3-trade-policy-and-the-portable-radio-market-ex-12.8" id="toc-problem-3-trade-policy-and-the-portable-radio-market-ex-12.8" class="nav-link" data-scroll-target="#problem-3-trade-policy-and-the-portable-radio-market-ex-12.8">Problem 3: Trade Policy and the Portable Radio Market (Ex 12.8)</a></li>
+  <li><a href="#problem-4-general-equilibrium-exchange-edgeworth-box" id="toc-problem-4-general-equilibrium-exchange-edgeworth-box" class="nav-link" data-scroll-target="#problem-4-general-equilibrium-exchange-edgeworth-box">Problem 4: General Equilibrium Exchange (Edgeworth Box)</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ps2.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -146,8 +184,53 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="problem-1-automation-and-labor-demand" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1-automation-and-labor-demand">Problem 1: Automation and Labor Demand</h2>
+<p>A manufacturing firm produces output using robots (R) and workers (L) with the CES production function: <span class="math display">\[Q = [0.6R^{0.5} + 0.4L^{0.5}]^{2}\]</span></p>
+<p>The rental rate for robots is <span class="math inline">\(r = 20\)</span> per hour and the wage is <span class="math inline">\(w = 25\)</span> per hour.</p>
+<ol type="a">
+<li><p>What is the elasticity of substitution between robots and workers? What does this tell you about how easily the firm can replace workers with robots?</p></li>
+<li><p>Solve for the cost-minimizing mix of robots and workers to produce Q = 1000 units.</p></li>
+<li><p>Now suppose technological progress reduces the robot rental rate to <span class="math inline">\(r = 10\)</span>. How does the firm’s use of robots and workers change? Calculate the percentage change in the robot-to-worker ratio.</p></li>
+<li><p>The government is considering a “robot tax” that would increase <span class="math inline">\(r\)</span> back to 20 to protect jobs. Using your answer from (c), estimate how many jobs this would save per 1000 units of output. What’s the trade-off?</p></li>
+</ol>
+<hr>
+</section>
+<section id="problem-2-profit-maximization-and-taxation" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2-profit-maximization-and-taxation">Problem 2: Profit Maximization and Taxation</h2>
+<p>Keeping in mind firms’ profit-maximizing behavior, would a lump-sum tax on profits affect the profit-maximizing quantity of output? What about a proportional tax on profits? What about a tax on each unit of output? How about a tax on labor input?</p>
+<hr>
+</section>
+<section id="problem-3-trade-policy-and-the-portable-radio-market-ex-12.8" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3-trade-policy-and-the-portable-radio-market-ex-12.8">Problem 3: Trade Policy and the Portable Radio Market (Ex 12.8)</h2>
+<p>The domestic demand for portable radios is given by</p>
+<p><span class="math display">\[Q = D(P) = 5{,}000 - 100P,\]</span></p>
+<p>where price (<span class="math inline">\(P\)</span>) is measured in dollars and quantity (<span class="math inline">\(Q\)</span>) is measured in thousands of radios per year. The domestic supply curve for radios is given by</p>
+<p><span class="math display">\[Q = S(P) = 150P.\]</span></p>
+<ol type="a">
+<li><p>What is the domestic equilibrium in the portable radio market?</p></li>
+<li><p>Suppose portable radios can be imported at a world price of $10 per radio. If trade were unencumbered, what would the new market equilibrium be? How many portable radios would be imported?</p></li>
+<li><p>If domestic portable radio producers succeeded in having a $5 tariff implemented, how would this change the market equilibrium? How much would be collected in tariff revenues? How much consumer surplus would be transferred to domestic producers? What would the deadweight loss from the tariff be?</p></li>
+<li><p>How would your results from part (c) be changed if the government reached an agreement with foreign suppliers to “voluntarily” limit the portable radios they export to 1,250,000 per year? Explain how this differs from the case of a tariff.</p></li>
+</ol>
+<hr>
+</section>
+<section id="problem-4-general-equilibrium-exchange-edgeworth-box" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4-general-equilibrium-exchange-edgeworth-box">Problem 4: General Equilibrium Exchange (Edgeworth Box)</h2>
+<p>Consider a simple exchange economy with two people (Ana and Ben) and two goods (X and Y). Total endowments: 100 units of X and 100 units of Y.</p>
+<ul>
+<li><strong>Ana:</strong> Utility <span class="math inline">\(U_A = X_A \cdot Y_A\)</span>, endowment <span class="math inline">\((X_A^0, Y_A^0) = (70, 30)\)</span></li>
+<li><strong>Ben:</strong> Utility <span class="math inline">\(U_B = X_B \cdot Y_B\)</span>, endowment <span class="math inline">\((X_B^0, Y_B^0) = (30, 70)\)</span></li>
+</ul>
+<ol type="a">
+<li><p>Calculate Ana’s and Ben’s marginal rate of substitution (MRS) at the initial endowment. Is this allocation Pareto efficient?</p></li>
+<li><p>If they can trade at price ratio <span class="math inline">\(P_X/P_Y = 1\)</span>, what will Ana demand? What will Ben demand? (Use their budget constraints based on the value of their endowments.)</p></li>
+<li><p>Verify that the competitive equilibrium allocation is Pareto efficient by checking that <span class="math inline">\(MRS_A = MRS_B\)</span>.</p></li>
+<li><p>Describe the contract curve for this economy. What does the First Welfare Theorem tell us about competitive equilibrium?</p></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

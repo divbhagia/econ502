@@ -11,3 +11,62 @@ format:
       file: ../assets/pset-preamble.tex
 format-links: [pdf]
 ---
+
+
+## Problem 1: Automation and Labor Demand
+
+A manufacturing firm produces output using robots (R) and workers (L) with the CES production function:
+$$Q = [0.6R^{0.5} + 0.4L^{0.5}]^{2}$$
+
+The rental rate for robots is $r = 20$ per hour and the wage is $w = 25$ per hour.
+
+a) What is the elasticity of substitution between robots and workers? What does this tell you about how easily the firm can replace workers with robots?
+
+b) Solve for the cost-minimizing mix of robots and workers to produce Q = 1000 units.
+
+c) Now suppose technological progress reduces the robot rental rate to $r = 10$. How does the firm's use of robots and workers change? Calculate the percentage change in the robot-to-worker ratio.
+
+d) The government is considering a "robot tax" that would increase $r$ back to 20 to protect jobs. Using your answer from (c), estimate how many jobs this would save per 1000 units of output. What's the trade-off?
+
+---
+
+## Problem 2: Profit Maximization and Taxation 
+
+Keeping in mind firms' profit-maximizing behavior, would a lump-sum tax on profits affect the profit-maximizing quantity of output? What about a proportional tax on profits? What about a tax on each unit of output? How about a tax on labor input? 
+
+---
+
+## Problem 3: Trade Policy and the Portable Radio Market (Ex 12.8)
+
+The domestic demand for portable radios is given by
+
+$$Q = D(P) = 5{,}000 - 100P,$$
+
+where price ($P$) is measured in dollars and quantity ($Q$) is measured in thousands of radios per year. The domestic supply curve for radios is given by
+
+$$Q = S(P) = 150P.$$
+
+a) What is the domestic equilibrium in the portable radio market?
+
+b) Suppose portable radios can be imported at a world price of $10 per radio. If trade were unencumbered, what would the new market equilibrium be? How many portable radios would be imported?
+
+c) If domestic portable radio producers succeeded in having a $5 tariff implemented, how would this change the market equilibrium? How much would be collected in tariff revenues? How much consumer surplus would be transferred to domestic producers? What would the deadweight loss from the tariff be?
+
+d) How would your results from part (c) be changed if the government reached an agreement with foreign suppliers to "voluntarily" limit the portable radios they export to 1,250,000 per year? Explain how this differs from the case of a tariff.
+
+---
+
+## Problem 4: General Equilibrium Exchange (Edgeworth Box)
+
+Consider a simple exchange economy with two people (Ana and Ben) and two goods (X and Y). Total endowments: 100 units of X and 100 units of Y.
+
+- **Ana:** Utility $U_A = X_A \cdot Y_A$, endowment $(X_A^0, Y_A^0) = (70, 30)$
+- **Ben:** Utility $U_B = X_B \cdot Y_B$, endowment $(X_B^0, Y_B^0) = (30, 70)$
+
+a) Calculate Ana's and Ben's marginal rate of substitution (MRS) at the initial endowment. Is this allocation Pareto efficient?
+
+b) If they can trade at price ratio $P_X/P_Y = 1$, what will Ana demand? What will Ben demand? (Use their budget constraints based on the value of their endowments.)
+
+c) Verify that the competitive equilibrium allocation is Pareto efficient by checking that $MRS_A = MRS_B$.
+
+d) Describe the contract curve for this economy. What does the First Welfare Theorem tell us about competitive equilibrium?
