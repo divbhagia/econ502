@@ -70,3 +70,45 @@ b) If they can trade at price ratio $P_X/P_Y = 1$, what will Ana demand? What wi
 c) Verify that the competitive equilibrium allocation is Pareto efficient by checking that $MRS_A = MRS_B$.
 
 d) Describe the contract curve for this economy. What does the First Welfare Theorem tell us about competitive equilibrium?
+
+---
+
+## Problem 5: Optimal Redistribution with Distortionary Taxation
+
+A simple economy has two individuals:
+
+- A **poor** individual with income $y_P$
+- A **rich** individual with income $y_R > y_P$
+
+The government chooses a **tax rate** $\tau \in [0,1]$ applied only to the rich. All tax revenue is redistributed to the poor.
+
+Taxation is distortionary: a fraction of revenue is lost due to inefficiency. Deadweight loss is given by:
+
+$$\text{DWL} = \frac{1}{2} k \tau^2 y_R,$$
+
+where $k > 0$ measures how costly taxation is.
+
+The net transfer to the poor is:
+
+$$T(\tau) = \tau y_R - \frac{1}{2}k \tau^2 y_R.$$
+
+The poor's consumption is $c_P = y_P + T(\tau)$, and the rich's consumption is $c_R = y_R - \tau y_R$.
+
+Social welfare is:
+
+$$W(\tau) = \alpha c_P + (1-\alpha) c_R,$$
+
+where $\alpha \in (0,1)$ represents society's inequality aversion.
+
+a) Substitute the consumption expressions into the welfare function and simplify. Maximize welfare with respect to $\tau$. Show that the optimal tax rate is:
+
+$$\tau^* = \frac{2\alpha - 1}{k\alpha}.$$
+
+b) Explain how the optimal tax rate $\tau^*$ changes with:
+
+  i. Inequality aversion $\alpha$
+  ii. The distortion parameter $k$
+
+What is the economic intuition behind each effect?
+
+---
