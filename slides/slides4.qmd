@@ -267,6 +267,7 @@ The equilibrium price serves two functions:
 - **Rationing device:** Allocates goods among consumers
 
 At $p^*$, neither demanders nor suppliers have an incentive to change behavior
+
 ---
 
 ## Equilibrium Graphically
@@ -491,7 +492,7 @@ This is a useful framework as we can estimate elasticities from data and predict
 
 - $p = MC$ (profit maximization)
 - $p = AC$ (zero economic profit)
-- Each firm operates at the minimum of long-run AC
+- Each firm operates at the minimum of long-run AC (remember: MC = AC at the minimum point)
 
 ---
 
@@ -520,6 +521,12 @@ The long-run supply curve depends on what happens to costs as firms enter:
 
 ---
 
+## Graph for Constant Cost Industry
+
+![](input/slides4-ls-cons-cost.png){width=80% fig-align="center"}
+
+---
+
 ## Increasing Cost Industry
 
 **Why might entry increase costs?**
@@ -531,6 +538,12 @@ The long-run supply curve depends on what happens to costs as firms enter:
 **Result:** Long-run equilibrium price rises with industry output
 
 **Example:** Housing construction in a growing city, as more homes are built, land prices and construction labor costs are bid up
+
+---
+
+## Graph for Increasing Cost Industry
+
+![](input/slides4-ls-inc-cost.png){width=80% fig-align="center"}
 
 ---
 
@@ -585,128 +598,33 @@ In practice, Ricardian rents get **capitalized into input prices**
 
 ---
 
-## Consumer and Producer Surplus
+## Efficiency of Competitive Markets
 
-```{python}
-#| echo: false
-#| fig-align: center
-#| fig-width: 6
-#| fig-height: 5
+:::: {.columns}
+::: {.column width=50%}
+![](input/slides4-cs-ps.png){width=100%}
 
-fig, ax = plt.subplots(figsize=(6, 5))
-color1 = '#0072B2'
-color2 = '#D55E00'
+**Total surplus** (CS + PS) is maximized at the competitive equilibrium.
+:::
+::: {.column width=50%}
+![](input/slides4-dwl.png){width=100%}
 
-Q = np.linspace(0, 20, 200)
-S = 0.5 + 0.2*Q
-D = 5.5 - 0.2*Q
-
-Q_star = (5.5 - 0.5)/0.4
-P_star = 0.5 + 0.2*Q_star
-
-ax.plot(Q, S, '-', linewidth=2, label='Supply', color = color2)
-ax.plot(Q, D, '-', linewidth=2, label='Demand', color=color1)
-
-# CS
-ax.fill_between(Q[Q <= Q_star], D[Q <= Q_star], P_star, alpha=0.25, color=color1, label='CS')
-# PS
-ax.fill_between(Q[Q <= Q_star], P_star, S[Q <= Q_star], alpha=0.25, color=color2, label='PS')
-
-ax.plot(Q_star, P_star, 'ko', markersize=7)
-
-ax.set_xlabel('$Q$', fontsize=12)
-ax.set_ylabel('$p$', fontsize=12)
-ax.set_xlim(0, 20)
-ax.set_ylim(0, 6)
-ax.legend(fontsize=10, frameon=False, loc='upper right')
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-
-plt.tight_layout()
-plt.show()
-```
-
-**Total surplus** = CS + PS is maximized at the competitive equilibrium
+Departures from competitive outcome create **deadweight loss** — surplus lost and captured by no one.
+:::
+::::
 
 ---
 
-## Competitive Equilibrium Surplus
+## Efficiency of Competitive Markets: Math
 
-The social planner's problem: choose $Q$ to maximize
+The social planner's problem: choose $q$ to maximize
 
-$$W(Q) = \underbrace{\int_0^Q D(q) \, dq}_{\text{Total value to consumers}} - \underbrace{\int_0^Q S(q) \, dq}_{\text{Total cost of production}}$$
-
-First-order condition: $D(Q^*) = S(Q^*)$, which is exactly the competitive equilibrium condition!
-
-**Competitive markets get it right:** Decentralized decisions by price-taking agents maximize total surplus. Caveat?
-
----
-
-## Deadweight Loss
-
-Any departure from the competitive outcome creates **deadweight loss** (DWL) i.e. surplus that is lost and captured by no one.
-
-```{python}
-#| echo: false
-#| fig-align: center
-#| fig-width: 6
-#| fig-height: 5
-
-fig, ax = plt.subplots(figsize=(6, 5))
-color1 = '#0072B2'
-color2 = '#D55E00'
-
-Q = np.linspace(0, 20, 200)
-S = 0.5 + 0.2*Q
-D = 5.5 - 0.2*Q
-
-Q_star = (5.5 - 0.5)/0.4
-P_star = 0.5 + 0.2*Q_star
-
-Q1 = Q_star - 5
-P_D_at_Q1 = 5.5 - 0.2*Q1
-P_S_at_Q1 = 0.5 + 0.2*Q1
-
-ax.plot(Q, S, '-', linewidth=2, label='Supply', color=color2)
-ax.plot(Q, D, '-', linewidth=2, label='Demand', color=color1)
-ax.plot(Q_star, P_star, 'ko', markersize=6)
-
-# DWL triangle
-Q_dwl = np.linspace(Q1, Q_star, 50)
-D_dwl = 5.5 - 0.2*Q_dwl
-S_dwl = 0.5 + 0.2*Q_dwl
-ax.fill_between(Q_dwl, D_dwl, S_dwl, alpha=0.4, color='gray', label='DWL')
-
-ax.axvline(x=Q1, color='gray', linestyle=':', alpha=0.5)
-ax.axvline(x=Q_star, color='gray', linestyle=':', alpha=0.5)
-
-ax.set_xlabel('$Q$', fontsize=12)
-ax.set_ylabel('$p$', fontsize=12)
-ax.set_xlim(0, 20)
-ax.set_ylim(0, 6)
-ax.legend(fontsize=10, frameon=False, loc='upper right')
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.grid(True, linestyle='--', alpha=0.3)
-
-plt.tight_layout()
-plt.show()
-```
+$$W(q) = \underbrace{\left[U(q)-pq\right]}_{\text{Value to consumers}} - \underbrace{\left[pq- \int_0^q p(q) dq\right]}_{\text{Cost of production}}= U(q) - \int_0^q p(q)dq $$
 
 
-# Policy Applications
+First-order condition: $$\frac{dW}{dq} = U'(q) - p(q) = 0 \implies U'(q) = p(q)$$
 
----
-
-## Price Controls and Shortages
-
-Setting a price ceiling below equilibrium:
-
-- Creates a **shortage**: $Q^D > Q^S$ at the controlled price
-- **Transfer** from producers to consumers who get to buy at the lower price
-- **Deadweight loss** from forgone transactions
-
-**Example:** Rent control, tenants who find apartments benefit, but some units are withdrawn from the market and some potential renters can't find housing
+Since $p(q)$ is long-run supply curve, $p(q) = MC(q)=AC(q)$, social planner chooses $q$ where marginal benefit equals marginal cost, which is exactly the competitive equilibrium condition.
 
 ---
 
@@ -718,7 +636,7 @@ $$p^D = p^S + t$$
 
 **Who bears the tax?** Depends on relative elasticities:
 
-$$\frac{dP^D/dt}{dP^S/dt} = -\frac{e_{S,p}}{e_{D,p}}$$
+$$\frac{dp^D/dt}{dp^S/dt} = -\frac{e_{S,p}}{e_{D,p}}$$
 
 **Rule of thumb:** The more inelastic side of the market bears more of the tax
 

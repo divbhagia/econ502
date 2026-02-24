@@ -11,3 +11,7 @@ You can find additional content and reference materials for Part I: Competetive 
 - [Cobb-Douglas Demand Derivations](/handouts/lec1-2_cd_derivations.qmd)
     - This handout provides step-by-step derivations of the Marshallian (uncompensated) and Hicksian (compensated) demand functions for Cobb-Douglas preferences.
 
+## Competitive Equilibrium (Lecture 4)
+
+- [Tax Incidence and Deadweight Loss Derivations](/handouts/lec4-tax-incidence.qmd)
+    - This handout derives the formulas for tax incidence on consumers and producers, as well as the deadweight loss from a tax, in a simple supply and demand framework.

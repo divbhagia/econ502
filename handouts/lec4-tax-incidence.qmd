@@ -1,0 +1,119 @@
+---
+title: "Tax Incidence and Deadweight Loss"
+subtitle: "Econ 502: Advanced Microeconomics"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      file: ../assets/pset-preamble.tex
+format-links: [pdf]
+---
+
+
+## Setup
+
+Consider a competitive market in equilibrium. Let $Q^D(p)$ denote market demand and $Q^S(p)$ denote market supply. In equilibrium:
+
+$$Q^D(p^*) = Q^S(p^*) = Q^*$$
+
+Now impose a per-unit tax $t$ on sellers. This creates a wedge between the price buyers pay ($p^D$) and the price sellers receive ($p^S$):
+
+$$p^D = p^S + t$$
+
+The new equilibrium requires:
+
+$$Q^D(p^D) = Q^S(p^S)$$
+
+
+## Deriving the Tax Incidence Formula
+
+### Step 1: Differentiate the equilibrium condition
+
+Starting from $Q^D(p^D) = Q^S(p^S)$ and $p^D = p^S + t$, totally differentiate both sides with respect to $t$:
+
+$$\frac{dQ^D}{dp^D} \cdot \frac{dp^D}{dt} = \frac{dQ^S}{dp^S} \cdot \frac{dp^S}{dt}$$
+
+### Step 2: Use the tax wedge
+
+Differentiating $p^D = p^S + t$ with respect to $t$:
+
+$$\frac{dp^D}{dt} = \frac{dp^S}{dt} + 1$$
+
+Substitute into Step 1:
+
+$$\frac{dQ^D}{dp^D} \left(\frac{dp^S}{dt} + 1\right) = \frac{dQ^S}{dp^S} \cdot \frac{dp^S}{dt}$$
+
+### Step 3: Solve for $dp^S/dt$
+
+Expand:
+
+$$\frac{dQ^D}{dp^D} \cdot \frac{dp^S}{dt} + \frac{dQ^D}{dp^D} = \frac{dQ^S}{dp^S} \cdot \frac{dp^S}{dt}$$
+
+Rearrange:
+
+$$\frac{dp^S}{dt}\left(\frac{dQ^S}{dp^S} - \frac{dQ^D}{dp^D}\right) = \frac{dQ^D}{dp^D}$$
+
+$$\frac{dp^S}{dt} = \frac{dQ^D/dp^D}{dQ^S/dp^S - dQ^D/dp^D}$$
+
+### Step 4: Convert to elasticities
+
+Define the elasticities at the initial equilibrium:
+
+$$e_{D,p} = \frac{dQ^D}{dp} \cdot \frac{p^*}{Q^*} \quad \text{(negative)} \qquad e_{S,p} = \frac{dQ^S}{dp} \cdot \frac{p^*}{Q^*} \quad \text{(positive)}$$
+
+So $dQ^D/dp = e_{D,p} \cdot Q^*/p^*$ and $dQ^S/dp = e_{S,p} \cdot Q^*/p^*$. Substitute:
+
+$$\frac{dp^S}{dt} = \frac{e_{D,p} \cdot Q^*/p^*}{(e_{S,p} - e_{D,p}) \cdot Q^*/p^*} = \frac{e_{D,p}}{e_{S,p} - e_{D,p}}$$
+
+Similarly, using $dp^D/dt = dp^S/dt + 1$:
+
+$$\frac{dp^D}{dt} = \frac{e_{D,p}}{e_{S,p} - e_{D,p}} + 1 = \frac{e_{S,p}}{e_{S,p} - e_{D,p}}$$
+
+### Step 5: Take the ratio
+
+$$\boxed{\frac{dp^D/dt}{dp^S/dt} = \frac{e_{S,p}}{e_{D,p}}}$$
+
+Since $e_{D,p} < 0$, this ratio is negative. Taking absolute values, the side with the smaller elasticity (more inelastic) experiences the larger price change — and therefore bears more of the tax burden.
+
+\newpage
+
+## Deriving the Deadweight Loss Formula
+
+### Step 1: The Harberger triangle
+
+The deadweight loss from the tax is the triangle between the supply and demand curves over the range of lost quantity:
+
+$$DWL = \frac{1}{2} \cdot t \cdot |\Delta Q|$$
+
+where $\Delta Q = Q_{\text{tax}} - Q^*$ is the reduction in equilibrium quantity caused by the tax.
+
+### Step 2: Find $\Delta Q$ in terms of elasticities
+
+From the equilibrium condition $Q^D(p^D) = Q^S(p^S)$, the change in quantity can be expressed through either the demand or supply side. Using supply:
+
+$$\Delta Q = \frac{dQ^S}{dp^S} \cdot \Delta p^S = \frac{dQ^S}{dp^S} \cdot \frac{dp^S}{dt} \cdot t$$
+
+Substituting $dQ^S/dp = e_{S,p} \cdot Q^*/p^*$ and the result from the incidence derivation:
+
+$$\Delta Q = \frac{e_{S,p} \cdot Q^*}{p^*} \cdot \frac{e_{D,p}}{e_{S,p} - e_{D,p}} \cdot t$$
+
+### Step 3: Substitute into the Harberger triangle
+
+$$DWL = \frac{1}{2} \cdot t \cdot \left|\frac{e_{S,p} \cdot e_{D,p}}{e_{S,p} - e_{D,p}} \cdot \frac{Q^*}{p^*} \cdot t\right|$$
+
+Since $e_{D,p} < 0$, the product $e_{S,p} \cdot e_{D,p} < 0$, and $e_{S,p} - e_{D,p} > 0$, so the fraction is negative. Taking the absolute value and pulling the negative through:
+
+$$\boxed{DWL \approx -\frac{1}{2} \cdot \frac{e_{S,p} \cdot e_{D,p}}{e_{S,p} - e_{D,p}} \cdot \frac{t^2}{p^*} \cdot Q^*}$$
+
+This expression is positive because the numerator $e_{S,p} \cdot e_{D,p} < 0$ and the leading negative sign flips it.
+
+## Key Takeaways
+
+**DWL grows with the square of the tax rate.** The $t^2$ term means that doubling the tax rate quadruples the deadweight loss. This is the core intuition behind the Ramsey rule for optimal taxation: it is more efficient to levy small taxes across many goods than a large tax on one good.
+
+**Higher elasticities mean larger DWL.** When buyers and sellers are more responsive to price changes, a tax causes a larger quantity distortion, generating more welfare loss.
+
+**Perfectly inelastic demand or supply implies zero DWL.** If either $e_{D,p} = 0$ or $e_{S,p} = 0$, the numerator is zero and $DWL = 0$. Intuitively, if quantities don't change, there is no allocative distortion.

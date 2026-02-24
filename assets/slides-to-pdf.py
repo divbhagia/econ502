@@ -55,7 +55,8 @@ def main():
         )
 
         # Wait for MathJax to finish typesetting
-        page.evaluate("""
+        page.evaluate(
+            """
             async () => {
                 if (typeof MathJax !== 'undefined' && MathJax.startup) {
                     await MathJax.startup.promise;
@@ -65,7 +66,8 @@ def main():
                     }
                 }
             }
-        """)
+        """
+        )
 
         # Verify no unprocessed math remains
         page.wait_for_function(
@@ -78,9 +80,11 @@ def main():
         )
 
         # Hide slide numbers from the PDF
-        page.evaluate("""
+        page.evaluate(
+            """
             document.querySelectorAll('.slide-number').forEach(el => el.remove());
-        """)
+        """
+        )
 
         # Extra pause for fonts and remaining rendering
         time.sleep(2)

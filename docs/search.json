@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking here.\n\nOverviewLearning GoalsMaterialGrading\n\n\n\nOverview\nThis course develops the core tools of microeconomic theory while connecting them to real-world applications and policy questions.\nWe begin by examining how consumers decide what to buy (lectures 1-2) and how firms organize production (lecture 3), then consider how these behaviors determine prices and quantities in competitive markets (lecture 4). From there, we explore what it means for a market to work efficiently and how to think about fairness (lecture 5). We then turn to market power (lectures 6-8): What happens when a single or a few large firms dominate the market? How does market power affect wages in labor markets?\nIn the second half of the course, we consider the need for government intervention when markets fail due to information asymmetries, externalities, or underprovision of public goods (lectures 9-10). Finally, we conclude by examining decision-making under uncertainty and strategic behavior through game theory (lectures 11-12).\n\n\n\n\nLearning Goals\nUpon successful completion of this course, students will:\n\nModel consumer and firm behavior and derive equilibrium prices and quantities in competitive markets\nApply welfare criteria to assess market efficiency and analyze tradeoffs between efficiency and equity\nAnalyze how market power affects prices, output, and wages in product and labor markets\nDiagnose market failures arising from information asymmetries, externalities, and public goods, and evaluate policy responses\nApply expected utility theory to model choice under uncertainty and use game theory to solve strategic interactions\n\n\n\n\n\nCourse Material\nThe following textbook is required for this course:\n\nMicroeconomic Theory: Basic Principles & Extensions by Walter Nicholson, Christopher Snyder, 13th Edition.\n\nPrevious editions are also acceptable. Lectures will loosely follow the textbook. Supplementary readings, lecture slides, and problem sets will be posted on the course website.\n\n\n\n\nGrading Criteria\nYour grade will be determined according to the following breakdown:\n\n\n\nComponent\n\n\nPoints\n\n\n\n\nProblem Sets\n\n\n10\n\n\n\n\nMidterm Exam\n\n\n40\n\n\n\n\nFinal Exam\n\n\n50"
+  },
+  {
     "objectID": "problem-sets/ps2.html",
     "href": "problem-sets/ps2.html",
     "title": "Problem Set 2",
@@ -77,6 +84,545 @@
     "text": "Here are the problem sets for the course. Please complete and submit them by the specified deadlines. Solutions will be posted after the submission deadline.\n\nProblem Set 1 [Solutions]\nProblem Set 2"
   },
   {
+    "objectID": "handouts/lec4-tax-incidence.html",
+    "href": "handouts/lec4-tax-incidence.html",
+    "title": "Tax Incidence and Deadweight Loss",
+    "section": "",
+    "text": "Consider a competitive market in equilibrium. Let \\(Q^D(p)\\) denote market demand and \\(Q^S(p)\\) denote market supply. In equilibrium:\n\\[Q^D(p^*) = Q^S(p^*) = Q^*\\]\nNow impose a per-unit tax \\(t\\) on sellers. This creates a wedge between the price buyers pay (\\(p^D\\)) and the price sellers receive (\\(p^S\\)):\n\\[p^D = p^S + t\\]\nThe new equilibrium requires:\n\\[Q^D(p^D) = Q^S(p^S)\\]"
+  },
+  {
+    "objectID": "handouts/lec4-tax-incidence.html#setup",
+    "href": "handouts/lec4-tax-incidence.html#setup",
+    "title": "Tax Incidence and Deadweight Loss",
+    "section": "",
+    "text": "Consider a competitive market in equilibrium. Let \\(Q^D(p)\\) denote market demand and \\(Q^S(p)\\) denote market supply. In equilibrium:\n\\[Q^D(p^*) = Q^S(p^*) = Q^*\\]\nNow impose a per-unit tax \\(t\\) on sellers. This creates a wedge between the price buyers pay (\\(p^D\\)) and the price sellers receive (\\(p^S\\)):\n\\[p^D = p^S + t\\]\nThe new equilibrium requires:\n\\[Q^D(p^D) = Q^S(p^S)\\]"
+  },
+  {
+    "objectID": "handouts/lec4-tax-incidence.html#deriving-the-tax-incidence-formula",
+    "href": "handouts/lec4-tax-incidence.html#deriving-the-tax-incidence-formula",
+    "title": "Tax Incidence and Deadweight Loss",
+    "section": "Deriving the Tax Incidence Formula",
+    "text": "Deriving the Tax Incidence Formula\n\nStep 1: Differentiate the equilibrium condition\nStarting from \\(Q^D(p^D) = Q^S(p^S)\\) and \\(p^D = p^S + t\\), totally differentiate both sides with respect to \\(t\\):\n\\[\\frac{dQ^D}{dp^D} \\cdot \\frac{dp^D}{dt} = \\frac{dQ^S}{dp^S} \\cdot \\frac{dp^S}{dt}\\]\n\n\nStep 2: Use the tax wedge\nDifferentiating \\(p^D = p^S + t\\) with respect to \\(t\\):\n\\[\\frac{dp^D}{dt} = \\frac{dp^S}{dt} + 1\\]\nSubstitute into Step 1:\n\\[\\frac{dQ^D}{dp^D} \\left(\\frac{dp^S}{dt} + 1\\right) = \\frac{dQ^S}{dp^S} \\cdot \\frac{dp^S}{dt}\\]\n\n\nStep 3: Solve for \\(dp^S/dt\\)\nExpand:\n\\[\\frac{dQ^D}{dp^D} \\cdot \\frac{dp^S}{dt} + \\frac{dQ^D}{dp^D} = \\frac{dQ^S}{dp^S} \\cdot \\frac{dp^S}{dt}\\]\nRearrange:\n\\[\\frac{dp^S}{dt}\\left(\\frac{dQ^S}{dp^S} - \\frac{dQ^D}{dp^D}\\right) = \\frac{dQ^D}{dp^D}\\]\n\\[\\frac{dp^S}{dt} = \\frac{dQ^D/dp^D}{dQ^S/dp^S - dQ^D/dp^D}\\]\n\n\nStep 4: Convert to elasticities\nDefine the elasticities at the initial equilibrium:\n\\[e_{D,p} = \\frac{dQ^D}{dp} \\cdot \\frac{p^*}{Q^*} \\quad \\text{(negative)} \\qquad e_{S,p} = \\frac{dQ^S}{dp} \\cdot \\frac{p^*}{Q^*} \\quad \\text{(positive)}\\]\nSo \\(dQ^D/dp = e_{D,p} \\cdot Q^*/p^*\\) and \\(dQ^S/dp = e_{S,p} \\cdot Q^*/p^*\\). Substitute:\n\\[\\frac{dp^S}{dt} = \\frac{e_{D,p} \\cdot Q^*/p^*}{(e_{S,p} - e_{D,p}) \\cdot Q^*/p^*} = \\frac{e_{D,p}}{e_{S,p} - e_{D,p}}\\]\nSimilarly, using \\(dp^D/dt = dp^S/dt + 1\\):\n\\[\\frac{dp^D}{dt} = \\frac{e_{D,p}}{e_{S,p} - e_{D,p}} + 1 = \\frac{e_{S,p}}{e_{S,p} - e_{D,p}}\\]\n\n\nStep 5: Take the ratio\n\\[\\boxed{\\frac{dp^D/dt}{dp^S/dt} = \\frac{e_{S,p}}{e_{D,p}}}\\]\nSince \\(e_{D,p} &lt; 0\\), this ratio is negative. Taking absolute values, the side with the smaller elasticity (more inelastic) experiences the larger price change — and therefore bears more of the tax burden."
+  },
+  {
+    "objectID": "handouts/lec4-tax-incidence.html#deriving-the-deadweight-loss-formula",
+    "href": "handouts/lec4-tax-incidence.html#deriving-the-deadweight-loss-formula",
+    "title": "Tax Incidence and Deadweight Loss",
+    "section": "Deriving the Deadweight Loss Formula",
+    "text": "Deriving the Deadweight Loss Formula\n\nStep 1: The Harberger triangle\nThe deadweight loss from the tax is the triangle between the supply and demand curves over the range of lost quantity:\n\\[DWL = \\frac{1}{2} \\cdot t \\cdot |\\Delta Q|\\]\nwhere \\(\\Delta Q = Q_{\\text{tax}} - Q^*\\) is the reduction in equilibrium quantity caused by the tax.\n\n\nStep 2: Find \\(\\Delta Q\\) in terms of elasticities\nFrom the equilibrium condition \\(Q^D(p^D) = Q^S(p^S)\\), the change in quantity can be expressed through either the demand or supply side. Using supply:\n\\[\\Delta Q = \\frac{dQ^S}{dp^S} \\cdot \\Delta p^S = \\frac{dQ^S}{dp^S} \\cdot \\frac{dp^S}{dt} \\cdot t\\]\nSubstituting \\(dQ^S/dp = e_{S,p} \\cdot Q^*/p^*\\) and the result from the incidence derivation:\n\\[\\Delta Q = \\frac{e_{S,p} \\cdot Q^*}{p^*} \\cdot \\frac{e_{D,p}}{e_{S,p} - e_{D,p}} \\cdot t\\]\n\n\nStep 3: Substitute into the Harberger triangle\n\\[DWL = \\frac{1}{2} \\cdot t \\cdot \\left|\\frac{e_{S,p} \\cdot e_{D,p}}{e_{S,p} - e_{D,p}} \\cdot \\frac{Q^*}{p^*} \\cdot t\\right|\\]\nSince \\(e_{D,p} &lt; 0\\), the product \\(e_{S,p} \\cdot e_{D,p} &lt; 0\\), and \\(e_{S,p} - e_{D,p} &gt; 0\\), so the fraction is negative. Taking the absolute value and pulling the negative through:\n\\[\\boxed{DWL \\approx -\\frac{1}{2} \\cdot \\frac{e_{S,p} \\cdot e_{D,p}}{e_{S,p} - e_{D,p}} \\cdot \\frac{t^2}{p^*} \\cdot Q^*}\\]\nThis expression is positive because the numerator \\(e_{S,p} \\cdot e_{D,p} &lt; 0\\) and the leading negative sign flips it."
+  },
+  {
+    "objectID": "handouts/lec4-tax-incidence.html#key-takeaways",
+    "href": "handouts/lec4-tax-incidence.html#key-takeaways",
+    "title": "Tax Incidence and Deadweight Loss",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\nDWL grows with the square of the tax rate. The \\(t^2\\) term means that doubling the tax rate quadruples the deadweight loss. This is the core intuition behind the Ramsey rule for optimal taxation: it is more efficient to levy small taxes across many goods than a large tax on one good.\nHigher elasticities mean larger DWL. When buyers and sellers are more responsive to price changes, a tax causes a larger quantity distortion, generating more welfare loss.\nPerfectly inelastic demand or supply implies zero DWL. If either \\(e_{D,p} = 0\\) or \\(e_{S,p} = 0\\), the numerator is zero and \\(DWL = 0\\). Intuitively, if quantities don’t change, there is no allocative distortion."
+  },
+  {
+    "objectID": "content/part4-add-content.html",
+    "href": "content/part4-add-content.html",
+    "title": "Additional Content",
+    "section": "",
+    "text": "You can find additional content and reference materials for Part IV: Uncertainty and Strategy below.",
+    "crumbs": [
+      "Content",
+      "IV. Uncertainty and Strategy",
+      "Additional Content"
+    ]
+  },
+  {
+    "objectID": "content/part2-add-content.html",
+    "href": "content/part2-add-content.html",
+    "title": "Additional Content",
+    "section": "",
+    "text": "You can find additional content and reference materials for Part II: Market Power below.",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Additional Content"
+    ]
+  },
+  {
+    "objectID": "content/lecture9.html",
+    "href": "content/lecture9.html",
+    "title": "Lecture 9",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "III. Market Failures",
+      "Lecture 9"
+    ]
+  },
+  {
+    "objectID": "content/lecture9.html#topics",
+    "href": "content/lecture9.html#topics",
+    "title": "Lecture 9",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "III. Market Failures",
+      "Lecture 9"
+    ]
+  },
+  {
+    "objectID": "content/lecture9.html#slides",
+    "href": "content/lecture9.html#slides",
+    "title": "Lecture 9",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "III. Market Failures",
+      "Lecture 9"
+    ]
+  },
+  {
+    "objectID": "content/lecture7.html",
+    "href": "content/lecture7.html",
+    "title": "Lecture 7",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 7"
+    ]
+  },
+  {
+    "objectID": "content/lecture7.html#topics",
+    "href": "content/lecture7.html#topics",
+    "title": "Lecture 7",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 7"
+    ]
+  },
+  {
+    "objectID": "content/lecture7.html#slides",
+    "href": "content/lecture7.html#slides",
+    "title": "Lecture 7",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 7"
+    ]
+  },
+  {
+    "objectID": "content/lecture5.html",
+    "href": "content/lecture5.html",
+    "title": "Lecture 5",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 5"
+    ]
+  },
+  {
+    "objectID": "content/lecture5.html#topics",
+    "href": "content/lecture5.html#topics",
+    "title": "Lecture 5",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 5"
+    ]
+  },
+  {
+    "objectID": "content/lecture5.html#slides",
+    "href": "content/lecture5.html#slides",
+    "title": "Lecture 5",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 5"
+    ]
+  },
+  {
+    "objectID": "content/lecture3.html",
+    "href": "content/lecture3.html",
+    "title": "Lecture 3",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "content/lecture3.html#topics",
+    "href": "content/lecture3.html#topics",
+    "title": "Lecture 3",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "content/lecture3.html#slides",
+    "href": "content/lecture3.html#slides",
+    "title": "Lecture 3",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "content/lecture12.html",
+    "href": "content/lecture12.html",
+    "title": "Lecture 12",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "IV. Uncertainty and Strategy",
+      "Lecture 12"
+    ]
+  },
+  {
+    "objectID": "content/lecture12.html#topics",
+    "href": "content/lecture12.html#topics",
+    "title": "Lecture 12",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "IV. Uncertainty and Strategy",
+      "Lecture 12"
+    ]
+  },
+  {
+    "objectID": "content/lecture12.html#slides",
+    "href": "content/lecture12.html#slides",
+    "title": "Lecture 12",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "IV. Uncertainty and Strategy",
+      "Lecture 12"
+    ]
+  },
+  {
+    "objectID": "content/lecture10.html",
+    "href": "content/lecture10.html",
+    "title": "Lecture 10",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "III. Market Failures",
+      "Lecture 10"
+    ]
+  },
+  {
+    "objectID": "content/lecture10.html#topics",
+    "href": "content/lecture10.html#topics",
+    "title": "Lecture 10",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "III. Market Failures",
+      "Lecture 10"
+    ]
+  },
+  {
+    "objectID": "content/lecture10.html#slides",
+    "href": "content/lecture10.html#slides",
+    "title": "Lecture 10",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "III. Market Failures",
+      "Lecture 10"
+    ]
+  },
+  {
+    "objectID": "content/lecture1.html",
+    "href": "content/lecture1.html",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Introduction to the course\nPreferences and utility functions\nIndifference curves and marginal rate of substitution (MRS)\nUtility maximization\nApplications\n\nTextbook references: Sections 3.1-3.6; Sections 4.1-4.5",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "content/lecture1.html#topics",
+    "href": "content/lecture1.html#topics",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Introduction to the course\nPreferences and utility functions\nIndifference curves and marginal rate of substitution (MRS)\nUtility maximization\nApplications\n\nTextbook references: Sections 3.1-3.6; Sections 4.1-4.5",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "content/lecture1.html#slides",
+    "href": "content/lecture1.html#slides",
+    "title": "Lecture 1",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "content/lecture11.html",
+    "href": "content/lecture11.html",
+    "title": "Lecture 11",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "IV. Uncertainty and Strategy",
+      "Lecture 11"
+    ]
+  },
+  {
+    "objectID": "content/lecture11.html#topics",
+    "href": "content/lecture11.html#topics",
+    "title": "Lecture 11",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "IV. Uncertainty and Strategy",
+      "Lecture 11"
+    ]
+  },
+  {
+    "objectID": "content/lecture11.html#slides",
+    "href": "content/lecture11.html#slides",
+    "title": "Lecture 11",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "IV. Uncertainty and Strategy",
+      "Lecture 11"
+    ]
+  },
+  {
+    "objectID": "content/lecture2.html",
+    "href": "content/lecture2.html",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Indirect utility function\nExpenditure minimization and expenditure function\nMarshallian and Hicksian demand\nSlutsky equation\nMeasuring welfare: CV, EV, and consumer surplus\n\nTextbook references: 4.4; 4.7; 5.1-5.8; 6.1-6.3",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "content/lecture2.html#topics",
+    "href": "content/lecture2.html#topics",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Indirect utility function\nExpenditure minimization and expenditure function\nMarshallian and Hicksian demand\nSlutsky equation\nMeasuring welfare: CV, EV, and consumer surplus\n\nTextbook references: 4.4; 4.7; 5.1-5.8; 6.1-6.3",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "content/lecture2.html#slides",
+    "href": "content/lecture2.html#slides",
+    "title": "Lecture 1",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "content/lecture4.html",
+    "href": "content/lecture4.html",
+    "title": "Lecture 4",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "content/lecture4.html#topics",
+    "href": "content/lecture4.html#topics",
+    "title": "Lecture 4",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "content/lecture4.html#slides",
+    "href": "content/lecture4.html#slides",
+    "title": "Lecture 4",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "content/lecture6.html",
+    "href": "content/lecture6.html",
+    "title": "Lecture 6",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 6"
+    ]
+  },
+  {
+    "objectID": "content/lecture6.html#topics",
+    "href": "content/lecture6.html#topics",
+    "title": "Lecture 6",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 6"
+    ]
+  },
+  {
+    "objectID": "content/lecture6.html#slides",
+    "href": "content/lecture6.html#slides",
+    "title": "Lecture 6",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 6"
+    ]
+  },
+  {
+    "objectID": "content/lecture8.html",
+    "href": "content/lecture8.html",
+    "title": "Lecture 8",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 8"
+    ]
+  },
+  {
+    "objectID": "content/lecture8.html#topics",
+    "href": "content/lecture8.html#topics",
+    "title": "Lecture 8",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 8"
+    ]
+  },
+  {
+    "objectID": "content/lecture8.html#slides",
+    "href": "content/lecture8.html#slides",
+    "title": "Lecture 8",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 8"
+    ]
+  },
+  {
+    "objectID": "content/part1-add-content.html",
+    "href": "content/part1-add-content.html",
+    "title": "Additional Content",
+    "section": "",
+    "text": "You can find additional content and reference materials for Part I: Competetive Markets below.",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Additional Content"
+    ]
+  },
+  {
+    "objectID": "content/part1-add-content.html#consumer-theory-lectures-1-and-2",
+    "href": "content/part1-add-content.html#consumer-theory-lectures-1-and-2",
+    "title": "Additional Content",
+    "section": "Consumer Theory (Lectures 1 and 2)",
+    "text": "Consumer Theory (Lectures 1 and 2)\n\nCobb-Douglas Demand Derivations\n\nThis handout provides step-by-step derivations of the Marshallian (uncompensated) and Hicksian (compensated) demand functions for Cobb-Douglas preferences.",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Additional Content"
+    ]
+  },
+  {
+    "objectID": "content/part1-add-content.html#competitive-equilibrium-lecture-4",
+    "href": "content/part1-add-content.html#competitive-equilibrium-lecture-4",
+    "title": "Additional Content",
+    "section": "Competitive Equilibrium (Lecture 4)",
+    "text": "Competitive Equilibrium (Lecture 4)\n\nTax Incidence and Deadweight Loss Derivations\n\nThis handout derives the formulas for tax incidence on consumers and producers, as well as the deadweight loss from a tax, in a simple supply and demand framework.",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Additional Content"
+    ]
+  },
+  {
+    "objectID": "content/part3-add-content.html",
+    "href": "content/part3-add-content.html",
+    "title": "Additional Content",
+    "section": "",
+    "text": "You can find additional content and reference materials for Part III: Market Failures below.",
+    "crumbs": [
+      "Content",
+      "III. Market Failures",
+      "Additional Content"
+    ]
+  },
+  {
     "objectID": "handouts/lec1-2_cd_derivations.html",
     "href": "handouts/lec1-2_cd_derivations.html",
     "title": "Cobb-Douglas Example",
@@ -140,498 +686,6 @@
     "text": "2.4 Expenditure Function\nThe expenditure function is: \\[E(p_x, p_y, \\bar{U}) = p_x x^h + p_y y^h\\]\nSubstituting the Hicksian demands: \\[E = p_x \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} \\left(\\frac{p_y}{p_x}\\right)^{\\beta/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)} + p_y \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)} \\left(\\frac{p_x}{p_y}\\right)^{\\alpha/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)}\\]\nSimplifying the first term: \\[p_x \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} \\left(\\frac{p_y}{p_x}\\right)^{\\beta/(\\alpha+\\beta)} = \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} p_x^{\\alpha/(\\alpha+\\beta)} p_y^{\\beta/(\\alpha+\\beta)}\\]\nSimilarly for the second term: \\[p_y \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)} \\left(\\frac{p_x}{p_y}\\right)^{\\alpha/(\\alpha+\\beta)} = \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)} p_x^{\\alpha/(\\alpha+\\beta)} p_y^{\\beta/(\\alpha+\\beta)}\\]\nTherefore: \\[E = p_x^{\\alpha/(\\alpha+\\beta)} p_y^{\\beta/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)} \\left[\\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} + \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)}\\right]\\]\nLet: \\[C = \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} + \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)}\\]\nThen: \\[\\boxed{E(p_x, p_y, \\bar{U}) = C \\cdot p_x^{\\alpha/(\\alpha+\\beta)} p_y^{\\beta/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)}}\\]"
   },
   {
-    "objectID": "content/part3-add-content.html",
-    "href": "content/part3-add-content.html",
-    "title": "Additional Content",
-    "section": "",
-    "text": "You can find additional content and reference materials for Part III: Market Failures below.",
-    "crumbs": [
-      "Content",
-      "III. Market Failures",
-      "Additional Content"
-    ]
-  },
-  {
-    "objectID": "content/part1-add-content.html",
-    "href": "content/part1-add-content.html",
-    "title": "Additional Content",
-    "section": "",
-    "text": "You can find additional content and reference materials for Part I: Competetive Markets below.",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Additional Content"
-    ]
-  },
-  {
-    "objectID": "content/part1-add-content.html#consumer-theory-lectures-1-and-2",
-    "href": "content/part1-add-content.html#consumer-theory-lectures-1-and-2",
-    "title": "Additional Content",
-    "section": "Consumer Theory (Lectures 1 and 2)",
-    "text": "Consumer Theory (Lectures 1 and 2)\n\nCobb-Douglas Demand Derivations\n\nThis handout provides step-by-step derivations of the Marshallian (uncompensated) and Hicksian (compensated) demand functions for Cobb-Douglas preferences.",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Additional Content"
-    ]
-  },
-  {
-    "objectID": "content/lecture8.html",
-    "href": "content/lecture8.html",
-    "title": "Lecture 8",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 8"
-    ]
-  },
-  {
-    "objectID": "content/lecture8.html#topics",
-    "href": "content/lecture8.html#topics",
-    "title": "Lecture 8",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 8"
-    ]
-  },
-  {
-    "objectID": "content/lecture8.html#slides",
-    "href": "content/lecture8.html#slides",
-    "title": "Lecture 8",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 8"
-    ]
-  },
-  {
-    "objectID": "content/lecture6.html",
-    "href": "content/lecture6.html",
-    "title": "Lecture 6",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 6"
-    ]
-  },
-  {
-    "objectID": "content/lecture6.html#topics",
-    "href": "content/lecture6.html#topics",
-    "title": "Lecture 6",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 6"
-    ]
-  },
-  {
-    "objectID": "content/lecture6.html#slides",
-    "href": "content/lecture6.html#slides",
-    "title": "Lecture 6",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 6"
-    ]
-  },
-  {
-    "objectID": "content/lecture4.html",
-    "href": "content/lecture4.html",
-    "title": "Lecture 4",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 4"
-    ]
-  },
-  {
-    "objectID": "content/lecture4.html#topics",
-    "href": "content/lecture4.html#topics",
-    "title": "Lecture 4",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 4"
-    ]
-  },
-  {
-    "objectID": "content/lecture4.html#slides",
-    "href": "content/lecture4.html#slides",
-    "title": "Lecture 4",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 4"
-    ]
-  },
-  {
-    "objectID": "content/lecture2.html",
-    "href": "content/lecture2.html",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Indirect utility function\nExpenditure minimization and expenditure function\nMarshallian and Hicksian demand\nSlutsky equation\nMeasuring welfare: CV, EV, and consumer surplus\n\nTextbook references: 4.4; 4.7; 5.1-5.8; 6.1-6.3",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "content/lecture2.html#topics",
-    "href": "content/lecture2.html#topics",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Indirect utility function\nExpenditure minimization and expenditure function\nMarshallian and Hicksian demand\nSlutsky equation\nMeasuring welfare: CV, EV, and consumer surplus\n\nTextbook references: 4.4; 4.7; 5.1-5.8; 6.1-6.3",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "content/lecture2.html#slides",
-    "href": "content/lecture2.html#slides",
-    "title": "Lecture 1",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "content/lecture11.html",
-    "href": "content/lecture11.html",
-    "title": "Lecture 11",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Lecture 11"
-    ]
-  },
-  {
-    "objectID": "content/lecture11.html#topics",
-    "href": "content/lecture11.html#topics",
-    "title": "Lecture 11",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Lecture 11"
-    ]
-  },
-  {
-    "objectID": "content/lecture11.html#slides",
-    "href": "content/lecture11.html#slides",
-    "title": "Lecture 11",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Lecture 11"
-    ]
-  },
-  {
-    "objectID": "content/lecture1.html",
-    "href": "content/lecture1.html",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Introduction to the course\nPreferences and utility functions\nIndifference curves and marginal rate of substitution (MRS)\nUtility maximization\nApplications\n\nTextbook references: Sections 3.1-3.6; Sections 4.1-4.5",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 1"
-    ]
-  },
-  {
-    "objectID": "content/lecture1.html#topics",
-    "href": "content/lecture1.html#topics",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Introduction to the course\nPreferences and utility functions\nIndifference curves and marginal rate of substitution (MRS)\nUtility maximization\nApplications\n\nTextbook references: Sections 3.1-3.6; Sections 4.1-4.5",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 1"
-    ]
-  },
-  {
-    "objectID": "content/lecture1.html#slides",
-    "href": "content/lecture1.html#slides",
-    "title": "Lecture 1",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 1"
-    ]
-  },
-  {
-    "objectID": "content/lecture10.html",
-    "href": "content/lecture10.html",
-    "title": "Lecture 10",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "III. Market Failures",
-      "Lecture 10"
-    ]
-  },
-  {
-    "objectID": "content/lecture10.html#topics",
-    "href": "content/lecture10.html#topics",
-    "title": "Lecture 10",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "III. Market Failures",
-      "Lecture 10"
-    ]
-  },
-  {
-    "objectID": "content/lecture10.html#slides",
-    "href": "content/lecture10.html#slides",
-    "title": "Lecture 10",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "III. Market Failures",
-      "Lecture 10"
-    ]
-  },
-  {
-    "objectID": "content/lecture12.html",
-    "href": "content/lecture12.html",
-    "title": "Lecture 12",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Lecture 12"
-    ]
-  },
-  {
-    "objectID": "content/lecture12.html#topics",
-    "href": "content/lecture12.html#topics",
-    "title": "Lecture 12",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Lecture 12"
-    ]
-  },
-  {
-    "objectID": "content/lecture12.html#slides",
-    "href": "content/lecture12.html#slides",
-    "title": "Lecture 12",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Lecture 12"
-    ]
-  },
-  {
-    "objectID": "content/lecture3.html",
-    "href": "content/lecture3.html",
-    "title": "Lecture 3",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 3"
-    ]
-  },
-  {
-    "objectID": "content/lecture3.html#topics",
-    "href": "content/lecture3.html#topics",
-    "title": "Lecture 3",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 3"
-    ]
-  },
-  {
-    "objectID": "content/lecture3.html#slides",
-    "href": "content/lecture3.html#slides",
-    "title": "Lecture 3",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 3"
-    ]
-  },
-  {
-    "objectID": "content/lecture5.html",
-    "href": "content/lecture5.html",
-    "title": "Lecture 5",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 5"
-    ]
-  },
-  {
-    "objectID": "content/lecture5.html#topics",
-    "href": "content/lecture5.html#topics",
-    "title": "Lecture 5",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 5"
-    ]
-  },
-  {
-    "objectID": "content/lecture5.html#slides",
-    "href": "content/lecture5.html#slides",
-    "title": "Lecture 5",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 5"
-    ]
-  },
-  {
-    "objectID": "content/lecture7.html",
-    "href": "content/lecture7.html",
-    "title": "Lecture 7",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 7"
-    ]
-  },
-  {
-    "objectID": "content/lecture7.html#topics",
-    "href": "content/lecture7.html#topics",
-    "title": "Lecture 7",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 7"
-    ]
-  },
-  {
-    "objectID": "content/lecture7.html#slides",
-    "href": "content/lecture7.html#slides",
-    "title": "Lecture 7",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 7"
-    ]
-  },
-  {
-    "objectID": "content/lecture9.html",
-    "href": "content/lecture9.html",
-    "title": "Lecture 9",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "III. Market Failures",
-      "Lecture 9"
-    ]
-  },
-  {
-    "objectID": "content/lecture9.html#topics",
-    "href": "content/lecture9.html#topics",
-    "title": "Lecture 9",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "III. Market Failures",
-      "Lecture 9"
-    ]
-  },
-  {
-    "objectID": "content/lecture9.html#slides",
-    "href": "content/lecture9.html#slides",
-    "title": "Lecture 9",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "III. Market Failures",
-      "Lecture 9"
-    ]
-  },
-  {
-    "objectID": "content/part2-add-content.html",
-    "href": "content/part2-add-content.html",
-    "title": "Additional Content",
-    "section": "",
-    "text": "You can find additional content and reference materials for Part II: Market Power below.",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Additional Content"
-    ]
-  },
-  {
-    "objectID": "content/part4-add-content.html",
-    "href": "content/part4-add-content.html",
-    "title": "Additional Content",
-    "section": "",
-    "text": "You can find additional content and reference materials for Part IV: Uncertainty and Strategy below.",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Additional Content"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Advanced Microeconomics",
@@ -665,12 +719,5 @@
     "title": "Problem Set 1: Solutions",
     "section": "Problem 3: Sugar-Sweetened Beverage Tax",
     "text": "Problem 3: Sugar-Sweetened Beverage Tax\nGiven: \\(U(s, x) = s^{0.3}x^{0.7}\\), \\(I = 300\\), \\(p_s = 0.05\\), \\(p_x = 1\\), tax \\(t = 0.015\\), so \\(p_s' = 0.065\\).\nSince \\(\\alpha + \\beta = 0.3 + 0.7 = 1\\), the Cobb-Douglas demands simplify to standard expenditure shares.\n\nPart (a): Initial optimal bundle\nUsing Cobb-Douglas Marshallian demands: \\[s^* = \\frac{0.3 \\cdot I}{p_s} = \\frac{0.3 \\times 300}{0.05} = \\frac{90}{0.05} = 1800 \\text{ oz}\\]\n\\[x^* = \\frac{0.7 \\cdot I}{p_x} = \\frac{0.7 \\times 300}{1} = 210\\]\nUtility: \\[U_0 = (1800)^{0.3}(210)^{0.7} \\approx 400\\]\n\n\nPart (b): Bundle after tax\nWith \\(p_s' = 0.065\\): \\[s^{**} = \\frac{0.3 \\times 300}{0.065} = \\frac{90}{0.065} \\approx 1384.6 \\text{ oz}\\]\n\\[x^{**} = \\frac{0.7 \\times 300}{1} = 210\\]\nNote that \\(x^{**}\\) is unchanged because Cobb-Douglas utility implies each good receives a fixed expenditure share, and \\(p_x\\) did not change.\n\\[\\boxed{s^{**} \\approx 1384.6, \\quad x^{**} = 210}\\]\nNew utility: \\(U_1 = (1384.6)^{0.3}(210)^{0.7} \\approx 370\\)\n\n\nPart (c): Consumer Surplus\nThe Marshallian demand for sugary drinks is \\(s = \\frac{0.3 \\cdot I}{p_s} = \\frac{90}{p_s}\\).\nThe change in consumer surplus is: \\[\\Delta CS = -\\int_{0.05}^{0.065} s(p_s) \\, dp_s = -\\int_{0.05}^{0.065} \\frac{90}{p_s} \\, dp_s\\]\n\\[= -90 \\left[\\ln p_s\\right]_{0.05}^{0.065} = -90(\\ln 0.065 - \\ln 0.05) = -90 \\ln\\left(\\frac{0.065}{0.05}\\right)\\]\n\\[= -90 \\ln(1.3) = -90 \\times 0.2624 = -23.6\\]\n\\[\\boxed{\\Delta CS \\approx -\\$23.62}\\]\nTrapezoid approximation (for students who cannot integrate): The area under the demand curve between the two prices can be approximated as: \\[\\Delta CS \\approx -\\frac{1}{2}(s^* + s^{**}) \\times (p_s' - p_s) = -\\frac{1}{2}(1800 + 1384.6)(0.015) \\approx -\\$23.88\\]\n\n\nPart (d): Compensating Variation\nThe CV is the additional income needed at new prices to achieve the original utility \\(U_0\\). We need the expenditure function.\nFor Cobb-Douglas \\(U = s^{\\alpha}x^{\\beta}\\) with \\(\\alpha + \\beta = 1\\), the expenditure function is: \\[E(p_s, p_x, \\bar{U}) = \\bar{U} \\cdot \\left(\\frac{p_s}{\\alpha}\\right)^{\\alpha}\\left(\\frac{p_x}{\\beta}\\right)^{\\beta} = \\bar{U} \\cdot K \\cdot p_s^{\\alpha}p_x^{\\beta}\\]\nwhere \\(K = \\alpha^{-\\alpha}\\beta^{-\\beta} = (0.3)^{-0.3}(0.7)^{-0.7} = 1.842\\).\nExpenditure at original prices and \\(U_0\\): \\[E(0.05, 1, 400) = 400 \\cdot 1.842 \\cdot (0.05)^{0.3}(1)^{0.7} \\approx 300\\]\nExpenditure at new prices and \\(U_0\\): \\[E(0.065, 1, 400) = 400 \\cdot 1.842 \\cdot (0.065)^{0.3}(1)^{0.7} \\approx 324 \\]\n\\[\\boxed{CV = E(p_s', p_x, U_0) - E(p_s, p_x, U_0) = 324 - 300 = \\$24}\\]\nThe consumer would need $24 in additional income to be as well off as before the tax.\nThe CS approximation is very close to the CV. They are similar because the income effect of this price change is small (sugary drinks are a small share of the budget).\n\n\nPart (f): Tax Revenue and Deadweight Loss\n(i) Tax revenue: \\[R = t \\cdot s^{**} = 0.015 \\times 1384.6 \\approx \\$20.77\\]\n(ii) Deadweight loss: \\[DWL = CV - R = 24 - 20.77 = \\$3.23\\]\nInterpretation: Of the $24 welfare loss to the consumer, $20.77 is transferred to the government as tax revenue and $3.23 is pure efficiency loss (deadweight loss).\nExternality justification: The negative externality is \\(e = \\$0.01\\) per ounce. The reduction in externality from the tax is: \\[\\Delta \\text{Externality} = e \\times (s^* - s^{**}) = 0.01 \\times (1800 - 1384.6) = 0.01 \\times 415.4 = \\$4.15\\]\nThe tax generates $20.77 in revenue and reduces externalities by $4.15, while creating only $3.23 in deadweight loss. Since the externality reduction ($4.15) exceeds the DWL ($3.23), the tax improves overall welfare somewhat.\n\n\nPart (g): Revenue Recycling\n(i) New budget constraint:\nThe consumer faces the taxed price \\(p_s' = 0.065\\) but receives a lump-sum rebate \\(R\\) equal to the tax revenue collected. The budget constraint is: \\[p_s' \\cdot s + x = I + R\\] \\[0.065s + x = 300 + R\\]\nNote that while \\(R = t \\cdot s\\), the consumer takes \\(R\\) as given when choosing \\(s\\) and \\(x\\) (they do not internalize that their choice of \\(s\\) affects \\(R\\)). If they did internalize it, then the consumer’s problem would remain unchanged from the no-tax case.\n(ii) Optimal consumption:\nApplying the Cobb-Douglas demand functions: \\[s(R) = \\frac{0.3(300 + R)}{0.065} \\] \\[x(R) = 0.7(300 + R)\\]\nIn equilibrium, the rebate equals the tax revenue: \\(R = t \\cdot s(R)\\). Substituting: \\[R = 0.015 \\cdot \\frac{0.3(300 + R)}{0.065}\\]\n\\[0.065R = 1.35 + 0.0045R\\]\n\\[0.0605R = 1.35\\]\n\\[R = \\frac{1.35}{0.0605} \\approx 22.31\\]\nTherefore, equilibrium consumption is: \\[s_R = \\frac{0.3(300 + 22.31)}{0.065} \\approx 1487.6 \\text{ oz}\\] \\[x_R = 0.7(300 + 22.31) \\approx 225.6\\]\n(iii) New utility level:\nThe new utility level is: \\[U_R = (s_R)^{0.3}(x_R)^{0.7} \\approx 397\\]\n(iv) Comparison:\nUnder the tax-and-rebate scheme, the consumer reaches utility \\(U_R \\approx 397\\), between the no-tax level (\\(U_0 \\approx 400\\)) and the tax-only level (\\(U_1 \\approx 370\\)). The policy is largely successful: sugary drink consumption falls meaningfully from 1800 to about 1488 ounces, achieving the public health goal, while the rebate returns most of the welfare cost to the consumer. The consumer loses only about 3 utils compared to 30 under the tax alone. Composite good consumption actually rises from 210 to 226, since the rebate provides additional purchasing power that gets redirected toward untaxed goods. The small residual welfare loss (\\(400 - 397\\)) is the unavoidable deadweight loss from distorting relative prices, but it is far smaller than the welfare cost of the tax without revenue recycling.\n\n\nPart (h): Policy Discussion\n(i) CV vs CS:\nThe CV is generally preferred for welfare analysis because it is based on well-defined utility theory and the expenditure function. CS relies on the Marshallian demand curve, which conflates income and substitution effects. However, in this case they give nearly identical results because the income effect is small (sugary drinks are a small budget share). CS is often used in practice because it is easier to estimate empirically (only requires observable demand data, not utility parameters).\n(ii) Regressivity:\nThe tax is likely regressive because lower-income households spend a larger share of their income on taxed beverages. To test this empirically, one could:\n\nCompare pre- and post-tax spending on SSBs across income quintiles using household expenditure surveys\nEstimate demand elasticities by income group (lower-income consumers may be more price-elastic, partially offsetting regressivity)\nCalculate the tax burden as a share of income across the distribution\n\nRevenue recycling (as in part g) can mitigate regressivity if the lump-sum rebate represents a larger share of income for poorer households.\n(iii) Cross-border shopping:\nWith cross-border shopping, the consumer’s effective price lies somewhere between \\(p_s\\) and \\(p_s'\\): they can avoid the tax by traveling to a neighboring jurisdiction, but incur transport and time costs to do so. Call this effective price \\(\\tilde{p}_s \\in (p_s, p_s')\\). This has two offsetting effects on welfare:\n\nSmaller welfare loss to the consumer: Since \\(\\tilde{p}_s &lt; p_s'\\), the consumer faces a smaller effective price increase, so the reduction in consumer surplus (and CV) is smaller than our calculation suggests.\nMuch lower tax revenue: The consumer purchases fewer taxed ounces within the city, so revenue \\(R = t \\cdot s_{\\text{local}}\\) falls substantially if most purchases shift across the border.\n\nThe net effect on deadweight loss (\\(DWL = CV - R\\)) is ambiguous but likely higher: the CV falls somewhat, but revenue falls by more, since the government collects nothing on cross-border purchases while the consumer still bears the cost of traveling to avoid the tax. In the extreme, if all purchases move across the border, \\(R = 0\\) and the entire welfare loss (including transport costs) is pure deadweight loss.\nThis suggests that the optimal policy would be implemented at a broader geographic level (state or federal) to minimize cross-border leakage.\n(iv) Present bias and behavioral considerations:\nIf consumers exhibit present bias, they overweight the immediate pleasure of sugary drinks relative to future health costs. In this case, their experienced utility from reduced consumption may be higher than their decision utility suggests and they would thank their future selves for consuming less.\nTo modify the welfare analysis, one would need to distinguish between decision utility (the preferences consumers act on, which reflect present bias) and experienced utility (their true long-run well-being). Our CV calculation uses decision utility, which overstates the welfare cost of the tax: some of what appears as lost consumer welfare is actually a gain from correcting overconsumption. Under experienced utility, the DWL would be smaller, and the tax may even be welfare-improving if it helps consumers overcome self-control problems. In this case, a higher tax than the one calculated under standard assumptions may be justified to achieve the socially optimal level of consumption."
-  },
-  {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking here.\n\nOverviewLearning GoalsMaterialGrading\n\n\n\nOverview\nThis course develops the core tools of microeconomic theory while connecting them to real-world applications and policy questions.\nWe begin by examining how consumers decide what to buy (lectures 1-2) and how firms organize production (lecture 3), then consider how these behaviors determine prices and quantities in competitive markets (lecture 4). From there, we explore what it means for a market to work efficiently and how to think about fairness (lecture 5). We then turn to market power (lectures 6-8): What happens when a single or a few large firms dominate the market? How does market power affect wages in labor markets?\nIn the second half of the course, we consider the need for government intervention when markets fail due to information asymmetries, externalities, or underprovision of public goods (lectures 9-10). Finally, we conclude by examining decision-making under uncertainty and strategic behavior through game theory (lectures 11-12).\n\n\n\n\nLearning Goals\nUpon successful completion of this course, students will:\n\nModel consumer and firm behavior and derive equilibrium prices and quantities in competitive markets\nApply welfare criteria to assess market efficiency and analyze tradeoffs between efficiency and equity\nAnalyze how market power affects prices, output, and wages in product and labor markets\nDiagnose market failures arising from information asymmetries, externalities, and public goods, and evaluate policy responses\nApply expected utility theory to model choice under uncertainty and use game theory to solve strategic interactions\n\n\n\n\n\nCourse Material\nThe following textbook is required for this course:\n\nMicroeconomic Theory: Basic Principles & Extensions by Walter Nicholson, Christopher Snyder, 13th Edition.\n\nPrevious editions are also acceptable. Lectures will loosely follow the textbook. Supplementary readings, lecture slides, and problem sets will be posted on the course website.\n\n\n\n\nGrading Criteria\nYour grade will be determined according to the following breakdown:\n\n\n\nComponent\n\n\nPoints\n\n\n\n\nProblem Sets\n\n\n10\n\n\n\n\nMidterm Exam\n\n\n40\n\n\n\n\nFinal Exam\n\n\n50"
   }
 ]
