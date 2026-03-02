@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
@@ -123,8 +152,40 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ps2-solutions.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-1-automation-and-labor-demand" id="toc-problem-1-automation-and-labor-demand" class="nav-link active" data-scroll-target="#problem-1-automation-and-labor-demand">Problem 1: Automation and Labor Demand</a>
+  <ul class="collapse">
+  <li><a href="#part-a-elasticity-of-substitution" id="toc-part-a-elasticity-of-substitution" class="nav-link" data-scroll-target="#part-a-elasticity-of-substitution">Part (a): Elasticity of substitution</a></li>
+  <li><a href="#part-b-cost-minimizing-input-mix-for-q-1000" id="toc-part-b-cost-minimizing-input-mix-for-q-1000" class="nav-link" data-scroll-target="#part-b-cost-minimizing-input-mix-for-q-1000">Part (b): Cost-minimizing input mix for <span class="math inline">\(Q = 1000\)</span></a></li>
+  <li><a href="#part-c-robot-rental-rate-falls-to-r-10" id="toc-part-c-robot-rental-rate-falls-to-r-10" class="nav-link" data-scroll-target="#part-c-robot-rental-rate-falls-to-r-10">Part (c): Robot rental rate falls to <span class="math inline">\(r = 10\)</span></a></li>
+  <li><a href="#part-d-robot-tax-and-job-savings" id="toc-part-d-robot-tax-and-job-savings" class="nav-link" data-scroll-target="#part-d-robot-tax-and-job-savings">Part (d): Robot tax and job savings</a></li>
+  </ul></li>
+  <li><a href="#problem-2-profit-maximization-and-taxation" id="toc-problem-2-profit-maximization-and-taxation" class="nav-link" data-scroll-target="#problem-2-profit-maximization-and-taxation">Problem 2: Profit Maximization and Taxation</a></li>
+  <li><a href="#problem-3-trade-policy-and-the-portable-radio-market" id="toc-problem-3-trade-policy-and-the-portable-radio-market" class="nav-link" data-scroll-target="#problem-3-trade-policy-and-the-portable-radio-market">Problem 3: Trade Policy and the Portable Radio Market</a>
+  <ul class="collapse">
+  <li><a href="#part-a-domestic-equilibrium" id="toc-part-a-domestic-equilibrium" class="nav-link" data-scroll-target="#part-a-domestic-equilibrium">Part (a): Domestic equilibrium</a></li>
+  <li><a href="#part-b-free-trade-at-world-price-p_w-10" id="toc-part-b-free-trade-at-world-price-p_w-10" class="nav-link" data-scroll-target="#part-b-free-trade-at-world-price-p_w-10">Part (b): Free trade at world price <span class="math inline">\(P_W = \$10\)</span></a></li>
+  <li><a href="#part-c-5-tariff" id="toc-part-c-5-tariff" class="nav-link" data-scroll-target="#part-c-5-tariff">Part (c): $5 tariff</a></li>
+  <li><a href="#part-d-voluntary-export-restraint-ver-of-1250-thousand" id="toc-part-d-voluntary-export-restraint-ver-of-1250-thousand" class="nav-link" data-scroll-target="#part-d-voluntary-export-restraint-ver-of-1250-thousand">Part (d): Voluntary Export Restraint (VER) of 1,250 thousand</a></li>
+  </ul></li>
+  <li><a href="#problem-4-general-equilibrium-exchange" id="toc-problem-4-general-equilibrium-exchange" class="nav-link" data-scroll-target="#problem-4-general-equilibrium-exchange">Problem 4: General Equilibrium Exchange</a>
+  <ul class="collapse">
+  <li><a href="#part-a-mrs-at-initial-endowment" id="toc-part-a-mrs-at-initial-endowment" class="nav-link" data-scroll-target="#part-a-mrs-at-initial-endowment">Part (a): MRS at initial endowment</a></li>
+  <li><a href="#part-b-competitive-equilibrium-at-p_xp_y-1" id="toc-part-b-competitive-equilibrium-at-p_xp_y-1" class="nav-link" data-scroll-target="#part-b-competitive-equilibrium-at-p_xp_y-1">Part (b): Competitive equilibrium at <span class="math inline">\(P_X/P_Y = 1\)</span></a></li>
+  <li><a href="#part-c-verifying-pareto-efficiency" id="toc-part-c-verifying-pareto-efficiency" class="nav-link" data-scroll-target="#part-c-verifying-pareto-efficiency">Part (c): Verifying Pareto efficiency</a></li>
+  <li><a href="#part-d-contract-curve-and-the-first-welfare-theorem" id="toc-part-d-contract-curve-and-the-first-welfare-theorem" class="nav-link" data-scroll-target="#part-d-contract-curve-and-the-first-welfare-theorem">Part (d): Contract curve and the First Welfare Theorem</a></li>
+  </ul></li>
+  <li><a href="#problem-5-optimal-redistribution-with-distortionary-taxation" id="toc-problem-5-optimal-redistribution-with-distortionary-taxation" class="nav-link" data-scroll-target="#problem-5-optimal-redistribution-with-distortionary-taxation">Problem 5: Optimal Redistribution with Distortionary Taxation</a>
+  <ul class="collapse">
+  <li><a href="#part-a-deriving-the-optimal-tax-rate" id="toc-part-a-deriving-the-optimal-tax-rate" class="nav-link" data-scroll-target="#part-a-deriving-the-optimal-tax-rate">Part (a): Deriving the optimal tax rate</a></li>
+  <li><a href="#part-b-comparative-statics" id="toc-part-b-comparative-statics" class="nav-link" data-scroll-target="#part-b-comparative-statics">Part (b): Comparative statics</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ps2-solutions.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -148,8 +209,244 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="problem-1-automation-and-labor-demand" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1-automation-and-labor-demand">Problem 1: Automation and Labor Demand</h2>
+<section id="part-a-elasticity-of-substitution" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-elasticity-of-substitution">Part (a): Elasticity of substitution</h3>
+<p>The production function <span class="math inline">\(Q = [0.6R^{0.5} + 0.4L^{0.5}]^2\)</span> is a CES with parameter <span class="math inline">\(\rho = 0.5\)</span> (since the outer exponent is <span class="math inline">\(1/\rho = 2\)</span>). The elasticity of substitution is:</p>
+<p><span class="math display">\[\sigma = \frac{1}{1 - \rho} = \frac{1}{1 - 0.5} = 2\]</span></p>
+<p>Since <span class="math inline">\(\sigma = 2 &gt; 1\)</span>, robots and workers are <strong>good substitutes</strong>—more substitutable than Cobb-Douglas (<span class="math inline">\(\sigma = 1\)</span>). The firm can replace workers with robots relatively easily when the price of robots falls. A 1% decrease in the relative price of robots leads to a 2% increase in the robot-to-worker ratio.</p>
+</section>
+<section id="part-b-cost-minimizing-input-mix-for-q-1000" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-cost-minimizing-input-mix-for-q-1000">Part (b): Cost-minimizing input mix for <span class="math inline">\(Q = 1000\)</span></h3>
+<p>The cost-minimizing condition requires <span class="math inline">\(MRTS = r/w\)</span>. Computing the marginal products:</p>
+<p><span class="math display">\[MP_R = 2[0.6R^{0.5} + 0.4L^{0.5}] \cdot 0.3 R^{-0.5}, \qquad MP_L = 2[0.6R^{0.5} + 0.4L^{0.5}] \cdot 0.2 L^{-0.5}\]</span></p>
+<p>Taking the ratio:</p>
+<p><span class="math display">\[MRTS = \frac{MP_R}{MP_L} = \frac{0.3}{0.2} \cdot \frac{L^{0.5}}{R^{0.5}} = 1.5\left(\frac{L}{R}\right)^{0.5}\]</span></p>
+<p>Setting <span class="math inline">\(MRTS = r/w\)</span> and solving for the input ratio:</p>
+<p><span class="math display">\[1.5\left(\frac{L}{R}\right)^{0.5} = \frac{r}{w} \quad \Longrightarrow \quad \frac{R}{L} = \left(\frac{1.5w}{r}\right)^2\]</span></p>
+<p>With <span class="math inline">\(r = 20\)</span> and <span class="math inline">\(w = 25\)</span>:</p>
+<p><span class="math display">\[\frac{R}{L} = \left(\frac{1.5 \times 25}{20}\right)^2 = (1.875)^2 \approx 3.52\]</span></p>
+<p>So <span class="math inline">\(R \approx 3.52L\)</span>. Substituting into the production function with <span class="math inline">\(Q = 1000\)</span>:</p>
+<p><span class="math display">\[\sqrt{1000} = 0.6\sqrt{3.52}\,L^{0.5} + 0.4\,L^{0.5} = L^{0.5}(0.6 \times 1.876 + 0.4) = 1.526\,L^{0.5}\]</span></p>
+<p><span class="math display">\[L^{0.5} = \frac{31.62}{1.526} = 20.72 \quad \Longrightarrow \quad L \approx 429\]</span></p>
+<p><span class="math display">\[R \approx 3.52 \times 429 \approx 1{,}510\]</span></p>
+<p><span class="math display">\[\boxed{R \approx 1{,}510, \quad L \approx 429}\]</span></p>
+<p>Total cost: <span class="math inline">\(C = 20(1{,}510) + 25(429) = 30{,}200 + 10{,}725 = \$40{,}925\)</span>.</p>
+</section>
+<section id="part-c-robot-rental-rate-falls-to-r-10" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-robot-rental-rate-falls-to-r-10">Part (c): Robot rental rate falls to <span class="math inline">\(r = 10\)</span></h3>
+<p>With the new prices:</p>
+<p><span class="math display">\[\frac{R}{L} = \left(\frac{1.5 \times 25}{10}\right)^2 = (3.75)^2 = 14.06\]</span></p>
+<p>So <span class="math inline">\(R \approx 14.06L\)</span>. Substituting into the production constraint:</p>
+<p><span class="math display">\[31.62 = L^{0.5}(0.6 \times 3.75 + 0.4) = 2.65\,L^{0.5}\]</span></p>
+<p><span class="math display">\[L^{0.5} = 11.93 \quad \Longrightarrow \quad L \approx 142\]</span></p>
+<p><span class="math display">\[R \approx 14.06 \times 142 \approx 1{,}997\]</span></p>
+<p><span class="math display">\[\boxed{R \approx 1{,}997, \quad L \approx 142}\]</span></p>
+<p><strong>Percentage change in robot-to-worker ratio:</strong> The ratio goes from 3.52 to 14.06, an increase of <span class="math inline">\(\frac{14.06 - 3.52}{3.52} \times 100 \approx 300\%\)</span>. The robot-to-worker ratio <strong>quadruples</strong>. This is because when <span class="math inline">\(r\)</span> halves, the relative price <span class="math inline">\(w/r\)</span> doubles, and with <span class="math inline">\(\sigma = 2\)</span> the input ratio responds by a factor of <span class="math inline">\(2^2 = 4\)</span>.</p>
+<p>The firm dramatically shifts toward robots: robot use rises from 1,510 to 1,997, while worker use falls from 429 to 142. The cheaper robots replace a large share of labor.</p>
+</section>
+<section id="part-d-robot-tax-and-job-savings" class="level3">
+<h3 class="anchored" data-anchor-id="part-d-robot-tax-and-job-savings">Part (d): Robot tax and job savings</h3>
+<p>A robot tax raising <span class="math inline">\(r\)</span> back to 20 would restore the input mix from part (b). Comparing the two scenarios:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="math inline">\(r = 10\)</span> (no tax)</th>
+<th><span class="math inline">\(r = 20\)</span> (robot tax)</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Workers (<span class="math inline">\(L\)</span>)</td>
+<td>142</td>
+<td>429</td>
+<td>+287</td>
+</tr>
+<tr class="even">
+<td>Robots (<span class="math inline">\(R\)</span>)</td>
+<td>1,997</td>
+<td>1,510</td>
+<td>$-$487</td>
+</tr>
+<tr class="odd">
+<td>Total cost</td>
+<td>$23,520</td>
+<td>$40,925</td>
+<td>+$17,405</td>
+</tr>
+</tbody>
+</table>
+<p>The robot tax would <strong>save approximately 287 worker-hours</strong> per 1,000 units of output.</p>
+<p><strong>The trade-off:</strong> Production costs rise by about $17,400 per 1,000 units (a 74% increase), which would be passed on to consumers through higher prices. The cost per worker-hour saved is approximately <span class="math inline">\(\$17{,}400/287 \approx \$61\)</span>. Whether this is worthwhile depends on how society values the protected jobs relative to the efficiency loss and higher consumer prices.</p>
+</section>
+</section>
+<section id="problem-2-profit-maximization-and-taxation" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2-profit-maximization-and-taxation">Problem 2: Profit Maximization and Taxation</h2>
+<p>A competitive firm maximizes profit <span class="math inline">\(\pi = P \cdot q - C(q)\)</span>, yielding the first-order condition <span class="math inline">\(P = MC(q)\)</span>.</p>
+<p><strong>Lump-sum tax on profits.</strong> With a lump-sum tax <span class="math inline">\(T\)</span>, profit becomes <span class="math inline">\(\pi = Pq - C(q) - T\)</span>. The FOC is still <span class="math inline">\(P = MC(q)\)</span>—the lump-sum tax does not depend on the level of output, so it does not affect the marginal conditions. The profit-maximizing quantity is <strong>unchanged</strong>. (The firm earns less profit, but it cannot reduce its tax by producing more or less.)</p>
+<p><strong>Proportional tax on profits.</strong> With tax rate <span class="math inline">\(t\)</span>, after-tax profit is <span class="math inline">\(\pi = (1-t)[Pq - C(q)]\)</span>. The FOC is <span class="math inline">\((1-t)[P - MC(q)] = 0\)</span>. Since <span class="math inline">\((1-t) &gt; 0\)</span>, this gives <span class="math inline">\(P = MC(q)\)</span>, the same condition as before. The profit-maximizing quantity is <strong>unchanged</strong>. (Intuitively, if <span class="math inline">\(q^*\)</span> maximizes pre-tax profit, it also maximizes <span class="math inline">\((1-t)\)</span> times pre-tax profit.)</p>
+<p><strong>Tax on each unit of output.</strong> With a per-unit tax <span class="math inline">\(\tau\)</span>, profit becomes <span class="math inline">\(\pi = Pq - C(q) - \tau q = (P - \tau)q - C(q)\)</span>. The FOC is <span class="math inline">\(P - \tau = MC(q)\)</span>, so the firm produces where marginal cost equals the net price <span class="math inline">\(P - \tau\)</span>. Since <span class="math inline">\(MC\)</span> is increasing, the profit-maximizing quantity <strong>decreases</strong>. The per-unit tax is equivalent to a reduction in the output price—it shifts the effective price down and reduces output.</p>
+<p><strong>Tax on labor input.</strong> If the firm uses labor <span class="math inline">\(L\)</span> at wage <span class="math inline">\(w\)</span> and the government imposes a tax <span class="math inline">\(t_L\)</span> per unit of labor, the effective wage rises to <span class="math inline">\(w + t_L\)</span>. This increases the cost function <span class="math inline">\(C(q)\)</span>, which shifts <span class="math inline">\(MC(q)\)</span> upward. Since the firm produces where <span class="math inline">\(P = MC(q)\)</span>, a higher <span class="math inline">\(MC\)</span> curve means a lower profit-maximizing quantity. Output <strong>decreases</strong>. The firm also substitutes away from labor toward other inputs.</p>
+<p><span class="math display">\[\boxed{\text{Lump-sum tax: no effect. \quad Proportional tax: no effect. \quad Output tax: } q \text{ falls. \quad Labor tax: } q \text{ falls.}}\]</span></p>
+</section>
+<section id="problem-3-trade-policy-and-the-portable-radio-market" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3-trade-policy-and-the-portable-radio-market">Problem 3: Trade Policy and the Portable Radio Market</h2>
+<section id="part-a-domestic-equilibrium" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-domestic-equilibrium">Part (a): Domestic equilibrium</h3>
+<p>Setting domestic demand equal to domestic supply:</p>
+<p><span class="math display">\[D(P) = S(P) \quad \Longrightarrow \quad 5{,}000 - 100P = 150P \quad \Longrightarrow \quad 250P = 5{,}000\]</span></p>
+<p><span class="math display">\[\boxed{P^* = \$20, \qquad Q^* = 3{,}000 \text{ thousand radios}}\]</span></p>
+</section>
+<section id="part-b-free-trade-at-world-price-p_w-10" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-free-trade-at-world-price-p_w-10">Part (b): Free trade at world price <span class="math inline">\(P_W = \$10\)</span></h3>
+<p>At <span class="math inline">\(P = 10\)</span>:</p>
+<ul>
+<li>Domestic demand: <span class="math inline">\(Q_D = 5{,}000 - 100(10) = 4{,}000\)</span> thousand</li>
+<li>Domestic supply: <span class="math inline">\(Q_S = 150(10) = 1{,}500\)</span> thousand</li>
+</ul>
+<p><span class="math display">\[\boxed{\text{Imports} = Q_D - Q_S = 4{,}000 - 1{,}500 = 2{,}500 \text{ thousand radios}}\]</span></p>
+<p>The price falls from $20 to $10, domestic consumption rises, domestic production falls, and the gap is filled by imports.</p>
+</section>
+<section id="part-c-5-tariff" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-5-tariff">Part (c): $5 tariff</h3>
+<p>With the tariff, the domestic price rises to <span class="math inline">\(P = 10 + 5 = \$15\)</span>:</p>
+<ul>
+<li>Domestic demand: <span class="math inline">\(Q_D = 5{,}000 - 100(15) = 3{,}500\)</span> thousand</li>
+<li>Domestic supply: <span class="math inline">\(Q_S = 150(15) = 2{,}250\)</span> thousand</li>
+<li>Imports: <span class="math inline">\(3{,}500 - 2{,}250 = 1{,}250\)</span> thousand</li>
+</ul>
+<p><strong>Tariff revenue:</strong></p>
+<p><span class="math display">\[R = \$5 \times 1{,}250 = \$6{,}250 \text{ thousand}\]</span></p>
+<p><strong>Change in consumer surplus</strong> (trapezoid between <span class="math inline">\(P = 10\)</span> and <span class="math inline">\(P = 15\)</span> under demand curve):</p>
+<p><span class="math display">\[\Delta CS = -\frac{1}{2}(Q_D^{old} + Q_D^{new})(P^{new} - P^{old}) = -\frac{1}{2}(4{,}000 + 3{,}500)(5) = -\$18{,}750 \text{ thousand}\]</span></p>
+<p><strong>Consumer surplus transferred to domestic producers</strong> (increase in producer surplus—trapezoid between <span class="math inline">\(P = 10\)</span> and <span class="math inline">\(P = 15\)</span> under supply curve):</p>
+<p><span class="math display">\[\Delta PS = \frac{1}{2}(Q_S^{old} + Q_S^{new})(P^{new} - P^{old}) = \frac{1}{2}(1{,}500 + 2{,}250)(5) = \$9{,}375 \text{ thousand}\]</span></p>
+<p><strong>Deadweight loss</strong> (the CS lost that is neither captured by producers nor by the government):</p>
+<p><span class="math display">\[DWL = |\Delta CS| - \Delta PS - R = 18{,}750 - 9{,}375 - 6{,}250 = \$3{,}125 \text{ thousand}\]</span></p>
+<p>This DWL consists of two triangles:</p>
+<ul>
+<li><em>Production inefficiency</em>: <span class="math inline">\(\frac{1}{2}(5)(2{,}250 - 1{,}500) = 1{,}875\)</span> (resources wasted producing domestically what could be imported more cheaply)</li>
+<li><em>Consumption loss</em>: <span class="math inline">\(\frac{1}{2}(5)(4{,}000 - 3{,}500) = 1{,}250\)</span> (lost surplus from consumers priced out of the market)</li>
+</ul>
+</section>
+<section id="part-d-voluntary-export-restraint-ver-of-1250-thousand" class="level3">
+<h3 class="anchored" data-anchor-id="part-d-voluntary-export-restraint-ver-of-1250-thousand">Part (d): Voluntary Export Restraint (VER) of 1,250 thousand</h3>
+<p>With the VER limiting imports to 1,250 thousand, the domestic price must adjust so that <span class="math inline">\(Q_D - Q_S = 1{,}250\)</span>:</p>
+<p><span class="math display">\[5{,}000 - 100P - 150P = 1{,}250 \quad \Longrightarrow \quad P = \$15\]</span></p>
+<p>The equilibrium price, domestic demand, domestic supply, and import quantity are <strong>identical</strong> to the tariff case.</p>
+<p><strong>Key difference:</strong> With a tariff, the government collects $6,250 thousand in tariff revenue. With the VER, there is no tariff—foreign exporters sell at the higher domestic price of $15 instead of the world price of $10, so they capture the $6,250 thousand as <strong>quota rents</strong>.</p>
+<p>From the domestic country’s perspective, the VER is strictly worse than the tariff:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Tariff</th>
+<th>VER</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CS loss</td>
+<td>$-$18,750</td>
+<td>$-$18,750</td>
+</tr>
+<tr class="even">
+<td>PS gain</td>
+<td>+9,375</td>
+<td>+9,375</td>
+</tr>
+<tr class="odd">
+<td>Gov.&nbsp;revenue</td>
+<td>+6,250</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Quota rents to foreigners</td>
+<td>0</td>
+<td>$-$6,250</td>
+</tr>
+<tr class="odd">
+<td><strong>Net domestic welfare change</strong></td>
+<td><span class="math inline">\(-\)</span><strong>3,125</strong></td>
+<td><span class="math inline">\(-\)</span><strong>9,375</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The VER transfers an additional $6,250 thousand to foreign producers, making the domestic welfare loss three times larger than the tariff.</p>
+</section>
+</section>
+<section id="problem-4-general-equilibrium-exchange" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4-general-equilibrium-exchange">Problem 4: General Equilibrium Exchange</h2>
+<section id="part-a-mrs-at-initial-endowment" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-mrs-at-initial-endowment">Part (a): MRS at initial endowment</h3>
+<p>For <span class="math inline">\(U = X \cdot Y\)</span> (Cobb-Douglas with equal exponents):</p>
+<p><span class="math display">\[MRS = \frac{MU_X}{MU_Y} = \frac{Y}{X}\]</span></p>
+<p>At the initial endowment <span class="math inline">\((X_A, Y_A) = (70, 30)\)</span> and <span class="math inline">\((X_B, Y_B) = (30, 70)\)</span>:</p>
+<p><span class="math display">\[MRS_A = \frac{30}{70} = \frac{3}{7} \approx 0.43, \qquad MRS_B = \frac{70}{30} = \frac{7}{3} \approx 2.33\]</span></p>
+<p>Since <span class="math inline">\(MRS_A \neq MRS_B\)</span>, the initial allocation is <strong>not Pareto efficient</strong>. There are gains from trade: Ben values X much more highly than Ana does (he is willing to give up 7/3 units of Y for one unit of X, while Ana would only give up 3/7). Ana should trade X to Ben in exchange for Y.</p>
+</section>
+<section id="part-b-competitive-equilibrium-at-p_xp_y-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-competitive-equilibrium-at-p_xp_y-1">Part (b): Competitive equilibrium at <span class="math inline">\(P_X/P_Y = 1\)</span></h3>
+<p>Let <span class="math inline">\(P_Y = 1\)</span> (numeraire), so <span class="math inline">\(P_X = 1\)</span>.</p>
+<p><strong>Ana’s problem:</strong> Budget <span class="math inline">\(= P_X \cdot 70 + P_Y \cdot 30 = 100\)</span>. With <span class="math inline">\(U = XY\)</span>, the demand functions are:</p>
+<p><span class="math display">\[X_A = \frac{I_A}{2P_X} = \frac{100}{2} = 50, \qquad Y_A = \frac{I_A}{2P_Y} = \frac{100}{2} = 50\]</span></p>
+<p><strong>Ben’s problem:</strong> Budget <span class="math inline">\(= P_X \cdot 30 + P_Y \cdot 70 = 100\)</span>. By the same logic:</p>
+<p><span class="math display">\[X_B = \frac{100}{2} = 50, \qquad Y_B = \frac{100}{2} = 50\]</span></p>
+<p><strong>Market clearing:</strong> Total demand for <span class="math inline">\(X\)</span>: <span class="math inline">\(50 + 50 = 100\)</span> = total endowment. ✓</p>
+<p><span class="math display">\[\boxed{(X_A, Y_A) = (50, 50), \qquad (X_B, Y_B) = (50, 50)}\]</span></p>
+<p>Ana trades 20 units of X to Ben in exchange for 20 units of Y.</p>
+</section>
+<section id="part-c-verifying-pareto-efficiency" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-verifying-pareto-efficiency">Part (c): Verifying Pareto efficiency</h3>
+<p>At the equilibrium allocation:</p>
+<p><span class="math display">\[MRS_A = \frac{Y_A}{X_A} = \frac{50}{50} = 1, \qquad MRS_B = \frac{Y_B}{X_B} = \frac{50}{50} = 1\]</span></p>
+<p><span class="math display">\[\boxed{MRS_A = MRS_B = 1 = \frac{P_X}{P_Y}}\]</span></p>
+<p>The competitive equilibrium is Pareto efficient: both consumers’ marginal rates of substitution are equal (to each other and to the price ratio), so there is no way to make one person better off without making the other worse off.</p>
+</section>
+<section id="part-d-contract-curve-and-the-first-welfare-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="part-d-contract-curve-and-the-first-welfare-theorem">Part (d): Contract curve and the First Welfare Theorem</h3>
+<p>The <strong>contract curve</strong> is the set of all Pareto efficient allocations, where <span class="math inline">\(MRS_A = MRS_B\)</span>:</p>
+<p><span class="math display">\[\frac{Y_A}{X_A} = \frac{Y_B}{X_B} = \frac{100 - Y_A}{100 - X_A}\]</span></p>
+<p>Cross-multiplying: <span class="math inline">\(Y_A(100 - X_A) = X_A(100 - Y_A)\)</span>, which simplifies to:</p>
+<p><span class="math display">\[\boxed{Y_A = X_A}\]</span></p>
+<p>The contract curve is the diagonal of the Edgeworth box (equivalently, <span class="math inline">\(Y_B = X_B\)</span>). Every Pareto efficient allocation gives each person equal amounts of both goods.</p>
+<p>The <strong>First Welfare Theorem</strong> states that every competitive equilibrium allocation is Pareto efficient. We verified this in part (c): the equilibrium allocation <span class="math inline">\((50, 50)\)</span> for both consumers lies on the contract curve (<span class="math inline">\(Y_A = X_A = 50\)</span>). The competitive market, guided only by prices, achieves an efficient outcome without any central planner.</p>
+</section>
+</section>
+<section id="problem-5-optimal-redistribution-with-distortionary-taxation" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5-optimal-redistribution-with-distortionary-taxation">Problem 5: Optimal Redistribution with Distortionary Taxation</h2>
+<section id="part-a-deriving-the-optimal-tax-rate" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-deriving-the-optimal-tax-rate">Part (a): Deriving the optimal tax rate</h3>
+<p>Substituting the consumption expressions into the welfare function:</p>
+<p><span class="math display">\[c_P = y_P + \tau y_R - \frac{1}{2}k\tau^2 y_R, \qquad c_R = (1-\tau)y_R\]</span></p>
+<p><span class="math display">\[W(\tau) = \alpha\left[y_P + \tau y_R - \frac{1}{2}k\tau^2 y_R\right] + (1-\alpha)(1-\tau)y_R\]</span></p>
+<p>Expanding:</p>
+<p><span class="math display">\[W(\tau) = \alpha y_P + \alpha\tau y_R - \frac{1}{2}\alpha k\tau^2 y_R + (1-\alpha)y_R - (1-\alpha)\tau y_R\]</span></p>
+<p>Taking the first-order condition:</p>
+<p><span class="math display">\[\frac{dW}{d\tau} = \alpha y_R - \alpha k\tau y_R - (1-\alpha)y_R = 0\]</span></p>
+<p>Dividing through by <span class="math inline">\(y_R\)</span>:</p>
+<p><span class="math display">\[\alpha - \alpha k\tau - (1 - \alpha) = 0\]</span></p>
+<p><span class="math display">\[2\alpha - 1 = \alpha k\tau\]</span></p>
+<p><span class="math display">\[\boxed{\tau^* = \frac{2\alpha - 1}{\alpha k}}\]</span></p>
+<p>The second-order condition confirms this is a maximum: <span class="math inline">\(\frac{d^2W}{d\tau^2} = -\alpha k y_R &lt; 0\)</span>. Note that <span class="math inline">\(\tau^* &gt; 0\)</span> requires <span class="math inline">\(\alpha &gt; 1/2\)</span>: positive redistribution is only optimal when society places more weight on the poor than on the rich.</p>
+</section>
+<section id="part-b-comparative-statics" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-comparative-statics">Part (b): Comparative statics</h3>
+<p>Rewriting <span class="math inline">\(\tau^*\)</span> in a more convenient form:</p>
+<p><span class="math display">\[\tau^* = \frac{2}{k} - \frac{1}{\alpha k}\]</span></p>
+<p><strong>(i) Effect of inequality aversion <span class="math inline">\(\alpha\)</span>:</strong></p>
+<p><span class="math display">\[\frac{\partial \tau^*}{\partial \alpha} = \frac{1}{\alpha^2 k} &gt; 0\]</span></p>
+<p>Higher inequality aversion (larger <span class="math inline">\(\alpha\)</span>) increases the optimal tax rate. <strong>Intuition:</strong> When society cares more about the well-being of the poor relative to the rich, it is willing to tolerate more deadweight loss in order to transfer additional resources to the poor. A more egalitarian social welfare function justifies a larger tax-and-transfer program.</p>
+<p><strong>(ii) Effect of the distortion parameter <span class="math inline">\(k\)</span>:</strong></p>
+<p><span class="math display">\[\frac{\partial \tau^*}{\partial k} = -\frac{2\alpha - 1}{\alpha k^2} &lt; 0 \quad \text{(for } \alpha &gt; 1/2\text{)}\]</span></p>
+<p>A higher distortion cost (larger <span class="math inline">\(k\)</span>) decreases the optimal tax rate. <strong>Intuition:</strong> When taxation is more distortionary—meaning more revenue is lost to deadweight loss per dollar collected—the government should tax less aggressively. The “leaky bucket” of redistribution becomes leakier: each dollar taken from the rich delivers less than a dollar to the poor, so the marginal cost of redistribution rises and the optimal level falls.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

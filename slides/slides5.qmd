@@ -346,7 +346,7 @@ plt.show()
 ```
 
 
-Which of the points get chosen?
+What would Alberto and Blake end up choosing?
 
 ---
 
@@ -480,13 +480,13 @@ Normalize $p_y = 1$. Let $p_x = p$.
 
 **Demands**:
 
-$$x_A = \frac{0.5(5p_x + 1)}{p_x} \qquad y_A = 0.5(5p_x + 1)$$
+$$x_A = \frac{0.5(5p + 1)}{p} \qquad y_A = 0.5(5p + 1)$$
 
-$$x_B = \frac{0.4(p_x + 3)}{p_x} \qquad y_B = 0.6(p_x + 3)$$
+$$x_B = \frac{0.4(p + 3)}{p} \qquad y_B = 0.6(p + 3)$$
 
 **Market clearing for $y$:** $\quad y_A + y_B = 4$
 
-$$0.5(5p_x + 1) + 0.6(p_x + 3) = 4 \rightarrow p_x \approx 0.55$$
+$$0.5(5p + 1) + 0.6(p + 3) = 4 \rightarrow p \approx 0.55$$
 
 Pizza is cheaper than cupcakes. Does that makes sense?
 
@@ -518,8 +518,7 @@ Is the equilibrium Pareto efficient? How do you know?
 
 <div style="text-align: right; margin-top: 1em;">— John Maynard Keynes</div>
 
-
----
+# Welfare Theorems
 
 ## First Welfare Theorem
 
@@ -561,7 +560,6 @@ But feasibility requires $\sum_i \hat{x}_i \leq \sum_i \omega_i$. **Contradictio
 The theorem requires almost nothing:
 
 - No assumptions about convexity of preferences
-- No assumptions about the number of goods or consumers
 - Works for any number of goods and any number of people
 - Only needs local nonsatiation and price-taking behavior
 
@@ -694,9 +692,9 @@ Pick any Pareto efficient allocation. Redistribute endowments to a point on the 
 
 The two theorems together give a powerful separation:
 
-**First Welfare Theorem:** Markets handle *efficiency* — let prices allocate resources
+**First Welfare Theorem:** Markets handle *efficiency* — let prices allocate resources.
 
-**Second Welfare Theorem:** Government handles *equity* — use lump-sum transfers to adjust the starting point
+**Second Welfare Theorem:** Government handles *equity* — use lump-sum transfers to adjust the starting point.
 
 **The policy recipe:**
 
@@ -815,7 +813,209 @@ Different social welfare functions pick different points:
 - **Rawlsian** → always picks the most equal feasible outcome
 - **Nash** → something in between
 
-**Arrow's impossibility theorem** (1951) tells us there is no "right" answer — any SWF encodes value judgments that cannot be derived from individual preferences alone.
+**Arrow's impossibility theorem** (1951) tells us there is no "right" answer. Any SWF encodes value judgments that cannot be derived from individual preferences alone.
+
+---
+
+## Plot: Choosing an Allocation 
+
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 12
+#| fig-height: 5.5
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# ═══════════════════════════════════════════
+# PARAMETERS — change only here
+# ═══════════════════════════════════════════
+total_x, total_y = 4, 4
+alpha_A = 0.5          # Cobb-Douglas alpha for A
+alpha_B = 0.25         # Cobb-Douglas alpha for B
+exp_A = 1.0            # cardinal exponent: U_A = (x^a * y^(1-a))^exp_A
+exp_B = 0.5            # cardinal exponent: U_B = (x^a * y^(1-a))^exp_B
+
+# Points to highlight on contract curve (x_A values)
+# Set to None to auto-pick points where both agents get ~integer quantities
+highlight_xA = None
+
+color1 = '#0072B2'     # A / utilitarian
+color2 = '#E69F00'     # B / Rawlsian
+color_cc = '#009E73'   # contract curve / UPF
+color_nash = '#CC79A7'
+
+# ═══════════════════════════════════════════
+# DERIVED FUNCTIONS
+# ═══════════════════════════════════════════
+LA = alpha_A / (1 - alpha_A)
+LB = alpha_B / (1 - alpha_B)
+
+def contract_curve_y(x_A):
+    """Contract curve from MRS_A = MRS_B for Cobb-Douglas."""
+    return LB * total_y * x_A / (LA * total_x + x_A * (LB - LA))
+
+def U_A(x, y):
+    return (x**alpha_A * y**(1 - alpha_A))**exp_A
+
+def U_B(x, y):
+    return (x**alpha_B * y**(1 - alpha_B))**exp_B
+
+def U_A_on_cc(x_A):
+    return U_A(x_A, contract_curve_y(x_A))
+
+def U_B_on_cc(x_A):
+    return U_B(total_x - x_A, total_y - contract_curve_y(x_A))
+
+# ═══════════════════════════════════════════
+# AUTO-PICK WHOLE-NUMBER POINTS ON CC
+# ═══════════════════════════════════════════
+if highlight_xA is None:
+    candidates = []
+    for xa_10 in range(1, int(total_x * 10)):
+        xa = xa_10 / 10
+        ya = contract_curve_y(xa)
+        xb, yb = total_x - xa, total_y - ya
+        vals = [xa, ya, xb, yb]
+        if all(v > 0.3 for v in vals) and all(abs(v - round(v)) < 0.05 for v in vals):
+            candidates.append(round(xa, 1))
+    seen = set()
+    unique = []
+    for c in candidates:
+        key = round(c * 2) / 2
+        if key not in seen:
+            seen.add(key)
+            unique.append(c)
+    highlight_xA = unique if len(unique) >= 2 else [total_x * i / 4 for i in range(1, 4)]
+
+# ═══════════════════════════════════════════
+# COMPUTE UPF
+# ═══════════════════════════════════════════
+x_fine = np.linspace(0.01, total_x - 0.01, 2000)
+UA_vals = np.array([U_A_on_cc(x) for x in x_fine])
+UB_vals = np.array([U_B_on_cc(x) for x in x_fine])
+
+# ═══════════════════════════════════════════
+# COMPUTE SWF OPTIMA
+# ═══════════════════════════════════════════
+dUA = np.diff(UA_vals)
+dUB = np.diff(UB_vals)
+slopes = dUB / dUA
+
+# Utilitarian: max U_A + U_B => dU_B/dU_A = -1
+util_idx = np.argmin(np.abs(slopes + 1))
+ua_util, ub_util = UA_vals[util_idx], UB_vals[util_idx]
+W_util = ua_util + ub_util
+
+# Rawlsian: max min(U_A, U_B) => U_A = U_B on UPF
+raw_idx = np.argmin(np.abs(UA_vals - UB_vals))
+ua_raw, ub_raw = UA_vals[raw_idx], UB_vals[raw_idx]
+
+# Nash: max U_A * U_B => dU_B/dU_A = -U_B/U_A
+nash_slopes = -UB_vals[:-1] / UA_vals[:-1]
+nash_idx = np.argmin(np.abs(slopes - nash_slopes))
+ua_nash, ub_nash = UA_vals[nash_idx], UB_vals[nash_idx]
+W_nash = ua_nash * ub_nash
+
+# ═══════════════════════════════════════════
+# PLOT
+# ═══════════════════════════════════════════
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5.5))
+
+# ── Panel 1: Edgeworth Box ──
+x_cc = np.linspace(0.01, total_x - 0.01, 500)
+y_cc = contract_curve_y(x_cc)
+valid_cc = (y_cc > 0) & (y_cc < total_y)
+ax1.plot(x_cc[valid_cc], y_cc[valid_cc], '-', color=color_cc, linewidth=3, zorder=4)
+
+c_vals = np.linspace(0.01, total_x - 0.01, 500)
+for px in highlight_xA:
+    py = contract_curve_y(px)
+    ax1.plot(px, py, 'o', color=color_cc, markersize=8, zorder=6)
+
+    # A's IC: x^alpha_A * y^(1-alpha_A) = const
+    U_A_val = px**alpha_A * py**(1 - alpha_A)
+    y_ic = (U_A_val / c_vals**alpha_A)**(1 / (1 - alpha_A))
+    m = (y_ic > 0.01) & (y_ic < total_y - 0.01)
+    ax1.plot(c_vals[m], y_ic[m], '-', color=color1, linewidth=1.2, alpha=0.65)
+
+    # B's IC in A's coordinates: (Tx-x)^alpha_B * (Ty-y)^(1-alpha_B) = const
+    xb, yb = total_x - px, total_y - py
+    U_B_val = xb**alpha_B * yb**(1 - alpha_B)
+    bx = total_x - c_vals
+    valid_bx = bx > 0.01
+    by = np.full_like(c_vals, np.nan)
+    by[valid_bx] = (U_B_val / bx[valid_bx]**alpha_B)**(1 / (1 - alpha_B))
+    cy = total_y - by
+    m2 = (~np.isnan(cy)) & (cy > 0.01) & (cy < total_y - 0.01)
+    ax1.plot(c_vals[m2], cy[m2], '-', color=color2, linewidth=1.2, alpha=0.65)
+
+ax1.set_xlabel("$x_A$ →", fontsize=12)
+ax1.set_ylabel("$y_A$ →", fontsize=12)
+ax1.set_xlim(0, total_x)
+ax1.set_ylim(0, total_y)
+ax1.set_xticks([0, 1, 2, 3, 4])
+ax1.set_yticks([0, 1, 2, 3, 4])
+
+ticks_x = list(range(int(total_x) + 1))
+ticks_y = list(range(int(total_y) + 1))
+ax1_top = ax1.secondary_xaxis('top')
+ax1_top.set_xlabel("← $x_B$", fontsize=12)
+ax1_top.set_xticks(ticks_x)
+ax1_top.set_xticklabels(ticks_x[::-1])
+ax1_right = ax1.secondary_yaxis('right')
+ax1_right.set_ylabel("← $y_B$", fontsize=12)
+ax1_right.set_yticks(ticks_y)
+ax1_right.set_yticklabels(ticks_y[::-1])
+
+ax1.text(-0.3, -0.3, '$O_A$', fontsize=13, fontweight='bold')
+ax1.text(total_x + 0.3, total_y + 0.3, '$O_B$', fontsize=13, fontweight='bold', ha='center')
+ax1.grid(True, linestyle='--', alpha=0.4)
+ax1.set_aspect('equal')
+
+# ── Panel 2: UPF ──
+ax2.plot(UA_vals, UB_vals, '-', color=color_cc, linewidth=3, label='UPF')
+ax2.fill_between(UA_vals, 0, UB_vals, color=color_cc, alpha=0.08)
+
+for px in highlight_xA:
+    ax2.plot(U_A_on_cc(px), U_B_on_cc(px), 'o', color=color_cc, markersize=8, zorder=6)
+
+# Utilitarian SIC
+u1_range = np.linspace(0.05, W_util - 0.05, 200)
+ax2.plot(u1_range, W_util - u1_range, '--', color=color1, linewidth=1.5, label='Utilitarian')
+ax2.plot(ua_util, ub_util, 'o', color=color1, markersize=7, zorder=6)
+
+# Rawlsian SIC
+ua_max, ub_max = UA_vals[-1], UB_vals[0]
+ax2.plot([ua_raw, ua_raw], [ua_raw, ub_max * 2.05], '--', color=color2, linewidth=1.5)
+ax2.plot([ua_raw, ua_max * 1.05], [ua_raw, ua_raw], '--', color=color2, linewidth=1.5, label='Rawlsian')
+ax2.plot(ua_raw, ub_raw, 's', color=color2, markersize=8, zorder=6)
+
+# Nash SIC
+nash_u1 = np.linspace(0.05, ua_max, 300)
+nash_u2 = W_nash / nash_u1
+valid_nash = nash_u2 < ub_max * 1.1
+ax2.plot(nash_u1[valid_nash], nash_u2[valid_nash], '--', color=color_nash, linewidth=1.5, label='Nash')
+ax2.plot(ua_nash, ub_nash, 'D', color=color_nash, markersize=7, zorder=6)
+
+# 45-degree line
+max_u = max(ua_max, ub_max) * 1.05
+ax2.plot([0, max_u], [0, max_u], ':', color='gray', linewidth=1, alpha=0.4)
+
+axis_max = max(ua_max, ub_max) * 1.1
+ax2.set_xlim(0, axis_max)
+ax2.set_ylim(0, axis_max)
+ax2.set_xlabel('$U_A$', fontsize=13)
+ax2.set_ylabel('$U_B$', fontsize=13)
+ax2.legend(fontsize=10, loc='upper right')
+ax2.grid(True, linestyle='--', alpha=0.4)
+ax2.set_aspect('equal')
+
+plt.tight_layout()
+plt.show()
+```
+
 
 # Adding Production
 
@@ -828,6 +1028,122 @@ So far, the total quantities of $x$ and $y$ were fixed. In reality, society also
 Adding production introduces a new margin of efficiency: not just *how to allocate goods* (exchange efficiency), but also *how to allocate inputs across industries* (production efficiency) and *what mix of goods to produce* (product-mix efficiency).
 
 The key new object is the **production possibilities frontier** (PPF).
+
+---
+
+## Edgeworth Box for Production
+
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 7
+#| fig-height: 5.5
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# ═══════════════════════════════════════════
+# PARAMETERS — change only here
+# ═══════════════════════════════════════════
+box_w, box_h = 10, 8       # total labor, total capital
+alpha_x = 0.6              # CD exponent for x: q_x = L^alpha_x * K^(1-alpha_x)
+alpha_y = 0.3              # CD exponent for y: q_y = L^alpha_y * K^(1-alpha_y)
+
+# Points on contract curve to highlight (L_x values)
+# Set to None to auto-pick integer points
+highlight_Lx = None
+
+color1 = '#0072B2'
+color2 = '#E69F00'
+color_cc = '#009E73'
+
+# ═══════════════════════════════════════════
+# DERIVED
+# ═══════════════════════════════════════════
+Lx_ratio = alpha_x / (1 - alpha_x)
+Ly_ratio = alpha_y / (1 - alpha_y)
+
+def contract_curve_K(L_x):
+    """Capital allocated to x on the contract curve."""
+    return Ly_ratio * box_h * L_x / (Lx_ratio * box_w + L_x * (Ly_ratio - Lx_ratio))
+
+# ═══════════════════════════════════════════
+# AUTO-PICK INTEGER POINTS
+# ═══════════════════════════════════════════
+if highlight_Lx is None:
+    candidates = []
+    for lx_10 in range(1, int(box_w * 10)):
+        lx = lx_10 / 10
+        kx = contract_curve_K(lx)
+        ly, ky = box_w - lx, box_h - kx
+        vals = [lx, kx, ly, ky]
+        if all(v > 0.3 for v in vals) and all(abs(v - round(v)) < 0.05 for v in vals):
+            candidates.append(round(lx, 1))
+    seen = set()
+    unique = []
+    for c in candidates:
+        key = round(c)
+        if key not in seen:
+            seen.add(key)
+            unique.append(c)
+    highlight_Lx = unique if len(unique) >= 2 else [box_w * i / 4 for i in range(1, 4)]
+
+# ═══════════════════════════════════════════
+# PLOT
+# ═══════════════════════════════════════════
+fig, ax = plt.subplots(figsize=(7, 5.5))
+
+# Box
+ax.plot([0, box_w, box_w, 0, 0], [0, 0, box_h, box_h, 0], 'k-', linewidth=1.5)
+
+# Contract curve
+cc_L = np.linspace(0.01, box_w - 0.01, 500)
+cc_K = contract_curve_K(cc_L)
+valid_cc = (cc_K > 0) & (cc_K < box_h)
+ax.plot(cc_L[valid_cc], cc_K[valid_cc], '-', color=color_cc, linewidth=2.5, label='Contract curve', zorder=5)
+
+# Isoquants tangent at highlighted points
+c_vals = np.linspace(0.1, box_w - 0.1, 500)
+for lx in highlight_Lx:
+    kx = contract_curve_K(lx)
+    ax.plot(lx, kx, 'o', color=color_cc, markersize=7, zorder=6)
+
+    # x-isoquant through (lx, kx)
+    qx = lx**alpha_x * kx**(1 - alpha_x)
+    K_iso_x = (qx / c_vals**alpha_x)**(1 / (1 - alpha_x))
+    m = (K_iso_x > 0.01) & (K_iso_x < box_h - 0.01)
+    ax.plot(c_vals[m], K_iso_x[m], '-', color=color1, linewidth=1.2, alpha=0.4)
+
+    # y-isoquant through (W-lx, H-kx) plotted in x's coordinates
+    ly, ky = box_w - lx, box_h - kx
+    qy = ly**alpha_y * ky**(1 - alpha_y)
+    by = (box_w - c_vals)
+    valid_by = by > 0.01
+    K_iso_y = np.full_like(c_vals, np.nan)
+    K_iso_y[valid_by] = (qy / by[valid_by]**alpha_y)**(1 / (1 - alpha_y))
+    cy = box_h - K_iso_y
+    m2 = (~np.isnan(cy)) & (cy > 0.01) & (cy < box_h - 0.01)
+    ax.plot(c_vals[m2], cy[m2], '-', color=color2, linewidth=1.2, alpha=0.4)
+
+# Labels
+ax.annotate('$O_x$', xy=(0, 0), xytext=(-0.6, -0.4), fontsize=14, fontweight='bold')
+ax.annotate('$O_y$', xy=(box_w, box_h), xytext=(box_w + 0.1, box_h + 0.1), fontsize=14, fontweight='bold')
+ax.annotate('$L_x$ →', xy=(box_w/2, -0.5), fontsize=11, ha='center')
+ax.annotate('← $L_y$', xy=(box_w/2, box_h + 0.5), fontsize=11, ha='center')
+ax.annotate('$K_x$ →', xy=(-0.5, box_h/2), fontsize=10, ha='center', rotation=90)
+ax.annotate('← $K_y$', xy=(box_w + 0.5, box_h/2), fontsize=10, ha='center', rotation=90)
+
+ax.set_xlim(-2, box_w + 2)
+ax.set_ylim(-1.2, box_h + 1.2)
+ax.set_aspect('equal')
+ax.axis('off')
+
+plt.tight_layout()
+plt.show()
+```
+
+Every point in the box is a full allocation of $\bar{L}$ and $\bar{K}$ between producing $x$ and $y$. Efficient allocations lie on the **contract curve** where isoquants are tangent (RTS equal across industries).
+
 
 ---
 
@@ -876,16 +1192,16 @@ ax.annotate('Efficient production\n$MRT = p_x/p_y$', xy=(x_star, y_star), xytext
 
 # Inefficient point (interior)
 ax.plot(3, 2.5, 'o', color='#D55E00', markersize=8, zorder=5)
-ax.annotate('Inefficient\n(wasted resources)', xy=(3, 2.5), xytext=(1.5, 4),
+ax.annotate('Inefficient\n(wasted resources)', xy=(3, 2.5), xytext=(1.5, 3),
             fontsize=12, ha='center', color='#D55E00',
             arrowprops=dict(arrowstyle='->', color='#D55E00', lw=1.2))
 
 # Infeasible point
-ax.plot(7, 4), 
-ax.plot(7, 4, 'x', color='red', markersize=10, markeredgewidth=2, zorder=5)
-ax.annotate('Infeasible', xy=(7, 4), xytext=(7.5, 4.8),
-            fontsize=12, ha='center', color='red',
-            arrowprops=dict(arrowstyle='->', color='red', lw=1.2))
+ax.plot(3, 6.5), 
+ax.plot(3, 6.5, 'o', color='#D55E00', markersize=8, zorder=5)
+ax.annotate('Infeasible', xy=(3, 6.5), xytext=(3.75, 6),
+            fontsize=12, ha='center', color='#D55E00',
+            arrowprops=dict(arrowstyle='->', color='#D55E00', lw=1.2))
 
 ax.set_xlabel('Good $x$', fontsize=14)
 ax.set_ylabel('Good $y$', fontsize=14)
@@ -929,69 +1245,3 @@ The rate at which consumers are willing to trade $x$ for $y$ equals the rate at 
 - Profit-maximizing firms produce where $MRT = p_x/p_y$
 
 ---
-
-## The Complete Picture
-
-```{python}
-#| echo: false
-#| fig-align: center
-#| fig-width: 7
-#| fig-height: 5.5
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-color1 = '#0072B2'
-color2 = '#E69F00'
-
-fig, ax = plt.subplots(1, 1, figsize=(7.5, 5.5))
-
-# PPF
-x_ppf = np.linspace(0, np.sqrt(72), 300)
-y_ppf = np.sqrt((72 - x_ppf**2) / 2)
-
-ax.plot(x_ppf, y_ppf, '-', color='#009E73', linewidth=3, label='PPF')
-
-# Production point
-x_star = 5
-y_star = np.sqrt((72 - x_star**2) / 2)
-ax.plot(x_star, y_star, 'ko', markersize=8, zorder=5)
-
-# MRT at production point
-MRT = x_star / (2 * y_star)
-
-# Price line through production point
-tang_x = np.linspace(0.5, 8.5, 100)
-tang_y = y_star - MRT * (tang_x - x_star)
-valid = (tang_y > 0)
-ax.plot(tang_x[valid], tang_y[valid], '--', color='gray', linewidth=1.5, label='Price line ($p_x/p_y$)')
-
-# Consumer indifference curve tangent at production point
-# Representative consumer with CD utility
-alpha = 0.45
-U_rep = x_star**alpha * y_star**(1 - alpha)
-x_ic = np.linspace(0.5, 8, 300)
-y_ic = (U_rep / x_ic**alpha)**(1/(1 - alpha))
-m = (y_ic > 0) & (y_ic < 7)
-ax.plot(x_ic[m], y_ic[m], '-', color=color1, linewidth=2, alpha=0.6, label='Social IC ($MRS = MRT$)')
-
-ax.annotate('Competitive\nequilibrium', xy=(x_star, y_star), xytext=(7, 5.2),
-            fontsize=12, ha='center',
-            arrowprops=dict(arrowstyle='->', color='black', lw=1.5))
-
-ax.set_xlabel('Good $x$', fontsize=14)
-ax.set_ylabel('Good $y$', fontsize=14)
-ax.set_xlim(0, 9)
-ax.set_ylim(0, 7)
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.grid(True, linestyle='--', alpha=0.3)
-ax.legend(loc='upper right', fontsize=11, frameon=True, facecolor='white', edgecolor='gray')
-
-plt.tight_layout()
-plt.show()
-```
-
-
----
-

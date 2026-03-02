@@ -1,0 +1,1294 @@
+---
+title: "Monopoly and Market Power"
+subtitle: "Lecture 6"
+author: "Div Bhagia"
+format:
+  revealjs:
+    theme: [default, ../assets/slides.scss]
+    embed-resources: true
+    filters:
+      - ../assets/section-slides.lua
+---
+
+## Sources of Monopoly Power
+
+Why are some markets served by a single firm?
+
+::: {.fragment}
+
+### Technical / Cost Barriers
+
+- **Economies of scale:** average cost falls over the relevant range of demand → natural monopoly
+- **Control of key inputs:**  e.g., De Beers and diamond mines (historically)
+- **Network effects:** value rises with users (platforms, operating systems)
+
+### Legal / Strategic Barriers
+
+- **Patents & IP:** pharmaceutical exclusivity periods
+- **Government franchises:** postal services, utilities
+- **Licensing & regulation:** spectrum allocation, taxi medallions
+
+### Strategic Behavior
+
+- **Predatory pricing:** price below cost to deter entry
+- **Exclusive contracts:** lock up distribution channels
+- **Excess capacity:** credible threat of aggressive response
+
+::: {.box .warning}
+::: box-title
+Applied Note
+:::
+Modern antitrust debates focus on whether tech platforms (Google, Amazon, Meta) constitute monopolies through network effects and data advantages.
+:::
+:::
+::::
+
+## Examples
+
+::: {.center}
+Can you think about some companies that have monopoly power? What are the sources of their market power?
+:::
+
+---
+
+## The Monopolist's Problem
+
+:::: {.columns}
+::: {.column width="50%"}
+
+The monopolist faces the *entire* market demand $P(Q)$. Unlike a competitive firm, selling more requires lowering price.
+
+$$\max_Q \; \pi(Q) = P(Q) \cdot Q - C(Q)$$
+
+### First-Order Condition
+
+$$\frac{d\pi}{dQ} = P(Q) + Q \cdot P'(Q) - C'(Q) = 0$$
+
+$$\boxed{MR(Q) = MC(Q)}$$
+
+### Marginal Revenue Decomposition
+
+$$MR = \underbrace{P}_{\text{output effect}} + \underbrace{Q \cdot \frac{dP}{dQ}}_{\text{price effect} < 0}$$
+
+:::
+
+::: {.column width="50%"}
+
+::: {.box .insight}
+::: box-title
+Result
+:::
+Since $dP/dQ < 0$, we always have $MR < P$. The monopolist produces where $MR = MC$, then charges $P^* = P(Q^*) > MC$.
+:::
+
+### The Inverse Elasticity Rule
+
+$$MR = P\!\left(1 + \frac{1}{\varepsilon_D}\right) = P\!\left(1 - \frac{1}{|\varepsilon_D|}\right)$$
+
+Setting $MR = MC$:
+
+$$\boxed{\frac{P - MC}{P} = \frac{1}{|\varepsilon_D|}}$$
+
+The **Lerner Index** (markup over price) equals the inverse of the absolute elasticity. More inelastic demand → larger markup.
+
+::: {.box .warning}
+::: box-title
+Note
+:::
+The monopolist *never* operates on the inelastic portion of demand ($|\varepsilon_D| < 1$), because $MR < 0$ there.
+:::
+
+:::
+::::
+
+## Monopoly Equilibrium — Interactive
+
+```{ojs}
+//| label: monopoly-controls
+viewof mA = Inputs.range([20, 60], {value: 40, step: 1, label: "Demand intercept (a)"})
+viewof mB = Inputs.range([0.2, 1.5], {value: 0.5, step: 0.1, label: "Demand slope (b)"})
+viewof mC = Inputs.range([2, 25], {value: 8, step: 1, label: "MC (c)"})
+```
+
+```{ojs}
+//| label: monopoly-chart
+{
+  const w = 720, h = 420;
+  const margin = {top: 20, right: 30, bottom: 45, left: 55};
+
+  const a = mA, b = mB, c = mC;
+  const qm = Math.max(0, (a - c) / (2 * b));
+  const pm = a - b * qm;
+  const qc = Math.max(0, (a - c) / b);
+  const qMaxD = a / b;
+  const qMax = qMaxD * 1.1;
+  const pMax = a * 1.1;
+
+  const svg = d3.create("svg").attr("viewBox", [0, 0, w, h]);
+  const x = d3.scaleLinear().domain([0, qMax]).range([margin.left, w - margin.right]);
+  const y = d3.scaleLinear().domain([0, pMax]).range([h - margin.bottom, margin.top]);
+
+  // Axes
+  svg.append("g").attr("transform", `translate(0,${h - margin.bottom})`)
+    .call(d3.axisBottom(x).ticks(8)).append("text")
+    .attr("x", w/2).attr("y", 38).attr("fill", "#333").attr("text-anchor", "middle").text("Q");
+  svg.append("g").attr("transform", `translate(${margin.left},0)`)
+    .call(d3.axisLeft(y).ticks(8)).append("text")
+    .attr("x", -h/2).attr("y", -42).attr("fill", "#333").attr("transform", "rotate(-90)")
+    .attr("text-anchor", "middle").text("P");
+
+  // Profit rectangle
+  if (qm > 0 && pm > c) {
+    svg.append("rect").attr("x", x(0)).attr("y", y(pm))
+      .attr("width", x(qm) - x(0)).attr("height", y(c) - y(pm))
+      .attr("fill", "#009E7330").attr("stroke", "#009E73").attr("stroke-width", 1);
+  }
+
+  // DWL triangle
+  if (qm > 0 && qc > qm) {
+    svg.append("polygon")
+      .attr("points", `${x(qm)},${y(pm)} ${x(qm)},${y(c)} ${x(qc)},${y(c)}`)
+      .attr("fill", "#D55E0030").attr("stroke", "#D55E00").attr("stroke-width", 1);
+  }
+
+  // Demand line
+  svg.append("line").attr("x1", x(0)).attr("y1", y(a)).attr("x2", x(qMaxD)).attr("y2", y(0))
+    .attr("stroke", "#0072B2").attr("stroke-width", 2.5);
+
+  // MR line
+  svg.append("line").attr("x1", x(0)).attr("y1", y(a)).attr("x2", x(a/(2*b))).attr("y2", y(0))
+    .attr("stroke", "#56B4E9").attr("stroke-width", 2.5).attr("stroke-dasharray", "6,3");
+
+  // MC line
+  svg.append("line").attr("x1", x(0)).attr("y1", y(c)).attr("x2", x(qMax)).attr("y2", y(c))
+    .attr("stroke", "#D55E00").attr("stroke-width", 2.5);
+
+  // Dashed guides
+  if (qm > 0) {
+    svg.append("line").attr("x1", x(qm)).attr("y1", y(pm)).attr("x2", x(qm)).attr("y2", y(0))
+      .attr("stroke", "#aaa").attr("stroke-dasharray", "4,3");
+    svg.append("line").attr("x1", x(qm)).attr("y1", y(pm)).attr("x2", x(0)).attr("y2", y(pm))
+      .attr("stroke", "#aaa").attr("stroke-dasharray", "4,3");
+    // Equilibrium dot
+    svg.append("circle").attr("cx", x(qm)).attr("cy", y(pm)).attr("r", 5).attr("fill", "#000");
+  }
+
+  // Labels
+  svg.append("text").attr("x", x(qMaxD*0.5)).attr("y", y(a - b*qMaxD*0.5) - 10)
+    .attr("fill", "#0072B2").attr("font-weight", "bold").attr("font-size", "13px").text("D: P = a − bQ");
+  svg.append("text").attr("x", x(a/(2*b)*0.6)).attr("y", y(a - 2*b*(a/(2*b)*0.6)) - 10)
+    .attr("fill", "#56B4E9").attr("font-weight", "bold").attr("font-size", "13px").text("MR");
+  svg.append("text").attr("x", x(qMax) - 26).attr("y", y(c) - 10)
+    .attr("fill", "#D55E00").attr("font-weight", "bold").attr("font-size", "13px").text("MC");
+
+  // Annotation
+  const profit = (pm - c) * qm;
+  const dwl = 0.5 * (pm - c) * (qc - qm);
+  if (qm > 0) {
+    svg.append("text").attr("x", x(qm) + 8).attr("y", y(pm) - 8)
+      .attr("font-size", "12px").attr("font-family", "monospace")
+      .text(`Q*=${qm.toFixed(1)}, P*=${pm.toFixed(1)}`);
+    svg.append("text").attr("x", x(qm/2)).attr("y", y((pm+c)/2) + 5)
+      .attr("fill", "#009E73").attr("font-size", "12px").attr("font-family", "monospace")
+      .text(`π = ${profit.toFixed(1)}`);
+    svg.append("text").attr("x", x((qm+qc)/2) - 5).attr("y", y((pm+c)/2) + 5)
+      .attr("fill", "#D55E00").attr("font-size", "12px").attr("font-family", "monospace")
+      .text(`DWL = ${dwl.toFixed(1)}`);
+  }
+
+  return svg.node();
+}
+```
+
+::: {.small-text}
+Linear demand: $P = a - bQ$, constant $MC = c$. [■]{style="color:#009E73;"} monopoly profit, [■]{style="color:#D55E00;"} deadweight loss.
+:::
+
+
+## Why Monopolists Have No Supply Curve
+
+:::: {.columns}
+::: {.column width="50%"}
+
+::: {.box .definition}
+::: box-title
+Key Insight
+:::
+A supply curve maps each price to a unique quantity. For a monopolist, the **optimal quantity depends on the shape of the demand curve**, not just the price level.
+:::
+
+Two different demand curves can intersect the same MC at the same price but yield different monopoly quantities — because $MR$ depends on the slope/elasticity of demand, not just its level.
+
+### Formally
+
+$$Q^* \text{ such that } MR(Q^*) = MC(Q^*)$$
+
+Since $MR$ depends on the entire demand function (not just $P$), there is no single $P \to Q$ mapping.
+
+:::
+
+::: {.column width="50%"}
+
+```{ojs}
+//| label: no-supply-chart
+{
+  const w = 480, h = 360;
+  const margin = {top: 20, right: 20, bottom: 40, left: 50};
+  const svg = d3.create("svg").attr("viewBox", [0, 0, w, h]);
+
+  const a1=40, b1=0.4, a2=55, b2=1.0, mc=10;
+  const qm1=(a1-mc)/(2*b1), pm1=a1-b1*qm1;
+  const qm2=(a2-mc)/(2*b2), pm2=a2-b2*qm2;
+  const qMax=90, pMax=60;
+
+  const x = d3.scaleLinear().domain([0, qMax]).range([margin.left, w - margin.right]);
+  const y = d3.scaleLinear().domain([0, pMax]).range([h - margin.bottom, margin.top]);
+
+  svg.append("g").attr("transform", `translate(0,${h-margin.bottom})`).call(d3.axisBottom(x).ticks(6))
+    .append("text").attr("x",w/2).attr("y",35).attr("fill","#333").attr("text-anchor","middle").text("Q");
+  svg.append("g").attr("transform", `translate(${margin.left},0)`).call(d3.axisLeft(y).ticks(6))
+    .append("text").attr("x",-h/2).attr("y",-38).attr("fill","#333").attr("transform","rotate(-90)").attr("text-anchor","middle").text("P");
+
+  // D1
+  svg.append("line").attr("x1",x(0)).attr("y1",y(a1)).attr("x2",x(a1/b1)).attr("y2",y(0))
+    .attr("stroke","#0072B2").attr("stroke-width",2.5);
+  // MR1
+  svg.append("line").attr("x1",x(0)).attr("y1",y(a1)).attr("x2",x(a1/(2*b1))).attr("y2",y(0))
+    .attr("stroke","#0072B2").attr("stroke-width",1.5).attr("stroke-dasharray","5,3");
+  // D2
+  svg.append("line").attr("x1",x(0)).attr("y1",y(a2)).attr("x2",x(a2/b2)).attr("y2",y(0))
+    .attr("stroke","#E69F00").attr("stroke-width",2.5);
+  // MR2
+  svg.append("line").attr("x1",x(0)).attr("y1",y(a2)).attr("x2",x(a2/(2*b2))).attr("y2",y(0))
+    .attr("stroke","#E69F00").attr("stroke-width",1.5).attr("stroke-dasharray","5,3");
+  // MC
+  svg.append("line").attr("x1",x(0)).attr("y1",y(mc)).attr("x2",x(qMax)).attr("y2",y(mc))
+    .attr("stroke","#D55E00").attr("stroke-width",2.5);
+
+  // Points
+  svg.append("circle").attr("cx",x(qm1)).attr("cy",y(pm1)).attr("r",5).attr("fill","#0072B2");
+  svg.append("circle").attr("cx",x(qm2)).attr("cy",y(pm2)).attr("r",5).attr("fill","#E69F00");
+
+  // Dashed to x-axis
+  svg.append("line").attr("x1",x(qm1)).attr("y1",y(pm1)).attr("x2",x(qm1)).attr("y2",y(0))
+    .attr("stroke","#aaa").attr("stroke-dasharray","4,3");
+  svg.append("line").attr("x1",x(qm2)).attr("y1",y(pm2)).attr("x2",x(qm2)).attr("y2",y(0))
+    .attr("stroke","#aaa").attr("stroke-dasharray","4,3");
+
+  // Labels
+  svg.append("text").attr("x",x(a1/b1*0.55)).attr("y",y(a1-b1*a1/b1*0.55)-8)
+    .attr("fill","#0072B2").attr("font-weight","bold").attr("font-size","12px").text("D₁ (flatter)");
+  svg.append("text").attr("x",x(a2/b2*0.35)).attr("y",y(a2-b2*a2/b2*0.35)-8)
+    .attr("fill","#E69F00").attr("font-weight","bold").attr("font-size","12px").text("D₂ (steeper)");
+  svg.append("text").attr("x",x(qMax)-22).attr("y",y(mc)-8)
+    .attr("fill","#D55E00").attr("font-weight","bold").attr("font-size","12px").text("MC");
+
+  svg.append("text").attr("x",x(qm1)+6).attr("y",y(pm1)-10).attr("font-size","11px").attr("font-family","monospace")
+    .text(`D₁: Q*=${qm1.toFixed(0)}, P*=${pm1.toFixed(1)}`);
+  svg.append("text").attr("x",x(qm2)+6).attr("y",y(pm2)+16).attr("font-size","11px").attr("font-family","monospace")
+    .text(`D₂: Q*=${qm2.toFixed(0)}, P*=${pm2.toFixed(1)}`);
+
+  if (Math.abs(pm1 - pm2) < 4) {
+    svg.append("text").attr("x", w/2).attr("y", margin.top + 14)
+      .attr("fill","#D55E00").attr("font-weight","bold").attr("font-size","13px").attr("text-anchor","middle")
+      .text("≈ Same price, different Q!");
+  }
+
+  return svg.node();
+}
+```
+
+::: {.small-text}
+Two demand curves yield the same price but different quantities — no unique supply relationship.
+:::
+
+:::
+::::
+
+---
+
+## Welfare and Deadweight Loss
+
+Quantifying the social cost of market power.
+
+
+## Deadweight Loss of Monopoly
+
+:::: {.columns}
+::: {.column width="45%"}
+
+Compare monopoly to the competitive benchmark ($P = MC$):
+
+| | Competition | Monopoly |
+|:--|:-----------|:---------|
+| Price | $P_c = MC$ | $P_m > MC$ |
+| Quantity | $Q_c$ | $Q_m < Q_c$ |
+| CS | Large | Smaller |
+| PS | Zero (LR) | Positive (profit) |
+
+::: {.box .warning}
+::: box-title
+Deadweight Loss
+:::
+DWL = value of units between $Q_m$ and $Q_c$ that consumers value above MC but that are not produced.
+:::
+
+### With Linear Demand
+
+$$DWL = \frac{1}{2}(P_m - MC)(Q_c - Q_m)$$
+
+:::
+
+::: {.column width="55%"}
+
+```{ojs}
+//| label: dwl-controls
+viewof dwlA = Inputs.range([20, 60], {value: 40, step: 1, label: "a"})
+viewof dwlB = Inputs.range([0.2, 1.5], {value: 0.5, step: 0.1, label: "b"})
+viewof dwlC = Inputs.range([2, 25], {value: 8, step: 1, label: "MC"})
+```
+
+```{ojs}
+//| label: dwl-chart
+{
+  const w = 520, h = 370;
+  const margin = {top: 20, right: 25, bottom: 45, left: 55};
+  const a = dwlA, b = dwlB, c = dwlC;
+  const qm = Math.max(0, (a-c)/(2*b)), pm = a - b*qm;
+  const qc = Math.max(0, (a-c)/b);
+  const qMaxD = a/b, qMax = qMaxD*1.1, pMax = a*1.1;
+
+  const svg = d3.create("svg").attr("viewBox", [0, 0, w, h]);
+  const x = d3.scaleLinear().domain([0, qMax]).range([margin.left, w-margin.right]);
+  const y = d3.scaleLinear().domain([0, pMax]).range([h-margin.bottom, margin.top]);
+
+  svg.append("g").attr("transform",`translate(0,${h-margin.bottom})`).call(d3.axisBottom(x).ticks(6));
+  svg.append("g").attr("transform",`translate(${margin.left},0)`).call(d3.axisLeft(y).ticks(6));
+
+  // CS
+  if (qm > 0) svg.append("polygon")
+    .attr("points",`${x(0)},${y(a)} ${x(qm)},${y(pm)} ${x(0)},${y(pm)}`)
+    .attr("fill","#56B4E925");
+  // Profit
+  if (qm > 0 && pm > c) svg.append("rect")
+    .attr("x",x(0)).attr("y",y(pm)).attr("width",x(qm)-x(0)).attr("height",y(c)-y(pm))
+    .attr("fill","#009E7330");
+  // DWL
+  if (qm > 0 && qc > qm) svg.append("polygon")
+    .attr("points",`${x(qm)},${y(pm)} ${x(qc)},${y(c)} ${x(qm)},${y(c)}`)
+    .attr("fill","#D55E0035").attr("stroke","#D55E00").attr("stroke-width",1.5);
+
+  // D, MR, MC
+  svg.append("line").attr("x1",x(0)).attr("y1",y(a)).attr("x2",x(qMaxD)).attr("y2",y(0))
+    .attr("stroke","#0072B2").attr("stroke-width",2.5);
+  svg.append("line").attr("x1",x(0)).attr("y1",y(a)).attr("x2",x(a/(2*b))).attr("y2",y(0))
+    .attr("stroke","#56B4E9").attr("stroke-width",2).attr("stroke-dasharray","6,3");
+  svg.append("line").attr("x1",x(0)).attr("y1",y(c)).attr("x2",x(qMax)).attr("y2",y(c))
+    .attr("stroke","#D55E00").attr("stroke-width",2.5);
+
+  // Region labels
+  if (qm > 0) {
+    svg.append("text").attr("x",x(qm*0.3)).attr("y",y((a+pm)/2)).attr("fill","#56B4E988").attr("font-weight","bold").attr("font-size","13px").text("CS");
+    if (pm > c) svg.append("text").attr("x",x(qm*0.35)).attr("y",y((pm+c)/2)+5).attr("fill","#009E73").attr("font-weight","bold").attr("font-size","13px").text("π");
+    if (qc > qm) svg.append("text").attr("x",x((qm+qc)/2)-8).attr("y",y((pm+c)/2)+5).attr("fill","#D55E00").attr("font-weight","bold").attr("font-size","13px").text("DWL");
+  }
+
+  const cs = 0.5*(a-pm)*qm, profit = (pm-c)*qm, dwl = 0.5*(pm-c)*(qc-qm);
+  const compW = 0.5*(a-c)*qc;
+  svg.append("text").attr("x", margin.left + 4).attr("y", h - 4)
+    .attr("font-size","11px").attr("font-family","monospace").attr("fill","#555")
+    .text(`CS=${cs.toFixed(1)} | π=${profit.toFixed(1)} | DWL=${dwl.toFixed(1)} | W=${(cs+profit).toFixed(1)} (comp: ${compW.toFixed(1)})`);
+
+  return svg.node();
+}
+```
+
+:::
+::::
+
+
+## Rent-Seeking and the Full Social Cost
+
+:::: {.columns}
+::: {.column width="50%"}
+
+::: {.box .definition}
+::: box-title
+Rent-Seeking (Tullock, 1967; Posner, 1975)
+:::
+Firms spend real resources to acquire or maintain monopoly power. These expenditures are a *pure social waste* — they don't create value, just redistribute it.
+:::
+
+### Examples
+
+- Lobbying for protective regulation
+- Litigation to extend patents
+- Campaign contributions for favorable policy
+- Excess capacity as entry deterrence
+
+### Posner's Argument
+
+In the limit, firms compete away the *entire* profit rectangle in rent-seeking:
+
+$$\text{Social Cost} = DWL + \text{Monopoly Profit}$$
+:::
+
+::: {.column width="50%"}
+### Empirical Estimates of DWL
+
+Harberger (1954) estimated US monopoly DWL at about **0.1% of GDP** — surprisingly small.
+
+::: {.box .insight}
+::: box-title
+Why So Small?
+:::
+- Used average industry elasticities → understates true DWL
+- Assumed constant MC
+- Did not account for rent-seeking
+- Later estimates (Cowling & Mueller, 1978) found 4–13% of corporate value added
+:::
+
+### X-Inefficiency (Leibenstein, 1966)
+
+Without competitive pressure, monopolists may also operate *above* their cost frontier — slack in management, over-staffing, pet projects. An additional social cost not captured by the standard DWL triangle.
+:::
+::::
+
+
+## 📊 Application: The Rise of Markups
+
+::: {style="font-size: 0.85em;"}
+**De Loecker, Eeckhout & Unger (QJE 2020)**
+:::
+
+:::: {.columns}
+::: {.column width="50%"}
+
+::: {.box .definition}
+::: box-title
+The Paper
+:::
+Using Compustat firm-level data (US, 1955–2016), they estimate markups via the **production function approach** (Hall 1988): markup = output elasticity of variable input ÷ expenditure share.
+:::
+
+### Key Findings
+
+- Aggregate markups rose from **~1.21 in 1980 to ~1.61 in 2016**
+- Average profit rate rose from **1% to 8%**
+- Increase driven by the **upper tail** — median unchanged
+- Rise occurs **within industries**, not between them
+- Reallocation of market share from low- to high-markup firms
+
+::: {.box .warning}
+::: box-title
+Why It Matters
+:::
+Rising markups can account for: declining labor share, declining capital share, lower labor force participation, reduced business dynamism, and rising profit shares.
+:::
+:::
+
+::: {.column width="50%"}
+### The Ongoing Debate
+
+::: compare-cols
+::: {.compare-col .left}
+**Market Power View**
+
+Rising markups reflect **increased market power** — weaker antitrust, network effects, "winner-take-most" in tech.
+
+*Implies: welfare loss, stronger competition policy needed.*
+:::
+
+::: {.compare-col .right}
+**Technology/Efficiency View**
+
+Rising markups reflect **rising fixed costs** (R&D, software, intangibles). High markups compensate for overhead.
+
+*Implies: Schumpeterian rents, may be welfare-enhancing.*
+:::
+:::
+
+::: {.box .insight style="margin-top: 12px;"}
+::: box-title
+Fed Research (2024)
+:::
+Albrecht & Decker find that across industries, larger markup increases are *not* associated with larger declines in business dynamism — complicating the pure "market power" narrative.
+:::
+:::
+::::
+
+---
+
+## Comparative Statics
+
+How do changes in demand or costs shift monopoly outcomes?
+
+
+## Comparative Statics of Monopoly
+
+:::: {.columns}
+::: {.column width="50%"}
+### Shift in Demand
+
+With linear demand $P = a - bQ$ and constant $MC = c$:
+
+$$Q^* = \frac{a - c}{2b}, \quad P^* = \frac{a + c}{2}, \quad \pi^* = \frac{(a-c)^2}{4b}$$
+
+An increase in $a$ (demand shifts out):
+
+- $\partial Q^*/\partial a = 1/(2b) > 0$
+- $\partial P^*/\partial a = 1/2$ — passes through exactly half
+- $\partial \pi^*/\partial a = (a-c)/(2b) > 0$
+:::
+
+::: {.column width="50%"}
+### Shift in Cost
+
+An increase in $c$ (MC rises):
+
+- $\partial Q^*/\partial c = -1/(2b) < 0$
+- $\partial P^*/\partial c = 1/2$ — absorbs half the cost increase
+- $\partial \pi^*/\partial c = -(a-c)/(2b) < 0$
+
+::: {.box .insight}
+::: box-title
+Key Result: Pass-Through
+:::
+With linear demand and constant MC, the monopolist's **pass-through rate is 50%**. Only half of a unit tax is borne by consumers.
+:::
+
+::: {.box .warning}
+::: box-title
+Caution
+:::
+These clean results depend on linearity. With iso-elastic demand, pass-through can exceed 100%. With convex demand, pass-through > 50%.
+:::
+:::
+::::
+
+
+## Effect of a Unit Tax — Interactive
+
+```{ojs}
+//| label: tax-controls
+viewof taxA = Inputs.range([20, 60], {value: 40, step: 1, label: "a"})
+viewof taxB = Inputs.range([0.2, 1.5], {value: 0.5, step: 0.1, label: "b"})
+viewof taxMC = Inputs.range([2, 20], {value: 8, step: 1, label: "MC"})
+viewof taxT = Inputs.range([0, 15], {value: 0, step: 0.5, label: "Tax (t)"})
+```
+
+```{ojs}
+//| label: tax-chart
+{
+  const w = 720, h = 400;
+  const margin = {top: 20, right: 30, bottom: 45, left: 55};
+  const a = taxA, b = taxB, mc0 = taxMC, t = taxT;
+  const mc = mc0 + t;
+  const qm0 = Math.max(0, (a-mc0)/(2*b)), pm0 = a - b*qm0;
+  const qm = Math.max(0, (a-mc)/(2*b)), pm = a - b*qm;
+  const qMax = a/b*1.1, pMax = a*1.1;
+
+  const svg = d3.create("svg").attr("viewBox", [0, 0, w, h]);
+  const x = d3.scaleLinear().domain([0, qMax]).range([margin.left, w-margin.right]);
+  const y = d3.scaleLinear().domain([0, pMax]).range([h-margin.bottom, margin.top]);
+
+  svg.append("g").attr("transform",`translate(0,${h-margin.bottom})`).call(d3.axisBottom(x).ticks(8));
+  svg.append("g").attr("transform",`translate(${margin.left},0)`).call(d3.axisLeft(y).ticks(8));
+
+  // Original MC (faint)
+  svg.append("line").attr("x1",x(0)).attr("y1",y(mc0)).attr("x2",x(qMax)).attr("y2",y(mc0))
+    .attr("stroke","#D55E0044").attr("stroke-width",2).attr("stroke-dasharray","4,4");
+  // New MC
+  svg.append("line").attr("x1",x(0)).attr("y1",y(mc)).attr("x2",x(qMax)).attr("y2",y(mc))
+    .attr("stroke","#D55E00").attr("stroke-width",2.5);
+  // Demand
+  svg.append("line").attr("x1",x(0)).attr("y1",y(a)).attr("x2",x(a/b)).attr("y2",y(0))
+    .attr("stroke","#0072B2").attr("stroke-width",2.5);
+  // MR
+  svg.append("line").attr("x1",x(0)).attr("y1",y(a)).attr("x2",x(a/(2*b))).attr("y2",y(0))
+    .attr("stroke","#56B4E9").attr("stroke-width",2).attr("stroke-dasharray","6,3");
+
+  // Tax revenue shading
+  if (t > 0 && qm > 0) {
+    svg.append("rect").attr("x",x(0)).attr("y",y(mc)).attr("width",x(qm)-x(0)).attr("height",y(mc0)-y(mc))
+      .attr("fill","#F0E44255").attr("stroke","#E69F00").attr("stroke-width",1);
+    svg.append("text").attr("x",x(qm*0.35)).attr("y",y((mc+mc0)/2)+4)
+      .attr("fill","#E69F00").attr("font-weight","bold").attr("font-size","12px").text("Tax Rev");
+  }
+
+  // Old equilibrium (faint)
+  if (t > 0 && qm0 > 0) svg.append("circle").attr("cx",x(qm0)).attr("cy",y(pm0)).attr("r",4).attr("fill","#aaa");
+  // New equilibrium
+  if (qm > 0) {
+    svg.append("circle").attr("cx",x(qm)).attr("cy",y(pm)).attr("r",5).attr("fill","#000");
+    svg.append("line").attr("x1",x(qm)).attr("y1",y(pm)).attr("x2",x(qm)).attr("y2",y(0))
+      .attr("stroke","#aaa").attr("stroke-dasharray","4,3");
+    svg.append("line").attr("x1",x(qm)).attr("y1",y(pm)).attr("x2",x(0)).attr("y2",y(pm))
+      .attr("stroke","#aaa").attr("stroke-dasharray","4,3");
+  }
+
+  // Labels
+  svg.append("text").attr("x",x(qMax)-80).attr("y",y(mc)-8)
+    .attr("fill","#D55E00").attr("font-weight","bold").attr("font-size","12px").text(`MC+t = ${mc.toFixed(1)}`);
+  if (t > 0) svg.append("text").attr("x",x(qMax)-60).attr("y",y(mc0)-8)
+    .attr("fill","#D55E0088").attr("font-size","11px").text(`MC₀ = ${mc0}`);
+
+  const dP = pm - pm0;
+  const taxRev = t * qm;
+  const pt = t > 0 ? (dP/t*100).toFixed(0) : "—";
+  svg.append("text").attr("x", margin.left + 4).attr("y", h - 4)
+    .attr("font-size","11px").attr("font-family","monospace").attr("fill","#555")
+    .text(t > 0 ? `Pre: Q=${qm0.toFixed(1)}, P=${pm0.toFixed(1)} | Post: Q=${qm.toFixed(1)}, P=${pm.toFixed(1)} | Pass-through: ${pt}% | Rev: ${taxRev.toFixed(1)}` : "No tax applied. Adjust slider.");
+
+  return svg.node();
+}
+```
+
+
+---
+
+## Price Discrimination
+
+Charging different prices to different consumers (or for different units).
+
+
+## Three Degrees of Price Discrimination
+
+:::: {.columns}
+::: {.column width="33%"}
+::: {.box style="border-left-color: #0072B2; min-height: 200px;"}
+::: {.box-title style="color: #0072B2;"}
+First Degree (Perfect)
+:::
+Charge each consumer their max WTP for each unit.
+
+**Result:** Extracts all CS. Output = $Q_c$. No DWL — but all surplus goes to firm.
+
+Requires perfect info. Rare in practice.
+:::
+:::
+
+::: {.column width="33%"}
+::: {.box style="border-left-color: #E69F00; min-height: 200px;"}
+::: {.box-title style="color: #E69F00;"}
+Second Degree (Screening)
+:::
+Offer a **menu** and let consumers self-select. Price varies by *quantity* or *version*.
+
+**Mechanisms:** Block pricing, bundling, versioning (airline classes), two-part tariffs.
+
+Uses incentive compatibility — no need to identify types.
+:::
+:::
+
+::: {.column width="33%"}
+::: {.box style="border-left-color: #009E73; min-height: 200px;"}
+::: {.box-title style="color: #009E73;"}
+Third Degree (Segmentation)
+:::
+Different prices to **identifiable groups** with different elasticities.
+
+**Rule:** Higher markup in less elastic market.
+
+$P_1/P_2 = (1-1/|\varepsilon_2|)/(1-1/|\varepsilon_1|)$
+
+Student discounts, geographic pricing, peak/off-peak.
+:::
+:::
+::::
+
+::: {.box .warning}
+::: box-title
+Requirements
+:::
+(1) Market power. (2) Ability to sort/identify consumers. (3) No arbitrage — consumers can't resell from low- to high-price segment.
+:::
+
+
+## Third-Degree Price Discrimination — Interactive
+
+```{ojs}
+//| label: pd-controls
+viewof pd_a1 = Inputs.range([20, 60], {value: 50, step: 1, label: "a₁ (Market 1)"})
+viewof pd_b1 = Inputs.range([0.3, 2], {value: 0.5, step: 0.1, label: "b₁"})
+viewof pd_a2 = Inputs.range([10, 50], {value: 30, step: 1, label: "a₂ (Market 2)"})
+viewof pd_b2 = Inputs.range([0.3, 2], {value: 1.0, step: 0.1, label: "b₂"})
+viewof pd_mc = Inputs.range([2, 20], {value: 6, step: 1, label: "MC"})
+```
+
+```{ojs}
+//| label: pd-chart
+{
+  const w = 720, h = 360;
+  const margin = {top: 30, right: 15, bottom: 45, left: 40};
+  const svg = d3.create("svg").attr("viewBox", [0, 0, w, h]);
+
+  const a1=pd_a1, b1=pd_b1, a2=pd_a2, b2=pd_b2, mc=pd_mc;
+  const q1=Math.max(0,(a1-mc)/(2*b1)), p1=q1>0?a1-b1*q1:mc;
+  const q2=Math.max(0,(a2-mc)/(2*b2)), p2=q2>0?a2-b2*q2:mc;
+  const pMax = Math.max(a1,a2)*1.1;
+
+  const panelW = (w - margin.left - margin.right - 30) / 3;
+  const panels = [
+    {label:"Market 1 (less elastic)", a:a1, b:b1, q:q1, p:p1, color:"#0072B2"},
+    {label:"Market 2 (more elastic)", a:a2, b:b2, q:q2, p:p2, color:"#E69F00"}
+  ];
+
+  panels.forEach((panel, i) => {
+    const ox = margin.left + i * (panelW + 15);
+    const qMaxP = Math.max(panel.a/panel.b*1.1, 10);
+    const x = d3.scaleLinear().domain([0, qMaxP]).range([ox, ox + panelW]);
+    const y = d3.scaleLinear().domain([0, pMax]).range([h-margin.bottom, margin.top]);
+
+    svg.append("g").attr("transform",`translate(0,${h-margin.bottom})`)
+      .call(d3.axisBottom(x).ticks(4).tickSize(3));
+    svg.append("g").attr("transform",`translate(${ox},0)`)
+      .call(d3.axisLeft(y).ticks(5).tickSize(3));
+
+    // Profit
+    if (panel.q > 0 && panel.p > mc) svg.append("rect")
+      .attr("x",x(0)).attr("y",y(panel.p)).attr("width",x(panel.q)-x(0)).attr("height",y(mc)-y(panel.p))
+      .attr("fill",panel.color+"25");
+
+    // D
+    svg.append("line").attr("x1",x(0)).attr("y1",y(panel.a)).attr("x2",x(panel.a/panel.b)).attr("y2",y(0))
+      .attr("stroke",panel.color).attr("stroke-width",2);
+    // MR
+    svg.append("line").attr("x1",x(0)).attr("y1",y(panel.a)).attr("x2",x(panel.a/(2*panel.b))).attr("y2",y(0))
+      .attr("stroke",panel.color).attr("stroke-width",1.5).attr("stroke-dasharray","5,3");
+    // MC
+    svg.append("line").attr("x1",x(0)).attr("y1",y(mc)).attr("x2",x(qMaxP)).attr("y2",y(mc))
+      .attr("stroke","#D55E00").attr("stroke-width",2);
+
+    if (panel.q > 0) {
+      svg.append("circle").attr("cx",x(panel.q)).attr("cy",y(panel.p)).attr("r",4).attr("fill",panel.color);
+      svg.append("text").attr("x",x(panel.q)+4).attr("y",y(panel.p)-6)
+        .attr("font-size","10px").attr("font-family","monospace").attr("fill","#555")
+        .text(`P=${panel.p.toFixed(1)}, Q=${panel.q.toFixed(1)}`);
+    }
+    svg.append("text").attr("x",ox + panelW/2).attr("y",margin.top - 8)
+      .attr("text-anchor","middle").attr("fill",panel.color).attr("font-weight","bold").attr("font-size","12px")
+      .text(panel.label);
+  });
+
+  // Summary panel
+  const sx = margin.left + 2*(panelW+15);
+  const totalProfit = (p1-mc)*q1 + (p2-mc)*q2;
+  const lines = [
+    {text:`Market 1: P₁=${p1.toFixed(1)}, Q₁=${q1.toFixed(1)}`, color:"#0072B2", dy:0},
+    {text:`  |ε₁| = ${q1>0?(p1/(b1*q1)).toFixed(2):"—"}`, color:"#555", dy:18},
+    {text:`  π₁ = ${((p1-mc)*q1).toFixed(1)}`, color:"#555", dy:36},
+    {text:`Market 2: P₂=${p2.toFixed(1)}, Q₂=${q2.toFixed(1)}`, color:"#E69F00", dy:62},
+    {text:`  |ε₂| = ${q2>0?(p2/(b2*q2)).toFixed(2):"—"}`, color:"#555", dy:80},
+    {text:`  π₂ = ${((p2-mc)*q2).toFixed(1)}`, color:"#555", dy:98},
+    {text:`Total π = ${totalProfit.toFixed(1)}`, color:"#009E73", dy:128},
+    {text:`Total Q = ${(q1+q2).toFixed(1)}`, color:"#555", dy:146},
+    {text:`Lerner₁ = ${q1>0?((p1-mc)/p1).toFixed(3):"—"}`, color:"#0072B2", dy:172},
+    {text:`Lerner₂ = ${q2>0?((p2-mc)/p2).toFixed(3):"—"}`, color:"#E69F00", dy:190},
+  ];
+  svg.append("text").attr("x",sx+panelW/2).attr("y",margin.top-8)
+    .attr("text-anchor","middle").attr("font-weight","bold").attr("font-size","12px").text("Summary");
+  svg.append("rect").attr("x",sx).attr("y",margin.top).attr("width",panelW).attr("height",h-margin.top-margin.bottom)
+    .attr("fill","#f9f9f6").attr("stroke","#ddd").attr("rx",6);
+  lines.forEach(l => {
+    svg.append("text").attr("x",sx+10).attr("y",margin.top + 22 + l.dy)
+      .attr("font-size","11px").attr("font-family","monospace").attr("fill",l.color).attr("font-weight", l.text.startsWith("Total")?"bold":"normal")
+      .text(l.text);
+  });
+
+  return svg.node();
+}
+```
+
+
+## Two-Part Tariffs
+
+:::: {.columns}
+::: {.column width="50%"}
+
+::: {.box .definition}
+::: box-title
+Mechanism
+:::
+Charge a **fixed fee** (entry/access charge) $T$ plus a **per-unit price** $p$.
+
+Total payment: $T + p \cdot q$
+:::
+
+### With Identical Consumers
+
+Set $p = MC$ (efficient usage) and $T = CS(MC)$ to extract all surplus.
+
+$$\pi = N \cdot CS(MC) + \underbrace{(MC - MC)}_{=0} \cdot Q = N \cdot T$$
+
+This replicates first-degree price discrimination!
+
+### With Heterogeneous Consumers
+
+Trade-off: raising $p$ above MC loses per-unit surplus but allows extracting more via $T$ from high-demand types without losing low-demand types.
+
+Optimal $p^*$ is generally above MC; $T^*$ equals the surplus of the marginal (lowest-type) consumer.
+:::
+
+::: {.column width="50%"}
+### Real-World Examples
+
+| Setting | Fixed Fee | Per-Unit |
+|:--------|:----------|:---------|
+| Costco | Membership | Item prices |
+| Amusement parks | Entry ticket | Ride tickets |
+| Cell phone plans | Monthly fee | Per-GB overage |
+| Razor & blades | Razor handle | Blade refills |
+| Printers | Printer unit | Ink cartridges |
+| Country clubs | Dues | Green fees |
+
+::: {.box .insight}
+::: box-title
+Applied Insight
+:::
+Many "freemium" models are a variant: $T = 0$ for basic tier (acquire users), then extract surplus via premium features or usage-based pricing.
+:::
+:::
+::::
+
+
+## Welfare Effects of Price Discrimination
+
+:::: {.columns}
+::: {.column width="50%"}
+
+### Does 3rd-Degree PD Raise or Lower Welfare?
+
+Ambiguous in general! Two effects:
+
+::: {.box style="border-left-color: #D55E00;"}
+::: box-title
+Misallocation Effect (−)
+:::
+Output distributed inefficiently across markets. Units go to lower-value uses in the elastic market.
+:::
+
+::: {.box .insight}
+::: box-title
+Output Effect (+/−)
+:::
+If PD **increases total output**, welfare may rise. If total output doesn't increase, welfare falls.
+:::
+
+### Schmalensee (1981) / Varian (1985)
+
+With linear demands, 3rd-degree PD does *not* change total output when all markets are served under uniform pricing. Welfare unambiguously **falls**.
+
+But if PD **opens new markets** (not served under uniform pricing), welfare can **rise**.
+:::
+
+::: {.column width="50%"}
+### Summary of Welfare Bounds
+
+$$\Delta W \leq (P_m - MC)(Q_d - Q_m)$$
+
+::: {.box .definition}
+::: box-title
+Necessary Condition for Welfare Gain
+:::
+Total output must increase: $Q_d > Q_m$
+:::
+
+### Applied Perspective
+
+- **Pharmaceutical pricing**: PD across countries can improve access in low-income markets
+- **Student/senior discounts**: likely welfare-improving (opens demand from price-sensitive segments)
+- **Airline pricing**: complex screening; ambiguous welfare effects
+:::
+::::
+
+
+## 💊 Application: Price Discrimination in Pharmaceuticals
+
+:::: {.columns}
+::: {.column width="50%"}
+
+### The Setting
+
+Patented drugs are textbook monopolies: legal barriers (patents), no close substitutes, highly inelastic demand for life-saving medications. Pharma firms engage in **pervasive price discrimination**.
+
+### 3rd-Degree PD Across Countries
+
+- Identical drugs priced vastly differently: cancer biologics ~$100K/yr in the US, ~$30K in Europe, ~$5K in India
+- Higher prices where demand is less elastic (US — less insurance negotiation, higher income)
+- No-arbitrage enforced via import restrictions, regulatory approval
+
+::: {.box .insight}
+::: box-title
+The Ramsey Pricing Analogy
+:::
+Optimal 3rd-degree PD mirrors Ramsey pricing: higher markups in less elastic markets. For essential medicines, this can be welfare-improving if it enables sales in markets that would not be served at a uniform global price.
+:::
+:::
+
+::: {.column width="50%"}
+### 2nd-Degree PD: Airlines as Screening Masters
+
+::: {.small-table}
+| Mechanism | Screens For |
+|:----------|:------------|
+| Advance purchase discounts | Price-sensitive leisure vs. inelastic business |
+| Saturday night stay rules | Business vs. leisure trips |
+| Fare classes | WTP for quality |
+| Baggage/seat fees | Unbundling — price-sensitive buy base only |
+| Dynamic pricing | Timing reveals demand intensity |
+:::
+
+::: {.box .warning}
+::: box-title
+Welfare Implication
+:::
+Airline PD likely **increases total output** (more seats filled) vs. uniform pricing. Borenstein & Rose (1994): ~30% fare dispersion on US routes — far exceeding cost differences. Whether welfare rises depends on whether the output expansion outweighs misallocation.
+:::
+:::
+::::
+
+
+---
+
+# {background-color="#f5f3ed"}
+
+::: {style="font-size: 0.8em; color: #0072B2; text-transform: uppercase; letter-spacing: 3px;"}
+Part VI
+:::
+
+## Regulation of Monopoly
+
+Policy responses to market power.
+
+
+## Regulatory Approaches
+
+:::: {.columns}
+::: {.column width="50%"}
+
+### Marginal-Cost Pricing
+
+Set $P = MC$. Allocative efficiency but may cause losses for a natural monopoly where $AC > MC$.
+
+$$\text{If AC declining at } Q_{eff}: \; \pi = (MC - AC)Q < 0$$
+
+Requires a government subsidy → distortions elsewhere.
+
+### Average-Cost Pricing
+
+Set $P = AC$. Firm breaks even, no subsidy. But some DWL since $P > MC$. Classic "regulated utility" model.
+
+### Rate-of-Return Regulation
+
+Allow firm to earn a "fair" return on invested capital.
+
+::: {.box .warning}
+::: box-title
+Averch-Johnson Effect (1962)
+:::
+Firms over-invest in capital to inflate the rate base → inefficient input mix, too capital-intensive.
+:::
+:::
+
+::: {.column width="50%"}
+### Modern Approaches
+
+::: {.box .insight}
+::: box-title
+Price-Cap Regulation (RPI − X)
+:::
+Prices rise with inflation (RPI) minus expected productivity gain (X). Incentivizes cost reduction — firm keeps savings within the regulatory period.
+:::
+
+### Franchise Bidding (Demsetz, 1968)
+
+Competition *for* the market rather than *in* the market. Auction the right to be the monopolist.
+
+- Cable TV franchises, airport concessions, toll roads
+
+### Antitrust / Competition Policy
+
+- Break up the monopoly (Standard Oil, AT&T)
+- Block mergers creating market power
+- Prohibit exclusionary practices
+- Modern debates: tech platforms, digital markets
+:::
+::::
+
+
+## Natural Monopoly Regulation — Interactive
+
+```{ojs}
+//| label: reg-controls
+viewof regA = Inputs.range([30, 80], {value: 50, step: 1, label: "Demand (a)"})
+viewof regB = Inputs.range([0.2, 1], {value: 0.4, step: 0.05, label: "Slope (b)"})
+viewof regMC = Inputs.range([2, 15], {value: 5, step: 1, label: "MC"})
+viewof regFC = Inputs.range([50, 600], {value: 200, step: 10, label: "Fixed Cost (F)"})
+```
+
+```{ojs}
+//| label: reg-chart
+{
+  const w = 720, h = 420;
+  const margin = {top: 20, right: 30, bottom: 45, left: 55};
+  const a=regA, b=regB, mc=regMC, F=regFC;
+
+  const qm = Math.max(0, (a-mc)/(2*b)), pm = a - b*qm;
+  const qmc = Math.max(0, (a-mc)/b), pmc = mc;
+  const acAtQmc = qmc > 0 ? F/qmc + mc : 999;
+
+  // AC pricing: bQ² + (mc-a)Q + F = 0
+  const disc = (a-mc)*(a-mc) - 4*b*F;
+  let qac = 0, pac = 0;
+  if (disc >= 0) {
+    const r1 = ((a-mc) - Math.sqrt(disc)) / (2*b);
+    const r2 = ((a-mc) + Math.sqrt(disc)) / (2*b);
+    qac = Math.max(r1, r2);
+    if (qac > 0) pac = a - b*qac;
+  }
+
+  const qMaxD = a/b, qMax = qMaxD*1.15, pMax = a*1.15;
+  const svg = d3.create("svg").attr("viewBox", [0, 0, w, h]);
+  const x = d3.scaleLinear().domain([0, qMax]).range([margin.left, w-margin.right]);
+  const y = d3.scaleLinear().domain([0, pMax]).range([h-margin.bottom, margin.top]);
+
+  svg.append("g").attr("transform",`translate(0,${h-margin.bottom})`).call(d3.axisBottom(x).ticks(8));
+  svg.append("g").attr("transform",`translate(${margin.left},0)`).call(d3.axisLeft(y).ticks(8));
+
+  // AC curve
+  const acData = d3.range(3, Math.min(qMax, 200), 1).map(q => ({q, ac: F/q + mc})).filter(d => d.ac <= pMax);
+  svg.append("path").datum(acData).attr("fill","none").attr("stroke","#E69F00").attr("stroke-width",2)
+    .attr("stroke-dasharray","8,4").attr("d", d3.line().x(d=>x(d.q)).y(d=>y(d.ac)));
+
+  // D
+  svg.append("line").attr("x1",x(0)).attr("y1",y(a)).attr("x2",x(qMaxD)).attr("y2",y(0))
+    .attr("stroke","#0072B2").attr("stroke-width",2.5);
+  // MR
+  svg.append("line").attr("x1",x(0)).attr("y1",y(a)).attr("x2",x(a/(2*b))).attr("y2",y(0))
+    .attr("stroke","#56B4E9").attr("stroke-width",1.5).attr("stroke-dasharray","5,3");
+  // MC
+  svg.append("line").attr("x1",x(0)).attr("y1",y(mc)).attr("x2",x(qMax)).attr("y2",y(mc))
+    .attr("stroke","#D55E00").attr("stroke-width",2.5);
+
+  // Points
+  const pts = [
+    {q:qm, p:pm, label:"Monopoly", color:"#CC79A7"},
+    {q:qmc, p:pmc, label:"P=MC", color:"#009E73"},
+  ];
+  if (qac > 0 && pac > 0) pts.push({q:qac, p:pac, label:"P=AC", color:"#E69F00"});
+
+  pts.forEach(pt => {
+    if (pt.q > 0 && pt.q < qMax) {
+      svg.append("circle").attr("cx",x(pt.q)).attr("cy",y(pt.p)).attr("r",6).attr("fill",pt.color);
+      svg.append("text").attr("x",x(pt.q)+8).attr("y",y(pt.p)+(pt.label==="P=MC"?14:-6))
+        .attr("fill",pt.color).attr("font-weight","bold").attr("font-size","11px").attr("font-family","monospace")
+        .text(`${pt.label} (${pt.q.toFixed(0)}, ${pt.p.toFixed(1)})`);
+    }
+  });
+
+  // Labels
+  svg.append("text").attr("x",x(qMaxD)-14).attr("y",y(0)-24).attr("fill","#0072B2").attr("font-weight","bold").attr("font-size","12px").text("D");
+  svg.append("text").attr("x",x(qMax)-24).attr("y",y(mc)-10).attr("fill","#D55E00").attr("font-weight","bold").attr("font-size","12px").text("MC");
+  const acLQ = Math.min(qMax*0.7, qMaxD*0.7);
+  svg.append("text").attr("x",x(acLQ)).attr("y",y(F/acLQ+mc)-8).attr("fill","#E69F00").attr("font-weight","bold").attr("font-size","12px").text("AC");
+
+  const profitM = qm > 0 ? (pm - (F/qm + mc))*qm : 0;
+  const lossAtMC = qmc > 0 ? (mc - acAtQmc)*qmc : 0;
+  svg.append("text").attr("x", margin.left+4).attr("y", h-4)
+    .attr("font-size","11px").attr("font-family","monospace").attr("fill","#555")
+    .text(`Monopoly: π=${profitM.toFixed(1)} | P=MC: loss=${lossAtMC.toFixed(1)} (needs subsidy) | P=AC: π=0 (break-even)`);
+
+  return svg.node();
+}
+```
+
+
+## Dynamic Views of Monopoly
+
+:::: {.columns}
+::: {.column width="50%"}
+
+### Schumpeter's "Creative Destruction"
+
+::: {.box .insight}
+::: box-title
+Core Argument
+:::
+Monopoly profits may be the *reward* for innovation. The prospect of temporary market power drives R&D. Competition occurs *across time* through innovation, not just through price.
+:::
+
+Suggests static DWL analysis may overstate true social cost — dynamic gains from innovation could outweigh static losses.
+
+### Arrow (1962) Counterpoint
+
+A monopolist has *less* incentive to innovate than a competitive firm — it's "replacing itself." The incremental gain from a cost-reducing innovation is smaller since it already earns profit.
+:::
+
+::: {.column width="50%"}
+
+### Contestable Markets (Baumol et al., 1982)
+
+If entry and exit are **costless** (no sunk costs), even a monopolist must price at $P = AC$ to prevent "hit-and-run" entry.
+
+::: {.box .warning}
+::: box-title
+Limitations
+:::
+Truly costless entry/exit is rare. Sunk costs are pervasive.
+:::
+
+### Modern Synthesis
+
+The relationship between market structure and innovation is an **inverted U** (Aghion et al., 2005):
+
+- Too little competition → no pressure to innovate
+- Too much competition → no rents to fund R&D
+- Moderate competition → highest innovation
+
+Direct implications for patent length, antitrust intensity, and industrial policy.
+:::
+::::
+
+
+## 🧬 Application: COVID-19 Vaccines and the Innovation Trade-Off
+
+:::: {.columns}
+::: {.column width="50%"}
+
+### The Schumpeterian Case: It Worked
+
+Pfizer-BioNTech and Moderna developed mRNA vaccines in **under 12 months**. Combined R&D and scale-up costs exceeded **$10 billion**.
+
+- Patent protection + guaranteed purchase agreements (Operation Warp Speed: $18B) created monopoly rents needed for massive upfront investment
+- Moderna earned **$36B in cumulative vaccine revenue** (2021–22)
+- This is Schumpeter in action: the *prospect* of temporary monopoly profits drove innovation that saved millions of lives
+
+::: {.box .insight}
+::: box-title
+The Arrow Counterpoint in Practice
+:::
+Large incumbents (Sanofi, GSK) with existing vaccine portfolios were *slower* — consistent with Arrow's argument that monopolists under-invest in disruptive innovation.
+:::
+:::
+
+::: {.column width="50%"}
+### The Access Problem
+
+By mid-2021, wealthy countries >50% vaccinated while many low-income countries <5%. The **static vs. dynamic efficiency** trade-off in stark relief:
+
+::: compare-cols
+::: {.compare-col .left}
+**Patents Needed**
+
+Without monopoly rents, no firm invests $10B+ in risky R&D. Compulsory licensing ex post destroys incentives ex ante.
+:::
+
+::: {.compare-col .right}
+**Access Needed**
+
+MC per dose ≈ $2–5. Charging $20–35 in poor countries creates massive DWL measured in lives. TRIPS waiver debate.
+:::
+:::
+
+::: {.box .warning style="margin-top: 12px;"}
+::: box-title
+Optimal Policy?
+:::
+**Separate the reward from the price**: pay for innovation upfront (prizes, advance market commitments, government-funded R&D), then distribute at MC. Kremer & Glennerster (2004) proposed exactly this for vaccines years before COVID.
+:::
+:::
+::::
+
+
+## Measuring Market Power: The Lerner Index
+
+:::: {.columns}
+::: {.column width="50%"}
+
+$$\boxed{L = \frac{P - MC}{P} = \frac{1}{|\varepsilon_D|}}$$
+
+$L = 0$: perfect competition. $L \to 1$: extreme market power.
+
+### Practical Challenges
+
+- **MC is unobservable** — must be estimated from cost data or conduct
+- **Firm vs. market elasticity** — firm facing close substitutes has elastic residual demand even in concentrated market
+- **Multi-product firms** — cross-elasticities matter
+
+### Alternative: HHI
+
+$HHI = \sum s_i^2$. Under Cournot:
+
+$$\bar{L} = \frac{HHI}{|\varepsilon_D|}$$
+:::
+
+::: {.column width="50%"}
+
+### Empirical Estimates of Markups
+
+| Industry | Approx. Lerner |
+|:---------|:---------------|
+| Retail food | 0.05 – 0.10 |
+| Automobiles | 0.10 – 0.25 |
+| Pharmaceuticals | 0.40 – 0.70 |
+| Software/Tech | 0.50 – 0.80 |
+| Luxury goods | 0.60 – 0.85 |
+
+::: {.box .insight}
+::: box-title
+Trend: Rising Markups
+:::
+De Loecker, Eeckhout & Unger (2020): aggregate markups rose from ~1.21 in 1980 to ~1.61 in 2016. Concentrated among the largest firms. Ongoing debate: market power vs. efficiency/technology.
+:::
+:::
+::::
+
+
+## Summary: Key Takeaways
+
+:::: {.columns}
+::: {.column width="50%"}
+
+::: {.box .definition}
+::: box-title
+Core Results
+:::
+- Monopolist sets $MR = MC$, charges $P > MC$
+- Markup inversely related to demand elasticity: $L = 1/|\varepsilon|$
+- Produces less than socially efficient quantity → DWL
+- No well-defined supply curve
+:::
+
+::: {.box .insight}
+::: box-title
+Price Discrimination
+:::
+- 1st degree: extracts all surplus, efficient output
+- 2nd degree: screening via menus, partial extraction
+- 3rd degree: segment by observables; welfare depends on output effect
+- Two-part tariffs: powerful tool, widely used
+:::
+:::
+
+::: {.column width="50%"}
+
+::: {.box .warning}
+::: box-title
+Policy
+:::
+- MC pricing: efficient but may need subsidies
+- AC pricing: practical but some DWL
+- Rate-of-return: Averch-Johnson distortions
+- Price caps: better incentives but info-intensive
+- Antitrust: structural vs. behavioral remedies
+:::
+
+::: box
+::: box-title
+Looking Ahead → Lecture 7
+:::
+What happens when there are *a few* firms? Oligopoly models (Bertrand, Cournot), product differentiation, strategic interaction. **Chapter 15.**
+:::
+:::
+::::
