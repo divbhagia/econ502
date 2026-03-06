@@ -83,9 +83,6 @@ A robot tax raising $r$ back to 20 would restore the input mix from part (b). Si
 
 **The trade-off:**  The cost of producing 1000 units would rise by about 42% from \$23,520 back to \$40,925, which may lead to higher prices for consumers and lower profits for the firm. The tax protects jobs but at the cost of efficiency and potentially higher prices. The firm may also have less incentive to invest in automation in the future, which could slow technological progress. But do we want to live in a society where people don't have jobs? Maybe if everyone owned robots, we wouldn't have to worry about unemployment. There is also a possibility that new jobs could be created to replace the ones lost to automation.
 
-
-\newpage
-
 ## Problem 2: Profit Maximization and Taxation
 
 A competitive firm maximizes profit $\pi = P \cdot q - C(q)$, yielding the first-order condition $P = MC(q)$.
@@ -101,7 +98,7 @@ A competitive firm maximizes profit $\pi = P \cdot q - C(q)$, yielding the first
 **Tax on labor input.** If the firm uses labor $L$ at wage $w$ and the government imposes a tax $t_L$ per unit of labor, the effective wage rises to $w + t_L$. This increases the cost function $C(q)$, which shifts $MC(q)$ upward. Since the firm produces where $P = MC(q)$, a higher $MC$ curve means a lower profit-maximizing quantity. Output **decreases**. The firm also substitutes away from labor toward other inputs.
 
 
-\newpage
+
 
 ## Problem 3: Trade Policy and the Portable Radio Market
 
@@ -291,7 +288,7 @@ From the domestic country's perspective, the VER is strictly worse than the tari
 The VER transfers an additional \$6,250 to foreign producers, making the domestic welfare loss three times larger than the tariff.
 
 
-\newpage
+
 
 ## Problem 4: General Equilibrium Exchange
 
@@ -353,7 +350,7 @@ The contract curve is the diagonal of the Edgeworth box (equivalently, $Y_B = X_
 The **First Welfare Theorem** states that every competitive equilibrium allocation is Pareto efficient. We verified this in part (c): the equilibrium allocation $(50, 50)$ for both consumers lies on the contract curve ($Y_A = X_A = 50$). The competitive market, guided only by prices, achieves an efficient outcome without any central planner.
 
 
-\newpage
+
 
 ## Problem 5: Optimal Redistribution with Distortionary Taxation
 
