@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cobb-Douglas Example – Advanced Microeconomics</title>
+<title>CES Production Function – Advanced Microeconomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -156,29 +156,27 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#utility-maximization" id="toc-utility-maximization" class="nav-link active" data-scroll-target="#utility-maximization">Utility Maximization</a>
+  <li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition">Definition</a></li>
+  <li><a href="#returns-to-scale" id="toc-returns-to-scale" class="nav-link" data-scroll-target="#returns-to-scale">Returns to Scale</a></li>
+  <li><a href="#marginal-products" id="toc-marginal-products" class="nav-link" data-scroll-target="#marginal-products">Marginal Products</a></li>
+  <li><a href="#marginal-rate-of-technical-substitution" id="toc-marginal-rate-of-technical-substitution" class="nav-link" data-scroll-target="#marginal-rate-of-technical-substitution">Marginal Rate of Technical Substitution</a></li>
+  <li><a href="#elasticity-of-substitution" id="toc-elasticity-of-substitution" class="nav-link" data-scroll-target="#elasticity-of-substitution">Elasticity of Substitution</a></li>
+  <li><a href="#cost-minimization" id="toc-cost-minimization" class="nav-link" data-scroll-target="#cost-minimization">Cost Minimization</a>
   <ul class="collapse">
-  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement">1.1 Problem Statement</a></li>
-  <li><a href="#lagrangian-method" id="toc-lagrangian-method" class="nav-link" data-scroll-target="#lagrangian-method">1.2 Lagrangian Method</a></li>
-  <li><a href="#solving-for-demand-functions" id="toc-solving-for-demand-functions" class="nav-link" data-scroll-target="#solving-for-demand-functions">1.3 Solving for Demand Functions</a></li>
-  <li><a href="#indirect-utility-function" id="toc-indirect-utility-function" class="nav-link" data-scroll-target="#indirect-utility-function">1.4 Indirect Utility Function</a></li>
-  </ul></li>
-  <li><a href="#expenditure-minimization" id="toc-expenditure-minimization" class="nav-link" data-scroll-target="#expenditure-minimization">Expenditure Minimization</a>
-  <ul class="collapse">
-  <li><a href="#problem-statement-1" id="toc-problem-statement-1" class="nav-link" data-scroll-target="#problem-statement-1">2.1 Problem Statement</a></li>
-  <li><a href="#lagrangian-method-1" id="toc-lagrangian-method-1" class="nav-link" data-scroll-target="#lagrangian-method-1">2.2 Lagrangian Method</a></li>
-  <li><a href="#solving-for-hicksian-demand" id="toc-solving-for-hicksian-demand" class="nav-link" data-scroll-target="#solving-for-hicksian-demand">2.3 Solving for Hicksian Demand</a></li>
-  <li><a href="#expenditure-function" id="toc-expenditure-function" class="nav-link" data-scroll-target="#expenditure-function">2.4 Expenditure Function</a></li>
+  <li><a href="#problem" id="toc-problem" class="nav-link" data-scroll-target="#problem">Problem</a></li>
+  <li><a href="#optimality-condition" id="toc-optimality-condition" class="nav-link" data-scroll-target="#optimality-condition">Optimality Condition</a></li>
+  <li><a href="#conditional-factor-demands" id="toc-conditional-factor-demands" class="nav-link" data-scroll-target="#conditional-factor-demands">Conditional Factor Demands</a></li>
+  <li><a href="#cost-function" id="toc-cost-function" class="nav-link" data-scroll-target="#cost-function">Cost Function</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lec1-2_cd_derivations.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lec3-ces-prod-func.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cobb-Douglas Example</h1>
+<h1 class="title">CES Production Function</h1>
 <p class="subtitle lead">Econ 502: Advanced Microeconomics</p>
 </div>
 
@@ -196,77 +194,138 @@ window.Quarto = {
 </header>
 
 
-<section id="utility-maximization" class="level1">
-<h1>Utility Maximization</h1>
-<section id="problem-statement" class="level2">
-<h2 class="anchored" data-anchor-id="problem-statement">1.1 Problem Statement</h2>
-<p>The consumer’s problem is: <span class="math display">\[\max_{x,y} \quad x^{\alpha}y^{\beta}\]</span> subject to: <span class="math display">\[p_x x + p_y y = I\]</span> <span class="math display">\[x \geq 0, \quad y \geq 0\]</span></p>
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p>The <strong>Constant Elasticity of Substitution (CES)</strong> production function is given by:</p>
+<p><span class="math display">\[F(K, L) = A\left[\alpha K^{\rho} + (1-\alpha) L^{\rho}\right]^{r/\rho}\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(A &gt; 0\)</span> is total factor productivity</li>
+<li><span class="math inline">\(\alpha \in (0,1)\)</span> is the distribution (share) parameter</li>
+<li><span class="math inline">\(\rho \leq 1, \; \rho \neq 0\)</span> governs the elasticity of substitution</li>
+<li><span class="math inline">\(r &gt; 0\)</span> governs returns to scale</li>
+</ul>
+<p>The elasticity of substitution (defined and derived below) is <span class="math inline">\(\sigma = \frac{1}{1-\rho}\)</span>. Note then <span class="math inline">\(\rho = \frac{\sigma-1}{\sigma}\)</span>, so sometimes CES function (for <span class="math inline">\(r=1\)</span>) is also written as:</p>
+<p><span class="math display">\[F(K, L) = A\left[\alpha K^{\frac{\sigma-1}{\sigma}} + (1-\alpha) L^{\frac{\sigma-1}{\sigma}}\right]^{\frac{\sigma}{\sigma-1}}\]</span></p>
+<p>CES function nests several important special cases:</p>
+<ul>
+<li>Cobb-Douglas: <span class="math inline">\(\rho \to 0\)</span> (or <span class="math inline">\(\sigma \to 1\)</span>)</li>
+<li>Perfect substitutes: <span class="math inline">\(\rho \to 1\)</span> (or <span class="math inline">\(\sigma \to \infty\)</span>)</li>
+<li>Perfect complements: <span class="math inline">\(\rho \to -\infty\)</span> (or <span class="math inline">\(\sigma \to 0\)</span>)</li>
+</ul>
 </section>
-<section id="lagrangian-method" class="level2">
-<h2 class="anchored" data-anchor-id="lagrangian-method">1.2 Lagrangian Method</h2>
-<p>Set up the Lagrangian: <span class="math display">\[\mathcal{L}(x, y, \lambda) = x^{\alpha}y^{\beta} + \lambda(I - p_x x - p_y y)\]</span></p>
-<p>First-order conditions: <span class="math display">\[\begin{align}
-\frac{\partial \mathcal{L}}{\partial x} &amp;= \alpha x^{\alpha-1}y^{\beta} - \lambda p_x = 0 \tag{1}\\
-\frac{\partial \mathcal{L}}{\partial y} &amp;= \beta x^{\alpha}y^{\beta-1} - \lambda p_y = 0 \tag{2}\\
-\frac{\partial \mathcal{L}}{\partial \lambda} &amp;= I - p_x x - p_y y = 0 \tag{3}
-\end{align}\]</span></p>
+<section id="returns-to-scale" class="level2">
+<h2 class="anchored" data-anchor-id="returns-to-scale">Returns to Scale</h2>
+<p>Scale all inputs by <span class="math inline">\(\lambda &gt; 0\)</span>:</p>
+<p><span class="math display">\[F(\lambda K, \lambda L) = A\left[\alpha (\lambda K)^{\rho} + (1-\alpha)(\lambda L)^{\rho}\right]^{r/\rho}\]</span></p>
+<p><span class="math display">\[= A\left[\lambda^{\rho}\left(\alpha K^{\rho} + (1-\alpha) L^{\rho}\right)\right]^{r/\rho}\]</span></p>
+<p><span class="math display">\[= \lambda^{r} \cdot A\left[\alpha K^{\rho} + (1-\alpha) L^{\rho}\right]^{r/\rho}\]</span></p>
+<p><span class="math display">\[\boxed{F(\lambda K, \lambda L) = \lambda^{r} \cdot F(K,L)}\]</span></p>
+<p>The function is homogeneous of degree <span class="math inline">\(r\)</span>: increasing returns if <span class="math inline">\(r &gt; 1\)</span>, constant returns if <span class="math inline">\(r = 1\)</span>, and decreasing returns if <span class="math inline">\(r &lt; 1\)</span>.</p>
 </section>
-<section id="solving-for-demand-functions" class="level2">
-<h2 class="anchored" data-anchor-id="solving-for-demand-functions">1.3 Solving for Demand Functions</h2>
-<p>From equations (1) and (2): <span class="math display">\[\frac{\alpha x^{\alpha-1}y^{\beta}}{\beta x^{\alpha}y^{\beta-1}} = \frac{p_x}{p_y}\]</span></p>
-<p>Simplifying: <span class="math display">\[\frac{\alpha y}{\beta x} = \frac{p_x}{p_y}\]</span></p>
-<p>Solving for <span class="math inline">\(y\)</span>: <span class="math display">\[y = \frac{\beta p_x}{\alpha p_y} x \tag{4}\]</span></p>
-<p>Substitute equation (4) into the budget constraint (3): <span class="math display">\[p_x x + p_y \cdot \frac{\beta p_x}{\alpha p_y} x = I\]</span></p>
-<p><span class="math display">\[p_x x \left(1 + \frac{\beta}{\alpha}\right) = I\]</span></p>
-<p><span class="math display">\[p_x x \cdot \frac{\alpha + \beta}{\alpha} = I\]</span></p>
-<p>Solving for <span class="math inline">\(x\)</span>: <span class="math display">\[\boxed{x^*(p_x, p_y, I) = \frac{\alpha I}{(\alpha + \beta)p_x}}\]</span></p>
-<p>Substituting back into equation (4): <span class="math display">\[y^* = \frac{\beta p_x}{\alpha p_y} \cdot \frac{\alpha I}{(\alpha + \beta)p_x} = \frac{\beta I}{(\alpha + \beta)p_y}\]</span></p>
-<p><span class="math display">\[\boxed{y^*(p_x, p_y, I) = \frac{\beta I}{(\alpha + \beta)p_y}}\]</span></p>
+<section id="marginal-products" class="level2">
+<h2 class="anchored" data-anchor-id="marginal-products">Marginal Products</h2>
+<p>Let <span class="math inline">\(Z = \alpha K^{\rho} + (1-\alpha) L^{\rho}\)</span> so that <span class="math inline">\(F = A Z^{r/\rho}\)</span>. By the chain rule:</p>
+<p><span class="math display">\[MP_K = \frac{\partial F}{\partial K} = A \cdot \frac{r}{\rho} Z^{r/\rho - 1} \cdot \alpha \rho K^{\rho - 1} = A r \alpha K^{\rho-1} Z^{r/\rho - 1}\]</span></p>
+<p><span class="math display">\[\boxed{MP_K = A r \alpha K^{\rho - 1}\left[\alpha K^{\rho} + (1-\alpha) L^{\rho}\right]^{r/\rho - 1}}\]</span></p>
+<p>By symmetry <span class="math inline">\(MP_L = A r (1-\alpha) L^{\rho - 1} Z^{r/\rho - 1}\)</span> or:</p>
+<p><span class="math display">\[\boxed{MP_L = A r (1-\alpha) L^{\rho - 1}\left[\alpha K^{\rho} + (1-\alpha) L^{\rho}\right]^{r/\rho - 1}}\]</span></p>
 </section>
-<section id="indirect-utility-function" class="level2">
-<h2 class="anchored" data-anchor-id="indirect-utility-function">1.4 Indirect Utility Function</h2>
-<p>Substitute the demand functions into the utility function: <span class="math display">\[V(p_x, p_y, I) = \left(\frac{\alpha I}{(\alpha+\beta)p_x}\right)^{\alpha} \left(\frac{\beta I}{(\alpha+\beta)p_y}\right)^{\beta}\]</span></p>
-<p>Simplifying: <span class="math display">\[V(p_x, p_y, I) = \frac{\alpha^{\alpha}\beta^{\beta}}{(\alpha+\beta)^{\alpha+\beta}} \cdot \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}\]</span></p>
-<p>Let <span class="math inline">\(K = \frac{\alpha^{\alpha}\beta^{\beta}}{(\alpha+\beta)^{\alpha+\beta}}\)</span>:</p>
-<p><span class="math display">\[\boxed{V(p_x, p_y, I) = K \cdot \frac{I^{\alpha+\beta}}{p_x^{\alpha}p_y^{\beta}}}\]</span></p>
+<section id="marginal-rate-of-technical-substitution" class="level2">
+<h2 class="anchored" data-anchor-id="marginal-rate-of-technical-substitution">Marginal Rate of Technical Substitution</h2>
+<p>The MRTS is:</p>
+<p><span class="math display">\[MRTS = \frac{MP_L}{MP_K} = \frac{A r (1-\alpha) L^{\rho - 1} Z^{r/\rho - 1}}{A r \alpha K^{\rho - 1} Z^{r/\rho - 1}}\]</span></p>
+<p>Canceling common terms, we get:</p>
+<p><span class="math display">\[\boxed{MRTS = \frac{1-\alpha}{\alpha}\left(\frac{L}{K}\right)^{\rho-1}}\]</span></p>
+<p>The MRTS captures the rate at which the firm can substitute capital for labor while keeping output constant. For example, if <span class="math inline">\(MRTS = 2\)</span>, then the firm can can replace one unit of labor with two units of capital without changing output.</p>
+<p>From the expression above, we can see that the MRTS at all input ratios is higher when:</p>
+<ul>
+<li><span class="math inline">\(\alpha\)</span> is smaller (i.e., when labor is more important in production, so we need more capital to substitute for labor)</li>
+<li><span class="math inline">\(\rho\)</span> is smaller (i.e., when inputs are more easily substitutable)</li>
+</ul>
+<p>Additionally, the capital units needed to substitute for one unit of labor increases as the input ratio <span class="math inline">\(K/L\)</span> increases (power <span class="math inline">\(\rho-1\)</span> is negative.)</p>
 </section>
+<section id="elasticity-of-substitution" class="level2">
+<h2 class="anchored" data-anchor-id="elasticity-of-substitution">Elasticity of Substitution</h2>
+<p>The MRTS tells us the rate at which a firm can trade one input for another while maintaining the same output level, but it doesn’t tell us how responsive the firm’s input mix is to changes in that trade-off rate. In other words, MRTS captures the slope of the isoquant at a point, but it doesn’t tell us about the shape of the isoquant and how quickly the slope changes as we move along the isoquant. The elasticity of substitution captures this responsiveness.</p>
+<p>In particular, the elasticity of substitution is defined as:</p>
+<p><span class="math display">\[\sigma = \frac{d\ln(K/L)}{d\ln(MRTS)}\]</span></p>
+<p>Remember changes in logs capture percentage changes (<span class="math inline">\(d\ln(x) =  dx/x\)</span>). Therefore, <span class="math inline">\(\sigma\)</span> captures the percentage change in the input ratio for a given percentage change in the MRTS.</p>
+<div id="cell-fig-elasticity-two-panel" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div id="fig-elasticity-two-panel" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-elasticity-two-panel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="lec3-ces-prod-func_files/figure-html/fig-elasticity-two-panel-output-1.png" width="711" height="373" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elasticity-two-panel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Two isoquants with the same MRTS at point A but different curvatures
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Case   σ  K/L at A  MRTS at A  K/L at B  MRTS at B
+High σ 2.0       2.0        2.0      0.18        0.6
+ Low σ 0.5       2.0        2.0      1.09        0.6</code></pre>
+</div>
+</div>
+<p>In the above example, both isoquants start at point A with K/L = 2.0 and MRTS = 2.0. At point B, both have the same new MRTS of 0.6. So the <em>change</em> in the marginal rate is identical. But look at how differently the input mix responds. With high σ, K/L plummets from 2.0 to 0.18: the firm dramatically shifts toward labor. With low σ, K/L moves by much less, from 2.0 to 1.09.</p>
+<p>To derive that <span class="math inline">\(\sigma = \frac{1}{1-\rho}\)</span>, we start by taking logs of the MRTS expression:</p>
+<p><span class="math display">\[\ln(MRTS) = \ln\left(\frac{\alpha}{1-\alpha}\right) + (\rho - 1)\ln\left(\frac{L}{K}\right)\]</span></p>
+<p>Plugging <span class="math inline">\(\ln(L/K) = -\ln(K/L)\)</span> and total differentiating (<span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\rho\)</span> are constants):</p>
+<p><span class="math display">\[d\ln(MRTS) = (1 - \rho) \, d\ln(K/L)\]</span></p>
+<p>Therefore:</p>
+<p><span class="math display">\[\boxed{\sigma = \frac{1}{1-\rho}}\]</span></p>
+<p>The elasticity of substitution is constant and it does not depend on input levels, which gives the CES function its name.</p>
 </section>
-<section id="expenditure-minimization" class="level1">
-<h1>Expenditure Minimization</h1>
-<section id="problem-statement-1" class="level2">
-<h2 class="anchored" data-anchor-id="problem-statement-1">2.1 Problem Statement</h2>
-<p>The dual problem is: <span class="math display">\[\min_{x,y} \quad p_x x + p_y y\]</span> subject to: <span class="math display">\[x^{\alpha}y^{\beta} = \bar{U}\]</span> <span class="math display">\[x \geq 0, \quad y \geq 0\]</span></p>
-<p>where <span class="math inline">\(\bar{U}\)</span> is a target utility level.</p>
+<section id="cost-minimization" class="level2">
+<h2 class="anchored" data-anchor-id="cost-minimization">Cost Minimization</h2>
+<section id="problem" class="level3">
+<h3 class="anchored" data-anchor-id="problem">Problem</h3>
+<p>For constant returns to scale (<span class="math inline">\(r = 1\)</span>), the firm minimizes the cost of producing output <span class="math inline">\(q\)</span>:</p>
+<p><span class="math display">\[\min_{K, L} \quad wL + rK\]</span></p>
+<p>subject to:</p>
+<p><span class="math display">\[A\left[\alpha K^{\rho} + (1-\alpha) L^{\rho}\right]^{1/\rho} = q\]</span></p>
+<p>where <span class="math inline">\(w\)</span> is the wage and <span class="math inline">\(r\)</span> is the rental rate of capital.</p>
 </section>
-<section id="lagrangian-method-1" class="level2">
-<h2 class="anchored" data-anchor-id="lagrangian-method-1">2.2 Lagrangian Method</h2>
-<p>Set up the Lagrangian: <span class="math display">\[\mathcal{L}(x, y, \mu) = p_x x + p_y y + \mu(\bar{U} - x^{\alpha}y^{\beta})\]</span></p>
-<p>First-order conditions: <span class="math display">\[\begin{align}
-\frac{\partial \mathcal{L}}{\partial x} &amp;= p_x - \mu \alpha x^{\alpha-1}y^{\beta} = 0 \tag{5}\\
-\frac{\partial \mathcal{L}}{\partial y} &amp;= p_y - \mu \beta x^{\alpha}y^{\beta-1} = 0 \tag{6}\\
-\frac{\partial \mathcal{L}}{\partial \mu} &amp;= \bar{U} - x^{\alpha}y^{\beta} = 0 \tag{7}
-\end{align}\]</span></p>
+<section id="optimality-condition" class="level3">
+<h3 class="anchored" data-anchor-id="optimality-condition">Optimality Condition</h3>
+<p>Setting <span class="math inline">\(MRTS = w/r\)</span> (the price ratio):</p>
+<p><span class="math display">\[\frac{1-\alpha}{\alpha}\left(\frac{L}{K}\right)^{\rho-1} = \frac{w}{r}\]</span></p>
+<p>Solving for the optimal input ratio:</p>
+<p><span class="math display">\[\frac{L}{K} = \left(\frac{\alpha}{1-\alpha} \cdot \frac{w}{r}\right)^{-\frac{1}{1-\rho}}\]</span></p>
+<p>Or equivalently:</p>
+<p><span class="math display">\[\boxed{\frac{K}{L} = \left(\frac{1-\alpha}{\alpha} \cdot \frac{r}{w}\right)^{-\frac{1}{1-\rho}} = \left(\frac{1-\alpha}{\alpha} \cdot \frac{r}{w}\right)^{-\sigma}}\]</span></p>
+<p>This shows that <span class="math inline">\(\sigma\)</span> directly governs how the input ratio responds to changes in relative factor prices.</p>
+<p>In applied work, the log form of the above expression is often used for estimation:</p>
+<p><span class="math display">\[\ln\left(\frac{K}{L}\right) = \underbrace{\sigma \ln\left(\frac{\alpha}{1-\alpha}\right)}_{\text{Constant}} - \sigma \ln\left(\frac{r}{w}\right)\]</span></p>
+<p>So regressing log of relative input use on log of relative factor prices yields an estimate of the elasticity of substitution <span class="math inline">\(\sigma\)</span>.</p>
+<p>This shows that we can also express the elasticity of substitution as:</p>
+<p><span class="math display">\[\sigma = \frac{d\ln(K/L)}{d\ln(r/w)}\]</span></p>
+<p>where <span class="math inline">\(K/L\)</span> is the equilibrium input ratio because in equilibrium <span class="math inline">\(MRTS = w/r\)</span>. So another way to interpret <span class="math inline">\(\sigma\)</span> is that it captures the percentage change in the input ratio for a given percentage change in relative factor prices.</p>
 </section>
-<section id="solving-for-hicksian-demand" class="level2">
-<h2 class="anchored" data-anchor-id="solving-for-hicksian-demand">2.3 Solving for Hicksian Demand</h2>
-<p>From equations (5) and (6): <span class="math display">\[\frac{p_x}{p_y} = \frac{\mu \alpha x^{\alpha-1}y^{\beta}}{\mu \beta x^{\alpha}y^{\beta-1}} = \frac{\alpha y}{\beta x}\]</span></p>
-<p>Solving for <span class="math inline">\(y\)</span>: <span class="math display">\[y = \frac{\beta p_x}{\alpha p_y} x \tag{8}\]</span></p>
-<p>Substitute equation (8) into the utility constraint (7): <span class="math display">\[x^{\alpha} \left(\frac{\beta p_x}{\alpha p_y} x\right)^{\beta} = \bar{U}\]</span></p>
-<p><span class="math display">\[x^{\alpha+\beta} \left(\frac{\beta p_x}{\alpha p_y}\right)^{\beta} = \bar{U}\]</span></p>
-<p><span class="math display">\[x^{\alpha+\beta} = \bar{U} \left(\frac{\alpha p_y}{\beta p_x}\right)^{\beta}\]</span></p>
-<p><span class="math display">\[x = \bar{U}^{1/(\alpha+\beta)} \left(\frac{\alpha p_y}{\beta p_x}\right)^{\beta/(\alpha+\beta)}\]</span></p>
-<p>Rearranging: <span class="math display">\[\boxed{x^h(p_x, p_y, \bar{U}) = \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} \left(\frac{p_y}{p_x}\right)^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}}\]</span></p>
-<p>Similarly, substituting back: <span class="math display">\[\boxed{y^h(p_x, p_y, \bar{U}) = \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)} \left(\frac{p_x}{p_y}\right)^{\alpha/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}}\]</span></p>
+<section id="conditional-factor-demands" class="level3">
+<h3 class="anchored" data-anchor-id="conditional-factor-demands">Conditional Factor Demands</h3>
+<p>Substituting the optimal ratio back into the production constraint yields the conditional factor demands. In particular, from the optimal ratio we have <span class="math inline">\(K = L \cdot \left(\frac{1-\alpha}{\alpha} \cdot \frac{r}{w}\right)^{\frac{1}{\rho-1}}\)</span>, so we can write the production constraint as:</p>
+<p><span class="math display">\[A\left[\alpha \left(L \cdot \left(\frac{1-\alpha}{\alpha} \cdot \frac{r}{w}\right)^{\frac{1}{\rho-1}}\right)^{\rho} + (1-\alpha) L^{\rho}\right]^{1/\rho} = q\]</span></p>
+<p>Rearranging and solving for <span class="math inline">\(L\)</span>: <span class="math display">\[L(w, r, q) = \frac{q}{A}\left[\alpha \left(\frac{1-\alpha}{\alpha} \cdot \frac{r}{w}\right)^{\frac{\rho}{\rho-1}} + (1-\alpha)\right]^{-\frac{1}{\rho}}\]</span></p>
+<p>Taking common denominator for the term inside the square brackets: <span class="math display">\[L(w, r, q) = \frac{q(\alpha w)^{\frac{1}{\rho-1}}}{A}\left[\alpha((1-\alpha)r)^{\frac{\rho}{\rho-1}} + (1-\alpha)(\alpha w)^{\frac{\rho}{\rho-1}}\right]^{-\frac{1}{\rho}}\]</span></p>
+<p>Factoring out <span class="math inline">\(\alpha(1-\alpha)\)</span> inside the square brackets (note coming out from the brackets it will have power <span class="math inline">\(-1/\rho\)</span>)</p>
+<p><span class="math display">\[L(w, r, q) = \frac{q(\alpha w)^{\frac{1}{\rho-1}}}{A(\alpha(1-\alpha))^{1/\rho}}\left[(1-\alpha)^{\frac{1}{\rho-1}}r^{\frac{\rho}{\rho-1}} + \alpha^{\frac{1}{\rho-1}} w^{\frac{\rho}{\rho-1}}\right]^{-\frac{1}{\rho}}\]</span></p>
+<p>Now noting <span class="math inline">\(K = L \cdot \left(\frac{1-\alpha}{\alpha} \cdot \frac{r}{w}\right)^{\frac{1}{\rho-1}}\)</span>, we can write the conditional demand for capital as:</p>
+<p><span class="math display">\[K(w, r, q) = \frac{q((1-\alpha)r)^{\frac{1}{\rho-1}}}{A(\alpha(1-\alpha))^{1/\rho}}\left[(1-\alpha)^{\frac{1}{\rho-1}}r^{\frac{\rho}{\rho-1}} + \alpha^{\frac{1}{\rho-1}} w^{\frac{\rho}{\rho-1}}\right]^{-\frac{1}{\rho}}\]</span></p>
 </section>
-<section id="expenditure-function" class="level2">
-<h2 class="anchored" data-anchor-id="expenditure-function">2.4 Expenditure Function</h2>
-<p>The expenditure function is: <span class="math display">\[E(p_x, p_y, \bar{U}) = p_x x^h + p_y y^h\]</span></p>
-<p>Substituting the Hicksian demands: <span class="math display">\[E = p_x \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} \left(\frac{p_y}{p_x}\right)^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)} + p_y \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)} \left(\frac{p_x}{p_y}\right)^{\alpha/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}\]</span></p>
-<p>Simplifying the first term: <span class="math display">\[p_x \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} \left(\frac{p_y}{p_x}\right)^{\beta/(\alpha+\beta)} = \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)}\]</span></p>
-<p>Similarly for the second term: <span class="math display">\[p_y \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)} \left(\frac{p_x}{p_y}\right)^{\alpha/(\alpha+\beta)} = \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)} p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)}\]</span></p>
-<p>Therefore: <span class="math display">\[E = p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)} \left[\left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} + \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)}\right]\]</span></p>
-<p>Let: <span class="math display">\[C = \left(\frac{\alpha}{\beta}\right)^{\beta/(\alpha+\beta)} + \left(\frac{\beta}{\alpha}\right)^{\alpha/(\alpha+\beta)}\]</span></p>
-<p>Then: <span class="math display">\[\boxed{E(p_x, p_y, \bar{U}) = C \cdot p_x^{\alpha/(\alpha+\beta)} p_y^{\beta/(\alpha+\beta)} \bar{U}^{1/(\alpha+\beta)}}\]</span></p>
+<section id="cost-function" class="level3">
+<h3 class="anchored" data-anchor-id="cost-function">Cost Function</h3>
+<p>The cost function is the minimum cost of producing output <span class="math inline">\(q\)</span> given factor prices:</p>
+<p><span class="math display">\[C(w, r, q) = wL(w, r, q) + rK(w, r, q)\]</span></p>
+<p>Plugging in the expressions for <span class="math inline">\(L(w, r, q)\)</span> and <span class="math inline">\(K(w, r, q)\)</span>:</p>
+<p><span class="math display">\[C(w, r, q) = \frac{q}{A(\alpha(1-\alpha))^{1/\rho}}\left[(1-\alpha)^{\frac{1}{\rho-1}}r^{\frac{\rho}{\rho-1}} + \alpha^{\frac{1}{\rho-1}} w^{\frac{\rho}{\rho-1}}\right]^{-\frac{1}{\rho}} X\]</span></p>
+<p>where <span class="math display">\[ X = w(\alpha w)^{\frac{1}{\rho-1}} + r((1-\alpha)r)^{\frac{1}{\rho-1}}\]</span></p>
+<p>Which is the same as the term inside the square brackets, so we can simplify to:</p>
+<p><span class="math display">\[\boxed{C(w, r, q) = \frac{q}{A(\alpha(1-\alpha))^{1/\rho}}\left[(1-\alpha)^{\frac{1}{\rho-1}}r^{\frac{\rho}{\rho-1}} + \alpha^{\frac{1}{\rho-1}} w^{\frac{\rho}{\rho-1}}\right]^{\frac{\rho-1}{\rho}}}\]</span></p>
+<p>Interestingly, the cost function also has a CES form in factor prices, but with elasticity of substitution <span class="math inline">\(\rho\)</span>.</p>
 
 
 </section>

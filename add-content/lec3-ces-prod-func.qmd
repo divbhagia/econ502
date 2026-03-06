@@ -1,0 +1,328 @@
+---
+title: "CES Production Function"
+subtitle: "Econ 502: Advanced Microeconomics"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      file: ../assets/pset-preamble.tex
+format-links: [pdf]
+---
+
+
+## Definition
+
+The **Constant Elasticity of Substitution (CES)** production function is given by:
+
+$$F(K, L) = A\left[\alpha K^{\rho} + (1-\alpha) L^{\rho}\right]^{r/\rho}$$
+
+where:
+
+- $A > 0$ is total factor productivity
+- $\alpha \in (0,1)$ is the distribution (share) parameter
+- $\rho \leq 1, \; \rho \neq 0$ governs the elasticity of substitution
+- $r > 0$ governs returns to scale
+
+The elasticity of substitution (defined and derived below) is $\sigma = \frac{1}{1-\rho}$. Note then $\rho = \frac{\sigma-1}{\sigma}$, so sometimes CES function (for $r=1$) is also written as:
+
+$$F(K, L) = A\left[\alpha K^{\frac{\sigma-1}{\sigma}} + (1-\alpha) L^{\frac{\sigma-1}{\sigma}}\right]^{\frac{\sigma}{\sigma-1}}$$
+
+CES function nests several important special cases:
+
+- Cobb-Douglas: $\rho \to 0$ (or $\sigma \to 1$)
+- Perfect substitutes: $\rho \to 1$ (or $\sigma \to \infty$)
+- Perfect complements: $\rho \to -\infty$ (or $\sigma \to 0$)
+
+## Returns to Scale
+
+Scale all inputs by $\lambda > 0$:
+
+$$F(\lambda K, \lambda L) = A\left[\alpha (\lambda K)^{\rho} + (1-\alpha)(\lambda L)^{\rho}\right]^{r/\rho}$$
+
+$$= A\left[\lambda^{\rho}\left(\alpha K^{\rho} + (1-\alpha) L^{\rho}\right)\right]^{r/\rho}$$
+
+$$= \lambda^{r} \cdot A\left[\alpha K^{\rho} + (1-\alpha) L^{\rho}\right]^{r/\rho}$$
+
+$$\boxed{F(\lambda K, \lambda L) = \lambda^{r} \cdot F(K,L)}$$
+
+The function is homogeneous of degree $r$: increasing returns if $r > 1$, constant returns if $r = 1$, and decreasing returns if $r < 1$.
+
+
+## Marginal Products
+
+Let $Z = \alpha K^{\rho} + (1-\alpha) L^{\rho}$ so that $F = A Z^{r/\rho}$. By the chain rule:
+
+$$MP_K = \frac{\partial F}{\partial K} = A \cdot \frac{r}{\rho} Z^{r/\rho - 1} \cdot \alpha \rho K^{\rho - 1} = A r \alpha K^{\rho-1} Z^{r/\rho - 1}$$
+
+$$\boxed{MP_K = A r \alpha K^{\rho - 1}\left[\alpha K^{\rho} + (1-\alpha) L^{\rho}\right]^{r/\rho - 1}}$$
+
+By symmetry $MP_L = A r (1-\alpha) L^{\rho - 1} Z^{r/\rho - 1}$ or:
+
+$$\boxed{MP_L = A r (1-\alpha) L^{\rho - 1}\left[\alpha K^{\rho} + (1-\alpha) L^{\rho}\right]^{r/\rho - 1}}$$
+
+
+## Marginal Rate of Technical Substitution
+
+The MRTS is:
+
+$$MRTS = \frac{MP_L}{MP_K} = \frac{A r (1-\alpha) L^{\rho - 1} Z^{r/\rho - 1}}{A r \alpha K^{\rho - 1} Z^{r/\rho - 1}}$$
+
+Canceling common terms, we get:
+
+$$\boxed{MRTS = \frac{1-\alpha}{\alpha}\left(\frac{L}{K}\right)^{\rho-1}}$$
+
+The MRTS captures the rate at which the firm can substitute capital for labor while keeping output constant. For example, if $MRTS = 2$, then the firm can can replace one unit of labor with two units of capital without changing output.
+
+From the expression above, we can see that the MRTS at all input ratios is higher when: 
+
+- $\alpha$ is smaller (i.e., when labor is more important in production, so we need more capital to substitute for labor)
+- $\rho$ is smaller (i.e., when inputs are more easily substitutable)
+
+Additionally, the capital units needed to substitute for one unit of labor increases as the input ratio $K/L$ increases (power $\rho-1$ is negative.)
+
+## Elasticity of Substitution
+
+The MRTS tells us the rate at which a firm can trade one input for another while maintaining the same output level, but it doesn't tell us how responsive the firm's input mix is to changes in that trade-off rate. In other words, MRTS captures the slope of the isoquant at a point, but it doesn't tell us about the shape of the isoquant and how quickly the slope changes as we move along the isoquant. The elasticity of substitution captures this responsiveness.
+
+In particular, the elasticity of substitution is defined as:
+
+$$\sigma = \frac{d\ln(K/L)}{d\ln(MRTS)}$$
+
+Remember changes in logs capture percentage changes ($d\ln(x) =  dx/x$). Therefore, $\sigma$ captures the percentage change in the input ratio for a given percentage change in the MRTS. 
+
+
+
+```{python}
+#| label: fig-elasticity-two-panel
+#| fig-cap: "Two isoquants with the same MRTS at point A but different curvatures"
+#| echo: false
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+
+# Wong colorblind-friendly palette
+wong_blue = '#0072B2'
+wong_orange = '#E69F00'
+wong_green = '#009E73'
+wong_vermillion = '#D55E00'
+wong_purple = '#CC79A7'
+wong_black = '#000000'
+
+fig, axes = plt.subplots(1, 2, figsize=(7.5, 4), sharey=True)
+
+L0, K0 = 3.0, 6.0
+MRTS = 2.0
+L1_high = 7.1
+L1_low = 4.25
+
+def ces_isoquant(L_arr, a, rho, q_target):
+  K_vals = []
+  for L in L_arr:
+    inside = q_target**rho - a * L**rho
+    if inside / (1 - a) > 0:
+      K_vals.append((inside / (1 - a))**(1.0/rho))
+    else:
+      K_vals.append(np.nan)
+  return np.array(K_vals)
+
+# High sigma: sigma = 3 => rho = 2/3
+rho_high = 1.0/2.0
+a_high = 2**rho_high / (1 + 2**rho_high)
+q_high = (a_high * L0**rho_high + (1 - a_high) * K0**rho_high)**(1.0/rho_high)
+sigma_high = 1.0 / (1 - rho_high)
+
+# Low sigma: sigma = 0.4 => rho = -1.5
+rho_low = -1
+a_low = 2**rho_low / (1 + 2**rho_low)
+q_low = (a_low * L0**rho_low + (1 - a_low) * K0**rho_low)**(1.0/rho_low)
+sigma_low = 1.0 / (1 - rho_low)
+
+L_range = np.linspace(0.5, 10, 500)
+K_high = ces_isoquant(L_range, a_high, rho_high, q_high)
+K_low = ces_isoquant(L_range, a_low, rho_low, q_low)
+
+# Move one unit: L = 3 -> L = 4
+K1_h = ces_isoquant(np.array([L1_high]), a_high, rho_high, q_high)[0]
+K1_l = ces_isoquant(np.array([L1_low]), a_low, rho_low, q_low)[0]
+
+L_tan = np.linspace(1.0, 5.5, 100)
+K_tan = K0 - MRTS * (L_tan - L0)
+
+for idx, (K_iso, K1, L1, sigma_label, sigma_val) in enumerate([
+  (K_high, K1_h, L1_high, 'High', sigma_high),
+  (K_low, K1_l, L1_low, 'Low', sigma_low),
+]):
+  ax = axes[idx]
+
+  # Isoquant
+  mask = (K_iso > 0.2) & (K_iso < 14) & (~np.isnan(K_iso))
+  ax.plot(L_range[mask], K_iso[mask], color=wong_blue, linewidth=2.5, label='Isoquant', zorder=2)
+
+  # Points
+  ax.plot(L0, K0, 'ko', markersize=9, zorder=6)
+  ax.plot(L1, K1, 'D', color=wong_vermillion, markersize=9, zorder=6,
+      markeredgecolor=wong_black, markeredgewidth=0.8)
+
+  # Tangent lines at A and B
+  L_tan_A = np.linspace(L0 - 1.5, L0 + 1.5, 100)
+  K_tan_A = K0 - MRTS * (L_tan_A - L0)
+  ax.plot(L_tan_A, K_tan_A, '--', color=wong_black, linewidth=1, alpha=1, zorder=1)
+
+
+  # Labels
+  ax.annotate('A', (L0 + 0.3, K0 + 0.5), fontsize=12, fontweight='bold')
+  ax.annotate('B', (L1 + 0.2, K1 + 0.4), fontsize=12, fontweight='bold',
+        color=wong_vermillion)
+
+  # K/L ratio rays
+  ax.plot([0, 8], [0, 8 * K0/L0], ':', color=wong_green, linewidth=1.2,
+      alpha=1, label=f'K/L at A = {K0/L0:.1f}')
+  ax.plot([0, 8], [0, 8 * K1/L1], ':', color=wong_orange, linewidth=1.2,
+      alpha=1, label=f'K/L at B = {K1/L1:.1f}')
+
+  ax.set_xlim(0, 9)
+  ax.set_ylim(0, 13)
+  ax.set_xlabel('Labor (L)', fontsize=12)
+  ax.set_title(f'{sigma_label} elasticity of substitution\n(σ = {sigma_val})',
+         fontsize=11)
+  # show grid
+  ax.grid(True, alpha=0.3)
+
+# MRTS at all points
+MRTS_A_high = a_high / (1 - a_high) * (K0/L0)**(1 - rho_high)
+MRTS_B_high = a_high / (1 - a_high) * (K1_h/L1_high)**(1 - rho_high)
+MRTS_A_low = a_low / (1 - a_low) * (K0/L0)**(1 - rho_low)
+MRTS_B_low = a_low / (1 - a_low) * (K1_l/L1_low)**(1 - rho_low)
+
+
+# Add tangent lines at A and B for both cases
+L_tan_B_high = np.linspace(L1_high - 1.5, L1_high + 1.5, 100)
+K_tan_B_high = K1_h - MRTS_B_high * (L_tan_B_high - L1_high)
+L_tan_B_low = np.linspace(L1_low - 1.5, L1_low + 1.5, 100)
+K_tan_B_low = K1_l - MRTS_B_low * (L_tan_B_low - L1_low)  
+axes[0].plot(L_tan_B_high, K_tan_B_high, '--', color=wong_black, linewidth=1, alpha=1, zorder=1)
+axes[1].plot(L_tan_B_low, K_tan_B_low, '--', color=wong_black, linewidth=1, alpha=1, zorder=1)
+
+
+axes[0].set_ylabel('Capital (K)', fontsize=12)
+plt.tight_layout()
+plt.show()
+
+
+
+# Table for both cases x point A and B, K/L and MRTS
+
+data = {
+  'Case': ['High σ', 'Low σ'],
+  'σ': [sigma_high, sigma_low],
+  'K/L at A': [K0/L0, K0/L0],
+  'MRTS at A': [MRTS_A_high, MRTS_A_low],
+  'K/L at B': [K1_h/L1_high, K1_l/L1_low],
+  'MRTS at B': [MRTS_B_high, MRTS_B_low],
+}
+df = pd.DataFrame(data)
+print(df.round(2).to_string(index=False))
+
+```
+
+In the above example, both isoquants start at point A with K/L = 2.0 and MRTS = 2.0. At point B, both have the same new MRTS of 0.6. So the *change* in the marginal rate is identical. But look at how differently the input mix responds. With high σ, K/L plummets from 2.0 to 0.18: the firm dramatically shifts toward labor. With low σ, K/L moves by much less, from 2.0 to 1.09. 
+
+To derive that $\sigma = \frac{1}{1-\rho}$, we start by taking logs of the MRTS expression:
+
+$$\ln(MRTS) = \ln\left(\frac{\alpha}{1-\alpha}\right) + (\rho - 1)\ln\left(\frac{L}{K}\right)$$
+
+Plugging $\ln(L/K) = -\ln(K/L)$ and total differentiating ($\alpha$ and $\rho$ are constants): 
+
+$$d\ln(MRTS) = (1 - \rho) \, d\ln(K/L)$$
+
+Therefore:
+
+$$\boxed{\sigma = \frac{1}{1-\rho}}$$
+
+The elasticity of substitution is constant and it does not depend on input levels, which gives the CES function its name. 
+
+
+## Cost Minimization
+
+### Problem
+
+For constant returns to scale ($r = 1$), the firm minimizes the cost of producing output $q$:
+
+$$\min_{K, L} \quad wL + rK$$
+
+subject to:
+
+$$A\left[\alpha K^{\rho} + (1-\alpha) L^{\rho}\right]^{1/\rho} = q$$
+
+where $w$ is the wage and $r$ is the rental rate of capital.
+
+### Optimality Condition
+
+Setting $MRTS = w/r$ (the price ratio):
+
+$$\frac{1-\alpha}{\alpha}\left(\frac{L}{K}\right)^{\rho-1} = \frac{w}{r}$$
+
+Solving for the optimal input ratio:
+
+$$\frac{L}{K} = \left(\frac{\alpha}{1-\alpha} \cdot \frac{w}{r}\right)^{-\frac{1}{1-\rho}}$$
+
+Or equivalently:
+
+$$\boxed{\frac{K}{L} = \left(\frac{1-\alpha}{\alpha} \cdot \frac{r}{w}\right)^{-\frac{1}{1-\rho}} = \left(\frac{1-\alpha}{\alpha} \cdot \frac{r}{w}\right)^{-\sigma}}$$
+
+
+This shows that $\sigma$ directly governs how the input ratio responds to changes in relative factor prices. 
+
+In applied work, the log form of the above expression is often used for estimation:
+
+$$\ln\left(\frac{K}{L}\right) = \underbrace{\sigma \ln\left(\frac{\alpha}{1-\alpha}\right)}_{\text{Constant}} - \sigma \ln\left(\frac{r}{w}\right)$$
+
+So regressing log of relative input use on log of relative factor prices yields an estimate of the elasticity of substitution $\sigma$. 
+
+This shows that we can also express the elasticity of substitution as:
+
+$$\sigma = \frac{d\ln(K/L)}{d\ln(r/w)}$$
+
+where $K/L$ is the equilibrium input ratio because in equilibrium $MRTS = w/r$. So another way to interpret $\sigma$ is that it captures the percentage change in the input ratio for a given percentage change in relative factor prices.
+
+### Conditional Factor Demands
+
+Substituting the optimal ratio back into the production constraint yields the conditional factor demands. In particular, from the optimal ratio we have $K = L \cdot \left(\frac{1-\alpha}{\alpha} \cdot \frac{r}{w}\right)^{\frac{1}{\rho-1}}$, so we can write the production constraint as:
+
+$$A\left[\alpha \left(L \cdot \left(\frac{1-\alpha}{\alpha} \cdot \frac{r}{w}\right)^{\frac{1}{\rho-1}}\right)^{\rho} + (1-\alpha) L^{\rho}\right]^{1/\rho} = q$$
+
+Rearranging and solving for $L$:
+$$L(w, r, q) = \frac{q}{A}\left[\alpha \left(\frac{1-\alpha}{\alpha} \cdot \frac{r}{w}\right)^{\frac{\rho}{\rho-1}} + (1-\alpha)\right]^{-\frac{1}{\rho}}$$
+
+Taking common denominator for the term inside the square brackets:
+$$L(w, r, q) = \frac{q(\alpha w)^{\frac{1}{\rho-1}}}{A}\left[\alpha((1-\alpha)r)^{\frac{\rho}{\rho-1}} + (1-\alpha)(\alpha w)^{\frac{\rho}{\rho-1}}\right]^{-\frac{1}{\rho}}$$
+
+Factoring out $\alpha(1-\alpha)$ inside the square brackets (note coming out from the brackets it will have power $-1/\rho$)
+
+$$L(w, r, q) = \frac{q(\alpha w)^{\frac{1}{\rho-1}}}{A(\alpha(1-\alpha))^{1/\rho}}\left[(1-\alpha)^{\frac{1}{\rho-1}}r^{\frac{\rho}{\rho-1}} + \alpha^{\frac{1}{\rho-1}} w^{\frac{\rho}{\rho-1}}\right]^{-\frac{1}{\rho}}$$
+
+Now noting $K = L \cdot \left(\frac{1-\alpha}{\alpha} \cdot \frac{r}{w}\right)^{\frac{1}{\rho-1}}$, we can write the conditional demand for capital as:
+
+$$K(w, r, q) = \frac{q((1-\alpha)r)^{\frac{1}{\rho-1}}}{A(\alpha(1-\alpha))^{1/\rho}}\left[(1-\alpha)^{\frac{1}{\rho-1}}r^{\frac{\rho}{\rho-1}} + \alpha^{\frac{1}{\rho-1}} w^{\frac{\rho}{\rho-1}}\right]^{-\frac{1}{\rho}}$$
+
+### Cost Function
+The cost function is the minimum cost of producing output $q$ given factor prices:
+
+$$C(w, r, q) = wL(w, r, q) + rK(w, r, q)$$
+
+Plugging in the expressions for $L(w, r, q)$ and $K(w, r, q)$:
+
+$$C(w, r, q) = \frac{q}{A(\alpha(1-\alpha))^{1/\rho}}\left[(1-\alpha)^{\frac{1}{\rho-1}}r^{\frac{\rho}{\rho-1}} + \alpha^{\frac{1}{\rho-1}} w^{\frac{\rho}{\rho-1}}\right]^{-\frac{1}{\rho}} X$$
+
+where $$ X = w(\alpha w)^{\frac{1}{\rho-1}} + r((1-\alpha)r)^{\frac{1}{\rho-1}}$$
+
+Which is the same as the term inside the square brackets, so we can simplify to:
+
+$$\boxed{C(w, r, q) = \frac{q}{A(\alpha(1-\alpha))^{1/\rho}}\left[(1-\alpha)^{\frac{1}{\rho-1}}r^{\frac{\rho}{\rho-1}} + \alpha^{\frac{1}{\rho-1}} w^{\frac{\rho}{\rho-1}}\right]^{\frac{\rho-1}{\rho}}}$$
+
+Interestingly, the cost function also has a CES form in factor prices, but with elasticity of substitution $\rho$.

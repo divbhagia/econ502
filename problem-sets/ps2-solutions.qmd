@@ -17,11 +17,12 @@ format-links: [pdf]
 
 ### Part (a): Elasticity of substitution
 
-The production function $Q = [0.6R^{0.5} + 0.4L^{0.5}]^2$ is a CES with parameter $\rho = 0.5$ (since the outer exponent is $1/\rho = 2$). The elasticity of substitution is:
+The production function 
+$$Q = [0.6R^{0.5} + 0.4L^{0.5}]^2$$ is a CES function with parameter $\rho = 0.5$ (since the outer exponent is $1/\rho = 2$). The elasticity of substitution is:
 
 $$\sigma = \frac{1}{1 - \rho} = \frac{1}{1 - 0.5} = 2$$
 
-Since $\sigma = 2 > 1$, robots and workers are **good substitutes**---more substitutable than Cobb-Douglas ($\sigma = 1$). The firm can replace workers with robots relatively easily when the price of robots falls. A 1% decrease in the relative price of robots leads to a 2% increase in the robot-to-worker ratio.
+Since $\sigma = 2 > 1$, robots and workers are **good substitutes**: more substitutable than Cobb-Douglas ($\sigma = 1$). The firm can replace workers with robots relatively easily when the price of robots falls. A 1% decrease in the relative price of robots leads to a 2% increase in the robot-to-worker ratio. For more details on CES functions, see handout [here](/add-content/lec3-ces-prod-func.qmd). 
 
 
 ### Part (b): Cost-minimizing input mix for $Q = 1000$
@@ -50,9 +51,9 @@ $$L^{0.5} = \frac{31.62}{1.526} = 20.72 \quad \Longrightarrow \quad L \approx 42
 
 $$R \approx 3.52 \times 429 \approx 1{,}510$$
 
-$$\boxed{R \approx 1{,}510, \quad L \approx 429}$$
-
 Total cost: $C = 20(1{,}510) + 25(429) = 30{,}200 + 10{,}725 = \$40{,}925$.
+
+$$\boxed{R \approx 1{,}510, \quad L \approx 429, \quad C \approx \$40{,}925}$$
 
 
 ### Part (c): Robot rental rate falls to $r = 10$
@@ -63,32 +64,24 @@ $$\frac{R}{L} = \left(\frac{1.5 \times 25}{10}\right)^2 = (3.75)^2 = 14.06$$
 
 So $R \approx 14.06L$. Substituting into the production constraint:
 
-$$31.62 = L^{0.5}(0.6 \times 3.75 + 0.4) = 2.65\,L^{0.5}$$
+$$\sqrt{1000} = L^{0.5}(0.6 \times 3.75 + 0.4) = 2.65\,L^{0.5}$$
 
 $$L^{0.5} = 11.93 \quad \Longrightarrow \quad L \approx 142$$
 
 $$R \approx 14.06 \times 142 \approx 1{,}997$$
 
-$$\boxed{R \approx 1{,}997, \quad L \approx 142}$$
-
 **Percentage change in robot-to-worker ratio:** The ratio goes from 3.52 to 14.06, an increase of $\frac{14.06 - 3.52}{3.52} \times 100 \approx 300\%$. The robot-to-worker ratio **quadruples**. This is because when $r$ halves, the relative price $w/r$ doubles, and with $\sigma = 2$ the input ratio responds by a factor of $2^2 = 4$.
 
-The firm dramatically shifts toward robots: robot use rises from 1,510 to 1,997, while worker use falls from 429 to 142. The cheaper robots replace a large share of labor.
 
+**New cost of production:** $C = 10(1{,}997) + 25(142) = 19{,}970 + 3{,}550 = \$23{,}520$. The cost of producing 1000 units falls by about 42% due to the cheaper robots.
+
+$$\boxed{R \approx 1{,}997, \quad L \approx 142, \quad C \approx \$23{,}520}$$
 
 ### Part (d): Robot tax and job savings
 
-A robot tax raising $r$ back to 20 would restore the input mix from part (b). Comparing the two scenarios:
+A robot tax raising $r$ back to 20 would restore the input mix from part (b). Since the firm would use 429 workers instead of 142, the tax would save approximately $287$ worker-hours per 1,000 units of output.
 
-| | $r = 10$ (no tax) | $r = 20$ (robot tax) | Change |
-|---|---|---|---|
-| Workers ($L$) | 142 | 429 | +287 |
-| Robots ($R$) | 1,997 | 1,510 | $-$487 |
-| Total cost | \$23,520 | \$40,925 | +\$17,405 |
-
-The robot tax would **save approximately 287 worker-hours** per 1,000 units of output.
-
-**The trade-off:** Production costs rise by about \$17,400 per 1,000 units (a 74% increase), which would be passed on to consumers through higher prices. The cost per worker-hour saved is approximately $\$17{,}400/287 \approx \$61$. Whether this is worthwhile depends on how society values the protected jobs relative to the efficiency loss and higher consumer prices.
+**The trade-off:**  The cost of producing 1000 units would rise by about 42% from \$23,520 back to \$40,925, which may lead to higher prices for consumers and lower profits for the firm. The tax protects jobs but at the cost of efficiency and potentially higher prices. The firm may also have less incentive to invest in automation in the future, which could slow technological progress. But do we want to live in a society where people don't have jobs? Maybe if everyone owned robots, we wouldn't have to worry about unemployment. There is also a possibility that new jobs could be created to replace the ones lost to automation.
 
 
 \newpage
@@ -97,15 +90,15 @@ The robot tax would **save approximately 287 worker-hours** per 1,000 units of o
 
 A competitive firm maximizes profit $\pi = P \cdot q - C(q)$, yielding the first-order condition $P = MC(q)$.
 
-**Lump-sum tax on profits.** With a lump-sum tax $T$, profit becomes $\pi = Pq - C(q) - T$. The FOC is still $P = MC(q)$---the lump-sum tax does not depend on the level of output, so it does not affect the marginal conditions. The profit-maximizing quantity is **unchanged**. (The firm earns less profit, but it cannot reduce its tax by producing more or less.)
+**Lump-sum tax on profits.** With a lump-sum tax $T$, profit becomes: $$\pi = Pq - C(q) - T$$ The FOC is still $P = MC(q)$ since $T$ does not depend on the level of output $Q$. The profit-maximizing quantity is **unchanged** as the firm can't change it's tax burden by adjusting output. The lump-sum tax reduces profits but does not distort production decisions.
 
-**Proportional tax on profits.** With tax rate $t$, after-tax profit is $\pi = (1-t)[Pq - C(q)]$. The FOC is $(1-t)[P - MC(q)] = 0$. Since $(1-t) > 0$, this gives $P = MC(q)$, the same condition as before. The profit-maximizing quantity is **unchanged**. (Intuitively, if $q^*$ maximizes pre-tax profit, it also maximizes $(1-t)$ times pre-tax profit.)
+**Proportional tax on profits.** With tax rate $t$, after-tax profit is: $$\pi = (1-t)[Pq - C(q)]$$ The FOC now is $(1-t)[P - MC(q)] = 0$, which implies $P = MC(q)$, the same condition as before. Once again, the profit-maximizing quantity is **unchanged**. 
 
-**Tax on each unit of output.** With a per-unit tax $\tau$, profit becomes $\pi = Pq - C(q) - \tau q = (P - \tau)q - C(q)$. The FOC is $P - \tau = MC(q)$, so the firm produces where marginal cost equals the net price $P - \tau$. Since $MC$ is increasing, the profit-maximizing quantity **decreases**. The per-unit tax is equivalent to a reduction in the output price---it shifts the effective price down and reduces output.
+**Output tax.** With a per-unit tax $\tau$, profit becomes: $$\pi = Pq - C(q) - \tau q = (P - \tau)q - C(q)$$ The FOC is $P - \tau = MC(q)$, so the firm produces where marginal cost equals the net price $P - \tau$. Since $MC$ is increasing, the profit-maximizing quantity **decreases**. The per-unit tax is equivalent to a reduction in the output price: it shifts the effective price down and reduces output.
+
+**Intuition** for why there is distortion with an output tax but not with a proportional tax: The output tax makes each unit of output less profitable, so the firm produces less. With a proportional tax, the firm still wants to produce the quantity that maximizes pre-tax profits, since a higher pre-tax profit means a higher after-tax profit even after paying the percentage to the government. 
 
 **Tax on labor input.** If the firm uses labor $L$ at wage $w$ and the government imposes a tax $t_L$ per unit of labor, the effective wage rises to $w + t_L$. This increases the cost function $C(q)$, which shifts $MC(q)$ upward. Since the firm produces where $P = MC(q)$, a higher $MC$ curve means a lower profit-maximizing quantity. Output **decreases**. The firm also substitutes away from labor toward other inputs.
-
-$$\boxed{\text{Lump-sum tax: no effect. \quad Proportional tax: no effect. \quad Output tax: } q \text{ falls. \quad Labor tax: } q \text{ falls.}}$$
 
 
 \newpage
@@ -118,17 +111,17 @@ Setting domestic demand equal to domestic supply:
 
 $$D(P) = S(P) \quad \Longrightarrow \quad 5{,}000 - 100P = 150P \quad \Longrightarrow \quad 250P = 5{,}000$$
 
-$$\boxed{P^* = \$20, \qquad Q^* = 3{,}000 \text{ thousand radios}}$$
+$$\boxed{P^* = \$20, \qquad Q^* = 3{,}000 \text{ radios}}$$
 
 
 ### Part (b): Free trade at world price $P_W = \$10$
 
 At $P = 10$:
 
-- Domestic demand: $Q_D = 5{,}000 - 100(10) = 4{,}000$ thousand
-- Domestic supply: $Q_S = 150(10) = 1{,}500$ thousand
+- Domestic demand: $Q_D = 5{,}000 - 100(10) = 4{,}000$ 
+- Domestic supply: $Q_S = 150(10) = 1{,}500$
 
-$$\boxed{\text{Imports} = Q_D - Q_S = 4{,}000 - 1{,}500 = 2{,}500 \text{ thousand radios}}$$
+$$\boxed{\text{Imports} = Q_D - Q_S = 4{,}000 - 1{,}500 = 2{,}500 \text{ radios}}$$
 
 The price falls from \$20 to \$10, domestic consumption rises, domestic production falls, and the gap is filled by imports.
 
@@ -137,53 +130,165 @@ The price falls from \$20 to \$10, domestic consumption rises, domestic producti
 
 With the tariff, the domestic price rises to $P = 10 + 5 = \$15$:
 
-- Domestic demand: $Q_D = 5{,}000 - 100(15) = 3{,}500$ thousand
-- Domestic supply: $Q_S = 150(15) = 2{,}250$ thousand
-- Imports: $3{,}500 - 2{,}250 = 1{,}250$ thousand
+- Domestic demand: $Q_D = 5{,}000 - 100(15) = 3{,}500$ 
+- Domestic supply: $Q_S = 150(15) = 2{,}250$ 
+- Imports: $3{,}500 - 2{,}250 = 1{,}250$ 
 
 **Tariff revenue:**
 
-$$R = \$5 \times 1{,}250 = \$6{,}250 \text{ thousand}$$
+$$R = \$5 \times 1{,}250 = \$6{,}250 $$
 
-**Change in consumer surplus** (trapezoid between $P = 10$ and $P = 15$ under demand curve):
+**Change in consumer surplus** (A+B+C+D):
 
-$$\Delta CS = -\frac{1}{2}(Q_D^{old} + Q_D^{new})(P^{new} - P^{old}) = -\frac{1}{2}(4{,}000 + 3{,}500)(5) = -\$18{,}750 \text{ thousand}$$
+$$\Delta CS = -\frac{1}{2}(Q_D^{FT} + Q_D^{T})(P^{T} - P^{FT}) = -\frac{1}{2}(4{,}000 + 3{,}500)(5) = -\$18{,}750 $$
 
-**Consumer surplus transferred to domestic producers** (increase in producer surplus---trapezoid between $P = 10$ and $P = 15$ under supply curve):
+**Consumer surplus transferred to domestic producers** (D):
 
-$$\Delta PS = \frac{1}{2}(Q_S^{old} + Q_S^{new})(P^{new} - P^{old}) = \frac{1}{2}(1{,}500 + 2{,}250)(5) = \$9{,}375 \text{ thousand}$$
+$$\Delta PS = \frac{1}{2}(Q_S^{FT} + Q_S^{T})(P^{T} - P^{FT}) = \frac{1}{2}(1{,}500 + 2{,}250)(5) = \$9{,}375 $$
 
-**Deadweight loss** (the CS lost that is neither captured by producers nor by the government):
+**Deadweight loss** (A+C):
 
-$$DWL = |\Delta CS| - \Delta PS - R = 18{,}750 - 9{,}375 - 6{,}250 = \$3{,}125 \text{ thousand}$$
-
+$$DWL = |\Delta CS| - \Delta PS - R = 18{,}750 - 9{,}375 - 6{,}250 = \$3{,}125 $$
 This DWL consists of two triangles:
 
-- *Production inefficiency*: $\frac{1}{2}(5)(2{,}250 - 1{,}500) = 1{,}875$ (resources wasted producing domestically what could be imported more cheaply)
-- *Consumption loss*: $\frac{1}{2}(5)(4{,}000 - 3{,}500) = 1{,}250$ (lost surplus from consumers priced out of the market)
+- *Production inefficiency (C)*: $\frac{1}{2}(5)(2{,}250 - 1{,}500) = 1{,}875$ (resources wasted producing domestically what could be imported more cheaply)
+- *Consumption loss (A)*: $\frac{1}{2}(5)(4{,}000 - 3{,}500) = 1{,}250$ (lost surplus from consumers priced out of the market)
+
+```{python}
+#| echo: false
+#| fig-align: center
+
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.patches import Polygon
+
+# ========== PARAMETERS ==========
+demand_intercept = 50      # P-intercept of demand  (Q = 5000 - 100P => P = 50 - Q/100)
+demand_slope     = -1/100  # dP/dQ, demand
+supply_slope     = 1/150   # dP/dQ, domestic supply (Q = 150P => P = Q/150)
+
+P_world  = 10.0   # free-trade world price
+P_tariff = 15.0   # world price + $5 tariff
+P_eq     = 20.0   # no-trade domestic equilibrium price
+
+# ========== COLORS (Okabe-Ito palette) ==========
+C_BLUE   = '#0072B2'   # demand curve
+C_ORANGE = '#E69F00'   # supply curve / region A
+C_GREEN  = '#009E73'   # world price line / region B
+C_RED    = '#D55E00'   # tariff price line / DWL regions C & D
+C_GRAY   = '#999999'   # dotted drop lines
+
+# ========== DERIVED QUANTITIES ==========
+Q_S_world  = P_world  / supply_slope                        # 1,500
+Q_D_world  = (demand_intercept - P_world)  / (-demand_slope) # 4,000
+Q_S_tariff = P_tariff / supply_slope                        # 2,250
+Q_D_tariff = (demand_intercept - P_tariff) / (-demand_slope) # 3,500
+
+# ========== FIGURE ==========
+fig, ax = plt.subplots(figsize=(6, 5))
+
+Q_range  = np.linspace(0, 5200, 600)
+P_demand = demand_intercept + demand_slope * Q_range
+P_supply = supply_slope * Q_range
+
+# --- Supply and demand curves ---
+ax.plot(Q_range[P_demand >= 0],
+        P_demand[P_demand >= 0],
+        color=C_BLUE,   linewidth=2.2, label='Demand')
+ax.plot(Q_range[P_supply <= 55],
+        P_supply[P_supply <= 55],
+        color=C_ORANGE, linewidth=2.2, label='Domestic supply')
+
+# --- Horizontal price lines ---
+ax.axhline(P_world,  color=C_GRAY, linewidth=1.6,
+           linestyle='--')
+ax.axhline(P_tariff, color=C_GRAY,   linewidth=1.6,
+           linestyle='--')
+
+# --- Shaded welfare regions ---
+regions = [
+    # (vertices, facecolor, legend label)
+
+    ([(Q_S_world,  P_world), (Q_S_tariff, P_world), (Q_S_tariff, P_tariff)],
+     C_RED, 'DWL (A + C)'),
+
+    ([(Q_S_tariff, P_world),  (Q_D_tariff, P_world),
+      (Q_D_tariff, P_tariff), (Q_S_tariff, P_tariff)],
+     C_GREEN, 'Tariff revenue (B)'),     
+
+    ([(Q_D_tariff, P_world), (Q_D_world,  P_world), (Q_D_tariff, P_tariff)],
+     C_RED, None),
+
+    ([(0,  P_world),  (Q_S_tariff, P_world),
+      (Q_S_tariff, P_tariff), (0,  P_tariff)],
+     C_ORANGE, 'CS → PS transfer (D)'),     
+]
+for verts, color, label in regions:
+    ax.add_patch(Polygon(verts, closed=True,
+                         facecolor=color, alpha=0.45,
+                         edgecolor='none', label=label))
+
+# --- Vertical drop lines and point markers ---
+key_pts = [(Q_S_world, P_world), (Q_S_tariff, P_tariff),
+           (Q_D_tariff, P_tariff), (Q_D_world,  P_world)]
+for Q_val, P_val in key_pts:
+    ax.plot([Q_val, Q_val], [0, P_val],
+            color=C_GRAY, linewidth=1.0, linestyle=':', zorder=1)
+    ax.plot(Q_val, P_val, 'o', color=C_GRAY, markersize=5, zorder=5)
+
+# --- Region letter labels ---
+lk = dict(fontsize=11, fontweight='bold', ha='center', va='center', color='white')
+ax.text((Q_S_tariff) / 2 , (P_world + P_tariff) / 2.1, 'D', **lk)
+ax.text((Q_S_tariff + Q_D_tariff) / 2,  (P_world + P_tariff) / 2.1, 'B', **lk)
+ax.text(Q_S_world  + (Q_S_tariff - Q_S_world)  * 0.65, (P_world + P_tariff) / 2.1, 'C', **lk)
+ax.text(Q_D_tariff + (Q_D_world  - Q_D_tariff) * 0.35, (P_world + P_tariff) / 2.1, 'A', **lk)
+
+# --- Axes formatting ---
+ax.set_xlabel('Quantity', fontsize=12)
+ax.set_ylabel('Price', fontsize=12)
+ax.set_xlim(0, 5100)
+ax.set_ylim(0, 52)
+
+ax.set_xticks([Q_S_world, Q_S_tariff, Q_D_tariff, Q_D_world])
+ax.set_xticklabels([
+    f'$Q_S^{{FT}}$\n({int(Q_S_world):,})',
+    f'$Q_S^{{T}}$\n({int(Q_S_tariff):,})',
+    f'$Q_D^{{T}}$\n({int(Q_D_tariff):,})',
+    f'$Q_D^{{FT}}$\n({int(Q_D_world):,})',
+], fontsize=9)
+ax.set_yticks([0, P_world, P_tariff, P_eq])
+ax.set_yticklabels(['0', '$P_W = 10$', r'$P_W + t = 15$', '$P^* = 20$'], fontsize=9)
+
+ax.legend(loc='upper right', fontsize=9, framealpha=0.85)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
 
 
-### Part (d): Voluntary Export Restraint (VER) of 1,250 thousand
+### Part (d): Voluntary Export Restraint (VER) 
 
-With the VER limiting imports to 1,250 thousand, the domestic price must adjust so that $Q_D - Q_S = 1{,}250$:
+With the VER limiting imports to 1,250, the domestic price must adjust so that $Q_D - Q_S = 1{,}250$:
 
 $$5{,}000 - 100P - 150P = 1{,}250 \quad \Longrightarrow \quad P = \$15$$
 
 The equilibrium price, domestic demand, domestic supply, and import quantity are **identical** to the tariff case.
 
-**Key difference:** With a tariff, the government collects \$6,250 thousand in tariff revenue. With the VER, there is no tariff---foreign exporters sell at the higher domestic price of \$15 instead of the world price of \$10, so they capture the \$6,250 thousand as **quota rents**.
+**Key difference:** With a tariff, the government collects \$6,250 in tariff revenue. With the VER, there is no tariff: foreign exporters sell at the higher domestic price of \$15 instead of the world price of \$10, so they capture the \$6,250 as **quota rents**.
 
 From the domestic country's perspective, the VER is strictly worse than the tariff:
 
 | | Tariff | VER |
 |---|---|---|
-| CS loss | $-$18,750 | $-$18,750 |
+| CS loss | -18,750 | -18,750 |
 | PS gain | +9,375 | +9,375 |
 | Gov. revenue | +6,250 | 0 |
-| Quota rents to foreigners | 0 | $-$6,250 |
-| **Net domestic welfare change** | $-$**3,125** | $-$**9,375** |
+| Quota rents to foreigners | 0 | -6,250 |
+| **Net domestic welfare change** | -**3,125** | -**9,375** |
 
-The VER transfers an additional \$6,250 thousand to foreign producers, making the domestic welfare loss three times larger than the tariff.
+The VER transfers an additional \$6,250 to foreign producers, making the domestic welfare loss three times larger than the tariff.
 
 
 \newpage
@@ -295,4 +400,6 @@ Higher inequality aversion (larger $\alpha$) increases the optimal tax rate. **I
 
 $$\frac{\partial \tau^*}{\partial k} = -\frac{2\alpha - 1}{\alpha k^2} < 0 \quad \text{(for } \alpha > 1/2\text{)}$$
 
-A higher distortion cost (larger $k$) decreases the optimal tax rate. **Intuition:** When taxation is more distortionary---meaning more revenue is lost to deadweight loss per dollar collected---the government should tax less aggressively. The "leaky bucket" of redistribution becomes leakier: each dollar taken from the rich delivers less than a dollar to the poor, so the marginal cost of redistribution rises and the optimal level falls.
+A higher distortion cost (larger $k$) decreases the optimal tax rate. 
+**Intuition:** When taxation is more distortionary (meaning more revenue is lost to deadweight loss per dollar collected), the government should tax less aggressively. The "leaky bucket" of redistribution becomes leakier: each dollar taken from the rich delivers less than a dollar to the poor, so the marginal cost of redistribution rises and the optimal level falls.
+

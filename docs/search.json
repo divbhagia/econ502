@@ -7,587 +7,104 @@
     "text": "The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking here.\n\nOverviewLearning GoalsMaterialGrading\n\n\n\nOverview\nThis course develops the core tools of microeconomic theory while connecting them to real-world applications and policy questions.\nWe begin by examining how consumers decide what to buy (lectures 1-2) and how firms organize production (lecture 3), then consider how these behaviors determine prices and quantities in competitive markets (lecture 4). From there, we explore what it means for a market to work efficiently and how to think about fairness (lecture 5). We then turn to market power (lectures 6-8): What happens when a single or a few large firms dominate the market? How does market power affect wages in labor markets?\nIn the second half of the course, we consider the need for government intervention when markets fail due to information asymmetries, externalities, or underprovision of public goods (lectures 9-10). Finally, we conclude by examining decision-making under uncertainty and strategic behavior through game theory (lectures 11-12).\n\n\n\n\nLearning Goals\nUpon successful completion of this course, students will:\n\nModel consumer and firm behavior and derive equilibrium prices and quantities in competitive markets\nApply welfare criteria to assess market efficiency and analyze tradeoffs between efficiency and equity\nAnalyze how market power affects prices, output, and wages in product and labor markets\nDiagnose market failures arising from information asymmetries, externalities, and public goods, and evaluate policy responses\nApply expected utility theory to model choice under uncertainty and use game theory to solve strategic interactions\n\n\n\n\n\nCourse Material\nThe following textbook is required for this course:\n\nMicroeconomic Theory: Basic Principles & Extensions by Walter Nicholson, Christopher Snyder, 13th Edition.\n\nPrevious editions are also acceptable. Lectures will loosely follow the textbook. Supplementary readings, lecture slides, and problem sets will be posted on the course website.\n\n\n\n\nGrading Criteria\nYour grade will be determined according to the following breakdown:\n\n\n\nComponent\n\n\nPoints\n\n\n\n\nProblem Sets\n\n\n10\n\n\n\n\nMidterm Exam\n\n\n40\n\n\n\n\nFinal Exam\n\n\n50"
   },
   {
-    "objectID": "problem-sets/ps2-solutions.html",
-    "href": "problem-sets/ps2-solutions.html",
-    "title": "Problem Set 2: Solutions",
+    "objectID": "problem-sets/ps2.html",
+    "href": "problem-sets/ps2.html",
+    "title": "Problem Set 2",
     "section": "",
-    "text": "The production function \\(Q = [0.6R^{0.5} + 0.4L^{0.5}]^2\\) is a CES with parameter \\(\\rho = 0.5\\) (since the outer exponent is \\(1/\\rho = 2\\)). The elasticity of substitution is:\n\\[\\sigma = \\frac{1}{1 - \\rho} = \\frac{1}{1 - 0.5} = 2\\]\nSince \\(\\sigma = 2 &gt; 1\\), robots and workers are good substitutes—more substitutable than Cobb-Douglas (\\(\\sigma = 1\\)). The firm can replace workers with robots relatively easily when the price of robots falls. A 1% decrease in the relative price of robots leads to a 2% increase in the robot-to-worker ratio.\n\n\n\nThe cost-minimizing condition requires \\(MRTS = r/w\\). Computing the marginal products:\n\\[MP_R = 2[0.6R^{0.5} + 0.4L^{0.5}] \\cdot 0.3 R^{-0.5}, \\qquad MP_L = 2[0.6R^{0.5} + 0.4L^{0.5}] \\cdot 0.2 L^{-0.5}\\]\nTaking the ratio:\n\\[MRTS = \\frac{MP_R}{MP_L} = \\frac{0.3}{0.2} \\cdot \\frac{L^{0.5}}{R^{0.5}} = 1.5\\left(\\frac{L}{R}\\right)^{0.5}\\]\nSetting \\(MRTS = r/w\\) and solving for the input ratio:\n\\[1.5\\left(\\frac{L}{R}\\right)^{0.5} = \\frac{r}{w} \\quad \\Longrightarrow \\quad \\frac{R}{L} = \\left(\\frac{1.5w}{r}\\right)^2\\]\nWith \\(r = 20\\) and \\(w = 25\\):\n\\[\\frac{R}{L} = \\left(\\frac{1.5 \\times 25}{20}\\right)^2 = (1.875)^2 \\approx 3.52\\]\nSo \\(R \\approx 3.52L\\). Substituting into the production function with \\(Q = 1000\\):\n\\[\\sqrt{1000} = 0.6\\sqrt{3.52}\\,L^{0.5} + 0.4\\,L^{0.5} = L^{0.5}(0.6 \\times 1.876 + 0.4) = 1.526\\,L^{0.5}\\]\n\\[L^{0.5} = \\frac{31.62}{1.526} = 20.72 \\quad \\Longrightarrow \\quad L \\approx 429\\]\n\\[R \\approx 3.52 \\times 429 \\approx 1{,}510\\]\n\\[\\boxed{R \\approx 1{,}510, \\quad L \\approx 429}\\]\nTotal cost: \\(C = 20(1{,}510) + 25(429) = 30{,}200 + 10{,}725 = \\$40{,}925\\).\n\n\n\nWith the new prices:\n\\[\\frac{R}{L} = \\left(\\frac{1.5 \\times 25}{10}\\right)^2 = (3.75)^2 = 14.06\\]\nSo \\(R \\approx 14.06L\\). Substituting into the production constraint:\n\\[31.62 = L^{0.5}(0.6 \\times 3.75 + 0.4) = 2.65\\,L^{0.5}\\]\n\\[L^{0.5} = 11.93 \\quad \\Longrightarrow \\quad L \\approx 142\\]\n\\[R \\approx 14.06 \\times 142 \\approx 1{,}997\\]\n\\[\\boxed{R \\approx 1{,}997, \\quad L \\approx 142}\\]\nPercentage change in robot-to-worker ratio: The ratio goes from 3.52 to 14.06, an increase of \\(\\frac{14.06 - 3.52}{3.52} \\times 100 \\approx 300\\%\\). The robot-to-worker ratio quadruples. This is because when \\(r\\) halves, the relative price \\(w/r\\) doubles, and with \\(\\sigma = 2\\) the input ratio responds by a factor of \\(2^2 = 4\\).\nThe firm dramatically shifts toward robots: robot use rises from 1,510 to 1,997, while worker use falls from 429 to 142. The cheaper robots replace a large share of labor.\n\n\n\nA robot tax raising \\(r\\) back to 20 would restore the input mix from part (b). Comparing the two scenarios:\n\n\n\n\n\\(r = 10\\) (no tax)\n\\(r = 20\\) (robot tax)\nChange\n\n\n\n\nWorkers (\\(L\\))\n142\n429\n+287\n\n\nRobots (\\(R\\))\n1,997\n1,510\n$-$487\n\n\nTotal cost\n$23,520\n$40,925\n+$17,405\n\n\n\nThe robot tax would save approximately 287 worker-hours per 1,000 units of output.\nThe trade-off: Production costs rise by about $17,400 per 1,000 units (a 74% increase), which would be passed on to consumers through higher prices. The cost per worker-hour saved is approximately \\(\\$17{,}400/287 \\approx \\$61\\). Whether this is worthwhile depends on how society values the protected jobs relative to the efficiency loss and higher consumer prices."
+    "text": "A manufacturing firm produces output using robots (R) and workers (L) with the CES production function: \\[Q = [0.6R^{0.5} + 0.4L^{0.5}]^{2}\\]\nThe rental rate for robots is \\(r = 20\\) per hour and the wage is \\(w = 25\\) per hour.\n\nWhat is the elasticity of substitution between robots and workers? What does this tell you about how easily the firm can replace workers with robots?\nSolve for the cost-minimizing quantity of robots and workers to produce Q = 1000 units. Also, calculate the total cost of production at this input mix.\nNow suppose technological progress reduces the robot rental rate to \\(r = 10\\). How does the firm’s use of robots and workers change? Calculate the new cost of production for 1000 units.\nThe government is considering a “robot tax” that would increase \\(r\\) back to 20 to protect jobs. Using your answer from (c), estimate how many jobs this would save per 1000 units of output. What’s the trade-off?"
   },
   {
-    "objectID": "problem-sets/ps2-solutions.html#problem-1-automation-and-labor-demand",
-    "href": "problem-sets/ps2-solutions.html#problem-1-automation-and-labor-demand",
-    "title": "Problem Set 2: Solutions",
+    "objectID": "problem-sets/ps2.html#problem-1-automation-and-labor-demand",
+    "href": "problem-sets/ps2.html#problem-1-automation-and-labor-demand",
+    "title": "Problem Set 2",
     "section": "",
-    "text": "The production function \\(Q = [0.6R^{0.5} + 0.4L^{0.5}]^2\\) is a CES with parameter \\(\\rho = 0.5\\) (since the outer exponent is \\(1/\\rho = 2\\)). The elasticity of substitution is:\n\\[\\sigma = \\frac{1}{1 - \\rho} = \\frac{1}{1 - 0.5} = 2\\]\nSince \\(\\sigma = 2 &gt; 1\\), robots and workers are good substitutes—more substitutable than Cobb-Douglas (\\(\\sigma = 1\\)). The firm can replace workers with robots relatively easily when the price of robots falls. A 1% decrease in the relative price of robots leads to a 2% increase in the robot-to-worker ratio.\n\n\n\nThe cost-minimizing condition requires \\(MRTS = r/w\\). Computing the marginal products:\n\\[MP_R = 2[0.6R^{0.5} + 0.4L^{0.5}] \\cdot 0.3 R^{-0.5}, \\qquad MP_L = 2[0.6R^{0.5} + 0.4L^{0.5}] \\cdot 0.2 L^{-0.5}\\]\nTaking the ratio:\n\\[MRTS = \\frac{MP_R}{MP_L} = \\frac{0.3}{0.2} \\cdot \\frac{L^{0.5}}{R^{0.5}} = 1.5\\left(\\frac{L}{R}\\right)^{0.5}\\]\nSetting \\(MRTS = r/w\\) and solving for the input ratio:\n\\[1.5\\left(\\frac{L}{R}\\right)^{0.5} = \\frac{r}{w} \\quad \\Longrightarrow \\quad \\frac{R}{L} = \\left(\\frac{1.5w}{r}\\right)^2\\]\nWith \\(r = 20\\) and \\(w = 25\\):\n\\[\\frac{R}{L} = \\left(\\frac{1.5 \\times 25}{20}\\right)^2 = (1.875)^2 \\approx 3.52\\]\nSo \\(R \\approx 3.52L\\). Substituting into the production function with \\(Q = 1000\\):\n\\[\\sqrt{1000} = 0.6\\sqrt{3.52}\\,L^{0.5} + 0.4\\,L^{0.5} = L^{0.5}(0.6 \\times 1.876 + 0.4) = 1.526\\,L^{0.5}\\]\n\\[L^{0.5} = \\frac{31.62}{1.526} = 20.72 \\quad \\Longrightarrow \\quad L \\approx 429\\]\n\\[R \\approx 3.52 \\times 429 \\approx 1{,}510\\]\n\\[\\boxed{R \\approx 1{,}510, \\quad L \\approx 429}\\]\nTotal cost: \\(C = 20(1{,}510) + 25(429) = 30{,}200 + 10{,}725 = \\$40{,}925\\).\n\n\n\nWith the new prices:\n\\[\\frac{R}{L} = \\left(\\frac{1.5 \\times 25}{10}\\right)^2 = (3.75)^2 = 14.06\\]\nSo \\(R \\approx 14.06L\\). Substituting into the production constraint:\n\\[31.62 = L^{0.5}(0.6 \\times 3.75 + 0.4) = 2.65\\,L^{0.5}\\]\n\\[L^{0.5} = 11.93 \\quad \\Longrightarrow \\quad L \\approx 142\\]\n\\[R \\approx 14.06 \\times 142 \\approx 1{,}997\\]\n\\[\\boxed{R \\approx 1{,}997, \\quad L \\approx 142}\\]\nPercentage change in robot-to-worker ratio: The ratio goes from 3.52 to 14.06, an increase of \\(\\frac{14.06 - 3.52}{3.52} \\times 100 \\approx 300\\%\\). The robot-to-worker ratio quadruples. This is because when \\(r\\) halves, the relative price \\(w/r\\) doubles, and with \\(\\sigma = 2\\) the input ratio responds by a factor of \\(2^2 = 4\\).\nThe firm dramatically shifts toward robots: robot use rises from 1,510 to 1,997, while worker use falls from 429 to 142. The cheaper robots replace a large share of labor.\n\n\n\nA robot tax raising \\(r\\) back to 20 would restore the input mix from part (b). Comparing the two scenarios:\n\n\n\n\n\\(r = 10\\) (no tax)\n\\(r = 20\\) (robot tax)\nChange\n\n\n\n\nWorkers (\\(L\\))\n142\n429\n+287\n\n\nRobots (\\(R\\))\n1,997\n1,510\n$-$487\n\n\nTotal cost\n$23,520\n$40,925\n+$17,405\n\n\n\nThe robot tax would save approximately 287 worker-hours per 1,000 units of output.\nThe trade-off: Production costs rise by about $17,400 per 1,000 units (a 74% increase), which would be passed on to consumers through higher prices. The cost per worker-hour saved is approximately \\(\\$17{,}400/287 \\approx \\$61\\). Whether this is worthwhile depends on how society values the protected jobs relative to the efficiency loss and higher consumer prices."
+    "text": "A manufacturing firm produces output using robots (R) and workers (L) with the CES production function: \\[Q = [0.6R^{0.5} + 0.4L^{0.5}]^{2}\\]\nThe rental rate for robots is \\(r = 20\\) per hour and the wage is \\(w = 25\\) per hour.\n\nWhat is the elasticity of substitution between robots and workers? What does this tell you about how easily the firm can replace workers with robots?\nSolve for the cost-minimizing quantity of robots and workers to produce Q = 1000 units. Also, calculate the total cost of production at this input mix.\nNow suppose technological progress reduces the robot rental rate to \\(r = 10\\). How does the firm’s use of robots and workers change? Calculate the new cost of production for 1000 units.\nThe government is considering a “robot tax” that would increase \\(r\\) back to 20 to protect jobs. Using your answer from (c), estimate how many jobs this would save per 1000 units of output. What’s the trade-off?"
   },
   {
-    "objectID": "problem-sets/ps2-solutions.html#problem-2-profit-maximization-and-taxation",
-    "href": "problem-sets/ps2-solutions.html#problem-2-profit-maximization-and-taxation",
-    "title": "Problem Set 2: Solutions",
+    "objectID": "problem-sets/ps2.html#problem-2-profit-maximization-and-taxation",
+    "href": "problem-sets/ps2.html#problem-2-profit-maximization-and-taxation",
+    "title": "Problem Set 2",
     "section": "Problem 2: Profit Maximization and Taxation",
-    "text": "Problem 2: Profit Maximization and Taxation\nA competitive firm maximizes profit \\(\\pi = P \\cdot q - C(q)\\), yielding the first-order condition \\(P = MC(q)\\).\nLump-sum tax on profits. With a lump-sum tax \\(T\\), profit becomes \\(\\pi = Pq - C(q) - T\\). The FOC is still \\(P = MC(q)\\)—the lump-sum tax does not depend on the level of output, so it does not affect the marginal conditions. The profit-maximizing quantity is unchanged. (The firm earns less profit, but it cannot reduce its tax by producing more or less.)\nProportional tax on profits. With tax rate \\(t\\), after-tax profit is \\(\\pi = (1-t)[Pq - C(q)]\\). The FOC is \\((1-t)[P - MC(q)] = 0\\). Since \\((1-t) &gt; 0\\), this gives \\(P = MC(q)\\), the same condition as before. The profit-maximizing quantity is unchanged. (Intuitively, if \\(q^*\\) maximizes pre-tax profit, it also maximizes \\((1-t)\\) times pre-tax profit.)\nTax on each unit of output. With a per-unit tax \\(\\tau\\), profit becomes \\(\\pi = Pq - C(q) - \\tau q = (P - \\tau)q - C(q)\\). The FOC is \\(P - \\tau = MC(q)\\), so the firm produces where marginal cost equals the net price \\(P - \\tau\\). Since \\(MC\\) is increasing, the profit-maximizing quantity decreases. The per-unit tax is equivalent to a reduction in the output price—it shifts the effective price down and reduces output.\nTax on labor input. If the firm uses labor \\(L\\) at wage \\(w\\) and the government imposes a tax \\(t_L\\) per unit of labor, the effective wage rises to \\(w + t_L\\). This increases the cost function \\(C(q)\\), which shifts \\(MC(q)\\) upward. Since the firm produces where \\(P = MC(q)\\), a higher \\(MC\\) curve means a lower profit-maximizing quantity. Output decreases. The firm also substitutes away from labor toward other inputs.\n\\[\\boxed{\\text{Lump-sum tax: no effect. \\quad Proportional tax: no effect. \\quad Output tax: } q \\text{ falls. \\quad Labor tax: } q \\text{ falls.}}\\]"
+    "text": "Problem 2: Profit Maximization and Taxation\nKeeping in mind firms’ profit-maximizing behavior, would a lump-sum tax on profits affect the profit-maximizing quantity of output? What about a proportional tax on profits? What about a tax on each unit of output? How about a tax on labor input?"
   },
   {
-    "objectID": "problem-sets/ps2-solutions.html#problem-3-trade-policy-and-the-portable-radio-market",
-    "href": "problem-sets/ps2-solutions.html#problem-3-trade-policy-and-the-portable-radio-market",
-    "title": "Problem Set 2: Solutions",
-    "section": "Problem 3: Trade Policy and the Portable Radio Market",
-    "text": "Problem 3: Trade Policy and the Portable Radio Market\n\nPart (a): Domestic equilibrium\nSetting domestic demand equal to domestic supply:\n\\[D(P) = S(P) \\quad \\Longrightarrow \\quad 5{,}000 - 100P = 150P \\quad \\Longrightarrow \\quad 250P = 5{,}000\\]\n\\[\\boxed{P^* = \\$20, \\qquad Q^* = 3{,}000 \\text{ thousand radios}}\\]\n\n\nPart (b): Free trade at world price \\(P_W = \\$10\\)\nAt \\(P = 10\\):\n\nDomestic demand: \\(Q_D = 5{,}000 - 100(10) = 4{,}000\\) thousand\nDomestic supply: \\(Q_S = 150(10) = 1{,}500\\) thousand\n\n\\[\\boxed{\\text{Imports} = Q_D - Q_S = 4{,}000 - 1{,}500 = 2{,}500 \\text{ thousand radios}}\\]\nThe price falls from $20 to $10, domestic consumption rises, domestic production falls, and the gap is filled by imports.\n\n\nPart (c): $5 tariff\nWith the tariff, the domestic price rises to \\(P = 10 + 5 = \\$15\\):\n\nDomestic demand: \\(Q_D = 5{,}000 - 100(15) = 3{,}500\\) thousand\nDomestic supply: \\(Q_S = 150(15) = 2{,}250\\) thousand\nImports: \\(3{,}500 - 2{,}250 = 1{,}250\\) thousand\n\nTariff revenue:\n\\[R = \\$5 \\times 1{,}250 = \\$6{,}250 \\text{ thousand}\\]\nChange in consumer surplus (trapezoid between \\(P = 10\\) and \\(P = 15\\) under demand curve):\n\\[\\Delta CS = -\\frac{1}{2}(Q_D^{old} + Q_D^{new})(P^{new} - P^{old}) = -\\frac{1}{2}(4{,}000 + 3{,}500)(5) = -\\$18{,}750 \\text{ thousand}\\]\nConsumer surplus transferred to domestic producers (increase in producer surplus—trapezoid between \\(P = 10\\) and \\(P = 15\\) under supply curve):\n\\[\\Delta PS = \\frac{1}{2}(Q_S^{old} + Q_S^{new})(P^{new} - P^{old}) = \\frac{1}{2}(1{,}500 + 2{,}250)(5) = \\$9{,}375 \\text{ thousand}\\]\nDeadweight loss (the CS lost that is neither captured by producers nor by the government):\n\\[DWL = |\\Delta CS| - \\Delta PS - R = 18{,}750 - 9{,}375 - 6{,}250 = \\$3{,}125 \\text{ thousand}\\]\nThis DWL consists of two triangles:\n\nProduction inefficiency: \\(\\frac{1}{2}(5)(2{,}250 - 1{,}500) = 1{,}875\\) (resources wasted producing domestically what could be imported more cheaply)\nConsumption loss: \\(\\frac{1}{2}(5)(4{,}000 - 3{,}500) = 1{,}250\\) (lost surplus from consumers priced out of the market)\n\n\n\nPart (d): Voluntary Export Restraint (VER) of 1,250 thousand\nWith the VER limiting imports to 1,250 thousand, the domestic price must adjust so that \\(Q_D - Q_S = 1{,}250\\):\n\\[5{,}000 - 100P - 150P = 1{,}250 \\quad \\Longrightarrow \\quad P = \\$15\\]\nThe equilibrium price, domestic demand, domestic supply, and import quantity are identical to the tariff case.\nKey difference: With a tariff, the government collects $6,250 thousand in tariff revenue. With the VER, there is no tariff—foreign exporters sell at the higher domestic price of $15 instead of the world price of $10, so they capture the $6,250 thousand as quota rents.\nFrom the domestic country’s perspective, the VER is strictly worse than the tariff:\n\n\n\n\nTariff\nVER\n\n\n\n\nCS loss\n$-$18,750\n$-$18,750\n\n\nPS gain\n+9,375\n+9,375\n\n\nGov. revenue\n+6,250\n0\n\n\nQuota rents to foreigners\n0\n$-$6,250\n\n\nNet domestic welfare change\n\\(-\\)3,125\n\\(-\\)9,375\n\n\n\nThe VER transfers an additional $6,250 thousand to foreign producers, making the domestic welfare loss three times larger than the tariff."
+    "objectID": "problem-sets/ps2.html#problem-3-trade-policy-and-the-portable-radio-market-ex-12.8",
+    "href": "problem-sets/ps2.html#problem-3-trade-policy-and-the-portable-radio-market-ex-12.8",
+    "title": "Problem Set 2",
+    "section": "Problem 3: Trade Policy and the Portable Radio Market (Ex 12.8)",
+    "text": "Problem 3: Trade Policy and the Portable Radio Market (Ex 12.8)\nThe domestic demand for portable radios is given by\n\\[Q = D(P) = 5{,}000 - 100P,\\]\nwhere price (\\(P\\)) is measured in dollars and quantity (\\(Q\\)) is the number of radios per year. The domestic supply curve for radios is given by\n\\[Q = S(P) = 150P.\\]\n\nWhat is the domestic equilibrium in the portable radio market?\nSuppose portable radios can be imported at a world price of $10 per radio. If trade were unencumbered, what would the new market equilibrium be? How many portable radios would be imported?\nIf domestic portable radio producers succeeded in having a $5 tariff implemented, how would this change the market equilibrium? How much would be collected in tariff revenues? How much consumer surplus would be transferred to domestic producers? What would the deadweight loss from the tariff be?\nHow would your results from part (c) be changed if the government reached an agreement with foreign suppliers to “voluntarily” limit the portable radios they export to 1,250 per year? Explain how this differs from the case of a tariff."
   },
   {
-    "objectID": "problem-sets/ps2-solutions.html#problem-4-general-equilibrium-exchange",
-    "href": "problem-sets/ps2-solutions.html#problem-4-general-equilibrium-exchange",
-    "title": "Problem Set 2: Solutions",
+    "objectID": "problem-sets/ps2.html#problem-4-general-equilibrium-exchange",
+    "href": "problem-sets/ps2.html#problem-4-general-equilibrium-exchange",
+    "title": "Problem Set 2",
     "section": "Problem 4: General Equilibrium Exchange",
-    "text": "Problem 4: General Equilibrium Exchange\n\nPart (a): MRS at initial endowment\nFor \\(U = X \\cdot Y\\) (Cobb-Douglas with equal exponents):\n\\[MRS = \\frac{MU_X}{MU_Y} = \\frac{Y}{X}\\]\nAt the initial endowment \\((X_A, Y_A) = (70, 30)\\) and \\((X_B, Y_B) = (30, 70)\\):\n\\[MRS_A = \\frac{30}{70} = \\frac{3}{7} \\approx 0.43, \\qquad MRS_B = \\frac{70}{30} = \\frac{7}{3} \\approx 2.33\\]\nSince \\(MRS_A \\neq MRS_B\\), the initial allocation is not Pareto efficient. There are gains from trade: Ben values X much more highly than Ana does (he is willing to give up 7/3 units of Y for one unit of X, while Ana would only give up 3/7). Ana should trade X to Ben in exchange for Y.\n\n\nPart (b): Competitive equilibrium at \\(P_X/P_Y = 1\\)\nLet \\(P_Y = 1\\) (numeraire), so \\(P_X = 1\\).\nAna’s problem: Budget \\(= P_X \\cdot 70 + P_Y \\cdot 30 = 100\\). With \\(U = XY\\), the demand functions are:\n\\[X_A = \\frac{I_A}{2P_X} = \\frac{100}{2} = 50, \\qquad Y_A = \\frac{I_A}{2P_Y} = \\frac{100}{2} = 50\\]\nBen’s problem: Budget \\(= P_X \\cdot 30 + P_Y \\cdot 70 = 100\\). By the same logic:\n\\[X_B = \\frac{100}{2} = 50, \\qquad Y_B = \\frac{100}{2} = 50\\]\nMarket clearing: Total demand for \\(X\\): \\(50 + 50 = 100\\) = total endowment. ✓\n\\[\\boxed{(X_A, Y_A) = (50, 50), \\qquad (X_B, Y_B) = (50, 50)}\\]\nAna trades 20 units of X to Ben in exchange for 20 units of Y.\n\n\nPart (c): Verifying Pareto efficiency\nAt the equilibrium allocation:\n\\[MRS_A = \\frac{Y_A}{X_A} = \\frac{50}{50} = 1, \\qquad MRS_B = \\frac{Y_B}{X_B} = \\frac{50}{50} = 1\\]\n\\[\\boxed{MRS_A = MRS_B = 1 = \\frac{P_X}{P_Y}}\\]\nThe competitive equilibrium is Pareto efficient: both consumers’ marginal rates of substitution are equal (to each other and to the price ratio), so there is no way to make one person better off without making the other worse off.\n\n\nPart (d): Contract curve and the First Welfare Theorem\nThe contract curve is the set of all Pareto efficient allocations, where \\(MRS_A = MRS_B\\):\n\\[\\frac{Y_A}{X_A} = \\frac{Y_B}{X_B} = \\frac{100 - Y_A}{100 - X_A}\\]\nCross-multiplying: \\(Y_A(100 - X_A) = X_A(100 - Y_A)\\), which simplifies to:\n\\[\\boxed{Y_A = X_A}\\]\nThe contract curve is the diagonal of the Edgeworth box (equivalently, \\(Y_B = X_B\\)). Every Pareto efficient allocation gives each person equal amounts of both goods.\nThe First Welfare Theorem states that every competitive equilibrium allocation is Pareto efficient. We verified this in part (c): the equilibrium allocation \\((50, 50)\\) for both consumers lies on the contract curve (\\(Y_A = X_A = 50\\)). The competitive market, guided only by prices, achieves an efficient outcome without any central planner."
+    "text": "Problem 4: General Equilibrium Exchange\nConsider a simple exchange economy with two people (Ana and Ben) and two goods (X and Y). Total endowments: 100 units of X and 100 units of Y.\n\nAna: Utility \\(U_A = X_A \\cdot Y_A\\), endowment \\((X_A^0, Y_A^0) = (70, 30)\\)\nBen: Utility \\(U_B = X_B \\cdot Y_B\\), endowment \\((X_B^0, Y_B^0) = (30, 70)\\)\n\n\nCalculate Ana’s and Ben’s marginal rate of substitution (MRS) at the initial endowment. Is this allocation Pareto efficient?\nIf they can trade at price ratio \\(P_X/P_Y = 1\\), what will Ana demand? What will Ben demand? (Use their budget constraints based on the value of their endowments.)\nVerify that the competitive equilibrium allocation is Pareto efficient by checking that \\(MRS_A = MRS_B\\).\nDescribe the contract curve for this economy. What does the First Welfare Theorem tell us about competitive equilibrium?"
   },
   {
-    "objectID": "problem-sets/ps2-solutions.html#problem-5-optimal-redistribution-with-distortionary-taxation",
-    "href": "problem-sets/ps2-solutions.html#problem-5-optimal-redistribution-with-distortionary-taxation",
-    "title": "Problem Set 2: Solutions",
+    "objectID": "problem-sets/ps2.html#problem-5-optimal-redistribution-with-distortionary-taxation",
+    "href": "problem-sets/ps2.html#problem-5-optimal-redistribution-with-distortionary-taxation",
+    "title": "Problem Set 2",
     "section": "Problem 5: Optimal Redistribution with Distortionary Taxation",
-    "text": "Problem 5: Optimal Redistribution with Distortionary Taxation\n\nPart (a): Deriving the optimal tax rate\nSubstituting the consumption expressions into the welfare function:\n\\[c_P = y_P + \\tau y_R - \\frac{1}{2}k\\tau^2 y_R, \\qquad c_R = (1-\\tau)y_R\\]\n\\[W(\\tau) = \\alpha\\left[y_P + \\tau y_R - \\frac{1}{2}k\\tau^2 y_R\\right] + (1-\\alpha)(1-\\tau)y_R\\]\nExpanding:\n\\[W(\\tau) = \\alpha y_P + \\alpha\\tau y_R - \\frac{1}{2}\\alpha k\\tau^2 y_R + (1-\\alpha)y_R - (1-\\alpha)\\tau y_R\\]\nTaking the first-order condition:\n\\[\\frac{dW}{d\\tau} = \\alpha y_R - \\alpha k\\tau y_R - (1-\\alpha)y_R = 0\\]\nDividing through by \\(y_R\\):\n\\[\\alpha - \\alpha k\\tau - (1 - \\alpha) = 0\\]\n\\[2\\alpha - 1 = \\alpha k\\tau\\]\n\\[\\boxed{\\tau^* = \\frac{2\\alpha - 1}{\\alpha k}}\\]\nThe second-order condition confirms this is a maximum: \\(\\frac{d^2W}{d\\tau^2} = -\\alpha k y_R &lt; 0\\). Note that \\(\\tau^* &gt; 0\\) requires \\(\\alpha &gt; 1/2\\): positive redistribution is only optimal when society places more weight on the poor than on the rich.\n\n\nPart (b): Comparative statics\nRewriting \\(\\tau^*\\) in a more convenient form:\n\\[\\tau^* = \\frac{2}{k} - \\frac{1}{\\alpha k}\\]\n(i) Effect of inequality aversion \\(\\alpha\\):\n\\[\\frac{\\partial \\tau^*}{\\partial \\alpha} = \\frac{1}{\\alpha^2 k} &gt; 0\\]\nHigher inequality aversion (larger \\(\\alpha\\)) increases the optimal tax rate. Intuition: When society cares more about the well-being of the poor relative to the rich, it is willing to tolerate more deadweight loss in order to transfer additional resources to the poor. A more egalitarian social welfare function justifies a larger tax-and-transfer program.\n(ii) Effect of the distortion parameter \\(k\\):\n\\[\\frac{\\partial \\tau^*}{\\partial k} = -\\frac{2\\alpha - 1}{\\alpha k^2} &lt; 0 \\quad \\text{(for } \\alpha &gt; 1/2\\text{)}\\]\nA higher distortion cost (larger \\(k\\)) decreases the optimal tax rate. Intuition: When taxation is more distortionary—meaning more revenue is lost to deadweight loss per dollar collected—the government should tax less aggressively. The “leaky bucket” of redistribution becomes leakier: each dollar taken from the rich delivers less than a dollar to the poor, so the marginal cost of redistribution rises and the optimal level falls."
+    "text": "Problem 5: Optimal Redistribution with Distortionary Taxation\nA simple economy has two individuals:\n\nA poor individual with income \\(y_P\\)\nA rich individual with income \\(y_R &gt; y_P\\)\n\nThe government chooses a tax rate \\(\\tau \\in [0,1]\\) applied only to the rich. All tax revenue is redistributed to the poor.\nTaxation is distortionary: a fraction of revenue is lost due to inefficiency. Deadweight loss is given by:\n\\[\\text{DWL} = \\frac{1}{2} k \\tau^2 y_R,\\]\nwhere \\(k &gt; 0\\) measures how costly taxation is.\nThe net transfer to the poor is:\n\\[T(\\tau) = \\tau y_R - \\frac{1}{2}k \\tau^2 y_R.\\]\nThe poor’s consumption is \\(c_P = y_P + T(\\tau)\\), and the rich’s consumption is \\(c_R = y_R - \\tau y_R\\).\nSocial welfare is:\n\\[W(\\tau) = \\alpha c_P + (1-\\alpha) c_R,\\]\nwhere \\(\\alpha \\in (0,1)\\) represents society’s inequality aversion.\n\nSubstitute the consumption expressions into the welfare function and simplify. Maximize welfare with respect to \\(\\tau\\). Show that the optimal tax rate is:\n\n\\[\\tau^* = \\frac{2\\alpha - 1}{k\\alpha}.\\]\n\nExplain how the optimal tax rate \\(\\tau^*\\) changes with:\n\n\nInequality aversion \\(\\alpha\\)\nThe distortion parameter \\(k\\)\n\nWhat is the economic intuition behind each effect?"
   },
   {
-    "objectID": "problem-sets/ps1-solutions.html",
-    "href": "problem-sets/ps1-solutions.html",
-    "title": "Problem Set 1: Solutions",
+    "objectID": "problem-sets/ps1.html",
+    "href": "problem-sets/ps1.html",
+    "title": "Problem Set 1",
     "section": "",
-    "text": "Michele’s utility function: \\(U_1(c_1, c_2) = c_1^{1-a}c_2^a\\), with budget constraint \\(c_1 + c_2 = I\\).\n\n\n\nWhen \\(a = 0\\): \\(U_1 = c_1\\). Michele is completely selfish and cares only about her own consumption.\nWhen \\(a = 1\\): \\(U_1 = c_2\\). Michele is completely selfless and cares only about Sofia’s consumption.\nWhen \\(a = 0.5\\): \\(U_1 = c_1^{0.5}c_2^{0.5}\\). Michele is a perfect altruist and weights her own and Sofia’s consumption equally.\n\nThe exponent \\(a\\) represents the share of Michele’s “concern” (or budget) allocated to Sofia. Higher \\(a\\) means more altruistic.\n\n\n\nThis is a standard Cobb-Douglas maximization problem with \\(p_1 = p_2 = 1\\). Using the Cobb-Douglas demand functions: \\[c_1^* = \\frac{(1-a) \\cdot I}{(1-a+a) \\cdot 1} = (1-a)I\\] \\[c_2^* = \\frac{a \\cdot I}{(1-a+a) \\cdot 1} = aI\\]\n\\[\\boxed{c_1^* = (1-a)I, \\qquad c_2^* = aI}\\]\nAs \\(a\\) increases, Michele donates more to Sofia (\\(c_2^*\\) rises) and keeps less for herself (\\(c_1^*\\) falls). The share spent on Sofia is exactly \\(a\\).\n\n\n\nWith income tax (no deduction):\nAfter-tax income is \\((1-t)I\\). The problem is unchanged except income falls to \\((1-t)I\\): \\[c_1^* = (1-a)(1-t)I, \\qquad c_2^* = a(1-t)I\\]\nBoth consumption levels fall proportionally. The share devoted to charity is still \\(a\\).\nWith income tax and charitable deduction:\nIf charitable donations are tax-deductible, Michele pays tax only on non-donated income. Her taxable income is \\(I - c_2\\) (charitable donations are deducted), so her tax bill is \\(t(I - c_2)\\). The budget constraint is: \\[c_1 + c_2 = I - t(I - c_2)\\] \\[c_1 + c_2 = (1-t)I + tc_2\\] \\[c_1 + (1-t)c_2 = (1-t)I\\]\nSo the effective prices are \\(p_1 = 1\\) for own consumption and \\(p_2 = (1-t)\\) for donations (out of after-tax income \\((1-t)I\\)). Equivalently, dividing through by \\((1-t)\\):\n\\[ \\frac{c_1}{1-t} + c_2 = I\\]\nApplying Cobb-Douglas demands with \\(p_1 = 1/(1-t)\\) and \\(p_2 = 1\\): \\[ c_1^* = \\frac{(1-a)I}{1/(1-t)} = (1-a)(1-t)I\\] \\[ c_2^* = \\frac{aI}{1} = aI\\]\n\\[\\boxed{c_1^* = (1-a)(1-t)I, \\qquad c_2^* = aI}\\]\nKey result: With the charitable deduction, donations return to the no-tax level (\\(aI\\)), while own-consumption still falls due to taxes. The deduction fully offsets the tax’s effect on giving.\nComparing tax only vs. tax with deduction:\n\nWithout deduction: \\(c_2 = a(1-t)I\\)\nWith deduction: \\(c_2 = aI\\)\n\nThe increase in donations due to the deduction is \\(aI - a(1-t)I = atI\\). This is larger for more altruistic people (higher \\(a\\)), so the charitable deduction has a bigger incentive effect on more altruistic individuals."
+    "text": "Michele, who has a relatively high income \\(I\\), has altruistic feelings toward Sofia, who lives in such poverty that she essentially has no income. Suppose Michele’s preferences are represented by the utility function\n\\[U_1(c_1, c_2) = c_1^{1-a}c_2^a,\\]\nwhere \\(c_1\\) and \\(c_2\\) are Michele and Sofia’s consumption levels, appearing as goods in a standard Cobb-Douglas utility function. Assume that Michele can spend her income either on her own or Sofia’s consumption (through charitable donations) and that $1 buys a unit of consumption for either (thus, the “prices” of consumption are \\(p_1 = p_2 = 1\\)).\n\nArgue that the exponent \\(a\\) can be taken as a measure of the degree of Michele’s altruism by providing an interpretation of extremes values \\(a = 0\\) and \\(a = 1\\). What value would make her a perfect altruist (regarding others the same as oneself)?\nSolve for Michele’s optimal choices and demonstrate how they change with \\(a\\).\nSolve for Michele’s optimal choices under an income tax at rate \\(t\\). How do her choices change if there is a charitable deduction (so income spent on charitable deductions is not taxed)? Does the charitable deduction have a bigger incentive effect on more or less altruistic people?"
   },
   {
-    "objectID": "problem-sets/ps1-solutions.html#problem-1-altruism-textbook-ex-4.14",
-    "href": "problem-sets/ps1-solutions.html#problem-1-altruism-textbook-ex-4.14",
-    "title": "Problem Set 1: Solutions",
+    "objectID": "problem-sets/ps1.html#problem-1-altruism-textbook-ex-4.14",
+    "href": "problem-sets/ps1.html#problem-1-altruism-textbook-ex-4.14",
+    "title": "Problem Set 1",
     "section": "",
-    "text": "Michele’s utility function: \\(U_1(c_1, c_2) = c_1^{1-a}c_2^a\\), with budget constraint \\(c_1 + c_2 = I\\).\n\n\n\nWhen \\(a = 0\\): \\(U_1 = c_1\\). Michele is completely selfish and cares only about her own consumption.\nWhen \\(a = 1\\): \\(U_1 = c_2\\). Michele is completely selfless and cares only about Sofia’s consumption.\nWhen \\(a = 0.5\\): \\(U_1 = c_1^{0.5}c_2^{0.5}\\). Michele is a perfect altruist and weights her own and Sofia’s consumption equally.\n\nThe exponent \\(a\\) represents the share of Michele’s “concern” (or budget) allocated to Sofia. Higher \\(a\\) means more altruistic.\n\n\n\nThis is a standard Cobb-Douglas maximization problem with \\(p_1 = p_2 = 1\\). Using the Cobb-Douglas demand functions: \\[c_1^* = \\frac{(1-a) \\cdot I}{(1-a+a) \\cdot 1} = (1-a)I\\] \\[c_2^* = \\frac{a \\cdot I}{(1-a+a) \\cdot 1} = aI\\]\n\\[\\boxed{c_1^* = (1-a)I, \\qquad c_2^* = aI}\\]\nAs \\(a\\) increases, Michele donates more to Sofia (\\(c_2^*\\) rises) and keeps less for herself (\\(c_1^*\\) falls). The share spent on Sofia is exactly \\(a\\).\n\n\n\nWith income tax (no deduction):\nAfter-tax income is \\((1-t)I\\). The problem is unchanged except income falls to \\((1-t)I\\): \\[c_1^* = (1-a)(1-t)I, \\qquad c_2^* = a(1-t)I\\]\nBoth consumption levels fall proportionally. The share devoted to charity is still \\(a\\).\nWith income tax and charitable deduction:\nIf charitable donations are tax-deductible, Michele pays tax only on non-donated income. Her taxable income is \\(I - c_2\\) (charitable donations are deducted), so her tax bill is \\(t(I - c_2)\\). The budget constraint is: \\[c_1 + c_2 = I - t(I - c_2)\\] \\[c_1 + c_2 = (1-t)I + tc_2\\] \\[c_1 + (1-t)c_2 = (1-t)I\\]\nSo the effective prices are \\(p_1 = 1\\) for own consumption and \\(p_2 = (1-t)\\) for donations (out of after-tax income \\((1-t)I\\)). Equivalently, dividing through by \\((1-t)\\):\n\\[ \\frac{c_1}{1-t} + c_2 = I\\]\nApplying Cobb-Douglas demands with \\(p_1 = 1/(1-t)\\) and \\(p_2 = 1\\): \\[ c_1^* = \\frac{(1-a)I}{1/(1-t)} = (1-a)(1-t)I\\] \\[ c_2^* = \\frac{aI}{1} = aI\\]\n\\[\\boxed{c_1^* = (1-a)(1-t)I, \\qquad c_2^* = aI}\\]\nKey result: With the charitable deduction, donations return to the no-tax level (\\(aI\\)), while own-consumption still falls due to taxes. The deduction fully offsets the tax’s effect on giving.\nComparing tax only vs. tax with deduction:\n\nWithout deduction: \\(c_2 = a(1-t)I\\)\nWith deduction: \\(c_2 = aI\\)\n\nThe increase in donations due to the deduction is \\(aI - a(1-t)I = atI\\). This is larger for more altruistic people (higher \\(a\\)), so the charitable deduction has a bigger incentive effect on more altruistic individuals."
+    "text": "Michele, who has a relatively high income \\(I\\), has altruistic feelings toward Sofia, who lives in such poverty that she essentially has no income. Suppose Michele’s preferences are represented by the utility function\n\\[U_1(c_1, c_2) = c_1^{1-a}c_2^a,\\]\nwhere \\(c_1\\) and \\(c_2\\) are Michele and Sofia’s consumption levels, appearing as goods in a standard Cobb-Douglas utility function. Assume that Michele can spend her income either on her own or Sofia’s consumption (through charitable donations) and that $1 buys a unit of consumption for either (thus, the “prices” of consumption are \\(p_1 = p_2 = 1\\)).\n\nArgue that the exponent \\(a\\) can be taken as a measure of the degree of Michele’s altruism by providing an interpretation of extremes values \\(a = 0\\) and \\(a = 1\\). What value would make her a perfect altruist (regarding others the same as oneself)?\nSolve for Michele’s optimal choices and demonstrate how they change with \\(a\\).\nSolve for Michele’s optimal choices under an income tax at rate \\(t\\). How do her choices change if there is a charitable deduction (so income spent on charitable deductions is not taxed)? Does the charitable deduction have a bigger incentive effect on more or less altruistic people?"
   },
   {
-    "objectID": "problem-sets/ps1-solutions.html#problem-2-elasticities-and-logs-textbook-ex-5.8",
-    "href": "problem-sets/ps1-solutions.html#problem-2-elasticities-and-logs-textbook-ex-5.8",
-    "title": "Problem Set 1: Solutions",
+    "objectID": "problem-sets/ps1.html#problem-2-elasticities-and-logs-textbook-ex-5.8",
+    "href": "problem-sets/ps1.html#problem-2-elasticities-and-logs-textbook-ex-5.8",
+    "title": "Problem Set 1",
     "section": "Problem 2: Elasticities and Logs (Textbook Ex 5.8)",
-    "text": "Problem 2: Elasticities and Logs (Textbook Ex 5.8)\n\nPart (a): Show that \\(e_{x,p_x} = \\frac{d \\ln x}{d \\ln p_x}\\)\nFirst note that price elasticity of demand is defined as: \\[e_{x,p_x} = \\frac{d x}{d p_x} \\cdot \\frac{p_x}{x}\\]\nNow note that for \\(u = \\ln x\\), we have \\(\\dfrac{d u}{d x} = \\dfrac{1}{x}\\), rearranging this gives \\(du = \\dfrac{1}{x} dx\\). Noting that \\(du = d \\ln x\\) we have: \\[d \\ln x = \\frac{1}{x} dx\\]\nSimilarly, we can write \\[d \\ln p_x = \\frac{1}{p_x} dp_x\\]\nTherefore, we have: \\[\\frac{d \\ln x}{d \\ln p_x} = \\frac{ \\frac{1}{x} dx}{\\frac{1}{p_x} dp_x} = \\frac{dx}{dp_x} \\cdot \\frac{p_x}{x} = e_{x,p_x}\\]\n\n\nPart (b): Constant elasticity demand\nGiven \\(x = a(p_x)^m\\), take the natural log of both sides: \\[\\ln x = \\ln a + m \\ln p_x\\]\nDifferentiate with respect to \\(\\ln p_x\\): \\[e_{x,p_x} = \\frac{d \\ln x}{d \\ln p_x} = m\\]\nThis functional form is called the “constant elasticity” demand function as the elasticity equals \\(m\\) regardless of the price level."
+    "text": "Problem 2: Elasticities and Logs (Textbook Ex 5.8)\nBecause natural logarithms measure proportional changes, they correspond well to elasticity concepts. Here you are asked to show a few of these connections.\n\nShow that \\(e_{x,p_x} = \\dfrac{\\partial \\ln x}{\\partial \\ln p_x}\\)\nFor the constant elasticity demand function \\(x = a(p_x)^m\\) where \\(m &lt; 0\\), show that \\(e_{x,p_x} = m\\)."
   },
   {
-    "objectID": "problem-sets/ps1-solutions.html#problem-3-sugar-sweetened-beverage-tax",
-    "href": "problem-sets/ps1-solutions.html#problem-3-sugar-sweetened-beverage-tax",
-    "title": "Problem Set 1: Solutions",
+    "objectID": "problem-sets/ps1.html#problem-3-sugar-sweetened-beverage-tax",
+    "href": "problem-sets/ps1.html#problem-3-sugar-sweetened-beverage-tax",
+    "title": "Problem Set 1",
     "section": "Problem 3: Sugar-Sweetened Beverage Tax",
-    "text": "Problem 3: Sugar-Sweetened Beverage Tax\nGiven: \\(U(s, x) = s^{0.3}x^{0.7}\\), \\(I = 300\\), \\(p_s = 0.05\\), \\(p_x = 1\\), tax \\(t = 0.015\\), so \\(p_s' = 0.065\\).\nSince \\(\\alpha + \\beta = 0.3 + 0.7 = 1\\), the Cobb-Douglas demands simplify to standard expenditure shares.\n\nPart (a): Initial optimal bundle\nUsing Cobb-Douglas Marshallian demands: \\[s^* = \\frac{0.3 \\cdot I}{p_s} = \\frac{0.3 \\times 300}{0.05} = \\frac{90}{0.05} = 1800 \\text{ oz}\\]\n\\[x^* = \\frac{0.7 \\cdot I}{p_x} = \\frac{0.7 \\times 300}{1} = 210\\]\nUtility: \\[U_0 = (1800)^{0.3}(210)^{0.7} \\approx 400\\]\n\n\nPart (b): Bundle after tax\nWith \\(p_s' = 0.065\\): \\[s^{**} = \\frac{0.3 \\times 300}{0.065} = \\frac{90}{0.065} \\approx 1384.6 \\text{ oz}\\]\n\\[x^{**} = \\frac{0.7 \\times 300}{1} = 210\\]\nNote that \\(x^{**}\\) is unchanged because Cobb-Douglas utility implies each good receives a fixed expenditure share, and \\(p_x\\) did not change.\n\\[\\boxed{s^{**} \\approx 1384.6, \\quad x^{**} = 210}\\]\nNew utility: \\(U_1 = (1384.6)^{0.3}(210)^{0.7} \\approx 370\\)\n\n\nPart (c): Consumer Surplus\nThe Marshallian demand for sugary drinks is \\(s = \\frac{0.3 \\cdot I}{p_s} = \\frac{90}{p_s}\\).\nThe change in consumer surplus is: \\[\\Delta CS = -\\int_{0.05}^{0.065} s(p_s) \\, dp_s = -\\int_{0.05}^{0.065} \\frac{90}{p_s} \\, dp_s\\]\n\\[= -90 \\left[\\ln p_s\\right]_{0.05}^{0.065} = -90(\\ln 0.065 - \\ln 0.05) = -90 \\ln\\left(\\frac{0.065}{0.05}\\right)\\]\n\\[= -90 \\ln(1.3) = -90 \\times 0.2624 = -23.6\\]\n\\[\\boxed{\\Delta CS \\approx -\\$23.62}\\]\nTrapezoid approximation (for students who cannot integrate): The area under the demand curve between the two prices can be approximated as: \\[\\Delta CS \\approx -\\frac{1}{2}(s^* + s^{**}) \\times (p_s' - p_s) = -\\frac{1}{2}(1800 + 1384.6)(0.015) \\approx -\\$23.88\\]\n\n\nPart (d): Compensating Variation\nThe CV is the additional income needed at new prices to achieve the original utility \\(U_0\\). We need the expenditure function.\nFor Cobb-Douglas \\(U = s^{\\alpha}x^{\\beta}\\) with \\(\\alpha + \\beta = 1\\), the expenditure function is: \\[E(p_s, p_x, \\bar{U}) = \\bar{U} \\cdot \\left(\\frac{p_s}{\\alpha}\\right)^{\\alpha}\\left(\\frac{p_x}{\\beta}\\right)^{\\beta} = \\bar{U} \\cdot K \\cdot p_s^{\\alpha}p_x^{\\beta}\\]\nwhere \\(K = \\alpha^{-\\alpha}\\beta^{-\\beta} = (0.3)^{-0.3}(0.7)^{-0.7} = 1.842\\).\nExpenditure at original prices and \\(U_0\\): \\[E(0.05, 1, 400) = 400 \\cdot 1.842 \\cdot (0.05)^{0.3}(1)^{0.7} \\approx 300\\]\nExpenditure at new prices and \\(U_0\\): \\[E(0.065, 1, 400) = 400 \\cdot 1.842 \\cdot (0.065)^{0.3}(1)^{0.7} \\approx 324 \\]\n\\[\\boxed{CV = E(p_s', p_x, U_0) - E(p_s, p_x, U_0) = 324 - 300 = \\$24}\\]\nThe consumer would need $24 in additional income to be as well off as before the tax.\nThe CS approximation is very close to the CV. They are similar because the income effect of this price change is small (sugary drinks are a small share of the budget).\n\n\nPart (f): Tax Revenue and Deadweight Loss\n(i) Tax revenue: \\[R = t \\cdot s^{**} = 0.015 \\times 1384.6 \\approx \\$20.77\\]\n(ii) Deadweight loss: \\[DWL = CV - R = 24 - 20.77 = \\$3.23\\]\nInterpretation: Of the $24 welfare loss to the consumer, $20.77 is transferred to the government as tax revenue and $3.23 is pure efficiency loss (deadweight loss).\nExternality justification: The negative externality is \\(e = \\$0.01\\) per ounce. The reduction in externality from the tax is: \\[\\Delta \\text{Externality} = e \\times (s^* - s^{**}) = 0.01 \\times (1800 - 1384.6) = 0.01 \\times 415.4 = \\$4.15\\]\nThe tax generates $20.77 in revenue and reduces externalities by $4.15, while creating only $3.23 in deadweight loss. Since the externality reduction ($4.15) exceeds the DWL ($3.23), the tax improves overall welfare somewhat.\n\n\nPart (g): Revenue Recycling\n(i) New budget constraint:\nThe consumer faces the taxed price \\(p_s' = 0.065\\) but receives a lump-sum rebate \\(R\\) equal to the tax revenue collected. The budget constraint is: \\[p_s' \\cdot s + x = I + R\\] \\[0.065s + x = 300 + R\\]\nNote that while \\(R = t \\cdot s\\), the consumer takes \\(R\\) as given when choosing \\(s\\) and \\(x\\) (they do not internalize that their choice of \\(s\\) affects \\(R\\)). If they did internalize it, then the consumer’s problem would remain unchanged from the no-tax case.\n(ii) Optimal consumption:\nApplying the Cobb-Douglas demand functions: \\[s(R) = \\frac{0.3(300 + R)}{0.065} \\] \\[x(R) = 0.7(300 + R)\\]\nIn equilibrium, the rebate equals the tax revenue: \\(R = t \\cdot s(R)\\). Substituting: \\[R = 0.015 \\cdot \\frac{0.3(300 + R)}{0.065}\\]\n\\[0.065R = 1.35 + 0.0045R\\]\n\\[0.0605R = 1.35\\]\n\\[R = \\frac{1.35}{0.0605} \\approx 22.31\\]\nTherefore, equilibrium consumption is: \\[s_R = \\frac{0.3(300 + 22.31)}{0.065} \\approx 1487.6 \\text{ oz}\\] \\[x_R = 0.7(300 + 22.31) \\approx 225.6\\]\n(iii) New utility level:\nThe new utility level is: \\[U_R = (s_R)^{0.3}(x_R)^{0.7} \\approx 397\\]\n(iv) Comparison:\nUnder the tax-and-rebate scheme, the consumer reaches utility \\(U_R \\approx 397\\), between the no-tax level (\\(U_0 \\approx 400\\)) and the tax-only level (\\(U_1 \\approx 370\\)). The policy is largely successful: sugary drink consumption falls meaningfully from 1800 to about 1488 ounces, achieving the public health goal, while the rebate returns most of the welfare cost to the consumer. The consumer loses only about 3 utils compared to 30 under the tax alone. Composite good consumption actually rises from 210 to 226, since the rebate provides additional purchasing power that gets redirected toward untaxed goods. The small residual welfare loss (\\(400 - 397\\)) is the unavoidable deadweight loss from distorting relative prices, but it is far smaller than the welfare cost of the tax without revenue recycling.\n\n\nPart (h): Policy Discussion\n(i) CV vs CS:\nThe CV is generally preferred for welfare analysis because it is based on well-defined utility theory and the expenditure function. CS relies on the Marshallian demand curve, which conflates income and substitution effects. However, in this case they give nearly identical results because the income effect is small (sugary drinks are a small budget share). CS is often used in practice because it is easier to estimate empirically (only requires observable demand data, not utility parameters).\n(ii) Regressivity:\nThe tax is likely regressive because lower-income households spend a larger share of their income on taxed beverages. To test this empirically, one could:\n\nCompare pre- and post-tax spending on SSBs across income quintiles using household expenditure surveys\nEstimate demand elasticities by income group (lower-income consumers may be more price-elastic, partially offsetting regressivity)\nCalculate the tax burden as a share of income across the distribution\n\nRevenue recycling (as in part g) can mitigate regressivity if the lump-sum rebate represents a larger share of income for poorer households.\n(iii) Cross-border shopping:\nWith cross-border shopping, the consumer’s effective price lies somewhere between \\(p_s\\) and \\(p_s'\\): they can avoid the tax by traveling to a neighboring jurisdiction, but incur transport and time costs to do so. Call this effective price \\(\\tilde{p}_s \\in (p_s, p_s')\\). This has two offsetting effects on welfare:\n\nSmaller welfare loss to the consumer: Since \\(\\tilde{p}_s &lt; p_s'\\), the consumer faces a smaller effective price increase, so the reduction in consumer surplus (and CV) is smaller than our calculation suggests.\nMuch lower tax revenue: The consumer purchases fewer taxed ounces within the city, so revenue \\(R = t \\cdot s_{\\text{local}}\\) falls substantially if most purchases shift across the border.\n\nThe net effect on deadweight loss (\\(DWL = CV - R\\)) is ambiguous but likely higher: the CV falls somewhat, but revenue falls by more, since the government collects nothing on cross-border purchases while the consumer still bears the cost of traveling to avoid the tax. In the extreme, if all purchases move across the border, \\(R = 0\\) and the entire welfare loss (including transport costs) is pure deadweight loss.\nThis suggests that the optimal policy would be implemented at a broader geographic level (state or federal) to minimize cross-border leakage.\n(iv) Present bias and behavioral considerations:\nIf consumers exhibit present bias, they overweight the immediate pleasure of sugary drinks relative to future health costs. In this case, their experienced utility from reduced consumption may be higher than their decision utility suggests and they would thank their future selves for consuming less.\nTo modify the welfare analysis, one would need to distinguish between decision utility (the preferences consumers act on, which reflect present bias) and experienced utility (their true long-run well-being). Our CV calculation uses decision utility, which overstates the welfare cost of the tax: some of what appears as lost consumer welfare is actually a gain from correcting overconsumption. Under experienced utility, the DWL would be smaller, and the tax may even be welfare-improving if it helps consumers overcome self-control problems. In this case, a higher tax than the one calculated under standard assumptions may be justified to achieve the socially optimal level of consumption."
+    "text": "Problem 3: Sugar-Sweetened Beverage Tax\nCities like Philadelphia and Berkeley have implemented taxes on sugar-sweetened beverages (SSBs) to reduce consumption and improve public health. Consider a consumer with preferences over sugary drinks (\\(s\\), measured in ounces per month) and a composite good (\\(x\\)) given by:\n\\[U(s, x) = s^{0.3} x^{0.7}\\]\nThe consumer has income \\(I = \\$300\\) per month. Initially, the price of sugary drinks is \\(p_s = \\$0.05\\) per ounce and the price of the composite good is \\(p_x = \\$1\\).\nThe city proposes a tax of \\(t = \\$0.015\\) per ounce on sugary drinks (similar to Philadelphia’s 2017 tax), raising the consumer price to \\(p_s' = \\$0.065\\) per ounce.\nNote: Parts (a), (b), and (d) require the Marshallian demand functions, which you derive from utility maximization. On the other hand, part (c) requires the expenditure function/Hicksian demand, which you derive from expenditure minimization.\n\nCalculate the consumer’s initial optimal consumption bundle \\((s^*, x^*)\\) and utility level \\(U_0\\).\nCalculate the new optimal consumption bundle \\((s^{**}, x^{**})\\) after the tax is implemented.\nConsumer Surplus: Using the demand function for sugary drinks, calculate the approximate loss in consumer surplus from the tax. Compare this to the CV. (If you don’t know how to integrate, you can approximate the area using a trapezoid or rectangle method or use a scientific calculator.)\nCompensating Variation (CV): Calculate how much additional income the consumer would need after the tax to achieve the original utility level \\(U_0\\). This represents the money-metric loss in welfare from the consumer’s perspective.\nTax Revenue and Deadweight Loss: Calculate:\n\nTotal tax revenue collected: \\(R = t \\cdot s^{**}\\)\nDeadweight loss: \\(DWL = CV - R\\)\n\nInterpret these results. Is the tax efficient if consuming sugary drinks creates a negative health externality of \\(e = \\$0.01\\) per ounce (in terms of future healthcare costs and lost productivity)?\nRevenue Recycling: Suppose instead of keeping the tax revenue, the government rebates it back to the consumer as a lump-sum transfer (equal to the tax revenue collected).\n\nWhat is the consumer’s new budget constraint?\nWhat is their optimal consumption?\nWhat is their utility level?\nCompare this to parts (a) and (b). Is the consumer better or worse off than with no policy? Why?\n\nPolicy Discussion: Discuss the following:\n\nWhich welfare measure (CV vs CS) is most appropriate for policy analysis? Why might they differ?\nIs the sugary drink tax regressive (hurts poor households more)? How would you empirically test this?\nEvidence from Philadelphia shows substantial cross-border shopping reduced the tax’s effectiveness. How does this affect your welfare calculations? What does it suggest about optimal policy design?\nIf consumers exhibit present bias (underweight future health costs), does this justify a higher or lower tax than your calculation in part (f) suggests? How would you modify the welfare analysis to account for behavioral biases?"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Advanced Microeconomics",
+    "objectID": "problem-sets.html",
+    "href": "problem-sets.html",
+    "title": "Problem Sets",
     "section": "",
-    "text": "Learn how individuals, firms, and markets interact through the lens of microeconomic theory, with applications to real-world economic problems.\n\nECON 502 | Spring 2026 | College of Business and Economics | California State University\n\n\nInstructor\n   Dr. Div Bhagia     Office: SGMH 3361     dbhagia@fullerton.edu \n\n\nCourse Details\n   SGMH 2501, Mondays, 7-9:45 PM     Office hours:\n\n\nMondays, 5-6.45 PM, or\nBy appointment (in-person or on Zoom)"
+    "text": "Here are the problem sets for the course. Please complete and submit them by the specified deadlines. Solutions will be posted after the submission deadline.\n\nProblem Set 1 [Solutions]\nProblem Set 2 [Solutions]\nProblem Set 3"
   },
   {
-    "objectID": "handouts/lec1-2_cd_derivations.html",
-    "href": "handouts/lec1-2_cd_derivations.html",
-    "title": "Cobb-Douglas Example",
-    "section": "",
-    "text": "The consumer’s problem is: \\[\\max_{x,y} \\quad x^{\\alpha}y^{\\beta}\\] subject to: \\[p_x x + p_y y = I\\] \\[x \\geq 0, \\quad y \\geq 0\\]\n\n\n\nSet up the Lagrangian: \\[\\mathcal{L}(x, y, \\lambda) = x^{\\alpha}y^{\\beta} + \\lambda(I - p_x x - p_y y)\\]\nFirst-order conditions: \\[\\begin{align}\n\\frac{\\partial \\mathcal{L}}{\\partial x} &= \\alpha x^{\\alpha-1}y^{\\beta} - \\lambda p_x = 0 \\tag{1}\\\\\n\\frac{\\partial \\mathcal{L}}{\\partial y} &= \\beta x^{\\alpha}y^{\\beta-1} - \\lambda p_y = 0 \\tag{2}\\\\\n\\frac{\\partial \\mathcal{L}}{\\partial \\lambda} &= I - p_x x - p_y y = 0 \\tag{3}\n\\end{align}\\]\n\n\n\nFrom equations (1) and (2): \\[\\frac{\\alpha x^{\\alpha-1}y^{\\beta}}{\\beta x^{\\alpha}y^{\\beta-1}} = \\frac{p_x}{p_y}\\]\nSimplifying: \\[\\frac{\\alpha y}{\\beta x} = \\frac{p_x}{p_y}\\]\nSolving for \\(y\\): \\[y = \\frac{\\beta p_x}{\\alpha p_y} x \\tag{4}\\]\nSubstitute equation (4) into the budget constraint (3): \\[p_x x + p_y \\cdot \\frac{\\beta p_x}{\\alpha p_y} x = I\\]\n\\[p_x x \\left(1 + \\frac{\\beta}{\\alpha}\\right) = I\\]\n\\[p_x x \\cdot \\frac{\\alpha + \\beta}{\\alpha} = I\\]\nSolving for \\(x\\): \\[\\boxed{x^*(p_x, p_y, I) = \\frac{\\alpha I}{(\\alpha + \\beta)p_x}}\\]\nSubstituting back into equation (4): \\[y^* = \\frac{\\beta p_x}{\\alpha p_y} \\cdot \\frac{\\alpha I}{(\\alpha + \\beta)p_x} = \\frac{\\beta I}{(\\alpha + \\beta)p_y}\\]\n\\[\\boxed{y^*(p_x, p_y, I) = \\frac{\\beta I}{(\\alpha + \\beta)p_y}}\\]\n\n\n\nSubstitute the demand functions into the utility function: \\[V(p_x, p_y, I) = \\left(\\frac{\\alpha I}{(\\alpha+\\beta)p_x}\\right)^{\\alpha} \\left(\\frac{\\beta I}{(\\alpha+\\beta)p_y}\\right)^{\\beta}\\]\nSimplifying: \\[V(p_x, p_y, I) = \\frac{\\alpha^{\\alpha}\\beta^{\\beta}}{(\\alpha+\\beta)^{\\alpha+\\beta}} \\cdot \\frac{I^{\\alpha+\\beta}}{p_x^{\\alpha}p_y^{\\beta}}\\]\nLet \\(K = \\frac{\\alpha^{\\alpha}\\beta^{\\beta}}{(\\alpha+\\beta)^{\\alpha+\\beta}}\\):\n\\[\\boxed{V(p_x, p_y, I) = K \\cdot \\frac{I^{\\alpha+\\beta}}{p_x^{\\alpha}p_y^{\\beta}}}\\]"
-  },
-  {
-    "objectID": "handouts/lec1-2_cd_derivations.html#problem-statement",
-    "href": "handouts/lec1-2_cd_derivations.html#problem-statement",
-    "title": "Cobb-Douglas Example",
-    "section": "",
-    "text": "The consumer’s problem is: \\[\\max_{x,y} \\quad x^{\\alpha}y^{\\beta}\\] subject to: \\[p_x x + p_y y = I\\] \\[x \\geq 0, \\quad y \\geq 0\\]"
-  },
-  {
-    "objectID": "handouts/lec1-2_cd_derivations.html#lagrangian-method",
-    "href": "handouts/lec1-2_cd_derivations.html#lagrangian-method",
-    "title": "Cobb-Douglas Example",
-    "section": "",
-    "text": "Set up the Lagrangian: \\[\\mathcal{L}(x, y, \\lambda) = x^{\\alpha}y^{\\beta} + \\lambda(I - p_x x - p_y y)\\]\nFirst-order conditions: \\[\\begin{align}\n\\frac{\\partial \\mathcal{L}}{\\partial x} &= \\alpha x^{\\alpha-1}y^{\\beta} - \\lambda p_x = 0 \\tag{1}\\\\\n\\frac{\\partial \\mathcal{L}}{\\partial y} &= \\beta x^{\\alpha}y^{\\beta-1} - \\lambda p_y = 0 \\tag{2}\\\\\n\\frac{\\partial \\mathcal{L}}{\\partial \\lambda} &= I - p_x x - p_y y = 0 \\tag{3}\n\\end{align}\\]"
-  },
-  {
-    "objectID": "handouts/lec1-2_cd_derivations.html#solving-for-demand-functions",
-    "href": "handouts/lec1-2_cd_derivations.html#solving-for-demand-functions",
-    "title": "Cobb-Douglas Example",
-    "section": "",
-    "text": "From equations (1) and (2): \\[\\frac{\\alpha x^{\\alpha-1}y^{\\beta}}{\\beta x^{\\alpha}y^{\\beta-1}} = \\frac{p_x}{p_y}\\]\nSimplifying: \\[\\frac{\\alpha y}{\\beta x} = \\frac{p_x}{p_y}\\]\nSolving for \\(y\\): \\[y = \\frac{\\beta p_x}{\\alpha p_y} x \\tag{4}\\]\nSubstitute equation (4) into the budget constraint (3): \\[p_x x + p_y \\cdot \\frac{\\beta p_x}{\\alpha p_y} x = I\\]\n\\[p_x x \\left(1 + \\frac{\\beta}{\\alpha}\\right) = I\\]\n\\[p_x x \\cdot \\frac{\\alpha + \\beta}{\\alpha} = I\\]\nSolving for \\(x\\): \\[\\boxed{x^*(p_x, p_y, I) = \\frac{\\alpha I}{(\\alpha + \\beta)p_x}}\\]\nSubstituting back into equation (4): \\[y^* = \\frac{\\beta p_x}{\\alpha p_y} \\cdot \\frac{\\alpha I}{(\\alpha + \\beta)p_x} = \\frac{\\beta I}{(\\alpha + \\beta)p_y}\\]\n\\[\\boxed{y^*(p_x, p_y, I) = \\frac{\\beta I}{(\\alpha + \\beta)p_y}}\\]"
-  },
-  {
-    "objectID": "handouts/lec1-2_cd_derivations.html#indirect-utility-function",
-    "href": "handouts/lec1-2_cd_derivations.html#indirect-utility-function",
-    "title": "Cobb-Douglas Example",
-    "section": "",
-    "text": "Substitute the demand functions into the utility function: \\[V(p_x, p_y, I) = \\left(\\frac{\\alpha I}{(\\alpha+\\beta)p_x}\\right)^{\\alpha} \\left(\\frac{\\beta I}{(\\alpha+\\beta)p_y}\\right)^{\\beta}\\]\nSimplifying: \\[V(p_x, p_y, I) = \\frac{\\alpha^{\\alpha}\\beta^{\\beta}}{(\\alpha+\\beta)^{\\alpha+\\beta}} \\cdot \\frac{I^{\\alpha+\\beta}}{p_x^{\\alpha}p_y^{\\beta}}\\]\nLet \\(K = \\frac{\\alpha^{\\alpha}\\beta^{\\beta}}{(\\alpha+\\beta)^{\\alpha+\\beta}}\\):\n\\[\\boxed{V(p_x, p_y, I) = K \\cdot \\frac{I^{\\alpha+\\beta}}{p_x^{\\alpha}p_y^{\\beta}}}\\]"
-  },
-  {
-    "objectID": "handouts/lec1-2_cd_derivations.html#problem-statement-1",
-    "href": "handouts/lec1-2_cd_derivations.html#problem-statement-1",
-    "title": "Cobb-Douglas Example",
-    "section": "2.1 Problem Statement",
-    "text": "2.1 Problem Statement\nThe dual problem is: \\[\\min_{x,y} \\quad p_x x + p_y y\\] subject to: \\[x^{\\alpha}y^{\\beta} = \\bar{U}\\] \\[x \\geq 0, \\quad y \\geq 0\\]\nwhere \\(\\bar{U}\\) is a target utility level."
-  },
-  {
-    "objectID": "handouts/lec1-2_cd_derivations.html#lagrangian-method-1",
-    "href": "handouts/lec1-2_cd_derivations.html#lagrangian-method-1",
-    "title": "Cobb-Douglas Example",
-    "section": "2.2 Lagrangian Method",
-    "text": "2.2 Lagrangian Method\nSet up the Lagrangian: \\[\\mathcal{L}(x, y, \\mu) = p_x x + p_y y + \\mu(\\bar{U} - x^{\\alpha}y^{\\beta})\\]\nFirst-order conditions: \\[\\begin{align}\n\\frac{\\partial \\mathcal{L}}{\\partial x} &= p_x - \\mu \\alpha x^{\\alpha-1}y^{\\beta} = 0 \\tag{5}\\\\\n\\frac{\\partial \\mathcal{L}}{\\partial y} &= p_y - \\mu \\beta x^{\\alpha}y^{\\beta-1} = 0 \\tag{6}\\\\\n\\frac{\\partial \\mathcal{L}}{\\partial \\mu} &= \\bar{U} - x^{\\alpha}y^{\\beta} = 0 \\tag{7}\n\\end{align}\\]"
-  },
-  {
-    "objectID": "handouts/lec1-2_cd_derivations.html#solving-for-hicksian-demand",
-    "href": "handouts/lec1-2_cd_derivations.html#solving-for-hicksian-demand",
-    "title": "Cobb-Douglas Example",
-    "section": "2.3 Solving for Hicksian Demand",
-    "text": "2.3 Solving for Hicksian Demand\nFrom equations (5) and (6): \\[\\frac{p_x}{p_y} = \\frac{\\mu \\alpha x^{\\alpha-1}y^{\\beta}}{\\mu \\beta x^{\\alpha}y^{\\beta-1}} = \\frac{\\alpha y}{\\beta x}\\]\nSolving for \\(y\\): \\[y = \\frac{\\beta p_x}{\\alpha p_y} x \\tag{8}\\]\nSubstitute equation (8) into the utility constraint (7): \\[x^{\\alpha} \\left(\\frac{\\beta p_x}{\\alpha p_y} x\\right)^{\\beta} = \\bar{U}\\]\n\\[x^{\\alpha+\\beta} \\left(\\frac{\\beta p_x}{\\alpha p_y}\\right)^{\\beta} = \\bar{U}\\]\n\\[x^{\\alpha+\\beta} = \\bar{U} \\left(\\frac{\\alpha p_y}{\\beta p_x}\\right)^{\\beta}\\]\n\\[x = \\bar{U}^{1/(\\alpha+\\beta)} \\left(\\frac{\\alpha p_y}{\\beta p_x}\\right)^{\\beta/(\\alpha+\\beta)}\\]\nRearranging: \\[\\boxed{x^h(p_x, p_y, \\bar{U}) = \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} \\left(\\frac{p_y}{p_x}\\right)^{\\beta/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)}}\\]\nSimilarly, substituting back: \\[\\boxed{y^h(p_x, p_y, \\bar{U}) = \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)} \\left(\\frac{p_x}{p_y}\\right)^{\\alpha/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)}}\\]"
-  },
-  {
-    "objectID": "handouts/lec1-2_cd_derivations.html#expenditure-function",
-    "href": "handouts/lec1-2_cd_derivations.html#expenditure-function",
-    "title": "Cobb-Douglas Example",
-    "section": "2.4 Expenditure Function",
-    "text": "2.4 Expenditure Function\nThe expenditure function is: \\[E(p_x, p_y, \\bar{U}) = p_x x^h + p_y y^h\\]\nSubstituting the Hicksian demands: \\[E = p_x \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} \\left(\\frac{p_y}{p_x}\\right)^{\\beta/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)} + p_y \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)} \\left(\\frac{p_x}{p_y}\\right)^{\\alpha/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)}\\]\nSimplifying the first term: \\[p_x \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} \\left(\\frac{p_y}{p_x}\\right)^{\\beta/(\\alpha+\\beta)} = \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} p_x^{\\alpha/(\\alpha+\\beta)} p_y^{\\beta/(\\alpha+\\beta)}\\]\nSimilarly for the second term: \\[p_y \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)} \\left(\\frac{p_x}{p_y}\\right)^{\\alpha/(\\alpha+\\beta)} = \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)} p_x^{\\alpha/(\\alpha+\\beta)} p_y^{\\beta/(\\alpha+\\beta)}\\]\nTherefore: \\[E = p_x^{\\alpha/(\\alpha+\\beta)} p_y^{\\beta/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)} \\left[\\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} + \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)}\\right]\\]\nLet: \\[C = \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} + \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)}\\]\nThen: \\[\\boxed{E(p_x, p_y, \\bar{U}) = C \\cdot p_x^{\\alpha/(\\alpha+\\beta)} p_y^{\\beta/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)}}\\]"
-  },
-  {
-    "objectID": "content/part3-add-content.html",
-    "href": "content/part3-add-content.html",
+    "objectID": "content/part4-add-content.html",
+    "href": "content/part4-add-content.html",
     "title": "Additional Content",
     "section": "",
-    "text": "You can find additional content and reference materials for Part III: Market Failures below.",
+    "text": "You can find additional content and reference materials for Part IV: Uncertainty and Strategy below.",
     "crumbs": [
       "Content",
-      "III. Market Failures",
+      "IV. Uncertainty and Strategy",
       "Additional Content"
     ]
   },
   {
-    "objectID": "content/part1-add-content.html",
-    "href": "content/part1-add-content.html",
+    "objectID": "content/part2-add-content.html",
+    "href": "content/part2-add-content.html",
     "title": "Additional Content",
     "section": "",
-    "text": "You can find additional content and reference materials for Part I: Competetive Markets below.",
+    "text": "You can find additional content and reference materials for Part II: Market Power below.",
     "crumbs": [
       "Content",
-      "I. Competitive Markets",
+      "II. Market Power",
       "Additional Content"
-    ]
-  },
-  {
-    "objectID": "content/part1-add-content.html#consumer-theory-lectures-1-and-2",
-    "href": "content/part1-add-content.html#consumer-theory-lectures-1-and-2",
-    "title": "Additional Content",
-    "section": "Consumer Theory (Lectures 1 and 2)",
-    "text": "Consumer Theory (Lectures 1 and 2)\n\nCobb-Douglas Demand Derivations\n\nThis handout provides step-by-step derivations of the Marshallian (uncompensated) and Hicksian (compensated) demand functions for Cobb-Douglas preferences.",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Additional Content"
-    ]
-  },
-  {
-    "objectID": "content/part1-add-content.html#competitive-equilibrium-lecture-4",
-    "href": "content/part1-add-content.html#competitive-equilibrium-lecture-4",
-    "title": "Additional Content",
-    "section": "Competitive Equilibrium (Lecture 4)",
-    "text": "Competitive Equilibrium (Lecture 4)\n\nTax Incidence and Deadweight Loss Derivations\n\nThis handout derives the formulas for tax incidence on consumers and producers, as well as the deadweight loss from a tax, in a simple supply and demand framework.",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Additional Content"
-    ]
-  },
-  {
-    "objectID": "content/lecture8.html",
-    "href": "content/lecture8.html",
-    "title": "Lecture 8",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 8"
-    ]
-  },
-  {
-    "objectID": "content/lecture8.html#topics",
-    "href": "content/lecture8.html#topics",
-    "title": "Lecture 8",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 8"
-    ]
-  },
-  {
-    "objectID": "content/lecture8.html#slides",
-    "href": "content/lecture8.html#slides",
-    "title": "Lecture 8",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 8"
-    ]
-  },
-  {
-    "objectID": "content/lecture6.html",
-    "href": "content/lecture6.html",
-    "title": "Lecture 6",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 6"
-    ]
-  },
-  {
-    "objectID": "content/lecture6.html#topics",
-    "href": "content/lecture6.html#topics",
-    "title": "Lecture 6",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 6"
-    ]
-  },
-  {
-    "objectID": "content/lecture6.html#slides",
-    "href": "content/lecture6.html#slides",
-    "title": "Lecture 6",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 6"
-    ]
-  },
-  {
-    "objectID": "content/lecture4.html",
-    "href": "content/lecture4.html",
-    "title": "Lecture 4",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 4"
-    ]
-  },
-  {
-    "objectID": "content/lecture4.html#topics",
-    "href": "content/lecture4.html#topics",
-    "title": "Lecture 4",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 4"
-    ]
-  },
-  {
-    "objectID": "content/lecture4.html#slides",
-    "href": "content/lecture4.html#slides",
-    "title": "Lecture 4",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 4"
-    ]
-  },
-  {
-    "objectID": "content/lecture2.html",
-    "href": "content/lecture2.html",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Indirect utility function\nExpenditure minimization and expenditure function\nMarshallian and Hicksian demand\nSlutsky equation\nMeasuring welfare: CV, EV, and consumer surplus\n\nTextbook references: 4.4; 4.7; 5.1-5.8; 6.1-6.3",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "content/lecture2.html#topics",
-    "href": "content/lecture2.html#topics",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Indirect utility function\nExpenditure minimization and expenditure function\nMarshallian and Hicksian demand\nSlutsky equation\nMeasuring welfare: CV, EV, and consumer surplus\n\nTextbook references: 4.4; 4.7; 5.1-5.8; 6.1-6.3",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "content/lecture2.html#slides",
-    "href": "content/lecture2.html#slides",
-    "title": "Lecture 1",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "content/lecture11.html",
-    "href": "content/lecture11.html",
-    "title": "Lecture 11",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Lecture 11"
-    ]
-  },
-  {
-    "objectID": "content/lecture11.html#topics",
-    "href": "content/lecture11.html#topics",
-    "title": "Lecture 11",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Lecture 11"
-    ]
-  },
-  {
-    "objectID": "content/lecture11.html#slides",
-    "href": "content/lecture11.html#slides",
-    "title": "Lecture 11",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Lecture 11"
-    ]
-  },
-  {
-    "objectID": "content/lecture1.html",
-    "href": "content/lecture1.html",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Introduction to the course\nPreferences and utility functions\nIndifference curves and marginal rate of substitution (MRS)\nUtility maximization\nApplications\n\nTextbook references: Sections 3.1-3.6; Sections 4.1-4.5",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 1"
-    ]
-  },
-  {
-    "objectID": "content/lecture1.html#topics",
-    "href": "content/lecture1.html#topics",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Introduction to the course\nPreferences and utility functions\nIndifference curves and marginal rate of substitution (MRS)\nUtility maximization\nApplications\n\nTextbook references: Sections 3.1-3.6; Sections 4.1-4.5",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 1"
-    ]
-  },
-  {
-    "objectID": "content/lecture1.html#slides",
-    "href": "content/lecture1.html#slides",
-    "title": "Lecture 1",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 1"
-    ]
-  },
-  {
-    "objectID": "content/lecture10.html",
-    "href": "content/lecture10.html",
-    "title": "Lecture 10",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "III. Market Failures",
-      "Lecture 10"
-    ]
-  },
-  {
-    "objectID": "content/lecture10.html#topics",
-    "href": "content/lecture10.html#topics",
-    "title": "Lecture 10",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "III. Market Failures",
-      "Lecture 10"
-    ]
-  },
-  {
-    "objectID": "content/lecture10.html#slides",
-    "href": "content/lecture10.html#slides",
-    "title": "Lecture 10",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "III. Market Failures",
-      "Lecture 10"
-    ]
-  },
-  {
-    "objectID": "content/lecture12.html",
-    "href": "content/lecture12.html",
-    "title": "Lecture 12",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Lecture 12"
-    ]
-  },
-  {
-    "objectID": "content/lecture12.html#topics",
-    "href": "content/lecture12.html#topics",
-    "title": "Lecture 12",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Lecture 12"
-    ]
-  },
-  {
-    "objectID": "content/lecture12.html#slides",
-    "href": "content/lecture12.html#slides",
-    "title": "Lecture 12",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "Lecture 12"
-    ]
-  },
-  {
-    "objectID": "content/lecture3.html",
-    "href": "content/lecture3.html",
-    "title": "Lecture 3",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 3"
-    ]
-  },
-  {
-    "objectID": "content/lecture3.html#topics",
-    "href": "content/lecture3.html#topics",
-    "title": "Lecture 3",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 3"
-    ]
-  },
-  {
-    "objectID": "content/lecture3.html#slides",
-    "href": "content/lecture3.html#slides",
-    "title": "Lecture 3",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 3"
-    ]
-  },
-  {
-    "objectID": "content/lecture5.html",
-    "href": "content/lecture5.html",
-    "title": "Lecture 5",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 5"
-    ]
-  },
-  {
-    "objectID": "content/lecture5.html#topics",
-    "href": "content/lecture5.html#topics",
-    "title": "Lecture 5",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 5"
-    ]
-  },
-  {
-    "objectID": "content/lecture5.html#slides",
-    "href": "content/lecture5.html#slides",
-    "title": "Lecture 5",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
-    "crumbs": [
-      "Content",
-      "I. Competitive Markets",
-      "Lecture 5"
-    ]
-  },
-  {
-    "objectID": "content/lecture7.html",
-    "href": "content/lecture7.html",
-    "title": "Lecture 7",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 7"
-    ]
-  },
-  {
-    "objectID": "content/lecture7.html#topics",
-    "href": "content/lecture7.html#topics",
-    "title": "Lecture 7",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 7"
-    ]
-  },
-  {
-    "objectID": "content/lecture7.html#slides",
-    "href": "content/lecture7.html#slides",
-    "title": "Lecture 7",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "II. Market Power",
-      "Lecture 7"
     ]
   },
   {
@@ -627,139 +144,695 @@
     ]
   },
   {
-    "objectID": "content/part2-add-content.html",
-    "href": "content/part2-add-content.html",
-    "title": "Additional Content",
+    "objectID": "content/lecture7.html",
+    "href": "content/lecture7.html",
+    "title": "Lecture 7",
     "section": "",
-    "text": "You can find additional content and reference materials for Part II: Market Power below.",
+    "text": "Textbook references:",
     "crumbs": [
       "Content",
       "II. Market Power",
-      "Additional Content"
+      "Lecture 7"
     ]
   },
   {
-    "objectID": "content/part4-add-content.html",
-    "href": "content/part4-add-content.html",
-    "title": "Additional Content",
+    "objectID": "content/lecture7.html#topics",
+    "href": "content/lecture7.html#topics",
+    "title": "Lecture 7",
     "section": "",
-    "text": "You can find additional content and reference materials for Part IV: Uncertainty and Strategy below.",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 7"
+    ]
+  },
+  {
+    "objectID": "content/lecture7.html#slides",
+    "href": "content/lecture7.html#slides",
+    "title": "Lecture 7",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 7"
+    ]
+  },
+  {
+    "objectID": "content/lecture5.html",
+    "href": "content/lecture5.html",
+    "title": "Lecture 5",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 5"
+    ]
+  },
+  {
+    "objectID": "content/lecture5.html#topics",
+    "href": "content/lecture5.html#topics",
+    "title": "Lecture 5",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 5"
+    ]
+  },
+  {
+    "objectID": "content/lecture5.html#slides",
+    "href": "content/lecture5.html#slides",
+    "title": "Lecture 5",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 5"
+    ]
+  },
+  {
+    "objectID": "content/lecture3.html",
+    "href": "content/lecture3.html",
+    "title": "Lecture 3",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "content/lecture3.html#topics",
+    "href": "content/lecture3.html#topics",
+    "title": "Lecture 3",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "content/lecture3.html#slides",
+    "href": "content/lecture3.html#slides",
+    "title": "Lecture 3",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "content/lecture12.html",
+    "href": "content/lecture12.html",
+    "title": "Lecture 12",
+    "section": "",
+    "text": "Textbook references:",
     "crumbs": [
       "Content",
       "IV. Uncertainty and Strategy",
-      "Additional Content"
+      "Lecture 12"
     ]
   },
   {
-    "objectID": "handouts/lec4-tax-incidence.html",
-    "href": "handouts/lec4-tax-incidence.html",
+    "objectID": "content/lecture12.html#topics",
+    "href": "content/lecture12.html#topics",
+    "title": "Lecture 12",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "IV. Uncertainty and Strategy",
+      "Lecture 12"
+    ]
+  },
+  {
+    "objectID": "content/lecture12.html#slides",
+    "href": "content/lecture12.html#slides",
+    "title": "Lecture 12",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "IV. Uncertainty and Strategy",
+      "Lecture 12"
+    ]
+  },
+  {
+    "objectID": "content/lecture10.html",
+    "href": "content/lecture10.html",
+    "title": "Lecture 10",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "III. Market Failures",
+      "Lecture 10"
+    ]
+  },
+  {
+    "objectID": "content/lecture10.html#topics",
+    "href": "content/lecture10.html#topics",
+    "title": "Lecture 10",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "III. Market Failures",
+      "Lecture 10"
+    ]
+  },
+  {
+    "objectID": "content/lecture10.html#slides",
+    "href": "content/lecture10.html#slides",
+    "title": "Lecture 10",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "III. Market Failures",
+      "Lecture 10"
+    ]
+  },
+  {
+    "objectID": "add-content/lec4-tax-incidence.html",
+    "href": "add-content/lec4-tax-incidence.html",
     "title": "Tax Incidence and Deadweight Loss",
     "section": "",
     "text": "Consider a competitive market in equilibrium. Let \\(Q^D(p)\\) denote market demand and \\(Q^S(p)\\) denote market supply. In equilibrium:\n\\[Q^D(p^*) = Q^S(p^*) = Q^*\\]\nNow impose a per-unit tax \\(t\\) on sellers. This creates a wedge between the price buyers pay (\\(p^D\\)) and the price sellers receive (\\(p^S\\)):\n\\[p^D = p^S + t\\]\nThe new equilibrium requires:\n\\[Q^D(p^D) = Q^S(p^S)\\]"
   },
   {
-    "objectID": "handouts/lec4-tax-incidence.html#setup",
-    "href": "handouts/lec4-tax-incidence.html#setup",
+    "objectID": "add-content/lec4-tax-incidence.html#setup",
+    "href": "add-content/lec4-tax-incidence.html#setup",
     "title": "Tax Incidence and Deadweight Loss",
     "section": "",
     "text": "Consider a competitive market in equilibrium. Let \\(Q^D(p)\\) denote market demand and \\(Q^S(p)\\) denote market supply. In equilibrium:\n\\[Q^D(p^*) = Q^S(p^*) = Q^*\\]\nNow impose a per-unit tax \\(t\\) on sellers. This creates a wedge between the price buyers pay (\\(p^D\\)) and the price sellers receive (\\(p^S\\)):\n\\[p^D = p^S + t\\]\nThe new equilibrium requires:\n\\[Q^D(p^D) = Q^S(p^S)\\]"
   },
   {
-    "objectID": "handouts/lec4-tax-incidence.html#deriving-the-tax-incidence-formula",
-    "href": "handouts/lec4-tax-incidence.html#deriving-the-tax-incidence-formula",
+    "objectID": "add-content/lec4-tax-incidence.html#deriving-the-tax-incidence-formula",
+    "href": "add-content/lec4-tax-incidence.html#deriving-the-tax-incidence-formula",
     "title": "Tax Incidence and Deadweight Loss",
     "section": "Deriving the Tax Incidence Formula",
     "text": "Deriving the Tax Incidence Formula\n\nStep 1: Differentiate the equilibrium condition\nStarting from \\(Q^D(p^D) = Q^S(p^S)\\) and \\(p^D = p^S + t\\), totally differentiate both sides with respect to \\(t\\):\n\\[\\frac{dQ^D}{dp^D} \\cdot \\frac{dp^D}{dt} = \\frac{dQ^S}{dp^S} \\cdot \\frac{dp^S}{dt}\\]\n\n\nStep 2: Use the tax wedge\nDifferentiating \\(p^D = p^S + t\\) with respect to \\(t\\):\n\\[\\frac{dp^D}{dt} = \\frac{dp^S}{dt} + 1\\]\nSubstitute into Step 1:\n\\[\\frac{dQ^D}{dp^D} \\left(\\frac{dp^S}{dt} + 1\\right) = \\frac{dQ^S}{dp^S} \\cdot \\frac{dp^S}{dt}\\]\n\n\nStep 3: Solve for \\(dp^S/dt\\)\nExpand:\n\\[\\frac{dQ^D}{dp^D} \\cdot \\frac{dp^S}{dt} + \\frac{dQ^D}{dp^D} = \\frac{dQ^S}{dp^S} \\cdot \\frac{dp^S}{dt}\\]\nRearrange:\n\\[\\frac{dp^S}{dt}\\left(\\frac{dQ^S}{dp^S} - \\frac{dQ^D}{dp^D}\\right) = \\frac{dQ^D}{dp^D}\\]\n\\[\\frac{dp^S}{dt} = \\frac{dQ^D/dp^D}{dQ^S/dp^S - dQ^D/dp^D}\\]\n\n\nStep 4: Convert to elasticities\nDefine the elasticities at the initial equilibrium:\n\\[e_{D,p} = \\frac{dQ^D}{dp} \\cdot \\frac{p^*}{Q^*} \\quad \\text{(negative)} \\qquad e_{S,p} = \\frac{dQ^S}{dp} \\cdot \\frac{p^*}{Q^*} \\quad \\text{(positive)}\\]\nSo \\(dQ^D/dp = e_{D,p} \\cdot Q^*/p^*\\) and \\(dQ^S/dp = e_{S,p} \\cdot Q^*/p^*\\). Substitute:\n\\[\\frac{dp^S}{dt} = \\frac{e_{D,p} \\cdot Q^*/p^*}{(e_{S,p} - e_{D,p}) \\cdot Q^*/p^*} = \\frac{e_{D,p}}{e_{S,p} - e_{D,p}}\\]\nSimilarly, using \\(dp^D/dt = dp^S/dt + 1\\):\n\\[\\frac{dp^D}{dt} = \\frac{e_{D,p}}{e_{S,p} - e_{D,p}} + 1 = \\frac{e_{S,p}}{e_{S,p} - e_{D,p}}\\]\n\n\nStep 5: Take the ratio\n\\[\\boxed{\\frac{dp^D/dt}{dp^S/dt} = \\frac{e_{S,p}}{e_{D,p}}}\\]\nSince \\(e_{D,p} &lt; 0\\), this ratio is negative. Taking absolute values, the side with the smaller elasticity (more inelastic) experiences the larger price change — and therefore bears more of the tax burden."
   },
   {
-    "objectID": "handouts/lec4-tax-incidence.html#deriving-the-deadweight-loss-formula",
-    "href": "handouts/lec4-tax-incidence.html#deriving-the-deadweight-loss-formula",
+    "objectID": "add-content/lec4-tax-incidence.html#deriving-the-deadweight-loss-formula",
+    "href": "add-content/lec4-tax-incidence.html#deriving-the-deadweight-loss-formula",
     "title": "Tax Incidence and Deadweight Loss",
     "section": "Deriving the Deadweight Loss Formula",
     "text": "Deriving the Deadweight Loss Formula\n\nStep 1: The Harberger triangle\nThe deadweight loss from the tax is the triangle between the supply and demand curves over the range of lost quantity:\n\\[DWL = \\frac{1}{2} \\cdot t \\cdot |\\Delta Q|\\]\nwhere \\(\\Delta Q = Q_{\\text{tax}} - Q^*\\) is the reduction in equilibrium quantity caused by the tax.\n\n\nStep 2: Find \\(\\Delta Q\\) in terms of elasticities\nFrom the equilibrium condition \\(Q^D(p^D) = Q^S(p^S)\\), the change in quantity can be expressed through either the demand or supply side. Using supply:\n\\[\\Delta Q = \\frac{dQ^S}{dp^S} \\cdot \\Delta p^S = \\frac{dQ^S}{dp^S} \\cdot \\frac{dp^S}{dt} \\cdot t\\]\nSubstituting \\(dQ^S/dp = e_{S,p} \\cdot Q^*/p^*\\) and the result from the incidence derivation:\n\\[\\Delta Q = \\frac{e_{S,p} \\cdot Q^*}{p^*} \\cdot \\frac{e_{D,p}}{e_{S,p} - e_{D,p}} \\cdot t\\]\n\n\nStep 3: Substitute into the Harberger triangle\n\\[DWL = \\frac{1}{2} \\cdot t \\cdot \\left|\\frac{e_{S,p} \\cdot e_{D,p}}{e_{S,p} - e_{D,p}} \\cdot \\frac{Q^*}{p^*} \\cdot t\\right|\\]\nSince \\(e_{D,p} &lt; 0\\), the product \\(e_{S,p} \\cdot e_{D,p} &lt; 0\\), and \\(e_{S,p} - e_{D,p} &gt; 0\\), so the fraction is negative. Taking the absolute value and pulling the negative through:\n\\[\\boxed{DWL \\approx -\\frac{1}{2} \\cdot \\frac{e_{S,p} \\cdot e_{D,p}}{e_{S,p} - e_{D,p}} \\cdot \\frac{t^2}{p^*} \\cdot Q^*}\\]\nThis expression is positive because the numerator \\(e_{S,p} \\cdot e_{D,p} &lt; 0\\) and the leading negative sign flips it."
   },
   {
-    "objectID": "handouts/lec4-tax-incidence.html#key-takeaways",
-    "href": "handouts/lec4-tax-incidence.html#key-takeaways",
+    "objectID": "add-content/lec4-tax-incidence.html#key-takeaways",
+    "href": "add-content/lec4-tax-incidence.html#key-takeaways",
     "title": "Tax Incidence and Deadweight Loss",
     "section": "Key Takeaways",
     "text": "Key Takeaways\nDWL grows with the square of the tax rate. The \\(t^2\\) term means that doubling the tax rate quadruples the deadweight loss. This is the core intuition behind the Ramsey rule for optimal taxation: it is more efficient to levy small taxes across many goods than a large tax on one good.\nHigher elasticities mean larger DWL. When buyers and sellers are more responsive to price changes, a tax causes a larger quantity distortion, generating more welfare loss.\nPerfectly inelastic demand or supply implies zero DWL. If either \\(e_{D,p} = 0\\) or \\(e_{S,p} = 0\\), the numerator is zero and \\(DWL = 0\\). Intuitively, if quantities don’t change, there is no allocative distortion."
   },
   {
-    "objectID": "problem-sets.html",
-    "href": "problem-sets.html",
-    "title": "Problem Sets",
+    "objectID": "add-content/lec1-2-cd-derivations.html",
+    "href": "add-content/lec1-2-cd-derivations.html",
+    "title": "Cobb-Douglas Example",
     "section": "",
-    "text": "Here are the problem sets for the course. Please complete and submit them by the specified deadlines. Solutions will be posted after the submission deadline.\n\nProblem Set 1 [Solutions]\nProblem Set 2"
+    "text": "The consumer’s problem is: \\[\\max_{x,y} \\quad x^{\\alpha}y^{\\beta}\\] subject to: \\[p_x x + p_y y = I\\] \\[x \\geq 0, \\quad y \\geq 0\\]\n\n\n\nSet up the Lagrangian: \\[\\mathcal{L}(x, y, \\lambda) = x^{\\alpha}y^{\\beta} + \\lambda(I - p_x x - p_y y)\\]\nFirst-order conditions: \\[\\begin{align}\n\\frac{\\partial \\mathcal{L}}{\\partial x} &= \\alpha x^{\\alpha-1}y^{\\beta} - \\lambda p_x = 0 \\tag{1}\\\\\n\\frac{\\partial \\mathcal{L}}{\\partial y} &= \\beta x^{\\alpha}y^{\\beta-1} - \\lambda p_y = 0 \\tag{2}\\\\\n\\frac{\\partial \\mathcal{L}}{\\partial \\lambda} &= I - p_x x - p_y y = 0 \\tag{3}\n\\end{align}\\]\n\n\n\nFrom equations (1) and (2): \\[\\frac{\\alpha x^{\\alpha-1}y^{\\beta}}{\\beta x^{\\alpha}y^{\\beta-1}} = \\frac{p_x}{p_y}\\]\nSimplifying: \\[\\frac{\\alpha y}{\\beta x} = \\frac{p_x}{p_y}\\]\nSolving for \\(y\\): \\[y = \\frac{\\beta p_x}{\\alpha p_y} x \\tag{4}\\]\nSubstitute equation (4) into the budget constraint (3): \\[p_x x + p_y \\cdot \\frac{\\beta p_x}{\\alpha p_y} x = I\\]\n\\[p_x x \\left(1 + \\frac{\\beta}{\\alpha}\\right) = I\\]\n\\[p_x x \\cdot \\frac{\\alpha + \\beta}{\\alpha} = I\\]\nSolving for \\(x\\): \\[\\boxed{x^*(p_x, p_y, I) = \\frac{\\alpha I}{(\\alpha + \\beta)p_x}}\\]\nSubstituting back into equation (4): \\[y^* = \\frac{\\beta p_x}{\\alpha p_y} \\cdot \\frac{\\alpha I}{(\\alpha + \\beta)p_x} = \\frac{\\beta I}{(\\alpha + \\beta)p_y}\\]\n\\[\\boxed{y^*(p_x, p_y, I) = \\frac{\\beta I}{(\\alpha + \\beta)p_y}}\\]\n\n\n\nSubstitute the demand functions into the utility function: \\[V(p_x, p_y, I) = \\left(\\frac{\\alpha I}{(\\alpha+\\beta)p_x}\\right)^{\\alpha} \\left(\\frac{\\beta I}{(\\alpha+\\beta)p_y}\\right)^{\\beta}\\]\nSimplifying: \\[V(p_x, p_y, I) = \\frac{\\alpha^{\\alpha}\\beta^{\\beta}}{(\\alpha+\\beta)^{\\alpha+\\beta}} \\cdot \\frac{I^{\\alpha+\\beta}}{p_x^{\\alpha}p_y^{\\beta}}\\]\nLet \\(K = \\frac{\\alpha^{\\alpha}\\beta^{\\beta}}{(\\alpha+\\beta)^{\\alpha+\\beta}}\\):\n\\[\\boxed{V(p_x, p_y, I) = K \\cdot \\frac{I^{\\alpha+\\beta}}{p_x^{\\alpha}p_y^{\\beta}}}\\]"
   },
   {
-    "objectID": "problem-sets/ps1.html",
-    "href": "problem-sets/ps1.html",
-    "title": "Problem Set 1",
+    "objectID": "add-content/lec1-2-cd-derivations.html#problem-statement",
+    "href": "add-content/lec1-2-cd-derivations.html#problem-statement",
+    "title": "Cobb-Douglas Example",
     "section": "",
-    "text": "Michele, who has a relatively high income \\(I\\), has altruistic feelings toward Sofia, who lives in such poverty that she essentially has no income. Suppose Michele’s preferences are represented by the utility function\n\\[U_1(c_1, c_2) = c_1^{1-a}c_2^a,\\]\nwhere \\(c_1\\) and \\(c_2\\) are Michele and Sofia’s consumption levels, appearing as goods in a standard Cobb-Douglas utility function. Assume that Michele can spend her income either on her own or Sofia’s consumption (through charitable donations) and that $1 buys a unit of consumption for either (thus, the “prices” of consumption are \\(p_1 = p_2 = 1\\)).\n\nArgue that the exponent \\(a\\) can be taken as a measure of the degree of Michele’s altruism by providing an interpretation of extremes values \\(a = 0\\) and \\(a = 1\\). What value would make her a perfect altruist (regarding others the same as oneself)?\nSolve for Michele’s optimal choices and demonstrate how they change with \\(a\\).\nSolve for Michele’s optimal choices under an income tax at rate \\(t\\). How do her choices change if there is a charitable deduction (so income spent on charitable deductions is not taxed)? Does the charitable deduction have a bigger incentive effect on more or less altruistic people?"
+    "text": "The consumer’s problem is: \\[\\max_{x,y} \\quad x^{\\alpha}y^{\\beta}\\] subject to: \\[p_x x + p_y y = I\\] \\[x \\geq 0, \\quad y \\geq 0\\]"
   },
   {
-    "objectID": "problem-sets/ps1.html#problem-1-altruism-textbook-ex-4.14",
-    "href": "problem-sets/ps1.html#problem-1-altruism-textbook-ex-4.14",
-    "title": "Problem Set 1",
+    "objectID": "add-content/lec1-2-cd-derivations.html#lagrangian-method",
+    "href": "add-content/lec1-2-cd-derivations.html#lagrangian-method",
+    "title": "Cobb-Douglas Example",
     "section": "",
-    "text": "Michele, who has a relatively high income \\(I\\), has altruistic feelings toward Sofia, who lives in such poverty that she essentially has no income. Suppose Michele’s preferences are represented by the utility function\n\\[U_1(c_1, c_2) = c_1^{1-a}c_2^a,\\]\nwhere \\(c_1\\) and \\(c_2\\) are Michele and Sofia’s consumption levels, appearing as goods in a standard Cobb-Douglas utility function. Assume that Michele can spend her income either on her own or Sofia’s consumption (through charitable donations) and that $1 buys a unit of consumption for either (thus, the “prices” of consumption are \\(p_1 = p_2 = 1\\)).\n\nArgue that the exponent \\(a\\) can be taken as a measure of the degree of Michele’s altruism by providing an interpretation of extremes values \\(a = 0\\) and \\(a = 1\\). What value would make her a perfect altruist (regarding others the same as oneself)?\nSolve for Michele’s optimal choices and demonstrate how they change with \\(a\\).\nSolve for Michele’s optimal choices under an income tax at rate \\(t\\). How do her choices change if there is a charitable deduction (so income spent on charitable deductions is not taxed)? Does the charitable deduction have a bigger incentive effect on more or less altruistic people?"
+    "text": "Set up the Lagrangian: \\[\\mathcal{L}(x, y, \\lambda) = x^{\\alpha}y^{\\beta} + \\lambda(I - p_x x - p_y y)\\]\nFirst-order conditions: \\[\\begin{align}\n\\frac{\\partial \\mathcal{L}}{\\partial x} &= \\alpha x^{\\alpha-1}y^{\\beta} - \\lambda p_x = 0 \\tag{1}\\\\\n\\frac{\\partial \\mathcal{L}}{\\partial y} &= \\beta x^{\\alpha}y^{\\beta-1} - \\lambda p_y = 0 \\tag{2}\\\\\n\\frac{\\partial \\mathcal{L}}{\\partial \\lambda} &= I - p_x x - p_y y = 0 \\tag{3}\n\\end{align}\\]"
   },
   {
-    "objectID": "problem-sets/ps1.html#problem-2-elasticities-and-logs-textbook-ex-5.8",
-    "href": "problem-sets/ps1.html#problem-2-elasticities-and-logs-textbook-ex-5.8",
-    "title": "Problem Set 1",
+    "objectID": "add-content/lec1-2-cd-derivations.html#solving-for-demand-functions",
+    "href": "add-content/lec1-2-cd-derivations.html#solving-for-demand-functions",
+    "title": "Cobb-Douglas Example",
+    "section": "",
+    "text": "From equations (1) and (2): \\[\\frac{\\alpha x^{\\alpha-1}y^{\\beta}}{\\beta x^{\\alpha}y^{\\beta-1}} = \\frac{p_x}{p_y}\\]\nSimplifying: \\[\\frac{\\alpha y}{\\beta x} = \\frac{p_x}{p_y}\\]\nSolving for \\(y\\): \\[y = \\frac{\\beta p_x}{\\alpha p_y} x \\tag{4}\\]\nSubstitute equation (4) into the budget constraint (3): \\[p_x x + p_y \\cdot \\frac{\\beta p_x}{\\alpha p_y} x = I\\]\n\\[p_x x \\left(1 + \\frac{\\beta}{\\alpha}\\right) = I\\]\n\\[p_x x \\cdot \\frac{\\alpha + \\beta}{\\alpha} = I\\]\nSolving for \\(x\\): \\[\\boxed{x^*(p_x, p_y, I) = \\frac{\\alpha I}{(\\alpha + \\beta)p_x}}\\]\nSubstituting back into equation (4): \\[y^* = \\frac{\\beta p_x}{\\alpha p_y} \\cdot \\frac{\\alpha I}{(\\alpha + \\beta)p_x} = \\frac{\\beta I}{(\\alpha + \\beta)p_y}\\]\n\\[\\boxed{y^*(p_x, p_y, I) = \\frac{\\beta I}{(\\alpha + \\beta)p_y}}\\]"
+  },
+  {
+    "objectID": "add-content/lec1-2-cd-derivations.html#indirect-utility-function",
+    "href": "add-content/lec1-2-cd-derivations.html#indirect-utility-function",
+    "title": "Cobb-Douglas Example",
+    "section": "",
+    "text": "Substitute the demand functions into the utility function: \\[V(p_x, p_y, I) = \\left(\\frac{\\alpha I}{(\\alpha+\\beta)p_x}\\right)^{\\alpha} \\left(\\frac{\\beta I}{(\\alpha+\\beta)p_y}\\right)^{\\beta}\\]\nSimplifying: \\[V(p_x, p_y, I) = \\frac{\\alpha^{\\alpha}\\beta^{\\beta}}{(\\alpha+\\beta)^{\\alpha+\\beta}} \\cdot \\frac{I^{\\alpha+\\beta}}{p_x^{\\alpha}p_y^{\\beta}}\\]\nLet \\(K = \\frac{\\alpha^{\\alpha}\\beta^{\\beta}}{(\\alpha+\\beta)^{\\alpha+\\beta}}\\):\n\\[\\boxed{V(p_x, p_y, I) = K \\cdot \\frac{I^{\\alpha+\\beta}}{p_x^{\\alpha}p_y^{\\beta}}}\\]"
+  },
+  {
+    "objectID": "add-content/lec1-2-cd-derivations.html#problem-statement-1",
+    "href": "add-content/lec1-2-cd-derivations.html#problem-statement-1",
+    "title": "Cobb-Douglas Example",
+    "section": "2.1 Problem Statement",
+    "text": "2.1 Problem Statement\nThe dual problem is: \\[\\min_{x,y} \\quad p_x x + p_y y\\] subject to: \\[x^{\\alpha}y^{\\beta} = \\bar{U}\\] \\[x \\geq 0, \\quad y \\geq 0\\]\nwhere \\(\\bar{U}\\) is a target utility level."
+  },
+  {
+    "objectID": "add-content/lec1-2-cd-derivations.html#lagrangian-method-1",
+    "href": "add-content/lec1-2-cd-derivations.html#lagrangian-method-1",
+    "title": "Cobb-Douglas Example",
+    "section": "2.2 Lagrangian Method",
+    "text": "2.2 Lagrangian Method\nSet up the Lagrangian: \\[\\mathcal{L}(x, y, \\mu) = p_x x + p_y y + \\mu(\\bar{U} - x^{\\alpha}y^{\\beta})\\]\nFirst-order conditions: \\[\\begin{align}\n\\frac{\\partial \\mathcal{L}}{\\partial x} &= p_x - \\mu \\alpha x^{\\alpha-1}y^{\\beta} = 0 \\tag{5}\\\\\n\\frac{\\partial \\mathcal{L}}{\\partial y} &= p_y - \\mu \\beta x^{\\alpha}y^{\\beta-1} = 0 \\tag{6}\\\\\n\\frac{\\partial \\mathcal{L}}{\\partial \\mu} &= \\bar{U} - x^{\\alpha}y^{\\beta} = 0 \\tag{7}\n\\end{align}\\]"
+  },
+  {
+    "objectID": "add-content/lec1-2-cd-derivations.html#solving-for-hicksian-demand",
+    "href": "add-content/lec1-2-cd-derivations.html#solving-for-hicksian-demand",
+    "title": "Cobb-Douglas Example",
+    "section": "2.3 Solving for Hicksian Demand",
+    "text": "2.3 Solving for Hicksian Demand\nFrom equations (5) and (6): \\[\\frac{p_x}{p_y} = \\frac{\\mu \\alpha x^{\\alpha-1}y^{\\beta}}{\\mu \\beta x^{\\alpha}y^{\\beta-1}} = \\frac{\\alpha y}{\\beta x}\\]\nSolving for \\(y\\): \\[y = \\frac{\\beta p_x}{\\alpha p_y} x \\tag{8}\\]\nSubstitute equation (8) into the utility constraint (7): \\[x^{\\alpha} \\left(\\frac{\\beta p_x}{\\alpha p_y} x\\right)^{\\beta} = \\bar{U}\\]\n\\[x^{\\alpha+\\beta} \\left(\\frac{\\beta p_x}{\\alpha p_y}\\right)^{\\beta} = \\bar{U}\\]\n\\[x^{\\alpha+\\beta} = \\bar{U} \\left(\\frac{\\alpha p_y}{\\beta p_x}\\right)^{\\beta}\\]\n\\[x = \\bar{U}^{1/(\\alpha+\\beta)} \\left(\\frac{\\alpha p_y}{\\beta p_x}\\right)^{\\beta/(\\alpha+\\beta)}\\]\nRearranging: \\[\\boxed{x^h(p_x, p_y, \\bar{U}) = \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} \\left(\\frac{p_y}{p_x}\\right)^{\\beta/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)}}\\]\nSimilarly, substituting back: \\[\\boxed{y^h(p_x, p_y, \\bar{U}) = \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)} \\left(\\frac{p_x}{p_y}\\right)^{\\alpha/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)}}\\]"
+  },
+  {
+    "objectID": "add-content/lec1-2-cd-derivations.html#expenditure-function",
+    "href": "add-content/lec1-2-cd-derivations.html#expenditure-function",
+    "title": "Cobb-Douglas Example",
+    "section": "2.4 Expenditure Function",
+    "text": "2.4 Expenditure Function\nThe expenditure function is: \\[E(p_x, p_y, \\bar{U}) = p_x x^h + p_y y^h\\]\nSubstituting the Hicksian demands: \\[E = p_x \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} \\left(\\frac{p_y}{p_x}\\right)^{\\beta/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)} + p_y \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)} \\left(\\frac{p_x}{p_y}\\right)^{\\alpha/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)}\\]\nSimplifying the first term: \\[p_x \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} \\left(\\frac{p_y}{p_x}\\right)^{\\beta/(\\alpha+\\beta)} = \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} p_x^{\\alpha/(\\alpha+\\beta)} p_y^{\\beta/(\\alpha+\\beta)}\\]\nSimilarly for the second term: \\[p_y \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)} \\left(\\frac{p_x}{p_y}\\right)^{\\alpha/(\\alpha+\\beta)} = \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)} p_x^{\\alpha/(\\alpha+\\beta)} p_y^{\\beta/(\\alpha+\\beta)}\\]\nTherefore: \\[E = p_x^{\\alpha/(\\alpha+\\beta)} p_y^{\\beta/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)} \\left[\\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} + \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)}\\right]\\]\nLet: \\[C = \\left(\\frac{\\alpha}{\\beta}\\right)^{\\beta/(\\alpha+\\beta)} + \\left(\\frac{\\beta}{\\alpha}\\right)^{\\alpha/(\\alpha+\\beta)}\\]\nThen: \\[\\boxed{E(p_x, p_y, \\bar{U}) = C \\cdot p_x^{\\alpha/(\\alpha+\\beta)} p_y^{\\beta/(\\alpha+\\beta)} \\bar{U}^{1/(\\alpha+\\beta)}}\\]"
+  },
+  {
+    "objectID": "add-content/lec3-ces-prod-func.html",
+    "href": "add-content/lec3-ces-prod-func.html",
+    "title": "CES Production Function",
+    "section": "",
+    "text": "The Constant Elasticity of Substitution (CES) production function is given by:\n\\[F(K, L) = A\\left[\\alpha K^{\\rho} + (1-\\alpha) L^{\\rho}\\right]^{r/\\rho}\\]\nwhere:\n\n\\(A &gt; 0\\) is total factor productivity\n\\(\\alpha \\in (0,1)\\) is the distribution (share) parameter\n\\(\\rho \\leq 1, \\; \\rho \\neq 0\\) governs the elasticity of substitution\n\\(r &gt; 0\\) governs returns to scale\n\nThe elasticity of substitution (defined and derived below) is \\(\\sigma = \\frac{1}{1-\\rho}\\). Note then \\(\\rho = \\frac{\\sigma-1}{\\sigma}\\), so sometimes CES function (for \\(r=1\\)) is also written as:\n\\[F(K, L) = A\\left[\\alpha K^{\\frac{\\sigma-1}{\\sigma}} + (1-\\alpha) L^{\\frac{\\sigma-1}{\\sigma}}\\right]^{\\frac{\\sigma}{\\sigma-1}}\\]\nCES function nests several important special cases:\n\nCobb-Douglas: \\(\\rho \\to 0\\) (or \\(\\sigma \\to 1\\))\nPerfect substitutes: \\(\\rho \\to 1\\) (or \\(\\sigma \\to \\infty\\))\nPerfect complements: \\(\\rho \\to -\\infty\\) (or \\(\\sigma \\to 0\\))"
+  },
+  {
+    "objectID": "add-content/lec3-ces-prod-func.html#definition",
+    "href": "add-content/lec3-ces-prod-func.html#definition",
+    "title": "CES Production Function",
+    "section": "",
+    "text": "The Constant Elasticity of Substitution (CES) production function is given by:\n\\[F(K, L) = A\\left[\\alpha K^{\\rho} + (1-\\alpha) L^{\\rho}\\right]^{r/\\rho}\\]\nwhere:\n\n\\(A &gt; 0\\) is total factor productivity\n\\(\\alpha \\in (0,1)\\) is the distribution (share) parameter\n\\(\\rho \\leq 1, \\; \\rho \\neq 0\\) governs the elasticity of substitution\n\\(r &gt; 0\\) governs returns to scale\n\nThe elasticity of substitution (defined and derived below) is \\(\\sigma = \\frac{1}{1-\\rho}\\). Note then \\(\\rho = \\frac{\\sigma-1}{\\sigma}\\), so sometimes CES function (for \\(r=1\\)) is also written as:\n\\[F(K, L) = A\\left[\\alpha K^{\\frac{\\sigma-1}{\\sigma}} + (1-\\alpha) L^{\\frac{\\sigma-1}{\\sigma}}\\right]^{\\frac{\\sigma}{\\sigma-1}}\\]\nCES function nests several important special cases:\n\nCobb-Douglas: \\(\\rho \\to 0\\) (or \\(\\sigma \\to 1\\))\nPerfect substitutes: \\(\\rho \\to 1\\) (or \\(\\sigma \\to \\infty\\))\nPerfect complements: \\(\\rho \\to -\\infty\\) (or \\(\\sigma \\to 0\\))"
+  },
+  {
+    "objectID": "add-content/lec3-ces-prod-func.html#returns-to-scale",
+    "href": "add-content/lec3-ces-prod-func.html#returns-to-scale",
+    "title": "CES Production Function",
+    "section": "Returns to Scale",
+    "text": "Returns to Scale\nScale all inputs by \\(\\lambda &gt; 0\\):\n\\[F(\\lambda K, \\lambda L) = A\\left[\\alpha (\\lambda K)^{\\rho} + (1-\\alpha)(\\lambda L)^{\\rho}\\right]^{r/\\rho}\\]\n\\[= A\\left[\\lambda^{\\rho}\\left(\\alpha K^{\\rho} + (1-\\alpha) L^{\\rho}\\right)\\right]^{r/\\rho}\\]\n\\[= \\lambda^{r} \\cdot A\\left[\\alpha K^{\\rho} + (1-\\alpha) L^{\\rho}\\right]^{r/\\rho}\\]\n\\[\\boxed{F(\\lambda K, \\lambda L) = \\lambda^{r} \\cdot F(K,L)}\\]\nThe function is homogeneous of degree \\(r\\): increasing returns if \\(r &gt; 1\\), constant returns if \\(r = 1\\), and decreasing returns if \\(r &lt; 1\\)."
+  },
+  {
+    "objectID": "add-content/lec3-ces-prod-func.html#marginal-products",
+    "href": "add-content/lec3-ces-prod-func.html#marginal-products",
+    "title": "CES Production Function",
+    "section": "Marginal Products",
+    "text": "Marginal Products\nLet \\(Z = \\alpha K^{\\rho} + (1-\\alpha) L^{\\rho}\\) so that \\(F = A Z^{r/\\rho}\\). By the chain rule:\n\\[MP_K = \\frac{\\partial F}{\\partial K} = A \\cdot \\frac{r}{\\rho} Z^{r/\\rho - 1} \\cdot \\alpha \\rho K^{\\rho - 1} = A r \\alpha K^{\\rho-1} Z^{r/\\rho - 1}\\]\n\\[\\boxed{MP_K = A r \\alpha K^{\\rho - 1}\\left[\\alpha K^{\\rho} + (1-\\alpha) L^{\\rho}\\right]^{r/\\rho - 1}}\\]\nBy symmetry \\(MP_L = A r (1-\\alpha) L^{\\rho - 1} Z^{r/\\rho - 1}\\) or:\n\\[\\boxed{MP_L = A r (1-\\alpha) L^{\\rho - 1}\\left[\\alpha K^{\\rho} + (1-\\alpha) L^{\\rho}\\right]^{r/\\rho - 1}}\\]"
+  },
+  {
+    "objectID": "add-content/lec3-ces-prod-func.html#marginal-rate-of-technical-substitution",
+    "href": "add-content/lec3-ces-prod-func.html#marginal-rate-of-technical-substitution",
+    "title": "CES Production Function",
+    "section": "Marginal Rate of Technical Substitution",
+    "text": "Marginal Rate of Technical Substitution\nThe MRTS is:\n\\[MRTS = \\frac{MP_L}{MP_K} = \\frac{A r (1-\\alpha) L^{\\rho - 1} Z^{r/\\rho - 1}}{A r \\alpha K^{\\rho - 1} Z^{r/\\rho - 1}}\\]\nCanceling common terms, we get:\n\\[\\boxed{MRTS = \\frac{1-\\alpha}{\\alpha}\\left(\\frac{L}{K}\\right)^{\\rho-1}}\\]\nThe MRTS captures the rate at which the firm can substitute capital for labor while keeping output constant. For example, if \\(MRTS = 2\\), then the firm can can replace one unit of labor with two units of capital without changing output.\nFrom the expression above, we can see that the MRTS at all input ratios is higher when:\n\n\\(\\alpha\\) is smaller (i.e., when labor is more important in production, so we need more capital to substitute for labor)\n\\(\\rho\\) is smaller (i.e., when inputs are more easily substitutable)\n\nAdditionally, the capital units needed to substitute for one unit of labor increases as the input ratio \\(K/L\\) increases (power \\(\\rho-1\\) is negative.)"
+  },
+  {
+    "objectID": "add-content/lec3-ces-prod-func.html#elasticity-of-substitution",
+    "href": "add-content/lec3-ces-prod-func.html#elasticity-of-substitution",
+    "title": "CES Production Function",
+    "section": "Elasticity of Substitution",
+    "text": "Elasticity of Substitution\nThe MRTS tells us the rate at which a firm can trade one input for another while maintaining the same output level, but it doesn’t tell us how responsive the firm’s input mix is to changes in that trade-off rate. In other words, MRTS captures the slope of the isoquant at a point, but it doesn’t tell us about the shape of the isoquant and how quickly the slope changes as we move along the isoquant. The elasticity of substitution captures this responsiveness.\nIn particular, the elasticity of substitution is defined as:\n\\[\\sigma = \\frac{d\\ln(K/L)}{d\\ln(MRTS)}\\]\nRemember changes in logs capture percentage changes (\\(d\\ln(x) =  dx/x\\)). Therefore, \\(\\sigma\\) captures the percentage change in the input ratio for a given percentage change in the MRTS.\n\n\n\n\n\n\n\n\nFigure 1: Two isoquants with the same MRTS at point A but different curvatures\n\n\n\n\n\n  Case   σ  K/L at A  MRTS at A  K/L at B  MRTS at B\nHigh σ 2.0       2.0        2.0      0.18        0.6\n Low σ 0.5       2.0        2.0      1.09        0.6\n\n\nIn the above example, both isoquants start at point A with K/L = 2.0 and MRTS = 2.0. At point B, both have the same new MRTS of 0.6. So the change in the marginal rate is identical. But look at how differently the input mix responds. With high σ, K/L plummets from 2.0 to 0.18: the firm dramatically shifts toward labor. With low σ, K/L moves by much less, from 2.0 to 1.09.\nTo derive that \\(\\sigma = \\frac{1}{1-\\rho}\\), we start by taking logs of the MRTS expression:\n\\[\\ln(MRTS) = \\ln\\left(\\frac{\\alpha}{1-\\alpha}\\right) + (\\rho - 1)\\ln\\left(\\frac{L}{K}\\right)\\]\nPlugging \\(\\ln(L/K) = -\\ln(K/L)\\) and total differentiating (\\(\\alpha\\) and \\(\\rho\\) are constants):\n\\[d\\ln(MRTS) = (1 - \\rho) \\, d\\ln(K/L)\\]\nTherefore:\n\\[\\boxed{\\sigma = \\frac{1}{1-\\rho}}\\]\nThe elasticity of substitution is constant and it does not depend on input levels, which gives the CES function its name."
+  },
+  {
+    "objectID": "add-content/lec3-ces-prod-func.html#cost-minimization",
+    "href": "add-content/lec3-ces-prod-func.html#cost-minimization",
+    "title": "CES Production Function",
+    "section": "Cost Minimization",
+    "text": "Cost Minimization\n\nProblem\nFor constant returns to scale (\\(r = 1\\)), the firm minimizes the cost of producing output \\(q\\):\n\\[\\min_{K, L} \\quad wL + rK\\]\nsubject to:\n\\[A\\left[\\alpha K^{\\rho} + (1-\\alpha) L^{\\rho}\\right]^{1/\\rho} = q\\]\nwhere \\(w\\) is the wage and \\(r\\) is the rental rate of capital.\n\n\nOptimality Condition\nSetting \\(MRTS = w/r\\) (the price ratio):\n\\[\\frac{1-\\alpha}{\\alpha}\\left(\\frac{L}{K}\\right)^{\\rho-1} = \\frac{w}{r}\\]\nSolving for the optimal input ratio:\n\\[\\frac{L}{K} = \\left(\\frac{\\alpha}{1-\\alpha} \\cdot \\frac{w}{r}\\right)^{-\\frac{1}{1-\\rho}}\\]\nOr equivalently:\n\\[\\boxed{\\frac{K}{L} = \\left(\\frac{1-\\alpha}{\\alpha} \\cdot \\frac{r}{w}\\right)^{-\\frac{1}{1-\\rho}} = \\left(\\frac{1-\\alpha}{\\alpha} \\cdot \\frac{r}{w}\\right)^{-\\sigma}}\\]\nThis shows that \\(\\sigma\\) directly governs how the input ratio responds to changes in relative factor prices.\nIn applied work, the log form of the above expression is often used for estimation:\n\\[\\ln\\left(\\frac{K}{L}\\right) = \\underbrace{\\sigma \\ln\\left(\\frac{\\alpha}{1-\\alpha}\\right)}_{\\text{Constant}} - \\sigma \\ln\\left(\\frac{r}{w}\\right)\\]\nSo regressing log of relative input use on log of relative factor prices yields an estimate of the elasticity of substitution \\(\\sigma\\).\nThis shows that we can also express the elasticity of substitution as:\n\\[\\sigma = \\frac{d\\ln(K/L)}{d\\ln(r/w)}\\]\nwhere \\(K/L\\) is the equilibrium input ratio because in equilibrium \\(MRTS = w/r\\). So another way to interpret \\(\\sigma\\) is that it captures the percentage change in the input ratio for a given percentage change in relative factor prices.\n\n\nConditional Factor Demands\nSubstituting the optimal ratio back into the production constraint yields the conditional factor demands. In particular, from the optimal ratio we have \\(K = L \\cdot \\left(\\frac{1-\\alpha}{\\alpha} \\cdot \\frac{r}{w}\\right)^{\\frac{1}{\\rho-1}}\\), so we can write the production constraint as:\n\\[A\\left[\\alpha \\left(L \\cdot \\left(\\frac{1-\\alpha}{\\alpha} \\cdot \\frac{r}{w}\\right)^{\\frac{1}{\\rho-1}}\\right)^{\\rho} + (1-\\alpha) L^{\\rho}\\right]^{1/\\rho} = q\\]\nRearranging and solving for \\(L\\): \\[L(w, r, q) = \\frac{q}{A}\\left[\\alpha \\left(\\frac{1-\\alpha}{\\alpha} \\cdot \\frac{r}{w}\\right)^{\\frac{\\rho}{\\rho-1}} + (1-\\alpha)\\right]^{-\\frac{1}{\\rho}}\\]\nTaking common denominator for the term inside the square brackets: \\[L(w, r, q) = \\frac{q(\\alpha w)^{\\frac{1}{\\rho-1}}}{A}\\left[\\alpha((1-\\alpha)r)^{\\frac{\\rho}{\\rho-1}} + (1-\\alpha)(\\alpha w)^{\\frac{\\rho}{\\rho-1}}\\right]^{-\\frac{1}{\\rho}}\\]\nFactoring out \\(\\alpha(1-\\alpha)\\) inside the square brackets (note coming out from the brackets it will have power \\(-1/\\rho\\))\n\\[L(w, r, q) = \\frac{q(\\alpha w)^{\\frac{1}{\\rho-1}}}{A(\\alpha(1-\\alpha))^{1/\\rho}}\\left[(1-\\alpha)^{\\frac{1}{\\rho-1}}r^{\\frac{\\rho}{\\rho-1}} + \\alpha^{\\frac{1}{\\rho-1}} w^{\\frac{\\rho}{\\rho-1}}\\right]^{-\\frac{1}{\\rho}}\\]\nNow noting \\(K = L \\cdot \\left(\\frac{1-\\alpha}{\\alpha} \\cdot \\frac{r}{w}\\right)^{\\frac{1}{\\rho-1}}\\), we can write the conditional demand for capital as:\n\\[K(w, r, q) = \\frac{q((1-\\alpha)r)^{\\frac{1}{\\rho-1}}}{A(\\alpha(1-\\alpha))^{1/\\rho}}\\left[(1-\\alpha)^{\\frac{1}{\\rho-1}}r^{\\frac{\\rho}{\\rho-1}} + \\alpha^{\\frac{1}{\\rho-1}} w^{\\frac{\\rho}{\\rho-1}}\\right]^{-\\frac{1}{\\rho}}\\]\n\n\nCost Function\nThe cost function is the minimum cost of producing output \\(q\\) given factor prices:\n\\[C(w, r, q) = wL(w, r, q) + rK(w, r, q)\\]\nPlugging in the expressions for \\(L(w, r, q)\\) and \\(K(w, r, q)\\):\n\\[C(w, r, q) = \\frac{q}{A(\\alpha(1-\\alpha))^{1/\\rho}}\\left[(1-\\alpha)^{\\frac{1}{\\rho-1}}r^{\\frac{\\rho}{\\rho-1}} + \\alpha^{\\frac{1}{\\rho-1}} w^{\\frac{\\rho}{\\rho-1}}\\right]^{-\\frac{1}{\\rho}} X\\]\nwhere \\[ X = w(\\alpha w)^{\\frac{1}{\\rho-1}} + r((1-\\alpha)r)^{\\frac{1}{\\rho-1}}\\]\nWhich is the same as the term inside the square brackets, so we can simplify to:\n\\[\\boxed{C(w, r, q) = \\frac{q}{A(\\alpha(1-\\alpha))^{1/\\rho}}\\left[(1-\\alpha)^{\\frac{1}{\\rho-1}}r^{\\frac{\\rho}{\\rho-1}} + \\alpha^{\\frac{1}{\\rho-1}} w^{\\frac{\\rho}{\\rho-1}}\\right]^{\\frac{\\rho-1}{\\rho}}}\\]\nInterestingly, the cost function also has a CES form in factor prices, but with elasticity of substitution \\(\\rho\\)."
+  },
+  {
+    "objectID": "content/lecture1.html",
+    "href": "content/lecture1.html",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Introduction to the course\nPreferences and utility functions\nIndifference curves and marginal rate of substitution (MRS)\nUtility maximization\nApplications\n\nTextbook references: Sections 3.1-3.6; Sections 4.1-4.5",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "content/lecture1.html#topics",
+    "href": "content/lecture1.html#topics",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Introduction to the course\nPreferences and utility functions\nIndifference curves and marginal rate of substitution (MRS)\nUtility maximization\nApplications\n\nTextbook references: Sections 3.1-3.6; Sections 4.1-4.5",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "content/lecture1.html#slides",
+    "href": "content/lecture1.html#slides",
+    "title": "Lecture 1",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "content/lecture11.html",
+    "href": "content/lecture11.html",
+    "title": "Lecture 11",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "IV. Uncertainty and Strategy",
+      "Lecture 11"
+    ]
+  },
+  {
+    "objectID": "content/lecture11.html#topics",
+    "href": "content/lecture11.html#topics",
+    "title": "Lecture 11",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "IV. Uncertainty and Strategy",
+      "Lecture 11"
+    ]
+  },
+  {
+    "objectID": "content/lecture11.html#slides",
+    "href": "content/lecture11.html#slides",
+    "title": "Lecture 11",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "IV. Uncertainty and Strategy",
+      "Lecture 11"
+    ]
+  },
+  {
+    "objectID": "content/lecture2.html",
+    "href": "content/lecture2.html",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Indirect utility function\nExpenditure minimization and expenditure function\nMarshallian and Hicksian demand\nSlutsky equation\nMeasuring welfare: CV, EV, and consumer surplus\n\nTextbook references: 4.4; 4.7; 5.1-5.8; 6.1-6.3",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "content/lecture2.html#topics",
+    "href": "content/lecture2.html#topics",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Indirect utility function\nExpenditure minimization and expenditure function\nMarshallian and Hicksian demand\nSlutsky equation\nMeasuring welfare: CV, EV, and consumer surplus\n\nTextbook references: 4.4; 4.7; 5.1-5.8; 6.1-6.3",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "content/lecture2.html#slides",
+    "href": "content/lecture2.html#slides",
+    "title": "Lecture 1",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "content/lecture4.html",
+    "href": "content/lecture4.html",
+    "title": "Lecture 4",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "content/lecture4.html#topics",
+    "href": "content/lecture4.html#topics",
+    "title": "Lecture 4",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "content/lecture4.html#slides",
+    "href": "content/lecture4.html#slides",
+    "title": "Lecture 4",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "content/lecture6.html",
+    "href": "content/lecture6.html",
+    "title": "Lecture 6",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 6"
+    ]
+  },
+  {
+    "objectID": "content/lecture6.html#topics",
+    "href": "content/lecture6.html#topics",
+    "title": "Lecture 6",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 6"
+    ]
+  },
+  {
+    "objectID": "content/lecture6.html#slides",
+    "href": "content/lecture6.html#slides",
+    "title": "Lecture 6",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 6"
+    ]
+  },
+  {
+    "objectID": "content/lecture8.html",
+    "href": "content/lecture8.html",
+    "title": "Lecture 8",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 8"
+    ]
+  },
+  {
+    "objectID": "content/lecture8.html#topics",
+    "href": "content/lecture8.html#topics",
+    "title": "Lecture 8",
+    "section": "",
+    "text": "Textbook references:",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 8"
+    ]
+  },
+  {
+    "objectID": "content/lecture8.html#slides",
+    "href": "content/lecture8.html#slides",
+    "title": "Lecture 8",
+    "section": "Slides",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "crumbs": [
+      "Content",
+      "II. Market Power",
+      "Lecture 8"
+    ]
+  },
+  {
+    "objectID": "content/part1-add-content.html",
+    "href": "content/part1-add-content.html",
+    "title": "Additional Content",
+    "section": "",
+    "text": "You can find additional content and reference materials for Part I: Competetive Markets below.",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Additional Content"
+    ]
+  },
+  {
+    "objectID": "content/part1-add-content.html#consumer-theory-lectures-1-and-2",
+    "href": "content/part1-add-content.html#consumer-theory-lectures-1-and-2",
+    "title": "Additional Content",
+    "section": "Consumer Theory (Lectures 1 and 2)",
+    "text": "Consumer Theory (Lectures 1 and 2)\n\nCobb-Douglas Demand Derivations\n\nThis handout provides step-by-step derivations of the Marshallian (uncompensated) and Hicksian (compensated) demand functions for Cobb-Douglas preferences.",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Additional Content"
+    ]
+  },
+  {
+    "objectID": "content/part1-add-content.html#producer-theory-lecture-3",
+    "href": "content/part1-add-content.html#producer-theory-lecture-3",
+    "title": "Additional Content",
+    "section": "Producer Theory (Lecture 3)",
+    "text": "Producer Theory (Lecture 3)\n\nCES Production Functions\n\nThis handout derives the cost-minimizing input demands and cost function for a CES production function, and shows how to calculate the elasticity of substitution from the CES parameter.",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Additional Content"
+    ]
+  },
+  {
+    "objectID": "content/part1-add-content.html#competitive-equilibrium-lecture-4",
+    "href": "content/part1-add-content.html#competitive-equilibrium-lecture-4",
+    "title": "Additional Content",
+    "section": "Competitive Equilibrium (Lecture 4)",
+    "text": "Competitive Equilibrium (Lecture 4)\n\nTax Incidence and Deadweight Loss Derivations\n\nThis handout derives the formulas for tax incidence on consumers and producers, as well as the deadweight loss from a tax, in a simple supply and demand framework.",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Additional Content"
+    ]
+  },
+  {
+    "objectID": "content/part1-add-content.html#welfare-analysis-lecture-5",
+    "href": "content/part1-add-content.html#welfare-analysis-lecture-5",
+    "title": "Additional Content",
+    "section": "Welfare Analysis (Lecture 5)",
+    "text": "Welfare Analysis (Lecture 5)\n\nChapter 16, Pyndyck and Rubinfeld, Microeconomics, 9th Edition\n\nThis chapter from the Pyndyck and Rubinfeld is a good reference in addition to the textbook.",
+    "crumbs": [
+      "Content",
+      "I. Competitive Markets",
+      "Additional Content"
+    ]
+  },
+  {
+    "objectID": "content/part3-add-content.html",
+    "href": "content/part3-add-content.html",
+    "title": "Additional Content",
+    "section": "",
+    "text": "You can find additional content and reference materials for Part III: Market Failures below.",
+    "crumbs": [
+      "Content",
+      "III. Market Failures",
+      "Additional Content"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Advanced Microeconomics",
+    "section": "",
+    "text": "Learn how individuals, firms, and markets interact through the lens of microeconomic theory, with applications to real-world economic problems.\n\nECON 502 | Spring 2026 | College of Business and Economics | California State University\n\n\nInstructor\n   Dr. Div Bhagia     Office: SGMH 3361     dbhagia@fullerton.edu \n\n\nCourse Details\n   SGMH 2501, Mondays, 7-9:45 PM     Office hours:\n\n\nMondays, 5-6.45 PM, or\nBy appointment (in-person or on Zoom)"
+  },
+  {
+    "objectID": "problem-sets/ps1-solutions.html",
+    "href": "problem-sets/ps1-solutions.html",
+    "title": "Problem Set 1: Solutions",
+    "section": "",
+    "text": "Michele’s utility function: \\(U_1(c_1, c_2) = c_1^{1-a}c_2^a\\), with budget constraint \\(c_1 + c_2 = I\\).\n\n\n\nWhen \\(a = 0\\): \\(U_1 = c_1\\). Michele is completely selfish and cares only about her own consumption.\nWhen \\(a = 1\\): \\(U_1 = c_2\\). Michele is completely selfless and cares only about Sofia’s consumption.\nWhen \\(a = 0.5\\): \\(U_1 = c_1^{0.5}c_2^{0.5}\\). Michele is a perfect altruist and weights her own and Sofia’s consumption equally.\n\nThe exponent \\(a\\) represents the share of Michele’s “concern” (or budget) allocated to Sofia. Higher \\(a\\) means more altruistic.\n\n\n\nThis is a standard Cobb-Douglas maximization problem with \\(p_1 = p_2 = 1\\). Using the Cobb-Douglas demand functions: \\[c_1^* = \\frac{(1-a) \\cdot I}{(1-a+a) \\cdot 1} = (1-a)I\\] \\[c_2^* = \\frac{a \\cdot I}{(1-a+a) \\cdot 1} = aI\\]\n\\[\\boxed{c_1^* = (1-a)I, \\qquad c_2^* = aI}\\]\nAs \\(a\\) increases, Michele donates more to Sofia (\\(c_2^*\\) rises) and keeps less for herself (\\(c_1^*\\) falls). The share spent on Sofia is exactly \\(a\\).\n\n\n\nWith income tax (no deduction):\nAfter-tax income is \\((1-t)I\\). The problem is unchanged except income falls to \\((1-t)I\\): \\[c_1^* = (1-a)(1-t)I, \\qquad c_2^* = a(1-t)I\\]\nBoth consumption levels fall proportionally. The share devoted to charity is still \\(a\\).\nWith income tax and charitable deduction:\nIf charitable donations are tax-deductible, Michele pays tax only on non-donated income. Her taxable income is \\(I - c_2\\) (charitable donations are deducted), so her tax bill is \\(t(I - c_2)\\). The budget constraint is: \\[c_1 + c_2 = I - t(I - c_2)\\] \\[c_1 + c_2 = (1-t)I + tc_2\\] \\[c_1 + (1-t)c_2 = (1-t)I\\]\nSo the effective prices are \\(p_1 = 1\\) for own consumption and \\(p_2 = (1-t)\\) for donations (out of after-tax income \\((1-t)I\\)). Equivalently, dividing through by \\((1-t)\\):\n\\[ \\frac{c_1}{1-t} + c_2 = I\\]\nApplying Cobb-Douglas demands with \\(p_1 = 1/(1-t)\\) and \\(p_2 = 1\\): \\[ c_1^* = \\frac{(1-a)I}{1/(1-t)} = (1-a)(1-t)I\\] \\[ c_2^* = \\frac{aI}{1} = aI\\]\n\\[\\boxed{c_1^* = (1-a)(1-t)I, \\qquad c_2^* = aI}\\]\nKey result: With the charitable deduction, donations return to the no-tax level (\\(aI\\)), while own-consumption still falls due to taxes. The deduction fully offsets the tax’s effect on giving.\nComparing tax only vs. tax with deduction:\n\nWithout deduction: \\(c_2 = a(1-t)I\\)\nWith deduction: \\(c_2 = aI\\)\n\nThe increase in donations due to the deduction is \\(aI - a(1-t)I = atI\\). This is larger for more altruistic people (higher \\(a\\)), so the charitable deduction has a bigger incentive effect on more altruistic individuals."
+  },
+  {
+    "objectID": "problem-sets/ps1-solutions.html#problem-1-altruism-textbook-ex-4.14",
+    "href": "problem-sets/ps1-solutions.html#problem-1-altruism-textbook-ex-4.14",
+    "title": "Problem Set 1: Solutions",
+    "section": "",
+    "text": "Michele’s utility function: \\(U_1(c_1, c_2) = c_1^{1-a}c_2^a\\), with budget constraint \\(c_1 + c_2 = I\\).\n\n\n\nWhen \\(a = 0\\): \\(U_1 = c_1\\). Michele is completely selfish and cares only about her own consumption.\nWhen \\(a = 1\\): \\(U_1 = c_2\\). Michele is completely selfless and cares only about Sofia’s consumption.\nWhen \\(a = 0.5\\): \\(U_1 = c_1^{0.5}c_2^{0.5}\\). Michele is a perfect altruist and weights her own and Sofia’s consumption equally.\n\nThe exponent \\(a\\) represents the share of Michele’s “concern” (or budget) allocated to Sofia. Higher \\(a\\) means more altruistic.\n\n\n\nThis is a standard Cobb-Douglas maximization problem with \\(p_1 = p_2 = 1\\). Using the Cobb-Douglas demand functions: \\[c_1^* = \\frac{(1-a) \\cdot I}{(1-a+a) \\cdot 1} = (1-a)I\\] \\[c_2^* = \\frac{a \\cdot I}{(1-a+a) \\cdot 1} = aI\\]\n\\[\\boxed{c_1^* = (1-a)I, \\qquad c_2^* = aI}\\]\nAs \\(a\\) increases, Michele donates more to Sofia (\\(c_2^*\\) rises) and keeps less for herself (\\(c_1^*\\) falls). The share spent on Sofia is exactly \\(a\\).\n\n\n\nWith income tax (no deduction):\nAfter-tax income is \\((1-t)I\\). The problem is unchanged except income falls to \\((1-t)I\\): \\[c_1^* = (1-a)(1-t)I, \\qquad c_2^* = a(1-t)I\\]\nBoth consumption levels fall proportionally. The share devoted to charity is still \\(a\\).\nWith income tax and charitable deduction:\nIf charitable donations are tax-deductible, Michele pays tax only on non-donated income. Her taxable income is \\(I - c_2\\) (charitable donations are deducted), so her tax bill is \\(t(I - c_2)\\). The budget constraint is: \\[c_1 + c_2 = I - t(I - c_2)\\] \\[c_1 + c_2 = (1-t)I + tc_2\\] \\[c_1 + (1-t)c_2 = (1-t)I\\]\nSo the effective prices are \\(p_1 = 1\\) for own consumption and \\(p_2 = (1-t)\\) for donations (out of after-tax income \\((1-t)I\\)). Equivalently, dividing through by \\((1-t)\\):\n\\[ \\frac{c_1}{1-t} + c_2 = I\\]\nApplying Cobb-Douglas demands with \\(p_1 = 1/(1-t)\\) and \\(p_2 = 1\\): \\[ c_1^* = \\frac{(1-a)I}{1/(1-t)} = (1-a)(1-t)I\\] \\[ c_2^* = \\frac{aI}{1} = aI\\]\n\\[\\boxed{c_1^* = (1-a)(1-t)I, \\qquad c_2^* = aI}\\]\nKey result: With the charitable deduction, donations return to the no-tax level (\\(aI\\)), while own-consumption still falls due to taxes. The deduction fully offsets the tax’s effect on giving.\nComparing tax only vs. tax with deduction:\n\nWithout deduction: \\(c_2 = a(1-t)I\\)\nWith deduction: \\(c_2 = aI\\)\n\nThe increase in donations due to the deduction is \\(aI - a(1-t)I = atI\\). This is larger for more altruistic people (higher \\(a\\)), so the charitable deduction has a bigger incentive effect on more altruistic individuals."
+  },
+  {
+    "objectID": "problem-sets/ps1-solutions.html#problem-2-elasticities-and-logs-textbook-ex-5.8",
+    "href": "problem-sets/ps1-solutions.html#problem-2-elasticities-and-logs-textbook-ex-5.8",
+    "title": "Problem Set 1: Solutions",
     "section": "Problem 2: Elasticities and Logs (Textbook Ex 5.8)",
-    "text": "Problem 2: Elasticities and Logs (Textbook Ex 5.8)\nBecause natural logarithms measure proportional changes, they correspond well to elasticity concepts. Here you are asked to show a few of these connections.\n\nShow that \\(e_{x,p_x} = \\dfrac{\\partial \\ln x}{\\partial \\ln p_x}\\)\nFor the constant elasticity demand function \\(x = a(p_x)^m\\) where \\(m &lt; 0\\), show that \\(e_{x,p_x} = m\\)."
+    "text": "Problem 2: Elasticities and Logs (Textbook Ex 5.8)\n\nPart (a): Show that \\(e_{x,p_x} = \\frac{d \\ln x}{d \\ln p_x}\\)\nFirst note that price elasticity of demand is defined as: \\[e_{x,p_x} = \\frac{d x}{d p_x} \\cdot \\frac{p_x}{x}\\]\nNow note that for \\(u = \\ln x\\), we have \\(\\dfrac{d u}{d x} = \\dfrac{1}{x}\\), rearranging this gives \\(du = \\dfrac{1}{x} dx\\). Noting that \\(du = d \\ln x\\) we have: \\[d \\ln x = \\frac{1}{x} dx\\]\nSimilarly, we can write \\[d \\ln p_x = \\frac{1}{p_x} dp_x\\]\nTherefore, we have: \\[\\frac{d \\ln x}{d \\ln p_x} = \\frac{ \\frac{1}{x} dx}{\\frac{1}{p_x} dp_x} = \\frac{dx}{dp_x} \\cdot \\frac{p_x}{x} = e_{x,p_x}\\]\n\n\nPart (b): Constant elasticity demand\nGiven \\(x = a(p_x)^m\\), take the natural log of both sides: \\[\\ln x = \\ln a + m \\ln p_x\\]\nDifferentiate with respect to \\(\\ln p_x\\): \\[e_{x,p_x} = \\frac{d \\ln x}{d \\ln p_x} = m\\]\nThis functional form is called the “constant elasticity” demand function as the elasticity equals \\(m\\) regardless of the price level."
   },
   {
-    "objectID": "problem-sets/ps1.html#problem-3-sugar-sweetened-beverage-tax",
-    "href": "problem-sets/ps1.html#problem-3-sugar-sweetened-beverage-tax",
-    "title": "Problem Set 1",
+    "objectID": "problem-sets/ps1-solutions.html#problem-3-sugar-sweetened-beverage-tax",
+    "href": "problem-sets/ps1-solutions.html#problem-3-sugar-sweetened-beverage-tax",
+    "title": "Problem Set 1: Solutions",
     "section": "Problem 3: Sugar-Sweetened Beverage Tax",
-    "text": "Problem 3: Sugar-Sweetened Beverage Tax\nCities like Philadelphia and Berkeley have implemented taxes on sugar-sweetened beverages (SSBs) to reduce consumption and improve public health. Consider a consumer with preferences over sugary drinks (\\(s\\), measured in ounces per month) and a composite good (\\(x\\)) given by:\n\\[U(s, x) = s^{0.3} x^{0.7}\\]\nThe consumer has income \\(I = \\$300\\) per month. Initially, the price of sugary drinks is \\(p_s = \\$0.05\\) per ounce and the price of the composite good is \\(p_x = \\$1\\).\nThe city proposes a tax of \\(t = \\$0.015\\) per ounce on sugary drinks (similar to Philadelphia’s 2017 tax), raising the consumer price to \\(p_s' = \\$0.065\\) per ounce.\nNote: Parts (a), (b), and (d) require the Marshallian demand functions, which you derive from utility maximization. On the other hand, part (c) requires the expenditure function/Hicksian demand, which you derive from expenditure minimization.\n\nCalculate the consumer’s initial optimal consumption bundle \\((s^*, x^*)\\) and utility level \\(U_0\\).\nCalculate the new optimal consumption bundle \\((s^{**}, x^{**})\\) after the tax is implemented.\nConsumer Surplus: Using the demand function for sugary drinks, calculate the approximate loss in consumer surplus from the tax. Compare this to the CV. (If you don’t know how to integrate, you can approximate the area using a trapezoid or rectangle method or use a scientific calculator.)\nCompensating Variation (CV): Calculate how much additional income the consumer would need after the tax to achieve the original utility level \\(U_0\\). This represents the money-metric loss in welfare from the consumer’s perspective.\nTax Revenue and Deadweight Loss: Calculate:\n\nTotal tax revenue collected: \\(R = t \\cdot s^{**}\\)\nDeadweight loss: \\(DWL = CV - R\\)\n\nInterpret these results. Is the tax efficient if consuming sugary drinks creates a negative health externality of \\(e = \\$0.01\\) per ounce (in terms of future healthcare costs and lost productivity)?\nRevenue Recycling: Suppose instead of keeping the tax revenue, the government rebates it back to the consumer as a lump-sum transfer (equal to the tax revenue collected).\n\nWhat is the consumer’s new budget constraint?\nWhat is their optimal consumption?\nWhat is their utility level?\nCompare this to parts (a) and (b). Is the consumer better or worse off than with no policy? Why?\n\nPolicy Discussion: Discuss the following:\n\nWhich welfare measure (CV vs CS) is most appropriate for policy analysis? Why might they differ?\nIs the sugary drink tax regressive (hurts poor households more)? How would you empirically test this?\nEvidence from Philadelphia shows substantial cross-border shopping reduced the tax’s effectiveness. How does this affect your welfare calculations? What does it suggest about optimal policy design?\nIf consumers exhibit present bias (underweight future health costs), does this justify a higher or lower tax than your calculation in part (f) suggests? How would you modify the welfare analysis to account for behavioral biases?"
+    "text": "Problem 3: Sugar-Sweetened Beverage Tax\nGiven: \\(U(s, x) = s^{0.3}x^{0.7}\\), \\(I = 300\\), \\(p_s = 0.05\\), \\(p_x = 1\\), tax \\(t = 0.015\\), so \\(p_s' = 0.065\\).\nSince \\(\\alpha + \\beta = 0.3 + 0.7 = 1\\), the Cobb-Douglas demands simplify to standard expenditure shares.\n\nPart (a): Initial optimal bundle\nUsing Cobb-Douglas Marshallian demands: \\[s^* = \\frac{0.3 \\cdot I}{p_s} = \\frac{0.3 \\times 300}{0.05} = \\frac{90}{0.05} = 1800 \\text{ oz}\\]\n\\[x^* = \\frac{0.7 \\cdot I}{p_x} = \\frac{0.7 \\times 300}{1} = 210\\]\nUtility: \\[U_0 = (1800)^{0.3}(210)^{0.7} \\approx 400\\]\n\n\nPart (b): Bundle after tax\nWith \\(p_s' = 0.065\\): \\[s^{**} = \\frac{0.3 \\times 300}{0.065} = \\frac{90}{0.065} \\approx 1384.6 \\text{ oz}\\]\n\\[x^{**} = \\frac{0.7 \\times 300}{1} = 210\\]\nNote that \\(x^{**}\\) is unchanged because Cobb-Douglas utility implies each good receives a fixed expenditure share, and \\(p_x\\) did not change.\n\\[\\boxed{s^{**} \\approx 1384.6, \\quad x^{**} = 210}\\]\nNew utility: \\(U_1 = (1384.6)^{0.3}(210)^{0.7} \\approx 370\\)\n\n\nPart (c): Consumer Surplus\nThe Marshallian demand for sugary drinks is \\(s = \\frac{0.3 \\cdot I}{p_s} = \\frac{90}{p_s}\\).\nThe change in consumer surplus is: \\[\\Delta CS = -\\int_{0.05}^{0.065} s(p_s) \\, dp_s = -\\int_{0.05}^{0.065} \\frac{90}{p_s} \\, dp_s\\]\n\\[= -90 \\left[\\ln p_s\\right]_{0.05}^{0.065} = -90(\\ln 0.065 - \\ln 0.05) = -90 \\ln\\left(\\frac{0.065}{0.05}\\right)\\]\n\\[= -90 \\ln(1.3) = -90 \\times 0.2624 = -23.6\\]\n\\[\\boxed{\\Delta CS \\approx -\\$23.62}\\]\nTrapezoid approximation (for students who cannot integrate): The area under the demand curve between the two prices can be approximated as: \\[\\Delta CS \\approx -\\frac{1}{2}(s^* + s^{**}) \\times (p_s' - p_s) = -\\frac{1}{2}(1800 + 1384.6)(0.015) \\approx -\\$23.88\\]\n\n\nPart (d): Compensating Variation\nThe CV is the additional income needed at new prices to achieve the original utility \\(U_0\\). We need the expenditure function.\nFor Cobb-Douglas \\(U = s^{\\alpha}x^{\\beta}\\) with \\(\\alpha + \\beta = 1\\), the expenditure function is: \\[E(p_s, p_x, \\bar{U}) = \\bar{U} \\cdot \\left(\\frac{p_s}{\\alpha}\\right)^{\\alpha}\\left(\\frac{p_x}{\\beta}\\right)^{\\beta} = \\bar{U} \\cdot K \\cdot p_s^{\\alpha}p_x^{\\beta}\\]\nwhere \\(K = \\alpha^{-\\alpha}\\beta^{-\\beta} = (0.3)^{-0.3}(0.7)^{-0.7} = 1.842\\).\nExpenditure at original prices and \\(U_0\\): \\[E(0.05, 1, 400) = 400 \\cdot 1.842 \\cdot (0.05)^{0.3}(1)^{0.7} \\approx 300\\]\nExpenditure at new prices and \\(U_0\\): \\[E(0.065, 1, 400) = 400 \\cdot 1.842 \\cdot (0.065)^{0.3}(1)^{0.7} \\approx 324 \\]\n\\[\\boxed{CV = E(p_s', p_x, U_0) - E(p_s, p_x, U_0) = 324 - 300 = \\$24}\\]\nThe consumer would need $24 in additional income to be as well off as before the tax.\nThe CS approximation is very close to the CV. They are similar because the income effect of this price change is small (sugary drinks are a small share of the budget).\n\n\nPart (f): Tax Revenue and Deadweight Loss\n(i) Tax revenue: \\[R = t \\cdot s^{**} = 0.015 \\times 1384.6 \\approx \\$20.77\\]\n(ii) Deadweight loss: \\[DWL = CV - R = 24 - 20.77 = \\$3.23\\]\nInterpretation: Of the $24 welfare loss to the consumer, $20.77 is transferred to the government as tax revenue and $3.23 is pure efficiency loss (deadweight loss).\nExternality justification: The negative externality is \\(e = \\$0.01\\) per ounce. The reduction in externality from the tax is: \\[\\Delta \\text{Externality} = e \\times (s^* - s^{**}) = 0.01 \\times (1800 - 1384.6) = 0.01 \\times 415.4 = \\$4.15\\]\nThe tax generates $20.77 in revenue and reduces externalities by $4.15, while creating only $3.23 in deadweight loss. Since the externality reduction ($4.15) exceeds the DWL ($3.23), the tax improves overall welfare somewhat.\n\n\nPart (g): Revenue Recycling\n(i) New budget constraint:\nThe consumer faces the taxed price \\(p_s' = 0.065\\) but receives a lump-sum rebate \\(R\\) equal to the tax revenue collected. The budget constraint is: \\[p_s' \\cdot s + x = I + R\\] \\[0.065s + x = 300 + R\\]\nNote that while \\(R = t \\cdot s\\), the consumer takes \\(R\\) as given when choosing \\(s\\) and \\(x\\) (they do not internalize that their choice of \\(s\\) affects \\(R\\)). If they did internalize it, then the consumer’s problem would remain unchanged from the no-tax case.\n(ii) Optimal consumption:\nApplying the Cobb-Douglas demand functions: \\[s(R) = \\frac{0.3(300 + R)}{0.065} \\] \\[x(R) = 0.7(300 + R)\\]\nIn equilibrium, the rebate equals the tax revenue: \\(R = t \\cdot s(R)\\). Substituting: \\[R = 0.015 \\cdot \\frac{0.3(300 + R)}{0.065}\\]\n\\[0.065R = 1.35 + 0.0045R\\]\n\\[0.0605R = 1.35\\]\n\\[R = \\frac{1.35}{0.0605} \\approx 22.31\\]\nTherefore, equilibrium consumption is: \\[s_R = \\frac{0.3(300 + 22.31)}{0.065} \\approx 1487.6 \\text{ oz}\\] \\[x_R = 0.7(300 + 22.31) \\approx 225.6\\]\n(iii) New utility level:\nThe new utility level is: \\[U_R = (s_R)^{0.3}(x_R)^{0.7} \\approx 397\\]\n(iv) Comparison:\nUnder the tax-and-rebate scheme, the consumer reaches utility \\(U_R \\approx 397\\), between the no-tax level (\\(U_0 \\approx 400\\)) and the tax-only level (\\(U_1 \\approx 370\\)). The policy is largely successful: sugary drink consumption falls meaningfully from 1800 to about 1488 ounces, achieving the public health goal, while the rebate returns most of the welfare cost to the consumer. The consumer loses only about 3 utils compared to 30 under the tax alone. Composite good consumption actually rises from 210 to 226, since the rebate provides additional purchasing power that gets redirected toward untaxed goods. The small residual welfare loss (\\(400 - 397\\)) is the unavoidable deadweight loss from distorting relative prices, but it is far smaller than the welfare cost of the tax without revenue recycling.\n\n\nPart (h): Policy Discussion\n(i) CV vs CS:\nThe CV is generally preferred for welfare analysis because it is based on well-defined utility theory and the expenditure function. CS relies on the Marshallian demand curve, which conflates income and substitution effects. However, in this case they give nearly identical results because the income effect is small (sugary drinks are a small budget share). CS is often used in practice because it is easier to estimate empirically (only requires observable demand data, not utility parameters).\n(ii) Regressivity:\nThe tax is likely regressive because lower-income households spend a larger share of their income on taxed beverages. To test this empirically, one could:\n\nCompare pre- and post-tax spending on SSBs across income quintiles using household expenditure surveys\nEstimate demand elasticities by income group (lower-income consumers may be more price-elastic, partially offsetting regressivity)\nCalculate the tax burden as a share of income across the distribution\n\nRevenue recycling (as in part g) can mitigate regressivity if the lump-sum rebate represents a larger share of income for poorer households.\n(iii) Cross-border shopping:\nWith cross-border shopping, the consumer’s effective price lies somewhere between \\(p_s\\) and \\(p_s'\\): they can avoid the tax by traveling to a neighboring jurisdiction, but incur transport and time costs to do so. Call this effective price \\(\\tilde{p}_s \\in (p_s, p_s')\\). This has two offsetting effects on welfare:\n\nSmaller welfare loss to the consumer: Since \\(\\tilde{p}_s &lt; p_s'\\), the consumer faces a smaller effective price increase, so the reduction in consumer surplus (and CV) is smaller than our calculation suggests.\nMuch lower tax revenue: The consumer purchases fewer taxed ounces within the city, so revenue \\(R = t \\cdot s_{\\text{local}}\\) falls substantially if most purchases shift across the border.\n\nThe net effect on deadweight loss (\\(DWL = CV - R\\)) is ambiguous but likely higher: the CV falls somewhat, but revenue falls by more, since the government collects nothing on cross-border purchases while the consumer still bears the cost of traveling to avoid the tax. In the extreme, if all purchases move across the border, \\(R = 0\\) and the entire welfare loss (including transport costs) is pure deadweight loss.\nThis suggests that the optimal policy would be implemented at a broader geographic level (state or federal) to minimize cross-border leakage.\n(iv) Present bias and behavioral considerations:\nIf consumers exhibit present bias, they overweight the immediate pleasure of sugary drinks relative to future health costs. In this case, their experienced utility from reduced consumption may be higher than their decision utility suggests and they would thank their future selves for consuming less.\nTo modify the welfare analysis, one would need to distinguish between decision utility (the preferences consumers act on, which reflect present bias) and experienced utility (their true long-run well-being). Our CV calculation uses decision utility, which overstates the welfare cost of the tax: some of what appears as lost consumer welfare is actually a gain from correcting overconsumption. Under experienced utility, the DWL would be smaller, and the tax may even be welfare-improving if it helps consumers overcome self-control problems. In this case, a higher tax than the one calculated under standard assumptions may be justified to achieve the socially optimal level of consumption."
   },
   {
-    "objectID": "problem-sets/ps2.html",
-    "href": "problem-sets/ps2.html",
-    "title": "Problem Set 2",
+    "objectID": "problem-sets/ps2-solutions.html",
+    "href": "problem-sets/ps2-solutions.html",
+    "title": "Problem Set 2: Solutions",
     "section": "",
-    "text": "A manufacturing firm produces output using robots (R) and workers (L) with the CES production function: \\[Q = [0.6R^{0.5} + 0.4L^{0.5}]^{2}\\]\nThe rental rate for robots is \\(r = 20\\) per hour and the wage is \\(w = 25\\) per hour.\n\nWhat is the elasticity of substitution between robots and workers? What does this tell you about how easily the firm can replace workers with robots?\nSolve for the cost-minimizing mix of robots and workers to produce Q = 1000 units.\nNow suppose technological progress reduces the robot rental rate to \\(r = 10\\). How does the firm’s use of robots and workers change? Calculate the percentage change in the robot-to-worker ratio.\nThe government is considering a “robot tax” that would increase \\(r\\) back to 20 to protect jobs. Using your answer from (c), estimate how many jobs this would save per 1000 units of output. What’s the trade-off?"
+    "text": "The production function \\[Q = [0.6R^{0.5} + 0.4L^{0.5}]^2\\] is a CES function with parameter \\(\\rho = 0.5\\) (since the outer exponent is \\(1/\\rho = 2\\)). The elasticity of substitution is:\n\\[\\sigma = \\frac{1}{1 - \\rho} = \\frac{1}{1 - 0.5} = 2\\]\nSince \\(\\sigma = 2 &gt; 1\\), robots and workers are good substitutes: more substitutable than Cobb-Douglas (\\(\\sigma = 1\\)). The firm can replace workers with robots relatively easily when the price of robots falls. A 1% decrease in the relative price of robots leads to a 2% increase in the robot-to-worker ratio. For more details on CES functions, see handout here.\n\n\n\nThe cost-minimizing condition requires \\(MRTS = r/w\\). Computing the marginal products:\n\\[MP_R = 2[0.6R^{0.5} + 0.4L^{0.5}] \\cdot 0.3 R^{-0.5}, \\qquad MP_L = 2[0.6R^{0.5} + 0.4L^{0.5}] \\cdot 0.2 L^{-0.5}\\]\nTaking the ratio:\n\\[MRTS = \\frac{MP_R}{MP_L} = \\frac{0.3}{0.2} \\cdot \\frac{L^{0.5}}{R^{0.5}} = 1.5\\left(\\frac{L}{R}\\right)^{0.5}\\]\nSetting \\(MRTS = r/w\\) and solving for the input ratio:\n\\[1.5\\left(\\frac{L}{R}\\right)^{0.5} = \\frac{r}{w} \\quad \\Longrightarrow \\quad \\frac{R}{L} = \\left(\\frac{1.5w}{r}\\right)^2\\]\nWith \\(r = 20\\) and \\(w = 25\\):\n\\[\\frac{R}{L} = \\left(\\frac{1.5 \\times 25}{20}\\right)^2 = (1.875)^2 \\approx 3.52\\]\nSo \\(R \\approx 3.52L\\). Substituting into the production function with \\(Q = 1000\\):\n\\[\\sqrt{1000} = 0.6\\sqrt{3.52}\\,L^{0.5} + 0.4\\,L^{0.5} = L^{0.5}(0.6 \\times 1.876 + 0.4) = 1.526\\,L^{0.5}\\]\n\\[L^{0.5} = \\frac{31.62}{1.526} = 20.72 \\quad \\Longrightarrow \\quad L \\approx 429\\]\n\\[R \\approx 3.52 \\times 429 \\approx 1{,}510\\]\nTotal cost: \\(C = 20(1{,}510) + 25(429) = 30{,}200 + 10{,}725 = \\$40{,}925\\).\n\\[\\boxed{R \\approx 1{,}510, \\quad L \\approx 429, \\quad C \\approx \\$40{,}925}\\]\n\n\n\nWith the new prices:\n\\[\\frac{R}{L} = \\left(\\frac{1.5 \\times 25}{10}\\right)^2 = (3.75)^2 = 14.06\\]\nSo \\(R \\approx 14.06L\\). Substituting into the production constraint:\n\\[\\sqrt{1000} = L^{0.5}(0.6 \\times 3.75 + 0.4) = 2.65\\,L^{0.5}\\]\n\\[L^{0.5} = 11.93 \\quad \\Longrightarrow \\quad L \\approx 142\\]\n\\[R \\approx 14.06 \\times 142 \\approx 1{,}997\\]\nPercentage change in robot-to-worker ratio: The ratio goes from 3.52 to 14.06, an increase of \\(\\frac{14.06 - 3.52}{3.52} \\times 100 \\approx 300\\%\\). The robot-to-worker ratio quadruples. This is because when \\(r\\) halves, the relative price \\(w/r\\) doubles, and with \\(\\sigma = 2\\) the input ratio responds by a factor of \\(2^2 = 4\\).\nNew cost of production: \\(C = 10(1{,}997) + 25(142) = 19{,}970 + 3{,}550 = \\$23{,}520\\). The cost of producing 1000 units falls by about 42% due to the cheaper robots.\n\\[\\boxed{R \\approx 1{,}997, \\quad L \\approx 142, \\quad C \\approx \\$23{,}520}\\]\n\n\n\nA robot tax raising \\(r\\) back to 20 would restore the input mix from part (b). Since the firm would use 429 workers instead of 142, the tax would save approximately \\(287\\) worker-hours per 1,000 units of output.\nThe trade-off: The cost of producing 1000 units would rise by about 42% from $23,520 back to $40,925, which may lead to higher prices for consumers and lower profits for the firm. The tax protects jobs but at the cost of efficiency and potentially higher prices. The firm may also have less incentive to invest in automation in the future, which could slow technological progress. But do we want to live in a society where people don’t have jobs? Maybe if everyone owned robots, we wouldn’t have to worry about unemployment. There is also a possibility that new jobs could be created to replace the ones lost to automation."
   },
   {
-    "objectID": "problem-sets/ps2.html#problem-1-automation-and-labor-demand",
-    "href": "problem-sets/ps2.html#problem-1-automation-and-labor-demand",
-    "title": "Problem Set 2",
+    "objectID": "problem-sets/ps2-solutions.html#problem-1-automation-and-labor-demand",
+    "href": "problem-sets/ps2-solutions.html#problem-1-automation-and-labor-demand",
+    "title": "Problem Set 2: Solutions",
     "section": "",
-    "text": "A manufacturing firm produces output using robots (R) and workers (L) with the CES production function: \\[Q = [0.6R^{0.5} + 0.4L^{0.5}]^{2}\\]\nThe rental rate for robots is \\(r = 20\\) per hour and the wage is \\(w = 25\\) per hour.\n\nWhat is the elasticity of substitution between robots and workers? What does this tell you about how easily the firm can replace workers with robots?\nSolve for the cost-minimizing mix of robots and workers to produce Q = 1000 units.\nNow suppose technological progress reduces the robot rental rate to \\(r = 10\\). How does the firm’s use of robots and workers change? Calculate the percentage change in the robot-to-worker ratio.\nThe government is considering a “robot tax” that would increase \\(r\\) back to 20 to protect jobs. Using your answer from (c), estimate how many jobs this would save per 1000 units of output. What’s the trade-off?"
+    "text": "The production function \\[Q = [0.6R^{0.5} + 0.4L^{0.5}]^2\\] is a CES function with parameter \\(\\rho = 0.5\\) (since the outer exponent is \\(1/\\rho = 2\\)). The elasticity of substitution is:\n\\[\\sigma = \\frac{1}{1 - \\rho} = \\frac{1}{1 - 0.5} = 2\\]\nSince \\(\\sigma = 2 &gt; 1\\), robots and workers are good substitutes: more substitutable than Cobb-Douglas (\\(\\sigma = 1\\)). The firm can replace workers with robots relatively easily when the price of robots falls. A 1% decrease in the relative price of robots leads to a 2% increase in the robot-to-worker ratio. For more details on CES functions, see handout here.\n\n\n\nThe cost-minimizing condition requires \\(MRTS = r/w\\). Computing the marginal products:\n\\[MP_R = 2[0.6R^{0.5} + 0.4L^{0.5}] \\cdot 0.3 R^{-0.5}, \\qquad MP_L = 2[0.6R^{0.5} + 0.4L^{0.5}] \\cdot 0.2 L^{-0.5}\\]\nTaking the ratio:\n\\[MRTS = \\frac{MP_R}{MP_L} = \\frac{0.3}{0.2} \\cdot \\frac{L^{0.5}}{R^{0.5}} = 1.5\\left(\\frac{L}{R}\\right)^{0.5}\\]\nSetting \\(MRTS = r/w\\) and solving for the input ratio:\n\\[1.5\\left(\\frac{L}{R}\\right)^{0.5} = \\frac{r}{w} \\quad \\Longrightarrow \\quad \\frac{R}{L} = \\left(\\frac{1.5w}{r}\\right)^2\\]\nWith \\(r = 20\\) and \\(w = 25\\):\n\\[\\frac{R}{L} = \\left(\\frac{1.5 \\times 25}{20}\\right)^2 = (1.875)^2 \\approx 3.52\\]\nSo \\(R \\approx 3.52L\\). Substituting into the production function with \\(Q = 1000\\):\n\\[\\sqrt{1000} = 0.6\\sqrt{3.52}\\,L^{0.5} + 0.4\\,L^{0.5} = L^{0.5}(0.6 \\times 1.876 + 0.4) = 1.526\\,L^{0.5}\\]\n\\[L^{0.5} = \\frac{31.62}{1.526} = 20.72 \\quad \\Longrightarrow \\quad L \\approx 429\\]\n\\[R \\approx 3.52 \\times 429 \\approx 1{,}510\\]\nTotal cost: \\(C = 20(1{,}510) + 25(429) = 30{,}200 + 10{,}725 = \\$40{,}925\\).\n\\[\\boxed{R \\approx 1{,}510, \\quad L \\approx 429, \\quad C \\approx \\$40{,}925}\\]\n\n\n\nWith the new prices:\n\\[\\frac{R}{L} = \\left(\\frac{1.5 \\times 25}{10}\\right)^2 = (3.75)^2 = 14.06\\]\nSo \\(R \\approx 14.06L\\). Substituting into the production constraint:\n\\[\\sqrt{1000} = L^{0.5}(0.6 \\times 3.75 + 0.4) = 2.65\\,L^{0.5}\\]\n\\[L^{0.5} = 11.93 \\quad \\Longrightarrow \\quad L \\approx 142\\]\n\\[R \\approx 14.06 \\times 142 \\approx 1{,}997\\]\nPercentage change in robot-to-worker ratio: The ratio goes from 3.52 to 14.06, an increase of \\(\\frac{14.06 - 3.52}{3.52} \\times 100 \\approx 300\\%\\). The robot-to-worker ratio quadruples. This is because when \\(r\\) halves, the relative price \\(w/r\\) doubles, and with \\(\\sigma = 2\\) the input ratio responds by a factor of \\(2^2 = 4\\).\nNew cost of production: \\(C = 10(1{,}997) + 25(142) = 19{,}970 + 3{,}550 = \\$23{,}520\\). The cost of producing 1000 units falls by about 42% due to the cheaper robots.\n\\[\\boxed{R \\approx 1{,}997, \\quad L \\approx 142, \\quad C \\approx \\$23{,}520}\\]\n\n\n\nA robot tax raising \\(r\\) back to 20 would restore the input mix from part (b). Since the firm would use 429 workers instead of 142, the tax would save approximately \\(287\\) worker-hours per 1,000 units of output.\nThe trade-off: The cost of producing 1000 units would rise by about 42% from $23,520 back to $40,925, which may lead to higher prices for consumers and lower profits for the firm. The tax protects jobs but at the cost of efficiency and potentially higher prices. The firm may also have less incentive to invest in automation in the future, which could slow technological progress. But do we want to live in a society where people don’t have jobs? Maybe if everyone owned robots, we wouldn’t have to worry about unemployment. There is also a possibility that new jobs could be created to replace the ones lost to automation."
   },
   {
-    "objectID": "problem-sets/ps2.html#problem-2-profit-maximization-and-taxation",
-    "href": "problem-sets/ps2.html#problem-2-profit-maximization-and-taxation",
-    "title": "Problem Set 2",
+    "objectID": "problem-sets/ps2-solutions.html#problem-2-profit-maximization-and-taxation",
+    "href": "problem-sets/ps2-solutions.html#problem-2-profit-maximization-and-taxation",
+    "title": "Problem Set 2: Solutions",
     "section": "Problem 2: Profit Maximization and Taxation",
-    "text": "Problem 2: Profit Maximization and Taxation\nKeeping in mind firms’ profit-maximizing behavior, would a lump-sum tax on profits affect the profit-maximizing quantity of output? What about a proportional tax on profits? What about a tax on each unit of output? How about a tax on labor input?"
+    "text": "Problem 2: Profit Maximization and Taxation\nA competitive firm maximizes profit \\(\\pi = P \\cdot q - C(q)\\), yielding the first-order condition \\(P = MC(q)\\).\nLump-sum tax on profits. With a lump-sum tax \\(T\\), profit becomes: \\[\\pi = Pq - C(q) - T\\] The FOC is still \\(P = MC(q)\\) since \\(T\\) does not depend on the level of output \\(Q\\). The profit-maximizing quantity is unchanged as the firm can’t change it’s tax burden by adjusting output. The lump-sum tax reduces profits but does not distort production decisions.\nProportional tax on profits. With tax rate \\(t\\), after-tax profit is: \\[\\pi = (1-t)[Pq - C(q)]\\] The FOC now is \\((1-t)[P - MC(q)] = 0\\), which implies \\(P = MC(q)\\), the same condition as before. Once again, the profit-maximizing quantity is unchanged.\nOutput tax. With a per-unit tax \\(\\tau\\), profit becomes: \\[\\pi = Pq - C(q) - \\tau q = (P - \\tau)q - C(q)\\] The FOC is \\(P - \\tau = MC(q)\\), so the firm produces where marginal cost equals the net price \\(P - \\tau\\). Since \\(MC\\) is increasing, the profit-maximizing quantity decreases. The per-unit tax is equivalent to a reduction in the output price: it shifts the effective price down and reduces output.\nIntuition for why there is distortion with an output tax but not with a proportional tax: The output tax makes each unit of output less profitable, so the firm produces less. With a proportional tax, the firm still wants to produce the quantity that maximizes pre-tax profits, since a higher pre-tax profit means a higher after-tax profit even after paying the percentage to the government.\nTax on labor input. If the firm uses labor \\(L\\) at wage \\(w\\) and the government imposes a tax \\(t_L\\) per unit of labor, the effective wage rises to \\(w + t_L\\). This increases the cost function \\(C(q)\\), which shifts \\(MC(q)\\) upward. Since the firm produces where \\(P = MC(q)\\), a higher \\(MC\\) curve means a lower profit-maximizing quantity. Output decreases. The firm also substitutes away from labor toward other inputs."
   },
   {
-    "objectID": "problem-sets/ps2.html#problem-3-trade-policy-and-the-portable-radio-market-ex-12.8",
-    "href": "problem-sets/ps2.html#problem-3-trade-policy-and-the-portable-radio-market-ex-12.8",
-    "title": "Problem Set 2",
-    "section": "Problem 3: Trade Policy and the Portable Radio Market (Ex 12.8)",
-    "text": "Problem 3: Trade Policy and the Portable Radio Market (Ex 12.8)\nThe domestic demand for portable radios is given by\n\\[Q = D(P) = 5{,}000 - 100P,\\]\nwhere price (\\(P\\)) is measured in dollars and quantity (\\(Q\\)) is measured in thousands of radios per year. The domestic supply curve for radios is given by\n\\[Q = S(P) = 150P.\\]\n\nWhat is the domestic equilibrium in the portable radio market?\nSuppose portable radios can be imported at a world price of $10 per radio. If trade were unencumbered, what would the new market equilibrium be? How many portable radios would be imported?\nIf domestic portable radio producers succeeded in having a $5 tariff implemented, how would this change the market equilibrium? How much would be collected in tariff revenues? How much consumer surplus would be transferred to domestic producers? What would the deadweight loss from the tariff be?\nHow would your results from part (c) be changed if the government reached an agreement with foreign suppliers to “voluntarily” limit the portable radios they export to 1,250,000 per year? Explain how this differs from the case of a tariff."
+    "objectID": "problem-sets/ps2-solutions.html#problem-3-trade-policy-and-the-portable-radio-market",
+    "href": "problem-sets/ps2-solutions.html#problem-3-trade-policy-and-the-portable-radio-market",
+    "title": "Problem Set 2: Solutions",
+    "section": "Problem 3: Trade Policy and the Portable Radio Market",
+    "text": "Problem 3: Trade Policy and the Portable Radio Market\n\nPart (a): Domestic equilibrium\nSetting domestic demand equal to domestic supply:\n\\[D(P) = S(P) \\quad \\Longrightarrow \\quad 5{,}000 - 100P = 150P \\quad \\Longrightarrow \\quad 250P = 5{,}000\\]\n\\[\\boxed{P^* = \\$20, \\qquad Q^* = 3{,}000 \\text{ radios}}\\]\n\n\nPart (b): Free trade at world price \\(P_W = \\$10\\)\nAt \\(P = 10\\):\n\nDomestic demand: \\(Q_D = 5{,}000 - 100(10) = 4{,}000\\)\nDomestic supply: \\(Q_S = 150(10) = 1{,}500\\)\n\n\\[\\boxed{\\text{Imports} = Q_D - Q_S = 4{,}000 - 1{,}500 = 2{,}500 \\text{ radios}}\\]\nThe price falls from $20 to $10, domestic consumption rises, domestic production falls, and the gap is filled by imports.\n\n\nPart (c): $5 tariff\nWith the tariff, the domestic price rises to \\(P = 10 + 5 = \\$15\\):\n\nDomestic demand: \\(Q_D = 5{,}000 - 100(15) = 3{,}500\\)\nDomestic supply: \\(Q_S = 150(15) = 2{,}250\\)\nImports: \\(3{,}500 - 2{,}250 = 1{,}250\\)\n\nTariff revenue:\n\\[R = \\$5 \\times 1{,}250 = \\$6{,}250 \\]\nChange in consumer surplus (A+B+C+D):\n\\[\\Delta CS = -\\frac{1}{2}(Q_D^{FT} + Q_D^{T})(P^{T} - P^{FT}) = -\\frac{1}{2}(4{,}000 + 3{,}500)(5) = -\\$18{,}750 \\]\nConsumer surplus transferred to domestic producers (D):\n\\[\\Delta PS = \\frac{1}{2}(Q_S^{FT} + Q_S^{T})(P^{T} - P^{FT}) = \\frac{1}{2}(1{,}500 + 2{,}250)(5) = \\$9{,}375 \\]\nDeadweight loss (A+C):\n\\[DWL = |\\Delta CS| - \\Delta PS - R = 18{,}750 - 9{,}375 - 6{,}250 = \\$3{,}125 \\] This DWL consists of two triangles:\n\nProduction inefficiency (C): \\(\\frac{1}{2}(5)(2{,}250 - 1{,}500) = 1{,}875\\) (resources wasted producing domestically what could be imported more cheaply)\nConsumption loss (A): \\(\\frac{1}{2}(5)(4{,}000 - 3{,}500) = 1{,}250\\) (lost surplus from consumers priced out of the market)\n\n\n\n\n\n\n\n\n\n\n\n\nPart (d): Voluntary Export Restraint (VER)\nWith the VER limiting imports to 1,250, the domestic price must adjust so that \\(Q_D - Q_S = 1{,}250\\):\n\\[5{,}000 - 100P - 150P = 1{,}250 \\quad \\Longrightarrow \\quad P = \\$15\\]\nThe equilibrium price, domestic demand, domestic supply, and import quantity are identical to the tariff case.\nKey difference: With a tariff, the government collects $6,250 in tariff revenue. With the VER, there is no tariff: foreign exporters sell at the higher domestic price of $15 instead of the world price of $10, so they capture the $6,250 as quota rents.\nFrom the domestic country’s perspective, the VER is strictly worse than the tariff:\n\n\n\n\nTariff\nVER\n\n\n\n\nCS loss\n-18,750\n-18,750\n\n\nPS gain\n+9,375\n+9,375\n\n\nGov. revenue\n+6,250\n0\n\n\nQuota rents to foreigners\n0\n-6,250\n\n\nNet domestic welfare change\n-3,125\n-9,375\n\n\n\nThe VER transfers an additional $6,250 to foreign producers, making the domestic welfare loss three times larger than the tariff."
   },
   {
-    "objectID": "problem-sets/ps2.html#problem-4-general-equilibrium-exchange-edgeworth-box",
-    "href": "problem-sets/ps2.html#problem-4-general-equilibrium-exchange-edgeworth-box",
-    "title": "Problem Set 2",
-    "section": "Problem 4: General Equilibrium Exchange (Edgeworth Box)",
-    "text": "Problem 4: General Equilibrium Exchange (Edgeworth Box)\nConsider a simple exchange economy with two people (Ana and Ben) and two goods (X and Y). Total endowments: 100 units of X and 100 units of Y.\n\nAna: Utility \\(U_A = X_A \\cdot Y_A\\), endowment \\((X_A^0, Y_A^0) = (70, 30)\\)\nBen: Utility \\(U_B = X_B \\cdot Y_B\\), endowment \\((X_B^0, Y_B^0) = (30, 70)\\)\n\n\nCalculate Ana’s and Ben’s marginal rate of substitution (MRS) at the initial endowment. Is this allocation Pareto efficient?\nIf they can trade at price ratio \\(P_X/P_Y = 1\\), what will Ana demand? What will Ben demand? (Use their budget constraints based on the value of their endowments.)\nVerify that the competitive equilibrium allocation is Pareto efficient by checking that \\(MRS_A = MRS_B\\).\nDescribe the contract curve for this economy. What does the First Welfare Theorem tell us about competitive equilibrium?"
+    "objectID": "problem-sets/ps2-solutions.html#problem-4-general-equilibrium-exchange",
+    "href": "problem-sets/ps2-solutions.html#problem-4-general-equilibrium-exchange",
+    "title": "Problem Set 2: Solutions",
+    "section": "Problem 4: General Equilibrium Exchange",
+    "text": "Problem 4: General Equilibrium Exchange\n\nPart (a): MRS at initial endowment\nFor \\(U = X \\cdot Y\\) (Cobb-Douglas with equal exponents):\n\\[MRS = \\frac{MU_X}{MU_Y} = \\frac{Y}{X}\\]\nAt the initial endowment \\((X_A, Y_A) = (70, 30)\\) and \\((X_B, Y_B) = (30, 70)\\):\n\\[MRS_A = \\frac{30}{70} = \\frac{3}{7} \\approx 0.43, \\qquad MRS_B = \\frac{70}{30} = \\frac{7}{3} \\approx 2.33\\]\nSince \\(MRS_A \\neq MRS_B\\), the initial allocation is not Pareto efficient. There are gains from trade: Ben values X much more highly than Ana does (he is willing to give up 7/3 units of Y for one unit of X, while Ana would only give up 3/7). Ana should trade X to Ben in exchange for Y.\n\n\nPart (b): Competitive equilibrium at \\(P_X/P_Y = 1\\)\nLet \\(P_Y = 1\\) (numeraire), so \\(P_X = 1\\).\nAna’s problem: Budget \\(= P_X \\cdot 70 + P_Y \\cdot 30 = 100\\). With \\(U = XY\\), the demand functions are:\n\\[X_A = \\frac{I_A}{2P_X} = \\frac{100}{2} = 50, \\qquad Y_A = \\frac{I_A}{2P_Y} = \\frac{100}{2} = 50\\]\nBen’s problem: Budget \\(= P_X \\cdot 30 + P_Y \\cdot 70 = 100\\). By the same logic:\n\\[X_B = \\frac{100}{2} = 50, \\qquad Y_B = \\frac{100}{2} = 50\\]\nMarket clearing: Total demand for \\(X\\): \\(50 + 50 = 100\\) = total endowment. ✓\n\\[\\boxed{(X_A, Y_A) = (50, 50), \\qquad (X_B, Y_B) = (50, 50)}\\]\nAna trades 20 units of X to Ben in exchange for 20 units of Y.\n\n\nPart (c): Verifying Pareto efficiency\nAt the equilibrium allocation:\n\\[MRS_A = \\frac{Y_A}{X_A} = \\frac{50}{50} = 1, \\qquad MRS_B = \\frac{Y_B}{X_B} = \\frac{50}{50} = 1\\]\n\\[\\boxed{MRS_A = MRS_B = 1 = \\frac{P_X}{P_Y}}\\]\nThe competitive equilibrium is Pareto efficient: both consumers’ marginal rates of substitution are equal (to each other and to the price ratio), so there is no way to make one person better off without making the other worse off.\n\n\nPart (d): Contract curve and the First Welfare Theorem\nThe contract curve is the set of all Pareto efficient allocations, where \\(MRS_A = MRS_B\\):\n\\[\\frac{Y_A}{X_A} = \\frac{Y_B}{X_B} = \\frac{100 - Y_A}{100 - X_A}\\]\nCross-multiplying: \\(Y_A(100 - X_A) = X_A(100 - Y_A)\\), which simplifies to:\n\\[\\boxed{Y_A = X_A}\\]\nThe contract curve is the diagonal of the Edgeworth box (equivalently, \\(Y_B = X_B\\)). Every Pareto efficient allocation gives each person equal amounts of both goods.\nThe First Welfare Theorem states that every competitive equilibrium allocation is Pareto efficient. We verified this in part (c): the equilibrium allocation \\((50, 50)\\) for both consumers lies on the contract curve (\\(Y_A = X_A = 50\\)). The competitive market, guided only by prices, achieves an efficient outcome without any central planner."
   },
   {
-    "objectID": "problem-sets/ps2.html#problem-5-optimal-redistribution-with-distortionary-taxation",
-    "href": "problem-sets/ps2.html#problem-5-optimal-redistribution-with-distortionary-taxation",
-    "title": "Problem Set 2",
+    "objectID": "problem-sets/ps2-solutions.html#problem-5-optimal-redistribution-with-distortionary-taxation",
+    "href": "problem-sets/ps2-solutions.html#problem-5-optimal-redistribution-with-distortionary-taxation",
+    "title": "Problem Set 2: Solutions",
     "section": "Problem 5: Optimal Redistribution with Distortionary Taxation",
-    "text": "Problem 5: Optimal Redistribution with Distortionary Taxation\nA simple economy has two individuals:\n\nA poor individual with income \\(y_P\\)\nA rich individual with income \\(y_R &gt; y_P\\)\n\nThe government chooses a tax rate \\(\\tau \\in [0,1]\\) applied only to the rich. All tax revenue is redistributed to the poor.\nTaxation is distortionary: a fraction of revenue is lost due to inefficiency. Deadweight loss is given by:\n\\[\\text{DWL} = \\frac{1}{2} k \\tau^2 y_R,\\]\nwhere \\(k &gt; 0\\) measures how costly taxation is.\nThe net transfer to the poor is:\n\\[T(\\tau) = \\tau y_R - \\frac{1}{2}k \\tau^2 y_R.\\]\nThe poor’s consumption is \\(c_P = y_P + T(\\tau)\\), and the rich’s consumption is \\(c_R = y_R - \\tau y_R\\).\nSocial welfare is:\n\\[W(\\tau) = \\alpha c_P + (1-\\alpha) c_R,\\]\nwhere \\(\\alpha \\in (0,1)\\) represents society’s inequality aversion.\n\nSubstitute the consumption expressions into the welfare function and simplify. Maximize welfare with respect to \\(\\tau\\). Show that the optimal tax rate is:\n\n\\[\\tau^* = \\frac{2\\alpha - 1}{k\\alpha}.\\]\n\nExplain how the optimal tax rate \\(\\tau^*\\) changes with:\n\n\nInequality aversion \\(\\alpha\\)\nThe distortion parameter \\(k\\)\n\nWhat is the economic intuition behind each effect?"
+    "text": "Problem 5: Optimal Redistribution with Distortionary Taxation\n\nPart (a): Deriving the optimal tax rate\nSubstituting the consumption expressions into the welfare function:\n\\[c_P = y_P + \\tau y_R - \\frac{1}{2}k\\tau^2 y_R, \\qquad c_R = (1-\\tau)y_R\\]\n\\[W(\\tau) = \\alpha\\left[y_P + \\tau y_R - \\frac{1}{2}k\\tau^2 y_R\\right] + (1-\\alpha)(1-\\tau)y_R\\]\nExpanding:\n\\[W(\\tau) = \\alpha y_P + \\alpha\\tau y_R - \\frac{1}{2}\\alpha k\\tau^2 y_R + (1-\\alpha)y_R - (1-\\alpha)\\tau y_R\\]\nTaking the first-order condition:\n\\[\\frac{dW}{d\\tau} = \\alpha y_R - \\alpha k\\tau y_R - (1-\\alpha)y_R = 0\\]\nDividing through by \\(y_R\\):\n\\[\\alpha - \\alpha k\\tau - (1 - \\alpha) = 0\\]\n\\[2\\alpha - 1 = \\alpha k\\tau\\]\n\\[\\boxed{\\tau^* = \\frac{2\\alpha - 1}{\\alpha k}}\\]\nThe second-order condition confirms this is a maximum: \\(\\frac{d^2W}{d\\tau^2} = -\\alpha k y_R &lt; 0\\). Note that \\(\\tau^* &gt; 0\\) requires \\(\\alpha &gt; 1/2\\): positive redistribution is only optimal when society places more weight on the poor than on the rich.\n\n\nPart (b): Comparative statics\nRewriting \\(\\tau^*\\) in a more convenient form:\n\\[\\tau^* = \\frac{2}{k} - \\frac{1}{\\alpha k}\\]\n(i) Effect of inequality aversion \\(\\alpha\\):\n\\[\\frac{\\partial \\tau^*}{\\partial \\alpha} = \\frac{1}{\\alpha^2 k} &gt; 0\\]\nHigher inequality aversion (larger \\(\\alpha\\)) increases the optimal tax rate. Intuition: When society cares more about the well-being of the poor relative to the rich, it is willing to tolerate more deadweight loss in order to transfer additional resources to the poor. A more egalitarian social welfare function justifies a larger tax-and-transfer program.\n(ii) Effect of the distortion parameter \\(k\\):\n\\[\\frac{\\partial \\tau^*}{\\partial k} = -\\frac{2\\alpha - 1}{\\alpha k^2} &lt; 0 \\quad \\text{(for } \\alpha &gt; 1/2\\text{)}\\]\nA higher distortion cost (larger \\(k\\)) decreases the optimal tax rate. Intuition: When taxation is more distortionary (meaning more revenue is lost to deadweight loss per dollar collected), the government should tax less aggressively. The “leaky bucket” of redistribution becomes leakier: each dollar taken from the rich delivers less than a dollar to the poor, so the marginal cost of redistribution rises and the optimal level falls."
   }
 ]

@@ -8,10 +8,20 @@ You can find additional content and reference materials for Part I: Competetive 
 
 ## Consumer Theory (Lectures 1 and 2)
 
-- [Cobb-Douglas Demand Derivations](/handouts/lec1-2_cd_derivations.qmd)
+- [Cobb-Douglas Demand Derivations](/add-content/lec1-2-cd-derivations.qmd)
     - This handout provides step-by-step derivations of the Marshallian (uncompensated) and Hicksian (compensated) demand functions for Cobb-Douglas preferences.
+
+## Producer Theory (Lecture 3)
+
+- [CES Production Functions](/add-content/lec3-ces-prod-func.qmd)
+    - This handout derives the cost-minimizing input demands and cost function for a CES production function, and shows how to calculate the elasticity of substitution from the CES parameter.
 
 ## Competitive Equilibrium (Lecture 4)
 
-- [Tax Incidence and Deadweight Loss Derivations](/handouts/lec4-tax-incidence.qmd)
+- [Tax Incidence and Deadweight Loss Derivations](/add-content/lec4-tax-incidence.qmd)
     - This handout derives the formulas for tax incidence on consumers and producers, as well as the deadweight loss from a tax, in a simple supply and demand framework.
+
+## Welfare Analysis (Lecture 5)
+
+- [Chapter 16, Pyndyck and Rubinfeld, Microeconomics, 9th Edition](/add-content/lec5-pyndyck-rubinfeld.pdf)
+    - This chapter from the Pyndyck and Rubinfeld is a good reference in addition to the textbook.

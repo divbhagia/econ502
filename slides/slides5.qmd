@@ -1244,4 +1244,3 @@ The rate at which consumers are willing to trade $x$ for $y$ equals the rate at 
 - Firms set $MRTS = w/r$ (same factor prices)
 - Profit-maximizing firms produce where $MRT = p_x/p_y$
 
----
