@@ -1,6 +1,5 @@
 ---
 title: "Market Power (cont.)"
-subtitle: "Lecture 7"
 author: "Div Bhagia"
 format:
   revealjs:

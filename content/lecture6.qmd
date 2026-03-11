@@ -1,5 +1,5 @@
 ---
-title: "Lecture 6"
+title: "6: Market Power in Goods Markets"
 nav-sidebar: false
 format: html
 ---

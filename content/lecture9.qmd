@@ -1,5 +1,5 @@
 ---
-title: "Lecture 9"
+title: "9: Asymmetric Information"
 nav-sidebar: false
 format: html
 ---

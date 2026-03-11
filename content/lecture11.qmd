@@ -1,5 +1,5 @@
 ---
-title: "Lecture 11"
+title: "11: Choice Under Uncertainty"
 nav-sidebar: false
 format: html
 ---
