@@ -18,8 +18,8 @@ website:
         file: syllabus.qmd
       - text: "Content"
         file: content/lecture1.qmd
-      - text: "Problem Sets"
-        file: problem-sets.qmd
+      - text: "Practice"
+        file: practice.qmd
       - icon: github
         href: https://divbhagia.github.io/econ502/
 
@@ -30,7 +30,7 @@ website:
       contents:
       - section: "I. Competitive Markets"
         contents:
-          - text: "Lecture 1"
+          - text: "Lecture 1: Consumer Preferences and Choice "
             file: content/lecture1.qmd
           - text: "Lecture 2"
             file: content/lecture2.qmd

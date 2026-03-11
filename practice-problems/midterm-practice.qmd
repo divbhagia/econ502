@@ -1,0 +1,81 @@
+---
+title: "Midterm Practice Problems"
+subtitle: "Econ 502: Advanced Microeconomics"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      file: ../assets/pset-preamble.tex
+format-links: [pdf]
+---
+
+
+## Problem 1: Monopoly Pricing
+
+A monopolist faces the inverse demand curve $P = 200 - 2Q$ and has a constant marginal cost of $MC = 40$ with no fixed costs.
+
+a) Derive the marginal revenue function. Find the profit-maximizing quantity $Q^*_m$, price $P^*_m$, and the monopolist's profit.
+
+b) What would the equilibrium price and quantity be under perfect competition (i.e., $P = MC$)? Calculate total surplus (consumer surplus + producer surplus) under perfect competition.
+
+c) Calculate total surplus under monopoly and the deadweight loss from monopoly pricing.
+
+d) Compute the Lerner Index at the monopoly equilibrium. Verify your answer using the inverse elasticity rule.
+
+---
+
+## Problem 2: Third-Degree Price Discrimination
+
+A streaming service has two types of subscribers: adults ($A$) and students ($S$). The demand in each market is:
+
+- Adults: $Q_A = 100 - P_A$
+- Students: $Q_S = 60 - P_S$
+
+The marginal cost of serving each additional subscriber is constant at $c = 20$.
+
+a) If the firm can price discriminate between the two markets, find the optimal price, quantity, and profit in each market.
+
+b) If the firm must charge a single (uniform) price to all subscribers, find the profit-maximizing price, total quantity, and total profit.
+
+c) Compute the price elasticity of demand and the Lerner index in each market under price discrimination. Which market gets the higher markup? Explain the intuition.
+
+d) Compare total consumer surplus and total welfare (CS + profit) under the two pricing regimes. Is price discrimination welfare-improving here?
+
+---
+
+## Problem 3: Cournot Duopoly
+
+Two firms compete by simultaneously choosing quantities. Market demand is $P = 150 - Q$, where $Q = q_1 + q_2$. Both firms have constant marginal cost $c = 30$ and no fixed costs.
+
+a) Derive each firm's best response (reaction) function.
+
+b) Find the Cournot-Nash equilibrium: each firm's output, the market price, and per-firm profits.
+
+c) Suppose the two firms collude to maximize joint profits and split output equally. Find the collusive quantity per firm, price, and per-firm profit. If firm 2 sticks to the collusive output, what would firm 1 optimally produce? Would firm 1 want to deviate from the agreement?
+
+d) Fill in the following table comparing three market structures (you already have the Cournot and collusion results; compute the competitive outcome where $P = MC$):
+
+| | Price | Total Output | Per-Firm Profit |
+|---|---|---|---|
+| **Competition** | | | |
+| **Cournot** | | | |
+| **Collusion (Monopoly)** | | | |
+
+---
+
+## Problem 4: Bertrand Competition
+
+Two firms produce a homogeneous good and compete by simultaneously choosing prices. Consumers buy from the firm with the lower price; if both charge the same price, they split the market equally. Both firms have constant marginal cost $c$.
+
+a) Suppose both firms set prices $p_1 = p_2 = c$. Show that this is a Nash equilibrium by verifying that neither firm can profitably deviate.
+
+b) Explain why any pair of prices with $p_1 = p_2 > c$ cannot be a Nash equilibrium.
+
+c) Now suppose costs are asymmetric: firm 1 has $MC_1 = 10$ and firm 2 has $MC_2 = 20$. The market demand is $Q = 100 - P$. What is the Nash equilibrium? What is firm 1's profit? (*Hint: Think about what happens if firm 1 prices just below firm 2's cost.*)
+
+d) The result in parts (a) and (b) is known as the *Bertrand paradox*: just two firms are enough to eliminate all market power. Give two assumptions of the Bertrand model that, if relaxed, would allow firms to earn positive profits in equilibrium.
+
+---

@@ -6,9 +6,12 @@ format: html
 
 ## Topics 
 
+- Exchange economies and the Edgeworth box
+- First and second welfare theorems
+- Social welfare functions and the social planner's problem
+- Adding production to the model of exchange economies
 
-
-**Textbook references**: 
+**Textbook references**: Chapter 16 from Pyndyck and Rubinfeld uploaded under "Additional Content."
 
 ## Slides 
 The slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.

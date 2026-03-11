@@ -6,9 +6,11 @@ format: html
 
 ## Topics 
 
+- Competitive equilibrium: Short-run and long-run supply
+- Comparative statics of competitive equilibrium
+- Welfare analysis of competitive equilibrium
 
-
-**Textbook references**: 
+**Textbook references**: Chapter 12
 
 ## Slides 
 The slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.

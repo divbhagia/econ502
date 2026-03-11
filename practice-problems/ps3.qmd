@@ -1,0 +1,62 @@
+---
+title: "Problem Set 3"
+subtitle: "Econ 502: Advanced Microeconomics"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      file: ../assets/pset-preamble.tex
+format-links: [pdf]
+---
+
+
+## Market Structure and Welfare
+
+Consider a market with inverse demand $P = 150 - Q$, where $Q$ is total output. There are $n$ identical firms, each with constant marginal cost $c = 30$ and no fixed costs.
+
+Denote each firm's output as $q_i$ for $i = 1, \ldots, n$, so that total output is $Q = \sum_{i=1}^n q_i$. 
+
+### Part I: Benchmarks
+
+a) **Perfect competition.** Suppose firms are price-takers ($P = MC$). Find the equilibrium price, total output, consumer surplus, and total surplus.
+
+b) **Monopoly.** Suppose there is a single firm ($n = 1$). Derive the marginal revenue function. Find the profit-maximizing quantity, price, and profit. Calculate consumer surplus and the deadweight loss relative to perfect competition.
+
+### Part II: Price Competition
+
+c) **Bertrand.** Suppose $n \geq 2$ firms compete by simultaneously setting prices. Consumers buy from the cheapest firm; if prices are tied, they split the market equally. What is the Nash equilibrium? Compare the outcome to your answer in part (a) and briefly explain the economic logic.
+
+
+### Part III: Quantity Competition
+
+d) **Cournot duopoly.** Now suppose $n = 2$ firms compete by simultaneously choosing quantities, with total output $Q = q_1 + q_2$. Write down firm 1's profit function and derive its best response function $q_1^*(q_2)$. Find the Cournot-Nash equilibrium: each firm's output, the market price, and per-firm profit.
+
+e) **Cournot with $n$ firms.** Generalize part (d) to $n$ identical firms. Show that in the symmetric Cournot-Nash equilibrium, per-firm output is given by:
+
+$$q^* = \frac{120}{n+1}$$
+
+f) **Convergence.** Using the result from part (e), fill in the following table and compute the markup $\mu$, which is defined price relative to marginal cost:
+$$ \mu = \frac{P^*}{c} $$
+
+| $n$ | Per-firm output ($q^*$) | Price ($P^*$) | Per-firm profit ($\pi^*$) | Markup ($\mu$) |
+|:---:|:---:|:---:|:---:|:---:|
+| 1 | | | | |
+| 2 | | | | |
+| 5 | | | | |
+| 10 | | | | |
+| 50 | | | | |
+
+What happens to the markup as $n$ gets large? 
+
+### Part IV: Welfare
+
+g) **Deadweight loss.** Show that the deadweight loss from Cournot competition with $n$ firms is given by:
+
+$$DWL = \frac{7{,}200}{(n+1)^2}$$
+
+How does the DWL change as $n$ increases? Compare the monopoly DWL ($n = 1$) to the Cournot duopoly DWL ($n = 2$).
+
+---

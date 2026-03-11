@@ -62,7 +62,7 @@ Since $P'(Q) < 0$, we always have $MR(Q) < P(Q)$. The monopolist produces where 
 #| echo: false
 #| fig-align: center
 #| fig-width: 7
-#| fig-height: 6.5
+#| fig-height: 6
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -109,7 +109,7 @@ Pc = a_demand - b_demand * Qc
 G = mc_min + mc_quad * (0 - mc_center)**2
 
 # ── Figure ─────────────────────────────────────────────────────
-fig, ax = plt.subplots(figsize=(9, 7))
+fig, ax = plt.subplots(figsize=(7, 6))
 
 # --- 1. Transfer rectangle (Pm to Pc, width Qm) ---
 transfer = plt.Rectangle(
@@ -222,10 +222,6 @@ If demand curve takes constant elasticity form $Q = a P^{-\varepsilon}$ and marg
 - Do you think these monopolistic firms charge prices above marginal cost? <br>
 :::
 
-::: {.fragment}
-- **Aside**: Do firms set prices or quantities in the real world? Does this matter?
-:::
-
 ---
 
 ## Sources of Monopoly Power
@@ -234,13 +230,13 @@ If demand curve takes constant elasticity form $Q = a P^{-\varepsilon}$ and marg
 
   - Economies of scale:  high fixed costs e.g. utilities
   - Control of key inputs:  e.g., Standard Oil (controlled  ~90% of US oil refining by 1880s)
-  - Network effects: value rises with users (platforms, operating systems)<br> <br>
+  - Network effects: value rises with users (platforms, os)<br> 
 
 - **Legal Barriers**
 
   - Patents & IP: pharmaceutical exclusivity periods
   - Government franchises: postal services
-  - Licensing & regulation: spectrum allocation, taxi medallions <br> <br>
+  - Licensing & regulation: spectrum allocation, taxi medallions <br> 
 
 - **Strategic Behavior**
 
@@ -287,7 +283,6 @@ If demand curve takes constant elasticity form $Q = a P^{-\varepsilon}$ and marg
 
 Do we think this is generally welfare-improving?
 
----
 
 # Imperfect Competition 
 
@@ -303,7 +298,7 @@ Do we think this is generally welfare-improving?
 
 **Oligopoly:** A market with a small number of firms whose decisions are **interdependent** i.e. each firm's optimal choice depends on what the others do.
 
-How do firms compete in oligopoly? Do they set prices or quantities? How do they react to each other's actions?
+How do firms compete in oligopoly? How do they react to each other's actions? **Do they set prices or quantities?**
 
 ---
 
@@ -425,11 +420,14 @@ $$q^* = \frac{a - c}{2b} - \frac{q^*}{2} \implies q^* = \frac{a - c}{3b}$$
 
 ## Cournot vs. Competition vs. Monopoly
 
+<br><br>
+
 | | Price | Total Output | Profit |
 |---|---|---|---|
 | **Competition** | $c$ | $(a-c)/b$ | $0$ |
 | **Cournot** | $(a+2c)/3$ | $2(a-c)/(3b)$ | $(a-c)^2/(9b)$ |
 | **Monopoly** | $(a+c)/2$ | $(a-c)/(2b)$ | $(a-c)^2/(4b)$ |
+|
 
 Cournot lies **between** competition and monopoly. 
 
@@ -569,7 +567,8 @@ color_q = '#E69F00'
 color_L = '#D55E00'
 
 # ========== COMPUTE ==========
-n_vals = np.arange(1, 21)
+n_max = 25
+n_vals = np.arange(1, n_max + 1)
 P_vals = (a + n_vals * c) / (n_vals + 1)
 Q_vals = n_vals * (a - c) / ((n_vals + 1) * b)
 L_vals = (P_vals - c) / P_vals
@@ -579,16 +578,16 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4.5))
 # Panel 1: Price and Total Output
 ax1.plot(n_vals, P_vals, 'o-', color=color_p, linewidth=2, markersize=5, label='Price $P^*$')
 ax1.axhline(y=c, color=color_p, linestyle='--', linewidth=1, alpha=0.5)
-ax1.text(15, c + 1.5, '$P = c$ (competitive)', fontsize=10, color=color_p, alpha=0.7)
 
 ax1b = ax1.twinx()
 ax1b.plot(n_vals, Q_vals, 's-', color=color_q, linewidth=2, markersize=5, label='Total output $Q^*$')
 ax1b.axhline(y=(a - c) / b, color=color_q, linestyle='--', linewidth=1, alpha=0.5)
 
 ax1.set_xlabel('Number of firms ($n$)', fontsize=12)
-ax1.set_ylabel('Price', fontsize=12, color=color_p)
-ax1b.set_ylabel('Total output', fontsize=12, color=color_q)
-ax1.set_xlim(0.5, 20.5)
+ax1.set_ylabel('Price', fontsize=12, color=color_p, fontweight='bold')
+ax1b.set_ylabel('Total output', fontsize=12, color=color_q, fontweight='bold')
+ax1.set_xlim(0.5, n_max + 0.5)
+ax1.set_xticks(np.arange(1, n_max + 1, 2))
 ax1.grid(True, linestyle='--', alpha=0.3)
 
 # Panel 2: Lerner Index
@@ -596,7 +595,8 @@ ax2.plot(n_vals, L_vals, 'o-', color=color_L, linewidth=2, markersize=5)
 ax2.axhline(y=0, color='gray', linestyle='--', linewidth=1, alpha=0.5)
 ax2.set_xlabel('Number of firms ($n$)', fontsize=12)
 ax2.set_ylabel('Lerner Index', fontsize=12)
-ax2.set_xlim(0.5, 20.5)
+ax2.set_xlim(0.5, n_max + 0.5)
+ax2.set_xticks(np.arange(1, n_max + 1, 2))
 ax2.set_ylim(-0.02, 0.45)
 ax2.grid(True, linestyle='--', alpha=0.3)
 ax2.spines['top'].set_visible(False)
