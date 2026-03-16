@@ -1,5 +1,5 @@
 ---
-title: "Lecture 2"
+title: "Lecture 2: Demand Analysis and Consumer Welfare"
 nav-sidebar: false
 format: html
 ---

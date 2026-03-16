@@ -11,7 +11,7 @@
     "href": "practice.html",
     "title": "Practice Problems",
     "section": "",
-    "text": "Problem Sets\nHere are the problem sets for the course. Please complete and submit them by the specified deadlines. Solutions will be posted after the submission deadline.\n\nProblem Set 1 [Solutions]\nProblem Set 2 [Solutions]\nProblem Set 3\n\n\n\nAdditional Practice Problems\n\nPractice Problems for Midterm Exam: Coming Soon!"
+    "text": "Problem Sets\nHere are the problem sets for the course. Please complete and submit them by the specified deadlines. Solutions will be posted after the submission deadline.\n\nProblem Set 1 [Solutions]\nProblem Set 2 [Solutions]\nProblem Set 3\n\n\n\nAdditional Practice Problems\n\nPractice Problems for Part I: Competitive Markets [Solutions]\nPractice Problems for Part II: Market Power [Solutions]"
   },
   {
     "objectID": "practice-problems/ps3-solutions.html",
@@ -119,6 +119,132 @@
     "text": "Problem 3: Sugar-Sweetened Beverage Tax\nGiven: \\(U(s, x) = s^{0.3}x^{0.7}\\), \\(I = 300\\), \\(p_s = 0.05\\), \\(p_x = 1\\), tax \\(t = 0.015\\), so \\(p_s' = 0.065\\).\nSince \\(\\alpha + \\beta = 0.3 + 0.7 = 1\\), the Cobb-Douglas demands simplify to standard expenditure shares.\n\nPart (a): Initial optimal bundle\nUsing Cobb-Douglas Marshallian demands: \\[s^* = \\frac{0.3 \\cdot I}{p_s} = \\frac{0.3 \\times 300}{0.05} = \\frac{90}{0.05} = 1800 \\text{ oz}\\]\n\\[x^* = \\frac{0.7 \\cdot I}{p_x} = \\frac{0.7 \\times 300}{1} = 210\\]\nUtility: \\[U_0 = (1800)^{0.3}(210)^{0.7} \\approx 400\\]\n\n\nPart (b): Bundle after tax\nWith \\(p_s' = 0.065\\): \\[s^{**} = \\frac{0.3 \\times 300}{0.065} = \\frac{90}{0.065} \\approx 1384.6 \\text{ oz}\\]\n\\[x^{**} = \\frac{0.7 \\times 300}{1} = 210\\]\nNote that \\(x^{**}\\) is unchanged because Cobb-Douglas utility implies each good receives a fixed expenditure share, and \\(p_x\\) did not change.\n\\[\\boxed{s^{**} \\approx 1384.6, \\quad x^{**} = 210}\\]\nNew utility: \\(U_1 = (1384.6)^{0.3}(210)^{0.7} \\approx 370\\)\n\n\nPart (c): Consumer Surplus\nThe Marshallian demand for sugary drinks is \\(s = \\frac{0.3 \\cdot I}{p_s} = \\frac{90}{p_s}\\).\nThe change in consumer surplus is: \\[\\Delta CS = -\\int_{0.05}^{0.065} s(p_s) \\, dp_s = -\\int_{0.05}^{0.065} \\frac{90}{p_s} \\, dp_s\\]\n\\[= -90 \\left[\\ln p_s\\right]_{0.05}^{0.065} = -90(\\ln 0.065 - \\ln 0.05) = -90 \\ln\\left(\\frac{0.065}{0.05}\\right)\\]\n\\[= -90 \\ln(1.3) = -90 \\times 0.2624 = -23.6\\]\n\\[\\boxed{\\Delta CS \\approx -\\$23.62}\\]\nTrapezoid approximation (for students who cannot integrate): The area under the demand curve between the two prices can be approximated as: \\[\\Delta CS \\approx -\\frac{1}{2}(s^* + s^{**}) \\times (p_s' - p_s) = -\\frac{1}{2}(1800 + 1384.6)(0.015) \\approx -\\$23.88\\]\n\n\nPart (d): Compensating Variation\nThe CV is the additional income needed at new prices to achieve the original utility \\(U_0\\). We need the expenditure function.\nFor Cobb-Douglas \\(U = s^{\\alpha}x^{\\beta}\\) with \\(\\alpha + \\beta = 1\\), the expenditure function is: \\[E(p_s, p_x, \\bar{U}) = \\bar{U} \\cdot \\left(\\frac{p_s}{\\alpha}\\right)^{\\alpha}\\left(\\frac{p_x}{\\beta}\\right)^{\\beta} = \\bar{U} \\cdot K \\cdot p_s^{\\alpha}p_x^{\\beta}\\]\nwhere \\(K = \\alpha^{-\\alpha}\\beta^{-\\beta} = (0.3)^{-0.3}(0.7)^{-0.7} = 1.842\\).\nExpenditure at original prices and \\(U_0\\): \\[E(0.05, 1, 400) = 400 \\cdot 1.842 \\cdot (0.05)^{0.3}(1)^{0.7} \\approx 300\\]\nExpenditure at new prices and \\(U_0\\): \\[E(0.065, 1, 400) = 400 \\cdot 1.842 \\cdot (0.065)^{0.3}(1)^{0.7} \\approx 324 \\]\n\\[\\boxed{CV = E(p_s', p_x, U_0) - E(p_s, p_x, U_0) = 324 - 300 = \\$24}\\]\nThe consumer would need $24 in additional income to be as well off as before the tax.\nThe CS approximation is very close to the CV. They are similar because the income effect of this price change is small (sugary drinks are a small share of the budget).\n\n\nPart (f): Tax Revenue and Deadweight Loss\n(i) Tax revenue: \\[R = t \\cdot s^{**} = 0.015 \\times 1384.6 \\approx \\$20.77\\]\n(ii) Deadweight loss: \\[DWL = CV - R = 24 - 20.77 = \\$3.23\\]\nInterpretation: Of the $24 welfare loss to the consumer, $20.77 is transferred to the government as tax revenue and $3.23 is pure efficiency loss (deadweight loss).\nExternality justification: The negative externality is \\(e = \\$0.01\\) per ounce. The reduction in externality from the tax is: \\[\\Delta \\text{Externality} = e \\times (s^* - s^{**}) = 0.01 \\times (1800 - 1384.6) = 0.01 \\times 415.4 = \\$4.15\\]\nThe tax generates $20.77 in revenue and reduces externalities by $4.15, while creating only $3.23 in deadweight loss. Since the externality reduction ($4.15) exceeds the DWL ($3.23), the tax improves overall welfare somewhat.\n\n\nPart (g): Revenue Recycling\n(i) New budget constraint:\nThe consumer faces the taxed price \\(p_s' = 0.065\\) but receives a lump-sum rebate \\(R\\) equal to the tax revenue collected. The budget constraint is: \\[p_s' \\cdot s + x = I + R\\] \\[0.065s + x = 300 + R\\]\nNote that while \\(R = t \\cdot s\\), the consumer takes \\(R\\) as given when choosing \\(s\\) and \\(x\\) (they do not internalize that their choice of \\(s\\) affects \\(R\\)). If they did internalize it, then the consumer’s problem would remain unchanged from the no-tax case.\n(ii) Optimal consumption:\nApplying the Cobb-Douglas demand functions: \\[s(R) = \\frac{0.3(300 + R)}{0.065} \\] \\[x(R) = 0.7(300 + R)\\]\nIn equilibrium, the rebate equals the tax revenue: \\(R = t \\cdot s(R)\\). Substituting: \\[R = 0.015 \\cdot \\frac{0.3(300 + R)}{0.065}\\]\n\\[0.065R = 1.35 + 0.0045R\\]\n\\[0.0605R = 1.35\\]\n\\[R = \\frac{1.35}{0.0605} \\approx 22.31\\]\nTherefore, equilibrium consumption is: \\[s_R = \\frac{0.3(300 + 22.31)}{0.065} \\approx 1487.6 \\text{ oz}\\] \\[x_R = 0.7(300 + 22.31) \\approx 225.6\\]\n(iii) New utility level:\nThe new utility level is: \\[U_R = (s_R)^{0.3}(x_R)^{0.7} \\approx 397\\]\n(iv) Comparison:\nUnder the tax-and-rebate scheme, the consumer reaches utility \\(U_R \\approx 397\\), between the no-tax level (\\(U_0 \\approx 400\\)) and the tax-only level (\\(U_1 \\approx 370\\)). The policy is largely successful: sugary drink consumption falls meaningfully from 1800 to about 1488 ounces, achieving the public health goal, while the rebate returns most of the welfare cost to the consumer. The consumer loses only about 3 utils compared to 30 under the tax alone. Composite good consumption actually rises from 210 to 226, since the rebate provides additional purchasing power that gets redirected toward untaxed goods. The small residual welfare loss (\\(400 - 397\\)) is the unavoidable deadweight loss from distorting relative prices, but it is far smaller than the welfare cost of the tax without revenue recycling.\n\n\nPart (h): Policy Discussion\n(i) CV vs CS:\nThe CV is generally preferred for welfare analysis because it is based on well-defined utility theory and the expenditure function. CS relies on the Marshallian demand curve, which conflates income and substitution effects. However, in this case they give nearly identical results because the income effect is small (sugary drinks are a small budget share). CS is often used in practice because it is easier to estimate empirically (only requires observable demand data, not utility parameters).\n(ii) Regressivity:\nThe tax is likely regressive because lower-income households spend a larger share of their income on taxed beverages. To test this empirically, one could:\n\nCompare pre- and post-tax spending on SSBs across income quintiles using household expenditure surveys\nEstimate demand elasticities by income group (lower-income consumers may be more price-elastic, partially offsetting regressivity)\nCalculate the tax burden as a share of income across the distribution\n\nRevenue recycling (as in part g) can mitigate regressivity if the lump-sum rebate represents a larger share of income for poorer households.\n(iii) Cross-border shopping:\nWith cross-border shopping, the consumer’s effective price lies somewhere between \\(p_s\\) and \\(p_s'\\): they can avoid the tax by traveling to a neighboring jurisdiction, but incur transport and time costs to do so. Call this effective price \\(\\tilde{p}_s \\in (p_s, p_s')\\). This has two offsetting effects on welfare:\n\nSmaller welfare loss to the consumer: Since \\(\\tilde{p}_s &lt; p_s'\\), the consumer faces a smaller effective price increase, so the reduction in consumer surplus (and CV) is smaller than our calculation suggests.\nMuch lower tax revenue: The consumer purchases fewer taxed ounces within the city, so revenue \\(R = t \\cdot s_{\\text{local}}\\) falls substantially if most purchases shift across the border.\n\nThe net effect on deadweight loss (\\(DWL = CV - R\\)) is ambiguous but likely higher: the CV falls somewhat, but revenue falls by more, since the government collects nothing on cross-border purchases while the consumer still bears the cost of traveling to avoid the tax. In the extreme, if all purchases move across the border, \\(R = 0\\) and the entire welfare loss (including transport costs) is pure deadweight loss.\nThis suggests that the optimal policy would be implemented at a broader geographic level (state or federal) to minimize cross-border leakage.\n(iv) Present bias and behavioral considerations:\nIf consumers exhibit present bias, they overweight the immediate pleasure of sugary drinks relative to future health costs. In this case, their experienced utility from reduced consumption may be higher than their decision utility suggests and they would thank their future selves for consuming less.\nTo modify the welfare analysis, one would need to distinguish between decision utility (the preferences consumers act on, which reflect present bias) and experienced utility (their true long-run well-being). Our CV calculation uses decision utility, which overstates the welfare cost of the tax: some of what appears as lost consumer welfare is actually a gain from correcting overconsumption. Under experienced utility, the DWL would be smaller, and the tax may even be welfare-improving if it helps consumers overcome self-control problems. In this case, a higher tax than the one calculated under standard assumptions may be justified to achieve the socially optimal level of consumption."
   },
   {
+    "objectID": "practice-problems/part2-add-practice.html",
+    "href": "practice-problems/part2-add-practice.html",
+    "title": "Part 2: Market Power Practice Problems",
+    "section": "",
+    "text": "A monopolist faces the inverse demand curve \\(P = 200 - 2Q\\) and has constant marginal cost \\(MC = 40\\) with no fixed costs.\n\nFind the monopolist’s profit-maximizing output \\(Q^*_m\\), price \\(P^*_m\\), and profit \\(\\pi\\). Show your derivation of marginal revenue.\nWhat would be the competitive equilibrium price and quantity if this market were perfectly competitive? Calculate consumer surplus under perfect competition.\nUnder monopoly, calculate consumer surplus (\\(CS_m\\)), producer surplus (\\(PS_m\\)), and the deadweight loss (\\(DWL\\)). Show the DWL as both the difference in total surplus and as a triangle formula.\nCalculate the Lerner Index at the monopoly equilibrium. Verify that it equals \\(1/|\\varepsilon_D|\\) using the price elasticity of demand at the monopoly point. Why does a profit-maximizing monopolist always operate on the elastic portion of its demand curve?\n\n\n\n\nA museum can identify adult and student visitors and charge them different admission prices. The inverse demand curves are: \\[P_A = 100 - Q_A \\qquad (\\text{adults}), \\qquad P_S = 60 - Q_S \\qquad (\\text{students})\\] The museum’s marginal cost is \\(MC = 20\\) and fixed costs are zero.\n\nIf the museum practices third-degree price discrimination, find the profit-maximizing price and quantity in each market and the total profit.\nIf the museum must charge a single uniform price to all visitors, find the profit-maximizing price, total quantity, and profit. (Hint: derive aggregate demand by horizontally summing the two demand curves.)\nUnder price discrimination, compute the Lerner Index and price elasticity of demand for each market. Verify that the inverse elasticity rule holds. Which group receives the higher markup, and why?\nCompare total welfare (consumer surplus plus profit) under price discrimination and uniform pricing. Is price discrimination welfare-improving in this case? Explain the intuition."
+  },
+  {
+    "objectID": "practice-problems/part2-add-practice.html#monopoly-pricing",
+    "href": "practice-problems/part2-add-practice.html#monopoly-pricing",
+    "title": "Part 2: Market Power Practice Problems",
+    "section": "",
+    "text": "A monopolist faces the inverse demand curve \\(P = 200 - 2Q\\) and has constant marginal cost \\(MC = 40\\) with no fixed costs.\n\nFind the monopolist’s profit-maximizing output \\(Q^*_m\\), price \\(P^*_m\\), and profit \\(\\pi\\). Show your derivation of marginal revenue.\nWhat would be the competitive equilibrium price and quantity if this market were perfectly competitive? Calculate consumer surplus under perfect competition.\nUnder monopoly, calculate consumer surplus (\\(CS_m\\)), producer surplus (\\(PS_m\\)), and the deadweight loss (\\(DWL\\)). Show the DWL as both the difference in total surplus and as a triangle formula.\nCalculate the Lerner Index at the monopoly equilibrium. Verify that it equals \\(1/|\\varepsilon_D|\\) using the price elasticity of demand at the monopoly point. Why does a profit-maximizing monopolist always operate on the elastic portion of its demand curve?"
+  },
+  {
+    "objectID": "practice-problems/part2-add-practice.html#third-degree-price-discrimination",
+    "href": "practice-problems/part2-add-practice.html#third-degree-price-discrimination",
+    "title": "Part 2: Market Power Practice Problems",
+    "section": "",
+    "text": "A museum can identify adult and student visitors and charge them different admission prices. The inverse demand curves are: \\[P_A = 100 - Q_A \\qquad (\\text{adults}), \\qquad P_S = 60 - Q_S \\qquad (\\text{students})\\] The museum’s marginal cost is \\(MC = 20\\) and fixed costs are zero.\n\nIf the museum practices third-degree price discrimination, find the profit-maximizing price and quantity in each market and the total profit.\nIf the museum must charge a single uniform price to all visitors, find the profit-maximizing price, total quantity, and profit. (Hint: derive aggregate demand by horizontally summing the two demand curves.)\nUnder price discrimination, compute the Lerner Index and price elasticity of demand for each market. Verify that the inverse elasticity rule holds. Which group receives the higher markup, and why?\nCompare total welfare (consumer surplus plus profit) under price discrimination and uniform pricing. Is price discrimination welfare-improving in this case? Explain the intuition."
+  },
+  {
+    "objectID": "practice-problems/part2-add-practice.html#cournot-duopoly-with-asymmetric-costs",
+    "href": "practice-problems/part2-add-practice.html#cournot-duopoly-with-asymmetric-costs",
+    "title": "Part 2: Market Power Practice Problems",
+    "section": "3. Cournot Duopoly with Asymmetric Costs",
+    "text": "3. Cournot Duopoly with Asymmetric Costs\nTwo firms compete in quantities with inverse demand \\(P = 120 - Q\\), where \\(Q = q_1 + q_2\\). Firm 1 has \\(MC_1 = 20\\) and firm 2 has \\(MC_2 = 40\\).\n\nDerive each firm’s best response function.\nFind the Nash equilibrium quantities, the market price, and each firm’s profit.\nCompute the Lerner index for each firm. Which firm has more market power? Explain.\nHow does total output and welfare compare to the symmetric case where both firms have \\(MC = 30\\)? What drives the difference?"
+  },
+  {
+    "objectID": "practice-problems/part2-add-practice.html#bertrand-competition",
+    "href": "practice-problems/part2-add-practice.html#bertrand-competition",
+    "title": "Part 2: Market Power Practice Problems",
+    "section": "4. Bertrand Competition",
+    "text": "4. Bertrand Competition\nTwo firms sell a homogeneous good with inverse demand \\(P = 100 - Q\\). Firm 1 has marginal cost \\(MC_1 = 10\\) and Firm 2 has marginal cost \\(MC_2 = 20\\). Each firm simultaneously sets its price; the lower-priced firm captures the entire market (with equal splitting at equal prices).\n\nShow that \\(p_1 = p_2 = c\\) (where \\(c\\) is the common marginal cost) is a Nash equilibrium when both firms have the same cost. Demonstrate that neither firm can profitably deviate.\nShow that \\(p_1 = p_2 = p &gt; c\\) is not a Nash equilibrium when both firms have the same cost. What is the intuition?\nWith the asymmetric costs given above (\\(MC_1 = 10\\), \\(MC_2 = 20\\)), find the equilibrium prices and profits. What determines the low-cost firm’s equilibrium price?\nThe Bertrand model predicts that two firms are enough to achieve the competitive outcome (zero profit with identical costs). Describe two real-world departures from the Bertrand assumptions that allow firms to earn positive profits."
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html",
+    "href": "practice-problems/part1-add-practice.html",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "",
+    "text": "For each of the following utility functions, given prices \\(p_x\\) and \\(p_y\\) and income \\(m\\), derive: (i) the demand functions for \\(x\\) and \\(y\\), (ii) the indirect utility function, and (iii) the expenditure function.\n\nCobb-Douglas: \\(u(x, y) = x^{\\alpha} y^{\\beta}\\), where \\(\\alpha, \\beta &gt; 0\\) and \\(\\alpha + \\beta = 1\\)\nPerfect Complements (Leontief): \\(u(x, y) = \\min\\{x, y\\}\\)\nPerfect Substitutes: \\(u(x, y) = x + y\\)\nConstant Elasticity of Substitution (CES): \\(u(x, y) = \\left(x^{\\rho} + y^{\\rho}\\right)^{1/\\rho}\\), where \\(\\rho \\neq 0\\)\n\n\n\n\nThe elasticity of substitution between goods \\(x\\) and \\(y\\) is defined as: \\[\\sigma = \\frac{d\\ln(y/x)}{d\\ln(MRS_{xy})}\\] where \\(MRS_{xy} = MU_x / MU_y\\) measures the rate at which the consumer is willing to trade \\(x\\) for \\(y\\).\n\nShow that the elasticity of substitution for the Cobb-Douglas utility function \\(u(x, y) = x^\\alpha y^\\beta\\) equals 1.\nWhat is the economic intuition for \\(\\sigma = 1\\)? (Hint: think about what happens to expenditure shares when relative prices change.)\n\n\n\n\nConsider the following utility function: \\[u(x, y) = xy \\] Price of good \\(x\\) is \\(p_x=1\\), price of good \\(y\\) is \\(p_y=2\\), and income is \\(m=10\\).\n\nWhat is the consumer’s optimal bundle of goods \\(x\\) and \\(y\\)?\nIf the price of good \\(y\\) decreases to \\(p_y=1\\), what is the new optimal bundle of goods \\(x\\) and \\(y\\)?\nFind the Hicksian demand function for good \\(y\\) and use it to calculate the substitution effect of the price change on the quantity demanded of good \\(y\\). What is the income effect of the price change on the quantity demanded of good \\(y\\)?\nIntuitively, explain what the substitution effect and income effect represent in this problem.\nHow much income would the consumer need to receive or give up to be as well off as before the price change, given the new prices?\n\n\n\n\nSuppose individuals require a certain level of food \\((x)\\) to remain alive. Let this amount be given by \\(x_0\\). Once \\(x_0\\) is purchased, individuals obtain utility from food and other goods \\((y)\\) of the form \\[U(x, y) = (x - x_0)^\\alpha y^\\beta,\\] where \\(\\alpha + \\beta = 1\\).\na. Show that if \\(I &gt; p_x x_0\\) then the individual will maximize utility by spending \\(\\alpha(I - p_x x_0) + p_x x_0\\) on good \\(x\\) and \\(\\beta(I - p_x x_0)\\) on good \\(y\\). Interpret this result.\nb. How do the ratios \\(p_x x/I\\) and \\(p_y y/I\\) change as income increases in this problem?\n\n\n\nUsing tools learnt in this course, can you explain why a cash transfer to a poor household may be more effective in improving their welfare than an in-kind transfer of food? Why do you think policymakers often prefer in-kind transfers to cash transfers?\n\n\n\nA consumer has preferences \\(U(x, y) = \\min\\{x, 2y\\}\\) and income \\(I = 90\\). The prices are \\(p_x = 2\\) and \\(p_y = 1\\).\n\nFind the optimal consumption bundle.\nNow suppose \\(p_x\\) rises to \\(4\\). Find the new optimal bundle and the change in demand for \\(x\\).\nDecompose the change in demand for \\(x\\) into a substitution effect and an income effect. What is special about the substitution effect for perfect complements? Explain the intuition."
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html#demand-functions-indirect-utility-and-expenditure-functions",
+    "href": "practice-problems/part1-add-practice.html#demand-functions-indirect-utility-and-expenditure-functions",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "",
+    "text": "For each of the following utility functions, given prices \\(p_x\\) and \\(p_y\\) and income \\(m\\), derive: (i) the demand functions for \\(x\\) and \\(y\\), (ii) the indirect utility function, and (iii) the expenditure function.\n\nCobb-Douglas: \\(u(x, y) = x^{\\alpha} y^{\\beta}\\), where \\(\\alpha, \\beta &gt; 0\\) and \\(\\alpha + \\beta = 1\\)\nPerfect Complements (Leontief): \\(u(x, y) = \\min\\{x, y\\}\\)\nPerfect Substitutes: \\(u(x, y) = x + y\\)\nConstant Elasticity of Substitution (CES): \\(u(x, y) = \\left(x^{\\rho} + y^{\\rho}\\right)^{1/\\rho}\\), where \\(\\rho \\neq 0\\)"
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html#elasticity-of-substitution",
+    "href": "practice-problems/part1-add-practice.html#elasticity-of-substitution",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "",
+    "text": "The elasticity of substitution between goods \\(x\\) and \\(y\\) is defined as: \\[\\sigma = \\frac{d\\ln(y/x)}{d\\ln(MRS_{xy})}\\] where \\(MRS_{xy} = MU_x / MU_y\\) measures the rate at which the consumer is willing to trade \\(x\\) for \\(y\\).\n\nShow that the elasticity of substitution for the Cobb-Douglas utility function \\(u(x, y) = x^\\alpha y^\\beta\\) equals 1.\nWhat is the economic intuition for \\(\\sigma = 1\\)? (Hint: think about what happens to expenditure shares when relative prices change.)"
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html#hicksian-demand-and-compensated-price-effects",
+    "href": "practice-problems/part1-add-practice.html#hicksian-demand-and-compensated-price-effects",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "",
+    "text": "Consider the following utility function: \\[u(x, y) = xy \\] Price of good \\(x\\) is \\(p_x=1\\), price of good \\(y\\) is \\(p_y=2\\), and income is \\(m=10\\).\n\nWhat is the consumer’s optimal bundle of goods \\(x\\) and \\(y\\)?\nIf the price of good \\(y\\) decreases to \\(p_y=1\\), what is the new optimal bundle of goods \\(x\\) and \\(y\\)?\nFind the Hicksian demand function for good \\(y\\) and use it to calculate the substitution effect of the price change on the quantity demanded of good \\(y\\). What is the income effect of the price change on the quantity demanded of good \\(y\\)?\nIntuitively, explain what the substitution effect and income effect represent in this problem.\nHow much income would the consumer need to receive or give up to be as well off as before the price change, given the new prices?"
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html#stone-geary-utility-textbook-ex-4.12",
+    "href": "practice-problems/part1-add-practice.html#stone-geary-utility-textbook-ex-4.12",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "",
+    "text": "Suppose individuals require a certain level of food \\((x)\\) to remain alive. Let this amount be given by \\(x_0\\). Once \\(x_0\\) is purchased, individuals obtain utility from food and other goods \\((y)\\) of the form \\[U(x, y) = (x - x_0)^\\alpha y^\\beta,\\] where \\(\\alpha + \\beta = 1\\).\na. Show that if \\(I &gt; p_x x_0\\) then the individual will maximize utility by spending \\(\\alpha(I - p_x x_0) + p_x x_0\\) on good \\(x\\) and \\(\\beta(I - p_x x_0)\\) on good \\(y\\). Interpret this result.\nb. How do the ratios \\(p_x x/I\\) and \\(p_y y/I\\) change as income increases in this problem?"
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html#cash-vs.-in-kind-transfers",
+    "href": "practice-problems/part1-add-practice.html#cash-vs.-in-kind-transfers",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "",
+    "text": "Using tools learnt in this course, can you explain why a cash transfer to a poor household may be more effective in improving their welfare than an in-kind transfer of food? Why do you think policymakers often prefer in-kind transfers to cash transfers?"
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html#income-and-substitution-effects-with-perfect-complements",
+    "href": "practice-problems/part1-add-practice.html#income-and-substitution-effects-with-perfect-complements",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "",
+    "text": "A consumer has preferences \\(U(x, y) = \\min\\{x, 2y\\}\\) and income \\(I = 90\\). The prices are \\(p_x = 2\\) and \\(p_y = 1\\).\n\nFind the optimal consumption bundle.\nNow suppose \\(p_x\\) rises to \\(4\\). Find the new optimal bundle and the change in demand for \\(x\\).\nDecompose the change in demand for \\(x\\) into a substitution effect and an income effect. What is special about the substitution effect for perfect complements? Explain the intuition."
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html#cost-minimization-and-profit-maximization",
+    "href": "practice-problems/part1-add-practice.html#cost-minimization-and-profit-maximization",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "7. Cost Minimization and Profit Maximization",
+    "text": "7. Cost Minimization and Profit Maximization\nA competitive firm produces output using capital \\(K\\) and labor \\(L\\) with the production function: \\[Q = K^{1/3} L^{1/3}\\]\nFactor prices are \\(r = w = 1\\).\n\nWhat are the returns to scale of this production function? Does this mean that if the firm doubles all inputs, output more than doubles, exactly doubles, or less than doubles? How does this affect the long-run average cost curve?\nSet up the cost minimization problem and derive the conditional factor demands \\(K^*(r, w, Q)\\) and \\(L^*(r, w, Q)\\). Use these to derive the total cost function \\(C(r, w, Q)\\). Evaluate \\(C\\) at \\(r = w = 1\\).\nDerive the average cost \\(AC(Q)\\) and marginal cost \\(MC(Q)\\) at \\(r = w = 1\\). Show that \\(MC &gt; AC\\) for all \\(Q &gt; 0\\). What does this imply about the shape of the average cost curve, and is it consistent with the returns to scale you found in part (a)?\nThe output price is \\(p = 6\\). Find the profit-maximizing output \\(Q^*\\). Calculate total revenue, total cost, and profit at \\(Q^*\\). Does the firm earn positive, zero, or negative economic profit? Is this consistent with a long-run competitive equilibrium?"
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html#short-run-supply-and-long-run-equilibrium",
+    "href": "practice-problems/part1-add-practice.html#short-run-supply-and-long-run-equilibrium",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "8. Short-Run Supply and Long-Run Equilibrium",
+    "text": "8. Short-Run Supply and Long-Run Equilibrium\nA competitive firm has the short-run total cost function \\(C(Q) = 50 + 10Q + 2Q^2\\), where \\(50\\) is a sunk fixed cost.\n\nDerive \\(SMC(Q)\\), \\(SAC(Q)\\), and \\(SAVC(Q)\\). Find the output level that minimizes \\(SAC\\) and the corresponding minimum \\(SAC\\).\nWhat is the firm’s short-run supply curve? At what price does the firm shut down in the short run? At what price does it break even (zero economic profit)?\nIf the market price is \\(p = 50\\), find the firm’s profit-maximizing output and profit.\nIn the long run with free entry/exit of identical firms, what is the equilibrium price? If market demand is \\(Q^D = 200 - 5P\\), how many firms operate in the long-run equilibrium?"
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html#competitive-equilibrium-and-tax-incidence",
+    "href": "practice-problems/part1-add-practice.html#competitive-equilibrium-and-tax-incidence",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "9. Competitive Equilibrium and Tax Incidence",
+    "text": "9. Competitive Equilibrium and Tax Incidence\nThe market for a good has demand and supply curves: \\[Q^D = 240 - 2P \\qquad Q^S = 3P - 60\\]\n\nFind the competitive equilibrium price \\(P^*\\) and quantity \\(Q^*\\). Calculate consumer surplus (CS), producer surplus (PS), and total welfare.\nThe government levies a specific tax of \\(t = 25\\) per unit on producers. Find the new equilibrium consumer price \\(P^D\\), producer price \\(P^S = P^D - t\\), and quantity \\(Q_t\\).\nCalculate the price elasticities of demand and supply at the pre-tax equilibrium. Using the tax incidence formulas \\[\\text{Consumer share} = \\frac{\\varepsilon_S}{|\\varepsilon_D| + \\varepsilon_S} \\] \\[ \\text{Producer share} = \\frac{|\\varepsilon_D|}{|\\varepsilon_D| + \\varepsilon_S}\\] determine what fraction of the tax burden falls on consumers versus producers. Verify by comparing \\(P^D - P^*\\) and \\(P^* - P^S\\) directly.\nCompute the tax revenue, the deadweight loss from the tax, and the changes in consumer surplus and producer surplus. Verify that \\(\\Delta CS + \\Delta PS + \\text{Tax Revenue} + \\text{DWL} = 0\\).\nVerify that the deadweight loss from the tax can be expressed as \\[\\text{DWL} = \\frac{1}{2} \\cdot \\frac{|\\varepsilon_D| \\varepsilon_S}{|\\varepsilon_D| + \\varepsilon_S} \\cdot \\frac{t^2}{p^*} \\cdot Q^*\\] Explain intuitively how the elasticities of demand and supply affect the size of the deadweight loss."
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html#conceptual-question-on-tax-incidence",
+    "href": "practice-problems/part1-add-practice.html#conceptual-question-on-tax-incidence",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "10. Conceptual Question on Tax Incidence",
+    "text": "10. Conceptual Question on Tax Incidence\nA senator proposes taxing producers rather than consumers, arguing this shields consumers from the burden. Using the theory of tax incidence, evaluate this claim. Under what (extreme) condition would it actually be true that producers bear the entire burden?"
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html#exchange-economy-and-general-equilibrium",
+    "href": "practice-problems/part1-add-practice.html#exchange-economy-and-general-equilibrium",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "11. Exchange Economy and General Equilibrium",
+    "text": "11. Exchange Economy and General Equilibrium\nConsider an exchange economy with two consumers (A and B) and two goods (\\(x\\) and \\(y\\)). Their endowments are: \\[\\omega_A = (8,\\, 2), \\quad \\omega_B = (2,\\, 8)\\]\nTheir utility functions are \\(U_A(x_A, y_A) = x_A y_A\\) and \\(U_B(x_B, y_B) = x_B y_B\\).\n\nCompute each consumer’s MRS at the endowment point. Is the initial allocation Pareto efficient? Explain intuitively which good each consumer would want to trade away and why.\nDerive the contract curve (the set of all Pareto efficient allocations) in the Edgeworth box. Express it as a relationship between \\(x_A\\) and \\(y_A\\), and describe its geometry.\nLet \\(p = p_x / p_y\\) be the price ratio. Find the competitive equilibrium: derive each consumer’s Walrasian demands, apply market clearing to find \\(p^*\\), and state the equilibrium allocation. Verify that the equilibrium lies on the contract curve.\nState the First and Second Welfare Theorems. A social planner wants to implement the Pareto efficient allocation \\((x_A, y_A) = (3, 3)\\) instead of the laissez-faire equilibrium. Identify the lump-sum transfer (in terms of a reallocation of endowments) that, combined with competitive trading at the equilibrium price ratio, supports this allocation."
+  },
+  {
+    "objectID": "practice-problems/part1-add-practice.html#welfare-theorems-and-policy-design",
+    "href": "practice-problems/part1-add-practice.html#welfare-theorems-and-policy-design",
+    "title": "Part 1: Competitive Markets Practice Problems",
+    "section": "12. Welfare Theorems and Policy Design",
+    "text": "12. Welfare Theorems and Policy Design\nState the First Welfare Theorem and the Second Welfare Theorem, including the assumptions each requires. What do these theorems, taken together, imply for the design of economic policy?"
+  },
+  {
     "objectID": "practice-problems/midterm-practice-solutions.html#problem-1-monopoly-pricing",
     "href": "practice-problems/midterm-practice-solutions.html#problem-1-monopoly-pricing",
     "title": "Midterm Practice Solutions",
@@ -147,6 +273,20 @@
     "text": "Problem 4: Bertrand Competition\n\nPart (a): \\(p_1 = p_2 = c\\) is a Nash equilibrium\nWe need to show that neither firm can increase its profit by unilaterally changing its price.\nAt \\(p_1 = p_2 = c\\), each firm earns zero profit (price equals marginal cost). Consider firm 1’s possible deviations:\n\nRaise price (\\(p_1 &gt; c\\)): Firm 1 loses all customers to firm 2 (which still charges \\(c\\)). Firm 1’s profit remains \\(\\$0\\). No improvement.\nLower price (\\(p_1 &lt; c\\)): Firm 1 captures the entire market but sells below cost. Firm 1’s profit is \\((p_1 - c) \\cdot Q(p_1) &lt; 0\\). This is strictly worse.\n\nSince no deviation is profitable, \\(p_1 = p_2 = c\\) is a Nash equilibrium. \\(\\quad \\checkmark\\)\n\n\nPart (b): \\(p_1 = p_2 &gt; c\\) is not a Nash equilibrium\nSuppose both firms charge \\(p = p_1 = p_2 &gt; c\\), splitting the market equally. Each firm earns:\n\\[\\pi = (p - c) \\cdot \\frac{Q(p)}{2} &gt; 0\\]\nNow consider firm 1 deviating to \\(p_1 = p - \\epsilon\\) (for small \\(\\epsilon &gt; 0\\)). Since the good is homogeneous and firm 1 is now cheaper, it captures the entire market:\n\\[\\pi_1^{\\text{dev}} = (p - \\epsilon - c) \\cdot Q(p - \\epsilon)\\]\nFor small \\(\\epsilon\\), this is approximately \\((p - c) \\cdot Q(p)\\), which is roughly double firm 1’s original profit. Since this is a profitable deviation, the original prices cannot be a Nash equilibrium. \\(\\quad \\checkmark\\)\n\n\nPart (c): Asymmetric costs\nWith \\(MC_1 = 10\\) and \\(MC_2 = 20\\), firm 1 has a cost advantage.\nIf firm 1 sets \\(p_1 = 20 - \\epsilon\\) (just below firm 2’s cost), it captures the entire market while firm 2 cannot profitably undercut (doing so would mean pricing below its own marginal cost).\nAt \\(p_1 = 20\\) (taking the limit as \\(\\epsilon \\to 0\\)):\n\\[Q = 100 - 20 = 80\\]\n\\[\\pi_1 = (20 - 10)(80) = \\$800\\]\nFirm 2 earns \\(\\$0\\).\n\\[\\boxed{p_1^* = 20, \\quad \\pi_1 = \\$800, \\quad \\pi_2 = \\$0}\\]\nThe low-cost firm captures the entire market by pricing at (or just below) the rival’s marginal cost. Firm 1’s cost advantage translates directly into profit, but it still cannot charge the monopoly price because firm 2 would undercut.\n\n\nPart (d): Resolving the Bertrand paradox\nThe Bertrand paradox arises because two critical assumptions drive the extreme result. Relaxing either allows firms to earn positive profits:\n\nProduct differentiation. If goods are not perfect substitutes (e.g., brand loyalty, quality differences, location), then a small price cut does not capture the entire market. Consumers may prefer one firm’s product even at a slightly higher price, giving each firm some market power.\nCapacity constraints. If firms cannot serve the entire market (limited production capacity), then undercutting does not let a firm capture all demand. The rival retains customers who cannot be served by the undercutting firm, allowing both to charge above marginal cost.\n\nOther valid answers include: repeated interaction (firms can sustain higher prices through tacit collusion if they interact repeatedly) and switching to quantity competition (the Cournot model yields positive profits with just two firms, as shown in Problem 3)."
   },
   {
+    "objectID": "exams/midterm.html",
+    "href": "exams/midterm.html",
+    "title": "Midterm Exam",
+    "section": "",
+    "text": "The market for electric vehicles has: \\[Q^D = 500 - 5P \\qquad Q^S = 5P - 100\\]\n\nFind the equilibrium price and quantity. Calculate consumer surplus (CS) and producer surplus (PS).\nThe government provides a per-unit subsidy of \\(s = 20\\) to producers. Find the new consumer price \\(P^D\\), producer price \\(P^S = P^D + s\\), and quantity.\nCalculate the government’s total cost of the subsidy. What is the change in CS, the change in PS, and the deadweight loss?\nDo consumers or producers benefit more from the subsidy? How does the relative benefit relate to the elasticities of demand and supply?"
+  },
+  {
+    "objectID": "exams/midterm.html#subsidy-and-welfare",
+    "href": "exams/midterm.html#subsidy-and-welfare",
+    "title": "Midterm Exam",
+    "section": "",
+    "text": "The market for electric vehicles has: \\[Q^D = 500 - 5P \\qquad Q^S = 5P - 100\\]\n\nFind the equilibrium price and quantity. Calculate consumer surplus (CS) and producer surplus (PS).\nThe government provides a per-unit subsidy of \\(s = 20\\) to producers. Find the new consumer price \\(P^D\\), producer price \\(P^S = P^D + s\\), and quantity.\nCalculate the government’s total cost of the subsidy. What is the change in CS, the change in PS, and the deadweight loss?\nDo consumers or producers benefit more from the subsidy? How does the relative benefit relate to the elasticities of demand and supply?"
+  },
+  {
     "objectID": "content/part4-add-content.html",
     "href": "content/part4-add-content.html",
     "title": "Additional Content",
@@ -173,217 +313,217 @@
   {
     "objectID": "content/lecture9.html",
     "href": "content/lecture9.html",
-    "title": "9: Asymmetric Information",
+    "title": "Lecture 9: Asymmetric Information",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
       "III. Market Failures",
-      "9: Asymmetric Information"
+      "9. Asymmetric Information"
     ]
   },
   {
     "objectID": "content/lecture9.html#topics",
     "href": "content/lecture9.html#topics",
-    "title": "9: Asymmetric Information",
+    "title": "Lecture 9: Asymmetric Information",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
       "III. Market Failures",
-      "9: Asymmetric Information"
+      "9. Asymmetric Information"
     ]
   },
   {
     "objectID": "content/lecture9.html#slides",
     "href": "content/lecture9.html#slides",
-    "title": "9: Asymmetric Information",
+    "title": "Lecture 9: Asymmetric Information",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
     "crumbs": [
       "Content",
       "III. Market Failures",
-      "9: Asymmetric Information"
+      "9. Asymmetric Information"
     ]
   },
   {
     "objectID": "content/lecture7.html",
     "href": "content/lecture7.html",
-    "title": "7: Market Power in Goods Markets (cont.)",
+    "title": "Lecture 7: Market Power in Goods Markets (cont.)",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
       "II. Market Power",
-      "7: Market Power in Goods Markets (cont.)"
+      "7. Market Power in Goods Markets (cont.)"
     ]
   },
   {
     "objectID": "content/lecture7.html#topics",
     "href": "content/lecture7.html#topics",
-    "title": "7: Market Power in Goods Markets (cont.)",
+    "title": "Lecture 7: Market Power in Goods Markets (cont.)",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
       "II. Market Power",
-      "7: Market Power in Goods Markets (cont.)"
+      "7. Market Power in Goods Markets (cont.)"
     ]
   },
   {
     "objectID": "content/lecture7.html#slides",
     "href": "content/lecture7.html#slides",
-    "title": "7: Market Power in Goods Markets (cont.)",
+    "title": "Lecture 7: Market Power in Goods Markets (cont.)",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
     "crumbs": [
       "Content",
       "II. Market Power",
-      "7: Market Power in Goods Markets (cont.)"
+      "7. Market Power in Goods Markets (cont.)"
     ]
   },
   {
     "objectID": "content/lecture5.html",
     "href": "content/lecture5.html",
-    "title": "5: Welfare Analysis and Efficiency",
+    "title": "Lecture 5: Welfare Analysis and Efficiency",
     "section": "",
     "text": "Exchange economies and the Edgeworth box\nFirst and second welfare theorems\nSocial welfare functions and the social planner’s problem\nAdding production to the model of exchange economies\n\nTextbook references: Chapter 16 from Pyndyck and Rubinfeld uploaded under “Additional Content.”",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "5: Welfare Analysis and Efficiency"
+      "5. Welfare Analysis and Efficiency"
     ]
   },
   {
     "objectID": "content/lecture5.html#topics",
     "href": "content/lecture5.html#topics",
-    "title": "5: Welfare Analysis and Efficiency",
+    "title": "Lecture 5: Welfare Analysis and Efficiency",
     "section": "",
     "text": "Exchange economies and the Edgeworth box\nFirst and second welfare theorems\nSocial welfare functions and the social planner’s problem\nAdding production to the model of exchange economies\n\nTextbook references: Chapter 16 from Pyndyck and Rubinfeld uploaded under “Additional Content.”",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "5: Welfare Analysis and Efficiency"
+      "5. Welfare Analysis and Efficiency"
     ]
   },
   {
     "objectID": "content/lecture5.html#slides",
     "href": "content/lecture5.html#slides",
-    "title": "5: Welfare Analysis and Efficiency",
+    "title": "Lecture 5: Welfare Analysis and Efficiency",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "5: Welfare Analysis and Efficiency"
+      "5. Welfare Analysis and Efficiency"
     ]
   },
   {
     "objectID": "content/lecture3.html",
     "href": "content/lecture3.html",
-    "title": "3: Production, Costs, and Firm Supply",
+    "title": "Lecture 3: Production, Costs, and Firm Supply",
     "section": "",
     "text": "Production functions: Rate of technical substitution (RTS), elasticity of substitution, returns to scale\nCost minimization and cost functions\nProfit maximization and supply decisions\nInput demand functions and factor markets\n\nTextbook references: Chapters 9-11",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "3: Production, Costs, and Firm Supply"
+      "3. Production, Costs, and Firm Supply"
     ]
   },
   {
     "objectID": "content/lecture3.html#topics",
     "href": "content/lecture3.html#topics",
-    "title": "3: Production, Costs, and Firm Supply",
+    "title": "Lecture 3: Production, Costs, and Firm Supply",
     "section": "",
     "text": "Production functions: Rate of technical substitution (RTS), elasticity of substitution, returns to scale\nCost minimization and cost functions\nProfit maximization and supply decisions\nInput demand functions and factor markets\n\nTextbook references: Chapters 9-11",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "3: Production, Costs, and Firm Supply"
+      "3. Production, Costs, and Firm Supply"
     ]
   },
   {
     "objectID": "content/lecture3.html#slides",
     "href": "content/lecture3.html#slides",
-    "title": "3: Production, Costs, and Firm Supply",
+    "title": "Lecture 3: Production, Costs, and Firm Supply",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "3: Production, Costs, and Firm Supply"
+      "3. Production, Costs, and Firm Supply"
     ]
   },
   {
     "objectID": "content/lecture12.html",
     "href": "content/lecture12.html",
-    "title": "12: Introduction to Game Theory",
+    "title": "Lecture 12: Introduction to Game Theory",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
       "IV. Uncertainty and Strategy",
-      "12: Introduction to Game Theory"
+      "12. Introduction to Game Theory"
     ]
   },
   {
     "objectID": "content/lecture12.html#topics",
     "href": "content/lecture12.html#topics",
-    "title": "12: Introduction to Game Theory",
+    "title": "Lecture 12: Introduction to Game Theory",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
       "IV. Uncertainty and Strategy",
-      "12: Introduction to Game Theory"
+      "12. Introduction to Game Theory"
     ]
   },
   {
     "objectID": "content/lecture12.html#slides",
     "href": "content/lecture12.html#slides",
-    "title": "12: Introduction to Game Theory",
+    "title": "Lecture 12: Introduction to Game Theory",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
     "crumbs": [
       "Content",
       "IV. Uncertainty and Strategy",
-      "12: Introduction to Game Theory"
+      "12. Introduction to Game Theory"
     ]
   },
   {
     "objectID": "content/lecture10.html",
     "href": "content/lecture10.html",
-    "title": "10: Externalities and Public Goods",
+    "title": "Lecture 10: Externalities and Public Goods",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
       "III. Market Failures",
-      "10: Externalities and Public Goods"
+      "10. Externalities and Public Goods"
     ]
   },
   {
     "objectID": "content/lecture10.html#topics",
     "href": "content/lecture10.html#topics",
-    "title": "10: Externalities and Public Goods",
+    "title": "Lecture 10: Externalities and Public Goods",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
       "III. Market Failures",
-      "10: Externalities and Public Goods"
+      "10. Externalities and Public Goods"
     ]
   },
   {
     "objectID": "content/lecture10.html#slides",
     "href": "content/lecture10.html#slides",
-    "title": "10: Externalities and Public Goods",
+    "title": "Lecture 10: Externalities and Public Goods",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
     "crumbs": [
       "Content",
       "III. Market Failures",
-      "10: Externalities and Public Goods"
+      "10. Externalities and Public Goods"
     ]
   },
   {
@@ -542,7 +682,7 @@
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "1: Consumer Preferences and Choice"
+      "1. Consumer Preferences and Choice"
     ]
   },
   {
@@ -554,7 +694,7 @@
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "1: Consumer Preferences and Choice"
+      "1. Consumer Preferences and Choice"
     ]
   },
   {
@@ -566,187 +706,187 @@
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "1: Consumer Preferences and Choice"
+      "1. Consumer Preferences and Choice"
     ]
   },
   {
     "objectID": "content/lecture11.html",
     "href": "content/lecture11.html",
-    "title": "11: Choice Under Uncertainty",
+    "title": "Lecture 11: Choice Under Uncertainty",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
       "IV. Uncertainty and Strategy",
-      "11: Choice Under Uncertainty"
+      "11. Choice Under Uncertainty"
     ]
   },
   {
     "objectID": "content/lecture11.html#topics",
     "href": "content/lecture11.html#topics",
-    "title": "11: Choice Under Uncertainty",
+    "title": "Lecture 11: Choice Under Uncertainty",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
       "IV. Uncertainty and Strategy",
-      "11: Choice Under Uncertainty"
+      "11. Choice Under Uncertainty"
     ]
   },
   {
     "objectID": "content/lecture11.html#slides",
     "href": "content/lecture11.html#slides",
-    "title": "11: Choice Under Uncertainty",
+    "title": "Lecture 11: Choice Under Uncertainty",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
     "crumbs": [
       "Content",
       "IV. Uncertainty and Strategy",
-      "11: Choice Under Uncertainty"
+      "11. Choice Under Uncertainty"
     ]
   },
   {
     "objectID": "content/lecture2.html",
     "href": "content/lecture2.html",
-    "title": "Lecture 2",
+    "title": "Lecture 2: Demand Analysis and Consumer Welfare",
     "section": "",
     "text": "Indirect utility function\nExpenditure minimization and expenditure function\nMarshallian and Hicksian demand\nSlutsky equation\nMeasuring welfare: CV, EV, and consumer surplus\n\nTextbook references: 4.4; 4.7; 5.1-5.8; 6.1-6.3",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "2: Demand Analysis and Consumer Welfare"
+      "2. Demand Analysis and Consumer Welfare"
     ]
   },
   {
     "objectID": "content/lecture2.html#topics",
     "href": "content/lecture2.html#topics",
-    "title": "Lecture 2",
+    "title": "Lecture 2: Demand Analysis and Consumer Welfare",
     "section": "",
     "text": "Indirect utility function\nExpenditure minimization and expenditure function\nMarshallian and Hicksian demand\nSlutsky equation\nMeasuring welfare: CV, EV, and consumer surplus\n\nTextbook references: 4.4; 4.7; 5.1-5.8; 6.1-6.3",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "2: Demand Analysis and Consumer Welfare"
+      "2. Demand Analysis and Consumer Welfare"
     ]
   },
   {
     "objectID": "content/lecture2.html#slides",
     "href": "content/lecture2.html#slides",
-    "title": "Lecture 2",
+    "title": "Lecture 2: Demand Analysis and Consumer Welfare",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "2: Demand Analysis and Consumer Welfare"
+      "2. Demand Analysis and Consumer Welfare"
     ]
   },
   {
     "objectID": "content/lecture4.html",
     "href": "content/lecture4.html",
-    "title": "4: Competitive Market Equilibrium",
+    "title": "Lecture 4: Competitive Market Equilibrium",
     "section": "",
     "text": "Competitive equilibrium: Short-run and long-run supply\nComparative statics of competitive equilibrium\nWelfare analysis of competitive equilibrium\n\nTextbook references: Chapter 12",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "4: Competitive Market Equilibrium"
+      "4. Competitive Market Equilibrium"
     ]
   },
   {
     "objectID": "content/lecture4.html#topics",
     "href": "content/lecture4.html#topics",
-    "title": "4: Competitive Market Equilibrium",
+    "title": "Lecture 4: Competitive Market Equilibrium",
     "section": "",
     "text": "Competitive equilibrium: Short-run and long-run supply\nComparative statics of competitive equilibrium\nWelfare analysis of competitive equilibrium\n\nTextbook references: Chapter 12",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "4: Competitive Market Equilibrium"
+      "4. Competitive Market Equilibrium"
     ]
   },
   {
     "objectID": "content/lecture4.html#slides",
     "href": "content/lecture4.html#slides",
-    "title": "4: Competitive Market Equilibrium",
+    "title": "Lecture 4: Competitive Market Equilibrium",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
     "crumbs": [
       "Content",
       "I. Competitive Markets",
-      "4: Competitive Market Equilibrium"
+      "4. Competitive Market Equilibrium"
     ]
   },
   {
     "objectID": "content/lecture6.html",
     "href": "content/lecture6.html",
-    "title": "6: Market Power in Goods Markets",
+    "title": "Lecture 6: Market Power in Goods Markets",
     "section": "",
     "text": "Monopoly equilibrium\nPrice discrimination\nImperfect competition: Bertrand and Cournot models\n\nTextbook references: 14.1-14.3, 14.6-14.7 (briefly), 15.1-15.3",
     "crumbs": [
       "Content",
       "II. Market Power",
-      "6: Market Power in Goods Markets"
+      "6. Market Power in Goods Markets"
     ]
   },
   {
     "objectID": "content/lecture6.html#topics",
     "href": "content/lecture6.html#topics",
-    "title": "6: Market Power in Goods Markets",
+    "title": "Lecture 6: Market Power in Goods Markets",
     "section": "",
     "text": "Monopoly equilibrium\nPrice discrimination\nImperfect competition: Bertrand and Cournot models\n\nTextbook references: 14.1-14.3, 14.6-14.7 (briefly), 15.1-15.3",
     "crumbs": [
       "Content",
       "II. Market Power",
-      "6: Market Power in Goods Markets"
+      "6. Market Power in Goods Markets"
     ]
   },
   {
     "objectID": "content/lecture6.html#slides",
     "href": "content/lecture6.html#slides",
-    "title": "6: Market Power in Goods Markets",
+    "title": "Lecture 6: Market Power in Goods Markets",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
     "crumbs": [
       "Content",
       "II. Market Power",
-      "6: Market Power in Goods Markets"
+      "6. Market Power in Goods Markets"
     ]
   },
   {
     "objectID": "content/lecture8.html",
     "href": "content/lecture8.html",
-    "title": "8: Labor Markets and Monopsony",
+    "title": "Lecture 8: Labor Markets and Monopsony",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
       "II. Market Power",
-      "8: Labor Markets and Monopsony"
+      "8. Labor Markets and Monopsony"
     ]
   },
   {
     "objectID": "content/lecture8.html#topics",
     "href": "content/lecture8.html#topics",
-    "title": "8: Labor Markets and Monopsony",
+    "title": "Lecture 8: Labor Markets and Monopsony",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
       "II. Market Power",
-      "8: Labor Markets and Monopsony"
+      "8. Labor Markets and Monopsony"
     ]
   },
   {
     "objectID": "content/lecture8.html#slides",
     "href": "content/lecture8.html#slides",
-    "title": "8: Labor Markets and Monopsony",
+    "title": "Lecture 8: Labor Markets and Monopsony",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
     "crumbs": [
       "Content",
       "II. Market Power",
-      "8: Labor Markets and Monopsony"
+      "8. Labor Markets and Monopsony"
     ]
   },
   {
@@ -822,6 +962,20 @@
     ]
   },
   {
+    "objectID": "exams/midterm-solutions.html",
+    "href": "exams/midterm-solutions.html",
+    "title": "Midterm Exam: Solutions",
+    "section": "",
+    "text": "Set \\(Q^D = Q^S\\): \\[500 - 5P = 5P - 100 \\implies 600 = 10P \\implies P^* = 60, \\quad Q^* = 200\\]\nThe demand curve hits the price axis at \\(P = 100\\) (set \\(Q^D = 0\\)); the supply curve hits at \\(P = 20\\) (set \\(Q^S = 0\\)).\n\\[CS = \\frac{1}{2}(100 - 60)(200) = 4000\\] \\[PS = \\frac{1}{2}(60 - 20)(200) = 4000\\]\n\n\n\nA per-unit subsidy to producers drives a wedge \\(P^S - P^D = s = 20\\). Producers receive \\(P^S = P^D + 20\\), so substitute into supply: \\[Q^D(P^D) = Q^S(P^S): \\quad 500 - 5P^D = 5(P^D + 20) - 100 = 5P^D\\] \\[500 = 10P^D \\implies P^D = 50\\] \\[\\boxed{P^D = 50, \\quad P^S = 70, \\quad Q_s = 250}\\]\nCheck: \\(Q^D = 500 - 5(50) = 250\\) and \\(Q^S = 5(70) - 100 = 250\\) ✓\n\n\n\n\\[\\text{Government Cost} = s \\times Q_s = 20 \\times 250 = 5000\\]\n\\[CS_{\\text{new}} = \\frac{1}{2}(100 - 50)(250) = 6250 \\implies \\Delta CS = +2250\\] \\[PS_{\\text{new}} = \\frac{1}{2}(70 - 20)(250) = 6250 \\implies \\Delta PS = +2250\\]\n\\[DWL = \\frac{1}{2}(s)(Q_s - Q^*) = \\frac{1}{2}(20)(50) = \\boxed{500}\\]\nVerification: The subsidy costs $5000 but generates only \\(\\Delta CS + \\Delta PS = 4500\\) in surplus gains, so net social loss \\(= 500 = DWL\\). ✓\n\n\n\nBoth consumers and producers gain equally: \\(\\Delta CS = \\Delta PS = 2250\\).\nTo see why, compute the elasticities at \\((P^* = 60,\\, Q^* = 200)\\): \\[\\varepsilon_D = (-5)\\cdot\\frac{60}{200} = -1.5, \\qquad \\varepsilon_S = (5)\\cdot\\frac{60}{200} = 1.5\\]\nSince \\(|\\varepsilon_D| = \\varepsilon_S\\), demand and supply are equally elastic, so the subsidy benefit is split 50/50. Consumers gain \\(P^* - P^D = 10\\) per unit and producers gain \\(P^S - P^* = 10\\) per unit, so each receives exactly half the subsidy of \\(20\\).\nIn general, the side with lower elasticity (less able to adjust behavior) captures a larger share of the subsidy benefit, by the same logic as tax incidence."
+  },
+  {
+    "objectID": "exams/midterm-solutions.html#subsidy-and-welfare",
+    "href": "exams/midterm-solutions.html#subsidy-and-welfare",
+    "title": "Midterm Exam: Solutions",
+    "section": "",
+    "text": "Set \\(Q^D = Q^S\\): \\[500 - 5P = 5P - 100 \\implies 600 = 10P \\implies P^* = 60, \\quad Q^* = 200\\]\nThe demand curve hits the price axis at \\(P = 100\\) (set \\(Q^D = 0\\)); the supply curve hits at \\(P = 20\\) (set \\(Q^S = 0\\)).\n\\[CS = \\frac{1}{2}(100 - 60)(200) = 4000\\] \\[PS = \\frac{1}{2}(60 - 20)(200) = 4000\\]\n\n\n\nA per-unit subsidy to producers drives a wedge \\(P^S - P^D = s = 20\\). Producers receive \\(P^S = P^D + 20\\), so substitute into supply: \\[Q^D(P^D) = Q^S(P^S): \\quad 500 - 5P^D = 5(P^D + 20) - 100 = 5P^D\\] \\[500 = 10P^D \\implies P^D = 50\\] \\[\\boxed{P^D = 50, \\quad P^S = 70, \\quad Q_s = 250}\\]\nCheck: \\(Q^D = 500 - 5(50) = 250\\) and \\(Q^S = 5(70) - 100 = 250\\) ✓\n\n\n\n\\[\\text{Government Cost} = s \\times Q_s = 20 \\times 250 = 5000\\]\n\\[CS_{\\text{new}} = \\frac{1}{2}(100 - 50)(250) = 6250 \\implies \\Delta CS = +2250\\] \\[PS_{\\text{new}} = \\frac{1}{2}(70 - 20)(250) = 6250 \\implies \\Delta PS = +2250\\]\n\\[DWL = \\frac{1}{2}(s)(Q_s - Q^*) = \\frac{1}{2}(20)(50) = \\boxed{500}\\]\nVerification: The subsidy costs $5000 but generates only \\(\\Delta CS + \\Delta PS = 4500\\) in surplus gains, so net social loss \\(= 500 = DWL\\). ✓\n\n\n\nBoth consumers and producers gain equally: \\(\\Delta CS = \\Delta PS = 2250\\).\nTo see why, compute the elasticities at \\((P^* = 60,\\, Q^* = 200)\\): \\[\\varepsilon_D = (-5)\\cdot\\frac{60}{200} = -1.5, \\qquad \\varepsilon_S = (5)\\cdot\\frac{60}{200} = 1.5\\]\nSince \\(|\\varepsilon_D| = \\varepsilon_S\\), demand and supply are equally elastic, so the subsidy benefit is split 50/50. Consumers gain \\(P^* - P^D = 10\\) per unit and producers gain \\(P^S - P^* = 10\\) per unit, so each receives exactly half the subsidy of \\(20\\).\nIn general, the side with lower elasticity (less able to adjust behavior) captures a larger share of the subsidy benefit, by the same logic as tax incidence."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Advanced Microeconomics",
@@ -862,6 +1016,265 @@
     "title": "Midterm Practice Problems",
     "section": "Problem 4: Bertrand Competition",
     "text": "Problem 4: Bertrand Competition\nTwo firms produce a homogeneous good and compete by simultaneously choosing prices. Consumers buy from the firm with the lower price; if both charge the same price, they split the market equally. Both firms have constant marginal cost \\(c\\).\n\nSuppose both firms set prices \\(p_1 = p_2 = c\\). Show that this is a Nash equilibrium by verifying that neither firm can profitably deviate.\nExplain why any pair of prices with \\(p_1 = p_2 &gt; c\\) cannot be a Nash equilibrium.\nNow suppose costs are asymmetric: firm 1 has \\(MC_1 = 10\\) and firm 2 has \\(MC_2 = 20\\). The market demand is \\(Q = 100 - P\\). What is the Nash equilibrium? What is firm 1’s profit? (Hint: Think about what happens if firm 1 prices just below firm 2’s cost.)\nThe result in parts (a) and (b) is known as the Bertrand paradox: just two firms are enough to eliminate all market power. Give two assumptions of the Bertrand model that, if relaxed, would allow firms to earn positive profits in equilibrium."
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-5-utility-maximization-and-welfare",
+    "href": "practice-problems/midterm-practice.html#problem-5-utility-maximization-and-welfare",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 5: Utility Maximization and Welfare",
+    "text": "Problem 5: Utility Maximization and Welfare\nA consumer has utility function \\(U(x, y) = xy\\) and income \\(I = 100\\). The initial prices are \\(p_x = 1\\) and \\(p_y = 1\\).\n\nDerive the Marshallian demand functions \\(x^*(p_x, p_y, I)\\) and \\(y^*(p_x, p_y, I)\\) by solving the utility maximization problem. Find the optimal bundle and utility level at the initial prices.\nSuppose the price of \\(x\\) rises to \\(p_x' = 4\\) (with \\(p_y = 1\\) and \\(I = 100\\) unchanged). Find the new optimal bundle. Using the Slutsky decomposition, calculate the substitution effect (holding money income fixed so the consumer can just afford the original bundle) and the income effect separately.\nDerive the expenditure function \\(E(p_x, p_y, \\bar{U})\\) by solving the expenditure minimization problem. Use it to compute the Compensating Variation (CV) for the price increase in part (b). Interpret the CV in words.\nUsing the Marshallian demand functions, determine whether \\(x\\) is a normal or inferior good, and whether \\(x\\) and \\(y\\) are gross substitutes or complements. Now use the expenditure function from part (c) to find the Hicksian demand for \\(x\\) and determine whether \\(x\\) and \\(y\\) are net (Hicksian) substitutes or complements. Reconcile the two results."
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-6-production-cost-minimization-and-firm-supply",
+    "href": "practice-problems/midterm-practice.html#problem-6-production-cost-minimization-and-firm-supply",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 6: Production, Cost Minimization, and Firm Supply",
+    "text": "Problem 6: Production, Cost Minimization, and Firm Supply\nA competitive firm produces output using capital \\(K\\) and labor \\(L\\) with the production function: \\[Q = K^{1/3} L^{1/3}\\]\nFactor prices are \\(r = w = 1\\).\n\nWhat are the returns to scale of this production function? Does this mean that if the firm doubles all inputs, output more than doubles, exactly doubles, or less than doubles? How does this affect the long-run average cost curve?\nSet up the cost minimization problem and derive the conditional factor demands \\(K^*(r, w, Q)\\) and \\(L^*(r, w, Q)\\). Use these to derive the total cost function \\(C(r, w, Q)\\). Evaluate \\(C\\) at \\(r = w = 1\\).\nDerive the average cost \\(AC(Q)\\) and marginal cost \\(MC(Q)\\) at \\(r = w = 1\\). Show that \\(MC &gt; AC\\) for all \\(Q &gt; 0\\). What does this imply about the shape of the average cost curve, and is it consistent with the returns to scale you found in part (a)?\nThe output price is \\(p = 6\\). Find the profit-maximizing output \\(Q^*\\). Calculate total revenue, total cost, and profit at \\(Q^*\\). Does the firm earn positive, zero, or negative economic profit? Is this consistent with a long-run competitive equilibrium?"
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-7-competitive-equilibrium-and-tax-incidence",
+    "href": "practice-problems/midterm-practice.html#problem-7-competitive-equilibrium-and-tax-incidence",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 7: Competitive Equilibrium and Tax Incidence",
+    "text": "Problem 7: Competitive Equilibrium and Tax Incidence\nThe market for a good has demand and supply curves: \\[Q^D = 240 - 2P \\qquad Q^S = 3P - 60\\]\n\nFind the competitive equilibrium price \\(P^*\\) and quantity \\(Q^*\\). Calculate consumer surplus (CS), producer surplus (PS), and total welfare.\nThe government levies a specific tax of \\(t = 25\\) per unit on producers. Find the new equilibrium consumer price \\(P^D\\), producer price \\(P^S = P^D - t\\), and quantity \\(Q_t\\).\nCalculate the price elasticities of demand and supply at the pre-tax equilibrium. Using the tax incidence formula, determine what fraction of the tax burden falls on consumers versus producers. Verify by comparing \\(P^D - P^*\\) and \\(P^* - P^S\\) directly.\nCompute the tax revenue, the deadweight loss from the tax, and the changes in consumer surplus and producer surplus. Verify that \\(\\Delta CS + \\Delta PS + \\text{Tax Revenue} + \\text{DWL} = 0\\)."
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-8-exchange-economy-and-general-equilibrium",
+    "href": "practice-problems/midterm-practice.html#problem-8-exchange-economy-and-general-equilibrium",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 8: Exchange Economy and General Equilibrium",
+    "text": "Problem 8: Exchange Economy and General Equilibrium\nConsider an exchange economy with two consumers (A and B) and two goods (\\(x\\) and \\(y\\)). Their endowments are: \\[\\omega_A = (8,\\, 2), \\quad \\omega_B = (2,\\, 8)\\]\nTheir utility functions are \\(U_A(x_A, y_A) = x_A y_A\\) and \\(U_B(x_B, y_B) = x_B y_B\\).\n\nCompute each consumer’s MRS at the endowment point. Is the initial allocation Pareto efficient? Explain intuitively which good each consumer would want to trade away and why.\nDerive the contract curve (the set of all Pareto efficient allocations) in the Edgeworth box. Express it as a relationship between \\(x_A\\) and \\(y_A\\), and describe its geometry.\nLet \\(p = p_x / p_y\\) be the price ratio. Find the competitive equilibrium: derive each consumer’s Walrasian demands, apply market clearing to find \\(p^*\\), and state the equilibrium allocation. Verify that the equilibrium lies on the contract curve.\nState the First and Second Welfare Theorems. A social planner wants to implement the Pareto efficient allocation \\((x_A, y_A) = (3, 3)\\) instead of the laissez-faire equilibrium. Identify the lump-sum transfer (in terms of a reallocation of endowments) that, combined with competitive trading at the equilibrium price ratio, supports this allocation."
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-9-conceptual-the-welfare-theorems",
+    "href": "practice-problems/midterm-practice.html#problem-9-conceptual-the-welfare-theorems",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 9 (Conceptual): The Welfare Theorems",
+    "text": "Problem 9 (Conceptual): The Welfare Theorems\n\nState the First Welfare Theorem and the assumptions it requires. Give two real-world reasons why a competitive equilibrium might fail to be Pareto efficient.\nState the Second Welfare Theorem. Why is this theorem important for policy — what does it tell us about the relationship between efficiency and equity?\nA politician says: “The First Welfare Theorem proves that free markets produce the best outcomes for society, so the government should never intervene.” Do you agree with this interpretation? Explain why or why not."
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-10-conceptual-taxes-efficiency-and-incidence",
+    "href": "practice-problems/midterm-practice.html#problem-10-conceptual-taxes-efficiency-and-incidence",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 10 (Conceptual): Taxes, Efficiency, and Incidence",
+    "text": "Problem 10 (Conceptual): Taxes, Efficiency, and Incidence\n\nA senator proposes taxing producers rather than consumers, arguing this shields consumers from the burden. Using the theory of tax incidence, evaluate this claim. Under what (extreme) condition would it actually be true that producers bear the entire burden?\nA per-unit tax and a lump-sum tax both raise the same revenue. Which causes a larger deadweight loss? Explain the economic intuition — what is it about a per-unit tax that makes it distortionary?\nConsider a market where demand is perfectly inelastic. If the government imposes a per-unit tax, who bears the burden? What is the deadweight loss? Now answer the same questions if supply is perfectly elastic instead."
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-11-conceptual-monopoly-elasticity-and-market-power",
+    "href": "practice-problems/midterm-practice.html#problem-11-conceptual-monopoly-elasticity-and-market-power",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 11 (Conceptual): Monopoly, Elasticity, and Market Power",
+    "text": "Problem 11 (Conceptual): Monopoly, Elasticity, and Market Power\n\nA profit-maximizing monopolist never operates on the inelastic portion of the demand curve. Explain why, using the relationship between marginal revenue and elasticity.\nUsing the inverse elasticity rule \\(L = 1/|\\varepsilon_D|\\), explain why a monopolist facing more elastic demand charges a lower markup. What happens to the Lerner Index as demand becomes perfectly elastic, and what does this imply about the monopolist’s behavior?\nConsider Cournot competition with \\(n\\) identical firms. What happens to the equilibrium price, total output, and per-firm profit as \\(n\\) increases? What market structure does Cournot converge to in the limit? How does this compare to the Bertrand model with just \\(n = 2\\) firms?"
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-12-conceptual-consumer-theory",
+    "href": "practice-problems/midterm-practice.html#problem-12-conceptual-consumer-theory",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 12 (Conceptual): Consumer Theory",
+    "text": "Problem 12 (Conceptual): Consumer Theory\n\nWhat is the difference between ordinal and cardinal utility? Why do economists generally work with ordinal utility? Give an example of a result in consumer theory that relies only on ordinal properties.\nUsing the Slutsky equation, explain why a Giffen good must be an inferior good. Can a normal good ever be Giffen? Can an inferior good fail to be Giffen?\nUnder what conditions are the Compensating Variation (CV), Equivalent Variation (EV), and the change in Marshallian Consumer Surplus (\\(\\Delta CS\\)) all equal to each other? Why do they generally differ?"
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-13-conceptual-production-and-market-structure",
+    "href": "practice-problems/midterm-practice.html#problem-13-conceptual-production-and-market-structure",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 13 (Conceptual): Production and Market Structure",
+    "text": "Problem 13 (Conceptual): Production and Market Structure\n\nExplain the relationship between returns to scale and the shape of the long-run average cost curve. Why might an industry with strong increasing returns to scale tend toward a monopoly (a natural monopoly)?\nA competitive firm sets \\(P = MC\\), while a monopolist sets \\(MR = MC\\). Both are profit-maximizing. Why does the competitive firm ignore the effect of its output on price while the monopolist does not? What key structural assumption explains the difference?\nIn the long run with free entry and exit, competitive firms earn zero economic profit. Does this mean they earn zero accounting profit? Explain the difference and why firms still choose to operate."
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-14-quasilinear-utility",
+    "href": "practice-problems/midterm-practice.html#problem-14-quasilinear-utility",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 14: Quasilinear Utility",
+    "text": "Problem 14: Quasilinear Utility\nA consumer has utility \\(U(x, y) = 2\\sqrt{x} + y\\), where \\(y\\) is a numeraire good with \\(p_y = 1\\). The price of \\(x\\) is \\(p\\) and income is \\(I\\) (assume \\(I\\) is large enough for an interior solution throughout).\n\nDerive the Marshallian demand function for \\(x\\). Show that demand for \\(x\\) does not depend on income. What does this tell you about the income elasticity of demand for \\(x\\)?\nShow that for this utility function, the Marshallian and Hicksian demands for \\(x\\) coincide. What does this imply about the substitution and income effects of a price change?\nSuppose \\(p\\) rises from \\(1\\) to \\(4\\). Calculate the change in Marshallian consumer surplus, the Compensating Variation, and the Equivalent Variation. What do you notice?"
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-15-two-part-tariff",
+    "href": "practice-problems/midterm-practice.html#problem-15-two-part-tariff",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 15: Two-Part Tariff",
+    "text": "Problem 15: Two-Part Tariff\nA monopolist serves a single consumer whose demand for a good is \\(Q = 20 - P\\). The monopolist has \\(MC = 4\\) with no fixed costs.\n\nUnder uniform (per-unit) pricing, find the profit-maximizing price, quantity, and profit. Calculate consumer surplus and deadweight loss.\nNow the monopolist uses a two-part tariff: a fixed entry fee \\(T\\) plus a per-unit price \\(p\\). The consumer buys only if their consumer surplus (net of \\(T\\)) is non-negative. Find the optimal two-part tariff \\((T^*, p^*)\\) and the monopolist’s total profit.\nCompare total welfare (CS + profit) under uniform pricing and the two-part tariff. Which regime is more efficient? Who gains and who loses relative to uniform pricing?"
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-16-short-run-supply-and-long-run-equilibrium",
+    "href": "practice-problems/midterm-practice.html#problem-16-short-run-supply-and-long-run-equilibrium",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 16: Short-Run Supply and Long-Run Equilibrium",
+    "text": "Problem 16: Short-Run Supply and Long-Run Equilibrium\nA competitive firm has the short-run total cost function \\(C(Q) = 50 + 2Q^2\\), where \\(50\\) is a sunk fixed cost.\n\nDerive \\(MC(Q)\\), \\(ATC(Q)\\), and \\(AVC(Q)\\). Find the output level that minimizes \\(ATC\\) and the corresponding minimum \\(ATC\\).\nWhat is the firm’s short-run supply curve? At what price does the firm shut down in the short run? At what price does it break even (zero economic profit)?\nIf the market price is \\(p = 40\\), find the firm’s profit-maximizing output and profit.\nIn the long run with free entry/exit of identical firms, what is the equilibrium price? If market demand is \\(Q^D = 200 - 5P\\), how many firms operate in the long-run equilibrium?"
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-17-stackelberg-competition",
+    "href": "practice-problems/midterm-practice.html#problem-17-stackelberg-competition",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 17: Stackelberg Competition",
+    "text": "Problem 17: Stackelberg Competition\nTwo firms compete in quantities with inverse demand \\(P = 100 - Q\\), where \\(Q = q_1 + q_2\\). Both have \\(MC = 10\\) and no fixed costs. Firm 1 is the Stackelberg leader: it chooses \\(q_1\\) first, and firm 2 (the follower) observes \\(q_1\\) before choosing \\(q_2\\).\n\nDerive firm 2’s best response function \\(q_2^*(q_1)\\).\nWrite down firm 1’s profit as a function of \\(q_1\\) only (substituting in firm 2’s best response). Find the Stackelberg equilibrium: \\(q_1^*\\), \\(q_2^*\\), market price, and each firm’s profit.\nCompare the Stackelberg outcome to the Cournot equilibrium (where both firms move simultaneously). Who benefits from being the leader? Is total output higher or lower than in Cournot?\nCompare total welfare (CS + total profit) under Stackelberg and Cournot. Which is closer to the competitive outcome?"
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-18-subsidy-and-welfare",
+    "href": "practice-problems/midterm-practice.html#problem-18-subsidy-and-welfare",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 18: Subsidy and Welfare",
+    "text": "Problem 18: Subsidy and Welfare\nThe market for electric vehicles has: \\[Q^D = 500 - 5P \\qquad Q^S = 5P - 100\\]\n\nFind the equilibrium price and quantity. Calculate CS and PS.\nThe government provides a per-unit subsidy of \\(s = 20\\) to producers. Find the new consumer price \\(P^D\\), producer price \\(P^S = P^D + s\\), and quantity.\nCalculate the government’s total cost of the subsidy. What is the change in CS, the change in PS, and the deadweight loss?\nWho benefits more from the subsidy — consumers or producers? How does the relative benefit relate to the elasticities of demand and supply?"
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-19-comparative-statics-with-elasticities",
+    "href": "practice-problems/midterm-practice.html#problem-19-comparative-statics-with-elasticities",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 19: Comparative Statics with Elasticities",
+    "text": "Problem 19: Comparative Statics with Elasticities\nIn a competitive market, demand has a constant price elasticity \\(\\varepsilon_D = -2\\) and supply has a constant price elasticity \\(\\varepsilon_S = 3\\). The initial equilibrium is \\(P^* = 10\\) and \\(Q^* = 100\\).\n\nWrite down the demand and supply functions consistent with these elasticities and the initial equilibrium. (Hint: use the constant-elasticity forms \\(Q^D = A \\cdot P^{\\varepsilon_D}\\) and \\(Q^S = B \\cdot P^{\\varepsilon_S}\\).)\nSuppose a shift in tastes increases demand by \\(10\\%\\) (i.e., \\(A\\) increases by \\(10\\%\\)). Using the elasticity formula for comparative statics, find the percentage change in the equilibrium price and quantity. (Hint: \\(\\hat{P} = \\frac{\\hat{A}}{\\varepsilon_S - \\varepsilon_D}\\) and \\(\\hat{Q} = \\varepsilon_S \\cdot \\hat{P}\\), where hats denote percentage changes.)\nWould the price increase be larger or smaller if supply were more elastic? Explain the intuition."
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-20-efficiency-conditions-in-a-two-good-economy",
+    "href": "practice-problems/midterm-practice.html#problem-20-efficiency-conditions-in-a-two-good-economy",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 20: Efficiency Conditions in a Two-Good Economy",
+    "text": "Problem 20: Efficiency Conditions in a Two-Good Economy\nAn economy produces two goods, \\(x\\) and \\(y\\), using labor. The production functions are \\(x = 2L_x\\) and \\(y = L_y\\), with a total labor endowment of \\(\\bar{L} = 100\\).\n\nDerive the Production Possibilities Frontier (PPF). What is the Marginal Rate of Transformation (\\(MRT\\))?\nA representative consumer has utility \\(U(x, y) = xy\\). Find the efficient allocation: the quantities of \\(x\\) and \\(y\\) that maximize utility subject to the PPF.\nSuppose the economy is competitive. Let the wage be \\(w\\) and the prices of \\(x\\) and \\(y\\) be \\(p_x\\) and \\(p_y\\). Using zero-profit conditions in each industry, find the relationship between \\(p_x\\), \\(p_y\\), and \\(w\\). Show that the resulting price ratio \\(p_x / p_y\\) equals the \\(MRT\\), and that the competitive equilibrium replicates the efficient allocation."
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-21-cournot-with-asymmetric-costs",
+    "href": "practice-problems/midterm-practice.html#problem-21-cournot-with-asymmetric-costs",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 21: Cournot with Asymmetric Costs",
+    "text": "Problem 21: Cournot with Asymmetric Costs\nTwo firms compete in quantities with inverse demand \\(P = 120 - Q\\), where \\(Q = q_1 + q_2\\). Firm 1 has \\(MC_1 = 20\\) and firm 2 has \\(MC_2 = 40\\).\n\nDerive each firm’s best response function.\nFind the Nash equilibrium quantities, the market price, and each firm’s profit.\nCompute the Lerner index for each firm. Which firm has more market power? Explain.\nHow does total output and welfare compare to the symmetric case where both firms have \\(MC = 30\\)? What drives the difference?"
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-22-income-and-substitution-effects-with-perfect-complements",
+    "href": "practice-problems/midterm-practice.html#problem-22-income-and-substitution-effects-with-perfect-complements",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 22: Income and Substitution Effects with Perfect Complements",
+    "text": "Problem 22: Income and Substitution Effects with Perfect Complements\nA consumer has preferences \\(U(x, y) = \\min\\{x, 2y\\}\\) and income \\(I = 120\\). The prices are \\(p_x = 2\\) and \\(p_y = 3\\).\n\nFind the optimal consumption bundle.\nNow suppose \\(p_x\\) rises to \\(4\\). Find the new optimal bundle and the change in demand for \\(x\\).\nDecompose the change in demand for \\(x\\) into a substitution effect and an income effect. What is special about the substitution effect for perfect complements? Explain the intuition."
+  },
+  {
+    "objectID": "practice-problems/midterm-practice.html#problem-23-connecting-consumer-and-producer-theory",
+    "href": "practice-problems/midterm-practice.html#problem-23-connecting-consumer-and-producer-theory",
+    "title": "Midterm Practice Problems",
+    "section": "Problem 23: Connecting Consumer and Producer Theory",
+    "text": "Problem 23: Connecting Consumer and Producer Theory\nA competitive industry has \\(N\\) identical consumers, each with demand \\(q^d = 50 - P\\), and \\(M\\) identical firms, each with supply \\(q^s = P - 10\\) (for \\(P \\geq 10\\)).\n\nDerive the market demand and market supply curves. Find the equilibrium price and quantity as functions of \\(N\\) and \\(M\\).\nLet \\(N = 100\\) and \\(M = 50\\). Find the equilibrium price and quantity. Calculate per-consumer surplus, per-firm profit, and total welfare.\nIn the long run, firms enter until profit is driven to zero. If each firm has \\(C(q) = 10q + \\frac{1}{2}q^2 + 50\\) (where 50 is a fixed cost), find the long-run equilibrium price, per-firm output, and the number of firms when \\(N = 100\\)."
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html",
+    "href": "practice-problems/part1-add-solutions.html",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "",
+    "text": "Demand functions. Set up the Lagrangian\n\\[\\mathcal{L} = x^\\alpha y^\\beta + \\lambda(m-p_x x - p_y y)\\]\nThe first-order conditions are: \\[\\alpha x^{\\alpha-1}y^\\beta = \\lambda p_x \\qquad \\text{and} \\qquad \\beta x^\\alpha y^{\\beta-1} = \\lambda p_y\\]\nDividing these two conditions eliminates \\(\\lambda\\): \\[\\frac{\\alpha y}{\\beta x} = \\frac{p_x}{p_y} \\implies p_y y = \\frac{\\beta}{\\alpha} p_x x\\]\nSubstituting into the budget constraint \\(p_x x + p_y y = m\\): \\[p_x x + \\frac{\\beta}{\\alpha} p_x x = m \\implies p_x x \\cdot \\frac{\\alpha + \\beta}{\\alpha} = m\\]\nNoting that \\(\\alpha + \\beta = 1\\): \\[\\boxed{x^* = \\frac{\\alpha m}{p_x}, \\qquad y^* = \\frac{\\beta m}{p_y}}\\]\nThe consumer spends a constant fraction \\(\\alpha\\) of income on good \\(x\\) and \\(\\beta\\) on good \\(y\\), regardless of prices or income.\nIndirect utility function. Substitute \\(x^*\\) and \\(y^*\\) into \\(u\\) and plugging in \\(\\alpha + \\beta = 1\\): \\[\\boxed{V(p_x, p_y, m) = \\left(\\frac{\\alpha}{p_x}\\right)^\\alpha \\left(\\frac{\\beta}{p_y}\\right)^\\beta m}\\]\nExpenditure function. Set \\(V = u\\) and solve for \\(m = e(p_x, p_y, u)\\): \\[\\boxed{e(p_x, p_y, u) = \\left(\\frac{p_x}{\\alpha}\\right)^\\alpha \\left(\\frac{p_y}{\\beta}\\right)^\\beta u}\\]\nNote that one can also derive the expenditure function by minimizing \\(p_x x + p_y y\\) subject to \\(x^\\alpha y^\\beta =u\\) and using the uncompensated (Hicksian) demand functions. But here since we already have the indirect utility function, it is easier to use the duality relationship \\(e(p_x, p_y, u) = V^{-1}(p_x, p_y, u)\\).\n\n\n\n\nDemand functions. The Leontief utility function \\(u(x,y) = \\min\\{x,y\\}\\) has no interior tangency condition, so we use optimality directly: any expenditure on \\(x\\) beyond \\(y\\) (or vice versa) is wasted, so at the optimum \\(x = y\\). Substituting into the budget constraint: \\[(p_x + p_y)\\, x = m\\]\n\\[\\boxed{x^* = y^* = \\frac{m}{p_x + p_y}}\\]\nIndirect utility function. Since \\(u = \\min\\{x^*, y^*\\} = x^* = y^*\\): \\[V(p_x, p_y, m) = \\frac{m}{p_x + p_y}\\]\nExpenditure function. Setting \\(V = u\\) and solving for \\(m = e\\): \\[e(p_x, p_y, u) = (p_x + p_y)\\, u\\]\n\n\n\n\nDemand functions. With \\(u(x,y) = x + y\\), the MRS equals \\(1\\) everywhere. The consumer buys only the cheaper good:\n\nIf \\(p_x &lt; p_y\\): buy only \\(x\\), so \\(x^* = m/p_x\\), \\(y^* = 0\\)\nIf \\(p_x &gt; p_y\\): buy only \\(y\\), so \\(x^* = 0\\), \\(y^* = m/p_y\\)\nIf \\(p_x = p_y\\): any bundle satisfying \\(p_x x + p_y y = m\\)\n\n\\[\\boxed{x^* = \\begin{cases} m/p_x & \\text{if } p_x &lt; p_y \\\\ 0 & \\text{if } p_x &gt; p_y \\end{cases}, \\qquad y^* = \\begin{cases} 0 & \\text{if } p_x &lt; p_y \\\\ m/p_y & \\text{if } p_x &gt; p_y \\end{cases}}\\]\nIndirect utility function. The consumer always achieves utility \\(m\\) divided by the cheaper price: \\[V(p_x, p_y, m) = \\frac{m}{\\min\\{p_x, p_y\\}}\\]\nExpenditure function. The minimum cost to reach utility \\(u\\) is to purchase \\(u\\) units of the cheaper good: \\[e(p_x, p_y, u) = u \\cdot \\min\\{p_x, p_y\\}\\]\n\n\n\n\nThe utility function is given by: \\[u(x,y) = \\left(x^\\rho + y^\\rho\\right)^{1/\\rho}\\]\nDemand functions. Since \\((\\cdot)^{1/\\rho}\\) is a monotone transformation, we can equivalently maximize \\(x^\\rho + y^\\rho\\). The FOCs are: \\[\\rho x^{\\rho-1} = \\lambda p_x \\qquad \\text{and} \\qquad \\rho y^{\\rho-1} = \\lambda p_y\\]\nDividing: \\[\\left(\\dfrac{x}{y}\\right)^{\\rho-1} = \\dfrac{p_x}{p_y}  \\implies x = y \\left(\\dfrac{p_x}{p_y}\\right)^{1/(\\rho-1)}\\]\nSubstituting into the budget constraint:\n\\[ y\\left(p_x \\left(\\frac{p_x}{p_y}\\right)^{\\frac{1}{\\rho-1}} + p_y\\right) = m\\]\nRearranging:\n\\[y \\cdot p_y^{-\\frac{1}{\\rho-1}} \\left(p_x^{\\frac{\\rho}{\\rho-1}} + p_y^{\\frac{\\rho}{\\rho-1}}\\right) = m\\]\nDefine CES exponent \\(\\sigma \\equiv \\frac{\\rho}{\\rho - 1}\\), so that \\(\\sigma - 1 = \\frac{1}{\\rho-1}\\). Then:\n\\[\\boxed{x^* = \\frac{p_x^{\\sigma-1}}{p_x^\\sigma + p_y^\\sigma}\\, m, \\qquad y^* = \\frac{p_y^{\\sigma-1}}{p_x^\\sigma + p_y^\\sigma}\\, m}\\]\nIndirect utility function. Compute \\((x^*)^\\rho + (y^*)^\\rho\\). Since \\(\\rho(\\sigma - 1) = \\rho \\cdot \\frac{1}{\\rho-1} = \\sigma\\): \\[(x^*)^\\rho + (y^*)^\\rho = \\frac{m^\\rho\\left(p_x^\\sigma + p_y^\\sigma\\right)}{(p_x^\\sigma + p_y^\\sigma)^\\rho} = m^\\rho\\, (p_x^\\sigma + p_y^\\sigma)^{1-\\rho}\\]\nTherefore: \\[V = \\left[m^\\rho (p_x^\\sigma + p_y^\\sigma)^{1-\\rho}\\right]^{1/\\rho} = m \\cdot (p_x^\\sigma + p_y^\\sigma)^{(1-\\rho)/\\rho}\\]\nBy definition of \\(\\sigma\\), we have \\((1-\\rho)/\\rho = -1/\\sigma\\), giving the elegant result: \\[V(p_x, p_y, m) = \\frac{m}{\\left(p_x^\\sigma + p_y^\\sigma\\right)^{1/\\sigma}}\\]\nExpenditure function. Setting \\(V = u\\) and solving for \\(m = e\\): \\[e(p_x, p_y, u) = u \\cdot \\left(p_x^\\sigma + p_y^\\sigma\\right)^{1/\\sigma}, \\qquad \\text{where } \\sigma = \\frac{\\rho}{\\rho-1}\\]\nThe price aggregator \\((p_x^\\sigma + p_y^\\sigma)^{1/\\sigma}\\) is itself a CES function of prices. This duality between the utility function and the expenditure function is a hallmark of the CES family.\n\n\n\n\n\n\n\nFor \\(u(x, y) = x^\\alpha y^\\beta\\), the marginal utilities are \\(MU_x = \\alpha x^{\\alpha-1} y^\\beta\\) and \\(MU_y = \\beta x^\\alpha y^{\\beta-1}\\), so: \\[MRS_{xy} = \\frac{MU_x}{MU_y} = \\frac{\\alpha}{\\beta} \\cdot \\frac{y}{x}\\]\nTake logs of both sides: \\[\\ln(MRS) = \\ln\\!\\left(\\frac{\\alpha}{\\beta}\\right) + \\ln\\!\\left(\\frac{y}{x}\\right)\\]\nDifferentiating: \\[\\sigma = \\frac{d\\ln(y/x)}{d\\ln(MRS)} = 1 \\qquad \\boxed{\\sigma = 1}\\]\n\n\n\n\\(\\sigma = 1\\) means that a 1% increase in \\(MRS_{xy}\\) (equivalently, a 1% increase in the relative price \\(p_x/p_y\\) at the optimum) leads to exactly a 1% decrease in \\(y/x\\). Consumers substitute away from the more expensive good in exact proportion to the price change.\nA direct implication is that expenditure shares are constant: with Cobb-Douglas preferences the consumer always spends fraction \\(\\alpha\\) of income on \\(x\\) and fraction \\(\\beta\\) on \\(y\\), regardless of prices. When \\(p_x\\) rises, the consumer buys less \\(x\\) in exactly the right proportion so that total spending on \\(x\\) stays at \\(\\alpha m\\).\n\n\n\n\n\nThe utility function is \\(u(x,y)=xy\\).\n\n\nThe Lagrangian is \\[\\mathcal{L} = xy + \\lambda(m - p_x x - p_y y)\\]\nThe first-order conditions are: \\[y = \\lambda p_x \\qquad \\text{and} \\qquad x = \\lambda p_y\\]\nDividing: \\(y/x = p_x/p_y\\), which gives \\(p_x x = p_y y\\), so the consumer spends equally on both goods. Substituting into the budget constraint \\(p_x x + p_y y = m\\): \\[2p_x x = m \\implies x^* = \\frac{m}{2p_x}, \\qquad y^* = \\frac{m}{2p_y}\\]\nAt \\(p_x=1\\), \\(p_y=2\\), \\(m=10\\): \\[\\boxed{x^* = \\frac{10}{2(1)} = 5, \\qquad y^* = \\frac{10}{2(2)} = 2.5}\\]\n\n\n\nAt new prices \\(p_x=1\\) and \\(p_y=1\\), using the same demand functions: \\[\\boxed{x^* = \\frac{10}{2(1)} = 5, \\qquad y^* = \\frac{10}{2(1)} = 5}\\]\nThe total change in demand for good \\(y\\) is \\(\\Delta y = 5 - 2.5 = 2.5\\).\n\n\n\nHicksian demand. Lagrangian for the expenditure minimization problem is:\n\\[ \\mathcal{L} = p_x x + p_y y + \\mu(u - xy) \\]\nThe FOCs imply \\(p_x = \\mu y\\) and \\(p_y = \\mu x\\), so again \\(p_x x = p_y y\\). Substituting \\(x = (p_y/p_x)y\\) into the constraint \\(xy = u\\): \\[\\frac{p_y}{p_x} y^2 = u \\implies y_h(p_x, p_y, u) = \\sqrt{\\frac{p_x\\, u}{p_y}}\\]\nSimilarly, \\(x_h(p_x, p_y, u) = \\sqrt{\\frac{p_y\\, u}{p_x}}\\).\nThe initial utility level is \\(u_0 = x^* y^* = 5 \\times 2.5 = 12.5\\).\nNote that \\(x_h(1, 2, 12.5) = 5\\) and \\(y_h(1, 2, 12.5) = 2.5\\), so the Hicksian demand at the original prices and utility level coincides with the Marshallian demand.\nSubstitution effect. Hold utility fixed at \\(u_0 = 12.5\\) and change \\(p_y\\) from 2 to 1: \\[\\text{SE} = y_h(1,\\,1,\\,12.5) - y_h(1,\\,2,\\,12.5) = \\sqrt{12.5} - 2.5  \\approx 1.04\\]\nHolding utility fixed isolates the substitution effect because the consumer is compensated to be just as well off as before, so any change in demand is due to the change in relative prices.\nIncome effect. The remainder of the total change: \\[\\text{IE} = \\Delta y - \\text{SE} = 2.5 - 1.04 = 1.46\\]\nBoth effects are positive because good \\(y\\) is a normal good and the price decrease makes the consumer richer. The income effect here is larger than the substitution effect.\nSee graph below for a visual representation of the substitution and income effects.\n\n\n\n\n\n\n\n\n\n\n\n\nWhen the price of good \\(y\\) falls, in this case it’s demand increases from 2.5 to 5. There are two reasons for this increase:\n\nSubstitution effect: The price of good \\(y\\) has fallen relative to good \\(x\\), so the consumer substitutes away from \\(x\\) and toward \\(y\\).\nIncome effect: The decrease in the price of good \\(y\\) effectively increases the consumer’s real income, allowing them to afford more of both goods.\n\n\n\n\nWe need to find the expenditure change that would make the consumer just as well off as before the price change, given the new prices. Given the Hicksian demand functions from part (c), the expenditure function is: \\[e(p_x, p_y, u) = p_x x_h(p_x, p_y, u) + p_y y_h(p_x, p_y, u) = 2\\sqrt{p_x\\, p_y\\, u}\\]\nRemember the original utility \\(u_0 = 12.5\\). At the new prices \\((p_x=1,\\, p_y=1)\\): \\[e(1,\\, 1,\\, 12.5) = 2\\sqrt{1 \\cdot 1 \\cdot 12.5} = 2\\sqrt{12.5} = 5\\sqrt{2} \\approx 7.07\\]\nSince their actual income is \\(m=10\\), the consumer could give up \\[\\text{CV} = m - e(1,\\,1,\\,u_0) = 10 - 5\\sqrt{2} \\approx \\$2.93\\]\nand still be exactly as well off as before the price change. This quantity, \\(\\text{CV} = \\approx \\$2.93\\), is the compensating variation, which measures the welfare gain from the price decrease in dollar terms.\n\n\n\n\n\n\n\nLet \\(\\tilde{x} = x - x_0\\) denote consumption above the subsistence level. Substituting into the budget constraint \\(p_x x + p_y y = I\\): \\[p_x(\\tilde{x} + x_0) + p_y y = I \\implies p_x \\tilde{x} + p_y y = I - p_x x_0 \\equiv \\tilde{I}\\]\nwhere \\(\\tilde{I} = I - p_x x_0 &gt; 0\\) is supernumerary income (income above the cost of subsistence). The problem now is to maximize \\(\\tilde{x}^\\alpha y^\\beta\\) subject to \\(p_x \\tilde{x} + p_y y = \\tilde{I}\\), which is exactly the Cobb-Douglas problem. By the result from problem 1(a): \\[\\tilde{x}^* = \\frac{\\alpha \\tilde{I}}{p_x}, \\qquad y^* = \\frac{\\beta \\tilde{I}}{p_y}\\]\nConverting back to \\(x^* = x_0 + \\tilde{x}^*\\), expenditures are: \\[\\boxed{p_x x^* = p_x x_0 + \\alpha(I - p_x x_0), \\qquad p_y y^* = \\beta(I - p_x x_0)}\\]\nInterpretation. The consumer first sets aside \\(p_x x_0\\) to meet subsistence needs. The remaining supernumerary income \\(\\tilde{I} = I - p_x x_0\\) is then allocated in fixed proportions \\(\\alpha\\) and \\(\\beta\\), just as in the standard Cobb-Douglas case.\n\n\n\nCompute the expenditure shares: \\[\\frac{p_x x^*}{I} = \\frac{p_x x_0 + \\alpha(I - p_x x_0)}{I} = \\alpha + \\frac{(1-\\alpha)\\,p_x x_0}{I} = \\alpha + \\frac{\\beta\\, p_x x_0}{I}\\]\n\\[\\frac{p_y y^*}{I} = \\frac{\\beta(I - p_x x_0)}{I} = \\beta - \\frac{\\beta\\, p_x x_0}{I}\\]\nAs income \\(I\\) increases, the second term in each expression shrinks toward zero, so:\n\nThe share spent on \\(x\\) falls toward \\(\\alpha\\)\nThe share spent on \\(y\\) rises toward \\(\\beta\\)\n\nThis is a form of Engel’s Law: the budget share of a good with a subsistence requirement (a “necessity”) declines with income, while the share of income allocated to other goods rises. At high incomes the Stone-Geary system converges to the simple Cobb-Douglas case.\n\n\n\n\n\nWhy cash is at least as good as in-kind transfers. Consider a household with income \\(I\\) that receives a transfer of \\(T\\) dollars. Under a cash transfer, the budget constraint shifts outward uniformly: the household can spend the extra \\(T\\) on any combination of food (\\(x\\)) and other goods (\\(y\\)). Under an in-kind food transfer (e.g., SNAP), the household receives vouchers worth \\(T\\) that can only be spent on food, requiring consumption of at least \\(T/p_x\\) units of \\(x\\).\nTwo cases arise:\n\nTransfer does not bind. If the household would voluntarily spend at least \\(T\\) on food even with a cash transfer, the in-kind constraint is not binding. The household reaches the same optimum under both programs. Cash and in-kind are equivalent.\nTransfer binds. If the household would prefer to spend less than \\(T\\) on food, the in-kind transfer forces them to a kink point on the budget set. That kink lies on a lower indifference curve than the cash optimum. Cash is therefore strictly preferred.\n\nIn both cases, cash is at least as good as in-kind. This is an application of the Lump Sum Principle: unconditional transfers maximize consumer welfare for a given government expenditure, because they leave households free to allocate resources optimally.\nWhy policymakers still use in-kind transfers.\n\nPaternalism. Society may value recipients consuming food or housing more than recipients themselves do (e.g., child nutrition, health externalities).\nPolitical economy. In-kind transfers are easier to justify to taxpayers who want assurance that aid goes toward necessities.\nTargeting / self-selection. Accepting food vouchers (rather than cash) may be less attractive to higher-income households, helping to screen recipients and reduce leakage to the non-poor.\nPrice and market effects. Large-scale food voucher programs can support agricultural incomes, creating political constituencies that sustain the program.\n\nSee the figure on slides for lecture 1, which shows the binding case: the household’s preferred cash optimum requires less food than the in-kind transfer mandates, so the in-kind constraint forces the household to the kink, which lies on a lower indifference curve.\n\n\n\n\n\n\nFor \\(U = \\min\\{x, 2y\\}\\), utility is maximized at the kink where both arguments are equal: \\(x = 2y\\). Substituting into the budget constraint \\(2x + y = 90\\): \\[2(2y) + y = 5y = 90 \\implies y^* = 18, \\quad x^* = 36\\]\n\n\n\nThe kink condition \\(x = 2y\\) still holds at the new prices. Substituting into the new budget constraint \\(4x + y = 90\\): \\[4(2y) + y = 9y = 90 \\implies y^* = 10, \\quad x^* = 20\\]\nThe change in demand for \\(x\\): \\[\\Delta x = 20 - 36 = -16\\]\n\n\n\nHicksian demand. The initial utility level is \\(u_0 = \\min\\{36,\\, 2\\times 18\\} = 36\\). To reach \\(u_0\\) at minimum cost, the consumer must satisfy the kink condition \\(x = 2y\\) and \\(\\min\\{x, 2y\\} = u_0\\), giving: \\[x_h(p_x, p_y, u) = u, \\qquad y_h(p_x, p_y, u) = \\frac{u}{2}\\]\nThe Hicksian demands are independent of prices, which is typical of perfect complements.\nSubstitution effect. Since Hicksian demands do not change with prices: \\[\\text{SE} = x_h(4,\\,1,\\,36) - x_h(2,\\,1,\\,36) = 36 - 36 = \\boxed{0}\\]\nIncome effect. The entire change in demand is an income effect: \\[\\text{IE} = \\Delta x - \\text{SE} = -16\\]\nIntuition. Perfect complements are always consumed in a fixed ratio (\\(x = 2y\\)) regardless of relative prices. A change in the price of \\(x\\) cannot induce substitution toward \\(y\\) because the two goods are useless without each other. The entire demand response comes from the reduction in real purchasing power (income effect)."
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html#demand-functions-indirect-utility-and-expenditure-functions",
+    "href": "practice-problems/part1-add-solutions.html#demand-functions-indirect-utility-and-expenditure-functions",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "",
+    "text": "Demand functions. Set up the Lagrangian\n\\[\\mathcal{L} = x^\\alpha y^\\beta + \\lambda(m-p_x x - p_y y)\\]\nThe first-order conditions are: \\[\\alpha x^{\\alpha-1}y^\\beta = \\lambda p_x \\qquad \\text{and} \\qquad \\beta x^\\alpha y^{\\beta-1} = \\lambda p_y\\]\nDividing these two conditions eliminates \\(\\lambda\\): \\[\\frac{\\alpha y}{\\beta x} = \\frac{p_x}{p_y} \\implies p_y y = \\frac{\\beta}{\\alpha} p_x x\\]\nSubstituting into the budget constraint \\(p_x x + p_y y = m\\): \\[p_x x + \\frac{\\beta}{\\alpha} p_x x = m \\implies p_x x \\cdot \\frac{\\alpha + \\beta}{\\alpha} = m\\]\nNoting that \\(\\alpha + \\beta = 1\\): \\[\\boxed{x^* = \\frac{\\alpha m}{p_x}, \\qquad y^* = \\frac{\\beta m}{p_y}}\\]\nThe consumer spends a constant fraction \\(\\alpha\\) of income on good \\(x\\) and \\(\\beta\\) on good \\(y\\), regardless of prices or income.\nIndirect utility function. Substitute \\(x^*\\) and \\(y^*\\) into \\(u\\) and plugging in \\(\\alpha + \\beta = 1\\): \\[\\boxed{V(p_x, p_y, m) = \\left(\\frac{\\alpha}{p_x}\\right)^\\alpha \\left(\\frac{\\beta}{p_y}\\right)^\\beta m}\\]\nExpenditure function. Set \\(V = u\\) and solve for \\(m = e(p_x, p_y, u)\\): \\[\\boxed{e(p_x, p_y, u) = \\left(\\frac{p_x}{\\alpha}\\right)^\\alpha \\left(\\frac{p_y}{\\beta}\\right)^\\beta u}\\]\nNote that one can also derive the expenditure function by minimizing \\(p_x x + p_y y\\) subject to \\(x^\\alpha y^\\beta =u\\) and using the uncompensated (Hicksian) demand functions. But here since we already have the indirect utility function, it is easier to use the duality relationship \\(e(p_x, p_y, u) = V^{-1}(p_x, p_y, u)\\).\n\n\n\n\nDemand functions. The Leontief utility function \\(u(x,y) = \\min\\{x,y\\}\\) has no interior tangency condition, so we use optimality directly: any expenditure on \\(x\\) beyond \\(y\\) (or vice versa) is wasted, so at the optimum \\(x = y\\). Substituting into the budget constraint: \\[(p_x + p_y)\\, x = m\\]\n\\[\\boxed{x^* = y^* = \\frac{m}{p_x + p_y}}\\]\nIndirect utility function. Since \\(u = \\min\\{x^*, y^*\\} = x^* = y^*\\): \\[V(p_x, p_y, m) = \\frac{m}{p_x + p_y}\\]\nExpenditure function. Setting \\(V = u\\) and solving for \\(m = e\\): \\[e(p_x, p_y, u) = (p_x + p_y)\\, u\\]\n\n\n\n\nDemand functions. With \\(u(x,y) = x + y\\), the MRS equals \\(1\\) everywhere. The consumer buys only the cheaper good:\n\nIf \\(p_x &lt; p_y\\): buy only \\(x\\), so \\(x^* = m/p_x\\), \\(y^* = 0\\)\nIf \\(p_x &gt; p_y\\): buy only \\(y\\), so \\(x^* = 0\\), \\(y^* = m/p_y\\)\nIf \\(p_x = p_y\\): any bundle satisfying \\(p_x x + p_y y = m\\)\n\n\\[\\boxed{x^* = \\begin{cases} m/p_x & \\text{if } p_x &lt; p_y \\\\ 0 & \\text{if } p_x &gt; p_y \\end{cases}, \\qquad y^* = \\begin{cases} 0 & \\text{if } p_x &lt; p_y \\\\ m/p_y & \\text{if } p_x &gt; p_y \\end{cases}}\\]\nIndirect utility function. The consumer always achieves utility \\(m\\) divided by the cheaper price: \\[V(p_x, p_y, m) = \\frac{m}{\\min\\{p_x, p_y\\}}\\]\nExpenditure function. The minimum cost to reach utility \\(u\\) is to purchase \\(u\\) units of the cheaper good: \\[e(p_x, p_y, u) = u \\cdot \\min\\{p_x, p_y\\}\\]\n\n\n\n\nThe utility function is given by: \\[u(x,y) = \\left(x^\\rho + y^\\rho\\right)^{1/\\rho}\\]\nDemand functions. Since \\((\\cdot)^{1/\\rho}\\) is a monotone transformation, we can equivalently maximize \\(x^\\rho + y^\\rho\\). The FOCs are: \\[\\rho x^{\\rho-1} = \\lambda p_x \\qquad \\text{and} \\qquad \\rho y^{\\rho-1} = \\lambda p_y\\]\nDividing: \\[\\left(\\dfrac{x}{y}\\right)^{\\rho-1} = \\dfrac{p_x}{p_y}  \\implies x = y \\left(\\dfrac{p_x}{p_y}\\right)^{1/(\\rho-1)}\\]\nSubstituting into the budget constraint:\n\\[ y\\left(p_x \\left(\\frac{p_x}{p_y}\\right)^{\\frac{1}{\\rho-1}} + p_y\\right) = m\\]\nRearranging:\n\\[y \\cdot p_y^{-\\frac{1}{\\rho-1}} \\left(p_x^{\\frac{\\rho}{\\rho-1}} + p_y^{\\frac{\\rho}{\\rho-1}}\\right) = m\\]\nDefine CES exponent \\(\\sigma \\equiv \\frac{\\rho}{\\rho - 1}\\), so that \\(\\sigma - 1 = \\frac{1}{\\rho-1}\\). Then:\n\\[\\boxed{x^* = \\frac{p_x^{\\sigma-1}}{p_x^\\sigma + p_y^\\sigma}\\, m, \\qquad y^* = \\frac{p_y^{\\sigma-1}}{p_x^\\sigma + p_y^\\sigma}\\, m}\\]\nIndirect utility function. Compute \\((x^*)^\\rho + (y^*)^\\rho\\). Since \\(\\rho(\\sigma - 1) = \\rho \\cdot \\frac{1}{\\rho-1} = \\sigma\\): \\[(x^*)^\\rho + (y^*)^\\rho = \\frac{m^\\rho\\left(p_x^\\sigma + p_y^\\sigma\\right)}{(p_x^\\sigma + p_y^\\sigma)^\\rho} = m^\\rho\\, (p_x^\\sigma + p_y^\\sigma)^{1-\\rho}\\]\nTherefore: \\[V = \\left[m^\\rho (p_x^\\sigma + p_y^\\sigma)^{1-\\rho}\\right]^{1/\\rho} = m \\cdot (p_x^\\sigma + p_y^\\sigma)^{(1-\\rho)/\\rho}\\]\nBy definition of \\(\\sigma\\), we have \\((1-\\rho)/\\rho = -1/\\sigma\\), giving the elegant result: \\[V(p_x, p_y, m) = \\frac{m}{\\left(p_x^\\sigma + p_y^\\sigma\\right)^{1/\\sigma}}\\]\nExpenditure function. Setting \\(V = u\\) and solving for \\(m = e\\): \\[e(p_x, p_y, u) = u \\cdot \\left(p_x^\\sigma + p_y^\\sigma\\right)^{1/\\sigma}, \\qquad \\text{where } \\sigma = \\frac{\\rho}{\\rho-1}\\]\nThe price aggregator \\((p_x^\\sigma + p_y^\\sigma)^{1/\\sigma}\\) is itself a CES function of prices. This duality between the utility function and the expenditure function is a hallmark of the CES family."
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html#elasticity-of-substitution",
+    "href": "practice-problems/part1-add-solutions.html#elasticity-of-substitution",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "",
+    "text": "For \\(u(x, y) = x^\\alpha y^\\beta\\), the marginal utilities are \\(MU_x = \\alpha x^{\\alpha-1} y^\\beta\\) and \\(MU_y = \\beta x^\\alpha y^{\\beta-1}\\), so: \\[MRS_{xy} = \\frac{MU_x}{MU_y} = \\frac{\\alpha}{\\beta} \\cdot \\frac{y}{x}\\]\nTake logs of both sides: \\[\\ln(MRS) = \\ln\\!\\left(\\frac{\\alpha}{\\beta}\\right) + \\ln\\!\\left(\\frac{y}{x}\\right)\\]\nDifferentiating: \\[\\sigma = \\frac{d\\ln(y/x)}{d\\ln(MRS)} = 1 \\qquad \\boxed{\\sigma = 1}\\]\n\n\n\n\\(\\sigma = 1\\) means that a 1% increase in \\(MRS_{xy}\\) (equivalently, a 1% increase in the relative price \\(p_x/p_y\\) at the optimum) leads to exactly a 1% decrease in \\(y/x\\). Consumers substitute away from the more expensive good in exact proportion to the price change.\nA direct implication is that expenditure shares are constant: with Cobb-Douglas preferences the consumer always spends fraction \\(\\alpha\\) of income on \\(x\\) and fraction \\(\\beta\\) on \\(y\\), regardless of prices. When \\(p_x\\) rises, the consumer buys less \\(x\\) in exactly the right proportion so that total spending on \\(x\\) stays at \\(\\alpha m\\)."
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html#hicksian-demand-and-compensated-price-effects",
+    "href": "practice-problems/part1-add-solutions.html#hicksian-demand-and-compensated-price-effects",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "",
+    "text": "The utility function is \\(u(x,y)=xy\\).\n\n\nThe Lagrangian is \\[\\mathcal{L} = xy + \\lambda(m - p_x x - p_y y)\\]\nThe first-order conditions are: \\[y = \\lambda p_x \\qquad \\text{and} \\qquad x = \\lambda p_y\\]\nDividing: \\(y/x = p_x/p_y\\), which gives \\(p_x x = p_y y\\), so the consumer spends equally on both goods. Substituting into the budget constraint \\(p_x x + p_y y = m\\): \\[2p_x x = m \\implies x^* = \\frac{m}{2p_x}, \\qquad y^* = \\frac{m}{2p_y}\\]\nAt \\(p_x=1\\), \\(p_y=2\\), \\(m=10\\): \\[\\boxed{x^* = \\frac{10}{2(1)} = 5, \\qquad y^* = \\frac{10}{2(2)} = 2.5}\\]\n\n\n\nAt new prices \\(p_x=1\\) and \\(p_y=1\\), using the same demand functions: \\[\\boxed{x^* = \\frac{10}{2(1)} = 5, \\qquad y^* = \\frac{10}{2(1)} = 5}\\]\nThe total change in demand for good \\(y\\) is \\(\\Delta y = 5 - 2.5 = 2.5\\).\n\n\n\nHicksian demand. Lagrangian for the expenditure minimization problem is:\n\\[ \\mathcal{L} = p_x x + p_y y + \\mu(u - xy) \\]\nThe FOCs imply \\(p_x = \\mu y\\) and \\(p_y = \\mu x\\), so again \\(p_x x = p_y y\\). Substituting \\(x = (p_y/p_x)y\\) into the constraint \\(xy = u\\): \\[\\frac{p_y}{p_x} y^2 = u \\implies y_h(p_x, p_y, u) = \\sqrt{\\frac{p_x\\, u}{p_y}}\\]\nSimilarly, \\(x_h(p_x, p_y, u) = \\sqrt{\\frac{p_y\\, u}{p_x}}\\).\nThe initial utility level is \\(u_0 = x^* y^* = 5 \\times 2.5 = 12.5\\).\nNote that \\(x_h(1, 2, 12.5) = 5\\) and \\(y_h(1, 2, 12.5) = 2.5\\), so the Hicksian demand at the original prices and utility level coincides with the Marshallian demand.\nSubstitution effect. Hold utility fixed at \\(u_0 = 12.5\\) and change \\(p_y\\) from 2 to 1: \\[\\text{SE} = y_h(1,\\,1,\\,12.5) - y_h(1,\\,2,\\,12.5) = \\sqrt{12.5} - 2.5  \\approx 1.04\\]\nHolding utility fixed isolates the substitution effect because the consumer is compensated to be just as well off as before, so any change in demand is due to the change in relative prices.\nIncome effect. The remainder of the total change: \\[\\text{IE} = \\Delta y - \\text{SE} = 2.5 - 1.04 = 1.46\\]\nBoth effects are positive because good \\(y\\) is a normal good and the price decrease makes the consumer richer. The income effect here is larger than the substitution effect.\nSee graph below for a visual representation of the substitution and income effects.\n\n\n\n\n\n\n\n\n\n\n\n\nWhen the price of good \\(y\\) falls, in this case it’s demand increases from 2.5 to 5. There are two reasons for this increase:\n\nSubstitution effect: The price of good \\(y\\) has fallen relative to good \\(x\\), so the consumer substitutes away from \\(x\\) and toward \\(y\\).\nIncome effect: The decrease in the price of good \\(y\\) effectively increases the consumer’s real income, allowing them to afford more of both goods.\n\n\n\n\nWe need to find the expenditure change that would make the consumer just as well off as before the price change, given the new prices. Given the Hicksian demand functions from part (c), the expenditure function is: \\[e(p_x, p_y, u) = p_x x_h(p_x, p_y, u) + p_y y_h(p_x, p_y, u) = 2\\sqrt{p_x\\, p_y\\, u}\\]\nRemember the original utility \\(u_0 = 12.5\\). At the new prices \\((p_x=1,\\, p_y=1)\\): \\[e(1,\\, 1,\\, 12.5) = 2\\sqrt{1 \\cdot 1 \\cdot 12.5} = 2\\sqrt{12.5} = 5\\sqrt{2} \\approx 7.07\\]\nSince their actual income is \\(m=10\\), the consumer could give up \\[\\text{CV} = m - e(1,\\,1,\\,u_0) = 10 - 5\\sqrt{2} \\approx \\$2.93\\]\nand still be exactly as well off as before the price change. This quantity, \\(\\text{CV} = \\approx \\$2.93\\), is the compensating variation, which measures the welfare gain from the price decrease in dollar terms."
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html#stone-geary-utility-textbook-ex-4.12",
+    "href": "practice-problems/part1-add-solutions.html#stone-geary-utility-textbook-ex-4.12",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "",
+    "text": "Let \\(\\tilde{x} = x - x_0\\) denote consumption above the subsistence level. Substituting into the budget constraint \\(p_x x + p_y y = I\\): \\[p_x(\\tilde{x} + x_0) + p_y y = I \\implies p_x \\tilde{x} + p_y y = I - p_x x_0 \\equiv \\tilde{I}\\]\nwhere \\(\\tilde{I} = I - p_x x_0 &gt; 0\\) is supernumerary income (income above the cost of subsistence). The problem now is to maximize \\(\\tilde{x}^\\alpha y^\\beta\\) subject to \\(p_x \\tilde{x} + p_y y = \\tilde{I}\\), which is exactly the Cobb-Douglas problem. By the result from problem 1(a): \\[\\tilde{x}^* = \\frac{\\alpha \\tilde{I}}{p_x}, \\qquad y^* = \\frac{\\beta \\tilde{I}}{p_y}\\]\nConverting back to \\(x^* = x_0 + \\tilde{x}^*\\), expenditures are: \\[\\boxed{p_x x^* = p_x x_0 + \\alpha(I - p_x x_0), \\qquad p_y y^* = \\beta(I - p_x x_0)}\\]\nInterpretation. The consumer first sets aside \\(p_x x_0\\) to meet subsistence needs. The remaining supernumerary income \\(\\tilde{I} = I - p_x x_0\\) is then allocated in fixed proportions \\(\\alpha\\) and \\(\\beta\\), just as in the standard Cobb-Douglas case.\n\n\n\nCompute the expenditure shares: \\[\\frac{p_x x^*}{I} = \\frac{p_x x_0 + \\alpha(I - p_x x_0)}{I} = \\alpha + \\frac{(1-\\alpha)\\,p_x x_0}{I} = \\alpha + \\frac{\\beta\\, p_x x_0}{I}\\]\n\\[\\frac{p_y y^*}{I} = \\frac{\\beta(I - p_x x_0)}{I} = \\beta - \\frac{\\beta\\, p_x x_0}{I}\\]\nAs income \\(I\\) increases, the second term in each expression shrinks toward zero, so:\n\nThe share spent on \\(x\\) falls toward \\(\\alpha\\)\nThe share spent on \\(y\\) rises toward \\(\\beta\\)\n\nThis is a form of Engel’s Law: the budget share of a good with a subsistence requirement (a “necessity”) declines with income, while the share of income allocated to other goods rises. At high incomes the Stone-Geary system converges to the simple Cobb-Douglas case."
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html#cash-vs.-in-kind-transfers",
+    "href": "practice-problems/part1-add-solutions.html#cash-vs.-in-kind-transfers",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "",
+    "text": "Why cash is at least as good as in-kind transfers. Consider a household with income \\(I\\) that receives a transfer of \\(T\\) dollars. Under a cash transfer, the budget constraint shifts outward uniformly: the household can spend the extra \\(T\\) on any combination of food (\\(x\\)) and other goods (\\(y\\)). Under an in-kind food transfer (e.g., SNAP), the household receives vouchers worth \\(T\\) that can only be spent on food, requiring consumption of at least \\(T/p_x\\) units of \\(x\\).\nTwo cases arise:\n\nTransfer does not bind. If the household would voluntarily spend at least \\(T\\) on food even with a cash transfer, the in-kind constraint is not binding. The household reaches the same optimum under both programs. Cash and in-kind are equivalent.\nTransfer binds. If the household would prefer to spend less than \\(T\\) on food, the in-kind transfer forces them to a kink point on the budget set. That kink lies on a lower indifference curve than the cash optimum. Cash is therefore strictly preferred.\n\nIn both cases, cash is at least as good as in-kind. This is an application of the Lump Sum Principle: unconditional transfers maximize consumer welfare for a given government expenditure, because they leave households free to allocate resources optimally.\nWhy policymakers still use in-kind transfers.\n\nPaternalism. Society may value recipients consuming food or housing more than recipients themselves do (e.g., child nutrition, health externalities).\nPolitical economy. In-kind transfers are easier to justify to taxpayers who want assurance that aid goes toward necessities.\nTargeting / self-selection. Accepting food vouchers (rather than cash) may be less attractive to higher-income households, helping to screen recipients and reduce leakage to the non-poor.\nPrice and market effects. Large-scale food voucher programs can support agricultural incomes, creating political constituencies that sustain the program.\n\nSee the figure on slides for lecture 1, which shows the binding case: the household’s preferred cash optimum requires less food than the in-kind transfer mandates, so the in-kind constraint forces the household to the kink, which lies on a lower indifference curve."
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html#income-and-substitution-effects-with-perfect-complements",
+    "href": "practice-problems/part1-add-solutions.html#income-and-substitution-effects-with-perfect-complements",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "",
+    "text": "For \\(U = \\min\\{x, 2y\\}\\), utility is maximized at the kink where both arguments are equal: \\(x = 2y\\). Substituting into the budget constraint \\(2x + y = 90\\): \\[2(2y) + y = 5y = 90 \\implies y^* = 18, \\quad x^* = 36\\]\n\n\n\nThe kink condition \\(x = 2y\\) still holds at the new prices. Substituting into the new budget constraint \\(4x + y = 90\\): \\[4(2y) + y = 9y = 90 \\implies y^* = 10, \\quad x^* = 20\\]\nThe change in demand for \\(x\\): \\[\\Delta x = 20 - 36 = -16\\]\n\n\n\nHicksian demand. The initial utility level is \\(u_0 = \\min\\{36,\\, 2\\times 18\\} = 36\\). To reach \\(u_0\\) at minimum cost, the consumer must satisfy the kink condition \\(x = 2y\\) and \\(\\min\\{x, 2y\\} = u_0\\), giving: \\[x_h(p_x, p_y, u) = u, \\qquad y_h(p_x, p_y, u) = \\frac{u}{2}\\]\nThe Hicksian demands are independent of prices, which is typical of perfect complements.\nSubstitution effect. Since Hicksian demands do not change with prices: \\[\\text{SE} = x_h(4,\\,1,\\,36) - x_h(2,\\,1,\\,36) = 36 - 36 = \\boxed{0}\\]\nIncome effect. The entire change in demand is an income effect: \\[\\text{IE} = \\Delta x - \\text{SE} = -16\\]\nIntuition. Perfect complements are always consumed in a fixed ratio (\\(x = 2y\\)) regardless of relative prices. A change in the price of \\(x\\) cannot induce substitution toward \\(y\\) because the two goods are useless without each other. The entire demand response comes from the reduction in real purchasing power (income effect)."
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html#cost-minimization-and-profit-maximization",
+    "href": "practice-problems/part1-add-solutions.html#cost-minimization-and-profit-maximization",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "7. Cost Minimization and Profit Maximization",
+    "text": "7. Cost Minimization and Profit Maximization\n\n(a) Returns to scale\nCheck how output scales when all inputs are multiplied by \\(t &gt; 0\\): \\[f(tK, tL) = (tK)^{1/3}(tL)^{1/3} = t^{2/3}\\,K^{1/3}L^{1/3} = t^{2/3}\\,Q\\]\nSince the scale factor \\(2/3 &lt; 1\\), the technology exhibits decreasing returns to scale (DRS). Doubling inputs (\\(t=2\\)) increases output by a factor of \\(2^{2/3} \\approx 1.59\\), which is less than double. With DRS, larger output requires proportionally more inputs, so the long-run average cost curve should be upward sloping.\n\n\n(b) Conditional factor demands and cost function\nCost minimization: \\(\\min_{K,L}\\; rK + wL \\quad \\text{s.t.} \\quad K^{1/3}L^{1/3} = Q\\)\nSetting up the Lagrangian: \\[\\mathcal{L} = rK + wL + \\lambda(Q - K^{1/3}L^{1/3})\\]\nFOCs: \\[r = \\frac{\\lambda}{3}K^{-2/3}L^{1/3}, \\qquad w = \\frac{\\lambda}{3}K^{1/3}L^{-2/3}\\]\nDividing: \\(r/w = L/K\\), so \\(K = (w/r)L\\). Substituting into the constraint: \\[\\left(\\frac{w}{r}\\right)^{1/3} L^{2/3} = Q \\implies L^{2/3} = Q\\left(\\frac{r}{w}\\right)^{1/3}\\]\n\\[\\boxed{L^*(r,w,Q) = Q^{3/2}\\left(\\frac{r}{w}\\right)^{1/2}, \\qquad K^*(r,w,Q) = Q^{3/2}\\left(\\frac{w}{r}\\right)^{1/2}}\\]\nThe cost function is: \\[C(r,w,Q) = rK^* + wL^* = r\\cdot Q^{3/2}\\!\\left(\\frac{w}{r}\\right)^{1/2} + w\\cdot Q^{3/2}\\!\\left(\\frac{r}{w}\\right)^{1/2} = 2\\sqrt{rw}\\; Q^{3/2}\\]\nAt \\(r = w = 1\\): \\[\\boxed{C(Q) = 2Q^{3/2}}\\]\n\n\n(c) Average and marginal cost\n\\[AC(Q) = \\frac{C}{Q} = 2Q^{1/2}, \\qquad MC(Q) = C'(Q) = 3Q^{1/2}\\]\nMC &gt; AC for all \\(Q &gt; 0\\): \\(3Q^{1/2} &gt; 2Q^{1/2}\\) since \\(3 &gt; 2\\). Because \\(MC &gt; AC\\), each additional unit costs more than the average, pulling the average up, so AC is strictly increasing. This is consistent with DRS: expanding output becomes increasingly costly per unit.\n\n\n(d) Profit maximization at \\(p = 6\\)\nSet \\(p = MC\\): \\[6 = 3Q^{1/2} \\implies Q^{1/2} = 2 \\implies Q^* = 4\\]\n\n\n\n\nValue\n\n\n\n\nTotal revenue\n\\(6 \\times 4 = 24\\)\n\n\nTotal cost\n\\(2(4)^{3/2} = 2\\times 8 = 16\\)\n\n\nProfit\n\\(\\mathbf{24 - 16 = 8 &gt; 0}\\)\n\n\n\nThe firm earns positive profit \\(\\pi = 8 &gt; 0\\).\nIs this consistent with long-run competitive equilibrium? With DRS, \\(MC &gt; AC\\) at every \\(Q &gt; 0\\), so \\(\\pi &gt; 0\\) at any \\(p &gt; 0\\) so there is no price at which a firm with this technology breaks even at positive output. This creates an apparent conundrum: if we invoke free entry of identical firms, positive profits attract entry indefinitely, and no finite equilibrium exists.\nThe standard resolution is that DRS reflects an implicit fixed factor, for example, a plot of land, a license, or an entrepreneur’s scarce talent that is not explicitly priced in the model. If \\(Q = K^{1/3}L^{1/3}M^{1/3}\\) with \\(M\\) fixed at \\(\\bar{M}=1\\), the technology is actually CRS in all three inputs, and the apparent “profit” is simply the market rent on the fixed factor \\(M\\). Once we include the opportunity cost of \\(M\\) at its competitive rental rate in total costs, economic profit is zero and the equilibrium is consistent with free entry."
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html#short-run-supply-and-long-run-equilibrium",
+    "href": "practice-problems/part1-add-solutions.html#short-run-supply-and-long-run-equilibrium",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "8. Short-Run Supply and Long-Run Equilibrium",
+    "text": "8. Short-Run Supply and Long-Run Equilibrium\n\n(a) Cost curves and minimum AC\nWe are given the short-run cost function: \\[C(Q) = 50 + 10Q + 2Q^2\\]\nwhere \\(50\\) is fixed cost (FC) and \\(10Q + 2Q^2\\) is variable cost (VC).\nShort run marginal cost:\n\\[SMC(Q) = C'(Q) = 10 + 4Q\\]\nAverage cost: \\[SAC(Q) = \\frac{C(Q)}{Q} = \\frac{50}{Q} + 10 + 2Q\\]\nAverage variable cost: \\[SAVC(Q) = \\frac{10Q + 2Q^2}{Q} = 10 + 2Q\\]\nTo minimize \\(SAC\\), set \\(\\frac{d(SAC)}{dQ} = 0\\): \\[-\\frac{50}{Q^2} + 2 = 0 \\implies Q^2 = 25 \\implies Q_{\\min} = 5\\] \\[\\text{min}\\;SAC = \\frac{50}{5} + 10 + 2(5) = 10 + 10 + 10 = \\boxed{30}\\]\nVerify: \\(SMC(5) = 10 + 4(5) = 30 = SAC(5)\\) ✓\n\n\n(b) Short-run supply curve\nThe firm shuts down if \\(p &lt; \\min SAVC\\). Since \\(SAVC = 10 + 2Q\\), which is minimized at \\(Q = 0\\) giving \\(\\min SAVC = 10\\), the firm shuts down if \\(p &lt; 10\\).\nFor \\(p \\geq 10\\), set \\(p = SMC = 10 + 4Q\\) and solve: \\[\\boxed{Q^s(p) = \\frac{p - 10}{4}, \\quad p \\geq 10; \\qquad Q^s(p) = 0, \\quad p &lt; 10}\\]\nThe firm breaks even (zero economic profit) at the minimum of \\(SAC\\): \\[p_{\\text{break-even}} = \\min\\;SAC = 30\\]\n\n\n(c) Profit at \\(p = 50\\)\n\\[Q^* = \\frac{50 - 10}{4} = 10\\]\n\n\n\n\nValue\n\n\n\n\nTotal revenue\n\\(50 \\times 10 = 500\\)\n\n\nTotal cost\n\\(50 + 10(10) + 2(100) = 350\\)\n\n\nProfit\n\\(\\mathbf{500 - 350 = 150}\\)\n\n\n\n\n\n(d) Long-run competitive equilibrium\nWith free entry and exit of identical firms, long-run equilibrium requires zero profit, so: \\[p^* = \\min\\;SAC = 30\\]\nAt \\(p^* = 30\\), each firm produces \\(Q_{\\text{firm}} = (30-10)/4 = 5\\). Market demand at this price: \\[Q^D = 200 - 5(30) = 50\\]\nNumber of firms in equilibrium: \\[N^* = \\frac{Q^D}{Q_{\\text{firm}}} = \\frac{50}{5} = \\boxed{10 \\text{ firms}}\\]"
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html#competitive-equilibrium-and-tax-incidence",
+    "href": "practice-problems/part1-add-solutions.html#competitive-equilibrium-and-tax-incidence",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "9. Competitive Equilibrium and Tax Incidence",
+    "text": "9. Competitive Equilibrium and Tax Incidence\n\n(a) Pre-tax equilibrium and welfare\nSet \\(Q^D = Q^S\\): \\[240 - 2P = 3P - 60 \\implies 300 = 5P \\implies P^* = 60, \\quad Q^* = 120\\]\nThe demand curve hits the price axis at \\(P = 120\\) (set \\(Q^D = 0\\)); the supply curve hits at \\(P = 20\\) (set \\(Q^S = 0\\)).\n\\[CS = \\frac{1}{2}(120 - 60)(120) = \\frac{1}{2}(60)(120) = 3600\\] \\[PS = \\frac{1}{2}(60 - 20)(120) = \\frac{1}{2}(40)(120) = 2400\\] \\[\\text{Total Welfare} = CS + PS = \\boxed{6000}\\]\n\n\n(b) Equilibrium with tax \\(t = 25\\) on producers\nA per-unit tax on producers drives a wedge \\(P^D - P^S = t = 25\\) between the consumer price and the producer price. The quantity traded satisfies both sides simultaneously: \\[Q^D(P^D) = Q^S(P^S) \\quad \\text{with } P^S = P^D - 25\\]\nSubstituting: \\[240 - 2P^D = 3(P^D - 25) - 60 = 3P^D - 135 \\implies 375 = 5P^D\\] \\[\\boxed{P^D = 75, \\quad P^S = 50, \\quad Q_t = 90}\\]\n\n\n(c) Tax incidence\nPrice elasticities evaluated at the pre-tax equilibrium \\((P^* = 60,\\, Q^* = 120)\\): \\[\\varepsilon_D = \\frac{dQ^D}{dP}\\cdot\\frac{P^*}{Q^*} = (-2)\\cdot\\frac{60}{120} = -1\\] \\[\\varepsilon_S = \\frac{dQ^S}{dP}\\cdot\\frac{P^*}{Q^*} = (3)\\cdot\\frac{60}{120} = 1.5\\]\nThe standard tax-incidence formula gives the fraction of the tax borne by each side: \\[\\text{Consumer share} = \\frac{\\varepsilon_S}{|\\varepsilon_D| + \\varepsilon_S} = \\frac{1.5}{1 + 1.5} = \\frac{1.5}{2.5} = 60\\%\\] \\[\\text{Producer share} = \\frac{|\\varepsilon_D|}{|\\varepsilon_D| + \\varepsilon_S} = \\frac{1.0}{2.5} = 40\\%\\]\nDirect verification: \\[P^D - P^* = 75 - 60 = 15 \\quad (60\\% \\text{ of } t = 25) \\checkmark\\] \\[P^* - P^S = 60 - 50 = 10 \\quad (40\\% \\text{ of } t = 25) \\checkmark\\]\nBecause supply is more elastic than demand (\\(\\varepsilon_S &gt; |\\varepsilon_D|\\)), consumers bear the larger share of the tax.\n\n\n(d) Tax revenue, DWL, and welfare changes\n\\[\\text{Tax Revenue} = t \\times Q_t = 25 \\times 90 = 2250\\]\n\\[CS_{\\text{new}} = \\frac{1}{2}(120 - 75)(90) = 2025 \\implies \\Delta CS = 2025 - 3600 = -1575\\] \\[PS_{\\text{new}} = \\frac{1}{2}(50 - 20)(90) = 1350 \\implies \\Delta PS = 1350 - 2400 = -1050\\]\n\\[DWL = \\frac{1}{2}(t)(Q^* - Q_t) = \\frac{1}{2}(25)(30) = \\boxed{375}\\]\nVerification: \\[\\Delta CS + \\Delta PS + \\text{Tax Revenue} + \\text{DWL} = -1575 + (-1050) + 2250 + 375 = 0 \\checkmark\\]\n\n\n(e) DWL formula in terms of elasticities\nDerivation. The DWL equals \\(\\frac{1}{2} \\cdot t \\cdot |\\Delta Q|\\), where \\(|\\Delta Q| = Q^* - Q_t\\) is the tax-induced reduction in quantity. To express \\(|\\Delta Q|\\) in terms of elasticities, use the market equilibrium conditions. A tax \\(t\\) creates a wedge \\(\\Delta P^D - \\Delta P^S = t\\) between the consumer price change \\(\\Delta P^D = P^D - P^*\\) and the producer price change \\(\\Delta P^S = P^S - P^*\\). Quantity adjusts on both sides by the same amount \\(-|\\Delta Q|\\):\n\\[-|\\Delta Q| = \\varepsilon_D \\cdot \\frac{Q^*}{P^*} \\cdot \\Delta P^D \\quad \\Longrightarrow \\quad \\Delta P^D = -\\frac{|\\Delta Q| \\cdot P^*}{\\varepsilon_D \\cdot Q^*} = \\frac{|\\Delta Q| \\cdot P^*}{|\\varepsilon_D| \\cdot Q^*}\\]\n\\[-|\\Delta Q| = \\varepsilon_S \\cdot \\frac{Q^*}{P^*} \\cdot \\Delta P^S \\quad \\Longrightarrow \\quad \\Delta P^S = -\\frac{|\\Delta Q| \\cdot P^*}{\\varepsilon_S \\cdot Q^*}\\]\nSubstituting into the wedge condition:\n\\[t = \\Delta P^D - \\Delta P^S = \\frac{|\\Delta Q| \\cdot P^*}{Q^*}\\left(\\frac{1}{|\\varepsilon_D|} + \\frac{1}{\\varepsilon_S}\\right) = \\frac{|\\Delta Q| \\cdot P^*}{Q^*} \\cdot \\frac{|\\varepsilon_D| + \\varepsilon_S}{|\\varepsilon_D| \\cdot \\varepsilon_S}\\]\nSolving for \\(|\\Delta Q|\\):\n\\[|\\Delta Q| = \\frac{|\\varepsilon_D| \\cdot \\varepsilon_S}{|\\varepsilon_D| + \\varepsilon_S} \\cdot \\frac{t \\cdot Q^*}{P^*}\\]\nTherefore:\n\\[DWL = \\frac{1}{2} \\cdot t \\cdot |\\Delta Q| = \\boxed{\\frac{1}{2} \\cdot \\frac{|\\varepsilon_D|\\,\\varepsilon_S}{|\\varepsilon_D| + \\varepsilon_S} \\cdot \\frac{t^2}{P^*} \\cdot Q^*}\\]\nNumerical verification with \\(|\\varepsilon_D| = 1\\), \\(\\varepsilon_S = 1.5\\), \\(t = 25\\), \\(P^* = 60\\), \\(Q^* = 120\\):\n\\[DWL = \\frac{1}{2} \\cdot \\frac{1 \\times 1.5}{1 + 1.5} \\cdot \\frac{625}{60} \\cdot 120 = \\frac{1}{2} \\cdot 0.6 \\cdot 1250 = 375 \\checkmark\\]\nIntuition. Three features of the formula are worth noting:\n\nBoth elasticities raise DWL. The term \\(\\frac{|\\varepsilon_D|\\,\\varepsilon_S}{|\\varepsilon_D|+\\varepsilon_S}\\) is increasing in both \\(|\\varepsilon_D|\\) and \\(\\varepsilon_S\\). The more responsive buyers and sellers are to prices, the larger the quantity reduction — and hence the larger the efficiency loss.\nZero elasticity on either side eliminates DWL. If demand or supply is perfectly inelastic (\\(|\\varepsilon_D| = 0\\) or \\(\\varepsilon_S = 0\\)), then \\(|\\Delta Q| = 0\\): the tax causes no quantity distortion and generates no deadweight loss (all revenue comes from a lump-sum extraction from one side of the market). This is why taxes on inelastic goods (e.g., basic necessities) are efficient even if inequitable.\nDWL grows with \\(t^2\\). Doubling the tax rate quadruples the deadweight loss. This is why economists often prefer broad, low-rate taxes over narrow, high-rate taxes."
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html#conceptual-question-on-tax-incidence",
+    "href": "practice-problems/part1-add-solutions.html#conceptual-question-on-tax-incidence",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "10. Conceptual Question on Tax Incidence",
+    "text": "10. Conceptual Question on Tax Incidence\nThe senator’s claim is incorrect. Tax incidence (how the burden of a tax is actually distributed between buyers and sellers) is determined entirely by the relative price elasticities of supply and demand, not by who legally remits the tax to the government.\nTo see this, note that what matters for equilibrium is the wedge \\(P^D - P^S = t\\). Whether the wedge is created by taxing producers (supply curve shifts up by \\(t\\)) or taxing consumers (demand curve shifts down by \\(t\\)), the resulting equilibrium consumer price, producer price, and quantity are identical. The market cannot tell the difference.\nThe burden shares are: \\[\\text{Consumer share} = \\frac{\\varepsilon_S}{|\\varepsilon_D| + \\varepsilon_S}, \\quad \\text{Producer share} = \\frac{|\\varepsilon_D|}{|\\varepsilon_D| + \\varepsilon_S}\\]\nFor producers to bear the entire burden, we need the consumer share to equal zero: \\[\\frac{\\varepsilon_S}{|\\varepsilon_D| + \\varepsilon_S} = 0\\]\nThis holds when either:\n\nSupply is perfectly inelastic (\\(\\varepsilon_S = 0\\)): Producers cannot adjust quantity regardless of price, so the entire burden falls on them. The supply curve is vertical and the consumer price does not change.\nDemand is perfectly elastic (\\(|\\varepsilon_D| \\to \\infty\\)): Any increase in the consumer price causes demand to collapse to zero, so producers must absorb the full tax to keep the consumer price unchanged.\n\nIn practice, neither extreme holds, so both sides bear some portion of the tax burden."
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html#exchange-economy-and-general-equilibrium",
+    "href": "practice-problems/part1-add-solutions.html#exchange-economy-and-general-equilibrium",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "11. Exchange Economy and General Equilibrium",
+    "text": "11. Exchange Economy and General Equilibrium\n\n(a) MRS at the endowment and Pareto efficiency\nFor \\(U = xy\\), the \\(MRS\\) is \\(\\frac{MU_x}{MU_y} = \\frac{y}{x}\\).\n\\[MRS_A = \\frac{y_A}{x_A}\\bigg|_{\\omega_A} = \\frac{2}{8} = \\frac{1}{4}, \\qquad MRS_B = \\frac{y_B}{x_B}\\bigg|_{\\omega_B} = \\frac{8}{2} = 4\\]\nSince \\(MRS_A \\neq MRS_B\\), the endowment allocation is not Pareto efficient; there are unexploited gains from trade.\nIntuitively: Consumer A is endowed with relatively more \\(x\\) and values it less (low \\(MRS\\)), while consumer B is endowed with relatively more \\(y\\) and values \\(x\\) more (high \\(MRS\\)). A will want to trade \\(x\\) away in exchange for \\(y\\), and B will want to trade \\(y\\) away in exchange for \\(x\\).\n\n\n(b) Contract curve\nPareto efficiency requires \\(MRS_A = MRS_B\\). With \\(x_B = 10 - x_A\\) and \\(y_B = 10 - y_A\\): \\[\\frac{y_A}{x_A} = \\frac{10 - y_A}{10 - x_A}\\]\nCross-multiplying: \\[y_A(10 - x_A) = x_A(10 - y_A) \\implies 10y_A = 10x_A\\] \\[\\boxed{y_A = x_A}\\]\nThe contract curve is the main diagonal of the Edgeworth box, running from corner \\((0,0)\\) to corner \\((10,10)\\) (from A’s perspective). At every point on this line, both consumers hold equal quantities of both goods.\n\n\n(c) Competitive equilibrium\nLet \\(p = p_x/p_y\\) and normalize \\(p_y = 1\\).\nConsumer A’s income: \\(I_A = 8p + 2\\). With equal-share Cobb-Douglas: \\[x_A = \\frac{I_A}{2p} = 4 + \\frac{1}{p}, \\qquad y_A = \\frac{I_A}{2} = 4p + 1\\]\nConsumer B’s income: \\(I_B = 2p + 8\\). \\[x_B = \\frac{I_B}{2p} = 1 + \\frac{4}{p}, \\qquad y_B = \\frac{I_B}{2} = p + 4\\]\nMarket clearing for \\(x\\): \\[x_A + x_B = 10 \\implies \\left(4 + \\frac{1}{p}\\right) + \\left(1 + \\frac{4}{p}\\right) = 10 \\implies 5 + \\frac{5}{p} = 10 \\implies p^* = 1\\]\nEquilibrium allocation at \\(p^* = 1\\): \\[x_A = 5,\\; y_A = 5, \\qquad x_B = 5,\\; y_B = 5\\]\nVerify on the contract curve: \\(y_A = 5 = x_A\\) ✓. Verify market clearing for \\(y\\): \\(5 + 5 = 10\\) ✓.\n\n\n(d) Welfare theorems and lump-sum transfer\nFirst Welfare Theorem: Every competitive equilibrium allocation is Pareto efficient, provided markets are competitive, complete, and there are no externalities.\nSecond Welfare Theorem: Every Pareto efficient allocation can be supported as a competitive equilibrium after appropriate lump-sum redistribution of endowments, provided preferences are convex.\nThe planner wants \\((x_A, y_A) = (3, 3)\\), which lies on the contract curve (\\(y_A = x_A\\) ✓). At \\(p^* = 1\\), this requires consumer A to have income \\(I_A = 2 \\times 3 = 6\\) (since \\(x_A = I_A/2 = 3\\)).\nA’s original income at \\(p^* = 1\\) is \\(8(1) + 2(1) = 10\\). We must reduce it by \\(4\\).\nRequired transfer: Reassign 4 units of good \\(x\\) from A to B: \\[\\omega_A' = (4,\\, 2), \\qquad \\omega_B' = (6,\\, 8)\\]\nAt \\(p^* = 1\\): \\(I_A = 4 + 2 = 6 \\Rightarrow x_A = 3,\\; y_A = 3\\) ✓ and \\(I_B = 6 + 8 = 14 \\Rightarrow x_B = 7,\\; y_B = 7\\) ✓."
+  },
+  {
+    "objectID": "practice-problems/part1-add-solutions.html#welfare-theorems-and-policy-design",
+    "href": "practice-problems/part1-add-solutions.html#welfare-theorems-and-policy-design",
+    "title": "Part 1: Competitive Markets Practice Problem Solutions",
+    "section": "12. Welfare Theorems and Policy Design",
+    "text": "12. Welfare Theorems and Policy Design\n\nFirst Welfare Theorem\nStatement: If all markets are perfectly competitive and there are no externalities or public goods, then every competitive equilibrium allocation is Pareto efficient.\nMore precisely, the theorem requires: (i) price-taking behavior by all buyers and sellers, (ii) complete markets (a market exists for every good), (iii) no externalities (private and social costs/benefits coincide), and (iv) no information asymmetries.\nThis is Adam Smith’s “invisible hand” result stated formally: decentralized decisions by self-interested agents, coordinated only by prices, lead to an outcome where no one can be made better off without making someone else worse off.\n\n\nSecond Welfare Theorem\nStatement: If preferences and production sets are convex, then any Pareto efficient allocation can be supported as a competitive equilibrium, provided appropriate lump-sum transfers of initial endowments are made beforehand.\nThe key additional condition relative to the FWT is convexity i.e. diminishing marginal rates of substitution for consumers and non-increasing returns to scale for firms. Given convexity, the government can, in principle, reach any point on the Pareto frontier by first redistributing endowments, then letting markets operate.\n\n\nPolicy implications\nTaken together, the two theorems have several important implications for policy design:\n\nMarkets as a benchmark. The FWT establishes conditions under which free markets achieve efficiency. It provides the theoretical foundation for market-based economies and sets a standard against which actual market performance can be measured.\nMarket failures justify intervention. The FWT also identifies precisely when markets fail: externalities, public goods, market power, and information asymmetries all violate the theorem’s conditions. In each case, there is a potential role for government to improve welfare through taxes, public provision, antitrust policy, or disclosure requirements.\nSeparating efficiency from equity. The SWT implies that efficiency and equity are separable objectives. Society need not choose between an efficient market outcome and a more equitable distribution — it can achieve any desired allocation on the Pareto frontier by redistributing initial endowments (via lump-sum taxes and transfers) and then relying on competitive markets for efficiency. This means that distortionary policies (price controls, targeted subsidies) are generally an inferior way to pursue equity goals, since they sacrifice efficiency.\nThe second-best problem. In practice, the lump-sum transfers required by the SWT are infeasible: they would require the government to have perfect information about individuals’ abilities, endowments, and preferences. Real-world redistribution — income taxes, transfers, in-kind benefits — inevitably distorts behavior and creates deadweight losses. Policymakers therefore face a genuine trade-off between equity and efficiency, and must seek “second-best” policies that balance the two."
+  },
+  {
+    "objectID": "practice-problems/part2-add-solutions.html",
+    "href": "practice-problems/part2-add-solutions.html",
+    "title": "Part 2: Market Power Practice Problems",
+    "section": "",
+    "text": "Total revenue is \\(TR = P \\cdot Q = (200 - 2Q)Q = 200Q - 2Q^2\\). Marginal revenue:\n\\[MR = \\frac{dTR}{dQ} = 200 - 4Q\\]\nSetting \\(MR = MC\\):\n\\[200 - 4Q = 40 \\quad \\Longrightarrow \\quad Q^*_m = 40\\]\n\\[P^*_m = 200 - 2(40) = 120\\]\n\\[\\pi = (P - MC) \\cdot Q = (120 - 40)(40) = \\$3{,}200\\]\n\\[\\boxed{Q^*_m = 40, \\quad P^*_m = \\$120, \\quad \\pi = \\$3{,}200}\\]\n\n\n\nUnder perfect competition, \\(P = MC\\):\n\\[200 - 2Q = 40 \\quad \\Longrightarrow \\quad Q_c = 80, \\quad P_c = \\$40\\]\nConsumer surplus is the area of the triangle between the demand curve and the price:\n\\[CS_c = \\frac{1}{2}(200 - 40)(80) = \\$6{,}400\\]\nProducer surplus is zero since the firm earns no markup (\\(P = MC\\) with constant marginal cost). Total surplus:\n\\[\\boxed{TS_c = CS_c + PS_c = \\$6{,}400 + 0 = \\$6{,}400}\\]\n\n\n\nUnder monopoly:\n\\[CS_m = \\frac{1}{2}(200 - 120)(40) = \\frac{1}{2}(80)(40) = \\$1{,}600\\]\n\\[PS_m = (120 - 40)(40) = \\$3{,}200\\]\n\\[TS_m = 1{,}600 + 3{,}200 = \\$4{,}800\\]\nThe deadweight loss is the surplus destroyed by monopoly pricing:\n\\[DWL = TS_c - TS_m = 6{,}400 - 4{,}800 = \\$1{,}600\\]\nEquivalently, the DWL is the triangle between the demand curve and MC over the range of output lost:\n\\[DWL = \\frac{1}{2}(P_m - MC)(Q_c - Q_m) = \\frac{1}{2}(80)(40) = \\$1{,}600\\]\n\\[\\boxed{DWL = \\$1{,}600}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nThe Lerner Index measures the firm’s markup as a fraction of price:\n\\[L = \\frac{P_m - MC}{P_m} = \\frac{120 - 40}{120} = \\frac{2}{3}\\]\nTo verify using the inverse elasticity rule, we need the price elasticity of demand at the monopoly point. From the demand curve \\(Q = 100 - P/2\\):\n\\[\\frac{dQ}{dP} = -\\frac{1}{2}\\]\n\\[\\varepsilon_D = \\frac{dQ}{dP} \\cdot \\frac{P}{Q} = -\\frac{1}{2} \\cdot \\frac{120}{40} = -\\frac{3}{2}\\]\nThe inverse elasticity rule states that \\(L = 1/|\\varepsilon_D|\\):\n\\[\\frac{1}{|\\varepsilon_D|} = \\frac{1}{3/2} = \\frac{2}{3} \\quad \\checkmark\\]\n\\[\\boxed{L = \\frac{2}{3}, \\quad |\\varepsilon_D| = \\frac{3}{2}}\\]\nThe monopolist operates in the elastic portion of the demand curve (\\(|\\varepsilon_D| &gt; 1\\)), as we would expect. If demand were inelastic, the firm could increase revenue by raising the price (reducing output), so it would never be optimal to produce in the inelastic region."
+  },
+  {
+    "objectID": "practice-problems/part2-add-solutions.html#problem-1-monopoly-pricing",
+    "href": "practice-problems/part2-add-solutions.html#problem-1-monopoly-pricing",
+    "title": "Part 2: Market Power Practice Problems",
+    "section": "",
+    "text": "Total revenue is \\(TR = P \\cdot Q = (200 - 2Q)Q = 200Q - 2Q^2\\). Marginal revenue:\n\\[MR = \\frac{dTR}{dQ} = 200 - 4Q\\]\nSetting \\(MR = MC\\):\n\\[200 - 4Q = 40 \\quad \\Longrightarrow \\quad Q^*_m = 40\\]\n\\[P^*_m = 200 - 2(40) = 120\\]\n\\[\\pi = (P - MC) \\cdot Q = (120 - 40)(40) = \\$3{,}200\\]\n\\[\\boxed{Q^*_m = 40, \\quad P^*_m = \\$120, \\quad \\pi = \\$3{,}200}\\]\n\n\n\nUnder perfect competition, \\(P = MC\\):\n\\[200 - 2Q = 40 \\quad \\Longrightarrow \\quad Q_c = 80, \\quad P_c = \\$40\\]\nConsumer surplus is the area of the triangle between the demand curve and the price:\n\\[CS_c = \\frac{1}{2}(200 - 40)(80) = \\$6{,}400\\]\nProducer surplus is zero since the firm earns no markup (\\(P = MC\\) with constant marginal cost). Total surplus:\n\\[\\boxed{TS_c = CS_c + PS_c = \\$6{,}400 + 0 = \\$6{,}400}\\]\n\n\n\nUnder monopoly:\n\\[CS_m = \\frac{1}{2}(200 - 120)(40) = \\frac{1}{2}(80)(40) = \\$1{,}600\\]\n\\[PS_m = (120 - 40)(40) = \\$3{,}200\\]\n\\[TS_m = 1{,}600 + 3{,}200 = \\$4{,}800\\]\nThe deadweight loss is the surplus destroyed by monopoly pricing:\n\\[DWL = TS_c - TS_m = 6{,}400 - 4{,}800 = \\$1{,}600\\]\nEquivalently, the DWL is the triangle between the demand curve and MC over the range of output lost:\n\\[DWL = \\frac{1}{2}(P_m - MC)(Q_c - Q_m) = \\frac{1}{2}(80)(40) = \\$1{,}600\\]\n\\[\\boxed{DWL = \\$1{,}600}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nThe Lerner Index measures the firm’s markup as a fraction of price:\n\\[L = \\frac{P_m - MC}{P_m} = \\frac{120 - 40}{120} = \\frac{2}{3}\\]\nTo verify using the inverse elasticity rule, we need the price elasticity of demand at the monopoly point. From the demand curve \\(Q = 100 - P/2\\):\n\\[\\frac{dQ}{dP} = -\\frac{1}{2}\\]\n\\[\\varepsilon_D = \\frac{dQ}{dP} \\cdot \\frac{P}{Q} = -\\frac{1}{2} \\cdot \\frac{120}{40} = -\\frac{3}{2}\\]\nThe inverse elasticity rule states that \\(L = 1/|\\varepsilon_D|\\):\n\\[\\frac{1}{|\\varepsilon_D|} = \\frac{1}{3/2} = \\frac{2}{3} \\quad \\checkmark\\]\n\\[\\boxed{L = \\frac{2}{3}, \\quad |\\varepsilon_D| = \\frac{3}{2}}\\]\nThe monopolist operates in the elastic portion of the demand curve (\\(|\\varepsilon_D| &gt; 1\\)), as we would expect. If demand were inelastic, the firm could increase revenue by raising the price (reducing output), so it would never be optimal to produce in the inelastic region."
+  },
+  {
+    "objectID": "practice-problems/part2-add-solutions.html#problem-2-third-degree-price-discrimination",
+    "href": "practice-problems/part2-add-solutions.html#problem-2-third-degree-price-discrimination",
+    "title": "Part 2: Market Power Practice Problems",
+    "section": "Problem 2: Third-Degree Price Discrimination",
+    "text": "Problem 2: Third-Degree Price Discrimination\n\nPart (a): Price discrimination\nThe inverse demand curves are \\(P_A = 100 - Q_A\\) and \\(P_S = 60 - Q_S\\). The monopolist maximizes profit in each market separately by setting \\(MR = MC\\):\nAdults:\n\\[MR_A = 100 - 2Q_A = 20 \\quad \\Longrightarrow \\quad Q_A = 40, \\quad P_A = 60\\]\n\\[\\pi_A = (60 - 20)(40) = \\$1{,}600\\]\nStudents:\n\\[MR_S = 60 - 2Q_S = 20 \\quad \\Longrightarrow \\quad Q_S = 20, \\quad P_S = 40\\]\n\\[\\pi_S = (40 - 20)(20) = \\$400\\]\n\\[\\boxed{\\text{Total profit} = 1{,}600 + 400 = \\$2{,}000, \\quad \\text{Total output} = 60}\\]\n\n\nPart (b): Uniform pricing\nWith a single price, aggregate demand is the horizontal sum (\\(P \\leq 60\\)):\n\\[Q = Q_A + Q_S = (100 - P) + (60 - P) = 160 - 2P\\]\nInverting: \\(P = 80 - Q/2\\). Marginal revenue:\n\\[MR = 80 - Q = 20 \\quad \\Longrightarrow \\quad Q = 60, \\quad P = 50\\]\nCheck that both markets are served: \\(Q_A = 100 - 50 = 50 &gt; 0\\) and \\(Q_S = 60 - 50 = 10 &gt; 0\\). \\(\\checkmark\\)\n\\[\\boxed{P = \\$50, \\quad Q = 60, \\quad \\pi = (50 - 20)(60) = \\$1{,}800}\\]\nNote that total output is the same under both regimes (60 units). This is a general result for linear demand curves when both markets are served under uniform pricing.\n\n\nPart (c): Elasticities and Lerner index\nUnder price discrimination, at the optimal prices:\nAdults: \\(\\varepsilon_A = \\dfrac{dQ_A}{dP_A} \\cdot \\dfrac{P_A}{Q_A} = (-1) \\cdot \\dfrac{60}{40} = -\\dfrac{3}{2}\\)\n\\[L_A = \\frac{P_A - c}{P_A} = \\frac{60 - 20}{60} = \\frac{2}{3} = \\frac{1}{|\\varepsilon_A|} \\quad \\checkmark\\]\nStudents: \\(\\varepsilon_S = \\dfrac{dQ_S}{dP_S} \\cdot \\dfrac{P_S}{Q_S} = (-1) \\cdot \\dfrac{40}{20} = -2\\)\n\\[L_S = \\frac{P_S - c}{P_S} = \\frac{40 - 20}{40} = \\frac{1}{2} = \\frac{1}{|\\varepsilon_S|} \\quad \\checkmark\\]\n\\[\\boxed{L_A = \\frac{2}{3} &gt; L_S = \\frac{1}{2}}\\]\nAdults get the higher markup because their demand is less elastic (\\(|\\varepsilon_A| = 3/2 &lt; |\\varepsilon_S| = 2\\)). Adults are less price-sensitive, so the monopolist can extract more surplus from them by charging a higher price relative to marginal cost. This is the key insight of third-degree price discrimination: charge more where demand is less elastic.\n\n\nPart (d): Welfare comparison\nUnder price discrimination:\n\\[CS_A = \\frac{1}{2}(100 - 60)(40) = 800, \\qquad CS_S = \\frac{1}{2}(60 - 40)(20) = 200\\]\n\\[\\text{Total CS} = 1{,}000, \\qquad \\text{Profit} = 2{,}000, \\qquad \\text{Total welfare} = 3{,}000\\]\nUnder uniform pricing:\n\\[CS_A = \\frac{1}{2}(100 - 50)(50) = 1{,}250, \\qquad CS_S = \\frac{1}{2}(60 - 50)(10) = 50\\]\n\\[\\text{Total CS} = 1{,}300, \\qquad \\text{Profit} = 1{,}800, \\qquad \\text{Total welfare} = 3{,}100\\]\n\\[\\boxed{\\text{Welfare is \\$100 higher under uniform pricing}}\\]\n\n\n\n\nCS\nProfit\nTotal Welfare\n\n\n\n\nPrice discrimination\n1,000\n2,000\n3,000\n\n\nUniform pricing\n1,300\n1,800\n3,100\n\n\n\nPrice discrimination is not welfare-improving here. Consumers are worse off (\\(-300\\) in CS) and the firm is better off (\\(+200\\) in profit), but the net effect is a welfare loss of \\(100\\). Since total output is the same under both regimes, discrimination simply reallocates output from the more elastic market (students) to the less elastic market (adults). This reallocation is inefficient: units are moved from consumers with higher marginal valuations (students priced out at \\(P_S = 40\\)) to consumers with lower marginal valuations (additional adults served at \\(P_A = 60\\)).\nNote: If the student market would be shut out entirely under uniform pricing (e.g., if \\(c\\) were higher), price discrimination could be welfare-improving by opening a new market."
+  },
+  {
+    "objectID": "practice-problems/part2-add-solutions.html#problem-3-cournot-duopoly-with-asymmetric-costs",
+    "href": "practice-problems/part2-add-solutions.html#problem-3-cournot-duopoly-with-asymmetric-costs",
+    "title": "Part 2: Market Power Practice Problems",
+    "section": "Problem 3: Cournot Duopoly with Asymmetric Costs",
+    "text": "Problem 3: Cournot Duopoly with Asymmetric Costs\n\nPart (a): Best response functions\nFirm 1 (\\(MC_1 = 20\\)) maximizes profit given \\(q_2\\):\n\\[\\pi_1 = (120 - q_1 - q_2)q_1 - 20q_1 = (100 - q_1 - q_2)q_1\\]\n\\[\\frac{\\partial \\pi_1}{\\partial q_1} = 100 - 2q_1 - q_2 = 0 \\quad \\Longrightarrow \\quad \\boxed{q_1^*(q_2) = 50 - \\frac{q_2}{2}}\\]\nFirm 2 (\\(MC_2 = 40\\)) maximizes profit given \\(q_1\\):\n\\[\\pi_2 = (120 - q_1 - q_2)q_2 - 40q_2 = (80 - q_1 - q_2)q_2\\]\n\\[\\frac{\\partial \\pi_2}{\\partial q_2} = 80 - q_1 - 2q_2 = 0 \\quad \\Longrightarrow \\quad \\boxed{q_2^*(q_1) = 40 - \\frac{q_1}{2}}\\]\nThe best response functions are no longer symmetric: Firm 1’s intercept (50) exceeds Firm 2’s (40) because its lower MC makes any given output level more profitable. Quantities remain strategic substitutes: each firm produces less when the rival produces more.\n\n\nPart (b): Nash equilibrium\nSolve the two best response equations simultaneously. Substitute \\(q_2^* = 40 - q_1/2\\) into \\(q_1^*\\):\n\\[q_1 = 50 - \\frac{1}{2}\\!\\left(40 - \\frac{q_1}{2}\\right) = 50 - 20 + \\frac{q_1}{4} = 30 + \\frac{q_1}{4}\\]\n\\[\\frac{3q_1}{4} = 30 \\quad \\Longrightarrow \\quad q_1^* = 40\\]\n\\[q_2^* = 40 - \\frac{40}{2} = 20\\]\n\\[Q^* = 60, \\qquad P^* = 120 - 60 = 60\\]\n\\[\\pi_1^* = (60 - 20)(40) = \\$1{,}600, \\qquad \\pi_2^* = (60 - 40)(20) = \\$400\\]\n\\[\\boxed{q_1^* = 40,\\; q_2^* = 20,\\; P^* = \\$60,\\; \\pi_1^* = \\$1{,}600,\\; \\pi_2^* = \\$400}\\]\n\n\nPart (c): Lerner index and market power\n\\[L_1 = \\frac{P^* - MC_1}{P^*} = \\frac{60 - 20}{60} = \\frac{2}{3}, \\qquad L_2 = \\frac{P^* - MC_2}{P^*} = \\frac{60 - 40}{60} = \\frac{1}{3}\\]\nFirm 1 has more market power (\\(L_1 = 2/3 &gt; L_2 = 1/3\\)).\nTo understand why, note that in Cournot equilibrium each firm’s Lerner index equals its market share divided by the market price elasticity of demand:\n\\[L_i = \\frac{s_i}{|\\varepsilon_D|}, \\qquad \\text{where } s_i = \\frac{q_i^*}{Q^*}, \\quad |\\varepsilon_D| = \\frac{P^*}{Q^*} = \\frac{60}{60} = 1\\]\n\\[s_1 = \\frac{40}{60} = \\frac{2}{3}, \\quad s_2 = \\frac{20}{60} = \\frac{1}{3} \\quad \\Longrightarrow \\quad L_1 = \\frac{2}{3},\\; L_2 = \\frac{1}{3} \\checkmark\\]\nFirm 1’s lower marginal cost lets it produce more output and capture a larger market share, which in turn gives it greater price-setting power. The Lerner index reflects market share, not cost advantage directly.\n\n\nPart (d): Comparison to symmetric case (\\(MC = 30\\))\nWith \\(P = 120 - Q\\) and both firms at \\(MC = 30\\), the symmetric Cournot equilibrium gives:\n\\[q_i^* = 30, \\quad Q^* = 60, \\quad P^* = 60\\]\nRemarkably, total output and price are identical to the asymmetric case. This is a general result for linear Cournot models: with \\(n\\) firms and inverse demand \\(P = a - bQ\\),\n\\[Q^* = \\frac{na - \\sum_i MC_i}{(n+1)b}\\]\nBoth cases have \\(\\sum MC_i = 20 + 40 = 30 + 30 = 60\\), so \\(Q^* = (2 \\times 120 - 60)/3 = 60\\) and \\(P^* = 60\\) in both.\nSince \\(P\\) and \\(Q\\) are the same, consumer surplus is identical. The difference lies in production costs:\n\n\n\n\n\n\n\n\n\n\n\n\n\\(q_1\\)\n\\(q_2\\)\nTotal cost\nTotal profit\nTotal welfare\n\n\n\n\nAsymmetric (\\(MC_1=20, MC_2=40\\))\n40\n20\n\\(20(40)+40(20)=1{,}600\\)\n\\(2{,}000\\)\n\\(3{,}800\\)\n\n\nSymmetric (\\(MC_1=MC_2=30\\))\n30\n30\n\\(30(30)+30(30)=1{,}800\\)\n\\(1{,}800\\)\n\\(3{,}600\\)\n\n\n\n(Total welfare = CS + total profit = \\(1{,}800 +\\) total profit.)\nAsymmetric costs generate higher total welfare by \\(\\$200\\). The Cournot mechanism reallocates production from the high-cost firm (Firm 2 drops from 30 to 20 units) to the low-cost firm (Firm 1 rises from 30 to 40 units). This productive reallocation reduces total production cost for the same output, raising total surplus. In other words, when cost differences exist, even imperfect competition partially corrects the production inefficiency of a symmetric allocation."
+  },
+  {
+    "objectID": "practice-problems/part2-add-solutions.html#problem-4-bertrand-competition",
+    "href": "practice-problems/part2-add-solutions.html#problem-4-bertrand-competition",
+    "title": "Part 2: Market Power Practice Problems",
+    "section": "Problem 4: Bertrand Competition",
+    "text": "Problem 4: Bertrand Competition\n\nPart (a): \\(p_1 = p_2 = c\\) is a Nash equilibrium\nWe need to show that neither firm can increase its profit by unilaterally changing its price.\nAt \\(p_1 = p_2 = c\\), each firm earns zero profit (price equals marginal cost). Consider firm 1’s possible deviations:\n\nRaise price (\\(p_1 &gt; c\\)): Firm 1 loses all customers to firm 2 (which still charges \\(c\\)). Firm 1’s profit remains \\(\\$0\\). No improvement.\nLower price (\\(p_1 &lt; c\\)): Firm 1 captures the entire market but sells below cost. Firm 1’s profit is \\((p_1 - c) \\cdot Q(p_1) &lt; 0\\). This is strictly worse.\n\nSince no deviation is profitable, \\(p_1 = p_2 = c\\) is a Nash equilibrium. \\(\\quad \\checkmark\\)\n\n\nPart (b): \\(p_1 = p_2 &gt; c\\) is not a Nash equilibrium\nSuppose both firms charge \\(p = p_1 = p_2 &gt; c\\), splitting the market equally. Each firm earns:\n\\[\\pi = (p - c) \\cdot \\frac{Q(p)}{2} &gt; 0\\]\nNow consider firm 1 deviating to \\(p_1 = p - \\epsilon\\) (for small \\(\\epsilon &gt; 0\\)). Since the good is homogeneous and firm 1 is now cheaper, it captures the entire market:\n\\[\\pi_1^{\\text{dev}} = (p - \\epsilon - c) \\cdot Q(p - \\epsilon)\\]\nFor small \\(\\epsilon\\), this is approximately \\((p - c) \\cdot Q(p)\\), which is roughly double firm 1’s original profit. Since this is a profitable deviation, the original prices cannot be a Nash equilibrium. \\(\\quad \\checkmark\\)\n\n\nPart (c): Asymmetric costs\nWith \\(MC_1 = 10\\) and \\(MC_2 = 20\\), firm 1 has a cost advantage.\nIf firm 1 sets \\(p_1 = 20 - \\epsilon\\) (just below firm 2’s cost), it captures the entire market while firm 2 cannot profitably undercut (doing so would mean pricing below its own marginal cost).\nAt \\(p_1 = 20\\) (taking the limit as \\(\\epsilon \\to 0\\)):\n\\[Q = 100 - 20 = 80\\]\n\\[\\pi_1 = (20 - 10)(80) = \\$800\\]\nFirm 2 earns \\(\\$0\\).\n\\[\\boxed{p_1^* = 20, \\quad \\pi_1 = \\$800, \\quad \\pi_2 = \\$0}\\]\nThe low-cost firm captures the entire market by pricing at (or just below) the rival’s marginal cost. Note that if firm 1 was a monopoly, it would set \\(MR = MC\\), particularly: \\[MR = 100 - 2Q = 10 \\quad \\Longrightarrow \\quad Q = 45, \\quad P = 100 - 45 = 55\\]\nHowever, in the Bertrand duopoly, firm 1 cannot charge above \\(20\\) without losing all customers to firm 2. Thus, the equilibrium price is determined by the rival’s cost, not by the monopolist’s optimal price.\n\n\nPart (d): Resolving the Bertrand paradox\nThe Bertrand paradox arises because two critical assumptions drive the extreme result. Relaxing either allows firms to earn positive profits:\n\nProduct differentiation. If goods are not perfect substitutes (e.g., brand loyalty, quality differences, location), then a small price cut does not capture the entire market. Consumers may prefer one firm’s product even at a slightly higher price, giving each firm some market power.\nCapacity constraints. If firms cannot serve the entire market (limited production capacity), then undercutting does not let a firm capture all demand. The rival retains customers who cannot be served by the undercutting firm, allowing both to charge above marginal cost.\n\nOther valid answers include: repeated interaction (firms can sustain higher prices through tacit collusion if they interact repeatedly) and switching to quantity competition (the Cournot model yields positive profits with just two firms, as shown in Problem 3)."
   },
   {
     "objectID": "practice-problems/ps1.html",

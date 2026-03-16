@@ -1,5 +1,5 @@
 ---
-title: "3: Production, Costs, and Firm Supply"
+title: "Lecture 3: Production, Costs, and Firm Supply"
 nav-sidebar: false
 format: html
 ---

@@ -1,5 +1,5 @@
 ---
-title: "10: Externalities and Public Goods"
+title: "Lecture 10: Externalities and Public Goods"
 nav-sidebar: false
 format: html
 ---

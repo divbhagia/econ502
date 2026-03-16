@@ -352,7 +352,7 @@ Why is $p_1^* = p_2^* = c$ a Nash equilibrium?
 - **Raise price?** You lose all customers (rival still charges $c$). Profit stays at $0$.
 - **Lower price?** You get the whole market, but sell below cost. Profit is *negative*.
 
-No profitable deviation exists. $\quad \checkmark$
+No profitable deviation exists. ✓
 
 **Why can't $p_1 = p_2 > c$ be an equilibrium?**
 
@@ -527,7 +527,7 @@ At the collusion point, each firm produces $q_m/2 = 20$ and earns $\$800$.
 
 $$q_1^* = 40 - \frac{20}{2} = 30$$
 
-Firm 1 can earn **more** by producing 30 instead of 20. Each firm has an incentive to **cheat** on the collusive agreement. This is essentially a **Prisoner's Dilemma** (we will define this formally when we cover game theory).
+Firm 1 can earn **more** by producing 30 instead of 20. Each firm has an incentive to **cheat** on the collusive agreement. This is essentially a **Prisoner's Dilemma** (we will talk about this more when we cover game theory).
 
 ---
 

@@ -358,7 +358,7 @@ $AC=MC$ and both are constant in $Q$ always for CRS.
 $$SC(\bar{K}, w, Q) = r\bar{K} + wL(Q, \bar{K})$$
 
 ::: {.fragment}
-- **Fixed costs ($r\bar{K}$):** incurred regardLess of output
+- **Fixed costs ($r\bar{K}$):** incurred regardless of output
 - **Variable costs ($wL$):** vary with output level
 
 **Key result:** Short-run costs $\geq$ long-run costs, with equality only at the output level for which $\bar{K}$ is optimal.
@@ -424,7 +424,7 @@ $$|e_{Q,p}| \to \infty \implies MR \to p$$
 
 :::
 
----
+<!-- ---
 
 ## The Lerner Index
 
@@ -455,6 +455,8 @@ Ranges from 0 (perfect competition) to 1.
 - Firms facing inelastic demand ($|e_{Q,p}|$ small) can charge a large markup
 :::
 
+-->
+
 ---
 
 ## Short-Run Supply: Price-Taking Firm
@@ -468,6 +470,9 @@ fig, ax = plt.subplots(figsize=(8, 5.5))
 
 Q = np.linspace(0.5, 10, 200)
 
+# Color blind-friendly palette
+colors = ['#a23b72', '#2e86ab', '#f18f01', '#c73e1d']
+
 # SMC = 0.3q^2 - 2q + 5
 smc = 0.3*Q**2 - 2*Q + 5
 # SAVC = 0.1q^2 - Q + 5  
@@ -475,22 +480,22 @@ savc = 0.1*Q**2 - Q + 5
 # SAC 
 sac = savc + 3/Q  # adding fixed cost/Q
 
-ax.plot(Q, smc, linewidth=2.5, color='#a23b72', label='$SMC$', linestyle='--')
-ax.plot(Q, savc, linewidth=2.5, color='#2e86ab', label='$SAVC$')
-ax.plot(Q, sac, linewidth=2.5, color='gray', linestyle='--', label='$SAC$')
+ax.plot(Q, smc, linewidth=2.5, color=colors[0], label='$SMC$', linestyle='--')
+ax.plot(Q, savc, linewidth=2.5, color=colors[1], label='$SAVC$')
+ax.plot(Q, sac, linewidth=2.5, color=colors[2], linestyle='--', label='$SAC$')
 
 # Min SAVC (shutdown price)
 q_shut = 5  # min of SAVC at Q = -(-1)/(2*0.1) = 5
 p_shut = 0.1*25 - 5 + 5
-ax.axhline(y=p_shut, color='black', linewidth=1, linestyle=':', alpha=1)
+ax.axhline(y=p_shut, color=colors[3], linewidth=1, linestyle=':', alpha=1)
 ax.annotate('Shutdown\nprice', xy=(q_shut, p_shut), xytext=(0.85, 2.25),
             fontsize=10, ha='center')
 
 
 # Highlight supply curve (SMC above SAVC)
 mask = smc >= savc
-ax.plot(Q[mask], smc[mask], linewidth=4, color='#a23b72', alpha=1.0, label='Supply curve')
-ax.plot([0, 0], [0, p_shut-0.1], linewidth=8, color='#a23b72', zorder=10)
+ax.plot(Q[mask], smc[mask], linewidth=4, color=colors[0], alpha=1.0, label='Supply curve')
+ax.plot([0, 0], [0, p_shut-0.1], linewidth=8, color=colors[0], zorder=10)
 
 
 ax.set_xlabel('Output ($Q$)', fontsize=14)

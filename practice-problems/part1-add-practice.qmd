@@ -1,0 +1,147 @@
+---
+title: "Part 1: Competitive Markets Practice Problems"
+subtitle: "Econ 502: Advanced Microeconomics"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      file: ../assets/pset-preamble.tex
+format-links: [pdf]
+---
+
+# Consumer Theory
+
+## 1. Demand Functions, Indirect Utility, and Expenditure Functions
+
+For each of the following utility functions, given prices $p_x$ and $p_y$ and income $m$, derive: (i) the demand functions for $x$ and $y$, (ii) the indirect utility function, and (iii) the expenditure function.
+
+   a. **Cobb-Douglas:** $u(x, y) = x^{\alpha} y^{\beta}$, where $\alpha, \beta > 0$ and $\alpha + \beta = 1$
+   b. **Perfect Complements (Leontief):** $u(x, y) = \min\{x, y\}$
+   c. **Perfect Substitutes:** $u(x, y) = x + y$
+   d. **Constant Elasticity of Substitution (CES):** $u(x, y) = \left(x^{\rho} + y^{\rho}\right)^{1/\rho}$, where $\rho \neq 0$
+
+## 2. Elasticity of Substitution
+
+The elasticity of substitution between goods $x$ and $y$ is defined as:
+$$\sigma = \frac{d\ln(y/x)}{d\ln(MRS_{xy})}$$
+where $MRS_{xy} = MU_x / MU_y$ measures the rate at which the consumer is willing to trade $x$ for $y$.
+
+a) Show that the elasticity of substitution for the Cobb-Douglas utility function $u(x, y) = x^\alpha y^\beta$ equals 1.
+
+b) What is the economic intuition for $\sigma = 1$? (Hint: think about what happens to expenditure shares when relative prices change.)
+
+## 3. Hicksian Demand and Compensated Price Effects
+
+Consider the following utility function:
+$$u(x, y) = xy $$
+Price of good $x$ is $p_x=1$, price of good $y$ is $p_y=2$, and income is $m=10$.
+
+   a. What is the consumer's optimal bundle of goods $x$ and $y$? 
+   b. If the price of good $y$ decreases to $p_y=1$, what is the new optimal bundle of goods $x$ and $y$?
+   c. Find the Hicksian demand function for good $y$ and use it to calculate the substitution effect of the price change on the quantity demanded of good $y$. What is the income effect of the price change on the quantity demanded of good $y$?
+   d. Intuitively, explain what the substitution effect and income effect represent in this problem.
+   e. How much income would the consumer need to receive or give up to be as well off as before the price change, given the new prices? 
+
+## 4. Stone-Geary Utility (Textbook Ex 4.12)
+
+Suppose individuals require a certain level of food $(x)$ to remain alive. Let this amount be given by $x_0$. Once $x_0$ is purchased, individuals obtain utility from food and other goods $(y)$ of the form
+$$U(x, y) = (x - x_0)^\alpha y^\beta,$$
+where $\alpha + \beta = 1$.
+
+   **a.** Show that if $I > p_x x_0$ then the individual will maximize utility by spending $\alpha(I - p_x x_0) + p_x x_0$ on good $x$ and $\beta(I - p_x x_0)$ on good $y$. Interpret this result.
+
+   **b.** How do the ratios $p_x x/I$ and $p_y y/I$ change as income increases in this problem?
+
+
+## 5. Cash vs. In-Kind Transfers
+
+Using tools learnt in this course, can you explain why a cash transfer to a poor household may be more effective in improving their welfare than an in-kind transfer of food? Why do you think policymakers often prefer in-kind transfers to cash transfers?
+
+## 6. Income and Substitution Effects with Perfect Complements
+
+A consumer has preferences $U(x, y) = \min\{x, 2y\}$ and income $I = 90$. The prices are $p_x = 2$ and $p_y = 1$.
+
+a) Find the optimal consumption bundle.
+
+b) Now suppose $p_x$ rises to $4$. Find the new optimal bundle and the change in demand for $x$.
+
+c) Decompose the change in demand for $x$ into a substitution effect and an income effect. What is special about the substitution effect for perfect complements? Explain the intuition.
+
+# Firm Optimization and Competitive Equilibrium
+
+## 7. Cost Minimization and Profit Maximization
+
+A competitive firm produces output using capital $K$ and labor $L$ with the production function:
+$$Q = K^{1/3} L^{1/3}$$
+
+Factor prices are $r = w = 1$.
+
+a) What are the returns to scale of this production function? Does this mean that if the firm doubles all inputs, output more than doubles, exactly doubles, or less than doubles? How does this affect the long-run average cost curve?
+
+b) Set up the cost minimization problem and derive the conditional factor demands $K^*(r, w, Q)$ and $L^*(r, w, Q)$. Use these to derive the total cost function $C(r, w, Q)$. Evaluate $C$ at $r = w = 1$.
+
+c) Derive the average cost $AC(Q)$ and marginal cost $MC(Q)$ at $r = w = 1$. Show that $MC > AC$ for all $Q > 0$. What does this imply about the shape of the average cost curve, and is it consistent with the returns to scale you found in part (a)?
+
+d) The output price is $p = 6$. Find the profit-maximizing output $Q^*$. Calculate total revenue, total cost, and profit at $Q^*$. Does the firm earn positive, zero, or negative economic profit? Is this consistent with a long-run competitive equilibrium?
+
+## 8. Short-Run Supply and Long-Run Equilibrium
+
+A competitive firm has the short-run total cost function $C(Q) = 50 + 10Q + 2Q^2$, where $50$ is a sunk fixed cost.
+
+a) Derive $SMC(Q)$, $SAC(Q)$, and $SAVC(Q)$. Find the output level that minimizes $SAC$ and the corresponding minimum $SAC$.
+
+b) What is the firm's short-run supply curve? At what price does the firm shut down in the short run? At what price does it break even (zero economic profit)?
+
+c) If the market price is $p = 50$, find the firm's profit-maximizing output and profit.
+
+d) In the long run with free entry/exit of identical firms, what is the equilibrium price? If market demand is $Q^D = 200 - 5P$, how many firms operate in the long-run equilibrium?
+
+## 9. Competitive Equilibrium and Tax Incidence
+
+The market for a good has demand and supply curves:
+$$Q^D = 240 - 2P \qquad Q^S = 3P - 60$$
+
+a) Find the competitive equilibrium price $P^*$ and quantity $Q^*$. Calculate consumer surplus (CS), producer surplus (PS), and total welfare.
+
+b) The government levies a specific tax of $t = 25$ per unit on producers. Find the new equilibrium consumer price $P^D$, producer price $P^S = P^D - t$, and quantity $Q_t$.
+
+c) Calculate the price elasticities of demand and supply at the pre-tax equilibrium. Using the tax incidence formulas
+$$\text{Consumer share} = \frac{\varepsilon_S}{|\varepsilon_D| + \varepsilon_S} $$
+$$ \text{Producer share} = \frac{|\varepsilon_D|}{|\varepsilon_D| + \varepsilon_S}$$
+determine what fraction of the tax burden falls on consumers versus producers. Verify by comparing $P^D - P^*$ and $P^* - P^S$ directly.
+
+d) Compute the tax revenue, the deadweight loss from the tax, and the changes in consumer surplus and producer surplus. Verify that $\Delta CS + \Delta PS + \text{Tax Revenue} + \text{DWL} = 0$.
+
+e) Verify that the deadweight loss from the tax can be expressed as
+$$\text{DWL} = \frac{1}{2} \cdot \frac{|\varepsilon_D| \varepsilon_S}{|\varepsilon_D| + \varepsilon_S} \cdot \frac{t^2}{p^*} \cdot Q^*$$
+Explain intuitively how the elasticities of demand and supply affect the size of the deadweight loss.
+
+
+## 10. Conceptual Question on Tax Incidence
+
+A senator proposes taxing producers rather than consumers, arguing this shields consumers from the burden. Using the theory of tax incidence, evaluate this claim. Under what (extreme) condition would it actually be true that producers bear the entire burden?
+
+
+# Exchange Economies and Welfare Theorems
+
+## 11. Exchange Economy and General Equilibrium
+
+Consider an exchange economy with two consumers (A and B) and two goods ($x$ and $y$). Their endowments are:
+$$\omega_A = (8,\, 2), \quad \omega_B = (2,\, 8)$$
+
+Their utility functions are $U_A(x_A, y_A) = x_A y_A$ and $U_B(x_B, y_B) = x_B y_B$.
+
+a) Compute each consumer's MRS at the endowment point. Is the initial allocation Pareto efficient? Explain intuitively which good each consumer would want to trade away and why.
+
+b) Derive the contract curve (the set of all Pareto efficient allocations) in the Edgeworth box. Express it as a relationship between $x_A$ and $y_A$, and describe its geometry.
+
+c) Let $p = p_x / p_y$ be the price ratio. Find the competitive equilibrium: derive each consumer's Walrasian demands, apply market clearing to find $p^*$, and state the equilibrium allocation. Verify that the equilibrium lies on the contract curve.
+
+d) State the First and Second Welfare Theorems. A social planner wants to implement the Pareto efficient allocation $(x_A, y_A) = (3, 3)$ instead of the laissez-faire equilibrium. Identify the lump-sum transfer (in terms of a reallocation of endowments) that, combined with competitive trading at the equilibrium price ratio, supports this allocation.
+
+## 12. Welfare Theorems and Policy Design
+
+State the First Welfare Theorem and the Second Welfare Theorem, including the assumptions each requires. What do these theorems, taken together, imply for the design of economic policy?

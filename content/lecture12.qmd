@@ -1,5 +1,5 @@
 ---
-title: "12: Introduction to Game Theory"
+title: "Lecture 12: Introduction to Game Theory"
 nav-sidebar: false
 format: html
 ---

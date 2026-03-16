@@ -904,30 +904,32 @@ I = 100
 transfer = 100
 px = 10
 py = 5
-orange = '#E69F00'
+
+# Color blind friendly palette
+colors = ['#1e5288', '#16a085', '#f39c12', '#e74c3c', '#8e44ad', '#2c3e50']
 
 # Original budget
 x_orig = np.linspace(0, I/px, 100)
 y_orig = (I - px*x_orig) / py
-ax.plot(x_orig, y_orig, 'gray', linewidth=2.5, linestyle='--', label=f'Original Budget: {px}x + {py}y = {I}', alpha=0.7)
+ax.plot(x_orig, y_orig, colors[0], linewidth=2.5, linestyle='--', label=f'Original Budget: {px}x + {py}y = {I}', alpha=0.7)
 
 # Cash transfer budget
 x_cash = np.linspace(0, (I+transfer)/px, 100)
 y_cash = (I + transfer - px*x_cash) / py
-ax.plot(x_cash, y_cash, 'black', linewidth=3, label=f'Cash Transfer (${transfer})')
+ax.plot(x_cash, y_cash, colors[1], linewidth=3, label=f'Cash Transfer (${transfer})')
 
 # In-kind transfer (food stamps): forces minimum x = transfer/px
 x_min = transfer / px  # Must buy at least 4 units of x
 # Kinked budget: vertical segment + remaining budget
 x_inkind = np.linspace(x_min, (I+transfer)/px, 100)
 y_inkind = (I - px*(x_inkind - x_min)) / py
-ax.plot(x_inkind, y_inkind, 'red', linewidth=10, label=f'In-Kind Transfer (${transfer} vouchers for X)', alpha=0.35)
+ax.plot(x_inkind, y_inkind, colors[2], linewidth=10, label=f'In-Kind Transfer (${transfer} vouchers for X)', alpha=0.35)
 
 # Optimal with cash (assume Cobb-Douglas α=0.5)
 alpha = 0.3
 x_cash_opt = alpha * (I + transfer) / px
 y_cash_opt = (1-alpha) * (I + transfer) / py
-ax.plot(x_cash_opt, y_cash_opt, 'ko', markersize=10, label='Optimal with Cash', zorder=5)
+ax.plot(x_cash_opt, y_cash_opt, colors[1], markersize=10, label='Optimal with Cash', zorder=5, marker='o')
 
 # With in-kind: if x_min < x_cash_opt, then not binding, achieve same point
 # But typically for demonstration, show case where it IS binding
@@ -935,7 +937,7 @@ ax.plot(x_cash_opt, y_cash_opt, 'ko', markersize=10, label='Optimal with Cash', 
 # Optimal on in-kind budget (at the kink for demonstration)
 x_inkind_opt = x_min
 y_inkind_opt = I / py
-ax.plot(x_inkind_opt, y_inkind_opt, 'ro', markersize=10, label='Optimal with In-Kind', zorder=5)
+ax.plot(x_inkind_opt, y_inkind_opt, colors[2], markersize=10, label='Optimal with In-Kind', zorder=5, marker='o')
 
 # Indifference curves
 x_ic = np.linspace(0.5, 30, 300)
@@ -943,17 +945,17 @@ x_ic = np.linspace(0.5, 30, 300)
 # IC through cash optimum
 U_cash = x_cash_opt**alpha* y_cash_opt**(1-alpha)
 y_ic_cash = (U_cash / x_ic**alpha)**(1/(1-alpha))
-ax.plot(x_ic, y_ic_cash, 'black', linewidth=2.5, linestyle='-')
+ax.plot(x_ic, y_ic_cash, colors[1], linewidth=2.5, linestyle='-')
 
 # IC through in-kind optimum
 U_inkind = x_inkind_opt**alpha* y_inkind_opt**(1-alpha)
 y_ic_inkind = (U_inkind / x_ic**alpha) **(1/(1-alpha))
-ax.plot(x_ic, y_ic_inkind, 'r', linewidth=2.5)
+ax.plot(x_ic, y_ic_inkind, colors[2], linewidth=2.5)
 
 # Mark the kink
 # ax.plot(x_min, I/py, 'rs', markersize=10, zorder=5)
-ax.axvline(x=x_min, color='red', linestyle=':', alpha=0.5, linewidth=2)
-ax.text(x_min-0.3, 12, f'Must buy\n≥{x_min:.0f} units', fontsize=10, color='red', ha='right', fontweight='bold')
+ax.axvline(x=x_min, color=colors[2], linestyle=':', alpha=0.5, linewidth=2)
+ax.text(x_min-0.3, 12, f'Must buy\n≥{x_min:.0f} units', fontsize=10, color=colors[2], ha='right', fontweight='bold')
 
 ax.set_xlabel('Good X (e.g., Food)', fontsize=14)
 ax.set_ylabel('Good Y (Other Goods)', fontsize=14)
@@ -965,6 +967,7 @@ ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 
 # add title to plot
+ax.set_title('Cash vs In-Kind Transfers', fontsize=16)
 
 plt.tight_layout()
 plt.show()

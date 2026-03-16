@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Part 1: Competitive Markets Practice Problems – Advanced Microeconomics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6633c62d358394232bc599d39e38c5c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-40de7c3d014d17db877f778cb01e6f5d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Advanced Microeconomics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/lecture1.html"> 
+<span class="menu-text">Content</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../practice.html"> 
+<span class="menu-text">Practice</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://divbhagia.github.io/econ502/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#consumer-theory" id="toc-consumer-theory" class="nav-link active" data-scroll-target="#consumer-theory">Consumer Theory</a>
+  <ul class="collapse">
+  <li><a href="#demand-functions-indirect-utility-and-expenditure-functions" id="toc-demand-functions-indirect-utility-and-expenditure-functions" class="nav-link" data-scroll-target="#demand-functions-indirect-utility-and-expenditure-functions">1. Demand Functions, Indirect Utility, and Expenditure Functions</a></li>
+  <li><a href="#elasticity-of-substitution" id="toc-elasticity-of-substitution" class="nav-link" data-scroll-target="#elasticity-of-substitution">2. Elasticity of Substitution</a></li>
+  <li><a href="#hicksian-demand-and-compensated-price-effects" id="toc-hicksian-demand-and-compensated-price-effects" class="nav-link" data-scroll-target="#hicksian-demand-and-compensated-price-effects">3. Hicksian Demand and Compensated Price Effects</a></li>
+  <li><a href="#stone-geary-utility-textbook-ex-4.12" id="toc-stone-geary-utility-textbook-ex-4.12" class="nav-link" data-scroll-target="#stone-geary-utility-textbook-ex-4.12">4. Stone-Geary Utility (Textbook Ex 4.12)</a></li>
+  <li><a href="#cash-vs.-in-kind-transfers" id="toc-cash-vs.-in-kind-transfers" class="nav-link" data-scroll-target="#cash-vs.-in-kind-transfers">5. Cash vs.&nbsp;In-Kind Transfers</a></li>
+  <li><a href="#income-and-substitution-effects-with-perfect-complements" id="toc-income-and-substitution-effects-with-perfect-complements" class="nav-link" data-scroll-target="#income-and-substitution-effects-with-perfect-complements">6. Income and Substitution Effects with Perfect Complements</a></li>
+  </ul></li>
+  <li><a href="#firm-optimization-and-competitive-equilibrium" id="toc-firm-optimization-and-competitive-equilibrium" class="nav-link" data-scroll-target="#firm-optimization-and-competitive-equilibrium">Firm Optimization and Competitive Equilibrium</a>
+  <ul class="collapse">
+  <li><a href="#cost-minimization-and-profit-maximization" id="toc-cost-minimization-and-profit-maximization" class="nav-link" data-scroll-target="#cost-minimization-and-profit-maximization">7. Cost Minimization and Profit Maximization</a></li>
+  <li><a href="#short-run-supply-and-long-run-equilibrium" id="toc-short-run-supply-and-long-run-equilibrium" class="nav-link" data-scroll-target="#short-run-supply-and-long-run-equilibrium">8. Short-Run Supply and Long-Run Equilibrium</a></li>
+  <li><a href="#competitive-equilibrium-and-tax-incidence" id="toc-competitive-equilibrium-and-tax-incidence" class="nav-link" data-scroll-target="#competitive-equilibrium-and-tax-incidence">9. Competitive Equilibrium and Tax Incidence</a></li>
+  <li><a href="#conceptual-question-on-tax-incidence" id="toc-conceptual-question-on-tax-incidence" class="nav-link" data-scroll-target="#conceptual-question-on-tax-incidence">10. Conceptual Question on Tax Incidence</a></li>
+  </ul></li>
+  <li><a href="#exchange-economies-and-welfare-theorems" id="toc-exchange-economies-and-welfare-theorems" class="nav-link" data-scroll-target="#exchange-economies-and-welfare-theorems">Exchange Economies and Welfare Theorems</a>
+  <ul class="collapse">
+  <li><a href="#exchange-economy-and-general-equilibrium" id="toc-exchange-economy-and-general-equilibrium" class="nav-link" data-scroll-target="#exchange-economy-and-general-equilibrium">11. Exchange Economy and General Equilibrium</a></li>
+  <li><a href="#welfare-theorems-and-policy-design" id="toc-welfare-theorems-and-policy-design" class="nav-link" data-scroll-target="#welfare-theorems-and-policy-design">12. Welfare Theorems and Policy Design</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="part1-add-practice.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Part 1: Competitive Markets Practice Problems</h1>
+<p class="subtitle lead">Econ 502: Advanced Microeconomics</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="consumer-theory" class="level1">
+<h1>Consumer Theory</h1>
+<section id="demand-functions-indirect-utility-and-expenditure-functions" class="level2">
+<h2 class="anchored" data-anchor-id="demand-functions-indirect-utility-and-expenditure-functions">1. Demand Functions, Indirect Utility, and Expenditure Functions</h2>
+<p>For each of the following utility functions, given prices <span class="math inline">\(p_x\)</span> and <span class="math inline">\(p_y\)</span> and income <span class="math inline">\(m\)</span>, derive: (i) the demand functions for <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, (ii) the indirect utility function, and (iii) the expenditure function.</p>
+<ol type="a">
+<li><strong>Cobb-Douglas:</strong> <span class="math inline">\(u(x, y) = x^{\alpha} y^{\beta}\)</span>, where <span class="math inline">\(\alpha, \beta &gt; 0\)</span> and <span class="math inline">\(\alpha + \beta = 1\)</span></li>
+<li><strong>Perfect Complements (Leontief):</strong> <span class="math inline">\(u(x, y) = \min\{x, y\}\)</span></li>
+<li><strong>Perfect Substitutes:</strong> <span class="math inline">\(u(x, y) = x + y\)</span></li>
+<li><strong>Constant Elasticity of Substitution (CES):</strong> <span class="math inline">\(u(x, y) = \left(x^{\rho} + y^{\rho}\right)^{1/\rho}\)</span>, where <span class="math inline">\(\rho \neq 0\)</span></li>
+</ol>
+</section>
+<section id="elasticity-of-substitution" class="level2">
+<h2 class="anchored" data-anchor-id="elasticity-of-substitution">2. Elasticity of Substitution</h2>
+<p>The elasticity of substitution between goods <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is defined as: <span class="math display">\[\sigma = \frac{d\ln(y/x)}{d\ln(MRS_{xy})}\]</span> where <span class="math inline">\(MRS_{xy} = MU_x / MU_y\)</span> measures the rate at which the consumer is willing to trade <span class="math inline">\(x\)</span> for <span class="math inline">\(y\)</span>.</p>
+<ol type="a">
+<li><p>Show that the elasticity of substitution for the Cobb-Douglas utility function <span class="math inline">\(u(x, y) = x^\alpha y^\beta\)</span> equals 1.</p></li>
+<li><p>What is the economic intuition for <span class="math inline">\(\sigma = 1\)</span>? (Hint: think about what happens to expenditure shares when relative prices change.)</p></li>
+</ol>
+</section>
+<section id="hicksian-demand-and-compensated-price-effects" class="level2">
+<h2 class="anchored" data-anchor-id="hicksian-demand-and-compensated-price-effects">3. Hicksian Demand and Compensated Price Effects</h2>
+<p>Consider the following utility function: <span class="math display">\[u(x, y) = xy \]</span> Price of good <span class="math inline">\(x\)</span> is <span class="math inline">\(p_x=1\)</span>, price of good <span class="math inline">\(y\)</span> is <span class="math inline">\(p_y=2\)</span>, and income is <span class="math inline">\(m=10\)</span>.</p>
+<ol type="a">
+<li>What is the consumer’s optimal bundle of goods <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>?</li>
+<li>If the price of good <span class="math inline">\(y\)</span> decreases to <span class="math inline">\(p_y=1\)</span>, what is the new optimal bundle of goods <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>?</li>
+<li>Find the Hicksian demand function for good <span class="math inline">\(y\)</span> and use it to calculate the substitution effect of the price change on the quantity demanded of good <span class="math inline">\(y\)</span>. What is the income effect of the price change on the quantity demanded of good <span class="math inline">\(y\)</span>?</li>
+<li>Intuitively, explain what the substitution effect and income effect represent in this problem.</li>
+<li>How much income would the consumer need to receive or give up to be as well off as before the price change, given the new prices?</li>
+</ol>
+</section>
+<section id="stone-geary-utility-textbook-ex-4.12" class="level2">
+<h2 class="anchored" data-anchor-id="stone-geary-utility-textbook-ex-4.12">4. Stone-Geary Utility (Textbook Ex 4.12)</h2>
+<p>Suppose individuals require a certain level of food <span class="math inline">\((x)\)</span> to remain alive. Let this amount be given by <span class="math inline">\(x_0\)</span>. Once <span class="math inline">\(x_0\)</span> is purchased, individuals obtain utility from food and other goods <span class="math inline">\((y)\)</span> of the form <span class="math display">\[U(x, y) = (x - x_0)^\alpha y^\beta,\]</span> where <span class="math inline">\(\alpha + \beta = 1\)</span>.</p>
+<p><strong>a.</strong> Show that if <span class="math inline">\(I &gt; p_x x_0\)</span> then the individual will maximize utility by spending <span class="math inline">\(\alpha(I - p_x x_0) + p_x x_0\)</span> on good <span class="math inline">\(x\)</span> and <span class="math inline">\(\beta(I - p_x x_0)\)</span> on good <span class="math inline">\(y\)</span>. Interpret this result.</p>
+<p><strong>b.</strong> How do the ratios <span class="math inline">\(p_x x/I\)</span> and <span class="math inline">\(p_y y/I\)</span> change as income increases in this problem?</p>
+</section>
+<section id="cash-vs.-in-kind-transfers" class="level2">
+<h2 class="anchored" data-anchor-id="cash-vs.-in-kind-transfers">5. Cash vs.&nbsp;In-Kind Transfers</h2>
+<p>Using tools learnt in this course, can you explain why a cash transfer to a poor household may be more effective in improving their welfare than an in-kind transfer of food? Why do you think policymakers often prefer in-kind transfers to cash transfers?</p>
+</section>
+<section id="income-and-substitution-effects-with-perfect-complements" class="level2">
+<h2 class="anchored" data-anchor-id="income-and-substitution-effects-with-perfect-complements">6. Income and Substitution Effects with Perfect Complements</h2>
+<p>A consumer has preferences <span class="math inline">\(U(x, y) = \min\{x, 2y\}\)</span> and income <span class="math inline">\(I = 90\)</span>. The prices are <span class="math inline">\(p_x = 2\)</span> and <span class="math inline">\(p_y = 1\)</span>.</p>
+<ol type="a">
+<li><p>Find the optimal consumption bundle.</p></li>
+<li><p>Now suppose <span class="math inline">\(p_x\)</span> rises to <span class="math inline">\(4\)</span>. Find the new optimal bundle and the change in demand for <span class="math inline">\(x\)</span>.</p></li>
+<li><p>Decompose the change in demand for <span class="math inline">\(x\)</span> into a substitution effect and an income effect. What is special about the substitution effect for perfect complements? Explain the intuition.</p></li>
+</ol>
+</section>
+</section>
+<section id="firm-optimization-and-competitive-equilibrium" class="level1">
+<h1>Firm Optimization and Competitive Equilibrium</h1>
+<section id="cost-minimization-and-profit-maximization" class="level2">
+<h2 class="anchored" data-anchor-id="cost-minimization-and-profit-maximization">7. Cost Minimization and Profit Maximization</h2>
+<p>A competitive firm produces output using capital <span class="math inline">\(K\)</span> and labor <span class="math inline">\(L\)</span> with the production function: <span class="math display">\[Q = K^{1/3} L^{1/3}\]</span></p>
+<p>Factor prices are <span class="math inline">\(r = w = 1\)</span>.</p>
+<ol type="a">
+<li><p>What are the returns to scale of this production function? Does this mean that if the firm doubles all inputs, output more than doubles, exactly doubles, or less than doubles? How does this affect the long-run average cost curve?</p></li>
+<li><p>Set up the cost minimization problem and derive the conditional factor demands <span class="math inline">\(K^*(r, w, Q)\)</span> and <span class="math inline">\(L^*(r, w, Q)\)</span>. Use these to derive the total cost function <span class="math inline">\(C(r, w, Q)\)</span>. Evaluate <span class="math inline">\(C\)</span> at <span class="math inline">\(r = w = 1\)</span>.</p></li>
+<li><p>Derive the average cost <span class="math inline">\(AC(Q)\)</span> and marginal cost <span class="math inline">\(MC(Q)\)</span> at <span class="math inline">\(r = w = 1\)</span>. Show that <span class="math inline">\(MC &gt; AC\)</span> for all <span class="math inline">\(Q &gt; 0\)</span>. What does this imply about the shape of the average cost curve, and is it consistent with the returns to scale you found in part (a)?</p></li>
+<li><p>The output price is <span class="math inline">\(p = 6\)</span>. Find the profit-maximizing output <span class="math inline">\(Q^*\)</span>. Calculate total revenue, total cost, and profit at <span class="math inline">\(Q^*\)</span>. Does the firm earn positive, zero, or negative economic profit? Is this consistent with a long-run competitive equilibrium?</p></li>
+</ol>
+</section>
+<section id="short-run-supply-and-long-run-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="short-run-supply-and-long-run-equilibrium">8. Short-Run Supply and Long-Run Equilibrium</h2>
+<p>A competitive firm has the short-run total cost function <span class="math inline">\(C(Q) = 50 + 10Q + 2Q^2\)</span>, where <span class="math inline">\(50\)</span> is a sunk fixed cost.</p>
+<ol type="a">
+<li><p>Derive <span class="math inline">\(SMC(Q)\)</span>, <span class="math inline">\(SAC(Q)\)</span>, and <span class="math inline">\(SAVC(Q)\)</span>. Find the output level that minimizes <span class="math inline">\(SAC\)</span> and the corresponding minimum <span class="math inline">\(SAC\)</span>.</p></li>
+<li><p>What is the firm’s short-run supply curve? At what price does the firm shut down in the short run? At what price does it break even (zero economic profit)?</p></li>
+<li><p>If the market price is <span class="math inline">\(p = 50\)</span>, find the firm’s profit-maximizing output and profit.</p></li>
+<li><p>In the long run with free entry/exit of identical firms, what is the equilibrium price? If market demand is <span class="math inline">\(Q^D = 200 - 5P\)</span>, how many firms operate in the long-run equilibrium?</p></li>
+</ol>
+</section>
+<section id="competitive-equilibrium-and-tax-incidence" class="level2">
+<h2 class="anchored" data-anchor-id="competitive-equilibrium-and-tax-incidence">9. Competitive Equilibrium and Tax Incidence</h2>
+<p>The market for a good has demand and supply curves: <span class="math display">\[Q^D = 240 - 2P \qquad Q^S = 3P - 60\]</span></p>
+<ol type="a">
+<li><p>Find the competitive equilibrium price <span class="math inline">\(P^*\)</span> and quantity <span class="math inline">\(Q^*\)</span>. Calculate consumer surplus (CS), producer surplus (PS), and total welfare.</p></li>
+<li><p>The government levies a specific tax of <span class="math inline">\(t = 25\)</span> per unit on producers. Find the new equilibrium consumer price <span class="math inline">\(P^D\)</span>, producer price <span class="math inline">\(P^S = P^D - t\)</span>, and quantity <span class="math inline">\(Q_t\)</span>.</p></li>
+<li><p>Calculate the price elasticities of demand and supply at the pre-tax equilibrium. Using the tax incidence formulas <span class="math display">\[\text{Consumer share} = \frac{\varepsilon_S}{|\varepsilon_D| + \varepsilon_S} \]</span> <span class="math display">\[ \text{Producer share} = \frac{|\varepsilon_D|}{|\varepsilon_D| + \varepsilon_S}\]</span> determine what fraction of the tax burden falls on consumers versus producers. Verify by comparing <span class="math inline">\(P^D - P^*\)</span> and <span class="math inline">\(P^* - P^S\)</span> directly.</p></li>
+<li><p>Compute the tax revenue, the deadweight loss from the tax, and the changes in consumer surplus and producer surplus. Verify that <span class="math inline">\(\Delta CS + \Delta PS + \text{Tax Revenue} + \text{DWL} = 0\)</span>.</p></li>
+<li><p>Verify that the deadweight loss from the tax can be expressed as <span class="math display">\[\text{DWL} = \frac{1}{2} \cdot \frac{|\varepsilon_D| \varepsilon_S}{|\varepsilon_D| + \varepsilon_S} \cdot \frac{t^2}{p^*} \cdot Q^*\]</span> Explain intuitively how the elasticities of demand and supply affect the size of the deadweight loss.</p></li>
+</ol>
+</section>
+<section id="conceptual-question-on-tax-incidence" class="level2">
+<h2 class="anchored" data-anchor-id="conceptual-question-on-tax-incidence">10. Conceptual Question on Tax Incidence</h2>
+<p>A senator proposes taxing producers rather than consumers, arguing this shields consumers from the burden. Using the theory of tax incidence, evaluate this claim. Under what (extreme) condition would it actually be true that producers bear the entire burden?</p>
+</section>
+</section>
+<section id="exchange-economies-and-welfare-theorems" class="level1">
+<h1>Exchange Economies and Welfare Theorems</h1>
+<section id="exchange-economy-and-general-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="exchange-economy-and-general-equilibrium">11. Exchange Economy and General Equilibrium</h2>
+<p>Consider an exchange economy with two consumers (A and B) and two goods (<span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>). Their endowments are: <span class="math display">\[\omega_A = (8,\, 2), \quad \omega_B = (2,\, 8)\]</span></p>
+<p>Their utility functions are <span class="math inline">\(U_A(x_A, y_A) = x_A y_A\)</span> and <span class="math inline">\(U_B(x_B, y_B) = x_B y_B\)</span>.</p>
+<ol type="a">
+<li><p>Compute each consumer’s MRS at the endowment point. Is the initial allocation Pareto efficient? Explain intuitively which good each consumer would want to trade away and why.</p></li>
+<li><p>Derive the contract curve (the set of all Pareto efficient allocations) in the Edgeworth box. Express it as a relationship between <span class="math inline">\(x_A\)</span> and <span class="math inline">\(y_A\)</span>, and describe its geometry.</p></li>
+<li><p>Let <span class="math inline">\(p = p_x / p_y\)</span> be the price ratio. Find the competitive equilibrium: derive each consumer’s Walrasian demands, apply market clearing to find <span class="math inline">\(p^*\)</span>, and state the equilibrium allocation. Verify that the equilibrium lies on the contract curve.</p></li>
+<li><p>State the First and Second Welfare Theorems. A social planner wants to implement the Pareto efficient allocation <span class="math inline">\((x_A, y_A) = (3, 3)\)</span> instead of the laissez-faire equilibrium. Identify the lump-sum transfer (in terms of a reallocation of endowments) that, combined with competitive trading at the equilibrium price ratio, supports this allocation.</p></li>
+</ol>
+</section>
+<section id="welfare-theorems-and-policy-design" class="level2">
+<h2 class="anchored" data-anchor-id="welfare-theorems-and-policy-design">12. Welfare Theorems and Policy Design</h2>
+<p>State the First Welfare Theorem and the Second Welfare Theorem, including the assumptions each requires. What do these theorems, taken together, imply for the design of economic policy?</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>2026 Div Bhagia | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 License</a> |Made with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

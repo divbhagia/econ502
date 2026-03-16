@@ -30,41 +30,41 @@ website:
       contents:
       - section: "I. Competitive Markets"
         contents:
-          - text: "1: Consumer Preferences and Choice"
+          - text: "1. Consumer Preferences and Choice"
             file: content/lecture1.qmd
-          - text: "2: Demand Analysis and Consumer Welfare"
+          - text: "2. Demand Analysis and Consumer Welfare"
             file: content/lecture2.qmd
-          - text: "3: Production, Costs, and Firm Supply"
+          - text: "3. Production, Costs, and Firm Supply"
             file: content/lecture3.qmd
-          - text: "4: Competitive Market Equilibrium"
+          - text: "4. Competitive Market Equilibrium"
             file: content/lecture4.qmd
-          - text: "5: Welfare Analysis and Efficiency"
+          - text: "5. Welfare Analysis and Efficiency"
             file: content/lecture5.qmd
           - text: "Additional Content"
             file: content/part1-add-content.qmd
       - section: "II. Market Power"
         contents:
-          - text: "6: Market Power in Goods Markets"
+          - text: "6. Market Power in Goods Markets"
             file: content/lecture6.qmd
-          - text: "7: Market Power in Goods Markets (cont.)"
+          - text: "7. Market Power in Goods Markets (cont.)"
             file: content/lecture7.qmd
-          - text: "8: Labor Markets and Monopsony"
+          - text: "8. Labor Markets and Monopsony"
             file: content/lecture8.qmd
           - text: "Additional Content"
             file: content/part2-add-content.qmd
       - section: "III. Market Failures"
         contents:
-          - text: "9: Asymmetric Information"
+          - text: "9. Asymmetric Information"
             file: content/lecture9.qmd
-          - text: "10: Externalities and Public Goods"
+          - text: "10. Externalities and Public Goods"
             file: content/lecture10.qmd
           - text: "Additional Content"
             file: content/part3-add-content.qmd
       - section: "IV. Uncertainty and Strategy"
         contents:
-          - text: "11: Choice Under Uncertainty"
+          - text: "11. Choice Under Uncertainty"
             file: content/lecture11.qmd
-          - text: "12: Introduction to Game Theory"
+          - text: "12. Introduction to Game Theory"
             file: content/lecture12.qmd
           - text: "Additional Content"
             file: content/part4-add-content.qmd

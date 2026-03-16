@@ -11,15 +11,16 @@ format:
 
 ## Why Does the Mode of Competition Matter?
 
-| | Bertrand (homogeneous) | Cournot |
+| | Bertrand  | Cournot |
 |---|---|---|
 | Firms choose | Prices | Quantities |
 | Equilibrium $P$ | $= c$ | Between $c$ and $P^M$ |
 | Market power | None | Positive |
 | Best responses | Strategic complements | Strategic substitutes |
 | # firms for $P = c$ | 2 | $\infty$ |
+|
 
-**Same industry, same firms — drastically different predictions.** Which model is right?
+**Same industry, same firms, but drastically different predictions.** Which model is right?
 
 ---
 
@@ -60,12 +61,13 @@ where $b > d > 0$ (own-price effect dominates cross-price effect).
 **Firm 1 maximizes:**
 $$\pi_1 = (p_1 - c)(a - bp_1 + dp_2)$$
 
+**FOC:**
+$$a - 2bp_1 + dp_2 + bc = 0$$
+
+
 ---
 
 ## Differentiated Bertrand: Solution
-
-**FOC:**
-$$a - 2bp_1 + dp_2 + bc = 0$$
 
 **Best response:**
 $$p_1^*(p_2) = \frac{a + bc + dp_2}{2b}$$
@@ -74,19 +76,17 @@ $$p_1^*(p_2) = \frac{a + bc + dp_2}{2b}$$
 
 $$p^* = \frac{a + bc}{2b - d}$$
 
-Note that $p^* > c$ as long as $a + bc > (2b - d)c \rightarrow a + bc > 2bc - dc \rightarrow a > bc - dc \rightarrow a > c(b - d)$ → positive profits even with two firms.
-
-Since $d > 0$: $p^* > c$ — firms earn **positive profits**. The Bertrand paradox is resolved.
+As long as $c < a/(b-d)$, which is the highest price that yields positive demand, we have $p^* > c$. So firm makes positive profits even with two firms. The Bertrand paradox is resolved!
 
 ---
 
 ## The Role of Differentiation
 
-As $d \to 0$: each firm is a monopolist over its own product → high prices
+$$p^* = \frac{a + bc}{2b - d}$$
 
-As $d \to b$: products become near-perfect substitutes → prices approach $c$
+Note: Higher $d$ (more substitutable products) → lower $p^*$ (less market power)
 
-**More differentiation = more market power.** This is why firms invest in branding, product design, location, and quality — to escape head-to-head price competition.
+**More differentiation = more market power.** This is why firms invest in branding, product design, location, and quality to escape head-to-head price competition.
 
 ---
 

@@ -1,0 +1,67 @@
+---
+title: "Part 2: Market Power Practice Problems"
+subtitle: "Econ 502: Advanced Microeconomics"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      file: ../assets/pset-preamble.tex
+format-links: [pdf]
+---
+
+# Monopoly and Price Discrimination
+
+## 1. Monopoly Pricing
+
+A monopolist faces the inverse demand curve $P = 200 - 2Q$ and has constant marginal cost $MC = 40$ with no fixed costs.
+
+a) Find the monopolist's profit-maximizing output $Q^*_m$, price $P^*_m$, and profit $\pi$. Show your derivation of marginal revenue.
+
+b) What would be the competitive equilibrium price and quantity if this market were perfectly competitive? Calculate consumer surplus under perfect competition.
+
+c) Under monopoly, calculate consumer surplus ($CS_m$), producer surplus ($PS_m$), and the deadweight loss ($DWL$). Show the DWL as both the difference in total surplus and as a triangle formula.
+
+d) Calculate the Lerner Index at the monopoly equilibrium. Verify that it equals $1/|\varepsilon_D|$ using the price elasticity of demand at the monopoly point. Why does a profit-maximizing monopolist always operate on the elastic portion of its demand curve?
+
+## 2. Third-Degree Price Discrimination
+
+A museum can identify adult and student visitors and charge them different admission prices. The inverse demand curves are:
+$$P_A = 100 - Q_A \qquad (\text{adults}), \qquad P_S = 60 - Q_S \qquad (\text{students})$$
+The museum's marginal cost is $MC = 20$ and fixed costs are zero.
+
+a) If the museum practices third-degree price discrimination, find the profit-maximizing price and quantity in each market and the total profit.
+
+b) If the museum must charge a single uniform price to all visitors, find the profit-maximizing price, total quantity, and profit. (Hint: derive aggregate demand by horizontally summing the two demand curves.)
+
+c) Under price discrimination, compute the Lerner Index and price elasticity of demand for each market. Verify that the inverse elasticity rule holds. Which group receives the higher markup, and why?
+
+d) Compare total welfare (consumer surplus plus profit) under price discrimination and uniform pricing. Is price discrimination welfare-improving in this case? Explain the intuition.
+
+# Oligopoly
+
+## 3. Cournot Duopoly with Asymmetric Costs
+
+Two firms compete in quantities with inverse demand $P = 120 - Q$, where $Q = q_1 + q_2$. Firm 1 has $MC_1 = 20$ and firm 2 has $MC_2 = 40$.
+
+a) Derive each firm's best response function.
+
+b) Find the Nash equilibrium quantities, the market price, and each firm's profit.
+
+c) Compute the Lerner index for each firm. Which firm has more market power? Explain.
+
+d) How does total output and welfare compare to the symmetric case where both firms have $MC = 30$? What drives the difference?
+
+## 4. Bertrand Competition
+
+Two firms sell a homogeneous good with inverse demand $P = 100 - Q$. Firm 1 has marginal cost $MC_1 = 10$ and Firm 2 has marginal cost $MC_2 = 20$. Each firm simultaneously sets its price; the lower-priced firm captures the entire market (with equal splitting at equal prices).
+
+a) Show that $p_1 = p_2 = c$ (where $c$ is the common marginal cost) is a Nash equilibrium when both firms have the same cost. Demonstrate that neither firm can profitably deviate.
+
+b) Show that $p_1 = p_2 = p > c$ is **not** a Nash equilibrium when both firms have the same cost. What is the intuition?
+
+c) With the asymmetric costs given above ($MC_1 = 10$, $MC_2 = 20$), find the equilibrium prices and profits. What determines the low-cost firm's equilibrium price?
+
+d) The Bertrand model predicts that two firms are enough to achieve the competitive outcome (zero profit with identical costs). Describe two real-world departures from the Bertrand assumptions that allow firms to earn positive profits.

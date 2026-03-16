@@ -35,6 +35,7 @@ EOF
 
 # Other folders
 references/
+exams/
 
 # remove pdf for now as it's creating an issue
 /.quarto/

@@ -54,30 +54,38 @@ def main():
             timeout=15000,
         )
 
-        # Wait for MathJax to finish typesetting
+        # Wait for MathJax to finish typesetting (supports v2 and v3)
+        page.set_default_timeout(30000)
         page.evaluate(
             """
             async () => {
-                if (typeof MathJax !== 'undefined' && MathJax.startup) {
+                if (typeof MathJax === 'undefined') return;
+                if (MathJax.startup) {
+                    // MathJax 3
                     await MathJax.startup.promise;
-                    // Re-typeset all slides (print-pdf lays them all out at once)
                     if (MathJax.typesetPromise) {
                         await MathJax.typesetPromise();
                     }
+                } else if (MathJax.Hub) {
+                    // MathJax 2 — drain the typeset queue
+                    await new Promise(resolve => MathJax.Hub.Queue(resolve));
                 }
             }
         """
         )
 
-        # Verify no unprocessed math remains
-        page.wait_for_function(
-            """() => {
-                // No raw TeX delimiters should remain visible
-                const body = document.body.innerText;
-                return !body.includes('\\\\(') && !body.includes('\\\\[');
-            }""",
-            timeout=15000,
-        )
+        # Verify no unprocessed math remains (best-effort: MathJax 2 may keep
+        # preview text with visibility:hidden, which innerText still picks up)
+        try:
+            page.wait_for_function(
+                """() => {
+                    const body = document.body.innerText;
+                    return !body.includes('\\\\(') && !body.includes('\\\\[');
+                }""",
+                timeout=15000,
+            )
+        except PlaywrightError:
+            print("  Warning: math check timed out — proceeding (MathJax 2 preview text may persist)")
 
         # Hide slide numbers from the PDF
         page.evaluate(

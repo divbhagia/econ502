@@ -1,5 +1,5 @@
 ---
-title: "4: Competitive Market Equilibrium"
+title: "Lecture 4: Competitive Market Equilibrium"
 nav-sidebar: false
 format: html
 ---

@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Part 1: Competitive Markets Practice Problem Solutions – Advanced Microeconomics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6633c62d358394232bc599d39e38c5c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-40de7c3d014d17db877f778cb01e6f5d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Advanced Microeconomics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/lecture1.html"> 
+<span class="menu-text">Content</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../practice.html"> 
+<span class="menu-text">Practice</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://divbhagia.github.io/econ502/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#consumer-theory" id="toc-consumer-theory" class="nav-link active" data-scroll-target="#consumer-theory">Consumer Theory</a>
+  <ul class="collapse">
+  <li><a href="#demand-functions-indirect-utility-and-expenditure-functions" id="toc-demand-functions-indirect-utility-and-expenditure-functions" class="nav-link" data-scroll-target="#demand-functions-indirect-utility-and-expenditure-functions">1. Demand Functions, Indirect Utility, and Expenditure Functions</a>
+  <ul class="collapse">
+  <li><a href="#a-cobb-douglas" id="toc-a-cobb-douglas" class="nav-link" data-scroll-target="#a-cobb-douglas">(a) Cobb-Douglas</a></li>
+  <li><a href="#b-perfect-complements" id="toc-b-perfect-complements" class="nav-link" data-scroll-target="#b-perfect-complements">(b) Perfect Complements</a></li>
+  <li><a href="#c-perfect-substitutes" id="toc-c-perfect-substitutes" class="nav-link" data-scroll-target="#c-perfect-substitutes">(c) Perfect Substitutes</a></li>
+  <li><a href="#d-constant-elasticity-of-substitution-ces" id="toc-d-constant-elasticity-of-substitution-ces" class="nav-link" data-scroll-target="#d-constant-elasticity-of-substitution-ces">(d) Constant Elasticity of Substitution (CES)</a></li>
+  </ul></li>
+  <li><a href="#elasticity-of-substitution" id="toc-elasticity-of-substitution" class="nav-link" data-scroll-target="#elasticity-of-substitution">2. Elasticity of Substitution</a>
+  <ul class="collapse">
+  <li><a href="#a-derivation-for-cobb-douglas" id="toc-a-derivation-for-cobb-douglas" class="nav-link" data-scroll-target="#a-derivation-for-cobb-douglas">(a) Derivation for Cobb-Douglas</a></li>
+  <li><a href="#b-intuition" id="toc-b-intuition" class="nav-link" data-scroll-target="#b-intuition">(b) Intuition</a></li>
+  </ul></li>
+  <li><a href="#hicksian-demand-and-compensated-price-effects" id="toc-hicksian-demand-and-compensated-price-effects" class="nav-link" data-scroll-target="#hicksian-demand-and-compensated-price-effects">3. Hicksian Demand and Compensated Price Effects</a>
+  <ul class="collapse">
+  <li><a href="#a-optimal-bundle-at-old-prices" id="toc-a-optimal-bundle-at-old-prices" class="nav-link" data-scroll-target="#a-optimal-bundle-at-old-prices">(a) Optimal bundle at old prices</a></li>
+  <li><a href="#b-new-optimal-bundle" id="toc-b-new-optimal-bundle" class="nav-link" data-scroll-target="#b-new-optimal-bundle">(b) New optimal bundle</a></li>
+  <li><a href="#c-hicksian-demand-se-and-ie" id="toc-c-hicksian-demand-se-and-ie" class="nav-link" data-scroll-target="#c-hicksian-demand-se-and-ie">(c) Hicksian Demand, SE and IE</a></li>
+  <li><a href="#d-intuition-for-substitution-and-income-effects" id="toc-d-intuition-for-substitution-and-income-effects" class="nav-link" data-scroll-target="#d-intuition-for-substitution-and-income-effects">(d) Intuition for substitution and income effects</a></li>
+  <li><a href="#e-compensating-variation" id="toc-e-compensating-variation" class="nav-link" data-scroll-target="#e-compensating-variation">(e) Compensating variation</a></li>
+  </ul></li>
+  <li><a href="#stone-geary-utility-textbook-ex-4.12" id="toc-stone-geary-utility-textbook-ex-4.12" class="nav-link" data-scroll-target="#stone-geary-utility-textbook-ex-4.12">4. Stone-Geary Utility (Textbook Ex 4.12)</a>
+  <ul class="collapse">
+  <li><a href="#a-optimal-expenditures" id="toc-a-optimal-expenditures" class="nav-link" data-scroll-target="#a-optimal-expenditures">(a) Optimal expenditures</a></li>
+  <li><a href="#b-budget-shares-as-income-changes" id="toc-b-budget-shares-as-income-changes" class="nav-link" data-scroll-target="#b-budget-shares-as-income-changes">(b) Budget shares as income changes</a></li>
+  </ul></li>
+  <li><a href="#cash-vs.-in-kind-transfers" id="toc-cash-vs.-in-kind-transfers" class="nav-link" data-scroll-target="#cash-vs.-in-kind-transfers">5. Cash vs.&nbsp;In-Kind Transfers</a></li>
+  <li><a href="#income-and-substitution-effects-with-perfect-complements" id="toc-income-and-substitution-effects-with-perfect-complements" class="nav-link" data-scroll-target="#income-and-substitution-effects-with-perfect-complements">6. Income and Substitution Effects with Perfect Complements</a>
+  <ul class="collapse">
+  <li><a href="#a-optimal-bundle-at-old-prices-1" id="toc-a-optimal-bundle-at-old-prices-1" class="nav-link" data-scroll-target="#a-optimal-bundle-at-old-prices-1">(a) Optimal bundle at old prices</a></li>
+  <li><a href="#b-new-optimal-bundle-1" id="toc-b-new-optimal-bundle-1" class="nav-link" data-scroll-target="#b-new-optimal-bundle-1">(b) New optimal bundle</a></li>
+  <li><a href="#c-slutsky-decomposition" id="toc-c-slutsky-decomposition" class="nav-link" data-scroll-target="#c-slutsky-decomposition">(c) Slutsky decomposition</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#firm-optimization-and-competitive-equilibrium" id="toc-firm-optimization-and-competitive-equilibrium" class="nav-link" data-scroll-target="#firm-optimization-and-competitive-equilibrium">Firm Optimization and Competitive Equilibrium</a>
+  <ul class="collapse">
+  <li><a href="#cost-minimization-and-profit-maximization" id="toc-cost-minimization-and-profit-maximization" class="nav-link" data-scroll-target="#cost-minimization-and-profit-maximization">7. Cost Minimization and Profit Maximization</a>
+  <ul class="collapse">
+  <li><a href="#a-returns-to-scale" id="toc-a-returns-to-scale" class="nav-link" data-scroll-target="#a-returns-to-scale">(a) Returns to scale</a></li>
+  <li><a href="#b-conditional-factor-demands-and-cost-function" id="toc-b-conditional-factor-demands-and-cost-function" class="nav-link" data-scroll-target="#b-conditional-factor-demands-and-cost-function">(b) Conditional factor demands and cost function</a></li>
+  <li><a href="#c-average-and-marginal-cost" id="toc-c-average-and-marginal-cost" class="nav-link" data-scroll-target="#c-average-and-marginal-cost">(c) Average and marginal cost</a></li>
+  <li><a href="#d-profit-maximization-at-p-6" id="toc-d-profit-maximization-at-p-6" class="nav-link" data-scroll-target="#d-profit-maximization-at-p-6">(d) Profit maximization at <span class="math inline">\(p = 6\)</span></a></li>
+  </ul></li>
+  <li><a href="#short-run-supply-and-long-run-equilibrium" id="toc-short-run-supply-and-long-run-equilibrium" class="nav-link" data-scroll-target="#short-run-supply-and-long-run-equilibrium">8. Short-Run Supply and Long-Run Equilibrium</a>
+  <ul class="collapse">
+  <li><a href="#a-cost-curves-and-minimum-ac" id="toc-a-cost-curves-and-minimum-ac" class="nav-link" data-scroll-target="#a-cost-curves-and-minimum-ac">(a) Cost curves and minimum AC</a></li>
+  <li><a href="#b-short-run-supply-curve" id="toc-b-short-run-supply-curve" class="nav-link" data-scroll-target="#b-short-run-supply-curve">(b) Short-run supply curve</a></li>
+  <li><a href="#c-profit-at-p-50" id="toc-c-profit-at-p-50" class="nav-link" data-scroll-target="#c-profit-at-p-50">(c) Profit at <span class="math inline">\(p = 50\)</span></a></li>
+  <li><a href="#d-long-run-competitive-equilibrium" id="toc-d-long-run-competitive-equilibrium" class="nav-link" data-scroll-target="#d-long-run-competitive-equilibrium">(d) Long-run competitive equilibrium</a></li>
+  </ul></li>
+  <li><a href="#competitive-equilibrium-and-tax-incidence" id="toc-competitive-equilibrium-and-tax-incidence" class="nav-link" data-scroll-target="#competitive-equilibrium-and-tax-incidence">9. Competitive Equilibrium and Tax Incidence</a>
+  <ul class="collapse">
+  <li><a href="#a-pre-tax-equilibrium-and-welfare" id="toc-a-pre-tax-equilibrium-and-welfare" class="nav-link" data-scroll-target="#a-pre-tax-equilibrium-and-welfare">(a) Pre-tax equilibrium and welfare</a></li>
+  <li><a href="#b-equilibrium-with-tax-t-25-on-producers" id="toc-b-equilibrium-with-tax-t-25-on-producers" class="nav-link" data-scroll-target="#b-equilibrium-with-tax-t-25-on-producers">(b) Equilibrium with tax <span class="math inline">\(t = 25\)</span> on producers</a></li>
+  <li><a href="#c-tax-incidence" id="toc-c-tax-incidence" class="nav-link" data-scroll-target="#c-tax-incidence">(c) Tax incidence</a></li>
+  <li><a href="#d-tax-revenue-dwl-and-welfare-changes" id="toc-d-tax-revenue-dwl-and-welfare-changes" class="nav-link" data-scroll-target="#d-tax-revenue-dwl-and-welfare-changes">(d) Tax revenue, DWL, and welfare changes</a></li>
+  <li><a href="#e-dwl-formula-in-terms-of-elasticities" id="toc-e-dwl-formula-in-terms-of-elasticities" class="nav-link" data-scroll-target="#e-dwl-formula-in-terms-of-elasticities">(e) DWL formula in terms of elasticities</a></li>
+  </ul></li>
+  <li><a href="#conceptual-question-on-tax-incidence" id="toc-conceptual-question-on-tax-incidence" class="nav-link" data-scroll-target="#conceptual-question-on-tax-incidence">10. Conceptual Question on Tax Incidence</a></li>
+  </ul></li>
+  <li><a href="#exchange-economies-and-welfare-theorems" id="toc-exchange-economies-and-welfare-theorems" class="nav-link" data-scroll-target="#exchange-economies-and-welfare-theorems">Exchange Economies and Welfare Theorems</a>
+  <ul class="collapse">
+  <li><a href="#exchange-economy-and-general-equilibrium" id="toc-exchange-economy-and-general-equilibrium" class="nav-link" data-scroll-target="#exchange-economy-and-general-equilibrium">11. Exchange Economy and General Equilibrium</a>
+  <ul class="collapse">
+  <li><a href="#a-mrs-at-the-endowment-and-pareto-efficiency" id="toc-a-mrs-at-the-endowment-and-pareto-efficiency" class="nav-link" data-scroll-target="#a-mrs-at-the-endowment-and-pareto-efficiency">(a) MRS at the endowment and Pareto efficiency</a></li>
+  <li><a href="#b-contract-curve" id="toc-b-contract-curve" class="nav-link" data-scroll-target="#b-contract-curve">(b) Contract curve</a></li>
+  <li><a href="#c-competitive-equilibrium" id="toc-c-competitive-equilibrium" class="nav-link" data-scroll-target="#c-competitive-equilibrium">(c) Competitive equilibrium</a></li>
+  <li><a href="#d-welfare-theorems-and-lump-sum-transfer" id="toc-d-welfare-theorems-and-lump-sum-transfer" class="nav-link" data-scroll-target="#d-welfare-theorems-and-lump-sum-transfer">(d) Welfare theorems and lump-sum transfer</a></li>
+  </ul></li>
+  <li><a href="#welfare-theorems-and-policy-design" id="toc-welfare-theorems-and-policy-design" class="nav-link" data-scroll-target="#welfare-theorems-and-policy-design">12. Welfare Theorems and Policy Design</a>
+  <ul class="collapse">
+  <li><a href="#first-welfare-theorem" id="toc-first-welfare-theorem" class="nav-link" data-scroll-target="#first-welfare-theorem">First Welfare Theorem</a></li>
+  <li><a href="#second-welfare-theorem" id="toc-second-welfare-theorem" class="nav-link" data-scroll-target="#second-welfare-theorem">Second Welfare Theorem</a></li>
+  <li><a href="#policy-implications" id="toc-policy-implications" class="nav-link" data-scroll-target="#policy-implications">Policy implications</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="part1-add-solutions.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Part 1: Competitive Markets Practice Problem Solutions</h1>
+<p class="subtitle lead">Econ 502: Advanced Microeconomics</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="consumer-theory" class="level1">
+<h1>Consumer Theory</h1>
+<section id="demand-functions-indirect-utility-and-expenditure-functions" class="level2">
+<h2 class="anchored" data-anchor-id="demand-functions-indirect-utility-and-expenditure-functions">1. Demand Functions, Indirect Utility, and Expenditure Functions</h2>
+<section id="a-cobb-douglas" class="level3">
+<h3 class="anchored" data-anchor-id="a-cobb-douglas">(a) Cobb-Douglas</h3>
+<p><strong>Demand functions.</strong> Set up the Lagrangian</p>
+<p><span class="math display">\[\mathcal{L} = x^\alpha y^\beta + \lambda(m-p_x x - p_y y)\]</span></p>
+<p>The first-order conditions are: <span class="math display">\[\alpha x^{\alpha-1}y^\beta = \lambda p_x \qquad \text{and} \qquad \beta x^\alpha y^{\beta-1} = \lambda p_y\]</span></p>
+<p>Dividing these two conditions eliminates <span class="math inline">\(\lambda\)</span>: <span class="math display">\[\frac{\alpha y}{\beta x} = \frac{p_x}{p_y} \implies p_y y = \frac{\beta}{\alpha} p_x x\]</span></p>
+<p>Substituting into the budget constraint <span class="math inline">\(p_x x + p_y y = m\)</span>: <span class="math display">\[p_x x + \frac{\beta}{\alpha} p_x x = m \implies p_x x \cdot \frac{\alpha + \beta}{\alpha} = m\]</span></p>
+<p>Noting that <span class="math inline">\(\alpha + \beta = 1\)</span>: <span class="math display">\[\boxed{x^* = \frac{\alpha m}{p_x}, \qquad y^* = \frac{\beta m}{p_y}}\]</span></p>
+<p>The consumer spends a constant fraction <span class="math inline">\(\alpha\)</span> of income on good <span class="math inline">\(x\)</span> and <span class="math inline">\(\beta\)</span> on good <span class="math inline">\(y\)</span>, regardless of prices or income.</p>
+<p><strong>Indirect utility function.</strong> Substitute <span class="math inline">\(x^*\)</span> and <span class="math inline">\(y^*\)</span> into <span class="math inline">\(u\)</span> and plugging in <span class="math inline">\(\alpha + \beta = 1\)</span>: <span class="math display">\[\boxed{V(p_x, p_y, m) = \left(\frac{\alpha}{p_x}\right)^\alpha \left(\frac{\beta}{p_y}\right)^\beta m}\]</span></p>
+<p><strong>Expenditure function.</strong> Set <span class="math inline">\(V = u\)</span> and solve for <span class="math inline">\(m = e(p_x, p_y, u)\)</span>: <span class="math display">\[\boxed{e(p_x, p_y, u) = \left(\frac{p_x}{\alpha}\right)^\alpha \left(\frac{p_y}{\beta}\right)^\beta u}\]</span></p>
+<p>Note that one can also derive the expenditure function by minimizing <span class="math inline">\(p_x x + p_y y\)</span> subject to <span class="math inline">\(x^\alpha y^\beta =u\)</span> and using the uncompensated (Hicksian) demand functions. But here since we already have the indirect utility function, it is easier to use the duality relationship <span class="math inline">\(e(p_x, p_y, u) = V^{-1}(p_x, p_y, u)\)</span>.</p>
+<hr>
+</section>
+<section id="b-perfect-complements" class="level3">
+<h3 class="anchored" data-anchor-id="b-perfect-complements">(b) Perfect Complements</h3>
+<p><strong>Demand functions.</strong> The Leontief utility function <span class="math inline">\(u(x,y) = \min\{x,y\}\)</span> has no interior tangency condition, so we use optimality directly: any expenditure on <span class="math inline">\(x\)</span> beyond <span class="math inline">\(y\)</span> (or vice versa) is wasted, so at the optimum <span class="math inline">\(x = y\)</span>. Substituting into the budget constraint: <span class="math display">\[(p_x + p_y)\, x = m\]</span></p>
+<p><span class="math display">\[\boxed{x^* = y^* = \frac{m}{p_x + p_y}}\]</span></p>
+<p><strong>Indirect utility function.</strong> Since <span class="math inline">\(u = \min\{x^*, y^*\} = x^* = y^*\)</span>: <span class="math display">\[V(p_x, p_y, m) = \frac{m}{p_x + p_y}\]</span></p>
+<p><strong>Expenditure function.</strong> Setting <span class="math inline">\(V = u\)</span> and solving for <span class="math inline">\(m = e\)</span>: <span class="math display">\[e(p_x, p_y, u) = (p_x + p_y)\, u\]</span></p>
+<hr>
+</section>
+<section id="c-perfect-substitutes" class="level3">
+<h3 class="anchored" data-anchor-id="c-perfect-substitutes">(c) Perfect Substitutes</h3>
+<p><strong>Demand functions.</strong> With <span class="math inline">\(u(x,y) = x + y\)</span>, the MRS equals <span class="math inline">\(1\)</span> everywhere. The consumer buys only the cheaper good:</p>
+<ul>
+<li>If <span class="math inline">\(p_x &lt; p_y\)</span>: buy only <span class="math inline">\(x\)</span>, so <span class="math inline">\(x^* = m/p_x\)</span>, <span class="math inline">\(y^* = 0\)</span></li>
+<li>If <span class="math inline">\(p_x &gt; p_y\)</span>: buy only <span class="math inline">\(y\)</span>, so <span class="math inline">\(x^* = 0\)</span>, <span class="math inline">\(y^* = m/p_y\)</span></li>
+<li>If <span class="math inline">\(p_x = p_y\)</span>: any bundle satisfying <span class="math inline">\(p_x x + p_y y = m\)</span></li>
+</ul>
+<p><span class="math display">\[\boxed{x^* = \begin{cases} m/p_x &amp; \text{if } p_x &lt; p_y \\ 0 &amp; \text{if } p_x &gt; p_y \end{cases}, \qquad y^* = \begin{cases} 0 &amp; \text{if } p_x &lt; p_y \\ m/p_y &amp; \text{if } p_x &gt; p_y \end{cases}}\]</span></p>
+<p><strong>Indirect utility function.</strong> The consumer always achieves utility <span class="math inline">\(m\)</span> divided by the cheaper price: <span class="math display">\[V(p_x, p_y, m) = \frac{m}{\min\{p_x, p_y\}}\]</span></p>
+<p><strong>Expenditure function.</strong> The minimum cost to reach utility <span class="math inline">\(u\)</span> is to purchase <span class="math inline">\(u\)</span> units of the cheaper good: <span class="math display">\[e(p_x, p_y, u) = u \cdot \min\{p_x, p_y\}\]</span></p>
+<hr>
+</section>
+<section id="d-constant-elasticity-of-substitution-ces" class="level3">
+<h3 class="anchored" data-anchor-id="d-constant-elasticity-of-substitution-ces">(d) Constant Elasticity of Substitution (CES)</h3>
+<p>The utility function is given by: <span class="math display">\[u(x,y) = \left(x^\rho + y^\rho\right)^{1/\rho}\]</span></p>
+<p><strong>Demand functions.</strong> Since <span class="math inline">\((\cdot)^{1/\rho}\)</span> is a monotone transformation, we can equivalently maximize <span class="math inline">\(x^\rho + y^\rho\)</span>. The FOCs are: <span class="math display">\[\rho x^{\rho-1} = \lambda p_x \qquad \text{and} \qquad \rho y^{\rho-1} = \lambda p_y\]</span></p>
+<p>Dividing: <span class="math display">\[\left(\dfrac{x}{y}\right)^{\rho-1} = \dfrac{p_x}{p_y}  \implies x = y \left(\dfrac{p_x}{p_y}\right)^{1/(\rho-1)}\]</span></p>
+<p>Substituting into the budget constraint:</p>
+<p><span class="math display">\[ y\left(p_x \left(\frac{p_x}{p_y}\right)^{\frac{1}{\rho-1}} + p_y\right) = m\]</span></p>
+<p>Rearranging:</p>
+<p><span class="math display">\[y \cdot p_y^{-\frac{1}{\rho-1}} \left(p_x^{\frac{\rho}{\rho-1}} + p_y^{\frac{\rho}{\rho-1}}\right) = m\]</span></p>
+<p>Define CES exponent <span class="math inline">\(\sigma \equiv \frac{\rho}{\rho - 1}\)</span>, so that <span class="math inline">\(\sigma - 1 = \frac{1}{\rho-1}\)</span>. Then:</p>
+<p><span class="math display">\[\boxed{x^* = \frac{p_x^{\sigma-1}}{p_x^\sigma + p_y^\sigma}\, m, \qquad y^* = \frac{p_y^{\sigma-1}}{p_x^\sigma + p_y^\sigma}\, m}\]</span></p>
+<p><strong>Indirect utility function.</strong> Compute <span class="math inline">\((x^*)^\rho + (y^*)^\rho\)</span>. Since <span class="math inline">\(\rho(\sigma - 1) = \rho \cdot \frac{1}{\rho-1} = \sigma\)</span>: <span class="math display">\[(x^*)^\rho + (y^*)^\rho = \frac{m^\rho\left(p_x^\sigma + p_y^\sigma\right)}{(p_x^\sigma + p_y^\sigma)^\rho} = m^\rho\, (p_x^\sigma + p_y^\sigma)^{1-\rho}\]</span></p>
+<p>Therefore: <span class="math display">\[V = \left[m^\rho (p_x^\sigma + p_y^\sigma)^{1-\rho}\right]^{1/\rho} = m \cdot (p_x^\sigma + p_y^\sigma)^{(1-\rho)/\rho}\]</span></p>
+<p>By definition of <span class="math inline">\(\sigma\)</span>, we have <span class="math inline">\((1-\rho)/\rho = -1/\sigma\)</span>, giving the elegant result: <span class="math display">\[V(p_x, p_y, m) = \frac{m}{\left(p_x^\sigma + p_y^\sigma\right)^{1/\sigma}}\]</span></p>
+<p><strong>Expenditure function.</strong> Setting <span class="math inline">\(V = u\)</span> and solving for <span class="math inline">\(m = e\)</span>: <span class="math display">\[e(p_x, p_y, u) = u \cdot \left(p_x^\sigma + p_y^\sigma\right)^{1/\sigma}, \qquad \text{where } \sigma = \frac{\rho}{\rho-1}\]</span></p>
+<p>The price aggregator <span class="math inline">\((p_x^\sigma + p_y^\sigma)^{1/\sigma}\)</span> is itself a CES function of prices. This duality between the utility function and the expenditure function is a hallmark of the CES family.</p>
+<hr>
+</section>
+</section>
+<section id="elasticity-of-substitution" class="level2">
+<h2 class="anchored" data-anchor-id="elasticity-of-substitution">2. Elasticity of Substitution</h2>
+<section id="a-derivation-for-cobb-douglas" class="level3">
+<h3 class="anchored" data-anchor-id="a-derivation-for-cobb-douglas">(a) Derivation for Cobb-Douglas</h3>
+<p>For <span class="math inline">\(u(x, y) = x^\alpha y^\beta\)</span>, the marginal utilities are <span class="math inline">\(MU_x = \alpha x^{\alpha-1} y^\beta\)</span> and <span class="math inline">\(MU_y = \beta x^\alpha y^{\beta-1}\)</span>, so: <span class="math display">\[MRS_{xy} = \frac{MU_x}{MU_y} = \frac{\alpha}{\beta} \cdot \frac{y}{x}\]</span></p>
+<p>Take logs of both sides: <span class="math display">\[\ln(MRS) = \ln\!\left(\frac{\alpha}{\beta}\right) + \ln\!\left(\frac{y}{x}\right)\]</span></p>
+<p>Differentiating: <span class="math display">\[\sigma = \frac{d\ln(y/x)}{d\ln(MRS)} = 1 \qquad \boxed{\sigma = 1}\]</span></p>
+</section>
+<section id="b-intuition" class="level3">
+<h3 class="anchored" data-anchor-id="b-intuition">(b) Intuition</h3>
+<p><span class="math inline">\(\sigma = 1\)</span> means that a 1% increase in <span class="math inline">\(MRS_{xy}\)</span> (equivalently, a 1% increase in the relative price <span class="math inline">\(p_x/p_y\)</span> at the optimum) leads to exactly a 1% decrease in <span class="math inline">\(y/x\)</span>. Consumers substitute away from the more expensive good in exact proportion to the price change.</p>
+<p>A direct implication is that <strong>expenditure shares are constant</strong>: with Cobb-Douglas preferences the consumer always spends fraction <span class="math inline">\(\alpha\)</span> of income on <span class="math inline">\(x\)</span> and fraction <span class="math inline">\(\beta\)</span> on <span class="math inline">\(y\)</span>, regardless of prices. When <span class="math inline">\(p_x\)</span> rises, the consumer buys less <span class="math inline">\(x\)</span> in exactly the right proportion so that total spending on <span class="math inline">\(x\)</span> stays at <span class="math inline">\(\alpha m\)</span>.</p>
+<hr>
+</section>
+</section>
+<section id="hicksian-demand-and-compensated-price-effects" class="level2">
+<h2 class="anchored" data-anchor-id="hicksian-demand-and-compensated-price-effects">3. Hicksian Demand and Compensated Price Effects</h2>
+<p>The utility function is <span class="math inline">\(u(x,y)=xy\)</span>.</p>
+<section id="a-optimal-bundle-at-old-prices" class="level3">
+<h3 class="anchored" data-anchor-id="a-optimal-bundle-at-old-prices">(a) Optimal bundle at old prices</h3>
+<p>The Lagrangian is <span class="math display">\[\mathcal{L} = xy + \lambda(m - p_x x - p_y y)\]</span></p>
+<p>The first-order conditions are: <span class="math display">\[y = \lambda p_x \qquad \text{and} \qquad x = \lambda p_y\]</span></p>
+<p>Dividing: <span class="math inline">\(y/x = p_x/p_y\)</span>, which gives <span class="math inline">\(p_x x = p_y y\)</span>, so the consumer spends equally on both goods. Substituting into the budget constraint <span class="math inline">\(p_x x + p_y y = m\)</span>: <span class="math display">\[2p_x x = m \implies x^* = \frac{m}{2p_x}, \qquad y^* = \frac{m}{2p_y}\]</span></p>
+<p>At <span class="math inline">\(p_x=1\)</span>, <span class="math inline">\(p_y=2\)</span>, <span class="math inline">\(m=10\)</span>: <span class="math display">\[\boxed{x^* = \frac{10}{2(1)} = 5, \qquad y^* = \frac{10}{2(2)} = 2.5}\]</span></p>
+</section>
+<section id="b-new-optimal-bundle" class="level3">
+<h3 class="anchored" data-anchor-id="b-new-optimal-bundle">(b) New optimal bundle</h3>
+<p>At new prices <span class="math inline">\(p_x=1\)</span> and <span class="math inline">\(p_y=1\)</span>, using the same demand functions: <span class="math display">\[\boxed{x^* = \frac{10}{2(1)} = 5, \qquad y^* = \frac{10}{2(1)} = 5}\]</span></p>
+<p>The total change in demand for good <span class="math inline">\(y\)</span> is <span class="math inline">\(\Delta y = 5 - 2.5 = 2.5\)</span>.</p>
+</section>
+<section id="c-hicksian-demand-se-and-ie" class="level3">
+<h3 class="anchored" data-anchor-id="c-hicksian-demand-se-and-ie">(c) Hicksian Demand, SE and IE</h3>
+<p><strong>Hicksian demand.</strong> Lagrangian for the expenditure minimization problem is:</p>
+<p><span class="math display">\[ \mathcal{L} = p_x x + p_y y + \mu(u - xy) \]</span></p>
+<p>The FOCs imply <span class="math inline">\(p_x = \mu y\)</span> and <span class="math inline">\(p_y = \mu x\)</span>, so again <span class="math inline">\(p_x x = p_y y\)</span>. Substituting <span class="math inline">\(x = (p_y/p_x)y\)</span> into the constraint <span class="math inline">\(xy = u\)</span>: <span class="math display">\[\frac{p_y}{p_x} y^2 = u \implies y_h(p_x, p_y, u) = \sqrt{\frac{p_x\, u}{p_y}}\]</span></p>
+<p>Similarly, <span class="math inline">\(x_h(p_x, p_y, u) = \sqrt{\frac{p_y\, u}{p_x}}\)</span>.</p>
+<p>The initial utility level is <span class="math inline">\(u_0 = x^* y^* = 5 \times 2.5 = 12.5\)</span>.</p>
+<p>Note that <span class="math inline">\(x_h(1, 2, 12.5) = 5\)</span> and <span class="math inline">\(y_h(1, 2, 12.5) = 2.5\)</span>, so the Hicksian demand at the original prices and utility level coincides with the Marshallian demand.</p>
+<p><strong>Substitution effect.</strong> Hold utility fixed at <span class="math inline">\(u_0 = 12.5\)</span> and change <span class="math inline">\(p_y\)</span> from 2 to 1: <span class="math display">\[\text{SE} = y_h(1,\,1,\,12.5) - y_h(1,\,2,\,12.5) = \sqrt{12.5} - 2.5  \approx 1.04\]</span></p>
+<p>Holding utility fixed isolates the substitution effect because the consumer is compensated to be just as well off as before, so any change in demand is due to the change in relative prices.</p>
+<p><strong>Income effect.</strong> The remainder of the total change: <span class="math display">\[\text{IE} = \Delta y - \text{SE} = 2.5 - 1.04 = 1.46\]</span></p>
+<p>Both effects are positive because good <span class="math inline">\(y\)</span> is a normal good and the price decrease makes the consumer richer. The income effect here is larger than the substitution effect.</p>
+<p>See graph below for a visual representation of the substitution and income effects.</p>
+<div id="172166b7" class="cell" data-fig-height="5" data-fig-width="6.5" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="part1-add-solutions_files/figure-html/cell-2-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="612" height="469"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="d-intuition-for-substitution-and-income-effects" class="level3">
+<h3 class="anchored" data-anchor-id="d-intuition-for-substitution-and-income-effects">(d) Intuition for substitution and income effects</h3>
+<p>When the price of good <span class="math inline">\(y\)</span> falls, in this case it’s demand increases from 2.5 to 5. There are two reasons for this increase:</p>
+<ol type="1">
+<li><strong>Substitution effect:</strong> The price of good <span class="math inline">\(y\)</span> has fallen relative to good <span class="math inline">\(x\)</span>, so the consumer substitutes away from <span class="math inline">\(x\)</span> and toward <span class="math inline">\(y\)</span>.</li>
+<li><strong>Income effect:</strong> The decrease in the price of good <span class="math inline">\(y\)</span> effectively increases the consumer’s real income, allowing them to afford more of both goods.</li>
+</ol>
+</section>
+<section id="e-compensating-variation" class="level3">
+<h3 class="anchored" data-anchor-id="e-compensating-variation">(e) Compensating variation</h3>
+<p>We need to find the expenditure change that would make the consumer just as well off as before the price change, given the new prices. Given the Hicksian demand functions from part (c), the expenditure function is: <span class="math display">\[e(p_x, p_y, u) = p_x x_h(p_x, p_y, u) + p_y y_h(p_x, p_y, u) = 2\sqrt{p_x\, p_y\, u}\]</span></p>
+<p>Remember the original utility <span class="math inline">\(u_0 = 12.5\)</span>. At the new prices <span class="math inline">\((p_x=1,\, p_y=1)\)</span>: <span class="math display">\[e(1,\, 1,\, 12.5) = 2\sqrt{1 \cdot 1 \cdot 12.5} = 2\sqrt{12.5} = 5\sqrt{2} \approx 7.07\]</span></p>
+<p>Since their actual income is <span class="math inline">\(m=10\)</span>, the consumer could <strong>give up</strong> <span class="math display">\[\text{CV} = m - e(1,\,1,\,u_0) = 10 - 5\sqrt{2} \approx \$2.93\]</span></p>
+<p>and still be exactly as well off as before the price change. This quantity, <span class="math inline">\(\text{CV} = \approx \$2.93\)</span>, is the <strong>compensating variation</strong>, which measures the welfare gain from the price decrease in dollar terms.</p>
+<hr>
+</section>
+</section>
+<section id="stone-geary-utility-textbook-ex-4.12" class="level2">
+<h2 class="anchored" data-anchor-id="stone-geary-utility-textbook-ex-4.12">4. Stone-Geary Utility (Textbook Ex 4.12)</h2>
+<section id="a-optimal-expenditures" class="level3">
+<h3 class="anchored" data-anchor-id="a-optimal-expenditures">(a) Optimal expenditures</h3>
+<p>Let <span class="math inline">\(\tilde{x} = x - x_0\)</span> denote consumption above the subsistence level. Substituting into the budget constraint <span class="math inline">\(p_x x + p_y y = I\)</span>: <span class="math display">\[p_x(\tilde{x} + x_0) + p_y y = I \implies p_x \tilde{x} + p_y y = I - p_x x_0 \equiv \tilde{I}\]</span></p>
+<p>where <span class="math inline">\(\tilde{I} = I - p_x x_0 &gt; 0\)</span> is <strong>supernumerary income</strong> (income above the cost of subsistence). The problem now is to maximize <span class="math inline">\(\tilde{x}^\alpha y^\beta\)</span> subject to <span class="math inline">\(p_x \tilde{x} + p_y y = \tilde{I}\)</span>, which is exactly the Cobb-Douglas problem. By the result from problem 1(a): <span class="math display">\[\tilde{x}^* = \frac{\alpha \tilde{I}}{p_x}, \qquad y^* = \frac{\beta \tilde{I}}{p_y}\]</span></p>
+<p>Converting back to <span class="math inline">\(x^* = x_0 + \tilde{x}^*\)</span>, expenditures are: <span class="math display">\[\boxed{p_x x^* = p_x x_0 + \alpha(I - p_x x_0), \qquad p_y y^* = \beta(I - p_x x_0)}\]</span></p>
+<p><strong>Interpretation.</strong> The consumer first sets aside <span class="math inline">\(p_x x_0\)</span> to meet subsistence needs. The remaining supernumerary income <span class="math inline">\(\tilde{I} = I - p_x x_0\)</span> is then allocated in fixed proportions <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, just as in the standard Cobb-Douglas case.</p>
+</section>
+<section id="b-budget-shares-as-income-changes" class="level3">
+<h3 class="anchored" data-anchor-id="b-budget-shares-as-income-changes">(b) Budget shares as income changes</h3>
+<p>Compute the expenditure shares: <span class="math display">\[\frac{p_x x^*}{I} = \frac{p_x x_0 + \alpha(I - p_x x_0)}{I} = \alpha + \frac{(1-\alpha)\,p_x x_0}{I} = \alpha + \frac{\beta\, p_x x_0}{I}\]</span></p>
+<p><span class="math display">\[\frac{p_y y^*}{I} = \frac{\beta(I - p_x x_0)}{I} = \beta - \frac{\beta\, p_x x_0}{I}\]</span></p>
+<p>As income <span class="math inline">\(I\)</span> increases, the second term in each expression shrinks toward zero, so:</p>
+<ul>
+<li>The share spent on <span class="math inline">\(x\)</span> <strong>falls</strong> toward <span class="math inline">\(\alpha\)</span></li>
+<li>The share spent on <span class="math inline">\(y\)</span> <strong>rises</strong> toward <span class="math inline">\(\beta\)</span></li>
+</ul>
+<p>This is a form of <strong>Engel’s Law</strong>: the budget share of a good with a subsistence requirement (a “necessity”) declines with income, while the share of income allocated to other goods rises. At high incomes the Stone-Geary system converges to the simple Cobb-Douglas case.</p>
+<hr>
+</section>
+</section>
+<section id="cash-vs.-in-kind-transfers" class="level2">
+<h2 class="anchored" data-anchor-id="cash-vs.-in-kind-transfers">5. Cash vs.&nbsp;In-Kind Transfers</h2>
+<p><strong>Why cash is at least as good as in-kind transfers.</strong> Consider a household with income <span class="math inline">\(I\)</span> that receives a transfer of <span class="math inline">\(T\)</span> dollars. Under a <strong>cash transfer</strong>, the budget constraint shifts outward uniformly: the household can spend the extra <span class="math inline">\(T\)</span> on any combination of food (<span class="math inline">\(x\)</span>) and other goods (<span class="math inline">\(y\)</span>). Under an <strong>in-kind food transfer</strong> (e.g., SNAP), the household receives vouchers worth <span class="math inline">\(T\)</span> that can only be spent on food, requiring consumption of at least <span class="math inline">\(T/p_x\)</span> units of <span class="math inline">\(x\)</span>.</p>
+<p>Two cases arise:</p>
+<ol type="1">
+<li><p><strong>Transfer does not bind.</strong> If the household would voluntarily spend at least <span class="math inline">\(T\)</span> on food even with a cash transfer, the in-kind constraint is not binding. The household reaches the same optimum under both programs. Cash and in-kind are <strong>equivalent</strong>.</p></li>
+<li><p><strong>Transfer binds.</strong> If the household would prefer to spend less than <span class="math inline">\(T\)</span> on food, the in-kind transfer forces them to a kink point on the budget set. That kink lies on a <strong>lower indifference curve</strong> than the cash optimum. Cash is therefore <strong>strictly preferred</strong>.</p></li>
+</ol>
+<p>In both cases, cash is at least as good as in-kind. This is an application of the <strong>Lump Sum Principle</strong>: unconditional transfers maximize consumer welfare for a given government expenditure, because they leave households free to allocate resources optimally.</p>
+<p><strong>Why policymakers still use in-kind transfers.</strong></p>
+<ul>
+<li><strong>Paternalism.</strong> Society may value recipients consuming food or housing more than recipients themselves do (e.g., child nutrition, health externalities).</li>
+<li><strong>Political economy.</strong> In-kind transfers are easier to justify to taxpayers who want assurance that aid goes toward necessities.</li>
+<li><strong>Targeting / self-selection.</strong> Accepting food vouchers (rather than cash) may be less attractive to higher-income households, helping to screen recipients and reduce leakage to the non-poor.</li>
+<li><strong>Price and market effects.</strong> Large-scale food voucher programs can support agricultural incomes, creating political constituencies that sustain the program.</li>
+</ul>
+<p>See the figure on slides for lecture 1, which shows the <strong>binding case</strong>: the household’s preferred cash optimum requires less food than the in-kind transfer mandates, so the in-kind constraint forces the household to the kink, which lies on a lower indifference curve.</p>
+<hr>
+</section>
+<section id="income-and-substitution-effects-with-perfect-complements" class="level2">
+<h2 class="anchored" data-anchor-id="income-and-substitution-effects-with-perfect-complements">6. Income and Substitution Effects with Perfect Complements</h2>
+<section id="a-optimal-bundle-at-old-prices-1" class="level3">
+<h3 class="anchored" data-anchor-id="a-optimal-bundle-at-old-prices-1">(a) Optimal bundle at old prices</h3>
+<p>For <span class="math inline">\(U = \min\{x, 2y\}\)</span>, utility is maximized at the kink where both arguments are equal: <span class="math inline">\(x = 2y\)</span>. Substituting into the budget constraint <span class="math inline">\(2x + y = 90\)</span>: <span class="math display">\[2(2y) + y = 5y = 90 \implies y^* = 18, \quad x^* = 36\]</span></p>
+</section>
+<section id="b-new-optimal-bundle-1" class="level3">
+<h3 class="anchored" data-anchor-id="b-new-optimal-bundle-1">(b) New optimal bundle</h3>
+<p>The kink condition <span class="math inline">\(x = 2y\)</span> still holds at the new prices. Substituting into the new budget constraint <span class="math inline">\(4x + y = 90\)</span>: <span class="math display">\[4(2y) + y = 9y = 90 \implies y^* = 10, \quad x^* = 20\]</span></p>
+<p>The change in demand for <span class="math inline">\(x\)</span>: <span class="math display">\[\Delta x = 20 - 36 = -16\]</span></p>
+</section>
+<section id="c-slutsky-decomposition" class="level3">
+<h3 class="anchored" data-anchor-id="c-slutsky-decomposition">(c) Slutsky decomposition</h3>
+<p><strong>Hicksian demand.</strong> The initial utility level is <span class="math inline">\(u_0 = \min\{36,\, 2\times 18\} = 36\)</span>. To reach <span class="math inline">\(u_0\)</span> at minimum cost, the consumer must satisfy the kink condition <span class="math inline">\(x = 2y\)</span> and <span class="math inline">\(\min\{x, 2y\} = u_0\)</span>, giving: <span class="math display">\[x_h(p_x, p_y, u) = u, \qquad y_h(p_x, p_y, u) = \frac{u}{2}\]</span></p>
+<p>The Hicksian demands are <strong>independent of prices</strong>, which is typical of perfect complements.</p>
+<p><strong>Substitution effect.</strong> Since Hicksian demands do not change with prices: <span class="math display">\[\text{SE} = x_h(4,\,1,\,36) - x_h(2,\,1,\,36) = 36 - 36 = \boxed{0}\]</span></p>
+<p><strong>Income effect.</strong> The entire change in demand is an income effect: <span class="math display">\[\text{IE} = \Delta x - \text{SE} = -16\]</span></p>
+<p><strong>Intuition.</strong> Perfect complements are always consumed in a fixed ratio (<span class="math inline">\(x = 2y\)</span>) regardless of relative prices. A change in the price of <span class="math inline">\(x\)</span> cannot induce substitution toward <span class="math inline">\(y\)</span> because the two goods are useless without each other. The entire demand response comes from the reduction in real purchasing power (income effect).</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="firm-optimization-and-competitive-equilibrium" class="level1">
+<h1>Firm Optimization and Competitive Equilibrium</h1>
+<section id="cost-minimization-and-profit-maximization" class="level2">
+<h2 class="anchored" data-anchor-id="cost-minimization-and-profit-maximization">7. Cost Minimization and Profit Maximization</h2>
+<section id="a-returns-to-scale" class="level3">
+<h3 class="anchored" data-anchor-id="a-returns-to-scale">(a) Returns to scale</h3>
+<p>Check how output scales when all inputs are multiplied by <span class="math inline">\(t &gt; 0\)</span>: <span class="math display">\[f(tK, tL) = (tK)^{1/3}(tL)^{1/3} = t^{2/3}\,K^{1/3}L^{1/3} = t^{2/3}\,Q\]</span></p>
+<p>Since the scale factor <span class="math inline">\(2/3 &lt; 1\)</span>, the technology exhibits <strong>decreasing returns to scale (DRS)</strong>. Doubling inputs (<span class="math inline">\(t=2\)</span>) increases output by a factor of <span class="math inline">\(2^{2/3} \approx 1.59\)</span>, which is less than double. With DRS, larger output requires proportionally more inputs, so the long-run average cost curve should be <strong>upward sloping</strong>.</p>
+</section>
+<section id="b-conditional-factor-demands-and-cost-function" class="level3">
+<h3 class="anchored" data-anchor-id="b-conditional-factor-demands-and-cost-function">(b) Conditional factor demands and cost function</h3>
+<p><strong>Cost minimization:</strong> <span class="math inline">\(\min_{K,L}\; rK + wL \quad \text{s.t.} \quad K^{1/3}L^{1/3} = Q\)</span></p>
+<p>Setting up the Lagrangian: <span class="math display">\[\mathcal{L} = rK + wL + \lambda(Q - K^{1/3}L^{1/3})\]</span></p>
+<p>FOCs: <span class="math display">\[r = \frac{\lambda}{3}K^{-2/3}L^{1/3}, \qquad w = \frac{\lambda}{3}K^{1/3}L^{-2/3}\]</span></p>
+<p>Dividing: <span class="math inline">\(r/w = L/K\)</span>, so <span class="math inline">\(K = (w/r)L\)</span>. Substituting into the constraint: <span class="math display">\[\left(\frac{w}{r}\right)^{1/3} L^{2/3} = Q \implies L^{2/3} = Q\left(\frac{r}{w}\right)^{1/3}\]</span></p>
+<p><span class="math display">\[\boxed{L^*(r,w,Q) = Q^{3/2}\left(\frac{r}{w}\right)^{1/2}, \qquad K^*(r,w,Q) = Q^{3/2}\left(\frac{w}{r}\right)^{1/2}}\]</span></p>
+<p>The cost function is: <span class="math display">\[C(r,w,Q) = rK^* + wL^* = r\cdot Q^{3/2}\!\left(\frac{w}{r}\right)^{1/2} + w\cdot Q^{3/2}\!\left(\frac{r}{w}\right)^{1/2} = 2\sqrt{rw}\; Q^{3/2}\]</span></p>
+<p>At <span class="math inline">\(r = w = 1\)</span>: <span class="math display">\[\boxed{C(Q) = 2Q^{3/2}}\]</span></p>
+</section>
+<section id="c-average-and-marginal-cost" class="level3">
+<h3 class="anchored" data-anchor-id="c-average-and-marginal-cost">(c) Average and marginal cost</h3>
+<p><span class="math display">\[AC(Q) = \frac{C}{Q} = 2Q^{1/2}, \qquad MC(Q) = C'(Q) = 3Q^{1/2}\]</span></p>
+<p><strong>MC &gt; AC for all <span class="math inline">\(Q &gt; 0\)</span>:</strong> <span class="math inline">\(3Q^{1/2} &gt; 2Q^{1/2}\)</span> since <span class="math inline">\(3 &gt; 2\)</span>. Because <span class="math inline">\(MC &gt; AC\)</span>, each additional unit costs more than the average, pulling the average up, so AC is <strong>strictly increasing</strong>. This is consistent with DRS: expanding output becomes increasingly costly per unit.</p>
+</section>
+<section id="d-profit-maximization-at-p-6" class="level3">
+<h3 class="anchored" data-anchor-id="d-profit-maximization-at-p-6">(d) Profit maximization at <span class="math inline">\(p = 6\)</span></h3>
+<p>Set <span class="math inline">\(p = MC\)</span>: <span class="math display">\[6 = 3Q^{1/2} \implies Q^{1/2} = 2 \implies Q^* = 4\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Total revenue</td>
+<td><span class="math inline">\(6 \times 4 = 24\)</span></td>
+</tr>
+<tr class="even">
+<td>Total cost</td>
+<td><span class="math inline">\(2(4)^{3/2} = 2\times 8 = 16\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Profit</strong></td>
+<td><span class="math inline">\(\mathbf{24 - 16 = 8 &gt; 0}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The firm earns <strong>positive profit</strong> <span class="math inline">\(\pi = 8 &gt; 0\)</span>.</p>
+<p><strong>Is this consistent with long-run competitive equilibrium?</strong> With DRS, <span class="math inline">\(MC &gt; AC\)</span> at every <span class="math inline">\(Q &gt; 0\)</span>, so <span class="math inline">\(\pi &gt; 0\)</span> at any <span class="math inline">\(p &gt; 0\)</span> so there is no price at which a firm with this technology breaks even at positive output. This creates an apparent conundrum: if we invoke free entry of identical firms, positive profits attract entry indefinitely, and no finite equilibrium exists.</p>
+<p>The standard resolution is that <strong>DRS reflects an implicit fixed factor</strong>, for example, a plot of land, a license, or an entrepreneur’s scarce talent that is not explicitly priced in the model. If <span class="math inline">\(Q = K^{1/3}L^{1/3}M^{1/3}\)</span> with <span class="math inline">\(M\)</span> fixed at <span class="math inline">\(\bar{M}=1\)</span>, the technology is actually CRS in all three inputs, and the apparent “profit” is simply the <strong>market rent</strong> on the fixed factor <span class="math inline">\(M\)</span>. Once we include the opportunity cost of <span class="math inline">\(M\)</span> at its competitive rental rate in total costs, economic profit is zero and the equilibrium is consistent with free entry.</p>
+<hr>
+</section>
+</section>
+<section id="short-run-supply-and-long-run-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="short-run-supply-and-long-run-equilibrium">8. Short-Run Supply and Long-Run Equilibrium</h2>
+<section id="a-cost-curves-and-minimum-ac" class="level3">
+<h3 class="anchored" data-anchor-id="a-cost-curves-and-minimum-ac">(a) Cost curves and minimum AC</h3>
+<p>We are given the short-run cost function: <span class="math display">\[C(Q) = 50 + 10Q + 2Q^2\]</span></p>
+<p>where <span class="math inline">\(50\)</span> is fixed cost (FC) and <span class="math inline">\(10Q + 2Q^2\)</span> is variable cost (VC).</p>
+<p>Short run marginal cost:</p>
+<p><span class="math display">\[SMC(Q) = C'(Q) = 10 + 4Q\]</span></p>
+<p>Average cost: <span class="math display">\[SAC(Q) = \frac{C(Q)}{Q} = \frac{50}{Q} + 10 + 2Q\]</span></p>
+<p>Average variable cost: <span class="math display">\[SAVC(Q) = \frac{10Q + 2Q^2}{Q} = 10 + 2Q\]</span></p>
+<p>To minimize <span class="math inline">\(SAC\)</span>, set <span class="math inline">\(\frac{d(SAC)}{dQ} = 0\)</span>: <span class="math display">\[-\frac{50}{Q^2} + 2 = 0 \implies Q^2 = 25 \implies Q_{\min} = 5\]</span> <span class="math display">\[\text{min}\;SAC = \frac{50}{5} + 10 + 2(5) = 10 + 10 + 10 = \boxed{30}\]</span></p>
+<p>Verify: <span class="math inline">\(SMC(5) = 10 + 4(5) = 30 = SAC(5)\)</span> ✓</p>
+</section>
+<section id="b-short-run-supply-curve" class="level3">
+<h3 class="anchored" data-anchor-id="b-short-run-supply-curve">(b) Short-run supply curve</h3>
+<p>The firm shuts down if <span class="math inline">\(p &lt; \min SAVC\)</span>. Since <span class="math inline">\(SAVC = 10 + 2Q\)</span>, which is minimized at <span class="math inline">\(Q = 0\)</span> giving <span class="math inline">\(\min SAVC = 10\)</span>, the firm shuts down if <span class="math inline">\(p &lt; 10\)</span>.</p>
+<p>For <span class="math inline">\(p \geq 10\)</span>, set <span class="math inline">\(p = SMC = 10 + 4Q\)</span> and solve: <span class="math display">\[\boxed{Q^s(p) = \frac{p - 10}{4}, \quad p \geq 10; \qquad Q^s(p) = 0, \quad p &lt; 10}\]</span></p>
+<p>The firm <strong>breaks even</strong> (zero economic profit) at the minimum of <span class="math inline">\(SAC\)</span>: <span class="math display">\[p_{\text{break-even}} = \min\;SAC = 30\]</span></p>
+</section>
+<section id="c-profit-at-p-50" class="level3">
+<h3 class="anchored" data-anchor-id="c-profit-at-p-50">(c) Profit at <span class="math inline">\(p = 50\)</span></h3>
+<p><span class="math display">\[Q^* = \frac{50 - 10}{4} = 10\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Total revenue</td>
+<td><span class="math inline">\(50 \times 10 = 500\)</span></td>
+</tr>
+<tr class="even">
+<td>Total cost</td>
+<td><span class="math inline">\(50 + 10(10) + 2(100) = 350\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Profit</strong></td>
+<td><span class="math inline">\(\mathbf{500 - 350 = 150}\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="d-long-run-competitive-equilibrium" class="level3">
+<h3 class="anchored" data-anchor-id="d-long-run-competitive-equilibrium">(d) Long-run competitive equilibrium</h3>
+<p>With free entry and exit of identical firms, long-run equilibrium requires zero profit, so: <span class="math display">\[p^* = \min\;SAC = 30\]</span></p>
+<p>At <span class="math inline">\(p^* = 30\)</span>, each firm produces <span class="math inline">\(Q_{\text{firm}} = (30-10)/4 = 5\)</span>. Market demand at this price: <span class="math display">\[Q^D = 200 - 5(30) = 50\]</span></p>
+<p>Number of firms in equilibrium: <span class="math display">\[N^* = \frac{Q^D}{Q_{\text{firm}}} = \frac{50}{5} = \boxed{10 \text{ firms}}\]</span></p>
+<hr>
+</section>
+</section>
+<section id="competitive-equilibrium-and-tax-incidence" class="level2">
+<h2 class="anchored" data-anchor-id="competitive-equilibrium-and-tax-incidence">9. Competitive Equilibrium and Tax Incidence</h2>
+<section id="a-pre-tax-equilibrium-and-welfare" class="level3">
+<h3 class="anchored" data-anchor-id="a-pre-tax-equilibrium-and-welfare">(a) Pre-tax equilibrium and welfare</h3>
+<p>Set <span class="math inline">\(Q^D = Q^S\)</span>: <span class="math display">\[240 - 2P = 3P - 60 \implies 300 = 5P \implies P^* = 60, \quad Q^* = 120\]</span></p>
+<p>The demand curve hits the price axis at <span class="math inline">\(P = 120\)</span> (set <span class="math inline">\(Q^D = 0\)</span>); the supply curve hits at <span class="math inline">\(P = 20\)</span> (set <span class="math inline">\(Q^S = 0\)</span>).</p>
+<p><span class="math display">\[CS = \frac{1}{2}(120 - 60)(120) = \frac{1}{2}(60)(120) = 3600\]</span> <span class="math display">\[PS = \frac{1}{2}(60 - 20)(120) = \frac{1}{2}(40)(120) = 2400\]</span> <span class="math display">\[\text{Total Welfare} = CS + PS = \boxed{6000}\]</span></p>
+</section>
+<section id="b-equilibrium-with-tax-t-25-on-producers" class="level3">
+<h3 class="anchored" data-anchor-id="b-equilibrium-with-tax-t-25-on-producers">(b) Equilibrium with tax <span class="math inline">\(t = 25\)</span> on producers</h3>
+<p>A per-unit tax on producers drives a wedge <span class="math inline">\(P^D - P^S = t = 25\)</span> between the consumer price and the producer price. The quantity traded satisfies both sides simultaneously: <span class="math display">\[Q^D(P^D) = Q^S(P^S) \quad \text{with } P^S = P^D - 25\]</span></p>
+<p>Substituting: <span class="math display">\[240 - 2P^D = 3(P^D - 25) - 60 = 3P^D - 135 \implies 375 = 5P^D\]</span> <span class="math display">\[\boxed{P^D = 75, \quad P^S = 50, \quad Q_t = 90}\]</span></p>
+</section>
+<section id="c-tax-incidence" class="level3">
+<h3 class="anchored" data-anchor-id="c-tax-incidence">(c) Tax incidence</h3>
+<p>Price elasticities evaluated at the pre-tax equilibrium <span class="math inline">\((P^* = 60,\, Q^* = 120)\)</span>: <span class="math display">\[\varepsilon_D = \frac{dQ^D}{dP}\cdot\frac{P^*}{Q^*} = (-2)\cdot\frac{60}{120} = -1\]</span> <span class="math display">\[\varepsilon_S = \frac{dQ^S}{dP}\cdot\frac{P^*}{Q^*} = (3)\cdot\frac{60}{120} = 1.5\]</span></p>
+<p>The standard tax-incidence formula gives the fraction of the tax borne by each side: <span class="math display">\[\text{Consumer share} = \frac{\varepsilon_S}{|\varepsilon_D| + \varepsilon_S} = \frac{1.5}{1 + 1.5} = \frac{1.5}{2.5} = 60\%\]</span> <span class="math display">\[\text{Producer share} = \frac{|\varepsilon_D|}{|\varepsilon_D| + \varepsilon_S} = \frac{1.0}{2.5} = 40\%\]</span></p>
+<p><strong>Direct verification:</strong> <span class="math display">\[P^D - P^* = 75 - 60 = 15 \quad (60\% \text{ of } t = 25) \checkmark\]</span> <span class="math display">\[P^* - P^S = 60 - 50 = 10 \quad (40\% \text{ of } t = 25) \checkmark\]</span></p>
+<p>Because supply is more elastic than demand (<span class="math inline">\(\varepsilon_S &gt; |\varepsilon_D|\)</span>), consumers bear the larger share of the tax.</p>
+</section>
+<section id="d-tax-revenue-dwl-and-welfare-changes" class="level3">
+<h3 class="anchored" data-anchor-id="d-tax-revenue-dwl-and-welfare-changes">(d) Tax revenue, DWL, and welfare changes</h3>
+<p><span class="math display">\[\text{Tax Revenue} = t \times Q_t = 25 \times 90 = 2250\]</span></p>
+<p><span class="math display">\[CS_{\text{new}} = \frac{1}{2}(120 - 75)(90) = 2025 \implies \Delta CS = 2025 - 3600 = -1575\]</span> <span class="math display">\[PS_{\text{new}} = \frac{1}{2}(50 - 20)(90) = 1350 \implies \Delta PS = 1350 - 2400 = -1050\]</span></p>
+<p><span class="math display">\[DWL = \frac{1}{2}(t)(Q^* - Q_t) = \frac{1}{2}(25)(30) = \boxed{375}\]</span></p>
+<p><strong>Verification:</strong> <span class="math display">\[\Delta CS + \Delta PS + \text{Tax Revenue} + \text{DWL} = -1575 + (-1050) + 2250 + 375 = 0 \checkmark\]</span></p>
+</section>
+<section id="e-dwl-formula-in-terms-of-elasticities" class="level3">
+<h3 class="anchored" data-anchor-id="e-dwl-formula-in-terms-of-elasticities">(e) DWL formula in terms of elasticities</h3>
+<p><strong>Derivation.</strong> The DWL equals <span class="math inline">\(\frac{1}{2} \cdot t \cdot |\Delta Q|\)</span>, where <span class="math inline">\(|\Delta Q| = Q^* - Q_t\)</span> is the tax-induced reduction in quantity. To express <span class="math inline">\(|\Delta Q|\)</span> in terms of elasticities, use the market equilibrium conditions. A tax <span class="math inline">\(t\)</span> creates a wedge <span class="math inline">\(\Delta P^D - \Delta P^S = t\)</span> between the consumer price change <span class="math inline">\(\Delta P^D = P^D - P^*\)</span> and the producer price change <span class="math inline">\(\Delta P^S = P^S - P^*\)</span>. Quantity adjusts on both sides by the same amount <span class="math inline">\(-|\Delta Q|\)</span>:</p>
+<p><span class="math display">\[-|\Delta Q| = \varepsilon_D \cdot \frac{Q^*}{P^*} \cdot \Delta P^D \quad \Longrightarrow \quad \Delta P^D = -\frac{|\Delta Q| \cdot P^*}{\varepsilon_D \cdot Q^*} = \frac{|\Delta Q| \cdot P^*}{|\varepsilon_D| \cdot Q^*}\]</span></p>
+<p><span class="math display">\[-|\Delta Q| = \varepsilon_S \cdot \frac{Q^*}{P^*} \cdot \Delta P^S \quad \Longrightarrow \quad \Delta P^S = -\frac{|\Delta Q| \cdot P^*}{\varepsilon_S \cdot Q^*}\]</span></p>
+<p>Substituting into the wedge condition:</p>
+<p><span class="math display">\[t = \Delta P^D - \Delta P^S = \frac{|\Delta Q| \cdot P^*}{Q^*}\left(\frac{1}{|\varepsilon_D|} + \frac{1}{\varepsilon_S}\right) = \frac{|\Delta Q| \cdot P^*}{Q^*} \cdot \frac{|\varepsilon_D| + \varepsilon_S}{|\varepsilon_D| \cdot \varepsilon_S}\]</span></p>
+<p>Solving for <span class="math inline">\(|\Delta Q|\)</span>:</p>
+<p><span class="math display">\[|\Delta Q| = \frac{|\varepsilon_D| \cdot \varepsilon_S}{|\varepsilon_D| + \varepsilon_S} \cdot \frac{t \cdot Q^*}{P^*}\]</span></p>
+<p>Therefore:</p>
+<p><span class="math display">\[DWL = \frac{1}{2} \cdot t \cdot |\Delta Q| = \boxed{\frac{1}{2} \cdot \frac{|\varepsilon_D|\,\varepsilon_S}{|\varepsilon_D| + \varepsilon_S} \cdot \frac{t^2}{P^*} \cdot Q^*}\]</span></p>
+<p><strong>Numerical verification</strong> with <span class="math inline">\(|\varepsilon_D| = 1\)</span>, <span class="math inline">\(\varepsilon_S = 1.5\)</span>, <span class="math inline">\(t = 25\)</span>, <span class="math inline">\(P^* = 60\)</span>, <span class="math inline">\(Q^* = 120\)</span>:</p>
+<p><span class="math display">\[DWL = \frac{1}{2} \cdot \frac{1 \times 1.5}{1 + 1.5} \cdot \frac{625}{60} \cdot 120 = \frac{1}{2} \cdot 0.6 \cdot 1250 = 375 \checkmark\]</span></p>
+<p><strong>Intuition.</strong> Three features of the formula are worth noting:</p>
+<ol type="1">
+<li><p><strong>Both elasticities raise DWL.</strong> The term <span class="math inline">\(\frac{|\varepsilon_D|\,\varepsilon_S}{|\varepsilon_D|+\varepsilon_S}\)</span> is increasing in both <span class="math inline">\(|\varepsilon_D|\)</span> and <span class="math inline">\(\varepsilon_S\)</span>. The more responsive buyers and sellers are to prices, the larger the quantity reduction — and hence the larger the efficiency loss.</p></li>
+<li><p><strong>Zero elasticity on either side eliminates DWL.</strong> If demand or supply is perfectly inelastic (<span class="math inline">\(|\varepsilon_D| = 0\)</span> or <span class="math inline">\(\varepsilon_S = 0\)</span>), then <span class="math inline">\(|\Delta Q| = 0\)</span>: the tax causes no quantity distortion and generates no deadweight loss (all revenue comes from a lump-sum extraction from one side of the market). This is why taxes on inelastic goods (e.g., basic necessities) are efficient even if inequitable.</p></li>
+<li><p><strong>DWL grows with <span class="math inline">\(t^2\)</span>.</strong> Doubling the tax rate quadruples the deadweight loss. This is why economists often prefer broad, low-rate taxes over narrow, high-rate taxes.</p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="conceptual-question-on-tax-incidence" class="level2">
+<h2 class="anchored" data-anchor-id="conceptual-question-on-tax-incidence">10. Conceptual Question on Tax Incidence</h2>
+<p>The senator’s claim is <strong>incorrect</strong>. Tax incidence (how the burden of a tax is actually distributed between buyers and sellers) is determined entirely by the relative price elasticities of supply and demand, not by who legally remits the tax to the government.</p>
+<p>To see this, note that what matters for equilibrium is the wedge <span class="math inline">\(P^D - P^S = t\)</span>. Whether the wedge is created by taxing producers (supply curve shifts up by <span class="math inline">\(t\)</span>) or taxing consumers (demand curve shifts down by <span class="math inline">\(t\)</span>), the resulting equilibrium consumer price, producer price, and quantity are <strong>identical</strong>. The market cannot tell the difference.</p>
+<p>The burden shares are: <span class="math display">\[\text{Consumer share} = \frac{\varepsilon_S}{|\varepsilon_D| + \varepsilon_S}, \quad \text{Producer share} = \frac{|\varepsilon_D|}{|\varepsilon_D| + \varepsilon_S}\]</span></p>
+<p>For producers to bear the <strong>entire burden</strong>, we need the consumer share to equal zero: <span class="math display">\[\frac{\varepsilon_S}{|\varepsilon_D| + \varepsilon_S} = 0\]</span></p>
+<p>This holds when either:</p>
+<ul>
+<li><strong>Supply is perfectly inelastic</strong> (<span class="math inline">\(\varepsilon_S = 0\)</span>): Producers cannot adjust quantity regardless of price, so the entire burden falls on them. The supply curve is vertical and the consumer price does not change.</li>
+<li><strong>Demand is perfectly elastic</strong> (<span class="math inline">\(|\varepsilon_D| \to \infty\)</span>): Any increase in the consumer price causes demand to collapse to zero, so producers must absorb the full tax to keep the consumer price unchanged.</li>
+</ul>
+<p>In practice, neither extreme holds, so both sides bear some portion of the tax burden.</p>
+<hr>
+</section>
+</section>
+<section id="exchange-economies-and-welfare-theorems" class="level1">
+<h1>Exchange Economies and Welfare Theorems</h1>
+<section id="exchange-economy-and-general-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="exchange-economy-and-general-equilibrium">11. Exchange Economy and General Equilibrium</h2>
+<section id="a-mrs-at-the-endowment-and-pareto-efficiency" class="level3">
+<h3 class="anchored" data-anchor-id="a-mrs-at-the-endowment-and-pareto-efficiency">(a) MRS at the endowment and Pareto efficiency</h3>
+<p>For <span class="math inline">\(U = xy\)</span>, the <span class="math inline">\(MRS\)</span> is <span class="math inline">\(\frac{MU_x}{MU_y} = \frac{y}{x}\)</span>.</p>
+<p><span class="math display">\[MRS_A = \frac{y_A}{x_A}\bigg|_{\omega_A} = \frac{2}{8} = \frac{1}{4}, \qquad MRS_B = \frac{y_B}{x_B}\bigg|_{\omega_B} = \frac{8}{2} = 4\]</span></p>
+<p>Since <span class="math inline">\(MRS_A \neq MRS_B\)</span>, the endowment allocation is <strong>not Pareto efficient</strong>; there are unexploited gains from trade.</p>
+<p>Intuitively: Consumer A is endowed with relatively more <span class="math inline">\(x\)</span> and values it less (low <span class="math inline">\(MRS\)</span>), while consumer B is endowed with relatively more <span class="math inline">\(y\)</span> and values <span class="math inline">\(x\)</span> more (high <span class="math inline">\(MRS\)</span>). A will want to trade <span class="math inline">\(x\)</span> away in exchange for <span class="math inline">\(y\)</span>, and B will want to trade <span class="math inline">\(y\)</span> away in exchange for <span class="math inline">\(x\)</span>.</p>
+</section>
+<section id="b-contract-curve" class="level3">
+<h3 class="anchored" data-anchor-id="b-contract-curve">(b) Contract curve</h3>
+<p>Pareto efficiency requires <span class="math inline">\(MRS_A = MRS_B\)</span>. With <span class="math inline">\(x_B = 10 - x_A\)</span> and <span class="math inline">\(y_B = 10 - y_A\)</span>: <span class="math display">\[\frac{y_A}{x_A} = \frac{10 - y_A}{10 - x_A}\]</span></p>
+<p>Cross-multiplying: <span class="math display">\[y_A(10 - x_A) = x_A(10 - y_A) \implies 10y_A = 10x_A\]</span> <span class="math display">\[\boxed{y_A = x_A}\]</span></p>
+<p>The contract curve is the <strong>main diagonal</strong> of the Edgeworth box, running from corner <span class="math inline">\((0,0)\)</span> to corner <span class="math inline">\((10,10)\)</span> (from A’s perspective). At every point on this line, both consumers hold equal quantities of both goods.</p>
+</section>
+<section id="c-competitive-equilibrium" class="level3">
+<h3 class="anchored" data-anchor-id="c-competitive-equilibrium">(c) Competitive equilibrium</h3>
+<p>Let <span class="math inline">\(p = p_x/p_y\)</span> and normalize <span class="math inline">\(p_y = 1\)</span>.</p>
+<p><strong>Consumer A’s income:</strong> <span class="math inline">\(I_A = 8p + 2\)</span>. With equal-share Cobb-Douglas: <span class="math display">\[x_A = \frac{I_A}{2p} = 4 + \frac{1}{p}, \qquad y_A = \frac{I_A}{2} = 4p + 1\]</span></p>
+<p><strong>Consumer B’s income:</strong> <span class="math inline">\(I_B = 2p + 8\)</span>. <span class="math display">\[x_B = \frac{I_B}{2p} = 1 + \frac{4}{p}, \qquad y_B = \frac{I_B}{2} = p + 4\]</span></p>
+<p><strong>Market clearing for <span class="math inline">\(x\)</span>:</strong> <span class="math display">\[x_A + x_B = 10 \implies \left(4 + \frac{1}{p}\right) + \left(1 + \frac{4}{p}\right) = 10 \implies 5 + \frac{5}{p} = 10 \implies p^* = 1\]</span></p>
+<p><strong>Equilibrium allocation at <span class="math inline">\(p^* = 1\)</span>:</strong> <span class="math display">\[x_A = 5,\; y_A = 5, \qquad x_B = 5,\; y_B = 5\]</span></p>
+<p>Verify on the contract curve: <span class="math inline">\(y_A = 5 = x_A\)</span> ✓. Verify market clearing for <span class="math inline">\(y\)</span>: <span class="math inline">\(5 + 5 = 10\)</span> ✓.</p>
+</section>
+<section id="d-welfare-theorems-and-lump-sum-transfer" class="level3">
+<h3 class="anchored" data-anchor-id="d-welfare-theorems-and-lump-sum-transfer">(d) Welfare theorems and lump-sum transfer</h3>
+<p><strong>First Welfare Theorem:</strong> Every competitive equilibrium allocation is Pareto efficient, provided markets are competitive, complete, and there are no externalities.</p>
+<p><strong>Second Welfare Theorem:</strong> Every Pareto efficient allocation can be supported as a competitive equilibrium after appropriate lump-sum redistribution of endowments, provided preferences are convex.</p>
+<p>The planner wants <span class="math inline">\((x_A, y_A) = (3, 3)\)</span>, which lies on the contract curve (<span class="math inline">\(y_A = x_A\)</span> ✓). At <span class="math inline">\(p^* = 1\)</span>, this requires consumer A to have income <span class="math inline">\(I_A = 2 \times 3 = 6\)</span> (since <span class="math inline">\(x_A = I_A/2 = 3\)</span>).</p>
+<p>A’s original income at <span class="math inline">\(p^* = 1\)</span> is <span class="math inline">\(8(1) + 2(1) = 10\)</span>. We must reduce it by <span class="math inline">\(4\)</span>.</p>
+<p><strong>Required transfer:</strong> Reassign 4 units of good <span class="math inline">\(x\)</span> from A to B: <span class="math display">\[\omega_A' = (4,\, 2), \qquad \omega_B' = (6,\, 8)\]</span></p>
+<p>At <span class="math inline">\(p^* = 1\)</span>: <span class="math inline">\(I_A = 4 + 2 = 6 \Rightarrow x_A = 3,\; y_A = 3\)</span> ✓ and <span class="math inline">\(I_B = 6 + 8 = 14 \Rightarrow x_B = 7,\; y_B = 7\)</span> ✓.</p>
+<hr>
+</section>
+</section>
+<section id="welfare-theorems-and-policy-design" class="level2">
+<h2 class="anchored" data-anchor-id="welfare-theorems-and-policy-design">12. Welfare Theorems and Policy Design</h2>
+<section id="first-welfare-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="first-welfare-theorem">First Welfare Theorem</h3>
+<p><strong>Statement:</strong> If all markets are perfectly competitive and there are no externalities or public goods, then every competitive equilibrium allocation is Pareto efficient.</p>
+<p>More precisely, the theorem requires: (i) price-taking behavior by all buyers and sellers, (ii) complete markets (a market exists for every good), (iii) no externalities (private and social costs/benefits coincide), and (iv) no information asymmetries.</p>
+<p>This is Adam Smith’s “invisible hand” result stated formally: decentralized decisions by self-interested agents, coordinated only by prices, lead to an outcome where no one can be made better off without making someone else worse off.</p>
+</section>
+<section id="second-welfare-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="second-welfare-theorem">Second Welfare Theorem</h3>
+<p><strong>Statement:</strong> If preferences and production sets are convex, then any Pareto efficient allocation can be supported as a competitive equilibrium, provided appropriate lump-sum transfers of initial endowments are made beforehand.</p>
+<p>The key additional condition relative to the FWT is <strong>convexity</strong> i.e.&nbsp;diminishing marginal rates of substitution for consumers and non-increasing returns to scale for firms. Given convexity, the government can, in principle, reach any point on the Pareto frontier by first redistributing endowments, then letting markets operate.</p>
+</section>
+<section id="policy-implications" class="level3">
+<h3 class="anchored" data-anchor-id="policy-implications">Policy implications</h3>
+<p>Taken together, the two theorems have several important implications for policy design:</p>
+<ol type="1">
+<li><p><strong>Markets as a benchmark.</strong> The FWT establishes conditions under which free markets achieve efficiency. It provides the theoretical foundation for market-based economies and sets a standard against which actual market performance can be measured.</p></li>
+<li><p><strong>Market failures justify intervention.</strong> The FWT also identifies precisely when markets fail: externalities, public goods, market power, and information asymmetries all violate the theorem’s conditions. In each case, there is a potential role for government to improve welfare through taxes, public provision, antitrust policy, or disclosure requirements.</p></li>
+<li><p><strong>Separating efficiency from equity.</strong> The SWT implies that efficiency and equity are separable objectives. Society need not choose between an efficient market outcome and a more equitable distribution — it can achieve any desired allocation on the Pareto frontier by redistributing initial endowments (via lump-sum taxes and transfers) and then relying on competitive markets for efficiency. This means that distortionary policies (price controls, targeted subsidies) are generally an inferior way to pursue equity goals, since they sacrifice efficiency.</p></li>
+<li><p><strong>The second-best problem.</strong> In practice, the lump-sum transfers required by the SWT are infeasible: they would require the government to have perfect information about individuals’ abilities, endowments, and preferences. Real-world redistribution — income taxes, transfers, in-kind benefits — inevitably distorts behavior and creates deadweight losses. Policymakers therefore face a genuine trade-off between equity and efficiency, and must seek “second-best” policies that balance the two.</p></li>
+</ol>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>2026 Div Bhagia | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 License</a> |Made with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
