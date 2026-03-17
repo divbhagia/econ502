@@ -3,7 +3,9 @@ slides/_freeze/
 slides/.quarto/
 # slides/_output/
 slides/.jupyter_cache/
-problem-sets/.jupyter_cache/
+practice-problems/.jupyter_cache/
+exams/.jupyter_cache/
+content/.jupyter_cache/
 
 # Python cache
 __pycache__/
@@ -41,5 +43,3 @@ exams/
 /.quarto/
 
 /.luarc.json
-
-**/*.quarto_ipynb

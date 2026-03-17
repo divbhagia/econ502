@@ -12,8 +12,6 @@ format:
 format-links: [pdf]
 ---
 
-# Monopoly and Price Discrimination
-
 ## 1. Monopoly Pricing
 
 A monopolist faces the inverse demand curve $P = 200 - 2Q$ and has constant marginal cost $MC = 40$ with no fixed costs.
@@ -39,8 +37,6 @@ b) If the museum must charge a single uniform price to all visitors, find the pr
 c) Under price discrimination, compute the Lerner Index and price elasticity of demand for each market. Verify that the inverse elasticity rule holds. Which group receives the higher markup, and why?
 
 d) Compare total welfare (consumer surplus plus profit) under price discrimination and uniform pricing. Is price discrimination welfare-improving in this case? Explain the intuition.
-
-# Oligopoly
 
 ## 3. Cournot Duopoly with Asymmetric Costs
 
@@ -78,7 +74,7 @@ b) Find the Nash equilibrium prices, quantities, and profits.
 
 c) Show that the equilibrium price exceeds marginal cost. How does product differentiation resolve the Bertrand paradox?
 
-d) Suppose both firms collude and maximize joint profits, setting a common price $p$. Find the collusive price and each firm's profit. Compare to the Nash equilibrium.
+d) Suppose both firms collude and maximize joint profits, setting a common price $p$. Find the collusive price and each firm's profit. Compare to the Nash equilibrium. Can the collusion point be sustained as a Nash equilibrium in a one-shot game? Why or why not?
 
 ## 6. Stackelberg Competition
 

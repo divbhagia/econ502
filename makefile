@@ -14,7 +14,10 @@ SLIDE_NAMES = $(notdir $(basename $(SLIDE_FILES)))
 SLIDE_HTMLS = $(addprefix $(OUTPUT_DIR)/$(SLIDES_DIR)/,$(addsuffix .html,$(SLIDE_NAMES)))
 SLIDE_PDFS  = $(addprefix $(OUTPUT_DIR)/$(SLIDES_DIR)/,$(addsuffix .pdf,$(SLIDE_NAMES)))
 
-.PHONY: all website slides pdfs preview stop clean
+# Source directories that accumulate preview artifacts (docs/ is never touched)
+SOURCE_DIRS = slides add-content practice-problems exams content
+
+.PHONY: all website slides pdfs preview stop clean clean-aux
 
 all: website pdfs
 
@@ -63,3 +66,23 @@ $(addsuffix -pdf,$(SLIDE_NAMES)): %-pdf: preview $(OUTPUT_DIR)/$(SLIDES_DIR)/%.p
 
 clean:
 	rm -f $(SLIDE_HTMLS) $(SLIDE_PDFS)
+
+# Remove HTML, PDF, figure dirs, and LaTeX aux files created by quarto preview
+# in source directories. Never touches docs/.
+clean-aux:
+	@echo "Removing preview artifacts from source directories..."
+	@find $(SOURCE_DIRS) \( \
+		-name "*.html" -o \
+		-name "*.pdf" -o \
+		-name "*.aux" -o \
+		-name "*.log" -o \
+		-name "*.toc" -o \
+		-name "*.out" -o \
+		-name "*.synctex.gz" -o \
+		-name "*.fls" -o \
+		-name "*.fdb_latexmk" -o \
+		-name "*.quarto_ipynb" \
+	\) -delete 2>/dev/null || true
+	@find $(SOURCE_DIRS) -type d -name "*_files" -exec rm -rf {} + 2>/dev/null || true
+	@rm -rf site_libs
+	@echo "Done."

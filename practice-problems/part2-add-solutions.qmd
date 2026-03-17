@@ -406,7 +406,9 @@ $$q_i^{\text{col}} = 10 - 2(5.5) + 5.5 = 4.5, \qquad \pi_i^{\text{col}} = (5.5 -
 
 $$\boxed{p^{\text{col}} = 5.5 > p^* = 4, \quad \pi_i^{\text{col}} = \$20.25 > \pi_i^* = \$18}$$
 
-Collusion raises prices and profits for both firms. Each firm has an incentive to agree on the higher price but also to cheat by undercutting, which is the classic tension that makes collusion unstable without a credible enforcement mechanism.
+Collusion raises prices and profits for both firms. However, the collusion point **cannot be sustained as a Nash equilibrium in a one-shot game**. To see why, suppose firm 2 holds the collusive price $p_2 = 5.5$. Firm 1's best response is:
+$$p_1^*(5.5) = 3 + \frac{5.5}{4} = 4.375$$
+Since $4.375 < 5.5$, firm 1 has a unilateral incentive to **undercut** the collusive price as charging less attracts more customers and raises firm 1's profit above $\$20.25$. Sustaining collusion requires repeated interaction, so that the threat of future punishment (reverting to the Nash price of 4) outweighs the short-run gain from deviation.
 
 
 ## Problem 6: Stackelberg Competition
@@ -450,8 +452,6 @@ $$\boxed{q_1^S = 60,\; q_2^S = 30,\; P^S = \$60,\; \pi_1^S = \$1{,}800,\; \pi_2^
 | Profit | \$1,600 | \$1,800 | \$900 |
 
 **The leader gains from moving first** (profit rises from \$1,600 to \$1,800), while the follower is worse off (\$900 < \$1,600). By committing to a large quantity before the follower acts, the leader exploits the fact that quantities are **strategic substitutes**: a higher $q_1$ shifts the follower's best response downward, inducing firm 2 to produce less. This credible commitment to "overproducing" is the **"top dog" strategy**: be aggressive to force the rival to back off.
-
-Note that firm 1's Stackelberg output (60) is exactly its monopoly output; the leader takes the entire "first half" of the market, leaving the follower to split the remainder.
 
 ### Part (d): Consumer surplus and welfare
 
