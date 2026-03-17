@@ -80,23 +80,13 @@ As long as $c < a/(b-d)$, which is the highest price that yields positive demand
 
 ---
 
-## The Role of Differentiation
-
-$$p^* = \frac{a + bc}{2b - d}$$
-
-Note: Higher $d$ (more substitutable products) → lower $p^*$ (less market power)
-
-**More differentiation = more market power.** This is why firms invest in branding, product design, location, and quality to escape head-to-head price competition.
-
----
-
-## Best Responses: Prices Are Strategic Complements
+## Prices Are Strategic Complements
 
 ```{python}
 #| echo: false
 #| fig-align: center
-#| fig-width: 7
-#| fig-height: 5.5
+#| fig-width: 5.5
+#| fig-height: 4.5
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -120,14 +110,14 @@ p_range = np.linspace(c - 5, p_star + 25, 200)
 br1 = (a + b * c + d * p_range) / (2 * b)
 br2 = (a + b * c + d * p_range) / (2 * b)
 
-fig, ax = plt.subplots(figsize=(7, 5.5))
+fig, ax = plt.subplots(figsize=(5.5, 4.5))
 
 ax.plot(p_range, br1, '-', color=color1, linewidth=2.5, label="Firm 1's BR: $p_1^*(p_2)$")
 ax.plot(br2, p_range, '-', color=color2, linewidth=2.5, label="Firm 2's BR: $p_2^*(p_1)$")
 
 # Equilibrium
 ax.plot(p_star, p_star, 'o', color=color_eq, markersize=10, zorder=5)
-ax.annotate(f'Nash Eq.\n$p^* \\approx {p_star:.0f}$',
+ax.annotate(f'Nash Eq.',
             xy=(p_star, p_star), xytext=(p_star + 8, p_star - 5),
             fontsize=12, ha='center',
             arrowprops=dict(arrowstyle='->', color='black', lw=1.5))
@@ -153,35 +143,10 @@ plt.tight_layout()
 plt.show()
 ```
 
-Best responses are **upward sloping** — if your rival raises their price, you raise yours. Prices are **strategic complements**.
+Best responses are **upward sloping**: if your rival raises their price, you raise yours. Prices are **strategic complements**.
 
----
-
-## Strategic Substitutes vs. Complements
-
-| | Quantities (Cournot) | Prices (Diff. Bertrand) |
-|---|---|---|
-| Best responses | Downward sloping | Upward sloping |
-| Strategic | Substitutes | Complements |
-| Rival produces/charges more → | You produce less | You charge more |
-| Competition | More aggressive | Less aggressive |
-
-This distinction matters a lot for sequential games and entry deterrence.
-
----
-
-## Application: Airline Pricing
-
-Airlines are a classic example of differentiated Bertrand competition:
-
-- Products differentiated by route, timing, frequent flyer programs, service class
-- Firms set prices, not quantities
-- When one airline raises fares on a route, competitors often follow (strategic complements)
-- Low-cost carriers (Spirit, Frontier) effectively reduce differentiation — pushing prices toward $c$
 
 # Tacit Collusion
-
----
 
 ## Can Firms Sustain Higher Prices?
 
@@ -245,10 +210,8 @@ $$\delta \geq 1 - \frac{1}{n} = \frac{n-1}{n}$$
 |---|---|
 | 2 | 0.50 |
 | 3 | 0.67 |
-| 5 | 0.80 |
 | 10 | 0.90 |
-
-**More firms → harder to sustain collusion.** This is one reason antitrust authorities are concerned about mergers.
+|
 
 ---
 
@@ -259,7 +222,7 @@ OPEC is a real-world example of attempted collusion:
 - Member countries agree to production quotas (quantity)
 - Each member has an incentive to **overproduce** (cheat on the agreement)
 - Collusion harder to sustain when oil prices are volatile (hard to distinguish demand shocks from cheating)
-- Saudi Arabia historically serves as the "swing producer" — punishing deviators by flooding the market
+- Saudi Arabia historically serves as the "swing producer" punishing deviators by flooding the market
 
 This is exactly the repeated game logic: collusion sustained by the threat of a price war.
 
@@ -304,92 +267,46 @@ Using $P = 100 - Q$ and $c = 20$:
 | Output | 26.67 | 40 | 20 |
 | Price | 46.67 | 40 | 40 |
 | Profit | 711 | 800 | 400 |
+|
 
-**The leader produces more and earns more.** By committing to a large quantity first, the leader forces the follower to scale back — a **"top dog" strategy**.
+**The leader produces more and earns more.** By committing to a large quantity first, the leader forces the follower to scale back, a **"top dog" strategy**.
 
 **Total output is higher** and price is lower than Cournot → closer to competition.
 
 ---
 
-## Stackelberg: Graphically
+## Price Leadership
 
-```{python}
-#| echo: false
-#| fig-align: center
-#| fig-width: 7
-#| fig-height: 5.5
+Consider Bertrand game from before with $a = 1, b = 1, d = 0.5, c = 0$.
 
-import matplotlib.pyplot as plt
-import numpy as np
+$$ q_i = 1 - p_i + 0.5 p_j $$
 
-# ========== PARAMETERS ==========
-a = 100
-b = 1
-c = 20
+**Price leadership:** Firm 1 (leader) chooses $p_1$ first. Firm 2 (follower) observes $p_1$ and chooses $p_2$.
 
-color1 = '#0072B2'
-color2 = '#E69F00'
-color_eq = '#009E73'
-color_stack = '#D55E00'
+**Follower's best response:**
+$$p_2^*(p_1) =  \frac{1 + 0.5 p_1}{2}$$
 
-# ========== DERIVED ==========
-q_cournot = (a - c) / (3 * b)
-q_stack_leader = (a - c) / (2 * b)
-q_stack_follower = (a - c) / (4 * b)
+**Leader's problem:**
+$$\max_{p_1} p_1 \left(1 - p_1 + 0.5 \left( \frac{1 + 0.5 p_1}{2} \right) \right)$$
 
-q_range = np.linspace(0, (a - c) / b, 200)
-br2 = np.maximum(0, (a - c) / (2 * b) - q_range / 2)
-br1 = np.maximum(0, (a - c) / (2 * b) - q_range / 2)
+## Price leadership: Solution
 
-fig, ax = plt.subplots(figsize=(7, 5.5))
+**FOC:**
+$$1 - 2p_1 + 0.25 p_1 + 0.25 = 0 \implies p_1 = 0.714$$
 
-# Best responses
-ax.plot(q_range, br1, '-', color=color1, linewidth=2, alpha=0.5, label="Firm 1's BR")
-ax.plot(br2, q_range, '-', color=color2, linewidth=2.5, label="Firm 2's BR: $q_2^*(q_1)$")
+**Follower's response:**
+$$p_2 = \frac{1 + 0.5 (0.714)}{2} = 0.679$$
 
-# Iso-profit curves for firm 1
-q2_grid = np.linspace(0, 85, 300)
-pi_cournot_actual = ((a - c) / 3)**2 / b
-pi_stack = ((a - c) / 2)**2 / (4 * b)
-
-for pi_level, ls in [(pi_cournot_actual, '-'), (pi_stack, '--')]:
-    disc = (a - c - b * q2_grid)**2 - 4 * b * pi_level
-    valid = disc >= 0
-    q1_upper = ((a - c - b * q2_grid[valid]) + np.sqrt(disc[valid])) / (2 * b)
-    q1_lower = ((a - c - b * q2_grid[valid]) - np.sqrt(disc[valid])) / (2 * b)
-    ax.plot(q1_upper, q2_grid[valid], ls, color=color1, linewidth=1.2, alpha=0.35)
-    ax.plot(q1_lower, q2_grid[valid], ls, color=color1, linewidth=1.2, alpha=0.35)
-
-# Cournot equilibrium
-ax.plot(q_cournot, q_cournot, 'o', color=color_eq, markersize=9, zorder=5)
-ax.annotate('C (Cournot)', xy=(q_cournot, q_cournot),
-            xytext=(q_cournot - 13, q_cournot + 6),
-            fontsize=11, ha='center', color=color_eq,
-            arrowprops=dict(arrowstyle='->', color=color_eq, lw=1.2))
-
-# Stackelberg equilibrium
-ax.plot(q_stack_leader, q_stack_follower, 's', color=color_stack, markersize=9, zorder=5)
-ax.annotate('S (Stackelberg)', xy=(q_stack_leader, q_stack_follower),
-            xytext=(q_stack_leader + 5, q_stack_follower + 10),
-            fontsize=11, ha='center', color=color_stack,
-            arrowprops=dict(arrowstyle='->', color=color_stack, lw=1.2))
-
-ax.set_xlabel('$q_1$ (Leader)', fontsize=14)
-ax.set_ylabel('$q_2$ (Follower)', fontsize=14)
-ax.set_xlim(0, 85)
-ax.set_ylim(0, 85)
-ax.legend(fontsize=11, loc='upper right')
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.grid(True, linestyle='--', alpha=0.3)
-
-plt.tight_layout()
-plt.show()
-```
-
-The Stackelberg leader moves to a point on firm 2's best response that reaches a higher iso-profit curve than the Cournot equilibrium.
+| |  Bertrand | Price Leader | Price Follower |
+|---|---|---|---|
+| Price | 0.667 | 0.714 | 0.679 |
+| Quantity | 0.666 | 0.625 | 0.678 |
+| Profit | 0.444 | 0.446 | 0.460 |
+|
 
 ---
+
+
 
 ## First Mover: Top Dog or Puppy Dog?
 
@@ -407,8 +324,6 @@ The Stackelberg leader moves to a point on firm 2's best response that reaches a
 
 # Entry and Exit
 
----
-
 ## Entry and Long-Run Equilibrium
 
 In the long run, positive profits attract **entry**. How many firms will enter?
@@ -423,24 +338,6 @@ The equilibrium number of firms is decreasing in sunk costs $K$ and increasing i
 
 ---
 
-## Is Free Entry Efficient?
-
-**Two offsetting effects:**
-
-**Appropriability effect** → too few firms ($n^{**} > n^*$)
-
-- Firms don't appropriate the consumer surplus from lower prices
-- A social planner would want more entry
-
-**Business-stealing effect** → too many firms ($n^{**} < n^*$)
-
-- Entry reduces existing firms' profits
-- The marginal entrant ignores this negative externality on incumbents
-
-The net effect is ambiguous — there can be too much or too little entry.
-
----
-
 ## Strategic Entry Deterrence
 
 An incumbent may try to **prevent entry** rather than accommodate it.
@@ -452,60 +349,67 @@ An incumbent may try to **prevent entry** rather than accommodate it.
 - **Brand proliferation:** Fill product space so there's no room for entrants
 - **Long-term contracts:** Lock in customers before a rival can enter
 
-**Trade-off:** Entry deterrence is costly — the incumbent distorts its behavior. Worth it only if the benefit of being alone in the market exceeds the cost of deterrence.
+**Trade-off:** Entry deterrence is costly as the incumbent distorts its behavior. Worth it only if the benefit of being alone in the market exceeds the cost of deterrence.
 
 ---
 
-## Signaling and Entry Deterrence
+## Simple Example of Entry Deterrence
 
-When the entrant has **incomplete information** about the incumbent's costs:
+Demand function: $P = 100 - Q$, MC = 0, sunk entry cost $K$. 
 
-- A low-cost incumbent charges its monopoly price $p_1^L$ — this naturally deters entry
-- A **high-cost** incumbent may mimic the low-cost type to appear strong
+To deter entry, incumbent firm 1 will produce a quantity such that even if firm 2 enters and produces its best response, it will not earn enough to cover the entry cost.
 
-**Pooling equilibrium:** Both types charge $p_1^L$. The entrant can't tell them apart and may stay out.
+**Firm 2's best response** to firm 1's quantity $q_1$ is:
+$$q_2^*(q_1) = \frac{100 - q_1}{2}$$
 
-**Separating equilibrium:** Types choose different prices. The entrant learns the incumbent's type and enters only against the high-cost firm.
+**Profit for firm 2** if it enters:
+$$\pi_2 = q_2^* (100 - q_1 - q_2^*) = \frac{(100 - q_1)^2}{4}$$
 
-This is the formal basis for **predatory pricing** — sacrificing short-run profits to signal strength and deter entry.
+## Entry Deterrence Example (cont.)
 
----
+To deter entry, we need $\pi_2 < K$:
+$$\frac{(100 - q_1)^2}{4} < K \implies q^{det}_1 = 100 - 2\sqrt{K}$$
+
+**Firm 1's profit if it deters entry:**
+$$\pi_1^{det} = (100-2\sqrt{K}) \cdot 2\sqrt{K}$$
+
+If firm 1 accommodates entry, it produces $q_1^{acc} = 33.33$ and earns $\pi_1^{acc} = 1111$. 
+
+Firm 1 will deter entry if $\pi_1^{det} > \pi_1^{acc}$.
+
+## Entry Deterrence Example (cont.)
+
+We need to solve the following equation for $K$:
+$$(100-2\sqrt{K}) \cdot 2\sqrt{K} = 1111 $$
+
+To simplify, let $x = 2\sqrt{K}$:
+$$100x - x^2 = 1111 \implies x^2 - 100x + 1111 = 0$$
+
+Using the quadratic formula:
+$$x = \frac{100 \pm \sqrt{100^2 - 4 \cdot 1111}}{2} = \frac{100 \pm 74.54}{2}$$
+
+Using the smaller root ($x =12.73$): $K = 40.5$. If entry costs are below this, deterrence is not profitable. 
+
+--- 
 
 ## The Feedback Effect
 
 An important subtlety for applied work:
 
-- Product differentiation, search costs, and collusion increase profits **holding $n$ fixed**
+- Product differentiation, collusion etc increase profits **holding $n$ fixed**
 - But higher profits attract more entry, making the market **more competitive** in the long run
 - The short-run and long-run effects of these factors can go in opposite directions
 
 **Greater sunk costs** constrain entry even in the long run, so prices tend to be higher in industries with large sunk costs.
 
----
-
-## Do It Yourself!
-
-Consider a **differentiated Bertrand duopoly** with:
-
-$$q_1 = 50 - 2p_1 + p_2 \qquad q_2 = 50 - 2p_2 + p_1$$
-
-Both firms have $MC = 10$.
-
-1. Derive each firm's best response function.
-2. Find the Nash equilibrium prices $p_1^*$ and $p_2^*$.
-3. Calculate equilibrium quantities and profits.
-4. What would happen if the products became more similar ($d$ increased toward $b$)?
-5. What would the monopoly (cartel) price be if firms maximize joint profit?
 
 # Summary
-
----
 
 ## Key Takeaways
 
 **Models of oligopoly:**
 
-- **Bertrand** (price, homogeneous goods): Competitive pricing even with two firms — the Bertrand paradox
+- **Bertrand** (price, homogeneous goods): Competitive pricing even with two firms (Bertrand paradox)
 - **Cournot** (quantity): Outcome between monopoly and competition; converges to competition as $n$ grows
 - **Stackelberg** (sequential quantity): First mover gains by committing to aggressive output
 
@@ -515,8 +419,8 @@ Both firms have $MC = 10$.
 
 **Resolving the Bertrand paradox:**
 
-- Product differentiation gives firms market power ($p^* > c$ even with two firms)
 - Capacity constraints lead to Cournot-like outcomes
+- Product differentiation gives firms market power ($p^* > c$ even with two firms)
 - Repeated interaction enables tacit collusion if firms are patient ($\delta \geq 1/2$ for duopoly)
 
 **Strategic concepts:**
@@ -524,16 +428,3 @@ Both firms have $MC = 10$.
 - Quantities are **strategic substitutes**, prices are **strategic complements**
 - First movers play **"top dog"** in quantity games, **"puppy dog"** in price games
 - Entry deterrence trades off short-run costs against long-run monopoly benefits
-
----
-
-## Next Time
-
-**Lecture 8: Labor Markets**
-
-- Allocation of time and labor supply
-- Labor market equilibrium
-- Wage variation
-- Monopsony
-
-**Reading:** Chapter 16

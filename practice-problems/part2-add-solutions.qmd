@@ -363,3 +363,110 @@ $$MR = 100 - 2Q = 10  \Longrightarrow  Q = 45, \quad P = 100 - 45 = 55$$
 
 However, in the Bertrand duopoly, firm 1 cannot charge above $20$ without losing all customers to firm 2. Thus, the equilibrium price is determined by the rival's cost, not by the monopolist's optimal price.
 
+
+## Problem 5: Differentiated Bertrand Competition
+
+### Part (a): Best response functions
+
+Firm 1 maximizes $\pi_1 = (p_1 - 1)(10 - 2p_1 + p_2)$. The FOC with respect to $p_1$ is:
+
+$$\frac{\partial \pi_1}{\partial p_1} = (10 - 2p_1 + p_2) + (p_1 - 1)(-2) = 0$$
+
+$$10 - 4p_1 + p_2 + 2 = 0 \quad \Longrightarrow \quad \boxed{p_1^*(p_2) = 3 + \frac{p_2}{4}}$$
+
+By symmetry, $p_2^*(p_1) = 3 + p_1/4$.
+
+Prices are **strategic complements**: the best response is upward sloping ($\partial p_1^*/\partial p_2 = 1/4 > 0$). If firm 2 raises its price, firm 1's demand rises, and it optimally charges more as well.
+
+### Part (b): Nash equilibrium
+
+In a symmetric equilibrium $p_1 = p_2 = p^*$:
+
+$$p^* = 3 + \frac{p^*}{4} \quad \Longrightarrow \quad \frac{3p^*}{4} = 3 \quad \Longrightarrow \quad p^* = 4$$
+
+$$q_i = 10 - 2(4) + 4 = 6, \qquad \pi_i = (4 - 1)(6) = \$18$$
+
+$$\boxed{p^* = 4, \quad q_i = 6, \quad \pi_i = \$18}$$
+
+### Part (c): Why equilibrium price exceeds marginal cost
+
+$p^* = 4 > c = 1$, so firms earn positive profits in equilibrium. With **product differentiation**, a firm that slightly undercuts its rival does not capture the entire market: some customers still prefer the higher-priced firm's product. The demand function is continuous in own price, so there is no incentive to trigger a race to the bottom. The Bertrand paradox rests on the assumption of perfectly homogeneous goods; once goods are differentiated, the "steal the whole market" logic breaks down.
+
+### Part (d): Collusion
+
+Setting $p_1 = p_2 = p$, joint profit is:
+
+$$\Pi = 2(p - 1)(10 - 2p + p) = 2(p - 1)(10 - p)$$
+
+FOC:
+
+$$\frac{d\Pi}{dp} = 2\bigl[(10 - p) - (p - 1)\bigr] = 2(11 - 2p) = 0 \quad \Longrightarrow \quad p^{\text{col}} = 5.5$$
+
+$$q_i^{\text{col}} = 10 - 2(5.5) + 5.5 = 4.5, \qquad \pi_i^{\text{col}} = (5.5 - 1)(4.5) = \$20.25$$
+
+$$\boxed{p^{\text{col}} = 5.5 > p^* = 4, \quad \pi_i^{\text{col}} = \$20.25 > \pi_i^* = \$18}$$
+
+Collusion raises prices and profits for both firms. Each firm has an incentive to agree on the higher price but also to cheat by undercutting, which is the classic tension that makes collusion unstable without a credible enforcement mechanism.
+
+
+## Problem 6: Stackelberg Competition
+
+### Part (a): Cournot equilibrium
+
+Firm 1 maximizes $\pi_1 = (150 - q_1 - q_2 - 30)q_1 = (120 - q_1 - q_2)q_1$.
+
+FOC: $120 - 2q_1 - q_2 = 0 \Longrightarrow q_1^*(q_2) = 60 - q_2/2$. By symmetry, $q_2^*(q_1) = 60 - q_1/2$.
+
+Solving simultaneously:
+
+$$q_i^C = 40, \quad Q^C = 80, \quad P^C = 70, \quad \pi_i^C = (70 - 30)(40) = \$1{,}600$$
+
+$$\boxed{q_i^C = 40, \quad P^C = \$70, \quad \pi_i^C = \$1{,}600}$$
+
+### Part (b): Stackelberg equilibrium
+
+**Step 1: Follower's best response** (same as Cournot):
+
+$$q_2^*(q_1) = 60 - \frac{q_1}{2}$$
+
+**Step 2: Leader's problem.** Firm 1 substitutes $q_2^*$ into its profit function:
+
+$$\pi_1 = \left(120 - q_1 - \left(60 - \frac{q_1}{2}\right)\right)q_1 = \left(60 - \frac{q_1}{2}\right)q_1$$
+
+FOC: $60 - q_1 = 0 \Longrightarrow q_1^S = 60$
+
+$$q_2^S = 60 - \frac{60}{2} = 30, \quad Q^S = 90, \quad P^S = 60$$
+
+$$\pi_1^S = (60 - 30)(60) = \$1{,}800, \qquad \pi_2^S = (60 - 30)(30) = \$900$$
+
+$$\boxed{q_1^S = 60,\; q_2^S = 30,\; P^S = \$60,\; \pi_1^S = \$1{,}800,\; \pi_2^S = \$900}$$
+
+### Part (c): Comparison and the top dog strategy
+
+| | Cournot | Stackelberg Leader | Stackelberg Follower |
+|---|---|---|---|
+| Output | 40 | 60 | 30 |
+| Price | \$70 | \$60 | \$60 |
+| Profit | \$1,600 | \$1,800 | \$900 |
+
+**The leader gains from moving first** (profit rises from \$1,600 to \$1,800), while the follower is worse off (\$900 < \$1,600). By committing to a large quantity before the follower acts, the leader exploits the fact that quantities are **strategic substitutes**: a higher $q_1$ shifts the follower's best response downward, inducing firm 2 to produce less. This credible commitment to "overproducing" is the **"top dog" strategy**: be aggressive to force the rival to back off.
+
+Note that firm 1's Stackelberg output (60) is exactly its monopoly output; the leader takes the entire "first half" of the market, leaving the follower to split the remainder.
+
+### Part (d): Consumer surplus and welfare
+
+$$CS^C = \frac{1}{2}(150 - 70)(80) = \frac{1}{2}(80)(80) = \$3{,}200$$
+
+$$TS^C = CS^C + \pi_1^C + \pi_2^C = 3{,}200 + 1{,}600 + 1{,}600 = \$6{,}400$$
+
+$$CS^S = \frac{1}{2}(150 - 60)(90) = \frac{1}{2}(90)(90) = \$4{,}050$$
+
+$$TS^S = CS^S + \pi_1^S + \pi_2^S = 4{,}050 + 1{,}800 + 900 = \$6{,}750$$
+
+| | Consumer Surplus | Industry Profit | Total Welfare |
+|---|---|---|---|
+| **Cournot** | \$3,200 | \$3,200 | \$6,400 |
+| **Stackelberg** | \$4,050 | \$2,700 | \$6,750 |
+
+Consumers are **better off** under Stackelberg: higher total output drives the price down from \$70 to \$60, raising CS by \$850. Total welfare is also higher (\$6,750 vs \$6,400), despite the fall in industry profit (\$2,700 vs \$3,200), since the consumer surplus gain more than offsets the profit loss. Stackelberg moves the market outcome closer to the competitive benchmark.
+

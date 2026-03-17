@@ -65,3 +65,29 @@ b) Show that $p_1 = p_2 = p > c$ is **not** a Nash equilibrium when both firms h
 c) With the asymmetric costs given above ($MC_1 = 10$, $MC_2 = 20$), find the equilibrium prices and profits. What determines the low-cost firm's equilibrium price?
 
 d) The Bertrand model predicts that two firms are enough to achieve the competitive outcome (zero profit with identical costs). Describe two real-world departures from the Bertrand assumptions that allow firms to earn positive profits.
+
+## 5. Differentiated Bertrand Competition
+
+Two firms sell differentiated products with demand:
+$$q_1 = 10 - 2p_1 + p_2, \qquad q_2 = 10 - 2p_2 + p_1$$
+Both firms have marginal cost $c = 1$.
+
+a) Derive each firm's best response function. Are prices strategic complements or substitutes? How do you know?
+
+b) Find the Nash equilibrium prices, quantities, and profits.
+
+c) Show that the equilibrium price exceeds marginal cost. How does product differentiation resolve the Bertrand paradox?
+
+d) Suppose both firms collude and maximize joint profits, setting a common price $p$. Find the collusive price and each firm's profit. Compare to the Nash equilibrium.
+
+## 6. Stackelberg Competition
+
+Two firms compete in quantities. Inverse demand is $P = 150 - Q$ where $Q = q_1 + q_2$, and both firms have marginal cost $c = 30$.
+
+a) Derive each firm's best response function and find the Cournot Nash equilibrium quantities, price, and profits.
+
+b) Now suppose firm 1 is the Stackelberg leader: it chooses $q_1$ first, and firm 2 observes this and then chooses $q_2$. Using backward induction, find the Stackelberg equilibrium quantities, price, and profits for each firm.
+
+c) Compare the Cournot and Stackelberg outcomes from parts (a) and (b). Does the leader gain from moving first? What happens to the follower? Explain the "top dog" strategy.
+
+d) Compute consumer surplus and total welfare under both Cournot and Stackelberg. Which outcome is better for consumers? For society?
