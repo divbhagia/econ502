@@ -31,9 +31,11 @@ def get_dates(start, end, weekdays, year):
         current_date += dt.timedelta(days=1)
     return dates
 
+
 #################################################
 # Function to write table to latex
 #################################################
+
 
 def latex(df, filename=None):
     lines = []
@@ -45,6 +47,7 @@ def latex(df, filename=None):
         with open(filename, "w") as f:
             for i in range(df.shape[0]):
                 f.write(" & ".join([str(x) for x in df.iloc[i]]) + " \\\\\n")
+
 
 #################################################
 # Create syllabus
@@ -67,8 +70,8 @@ if sem == "spring":
     dates = get_dates("01/17", "05/08", class_days, 2026)
     break_ = get_dates("03/30", "04/05", class_days, 2026)
     examday = "Mon 05/11"
-    add_holidays = ["Mon 01/19"]
-    holiday_names = ["MLK Day"]
+    add_holidays = ["Mon 01/19", "Mon 03/02"]
+    holiday_names = ["MLK Day", "Class Cancelled due to Sickness"]
 
 # Set the midterm date
 midterm_idx = 9
@@ -114,12 +117,12 @@ df = pd.DataFrame(
 # Lecture 1
 df.loc[df["Lecture"] == 1, "Topics"] = "Consumer Preferences and Choice"
 df.loc[df["Lecture"] == 1, "References"] = "Ch. 3-4"
-#df.loc[df["Lecture"] == 1, "References"] = "3.1-3.6, 4.1-4.5"
+# df.loc[df["Lecture"] == 1, "References"] = "3.1-3.6, 4.1-4.5"
 
 # Lecture 2
 df.loc[df["Lecture"] == 2, "Topics"] = "Demand Analysis and Consumer Welfare"
 df.loc[df["Lecture"] == 2, "References"] = "Ch. 5-6"
-#df.loc[df["Lecture"] == 2, "References"] = "5.1-5.4, 5.7-5.8, 6.1-6.2"
+# df.loc[df["Lecture"] == 2, "References"] = "5.1-5.4, 5.7-5.8, 6.1-6.2"
 
 # Lecture 3
 df.loc[df["Lecture"] == 3, "Topics"] = "Production, Costs, and Firm Supply"
@@ -129,12 +132,13 @@ df.loc[df["Lecture"] == 3, "References"] = "Ch. 9-11"
 df.loc[df["Lecture"] == 4, "Topics"] = "Competitive Market Equilibrium"
 df.loc[df["Lecture"] == 4, "References"] = "Ch. 12"
 
-#df.loc[df["Lecture"] == 4, "References"] = "12.1–12.8"
+# df.loc[df["Lecture"] == 4, "References"] = "12.1–12.8"
 
 # Lecture 5
 df.loc[df["Lecture"] == 5, "Topics"] = "Welfare Analysis and Efficiency"
 df.loc[df["Lecture"] == 5, "References"] = "Ch. 13"
-#df.loc[df["Lecture"] == 5, "References"] = "12.9–12.10, 13.7–13.8"
+# df.loc[df["Lecture"] == 5, "References"] = "12.9–12.10, 13.7–13.8"
+
 
 # Lecture 6
 df.loc[df["Lecture"] == 6, "Topics"] = "Monopoly and Market Power"
@@ -145,35 +149,35 @@ df.loc[df["Lecture"] == 7, "Topics"] = "Imperfect Competition and Oligopoly"
 df.loc[df["Lecture"] == 7, "References"] = "Ch. 15"
 
 # Lecture 8
-df.loc[df["Lecture"] == 8, "Topics"] = "Labor Markets"
-df.loc[df["Lecture"] == 8, "References"] = "Ch. 16"
+# df.loc[df["Lecture"] == 8, "Topics"] = "Labor Markets"
+# df.loc[df["Lecture"] == 8, "References"] = "Ch. 16"
 
 # Lecture 9
-df.loc[df["Lecture"] == 9, "Topics"] = "Asymmetric Information"
-df.loc[df["Lecture"] == 9, "References"] = "Ch. 18"
+df.loc[df["Lecture"] == 8, "Topics"] = "Asymmetric Information"
+df.loc[df["Lecture"] == 8, "References"] = "Ch. 18"
 
 # Lecture 10
-df.loc[df["Lecture"] == 10, "Topics"] = "Externalities and Public Goods"
-df.loc[df["Lecture"] == 10, "References"] = "Ch. 19-20"
+df.loc[df["Lecture"] == 9, "Topics"] = "Externalities and Public Goods"
+df.loc[df["Lecture"] == 9, "References"] = "Ch. 19-20"
 
 # Lecture 11
-df.loc[df["Lecture"] == 11, "Topics"] = "Choice Under Uncertainty"
-df.loc[df["Lecture"] == 11, "References"] = "Ch. 7"
+df.loc[df["Lecture"] == 10, "Topics"] = "Choice Under Uncertainty"
+df.loc[df["Lecture"] == 10, "References"] = "Ch. 7"
 
 # Lecture 12
-df.loc[df["Lecture"] == 12, "Topics"] = "Introduction to Game Theory"
-df.loc[df["Lecture"] == 12, "References"] = "Ch. 8"
+df.loc[df["Lecture"] == 11, "Topics"] = "Introduction to Game Theory"
+df.loc[df["Lecture"] == 11, "References"] = "Ch. 8"
 
 # Lecture 13
-df.loc[df["Lecture"] == 13, "Topics"] = "Add. Topics/Review"
-df.loc[df["Lecture"] == 13, "References"] = ""
+df.loc[df["Lecture"] == 12, "Topics"] = "Add. Topics/Review"
+df.loc[df["Lecture"] == 12, "References"] = ""
 
 
 # Problem set due dates
 df.loc[df["Lecture"] == 3, "Due"] = "PS 1"
 df.loc[df["Lecture"] == 6, "Due"] = "PS 2"
-df.loc[df["Lecture"] == 9, "Due"] = "PS 3"
-df.loc[df["Lecture"] == 12, "Due"] = "PS 4"
+df.loc[df["Lecture"] == 7, "Due"] = "PS 3"
+df.loc[df["Lecture"] == 12, "Due"] = "PS 4 \& Quiz"
 
 #################################################
 # Put it all together
@@ -217,7 +221,7 @@ for row in splrows:
     )
 
 # # Add horizontal lines
-for row in range(len(lines)-1):
+for row in range(len(lines) - 1):
     lines[row] += "\\Xhline{1.75\\arrayrulewidth} "
 
 # Remove \\\\ from the last line

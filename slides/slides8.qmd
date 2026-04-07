@@ -1,0 +1,588 @@
+---
+title: "Asymmetric Information"
+author: "Div Bhagia"
+format:
+  revealjs:
+    theme: [default, ../assets/slides.scss]
+    embed-resources: true
+    filters:
+      - ../assets/section-slides.lua
+---
+
+# Introduction
+
+## Asymmetric Information
+
+So far, we have largely assumed that all parties to a transaction share the same information. In reality, one side often knows more than the other.
+
+- A used-car seller knows whether the car is a lemon; the buyer does not
+- A worker knows how hard they are working; the employer cannot perfectly observe effort
+- An insurance applicant knows their own risk type better than the insurer
+
+**Key question:** Are markets still efficient when there is asymmetry in how much parties know?
+
+
+## Two Types of Asymmetric Information
+
+1. **Adverse Selection (hidden types)**
+    - Individuals have private information about their characteristics ("types") *before* entering into a contract.
+    - Example: An insurance applicant knows their own risk level better than the insurer.
+  
+2. **Moral Hazard (hidden actions)**
+    - Individuals take actions that are not observable by others *after* entering into a contract.
+    - Example: A worker exerts effort that is not perfectly observable by the employer.
+
+# Adverse Selection: Market for Lemons
+
+## Akerlof's "Market for Lemons"
+
+Akerlof (1970) studied the market for used cars, where sellers know the quality of their car (good or lemon), but buyers do not. He showed that this information asymmetry can lead to market failure.
+
+### Simplified Illustration
+
+- Two types of *used* cars at the dealership:
+    - Good cars (G) 
+    - Lemons (L) that breakdown often
+- Buyers cannot tell apart good cars from lemons, but know that half of the cars are lemons.
+
+
+## Equilibrium 
+
+- Sellers' and buyers' valuations of the cars is as follows:
+
+| Type | Seller's Value | Buyer's Value |
+|------|----------------|--------------|
+| Good (G) | $16,000 | $20,000 |
+| Lemon (L) | $8,000 | $10,000 |
+|
+
+
+Since buyers cannot tell apart good cars from lemons, they will only be willing to pay a price equal to the expected value of the car:
+
+$$ 0.5 \cdot 10,000 + 0.5 \cdot 20,000 = \$15,000 $$
+
+But at that price, only sellers of lemons will be willing to sell. The market for good cars collapses and price falls to \$10,000.
+
+
+## Why This Happens
+
+Generally with a continuum of quality, the same logic applies:
+
+::: {.incremental}
+1. Buyers can't observe quality → they offer an **average** price
+2. Average price is too low for the best sellers → they **exit**
+3. Average quality falls → buyers **lower** their price
+4. More sellers exit → quality falls further
+5. **Unraveling** until only the worst remain
+:::
+
+::: {.fragment}
+Akerlof's key insight: **quality is endogenous to price**. The composition of goods on the market changes when you change the price.
+:::
+
+## Private Market Solutions
+
+**Signaling:** The informed party takes a costly action to reveal type.
+
+- Warranties and guarantees
+- The signal must be **costly to fake**, otherwise it's meaningless
+
+::: {.fragment}
+**Reputation and repeated interaction:**
+
+- Brand names and chains 
+- Rating systems (eBay, Carfax, Yelp)
+- Relationship: you buy from the same dealer 
+:::
+
+::: {.fragment}
+**Certification and screening:**
+
+- Third-party inspections (JD Power, Certified Pre-Owned)
+- Diplomas and professional credentials
+:::
+
+---
+
+## Non-Market Solutions
+
+**Government certification:** FDA, USDA, occupational licensing
+
+**Legal liability:** Lemon laws i.e. seller must disclose known defects
+
+**Mandated information provision:** Disclosure requirements
+
+::: {.fragment}
+All of these work by **reducing the information asymmetry** and making it harder for lemons to hide among good cars.
+:::
+
+#  Adverse Selection in Health Insurance
+
+## Insurance Setup
+
+Loosely following Einav & Finkelstein (2011):
+
+- Continuum of consumers $i \in [0,1]$
+- Each has utility $U(w) = \ln(w)$ (risk-averse)
+- Initial wealth: $w_0 = 150$
+- Probability of loss: 50%
+- Loss amount: $L_i = 100 \times i$
+
+::: {.fragment}
+Consumer $i = 0$ has zero risk. Consumer $i = 1$ faces a potential loss of \$100.
+
+**Each consumer knows their own type $i$. Insurers cannot tell.**
+:::
+
+---
+
+## Example: Consumer $i = 0.60$
+
+- Expected wealth: $150 - 0.5 \times 60 = \$120$
+- Expected utility: $0.5 \ln(150) + 0.5 \ln(90) = 4.76$
+- Certainty equivalent: $e^{4.76} = \$116$
+
+::: {.fragment}
+Willing to pay a **\$4 risk premium** (\$120 − \$116) for insurance.
+:::
+
+::: {.fragment}
+Higher-risk consumers are willing to pay even more for insurance. This is what drives adverse selection.
+:::
+
+---
+
+## The Naive Policy
+
+An insurer offers full insurance at the **population-average** expected loss:
+
+$$\text{Premium} = E[L_i]/2 = \$25$$
+
+::: {.fragment}
+Who buys? The consumer $i_0$ who is indifferent solves:
+
+$$0.5 \ln(150) + 0.5 \ln(150 - 100 i_0) = \ln(125)$$
+
+$$i_0 = 0.46$$
+
+Only consumers with $i \geq 0.46$ buy i.e. the **sicker** 54%.
+:::
+
+---
+
+## The Naive Policy Loses Money
+
+Expected cost per insured:
+
+$$E[L_i \mid i \geq 0.46] = 100 \times 0.5 \times \frac{1 + 0.46}{2} = \$36.50$$
+
+::: {.fragment}
+Premium collected: \$25. Cost per insured: \$36.50.
+
+**The insurer loses \$11.50 per policy.**
+:::
+
+::: {.fragment}
+This is adverse selection at work: at the average price, only the high-risk consumers buy. The healthy ones opt out because the premium far exceeds their expected loss.
+:::
+
+---
+
+## The Break-Even Policy
+
+The insurer raises the premium until revenue equals cost, given who actually enrolls.
+
+::: {.fragment}
+The marginal consumer $i''$ satisfies:
+
+$$0.5 \ln(150) + 0.5 \ln(150 - 100 i'') = \ln\left(150 - E[L_i \mid i \geq i'']\right)$$
+
+Note that: $E[L_i \mid i \geq i''] = 100 \times 0.5 \times \frac{1 + i''}{2}$
+
+Solution: $i'' = 0.75$
+:::
+
+::: {.fragment}
+- Only the **sickest quarter** buys insurance
+- Premium: $0.5 \times (100 + 75)/2 = \$43.75$
+- The market "works" but most gains from insurance are **unrealized**
+:::
+
+---
+
+## Why Doesn't the Market Unravel Completely?
+
+Unlike the used car market, the insurance market doesn't collapse entirely.
+
+::: {.fragment}
+**The reason is risk aversion.** The sickest consumers are willing to pay *more* than their actuarially fair cost because they prefer a bad deal on insurance to no insurance at all.
+:::
+
+::: {.fragment}
+But the outcome is still highly inefficient. The high-risk types impose a **negative externality** on low-risk types by driving up premiums. Most consumers who would benefit from insurance don't get it.
+:::
+
+---
+
+## Einav & Finkelstein's Key Insight
+
+> "The distinguishing feature of selection markets is that the demand and cost curves are tightly linked, because the individual's risk type not only affects demand but also directly determines cost."
+
+::: {.fragment}
+In a normal market, demand and cost are independent objects.
+
+In insurance, **who buys** determines **what it costs**. This is what makes adverse selection different from ordinary market failures.
+:::
+
+## Policy Options: Mandatory Insurance
+
+What if everyone must buy at \$25?
+
+::: {.fragment}
+- Marginal cost of insuring each consumer $\leq$ their willingness to pay (for all $i > 0$)
+- Everyone is insured. Premium = population-average cost. The policy **breaks even**.
+:::
+
+::: {.fragment}
+Not everyone is better off individually as consumers with $i < 0.46$ would prefer no insurance at this price. They are **subsidizing** sicker consumers.
+
+But from a social welfare standpoint, the mandate provides both **risk pooling** and **income spreading** and average welfare is higher than in the free market case.
+:::
+
+---
+
+## Policy Options: Free Screening
+
+Suppose a free test reveals each consumer's type $i$. Insurers then offer actuarially fair individual premiums: $50 \times i$.
+
+::: {.fragment}
+**Full disclosure principle:** Everyone volunteers for the test.
+
+Why? The healthiest half discloses first. Then the healthiest half of the remainder. Then the next. "Turtles all the way down" and eventually everyone is tested.
+:::
+
+::: {.fragment}
+No more adverse selection. Everyone is insured at an individualized fair price.
+:::
+
+---
+
+## Which Is Better?
+
+Surprisingly: **the mandate beats free screening** on average welfare.
+
+::: {.fragment}
+| Policy | Insurance? | Redistribution? | Avg. welfare |
+|---|---|---|---|
+| No insurance | No | No | Lowest |
+| Free market (break-even) | Partial (25%) | No | Low |
+| Individual pricing (screening) | Full | No | Medium |
+| Mandatory pool (\$25) | Full | Yes | **Highest** |
+:::
+
+::: {.fragment}
+The mandatory policy does two things: it provides **insurance** and it **transfers** from low-risk to high-risk. Under concave utility (diminishing marginal utility of wealth), that transfer raises average welfare.
+
+:::
+
+---
+
+## The Common Thread
+
+| | Used Cars | Health Insurance |
+|---|---|---|
+| Informed party | Seller (knows quality) | Consumer (knows health) |
+| Uninformed party | Buyer | Insurer |
+| Average pricing → | Good cars exit | Healthy people drop out |
+| Result | Market for plums collapses | Insurance pool deteriorates |
+| Mechanism | Quality endogenous to price | Risk endogenous to premium |
+
+::: {.fragment}
+Adverse selection arises whenever **one party has private information** and **the other party prices on averages**. The feedback between price and composition is what drives the unraveling.
+:::
+
+# Moral Hazard
+
+
+## The Basic Idea
+
+You behave differently when you don't bear the full cost of your actions.
+
+::: {.fragment}
+- Fully insured car → leave it unlocked, drive less carefully
+- Health insurance → visit the doctor more, worry less about prevention
+- Bank bailout guarantee → take on riskier investments
+:::
+
+::: {.fragment}
+The insurer can observe the **outcome** (car stolen, got sick, bank failed) but not the **action** (did you lock the car? exercise? manage risk?).
+
+This is the **hidden action** problem.
+:::
+
+---
+
+## Moral Hazard in Unemployment Insurance
+
+A worker loses their job. The government offers unemployment benefits $b$ per period.
+
+::: {.fragment}
+**Without UI:** The worker bears the full cost of unemployment. Strong incentive to search hard and accept offers quickly.
+:::
+
+::: {.fragment}
+**With UI:** The cost of remaining unemployed falls from "no income" to "$b$ per period." At the margin, the worker:
+
+- Searches less intensely
+- Is pickier about which offers to accept
+- Stays unemployed longer
+:::
+
+---
+
+## The Hidden Action
+
+The government can observe:
+
+- Whether the worker is **employed or not**
+
+::: {.fragment}
+The government **cannot** observe:
+
+- How many applications the worker sends
+- How hard they prepare for interviews
+- Whether they turned down a reasonable offer
+- Whether they're really "looking"
+:::
+
+::: {.fragment}
+**Search effort** is the hidden action. If the government could observe it, they'd simply require a minimum effort level. But they can't so benefits distort incentives.
+:::
+
+---
+
+## A Simple Model
+
+Two periods. A worker is unemployed in period 1 and chooses search effort $e \in [0,1]$.
+
+- With probability $e$: finds a job, earns wage $w$ in period 2
+- With probability $1 - e$: stays unemployed in period 2
+- Cost of search effort: $c(e) = \frac{1}{2}e^2$
+
+::: {.fragment}
+The government pays benefit $b$ while unemployed (both periods). If employed in period 2, benefits stop.
+:::
+
+## Worker's consumption
+
+In this model, the worker's consumption in each state is given by:
+
+| Period | State | Consumption |
+|---|---|---|
+| Period 1 | Unemployed | $b$ |
+| Period 2 | Employed (prob $e$) | $w$ |
+| Period 2 | Unemployed (prob $1-e$) | $b$ |
+
+
+---
+
+## Worker's Problem
+
+The worker chooses $e$ to maximize expected utility minus effort cost:
+
+$$\max_e \quad u(b) + e \cdot u(w) + (1-e) \cdot u(b) - \frac{1}{2}e^2$$
+
+::: {.fragment}
+First-order condition:
+
+$$u(w) - u(b) = e^*$$
+
+The worker searches until the **marginal cost of effort** ($e$) equals the **marginal benefit** i.e. the utility gain from being employed vs. staying on UI.
+:::
+
+---
+
+## How Benefits Affect Effort
+
+$$e^* = u(w) - u(b)$$
+
+::: {.fragment}
+When $b$ increases:
+
+- $u(b)$ rises: unemployment is **less painful**
+- $u(w) - u(b)$ **shrinks**: the gain from finding a job falls
+- So $e^*$ **falls**: the worker searches less
+:::
+
+::: {.fragment}
+In the extreme:
+
+- $b = 0$: maximum search effort, $e^* = u(w) - u(0)$
+- $b = w$: zero search effort, $e^* = 0$ 
+:::
+
+---
+
+## The Tradeoff
+
+More generous UI ($\uparrow b$) does two things:
+
+::: {.fragment}
+**Insurance value** ↑
+
+- Smooths consumption during a bad shock
+- Protects workers from income loss they didn't choose
+- Especially valuable if workers are risk-averse
+:::
+
+::: {.fragment}
+**Moral hazard cost** ↑
+
+- Reduces search effort
+- Workers stay unemployed longer
+- Output is lost, and the government pays more in benefits
+:::
+
+::: {.fragment}
+The optimal $b$ **balances** these two forces. Neither $b = 0$ (no insurance) nor $b = w$ (full insurance) is optimal.
+:::
+
+---
+
+## The Government's Problem
+
+The government chooses $b$ to maximize the worker's expected welfare, subject to a budget constraint:
+
+$$\max_b \quad u(b) + e^*(b) \cdot u(w) + (1 - e^*(b)) \cdot u(b) - \frac{1}{2}(e^*(b))^2$$
+
+::: {.fragment}
+subject to:
+
+- **Incentive compatibility:** $e^* = u(w) - u(b)$ (the worker chooses effort optimally given $b$)
+- **Budget constraint:** benefits must be funded (e.g., through taxes on wages)
+:::
+
+::: {.fragment}
+The government **cannot** choose $e$ directly. It can only choose $b$, and $e$ responds.
+:::
+
+---
+
+## First Best vs. Second Best
+
+**First best** (effort observable): The government picks $b$ and $e$ directly.
+
+- Full insurance: $b = w$ (perfect consumption smoothing)
+- Mandate high search effort
+- Worker bears no risk and works hard
+
+::: {.fragment}
+**Second best** (effort hidden): The government picks $b$, worker picks $e$.
+
+- $b < w$ — **incomplete insurance** to preserve search incentives
+- Worker bears some risk as the **price** of maintaining incentives
+- Fundamental tradeoff: insurance vs. incentives
+:::
+
+::: {.fragment}
+The gap between first best and second best is the **cost of moral hazard**.
+:::
+
+---
+
+## Evidence: The Spike at Exhaustion
+
+If moral hazard matters, we should see search effort respond to benefits.
+
+::: {.fragment}
+One of the strongest empirical regularities in labor economics:
+
+**The probability of finding a job spikes right before UI benefits expire.**
+:::
+
+::: {.fragment}
+Workers on 26-week UI are much more likely to find a job in weeks 25–26 than in week 10.
+
+This is hard to explain without moral hazard. If effort were constant, the hazard rate wouldn't jump at the exhaustion date. Workers are clearly **increasing effort** as the deadline approaches and the cost of remaining unemployed is about to rise sharply.
+:::
+
+---
+
+## Evidence: Benefit Generosity and Duration
+
+Studies consistently find:
+
+::: {.fragment}
+**Higher replacement rates** (benefit as % of prior wage) → **longer unemployment spells**
+
+A 10 percentage point increase in the replacement rate increases average spell duration by roughly 1–1.5 weeks.
+:::
+
+::: {.fragment}
+**Longer benefit duration** → **longer unemployment spells**
+
+Workers use the extra weeks. But many find jobs just before the new exhaustion date — the spike shifts with the deadline.
+:::
+
+::: {.fragment}
+This doesn't mean UI is bad. It means there is a real tradeoff. The insurance value may well exceed the moral hazard cost (empirical evidence supports this). But the moral hazard cost is not zero.
+:::
+
+---
+
+## Optimal Time Path of Benefits
+
+Shavell and Weiss (1979): How should benefits change over the spell?
+
+::: {.fragment}
+**Optimal UI benefits decline over time.**
+
+- **Early in the spell:** Insurance value is highest. The worker just lost their job, hasn't depleted savings yet, needs time to search. Pay generously.
+- **Later in the spell:** Moral hazard concern grows. Savings are lower, so the threat of benefit loss is more powerful. Taper benefits to strengthen incentives.
+:::
+
+::: {.fragment}
+This is roughly what real UI systems do either explicitly through declining benefit amounts or implicitly through finite duration (benefits drop from $b$ to $0$ at exhaustion).
+:::
+
+---
+
+## Moral Hazard Beyond UI
+
+The same structure appears whenever insurance or protection changes behavior:
+
+::: {.fragment}
+**Health insurance:** Insured patients consume more health care. Copays and deductibles are the "incomplete insurance" that preserves incentives as you bear some cost at the margin.
+:::
+
+::: {.fragment}
+**Banking:** Deposit insurance and "too big to fail" protect depositors and the system. but banks take on more risk knowing they'll be bailed out. Capital requirements are the policy response.
+:::
+
+::: {.fragment}
+**Employment contracts:** The Gibbons principal-agent model. The worker's effort is hidden. Steep incentive pay (high $b$ in $w = s + b \cdot y$) is the response, but imposes risk on the worker.
+:::
+
+---
+
+## The Common Structure
+
+| Element | UI | Health Insurance | Banking |
+|---|---|---|---|
+| Principal | Government | Insurer | Regulator/depositors |
+| Agent | Worker | Patient | Bank |
+| Hidden action | Search effort | Prevention, usage | Risk-taking |
+| Observable | Employment status | Claims filed | Returns/failure |
+| Contract lever | Benefit level $b$ | Copay, deductible | Capital requirements |
+| Tradeoff | Insurance vs. search | Coverage vs. overuse | Stability vs. risk |
+
+---
+
+## Key Takeaways
+
+::: {.incremental}
+1. **Moral hazard** arises when insurance changes behavior because the insured party doesn't bear the full cost of their actions
+2. The hidden action (effort, care, risk-taking) cannot be contracted on: only outcomes are observable
+3. The fundamental tradeoff is **insurance vs. incentives**: full insurance eliminates risk but also eliminates effort
+4. The optimal policy provides **incomplete insurance**: enough to protect against bad outcomes, not so much that it kills incentives
+:::
