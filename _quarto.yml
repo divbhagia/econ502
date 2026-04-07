@@ -58,12 +58,10 @@ website:
             file: content/lecture9.qmd
           - text: "Additional Content"
             file: content/part3-add-content.qmd
-      - section: "IV. Uncertainty and Strategy"
+      - section: "IV. Introduction to Game Theory"
         contents:
-          - text: "10. Choice Under Uncertainty"
+          - text: "10. Introduction to Game Theory"
             file: content/lecture10.qmd
-          - text: "11. Introduction to Game Theory"
-            file: content/lecture11.qmd
           - text: "Additional Content"
             file: content/part4-add-content.qmd
     

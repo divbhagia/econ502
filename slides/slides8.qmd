@@ -1,6 +1,7 @@
 ---
 title: "Asymmetric Information"
 author: "Div Bhagia"
+subtitle: "Lecture 8"
 format:
   revealjs:
     theme: [default, ../assets/slides.scss]

@@ -454,42 +454,6 @@
     ]
   },
   {
-    "objectID": "content/lecture11.html",
-    "href": "content/lecture11.html",
-    "title": "Lecture 11: Choice Under Uncertainty",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "11. Introduction to Game Theory"
-    ]
-  },
-  {
-    "objectID": "content/lecture11.html#topics",
-    "href": "content/lecture11.html#topics",
-    "title": "Lecture 11: Choice Under Uncertainty",
-    "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "11. Introduction to Game Theory"
-    ]
-  },
-  {
-    "objectID": "content/lecture11.html#slides",
-    "href": "content/lecture11.html#slides",
-    "title": "Lecture 11: Choice Under Uncertainty",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "11. Introduction to Game Theory"
-    ]
-  },
-  {
     "objectID": "content/lecture1.html",
     "href": "content/lecture1.html",
     "title": "Lecture 1: Consumer Preferences and Choice",
@@ -675,59 +639,38 @@
   {
     "objectID": "content/lecture10.html",
     "href": "content/lecture10.html",
-    "title": "Lecture 10: Externalities and Public Goods",
+    "title": "Lecture 10: Introduction to Game Theory",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
-      "IV. Uncertainty and Strategy",
-      "10. Choice Under Uncertainty"
+      "IV. Introduction to Game Theory",
+      "10. Introduction to Game Theory"
     ]
   },
   {
     "objectID": "content/lecture10.html#topics",
     "href": "content/lecture10.html#topics",
-    "title": "Lecture 10: Externalities and Public Goods",
+    "title": "Lecture 10: Introduction to Game Theory",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
       "Content",
-      "IV. Uncertainty and Strategy",
-      "10. Choice Under Uncertainty"
+      "IV. Introduction to Game Theory",
+      "10. Introduction to Game Theory"
     ]
   },
   {
     "objectID": "content/lecture10.html#slides",
     "href": "content/lecture10.html#slides",
-    "title": "Lecture 10: Externalities and Public Goods",
+    "title": "Lecture 10: Introduction to Game Theory",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
     "crumbs": [
       "Content",
-      "IV. Uncertainty and Strategy",
-      "10. Choice Under Uncertainty"
+      "IV. Introduction to Game Theory",
+      "10. Introduction to Game Theory"
     ]
-  },
-  {
-    "objectID": "content/lecture12.html",
-    "href": "content/lecture12.html",
-    "title": "Lecture 12: Introduction to Game Theory",
-    "section": "",
-    "text": "Textbook references:"
-  },
-  {
-    "objectID": "content/lecture12.html#topics",
-    "href": "content/lecture12.html#topics",
-    "title": "Lecture 12: Introduction to Game Theory",
-    "section": "",
-    "text": "Textbook references:"
-  },
-  {
-    "objectID": "content/lecture12.html#slides",
-    "href": "content/lecture12.html#slides",
-    "title": "Lecture 12: Introduction to Game Theory",
-    "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys."
   },
   {
     "objectID": "content/lecture3.html",
@@ -840,7 +783,7 @@
   {
     "objectID": "content/lecture9.html",
     "href": "content/lecture9.html",
-    "title": "Lecture 9: Asymmetric Information",
+    "title": "Lecture 10: Externalities and Public Goods",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
@@ -852,7 +795,7 @@
   {
     "objectID": "content/lecture9.html#topics",
     "href": "content/lecture9.html#topics",
-    "title": "Lecture 9: Asymmetric Information",
+    "title": "Lecture 10: Externalities and Public Goods",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
@@ -864,7 +807,7 @@
   {
     "objectID": "content/lecture9.html#slides",
     "href": "content/lecture9.html#slides",
-    "title": "Lecture 9: Asymmetric Information",
+    "title": "Lecture 10: Externalities and Public Goods",
     "section": "Slides",
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
     "crumbs": [
@@ -893,7 +836,7 @@
     "text": "You can find additional content and reference materials for Part IV: Uncertainty and Strategy below.",
     "crumbs": [
       "Content",
-      "IV. Uncertainty and Strategy",
+      "IV. Introduction to Game Theory",
       "Additional Content"
     ]
   },

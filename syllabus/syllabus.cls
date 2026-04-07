@@ -22,7 +22,7 @@
 %% Font settings
 %% ----------------------------
 \usepackage{fontspec}
-\setmainfont{Source Sans Pro}
+\setmainfont{Fira Sans}
 \setsansfont{Fira Sans}
 \setmonofont{TeX Gyre Cursor}
 
@@ -39,6 +39,7 @@
 %% ----------------------------
 \usepackage{enumitem}
 \setlist[itemize]{itemsep=0pt, parsep=0pt, topsep=0.25\baselineskip}
+\setlist[itemize]{nosep, topsep=0.25\baselineskip}
 \setlist[enumerate]{itemsep=0pt, parsep=0pt, topsep=0.25\baselineskip}
 \newlist{flatlist}{itemize}{1}
 \setlist[flatlist]{label={}, leftmargin=0pt, itemsep=0pt, parsep=0pt, topsep=0pt}

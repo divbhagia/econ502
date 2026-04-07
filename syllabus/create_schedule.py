@@ -70,8 +70,8 @@ if sem == "spring":
     dates = get_dates("01/17", "05/08", class_days, 2026)
     break_ = get_dates("03/30", "04/05", class_days, 2026)
     examday = "Mon 05/11"
-    add_holidays = ["Mon 01/19", "Mon 03/02"]
-    holiday_names = ["MLK Day", "Class Cancelled due to Sickness"]
+    add_holidays = ["Mon 01/19", "Mon 03/02", "Mon 04/06"]
+    holiday_names = ["MLK Day", "Class Cancelled due to Sickness", "Midterm Discussion"]
 
 # Set the midterm date
 midterm_idx = 9
@@ -161,23 +161,23 @@ df.loc[df["Lecture"] == 9, "Topics"] = "Externalities and Public Goods"
 df.loc[df["Lecture"] == 9, "References"] = "Ch. 19-20"
 
 # Lecture 11
-df.loc[df["Lecture"] == 10, "Topics"] = "Choice Under Uncertainty"
-df.loc[df["Lecture"] == 10, "References"] = "Ch. 7"
+# df.loc[df["Lecture"] == 10, "Topics"] = "Choice Under Uncertainty"
+# df.loc[df["Lecture"] == 10, "References"] = "Ch. 7"
 
 # Lecture 12
-df.loc[df["Lecture"] == 11, "Topics"] = "Introduction to Game Theory"
-df.loc[df["Lecture"] == 11, "References"] = "Ch. 8"
+df.loc[df["Lecture"] == 10, "Topics"] = "Introduction to Game Theory"
+df.loc[df["Lecture"] == 10, "References"] = "Ch. 8"
 
 # Lecture 13
-df.loc[df["Lecture"] == 12, "Topics"] = "Add. Topics/Review"
-df.loc[df["Lecture"] == 12, "References"] = ""
+df.loc[df["Lecture"] == 11, "Topics"] = "Review Class"
+df.loc[df["Lecture"] == 11, "References"] = ""
 
 
 # Problem set due dates
 df.loc[df["Lecture"] == 3, "Due"] = "PS 1"
 df.loc[df["Lecture"] == 6, "Due"] = "PS 2"
 df.loc[df["Lecture"] == 7, "Due"] = "PS 3"
-df.loc[df["Lecture"] == 12, "Due"] = "PS 4 \& Quiz"
+df.loc[df["Lecture"] == 11, "Due"] = "PS 4 \\& Quiz"
 
 #################################################
 # Put it all together
