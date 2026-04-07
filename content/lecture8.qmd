@@ -1,5 +1,5 @@
 ---
-title: "Lecture 8: Labor Markets and Monopsony"
+title: "Lecture 8: Assymmetric Information"
 nav-sidebar: false
 format: html
 ---

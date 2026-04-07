@@ -48,24 +48,22 @@ website:
             file: content/lecture6.qmd
           - text: "7. Market Power in Goods Markets (cont.)"
             file: content/lecture7.qmd
-          - text: "8. Labor Markets and Monopsony"
-            file: content/lecture8.qmd
           - text: "Additional Content"
             file: content/part2-add-content.qmd
       - section: "III. Market Failures"
         contents:
-          - text: "9. Asymmetric Information"
+          - text: "8. Asymmetric Information"
+            file: content/lecture8.qmd
+          - text: "9. Externalities and Public Goods"
             file: content/lecture9.qmd
-          - text: "10. Externalities and Public Goods"
-            file: content/lecture10.qmd
           - text: "Additional Content"
             file: content/part3-add-content.qmd
       - section: "IV. Uncertainty and Strategy"
         contents:
-          - text: "11. Choice Under Uncertainty"
+          - text: "10. Choice Under Uncertainty"
+            file: content/lecture10.qmd
+          - text: "11. Introduction to Game Theory"
             file: content/lecture11.qmd
-          - text: "12. Introduction to Game Theory"
-            file: content/lecture12.qmd
           - text: "Additional Content"
             file: content/part4-add-content.qmd
     
