@@ -317,8 +317,8 @@
     "text": "Textbook references:",
     "crumbs": [
       "Content",
-      "II. Market Power",
-      "8. Labor Markets and Monopsony"
+      "III. Market Failures",
+      "8. Asymmetric Information"
     ]
   },
   {
@@ -329,8 +329,8 @@
     "text": "Textbook references:",
     "crumbs": [
       "Content",
-      "II. Market Power",
-      "8. Labor Markets and Monopsony"
+      "III. Market Failures",
+      "8. Asymmetric Information"
     ]
   },
   {
@@ -341,8 +341,8 @@
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
     "crumbs": [
       "Content",
-      "II. Market Power",
-      "8. Labor Markets and Monopsony"
+      "III. Market Failures",
+      "8. Asymmetric Information"
     ]
   },
   {
@@ -462,7 +462,7 @@
     "crumbs": [
       "Content",
       "IV. Uncertainty and Strategy",
-      "11. Choice Under Uncertainty"
+      "11. Introduction to Game Theory"
     ]
   },
   {
@@ -474,7 +474,7 @@
     "crumbs": [
       "Content",
       "IV. Uncertainty and Strategy",
-      "11. Choice Under Uncertainty"
+      "11. Introduction to Game Theory"
     ]
   },
   {
@@ -486,7 +486,7 @@
     "crumbs": [
       "Content",
       "IV. Uncertainty and Strategy",
-      "11. Choice Under Uncertainty"
+      "11. Introduction to Game Theory"
     ]
   },
   {
@@ -680,8 +680,8 @@
     "text": "Textbook references:",
     "crumbs": [
       "Content",
-      "III. Market Failures",
-      "10. Externalities and Public Goods"
+      "IV. Uncertainty and Strategy",
+      "10. Choice Under Uncertainty"
     ]
   },
   {
@@ -692,8 +692,8 @@
     "text": "Textbook references:",
     "crumbs": [
       "Content",
-      "III. Market Failures",
-      "10. Externalities and Public Goods"
+      "IV. Uncertainty and Strategy",
+      "10. Choice Under Uncertainty"
     ]
   },
   {
@@ -704,8 +704,8 @@
     "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
     "crumbs": [
       "Content",
-      "III. Market Failures",
-      "10. Externalities and Public Goods"
+      "IV. Uncertainty and Strategy",
+      "10. Choice Under Uncertainty"
     ]
   },
   {
@@ -713,36 +713,21 @@
     "href": "content/lecture12.html",
     "title": "Lecture 12: Introduction to Game Theory",
     "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "12. Introduction to Game Theory"
-    ]
+    "text": "Textbook references:"
   },
   {
     "objectID": "content/lecture12.html#topics",
     "href": "content/lecture12.html#topics",
     "title": "Lecture 12: Introduction to Game Theory",
     "section": "",
-    "text": "Textbook references:",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "12. Introduction to Game Theory"
-    ]
+    "text": "Textbook references:"
   },
   {
     "objectID": "content/lecture12.html#slides",
     "href": "content/lecture12.html#slides",
     "title": "Lecture 12: Introduction to Game Theory",
     "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
-    "crumbs": [
-      "Content",
-      "IV. Uncertainty and Strategy",
-      "12. Introduction to Game Theory"
-    ]
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys."
   },
   {
     "objectID": "content/lecture3.html",
@@ -861,7 +846,7 @@
     "crumbs": [
       "Content",
       "III. Market Failures",
-      "9. Asymmetric Information"
+      "9. Externalities and Public Goods"
     ]
   },
   {
@@ -873,7 +858,7 @@
     "crumbs": [
       "Content",
       "III. Market Failures",
-      "9. Asymmetric Information"
+      "9. Externalities and Public Goods"
     ]
   },
   {
@@ -885,7 +870,7 @@
     "crumbs": [
       "Content",
       "III. Market Failures",
-      "9. Asymmetric Information"
+      "9. Externalities and Public Goods"
     ]
   },
   {
