@@ -22,6 +22,8 @@ So far, we have largely assumed that all parties to a transaction share the same
 
 **Key question:** Are markets still efficient when there is asymmetry in how much parties know?
 
+---
+
 
 ## Two Types of Asymmetric Information
 
@@ -46,6 +48,7 @@ Akerlof (1970) studied the market for used cars, where sellers know the quality 
     - Lemons (L) that breakdown often
 - Buyers cannot tell apart good cars from lemons, but know that half of the cars are lemons.
 
+---
 
 ## Equilibrium 
 
@@ -64,6 +67,7 @@ $$ 0.5 \cdot 10,000 + 0.5 \cdot 20,000 = \$15,000 $$
 
 But at that price, only sellers of lemons will be willing to sell. The market for good cars collapses and price falls to \$10,000.
 
+---
 
 ## Why This Happens
 
@@ -80,6 +84,8 @@ Generally with a continuum of quality, the same logic applies:
 ::: {.fragment}
 Akerlof's key insight: **quality is endogenous to price**. The composition of goods on the market changes when you change the price.
 :::
+
+---
 
 ## Private Market Solutions
 
@@ -121,7 +127,7 @@ All of these work by **reducing the information asymmetry** and making it harder
 
 ## Insurance Setup
 
-Loosely following Einav & Finkelstein (2011):
+Adapted from David Autor's lecture notes.
 
 - Continuum of consumers $i \in [0,1]$
 - Each has utility $U(w) = \ln(w)$ (risk-averse)
@@ -137,30 +143,97 @@ Consumer $i = 0$ has zero risk. Consumer $i = 1$ faces a potential loss of \$100
 
 ---
 
-## Example: Consumer $i = 0.60$
+## Consumer $i = 0.60$
 
 - Expected wealth: $150 - 0.5 \times 60 = \$120$
 - Expected utility: $0.5 \ln(150) + 0.5 \ln(90) = 4.76$
-- Certainty equivalent: $e^{4.76} = \$116$
+- Certainty equivalent: $e^{4.76} = \$116.19$
 
-::: {.fragment}
-Willing to pay a **\$4 risk premium** (\$120 − \$116) for insurance.
-:::
+**Note**: Certainty equivalent is the amount of wealth that gives the same utility as the risky prospect.
 
-::: {.fragment}
-Higher-risk consumers are willing to pay even more for insurance. This is what drives adverse selection.
-:::
+So consumer $i = 0.60$ is willing to pay a **\$3.81 risk premium** (\$120 − \$116.19) for insurance.
+
+In total, the consumer is **willing to pay \$33.81** for insurance that covers the \$30 expected loss (the \$3.81 risk premium plus the \$30 actuarially fair cost).
+
+---
+
+
+## Willingness to Pay for Insurance
+
+Expected wealth for $i$:
+$$ E[w_i] = 0.5 \cdot (150) + 0.5 \cdot (150 - 100 i) = 150 - 50 i $$
+
+Expected utility for $i$:
+$$ E[U(w_i)] = 0.5 \ln(150) + 0.5 \ln(150 - 100 i) $$
+
+Certainty equivalent and risk premium for $i$:
+$$ CE_i = e^{E[U(w_i)]}, \qquad RP_i = E[w_i] - CE_i $$
+
+Consumer $i'$s willingness to pay for insurance:
+$$ WTP_i = \underbrace{w_0-E[w_i]}_{\text{Expected Loss}} + RP_i = w_0 - CE_i $$
+
+---
+
+## Willingness to Pay vs. Risk Type
+
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 5.5
+#| fig-height: 4.5
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Color blind pallette
+CB = ['#377eb8', '#ff7f00', '#4daf4a', '#f781bf', '#a65628', '#984ea3', '#999999', '#e41a1c', '#dede00']
+
+i_vals = np.linspace(0, 1, 100)
+def expected_wealth(i):
+    return 150 - 50 * i
+def expected_utility(i):
+    return 0.5 * np.log(150) + 0.5 * np.log(150 - 100 * i)
+def certainty_equivalent(i):
+    return np.exp(expected_utility(i))
+def risk_premium(i):
+    return expected_wealth(i) - certainty_equivalent(i)
+
+# change axis left to right
+expected_wealth_vals = expected_wealth(i_vals)
+ce_vals = certainty_equivalent(i_vals)
+risk_premium_vals = risk_premium(i_vals)
+wtp_vals = 150 - ce_vals
+plt.figure(figsize=(8, 6))
+plt.gca().invert_xaxis()
+plt.plot(i_vals, wtp_vals, label='WTP for Insurance', color=CB[1], linewidth=3)
+plt.xlabel('Risk Type (i)', fontsize=13)
+plt.ylabel('Amount ($)', fontsize=13)
+plt.xticks(fontsize=12)
+plt.yticks(fontsize=12)
+plt.gca().spines['top'].set_visible(False)
+plt.gca().spines['right'].set_visible(False)
+plt.legend(fontsize=13)
+plt.grid(alpha=0.3)
+plt.show()
+
+
+```
 
 ---
 
 ## The Naive Policy
 
-An insurer offers full insurance at the **population-average** expected loss:
+An insurer offers **full insurance** at the **population-average** expected loss:
 
-$$\text{Premium} = E[L_i]/2 = \$25$$
+$$\text{Premium} = 0.5 \times E[L_i] = \$25$$
+
+Note that $L_i \sim U(0,100)$, so $E[L_i] = 50$, and each consumer faces a 50% probability of loss.
+
+**Which consumers will buy at this price?** 
 
 ::: {.fragment}
-Who buys? The consumer $i_0$ who is indifferent solves:
+The consumer $i_0$ who is indifferent solves:
 
 $$0.5 \ln(150) + 0.5 \ln(150 - 100 i_0) = \ln(125)$$
 
@@ -171,11 +244,70 @@ Only consumers with $i \geq 0.46$ buy i.e. the **sicker** 54%.
 
 ---
 
+## Who buys insurance at \$25?
+
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 5.5
+#| fig-height: 4.5
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Color blind pallette
+CB = ['#377eb8', '#ff7f00', '#4daf4a', '#f781bf', '#a65628', '#984ea3', '#999999', '#e41a1c', '#dede00']
+
+i_vals = np.linspace(0, 1, 100)
+def expected_wealth(i):
+    return 150 - 50 * i
+def expected_utility(i):
+    return 0.5 * np.log(150) + 0.5 * np.log(150 - 100 * i)
+def certainty_equivalent(i):
+    return np.exp(expected_utility(i))
+def risk_premium(i):
+    return expected_wealth(i) - certainty_equivalent(i)
+
+# Find the cutoff type i0
+from scipy.optimize import fsolve
+def indifference_condition(i):
+    return 0.5 * np.log(150) + 0.5 * np.log(150 - 100 * i) - np.log(125)
+i0 = fsolve(indifference_condition, 0.5)[0]
+
+# change axis left to right
+expected_wealth_vals = expected_wealth(i_vals)
+ce_vals = certainty_equivalent(i_vals)
+risk_premium_vals = risk_premium(i_vals)
+wtp_vals = 150 - ce_vals
+plt.figure(figsize=(8, 6))
+plt.gca().invert_xaxis()
+plt.plot(i_vals, wtp_vals, label='WTP for Insurance', color=CB[1], linewidth=3)
+# clarify risk goes from low to high left to right
+plt.xlabel('Risk Type (i)', fontsize=13)
+plt.ylabel('Amount ($)', fontsize=13)
+plt.axvline(x=i0, color="gray", linestyle='--', linewidth=2)
+plt.text(i0 + 0.25, 10, f'i $\geq$ {i0:.2f} Buys', color="gray", fontsize=12, fontweight='bold')
+plt.axhline(y=25, color="gray", linestyle='--', linewidth=2)
+plt.text(0.95, 26, 'Premium=$25', color="gray", fontsize=12, fontweight='bold')
+plt.xticks(fontsize=12)
+plt.yticks(fontsize=12)
+plt.gca().spines['top'].set_visible(False)
+plt.gca().spines['right'].set_visible(False)
+plt.legend(fontsize=13)
+plt.grid(alpha=0.3)
+plt.show()
+
+
+```
+
+---
+
 ## The Naive Policy Loses Money
 
 Expected cost per insured:
 
-$$E[L_i \mid i \geq 0.46] = 100 \times 0.5 \times \frac{1 + 0.46}{2} = \$36.50$$
+$$0.5 \times E[L_i \mid i \geq 0.46] = 0.5 \times 100 \times \frac{1 + 0.46}{2} = \$36.50$$
 
 ::: {.fragment}
 Premium collected: \$25. Cost per insured: \$36.50.
@@ -187,31 +319,99 @@ Premium collected: \$25. Cost per insured: \$36.50.
 This is adverse selection at work: at the average price, only the high-risk consumers buy. The healthy ones opt out because the premium far exceeds their expected loss.
 :::
 
+::: {.fragment}
+**What should be insurer's optimal policy? **
+:::
+
+::: {.fragment}
+Insurer should set the premium high enough to break even given the composition of buyers it attracts.
+:::
+
 ---
 
 ## The Break-Even Policy
 
-The insurer raises the premium until revenue equals cost, given who actually enrolls.
+Let $i_0$ be the cutoff type who enrolls. Then break-even requires that the premium $P$ equals the expected cost of insuring those types:
+$$ P = 0.5 \times E[L_i \mid i \geq i_0] =  0.5 \times 100 \times \frac{1 + i_0}{2}$$
 
-::: {.fragment}
-The marginal consumer $i''$ satisfies:
+Since consumer $i_0$ is indifferent between buying and not buying, we have:
 
-$$0.5 \ln(150) + 0.5 \ln(150 - 100 i'') = \ln\left(150 - E[L_i \mid i \geq i'']\right)$$
+$$0.5 \ln(150) + 0.5 \ln(150 - 100 i_0) = \ln\left(150 -P\right)$$
 
-Note that: $E[L_i \mid i \geq i''] = 100 \times 0.5 \times \frac{1 + i''}{2}$
+**Solution**: $i_0 = 0.75$ 
 
-Solution: $i'' = 0.75$
-:::
-
-::: {.fragment}
-- Only the **sickest quarter** buys insurance
-- Premium: $0.5 \times (100 + 75)/2 = \$43.75$
-- The market "works" but most gains from insurance are **unrealized**
-:::
+**Premium**: $0.5 \times (100 + 75)/2 = \$43.75$
 
 ---
 
-## Why Doesn't the Market Unravel Completely?
+## The Break-Even Policy
+
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 5.5
+#| fig-height: 4.5
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Color blind pallette
+CB = ['#377eb8', '#ff7f00', '#4daf4a', '#f781bf', '#a65628', '#984ea3', '#999999', '#e41a1c', '#dede00']
+
+i_vals = np.linspace(0, 1, 100)
+def expected_wealth(i):
+    return 150 - 50 * i
+def expected_utility(i):
+    return 0.5 * np.log(150) + 0.5 * np.log(150 - 100 * i)
+def certainty_equivalent(i):
+    return np.exp(expected_utility(i))
+def risk_premium(i):
+    return expected_wealth(i) - certainty_equivalent(i)
+
+def avg_cost(i0):
+    return 0.5 * 100 * (1 + i0) / 2
+
+# Find the cutoff type i0 for the break-even policy
+from scipy.optimize import fsolve
+def break_even_condition(i0):
+    P = avg_cost(i0)
+    return 0.5 * np.log(150) + 0.5 * np.log(150 - 100 * i0) - np.log(150 - P)
+i0 = fsolve(break_even_condition, 0.5)[0]
+
+# Premium and cost at break-even
+premium = avg_cost(i0)
+
+# change axis left to right
+expected_wealth_vals = expected_wealth(i_vals)
+ce_vals = certainty_equivalent(i_vals)
+risk_premium_vals = risk_premium(i_vals)
+avg_cost_vals = avg_cost(i_vals)
+wtp_vals = 150 - ce_vals
+plt.figure(figsize=(8, 6))
+plt.gca().invert_xaxis()
+plt.plot(i_vals, wtp_vals, label='WTP for Insurance', color=CB[1], linewidth=3)
+plt.plot(i_vals, avg_cost_vals, label='Avg. Cost of Insuring $i \\geq i_0$', color=CB[2], linewidth=3)
+plt.axvline(x=i0, color="gray", linestyle='--', linewidth=2)
+plt.text(i0 + 0.25, 10, f'i $\geq$ {i0:.2f} Buys', color="gray", fontsize=12, fontweight='bold')
+plt.axhline(y=premium, color="gray", linestyle='--', linewidth=2)
+plt.text(0.7, premium + 1, f'Premium=${premium:.2f}', color="gray", fontsize=12, fontweight='bold')
+plt.xlabel('Risk Type (i)', fontsize=13)
+plt.ylabel('Amount ($)', fontsize=13)
+plt.xticks(fontsize=12)
+plt.yticks(fontsize=12)
+plt.gca().spines['top'].set_visible(False)
+plt.gca().spines['right'].set_visible(False)
+plt.legend(fontsize=13)
+plt.grid(alpha=0.3)
+plt.show()
+
+
+```
+
+---
+
+## Is the market functioning well?
 
 Unlike the used car market, the insurance market doesn't collapse entirely.
 
@@ -225,15 +425,83 @@ But the outcome is still highly inefficient. The high-risk types impose a **nega
 
 ---
 
-## Einav & Finkelstein's Key Insight
+## Adverse Selection on a Plot
 
-> "The distinguishing feature of selection markets is that the demand and cost curves are tightly linked, because the individual's risk type not only affects demand but also directly determines cost."
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 5.5
+#| fig-height: 4.5
 
-::: {.fragment}
-In a normal market, demand and cost are independent objects.
 
-In insurance, **who buys** determines **what it costs**. This is what makes adverse selection different from ordinary market failures.
-:::
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Color blind pallette
+CB = ['#377eb8', '#ff7f00', '#4daf4a', '#f781bf', '#a65628', '#984ea3', '#999999', '#e41a1c', '#dede00']
+
+i_vals = np.linspace(0, 1, 100)
+def expected_wealth(i):
+    return 150 - 50 * i
+def expected_utility(i):
+    return 0.5 * np.log(150) + 0.5 * np.log(150 - 100 * i)
+def certainty_equivalent(i):
+    return np.exp(expected_utility(i))
+def risk_premium(i):
+    return expected_wealth(i) - certainty_equivalent(i)
+
+def avg_cost(i0):
+    return 0.5 * 100 * (1 + i0) / 2
+
+def marginal_cost(i):
+    return 0.5 * 100 * i
+
+# Find the cutoff type i0 for the break-even policy
+from scipy.optimize import fsolve
+def break_even_condition(i0):
+    P = avg_cost(i0)
+    return 0.5 * np.log(150) + 0.5 * np.log(150 - 100 * i0) - np.log(150 - P)
+i0 = fsolve(break_even_condition, 0.5)[0]
+
+# Premium and cost at break-even
+premium = avg_cost(i0)
+
+# change axis left to right
+expected_wealth_vals = expected_wealth(i_vals)
+ce_vals = certainty_equivalent(i_vals)
+risk_premium_vals = risk_premium(i_vals)
+avg_cost_vals = avg_cost(i_vals)
+marg_cost_vals = marginal_cost(i_vals)
+wtp_vals = 150 - ce_vals
+plt.figure(figsize=(8, 6))
+plt.gca().invert_xaxis()
+plt.plot(i_vals, wtp_vals, label='Demand', color=CB[1], linewidth=3)
+plt.plot(i_vals, avg_cost_vals, label='Average Cost', color=CB[2], linewidth=3)
+plt.plot(i_vals, marg_cost_vals, label='Marginal Cost', color=CB[0], linewidth=3)
+plt.axvline(x=i0, color="gray", linestyle='--', linewidth=2)
+plt.axhline(y=premium, color="gray", linestyle='--', linewidth=2)
+plt.xlabel('Risk Type (i)', fontsize=13)
+plt.ylabel('Cost/Premium', fontsize=13)
+plt.xticks(fontsize=12)
+plt.yticks(fontsize=12)
+plt.gca().spines['top'].set_visible(False)
+plt.gca().spines['right'].set_visible(False)
+plt.legend(fontsize=13)
+plt.grid(alpha=0.3)
+plt.show()
+
+
+```
+
+---
+
+## Quoting Einav & Finkelstein (2011)
+
+> "The fundamental ineﬃciency created by adverse selection
+arises because the eﬃcient allocation is determined by the relationship between marginal cost and
+demand, but the equilibrium allocation is determined by the relationship between average cost and
+demand. Because of adverse selection (downward sloping MC curve), the marginal buyer is always
+associated with a lower expected cost than that of infra-marginal buyers."
 
 ## Policy Options: Mandatory Insurance
 
@@ -286,22 +554,6 @@ The mandatory policy does two things: it provides **insurance** and it **transfe
 
 :::
 
----
-
-## The Common Thread
-
-| | Used Cars | Health Insurance |
-|---|---|---|
-| Informed party | Seller (knows quality) | Consumer (knows health) |
-| Uninformed party | Buyer | Insurer |
-| Average pricing → | Good cars exit | Healthy people drop out |
-| Result | Market for plums collapses | Insurance pool deteriorates |
-| Mechanism | Quality endogenous to price | Risk endogenous to premium |
-
-::: {.fragment}
-Adverse selection arises whenever **one party has private information** and **the other party prices on averages**. The feedback between price and composition is what drives the unraveling.
-:::
-
 # Moral Hazard
 
 
@@ -323,9 +575,9 @@ This is the **hidden action** problem.
 
 ---
 
-## Moral Hazard in Unemployment Insurance
+## Moral Hazard in UI
 
-A worker loses their job. The government offers unemployment benefits $b$ per period.
+A worker loses their job and qualifies for unemployment insurance (UI). The government offers unemployment benefits $b$ per period.
 
 ::: {.fragment}
 **Without UI:** The worker bears the full cost of unemployment. Strong incentive to search hard and accept offers quickly.
@@ -491,63 +743,6 @@ The gap between first best and second best is the **cost of moral hazard**.
 
 ---
 
-## Evidence: The Spike at Exhaustion
-
-If moral hazard matters, we should see search effort respond to benefits.
-
-::: {.fragment}
-One of the strongest empirical regularities in labor economics:
-
-**The probability of finding a job spikes right before UI benefits expire.**
-:::
-
-::: {.fragment}
-Workers on 26-week UI are much more likely to find a job in weeks 25–26 than in week 10.
-
-This is hard to explain without moral hazard. If effort were constant, the hazard rate wouldn't jump at the exhaustion date. Workers are clearly **increasing effort** as the deadline approaches and the cost of remaining unemployed is about to rise sharply.
-:::
-
----
-
-## Evidence: Benefit Generosity and Duration
-
-Studies consistently find:
-
-::: {.fragment}
-**Higher replacement rates** (benefit as % of prior wage) → **longer unemployment spells**
-
-A 10 percentage point increase in the replacement rate increases average spell duration by roughly 1–1.5 weeks.
-:::
-
-::: {.fragment}
-**Longer benefit duration** → **longer unemployment spells**
-
-Workers use the extra weeks. But many find jobs just before the new exhaustion date — the spike shifts with the deadline.
-:::
-
-::: {.fragment}
-This doesn't mean UI is bad. It means there is a real tradeoff. The insurance value may well exceed the moral hazard cost (empirical evidence supports this). But the moral hazard cost is not zero.
-:::
-
----
-
-## Optimal Time Path of Benefits
-
-Shavell and Weiss (1979): How should benefits change over the spell?
-
-::: {.fragment}
-**Optimal UI benefits decline over time.**
-
-- **Early in the spell:** Insurance value is highest. The worker just lost their job, hasn't depleted savings yet, needs time to search. Pay generously.
-- **Later in the spell:** Moral hazard concern grows. Savings are lower, so the threat of benefit loss is more powerful. Taper benefits to strengthen incentives.
-:::
-
-::: {.fragment}
-This is roughly what real UI systems do either explicitly through declining benefit amounts or implicitly through finite duration (benefits drop from $b$ to $0$ at exhaustion).
-:::
-
----
-
 ## Moral Hazard Beyond UI
 
 The same structure appears whenever insurance or protection changes behavior:
@@ -563,19 +758,6 @@ The same structure appears whenever insurance or protection changes behavior:
 ::: {.fragment}
 **Employment contracts:** The Gibbons principal-agent model. The worker's effort is hidden. Steep incentive pay (high $b$ in $w = s + b \cdot y$) is the response, but imposes risk on the worker.
 :::
-
----
-
-## The Common Structure
-
-| Element | UI | Health Insurance | Banking |
-|---|---|---|---|
-| Principal | Government | Insurer | Regulator/depositors |
-| Agent | Worker | Patient | Bank |
-| Hidden action | Search effort | Prevention, usage | Risk-taking |
-| Observable | Employment status | Claims filed | Returns/failure |
-| Contract lever | Benefit level $b$ | Copay, deductible | Capital requirements |
-| Tradeoff | Insurance vs. search | Coverage vs. overuse | Stability vs. risk |
 
 ---
 

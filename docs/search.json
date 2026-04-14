@@ -1091,5 +1091,250 @@
     "title": "Practice Problems",
     "section": "",
     "text": "Problem Sets\nHere are the problem sets for the course. Please complete and submit them by the specified deadlines. Solutions will be posted after the submission deadline.\n\nProblem Set 1 [Solutions]\nProblem Set 2 [Solutions]\nProblem Set 3 [Solutions]\n\n\n\nAdditional Practice Problems\n\nPractice Problems for Part I: Competitive Markets [Solutions]\nPractice Problems for Part II: Market Power [Solutions]"
+  },
+  {
+    "objectID": "slides/slides8.html",
+    "href": "slides/slides8.html",
+    "title": "Asymmetric Information",
+    "section": "",
+    "text": "So far, we have largely assumed that all parties to a transaction share the same information. In reality, one side often knows more than the other.\n\nA used-car seller knows whether the car is a lemon; the buyer does not\nA worker knows how hard they are working; the employer cannot perfectly observe effort\nAn insurance applicant knows their own risk type better than the insurer\n\nKey question: Are markets still efficient when there is asymmetry in how much parties know?\n\n\n\n\nAdverse Selection (hidden types)\n\nIndividuals have private information about their characteristics (“types”) before entering into a contract.\nExample: An insurance applicant knows their own risk level better than the insurer.\n\nMoral Hazard (hidden actions)\n\nIndividuals take actions that are not observable by others after entering into a contract.\nExample: A worker exerts effort that is not perfectly observable by the employer."
+  },
+  {
+    "objectID": "slides/slides8.html#asymmetric-information",
+    "href": "slides/slides8.html#asymmetric-information",
+    "title": "Asymmetric Information",
+    "section": "",
+    "text": "So far, we have largely assumed that all parties to a transaction share the same information. In reality, one side often knows more than the other.\n\nA used-car seller knows whether the car is a lemon; the buyer does not\nA worker knows how hard they are working; the employer cannot perfectly observe effort\nAn insurance applicant knows their own risk type better than the insurer\n\nKey question: Are markets still efficient when there is asymmetry in how much parties know?"
+  },
+  {
+    "objectID": "slides/slides8.html#two-types-of-asymmetric-information",
+    "href": "slides/slides8.html#two-types-of-asymmetric-information",
+    "title": "Asymmetric Information",
+    "section": "",
+    "text": "Adverse Selection (hidden types)\n\nIndividuals have private information about their characteristics (“types”) before entering into a contract.\nExample: An insurance applicant knows their own risk level better than the insurer.\n\nMoral Hazard (hidden actions)\n\nIndividuals take actions that are not observable by others after entering into a contract.\nExample: A worker exerts effort that is not perfectly observable by the employer."
+  },
+  {
+    "objectID": "slides/slides8.html#akerlofs-market-for-lemons",
+    "href": "slides/slides8.html#akerlofs-market-for-lemons",
+    "title": "Asymmetric Information",
+    "section": "Akerlof’s “Market for Lemons”",
+    "text": "Akerlof’s “Market for Lemons”\nAkerlof (1970) studied the market for used cars, where sellers know the quality of their car (good or lemon), but buyers do not. He showed that this information asymmetry can lead to market failure.\n\nSimplified Illustration\n\nTwo types of used cars at the dealership:\n\nGood cars (G)\nLemons (L) that breakdown often\n\nBuyers cannot tell apart good cars from lemons, but know that half of the cars are lemons."
+  },
+  {
+    "objectID": "slides/slides8.html#equilibrium",
+    "href": "slides/slides8.html#equilibrium",
+    "title": "Asymmetric Information",
+    "section": "Equilibrium",
+    "text": "Equilibrium\n\nSellers’ and buyers’ valuations of the cars is as follows:\n\n\n\n\nType\nSeller’s Value\nBuyer’s Value\n\n\n\n\nGood (G)\n$16,000\n$20,000\n\n\nLemon (L)\n$8,000\n$10,000\n\n\n\n\n\n\n\n\nSince buyers cannot tell apart good cars from lemons, they will only be willing to pay a price equal to the expected value of the car:\n\\[ 0.5 \\cdot 10,000 + 0.5 \\cdot 20,000 = \\$15,000 \\]\nBut at that price, only sellers of lemons will be willing to sell. The market for good cars collapses and price falls to $10,000."
+  },
+  {
+    "objectID": "slides/slides8.html#why-this-happens",
+    "href": "slides/slides8.html#why-this-happens",
+    "title": "Asymmetric Information",
+    "section": "Why This Happens",
+    "text": "Why This Happens\nGenerally with a continuum of quality, the same logic applies:\n\n\nBuyers can’t observe quality → they offer an average price\nAverage price is too low for the best sellers → they exit\nAverage quality falls → buyers lower their price\nMore sellers exit → quality falls further\nUnraveling until only the worst remain\n\n\n\nAkerlof’s key insight: quality is endogenous to price. The composition of goods on the market changes when you change the price."
+  },
+  {
+    "objectID": "slides/slides8.html#private-market-solutions",
+    "href": "slides/slides8.html#private-market-solutions",
+    "title": "Asymmetric Information",
+    "section": "Private Market Solutions",
+    "text": "Private Market Solutions\nSignaling: The informed party takes a costly action to reveal type.\n\nWarranties and guarantees\nThe signal must be costly to fake, otherwise it’s meaningless\n\n\nReputation and repeated interaction:\n\nBrand names and chains\nRating systems (eBay, Carfax, Yelp)\nRelationship: you buy from the same dealer\n\n\n\nCertification and screening:\n\nThird-party inspections (JD Power, Certified Pre-Owned)\nDiplomas and professional credentials"
+  },
+  {
+    "objectID": "slides/slides8.html#non-market-solutions",
+    "href": "slides/slides8.html#non-market-solutions",
+    "title": "Asymmetric Information",
+    "section": "Non-Market Solutions",
+    "text": "Non-Market Solutions\nGovernment certification: FDA, USDA, occupational licensing\nLegal liability: Lemon laws i.e. seller must disclose known defects\nMandated information provision: Disclosure requirements\n\nAll of these work by reducing the information asymmetry and making it harder for lemons to hide among good cars."
+  },
+  {
+    "objectID": "slides/slides8.html#insurance-setup",
+    "href": "slides/slides8.html#insurance-setup",
+    "title": "Asymmetric Information",
+    "section": "Insurance Setup",
+    "text": "Insurance Setup\nLoosely following Einav & Finkelstein (2011):\n\nContinuum of consumers \\(i \\in [0,1]\\)\nEach has utility \\(U(w) = \\ln(w)\\) (risk-averse)\nInitial wealth: \\(w_0 = 150\\)\nProbability of loss: 50%\nLoss amount: \\(L_i = 100 \\times i\\)\n\n\nConsumer \\(i = 0\\) has zero risk. Consumer \\(i = 1\\) faces a potential loss of $100.\nEach consumer knows their own type \\(i\\). Insurers cannot tell."
+  },
+  {
+    "objectID": "slides/slides8.html#example-consumer-i-0.60",
+    "href": "slides/slides8.html#example-consumer-i-0.60",
+    "title": "Asymmetric Information",
+    "section": "Example: Consumer \\(i = 0.60\\)",
+    "text": "Example: Consumer \\(i = 0.60\\)\n\nExpected wealth: \\(150 - 0.5 \\times 60 = \\$120\\)\nExpected utility: \\(0.5 \\ln(150) + 0.5 \\ln(90) = 4.76\\)\nCertainty equivalent: \\(e^{4.76} = \\$116\\)\n\n\nWilling to pay a $4 risk premium ($120 − $116) for insurance.\n\n\nHigher-risk consumers are willing to pay even more for insurance. This is what drives adverse selection."
+  },
+  {
+    "objectID": "slides/slides8.html#the-naive-policy",
+    "href": "slides/slides8.html#the-naive-policy",
+    "title": "Asymmetric Information",
+    "section": "The Naive Policy",
+    "text": "The Naive Policy\nAn insurer offers full insurance at the population-average expected loss:\n\\[\\text{Premium} = E[L_i]/2 = \\$25\\]\n\nWho buys? The consumer \\(i_0\\) who is indifferent solves:\n\\[0.5 \\ln(150) + 0.5 \\ln(150 - 100 i_0) = \\ln(125)\\]\n\\[i_0 = 0.46\\]\nOnly consumers with \\(i \\geq 0.46\\) buy i.e. the sicker 54%."
+  },
+  {
+    "objectID": "slides/slides8.html#the-naive-policy-loses-money",
+    "href": "slides/slides8.html#the-naive-policy-loses-money",
+    "title": "Asymmetric Information",
+    "section": "The Naive Policy Loses Money",
+    "text": "The Naive Policy Loses Money\nExpected cost per insured:\n\\[E[L_i \\mid i \\geq 0.46] = 100 \\times 0.5 \\times \\frac{1 + 0.46}{2} = \\$36.50\\]\n\nPremium collected: $25. Cost per insured: $36.50.\nThe insurer loses $11.50 per policy.\n\n\nThis is adverse selection at work: at the average price, only the high-risk consumers buy. The healthy ones opt out because the premium far exceeds their expected loss."
+  },
+  {
+    "objectID": "slides/slides8.html#the-break-even-policy",
+    "href": "slides/slides8.html#the-break-even-policy",
+    "title": "Asymmetric Information",
+    "section": "The Break-Even Policy",
+    "text": "The Break-Even Policy\nThe insurer raises the premium until revenue equals cost, given who actually enrolls.\n\nThe marginal consumer \\(i''\\) satisfies:\n\\[0.5 \\ln(150) + 0.5 \\ln(150 - 100 i'') = \\ln\\left(150 - E[L_i \\mid i \\geq i'']\\right)\\]\nNote that: \\(E[L_i \\mid i \\geq i''] = 100 \\times 0.5 \\times \\frac{1 + i''}{2}\\)\nSolution: \\(i'' = 0.75\\)\n\n\n\nOnly the sickest quarter buys insurance\nPremium: \\(0.5 \\times (100 + 75)/2 = \\$43.75\\)\nThe market “works” but most gains from insurance are unrealized"
+  },
+  {
+    "objectID": "slides/slides8.html#why-doesnt-the-market-unravel-completely",
+    "href": "slides/slides8.html#why-doesnt-the-market-unravel-completely",
+    "title": "Asymmetric Information",
+    "section": "Why Doesn’t the Market Unravel Completely?",
+    "text": "Why Doesn’t the Market Unravel Completely?\nUnlike the used car market, the insurance market doesn’t collapse entirely.\n\nThe reason is risk aversion. The sickest consumers are willing to pay more than their actuarially fair cost because they prefer a bad deal on insurance to no insurance at all.\n\n\nBut the outcome is still highly inefficient. The high-risk types impose a negative externality on low-risk types by driving up premiums. Most consumers who would benefit from insurance don’t get it."
+  },
+  {
+    "objectID": "slides/slides8.html#einav-finkelsteins-key-insight",
+    "href": "slides/slides8.html#einav-finkelsteins-key-insight",
+    "title": "Asymmetric Information",
+    "section": "Einav & Finkelstein’s Key Insight",
+    "text": "Einav & Finkelstein’s Key Insight\n\n“The distinguishing feature of selection markets is that the demand and cost curves are tightly linked, because the individual’s risk type not only affects demand but also directly determines cost.”\n\n\nIn a normal market, demand and cost are independent objects.\nIn insurance, who buys determines what it costs. This is what makes adverse selection different from ordinary market failures."
+  },
+  {
+    "objectID": "slides/slides8.html#policy-options-mandatory-insurance",
+    "href": "slides/slides8.html#policy-options-mandatory-insurance",
+    "title": "Asymmetric Information",
+    "section": "Policy Options: Mandatory Insurance",
+    "text": "Policy Options: Mandatory Insurance\nWhat if everyone must buy at $25?\n\n\nMarginal cost of insuring each consumer \\(\\leq\\) their willingness to pay (for all \\(i &gt; 0\\))\nEveryone is insured. Premium = population-average cost. The policy breaks even.\n\n\n\nNot everyone is better off individually as consumers with \\(i &lt; 0.46\\) would prefer no insurance at this price. They are subsidizing sicker consumers.\nBut from a social welfare standpoint, the mandate provides both risk pooling and income spreading and average welfare is higher than in the free market case."
+  },
+  {
+    "objectID": "slides/slides8.html#policy-options-free-screening",
+    "href": "slides/slides8.html#policy-options-free-screening",
+    "title": "Asymmetric Information",
+    "section": "Policy Options: Free Screening",
+    "text": "Policy Options: Free Screening\nSuppose a free test reveals each consumer’s type \\(i\\). Insurers then offer actuarially fair individual premiums: \\(50 \\times i\\).\n\nFull disclosure principle: Everyone volunteers for the test.\nWhy? The healthiest half discloses first. Then the healthiest half of the remainder. Then the next. “Turtles all the way down” and eventually everyone is tested.\n\n\nNo more adverse selection. Everyone is insured at an individualized fair price."
+  },
+  {
+    "objectID": "slides/slides8.html#which-is-better",
+    "href": "slides/slides8.html#which-is-better",
+    "title": "Asymmetric Information",
+    "section": "Which Is Better?",
+    "text": "Which Is Better?\nSurprisingly: the mandate beats free screening on average welfare.\n\n\n\n\nPolicy\nInsurance?\nRedistribution?\nAvg. welfare\n\n\n\n\nNo insurance\nNo\nNo\nLowest\n\n\nFree market (break-even)\nPartial (25%)\nNo\nLow\n\n\nIndividual pricing (screening)\nFull\nNo\nMedium\n\n\nMandatory pool ($25)\nFull\nYes\nHighest\n\n\n\n\n\nThe mandatory policy does two things: it provides insurance and it transfers from low-risk to high-risk. Under concave utility (diminishing marginal utility of wealth), that transfer raises average welfare."
+  },
+  {
+    "objectID": "slides/slides8.html#the-common-thread",
+    "href": "slides/slides8.html#the-common-thread",
+    "title": "Asymmetric Information",
+    "section": "The Common Thread",
+    "text": "The Common Thread\n\n\n\n\nUsed Cars\nHealth Insurance\n\n\n\n\nInformed party\nSeller (knows quality)\nConsumer (knows health)\n\n\nUninformed party\nBuyer\nInsurer\n\n\nAverage pricing →\nGood cars exit\nHealthy people drop out\n\n\nResult\nMarket for plums collapses\nInsurance pool deteriorates\n\n\nMechanism\nQuality endogenous to price\nRisk endogenous to premium\n\n\n\n\nAdverse selection arises whenever one party has private information and the other party prices on averages. The feedback between price and composition is what drives the unraveling."
+  },
+  {
+    "objectID": "slides/slides8.html#the-basic-idea",
+    "href": "slides/slides8.html#the-basic-idea",
+    "title": "Asymmetric Information",
+    "section": "The Basic Idea",
+    "text": "The Basic Idea\nYou behave differently when you don’t bear the full cost of your actions.\n\n\nFully insured car → leave it unlocked, drive less carefully\nHealth insurance → visit the doctor more, worry less about prevention\nBank bailout guarantee → take on riskier investments\n\n\n\nThe insurer can observe the outcome (car stolen, got sick, bank failed) but not the action (did you lock the car? exercise? manage risk?).\nThis is the hidden action problem."
+  },
+  {
+    "objectID": "slides/slides8.html#moral-hazard-in-unemployment-insurance",
+    "href": "slides/slides8.html#moral-hazard-in-unemployment-insurance",
+    "title": "Asymmetric Information",
+    "section": "Moral Hazard in Unemployment Insurance",
+    "text": "Moral Hazard in Unemployment Insurance\nA worker loses their job. The government offers unemployment benefits \\(b\\) per period.\n\nWithout UI: The worker bears the full cost of unemployment. Strong incentive to search hard and accept offers quickly.\n\n\nWith UI: The cost of remaining unemployed falls from “no income” to “\\(b\\) per period.” At the margin, the worker:\n\nSearches less intensely\nIs pickier about which offers to accept\nStays unemployed longer"
+  },
+  {
+    "objectID": "slides/slides8.html#the-hidden-action",
+    "href": "slides/slides8.html#the-hidden-action",
+    "title": "Asymmetric Information",
+    "section": "The Hidden Action",
+    "text": "The Hidden Action\nThe government can observe:\n\nWhether the worker is employed or not\n\n\nThe government cannot observe:\n\nHow many applications the worker sends\nHow hard they prepare for interviews\nWhether they turned down a reasonable offer\nWhether they’re really “looking”\n\n\n\nSearch effort is the hidden action. If the government could observe it, they’d simply require a minimum effort level. But they can’t so benefits distort incentives."
+  },
+  {
+    "objectID": "slides/slides8.html#a-simple-model",
+    "href": "slides/slides8.html#a-simple-model",
+    "title": "Asymmetric Information",
+    "section": "A Simple Model",
+    "text": "A Simple Model\nTwo periods. A worker is unemployed in period 1 and chooses search effort \\(e \\in [0,1]\\).\n\nWith probability \\(e\\): finds a job, earns wage \\(w\\) in period 2\nWith probability \\(1 - e\\): stays unemployed in period 2\nCost of search effort: \\(c(e) = \\frac{1}{2}e^2\\)\n\n\nThe government pays benefit \\(b\\) while unemployed (both periods). If employed in period 2, benefits stop."
+  },
+  {
+    "objectID": "slides/slides8.html#workers-consumption",
+    "href": "slides/slides8.html#workers-consumption",
+    "title": "Asymmetric Information",
+    "section": "Worker’s consumption",
+    "text": "Worker’s consumption\nIn this model, the worker’s consumption in each state is given by:\n\n\n\nPeriod\nState\nConsumption\n\n\n\n\nPeriod 1\nUnemployed\n\\(b\\)\n\n\nPeriod 2\nEmployed (prob \\(e\\))\n\\(w\\)\n\n\nPeriod 2\nUnemployed (prob \\(1-e\\))\n\\(b\\)"
+  },
+  {
+    "objectID": "slides/slides8.html#workers-problem",
+    "href": "slides/slides8.html#workers-problem",
+    "title": "Asymmetric Information",
+    "section": "Worker’s Problem",
+    "text": "Worker’s Problem\nThe worker chooses \\(e\\) to maximize expected utility minus effort cost:\n\\[\\max_e \\quad u(b) + e \\cdot u(w) + (1-e) \\cdot u(b) - \\frac{1}{2}e^2\\]\n\nFirst-order condition:\n\\[u(w) - u(b) = e^*\\]\nThe worker searches until the marginal cost of effort (\\(e\\)) equals the marginal benefit i.e. the utility gain from being employed vs. staying on UI."
+  },
+  {
+    "objectID": "slides/slides8.html#how-benefits-affect-effort",
+    "href": "slides/slides8.html#how-benefits-affect-effort",
+    "title": "Asymmetric Information",
+    "section": "How Benefits Affect Effort",
+    "text": "How Benefits Affect Effort\n\\[e^* = u(w) - u(b)\\]\n\nWhen \\(b\\) increases:\n\n\\(u(b)\\) rises: unemployment is less painful\n\\(u(w) - u(b)\\) shrinks: the gain from finding a job falls\nSo \\(e^*\\) falls: the worker searches less\n\n\n\nIn the extreme:\n\n\\(b = 0\\): maximum search effort, \\(e^* = u(w) - u(0)\\)\n\\(b = w\\): zero search effort, \\(e^* = 0\\)"
+  },
+  {
+    "objectID": "slides/slides8.html#the-tradeoff",
+    "href": "slides/slides8.html#the-tradeoff",
+    "title": "Asymmetric Information",
+    "section": "The Tradeoff",
+    "text": "The Tradeoff\nMore generous UI (\\(\\uparrow b\\)) does two things:\n\nInsurance value ↑\n\nSmooths consumption during a bad shock\nProtects workers from income loss they didn’t choose\nEspecially valuable if workers are risk-averse\n\n\n\nMoral hazard cost ↑\n\nReduces search effort\nWorkers stay unemployed longer\nOutput is lost, and the government pays more in benefits\n\n\n\nThe optimal \\(b\\) balances these two forces. Neither \\(b = 0\\) (no insurance) nor \\(b = w\\) (full insurance) is optimal."
+  },
+  {
+    "objectID": "slides/slides8.html#the-governments-problem",
+    "href": "slides/slides8.html#the-governments-problem",
+    "title": "Asymmetric Information",
+    "section": "The Government’s Problem",
+    "text": "The Government’s Problem\nThe government chooses \\(b\\) to maximize the worker’s expected welfare, subject to a budget constraint:\n\\[\\max_b \\quad u(b) + e^*(b) \\cdot u(w) + (1 - e^*(b)) \\cdot u(b) - \\frac{1}{2}(e^*(b))^2\\]\n\nsubject to:\n\nIncentive compatibility: \\(e^* = u(w) - u(b)\\) (the worker chooses effort optimally given \\(b\\))\nBudget constraint: benefits must be funded (e.g., through taxes on wages)\n\n\n\nThe government cannot choose \\(e\\) directly. It can only choose \\(b\\), and \\(e\\) responds."
+  },
+  {
+    "objectID": "slides/slides8.html#first-best-vs.-second-best",
+    "href": "slides/slides8.html#first-best-vs.-second-best",
+    "title": "Asymmetric Information",
+    "section": "First Best vs. Second Best",
+    "text": "First Best vs. Second Best\nFirst best (effort observable): The government picks \\(b\\) and \\(e\\) directly.\n\nFull insurance: \\(b = w\\) (perfect consumption smoothing)\nMandate high search effort\nWorker bears no risk and works hard\n\n\nSecond best (effort hidden): The government picks \\(b\\), worker picks \\(e\\).\n\n\\(b &lt; w\\) — incomplete insurance to preserve search incentives\nWorker bears some risk as the price of maintaining incentives\nFundamental tradeoff: insurance vs. incentives\n\n\n\nThe gap between first best and second best is the cost of moral hazard."
+  },
+  {
+    "objectID": "slides/slides8.html#evidence-the-spike-at-exhaustion",
+    "href": "slides/slides8.html#evidence-the-spike-at-exhaustion",
+    "title": "Asymmetric Information",
+    "section": "Evidence: The Spike at Exhaustion",
+    "text": "Evidence: The Spike at Exhaustion\nIf moral hazard matters, we should see search effort respond to benefits.\n\nOne of the strongest empirical regularities in labor economics:\nThe probability of finding a job spikes right before UI benefits expire.\n\n\nWorkers on 26-week UI are much more likely to find a job in weeks 25–26 than in week 10.\nThis is hard to explain without moral hazard. If effort were constant, the hazard rate wouldn’t jump at the exhaustion date. Workers are clearly increasing effort as the deadline approaches and the cost of remaining unemployed is about to rise sharply."
+  },
+  {
+    "objectID": "slides/slides8.html#evidence-benefit-generosity-and-duration",
+    "href": "slides/slides8.html#evidence-benefit-generosity-and-duration",
+    "title": "Asymmetric Information",
+    "section": "Evidence: Benefit Generosity and Duration",
+    "text": "Evidence: Benefit Generosity and Duration\nStudies consistently find:\n\nHigher replacement rates (benefit as % of prior wage) → longer unemployment spells\nA 10 percentage point increase in the replacement rate increases average spell duration by roughly 1–1.5 weeks.\n\n\nLonger benefit duration → longer unemployment spells\nWorkers use the extra weeks. But many find jobs just before the new exhaustion date — the spike shifts with the deadline.\n\n\nThis doesn’t mean UI is bad. It means there is a real tradeoff. The insurance value may well exceed the moral hazard cost (empirical evidence supports this). But the moral hazard cost is not zero."
+  },
+  {
+    "objectID": "slides/slides8.html#optimal-time-path-of-benefits",
+    "href": "slides/slides8.html#optimal-time-path-of-benefits",
+    "title": "Asymmetric Information",
+    "section": "Optimal Time Path of Benefits",
+    "text": "Optimal Time Path of Benefits\nShavell and Weiss (1979): How should benefits change over the spell?\n\nOptimal UI benefits decline over time.\n\nEarly in the spell: Insurance value is highest. The worker just lost their job, hasn’t depleted savings yet, needs time to search. Pay generously.\nLater in the spell: Moral hazard concern grows. Savings are lower, so the threat of benefit loss is more powerful. Taper benefits to strengthen incentives.\n\n\n\nThis is roughly what real UI systems do either explicitly through declining benefit amounts or implicitly through finite duration (benefits drop from \\(b\\) to \\(0\\) at exhaustion)."
+  },
+  {
+    "objectID": "slides/slides8.html#moral-hazard-beyond-ui",
+    "href": "slides/slides8.html#moral-hazard-beyond-ui",
+    "title": "Asymmetric Information",
+    "section": "Moral Hazard Beyond UI",
+    "text": "Moral Hazard Beyond UI\nThe same structure appears whenever insurance or protection changes behavior:\n\nHealth insurance: Insured patients consume more health care. Copays and deductibles are the “incomplete insurance” that preserves incentives as you bear some cost at the margin.\n\n\nBanking: Deposit insurance and “too big to fail” protect depositors and the system. but banks take on more risk knowing they’ll be bailed out. Capital requirements are the policy response.\n\n\nEmployment contracts: The Gibbons principal-agent model. The worker’s effort is hidden. Steep incentive pay (high \\(b\\) in \\(w = s + b \\cdot y\\)) is the response, but imposes risk on the worker."
+  },
+  {
+    "objectID": "slides/slides8.html#the-common-structure",
+    "href": "slides/slides8.html#the-common-structure",
+    "title": "Asymmetric Information",
+    "section": "The Common Structure",
+    "text": "The Common Structure\n\n\n\n\n\n\n\n\n\nElement\nUI\nHealth Insurance\nBanking\n\n\n\n\nPrincipal\nGovernment\nInsurer\nRegulator/depositors\n\n\nAgent\nWorker\nPatient\nBank\n\n\nHidden action\nSearch effort\nPrevention, usage\nRisk-taking\n\n\nObservable\nEmployment status\nClaims filed\nReturns/failure\n\n\nContract lever\nBenefit level \\(b\\)\nCopay, deductible\nCapital requirements\n\n\nTradeoff\nInsurance vs. search\nCoverage vs. overuse\nStability vs. risk"
+  },
+  {
+    "objectID": "slides/slides8.html#key-takeaways",
+    "href": "slides/slides8.html#key-takeaways",
+    "title": "Asymmetric Information",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\n\nMoral hazard arises when insurance changes behavior because the insured party doesn’t bear the full cost of their actions\nThe hidden action (effort, care, risk-taking) cannot be contracted on: only outcomes are observable\nThe fundamental tradeoff is insurance vs. incentives: full insurance eliminates risk but also eliminates effort\nThe optimal policy provides incomplete insurance: enough to protect against bad outcomes, not so much that it kills incentives"
   }
 ]

@@ -1,0 +1,367 @@
+---
+title: "Externalities and Public Goods"
+author: "Div Bhagia"
+subtitle: "Lecture 9"
+format:
+  revealjs:
+    theme: [default, ../assets/slides.scss]
+    embed-resources: true
+    filters:
+      - ../assets/section-slides.lua
+---
+
+# Introduction
+
+## When Markets Fail
+
+Under the conditions of the First Welfare Theorem, competitive markets deliver Pareto-efficient outcomes. But those conditions are demanding: complete markets, well-defined property rights, price-taking behavior, and no spillover effects between agents.
+
+In this lecture we study two classic sources of market failure:
+
+- **Externalities:** one agent's action affects another's welfare without passing through the price system
+- **Public goods:** goods whose consumption is non-rival and non-excludable, so markets under-provide them
+
+In both cases, private incentives diverge from social incentives and there is a potential role for policy.
+
+## Roadmap
+
+1. What is an externality? Positive and negative spillovers
+2. Why externalities cause inefficiency
+3. Private solutions: Coase theorem and bargaining
+4. Public solutions: Pigouvian taxes, subsidies, quotas, and tradable permits
+5. Public goods: definition, free riding, and optimal provision
+6. Mechanisms for provision: Lindahl prices, voting, and political economy
+
+# Externalities
+
+## What Is an Externality?
+
+An **externality** exists when the action of one agent directly affects the utility or production possibilities of another agent, and this effect is not reflected in market prices.
+
+- **Negative externality:** the action imposes a cost on others (pollution, traffic congestion, second-hand smoke)
+- **Positive externality:** the action confers a benefit on others (vaccination, education, R&D spillovers, a neighbor's well-kept garden)
+
+The key feature is that the externality is **not priced**. The decision-maker compares private costs and benefits but ignores the effect on third parties.
+
+## Private vs. Social Costs
+
+Consider a firm whose production generates pollution.
+
+- **Private marginal cost (PMC):** the cost the firm pays for inputs
+- **External marginal cost (EMC):** the harm pollution imposes on others
+- **Social marginal cost (SMC)** $= PMC + EMC$
+
+The firm chooses output to equate price with its *private* marginal cost. The socially efficient level equates price with the *social* marginal cost.
+
+::: {.fragment}
+When $EMC > 0$, the firm produces **too much** from society's point of view.
+:::
+
+## Graphical Analysis: Negative Externality
+
+At the market equilibrium, $Q^m$, where demand meets $PMC$, the marginal social cost exceeds the marginal benefit. Reducing output from $Q^m$ toward $Q^*$ (where demand meets $SMC$) raises welfare.
+
+The shaded triangle between $SMC$ and demand, from $Q^*$ to $Q^m$, is the **deadweight loss** from over-production.
+
+::: {.fragment}
+Two things to notice:
+
+- Efficiency does **not** require zero pollution
+- It requires that the marginal damage equals the marginal benefit of the activity
+:::
+
+## Positive Externalities
+
+For a positive externality, the roles are flipped. Private agents enjoy only part of the benefit of an action; the rest accrues to others.
+
+- Private marginal benefit (PMB) lies **below** social marginal benefit (SMB)
+- The market produces $Q^m$ where PMB = MC, which is **less** than the efficient $Q^*$ where SMB = MC
+
+::: {.fragment}
+So markets **under-provide** goods with positive externalities. Examples: education, basic research, vaccination, open-source software.
+:::
+
+# Correcting Externalities
+
+## The Pigouvian Approach
+
+A.C. Pigou (1920) proposed correcting externalities with a tax equal to the marginal external damage at the efficient quantity.
+
+$$ t^* = EMC(Q^*) $$
+
+After the tax, the firm's private cost is $PMC + t^* = SMC$, so its private optimum coincides with the social optimum.
+
+::: {.fragment}
+The logic for positive externalities is symmetric: use a **subsidy** equal to the marginal external benefit.
+:::
+
+::: {.fragment}
+Pigouvian instruments correct the price signal rather than banning the activity outright.
+:::
+
+## Quantity Instruments
+
+The government can also fix the quantity directly.
+
+- **Standards and quotas:** mandate a maximum level of pollution
+- **Tradable permits:** issue a fixed number of permits and let firms trade
+
+::: {.fragment}
+With tradable permits, the equilibrium permit price plays the role of a Pigouvian tax. Firms with low abatement costs sell permits; firms with high abatement costs buy them. Abatement is concentrated where it is cheapest.
+:::
+
+::: {.fragment}
+Price and quantity instruments are equivalent under perfect information. Under uncertainty about costs or benefits, Weitzman (1974) showed they differ: use prices when marginal costs are steep relative to marginal benefits, and quantities when marginal benefits are steep.
+:::
+
+## Coase Theorem
+
+Coase (1960) argued that the externality problem is really a problem of **missing markets** or unclear property rights.
+
+**Coase Theorem (informal):** If property rights are well-defined and bargaining is costless, private parties will negotiate to the efficient outcome regardless of who holds the rights.
+
+::: {.fragment}
+- The **efficient level** of the externality is independent of who is assigned the right
+- The **distribution** of gains, however, depends on the initial assignment
+:::
+
+## Example: Factory and Fishery
+
+A factory dumps waste upstream; a fishery is harmed downstream.
+
+| Who has the right? | Outcome |
+|---|---|
+| Factory may pollute | Fishery pays factory to reduce pollution up to the point where its marginal benefit equals the factory's marginal cost of abatement |
+| Fishery has clean water | Factory pays fishery for the right to pollute up to the same point |
+
+::: {.fragment}
+Either way, the **efficient** level of pollution is reached. The assignment of rights determines only *who pays whom*.
+:::
+
+## Limits of Coasian Bargaining
+
+In practice, bargaining rarely produces the efficient outcome because:
+
+- **Transaction costs** are high when many parties are involved
+- **Information is asymmetric** about damages and benefits
+- **Holdout and free-rider problems** can block deals
+- **Ill-defined or contested property rights**
+
+::: {.fragment}
+This is why Coase's insight is most useful for small-number problems (neighbors, adjacent firms). Large-scale externalities like air pollution and climate change typically require public policy.
+:::
+
+## Comparing Instruments
+
+| Instrument | Information need | Distributional effect | Flexibility |
+|---|---|---|---|
+| Pigouvian tax | Marginal damage | Revenue to government | Firms choose abatement |
+| Standard/quota | Efficient quantity | No revenue | Rigid |
+| Tradable permits | Efficient quantity | Depends on allocation | Trade finds low-cost abatement |
+| Coasian bargaining | Rights assignment | Depends on bargaining | Only small groups |
+
+# Public Goods
+
+## Defining Public Goods
+
+Goods can be classified along two dimensions: **rivalry** and **excludability**.
+
+|  | Excludable | Non-excludable |
+|---|---|---|
+| **Rival** | Private good (apple) | Common resource (ocean fishery) |
+| **Non-rival** | Club good (Netflix) | **Pure public good** (national defense) |
+
+::: {.fragment}
+A **pure public good** has two properties:
+
+- **Non-rivalrous:** one person's consumption does not reduce availability to others
+- **Non-excludable:** it is infeasible to prevent anyone from consuming it
+:::
+
+## Classic Examples
+
+- National defense
+- Street lighting
+- Clean air
+- Basic scientific research
+- Fireworks displays
+- Lighthouses (Samuelson's favorite example, though Coase disputed its historical accuracy)
+
+::: {.fragment}
+Most real-world goods are not "pure" in either dimension. But many goods are close enough to pure public goods that the logic below applies.
+:::
+
+## The Free-Rider Problem
+
+Because public goods are non-excludable, each consumer has an incentive to understate their willingness to pay and hope that **someone else** provides the good.
+
+::: {.fragment}
+If everyone free-rides, the public good is under-provided or not provided at all. Voluntary contribution schemes typically produce **less** than the efficient amount.
+:::
+
+::: {.fragment}
+This is not irrationality. It is individually rational behavior leading to a collectively bad outcome, a classic prisoner's dilemma at the level of the whole society.
+:::
+
+## Optimal Provision: Samuelson Condition
+
+For a **private good**, efficiency requires that each consumer's marginal rate of substitution equals the marginal rate of transformation:
+
+$$ MRS_i = MRT \quad \text{for each } i $$
+
+For a **public good**, because everyone consumes the same quantity, efficiency requires that the **sum** of marginal rates of substitution equals the marginal rate of transformation:
+
+$$ \sum_{i=1}^n MRS_i = MRT $$
+
+::: {.fragment}
+This is the **Samuelson condition** (1954). The intuition: one extra unit of the public good benefits everyone simultaneously, so we should sum those benefits and compare to the cost.
+:::
+
+## Graphical Intuition
+
+For a private good, the market demand curve is the **horizontal sum** of individual demands: at each price, add up quantities.
+
+For a public good, the market demand curve is the **vertical sum** of individual demands: at each quantity, add up willingness to pay.
+
+::: {.fragment}
+Efficient provision is where this vertically summed demand curve crosses marginal cost.
+:::
+
+## A Simple Example
+
+Two consumers A and B with inverse demand for a public good $G$:
+
+$$ P_A = 10 - G, \qquad P_B = 8 - G $$
+
+Marginal cost: $MC = 12$.
+
+::: {.fragment}
+**Private provision:** consumer A alone provides to $P_A = MC$, giving $G = -2$, i.e., nothing. Neither consumer alone will fund it.
+:::
+
+::: {.fragment}
+**Efficient provision:** sum vertically, $P_A + P_B = 18 - 2G$, set equal to MC:
+
+$$ 18 - 2G = 12 \implies G^* = 3 $$
+
+The socially efficient level is positive, but the market produces zero.
+:::
+
+# Provision Mechanisms
+
+## Lindahl Equilibrium
+
+Erik Lindahl (1919) proposed a benefit-based pricing rule. Each consumer pays a **personalized price** $\tau_i$ equal to their marginal willingness to pay at the efficient quantity. The prices sum to the marginal cost.
+
+$$ \tau_i = MRS_i, \qquad \sum_i \tau_i = MC $$
+
+::: {.fragment}
+At these prices, each consumer's demand for the public good coincides with the efficient level. The Lindahl outcome is Pareto efficient.
+:::
+
+::: {.fragment}
+**Problem:** it requires truthful revelation of willingness to pay, which consumers have no incentive to provide. The Lindahl equilibrium is a benchmark, not an implementable mechanism.
+:::
+
+## Voting and Public Goods
+
+In practice, public goods are often provided by governments funded through taxes, with the level chosen through some political process. This raises the question of how preferences are aggregated through voting.
+
+::: {.fragment}
+**Median voter theorem** (Black, 1948; Downs, 1957): If voters have single-peaked preferences over a one-dimensional policy, majority rule selects the policy favored by the **median voter**.
+:::
+
+::: {.fragment}
+The median voter outcome is generally **not** Samuelson-efficient: it reflects the median voter's $MRS$, not the sum of MRSs. But it is a stable political equilibrium.
+:::
+
+## Arrow's Impossibility Theorem
+
+Kenneth Arrow (1951) asked whether any voting rule can aggregate individual preferences into a consistent social ranking while satisfying a few reasonable conditions (unrestricted domain, non-dictatorship, Pareto efficiency, independence of irrelevant alternatives).
+
+::: {.fragment}
+**Answer:** No. With three or more alternatives, no rule satisfies all the conditions simultaneously.
+:::
+
+::: {.fragment}
+Implication: aggregating preferences for public-good provision is hard in principle. Democratic decisions involve tradeoffs that cannot all be satisfied at once.
+:::
+
+## Rent-Seeking and Political Failure
+
+Just as markets can fail, political processes can fail too. Governments may over- or under-provide public goods because of:
+
+- **Concentrated benefits, diffuse costs:** small, organized groups lobby effectively while large, unorganized groups do not
+- **Rent-seeking:** resources are spent capturing transfers rather than creating value
+- **Information problems:** voters are rationally ignorant about complex policies
+- **Bureaucratic incentives:** agencies may maximize budget rather than welfare
+
+::: {.fragment}
+The right comparison is not "market vs. perfect government" but "imperfect market vs. imperfect government." Policy design has to take both failures seriously.
+:::
+
+# Applications
+
+## Climate Change
+
+Climate change is the textbook externality and public-good problem combined.
+
+- **Negative externality:** emissions impose costs on everyone, especially future generations
+- **Global public good:** a stable climate is non-rival and non-excludable worldwide
+- **Free-rider problem at the country level:** each country benefits from others' abatement
+
+::: {.fragment}
+Policy instruments in use: carbon taxes (Sweden, British Columbia), cap-and-trade (EU ETS, California), direct regulation (fuel economy standards), subsidies for clean energy.
+:::
+
+::: {.fragment}
+International cooperation is hard precisely because of the free-rider problem across sovereign states.
+:::
+
+## Vaccination
+
+Vaccination is a positive externality: each vaccinated person reduces the probability that others get sick.
+
+- Private decision ignores the benefit to others
+- Market equilibrium vaccination rate is below the social optimum
+- Below a critical "herd-immunity" threshold, outbreaks become self-sustaining
+
+::: {.fragment}
+Policy responses: free or subsidized vaccines, school entry requirements, public information campaigns. These correspond to subsidies, quantity regulation, and information provision respectively.
+:::
+
+## Knowledge and R&D
+
+Ideas are the classic example of a **non-rival** good: one person's use of an idea does not diminish another's.
+
+::: {.fragment}
+Without intervention, firms under-invest in research because they cannot capture all the benefits.
+
+Policy responses:
+
+- **Patents:** temporary exclusion rights trading off static distortion for dynamic incentives
+- **Public funding** of basic research (NSF, NIH)
+- **R&D tax credits**
+:::
+
+# Wrap Up
+
+## Key Takeaways
+
+::: {.incremental}
+1. **Externalities** and **public goods** break the First Welfare Theorem because private and social incentives diverge
+2. With externalities, Pigouvian taxes and tradable permits restore efficiency by pricing the spillover
+3. The **Coase theorem** shows that well-defined property rights can lead to efficiency without intervention, but only when bargaining is cheap
+4. Public goods suffer from free-riding; efficient provision requires the **Samuelson condition** $\sum MRS_i = MRT$
+5. Lindahl pricing is an elegant benchmark but not implementable because of truth-telling problems
+6. Governments provide public goods, but political processes have their own failures: the relevant comparison is **imperfect markets vs. imperfect governments**
+:::
+
+## References
+
+- Nicholson & Snyder, *Microeconomic Theory*, 13e, Chapters 19 and 20
+- Pigou, *The Economics of Welfare* (1920)
+- Coase, "The Problem of Social Cost" (1960)
+- Samuelson, "The Pure Theory of Public Expenditure" (1954)
+- Arrow, *Social Choice and Individual Values* (1951)
+- Weitzman, "Prices vs. Quantities" (1974)
