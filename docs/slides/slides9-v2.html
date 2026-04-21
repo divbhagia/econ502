@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Div Bhagia">
+
+<title>Externalities, the Coase Theorem, and Market Remedies – Advanced Microeconomics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6633c62d358394232bc599d39e38c5c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-40de7c3d014d17db877f778cb01e6f5d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Advanced Microeconomics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/lecture1.html"> 
+<span class="menu-text">Content</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../practice.html"> 
+<span class="menu-text">Practice</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://divbhagia.github.io/econ502/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#what-is-an-externality" id="toc-what-is-an-externality" class="nav-link" data-scroll-target="#what-is-an-externality">What Is an Externality?</a></li>
+  <li><a href="#classic-examples" id="toc-classic-examples" class="nav-link" data-scroll-target="#classic-examples">Classic Examples</a></li>
+  <li><a href="#are-externalities-ever-resolved-by-the-market" id="toc-are-externalities-ever-resolved-by-the-market" class="nav-link" data-scroll-target="#are-externalities-ever-resolved-by-the-market">Are Externalities Ever Resolved by the Market?</a></li>
+  </ul></li>
+  <li><a href="#the-coase-theorem" id="toc-the-coase-theorem" class="nav-link" data-scroll-target="#the-coase-theorem">The Coase Theorem</a>
+  <ul class="collapse">
+  <li><a href="#coases-key-insight" id="toc-coases-key-insight" class="nav-link" data-scroll-target="#coases-key-insight">Coase’s Key Insight</a></li>
+  <li><a href="#the-reciprocal-nature-of-externalities" id="toc-the-reciprocal-nature-of-externalities" class="nav-link" data-scroll-target="#the-reciprocal-nature-of-externalities">The Reciprocal Nature of Externalities</a></li>
+  <li><a href="#adding-cost-information" id="toc-adding-cost-information" class="nav-link" data-scroll-target="#adding-cost-information">Adding Cost Information</a></li>
+  <li><a href="#two-scenarios" id="toc-two-scenarios" class="nav-link" data-scroll-target="#two-scenarios">Two Scenarios</a></li>
+  <li><a href="#the-coase-theorem-formal-statement" id="toc-the-coase-theorem-formal-statement" class="nav-link" data-scroll-target="#the-coase-theorem-formal-statement">The Coase Theorem (Formal Statement)</a></li>
+  <li><a href="#when-does-coase-fail" id="toc-when-does-coase-fail" class="nav-link" data-scroll-target="#when-does-coase-fail">When Does Coase Fail?</a></li>
+  <li><a href="#practical-limits" id="toc-practical-limits" class="nav-link" data-scroll-target="#practical-limits">Practical Limits</a></li>
+  </ul></li>
+  <li><a href="#remedying-pollution-a-numerical-example" id="toc-remedying-pollution-a-numerical-example" class="nav-link" data-scroll-target="#remedying-pollution-a-numerical-example">Remedying Pollution: A Numerical Example</a>
+  <ul class="collapse">
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#smog-production-differs-across-plants" id="toc-smog-production-differs-across-plants" class="nav-link" data-scroll-target="#smog-production-differs-across-plants">Smog Production Differs Across Plants</a></li>
+  <li><a href="#competitive-outcome-no-regulation" id="toc-competitive-outcome-no-regulation" class="nav-link" data-scroll-target="#competitive-outcome-no-regulation">Competitive Outcome (No Regulation)</a></li>
+  <li><a href="#the-socially-efficient-level" id="toc-the-socially-efficient-level" class="nav-link" data-scroll-target="#the-socially-efficient-level">The Socially Efficient Level</a></li>
+  <li><a href="#welfare-maximizing-output" id="toc-welfare-maximizing-output" class="nav-link" data-scroll-target="#welfare-maximizing-output">Welfare-Maximizing Output</a></li>
+  </ul></li>
+  <li><a href="#three-regulatory-approaches" id="toc-three-regulatory-approaches" class="nav-link" data-scroll-target="#three-regulatory-approaches">Three Regulatory Approaches</a>
+  <ul class="collapse">
+  <li><a href="#approach-1-command-and-control" id="toc-approach-1-command-and-control" class="nav-link" data-scroll-target="#approach-1-command-and-control">Approach 1: Command and Control</a></li>
+  <li><a href="#problems-with-command-and-control" id="toc-problems-with-command-and-control" class="nav-link" data-scroll-target="#problems-with-command-and-control">Problems with Command and Control</a></li>
+  <li><a href="#approach-2-pigouvian-tax" id="toc-approach-2-pigouvian-tax" class="nav-link" data-scroll-target="#approach-2-pigouvian-tax">Approach 2: Pigouvian Tax</a></li>
+  <li><a href="#advantages-and-risks-of-pigouvian-taxes" id="toc-advantages-and-risks-of-pigouvian-taxes" class="nav-link" data-scroll-target="#advantages-and-risks-of-pigouvian-taxes">Advantages and Risks of Pigouvian Taxes</a></li>
+  <li><a href="#approach-3-cap-and-trade" id="toc-approach-3-cap-and-trade" class="nav-link" data-scroll-target="#approach-3-cap-and-trade">Approach 3: Cap and Trade</a></li>
+  <li><a href="#case-1-permits-given-to-plant-2" id="toc-case-1-permits-given-to-plant-2" class="nav-link" data-scroll-target="#case-1-permits-given-to-plant-2">Case 1: Permits Given to Plant 2</a></li>
+  <li><a href="#case-2-permits-given-to-plant-1" id="toc-case-2-permits-given-to-plant-1" class="nav-link" data-scroll-target="#case-2-permits-given-to-plant-1">Case 2: Permits Given to Plant 1</a></li>
+  <li><a href="#what-differs" id="toc-what-differs" class="nav-link" data-scroll-target="#what-differs">What Differs?</a></li>
+  </ul></li>
+  <li><a href="#comparing-the-three-approaches" id="toc-comparing-the-three-approaches" class="nav-link" data-scroll-target="#comparing-the-three-approaches">Comparing the Three Approaches</a>
+  <ul class="collapse">
+  <li><a href="#summary-of-regulatory-instruments" id="toc-summary-of-regulatory-instruments" class="nav-link" data-scroll-target="#summary-of-regulatory-instruments">Summary of Regulatory Instruments</a></li>
+  <li><a href="#why-cap-and-trade-has-special-virtues" id="toc-why-cap-and-trade-has-special-virtues" class="nav-link" data-scroll-target="#why-cap-and-trade-has-special-virtues">Why Cap and Trade Has Special Virtues</a></li>
+  <li><a href="#a-caveat" id="toc-a-caveat" class="nav-link" data-scroll-target="#a-caveat">A Caveat</a></li>
+  </ul></li>
+  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">Wrap Up</a>
+  <ul class="collapse">
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slides9-v2.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Externalities, the Coase Theorem, and Market Remedies</h1>
+<p class="subtitle lead">Lecture 9</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Div Bhagia </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<section id="what-is-an-externality" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-an-externality">What Is an Externality?</h2>
+<p>An <strong>externality</strong> arises when an economic actor does not face the correct price for taking a specific action. The correct price is the <strong>marginal social cost</strong> of that action.</p>
+<p>When markets work properly, they align private costs and benefits with social costs and benefits. When private benefits differ from social benefits (either higher or lower), externalities result.</p>
+<div class="fragment">
+<p>Put differently: externalities occur when one agent’s action directly affects another’s welfare, and this effect is <strong>not reflected in market prices</strong>.</p>
+</div>
+</section>
+<section id="classic-examples" class="level2">
+<h2 class="anchored" data-anchor-id="classic-examples">Classic Examples</h2>
+<ul>
+<li><p><strong>Traffic congestion:</strong> When I take the highway, I increase congestion for other drivers. The toll doesn’t vary with traffic conditions, so I face the wrong price (too high at non-peak hours, too low at peak hours)</p></li>
+<li><p><strong>Disease transmission:</strong> When deciding whether to vaccinate my children, I weigh only private costs and benefits. I don’t account for the protection my children’s vaccination provides to others at their school</p></li>
+</ul>
+<div class="fragment">
+<ul>
+<li><strong>Pollution:</strong> Because clean air is not priced, I pay essentially no cost to pollute. My marginal cost of driving does not incorporate the social cost of additional pollution, so I drive too much relative to the social optimum</li>
+</ul>
+</div>
+</section>
+<section id="are-externalities-ever-resolved-by-the-market" class="level2">
+<h2 class="anchored" data-anchor-id="are-externalities-ever-resolved-by-the-market">Are Externalities Ever Resolved by the Market?</h2>
+<p>Until the publication of Ronald Coase’s 1960 paper, most economists would have answered <strong>no</strong>.</p>
+<p>Coase made them reconsider that view.</p>
+<div class="fragment">
+<p>But before we get to Coase, let’s establish the framework for thinking about externalities and how different policy instruments address them.</p>
+</div>
+</section>
+</section>
+<section id="the-coase-theorem" class="level1">
+<h1>The Coase Theorem</h1>
+<section id="coases-key-insight" class="level2">
+<h2 class="anchored" data-anchor-id="coases-key-insight">Coase’s Key Insight</h2>
+<p>Coase gave the example of a <strong>doctor and a baker</strong> who share an office building. The baker’s loud machinery disturbed the doctor’s medical practice.</p>
+<div class="fragment">
+<p>The standard reasoning (at the time): the baker should compensate the doctor for the harm, since the baker was “causing” the externality.</p>
+</div>
+<div class="fragment">
+<p>But Coase pointed out a re-framing: suppose the doctor sets up his office <em>after</em> the baker is already there, and then demands the baker shut down. Who is responsible for the externality now?</p>
+</div>
+</section>
+<section id="the-reciprocal-nature-of-externalities" class="level2">
+<h2 class="anchored" data-anchor-id="the-reciprocal-nature-of-externalities">The Reciprocal Nature of Externalities</h2>
+<p>One can argue that the <em>doctor</em> is creating an externality by requiring the baker to bake in silence. The baker’s noise is an “input” into his production of baked goods.</p>
+<div class="fragment">
+<p>From a legal point of view, the answer may be clear. From an economic point of view, the answer is <strong>indeterminate</strong> based only on this information.</p>
+</div>
+<div class="fragment">
+<p>We need to know the <em>costs</em> of the different solutions.</p>
+</div>
+</section>
+<section id="adding-cost-information" class="level2">
+<h2 class="anchored" data-anchor-id="adding-cost-information">Adding Cost Information</h2>
+<p>Suppose:</p>
+<ul>
+<li>The baker could buy <strong>quieter machinery</strong> for <strong>$50</strong></li>
+<li>The doctor could <strong>soundproof</strong> his walls for <strong>$100</strong></li>
+</ul>
+<div class="fragment">
+<p>Economic efficiency demands the lowest-cost solution. The baker should buy quieter machinery.</p>
+</div>
+<div class="fragment">
+<p>But does this mean the baker should <em>pay</em> to abate? <strong>Not necessarily.</strong></p>
+</div>
+</section>
+<section id="two-scenarios" class="level2">
+<h2 class="anchored" data-anchor-id="two-scenarios">Two Scenarios</h2>
+<p><strong>Scenario 1:</strong> The town council assigns the doctor the right to control noise. The baker spends $50 for quieter machinery.</p>
+<div class="fragment">
+<p><strong>Scenario 2:</strong> The town council assigns the baker the right to make noise. Will the doctor spend $100 to soundproof? If the parties can negotiate, they should arrange for the doctor to pay the baker $50 for quieter machinery instead.</p>
+</div>
+<div class="fragment">
+<p>In <strong>both</strong> cases, the efficient outcome occurs: quieter machinery is purchased. The assignment of rights determines only <strong>who pays</strong>, not what happens.</p>
+</div>
+</section>
+<section id="the-coase-theorem-formal-statement" class="level2">
+<h2 class="anchored" data-anchor-id="the-coase-theorem-formal-statement">The Coase Theorem (Formal Statement)</h2>
+<p>If (1) <strong>property rights are complete</strong> (one party clearly owns the relevant right) and (2) <strong>parties can negotiate costlessly</strong>, then the parties will always negotiate an <strong>efficient solution</strong> to the externality.</p>
+<div class="fragment">
+<p>The law determines who pays the cost, but the <strong>outcome is the same</strong>.</p>
+</div>
+<div class="fragment">
+<p>Note the parallel with the Welfare Theorems: <strong>efficiency and distribution are separable problems</strong>.</p>
+</div>
+</section>
+<section id="when-does-coase-fail" class="level2">
+<h2 class="anchored" data-anchor-id="when-does-coase-fail">When Does Coase Fail?</h2>
+<p>The Coase theorem implies the market will solve externalities <em>unless</em>:</p>
+<ul>
+<li><strong>Property rights are incomplete</strong> (e.g., no one owns the air)</li>
+<li><strong>Negotiation is costly</strong> (e.g., the entire population cannot simultaneously negotiate about pollution)</li>
+</ul>
+<div class="fragment">
+<p>The theorem is often misinterpreted to suggest markets will solve <em>all</em> externalities. This is not true. The market can <em>potentially</em> solve externalities <strong>if</strong> property rights are clearly assigned and negotiation is feasible.</p>
+</div>
+</section>
+<section id="practical-limits" class="level2">
+<h2 class="anchored" data-anchor-id="practical-limits">Practical Limits</h2>
+<p>In some cases, Coasian bargaining is clearly infeasible:</p>
+<ul>
+<li>Airlines cannot realistically negotiate with individual homeowners for overflight rights</li>
+<li>You cannot negotiate with all handicapped drivers for the use of an empty handicap space in an emergency</li>
+</ul>
+<div class="fragment">
+<p><strong>Key inference:</strong> The best solution to an externality may not be to regulate it out of existence, but to <strong>assign property rights</strong> or <strong>facilitate bargaining</strong> so that the affected parties achieve an efficient solution themselves.</p>
+</div>
+</section>
+</section>
+<section id="remedying-pollution-a-numerical-example" class="level1">
+<h1>Remedying Pollution: A Numerical Example</h1>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<p>Consider two oil refineries that both produce fuel at a market price of <strong>$3 per gallon</strong>. Demand is infinitely elastic (price is fixed).</p>
+<ul>
+<li>Each refinery uses <strong>$2 in raw inputs</strong> to produce 1 gallon of fuel</li>
+<li>Each plant also produces <strong>smog</strong>, which causes <strong>$0.01</strong> of environmental damage per cubic foot</li>
+<li>Each plant can produce a maximum of <strong>200 gallons</strong></li>
+</ul>
+</section>
+<section id="smog-production-differs-across-plants" class="level2">
+<h2 class="anchored" data-anchor-id="smog-production-differs-across-plants">Smog Production Differs Across Plants</h2>
+<p>The amount of smog <em>per gallon</em> differs at the two plants:</p>
+<p><span class="math display">\[s_1 = y_1^2, \qquad s_2 = \frac{1}{2}y_2^2\]</span></p>
+<p>where <span class="math inline">\(y_1, y_2\)</span> are gallons of fuel produced at each plant.</p>
+<div class="fragment">
+<p>Plant 2 pollutes only <span class="math inline">\(\frac{1}{2}\)</span> as much as Plant 1 for a given level of production.</p>
+</div>
+</section>
+<section id="competitive-outcome-no-regulation" class="level2">
+<h2 class="anchored" data-anchor-id="competitive-outcome-no-regulation">Competitive Outcome (No Regulation)</h2>
+<p>Without any legal framework for resolving the externality, each firm solves:</p>
+<p><span class="math display">\[\max_{y_1} \pi_1 = y_1 \cdot (3-2) \;\; s.t. \;\; y_1 \leq 200\]</span> <span class="math display">\[\max_{y_2} \pi_2 = y_2 \cdot (3-2) \;\; s.t. \;\; y_2 \leq 200\]</span></p>
+<div class="fragment">
+<p><strong>Result:</strong> <span class="math inline">\(y_1^* = y_2^* = 200\)</span>. Each firm produces at capacity.</p>
+<p>Pollution: <span class="math inline">\(s_1 = 40{,}000\)</span>, <span class="math inline">\(s_2 = 20{,}000\)</span> cubic feet. The externality costs are $400 and $200 respectively.</p>
+</div>
+</section>
+<section id="the-socially-efficient-level" class="level2">
+<h2 class="anchored" data-anchor-id="the-socially-efficient-level">The Socially Efficient Level</h2>
+<p>To find the efficient level, equate marginal social benefit to marginal social cost:</p>
+<p><span class="math display">\[MB_s = MC_s\]</span></p>
+<p>The social benefit of a gallon of fuel is $3 (from the demand curve). The social cost is $2 in inputs <strong>plus</strong> the pollution damage.</p>
+<div class="fragment">
+<p>At the margin, no plant should produce more than <strong>$1 of environmental damage</strong> per gallon. So no plant should produce more than <strong>100 cubic feet of smog</strong> per gallon.</p>
+</div>
+</section>
+<section id="welfare-maximizing-output" class="level2">
+<h2 class="anchored" data-anchor-id="welfare-maximizing-output">Welfare-Maximizing Output</h2>
+<p>If each plant faced private <em>plus</em> social costs:</p>
+<p><span class="math display">\[\max_{y_1} \pi_1 = y_1(3-2) - 0.01 \cdot y_1^2 \;\;\; s.t. \;\; y_1 \leq 200\]</span></p>
+<p><span class="math display">\[\max_{y_2} \pi_2 = y_2(3-2) - 0.01 \cdot \tfrac{1}{2}y_2^2 \;\;\; s.t. \;\; y_2 \leq 200\]</span></p>
+<div class="fragment">
+<p><strong>Efficient output:</strong> <span class="math inline">\(y_1^{**} = 50, \;\; y_2^{**} = 100\)</span></p>
+<p>Plant 1 produces less because it is the dirtier plant. Optimal pollution is <strong>not zero</strong>. It reflects the tradeoff between production benefits and environmental harm.</p>
+</div>
+</section>
+</section>
+<section id="three-regulatory-approaches" class="level1">
+<h1>Three Regulatory Approaches</h1>
+<section id="approach-1-command-and-control" class="level2">
+<h2 class="anchored" data-anchor-id="approach-1-command-and-control">Approach 1: Command and Control</h2>
+<p>The traditional approach: set numerical <strong>quantity limits</strong> on polluting activities.</p>
+<div class="fragment">
+<p>If the regulator knows each plant’s cost structure, they could mandate: “Plant 1 may produce 50 gallons, Plant 2 may produce 100 gallons.” This achieves the efficient outcome.</p>
+</div>
+</section>
+<section id="problems-with-command-and-control" class="level2">
+<h2 class="anchored" data-anchor-id="problems-with-command-and-control">Problems with Command and Control</h2>
+<p>This kind of regulation is clumsy:</p>
+<ul>
+<li>It’s difficult to write laws that regulate each plant <strong>individually</strong></li>
+<li>Once passed, such laws are difficult to <strong>modify</strong> as technology or costs change</li>
+<li>If the regulator makes a mistake (e.g., reverses the allocations), there is <strong>no self-correcting mechanism</strong>, so the incentives are inefficient</li>
+</ul>
+<div class="fragment">
+<p>If the law cannot differentiate across plants and must impose a <strong>uniform cap</strong>, further inefficiencies result. (The optimal uniform cap is <em>not</em> simply 75 gallons; work this out as an exercise.)</p>
+</div>
+<div class="fragment">
+<p>Despite these weaknesses, command and control is the <strong>most common</strong> approach to regulating externalities.</p>
+</div>
+</section>
+<section id="approach-2-pigouvian-tax" class="level2">
+<h2 class="anchored" data-anchor-id="approach-2-pigouvian-tax">Approach 2: Pigouvian Tax</h2>
+<p>An alternative: use the <strong>price system</strong> to internalize the externality.</p>
+<p>If we set a tax of <span class="math inline">\(t = \$0.01\)</span> per cubic foot of smog, each plant’s problem becomes:</p>
+<p><span class="math display">\[\max_{y_1} \pi = y_1(3-2) - t \cdot y_1^2 \implies y_1^p = 50\]</span> <span class="math display">\[\max_{y_2} \pi = y_2(3-2) - t \cdot \tfrac{1}{2}y_2^2 \implies y_2^p = 100\]</span></p>
+<div class="fragment">
+<p>The tax achieves the efficient result with <strong>less information</strong>: we don’t need to know firms’ production functions, only the <strong>marginal social damage</strong> of pollution.</p>
+</div>
+</section>
+<section id="advantages-and-risks-of-pigouvian-taxes" class="level2">
+<h2 class="anchored" data-anchor-id="advantages-and-risks-of-pigouvian-taxes">Advantages and Risks of Pigouvian Taxes</h2>
+<p><strong>Advantage:</strong> Each firm optimally chooses its own level of pollution given the tax. No need to write a separate law for each plant.</p>
+<div class="fragment">
+<p><strong>Risk:</strong> If marginal damage varies with the <em>quantity</em> of pollution (e.g., pollution above a threshold causes mass extinction), setting the tax slightly wrong could be <strong>catastrophic</strong>.</p>
+</div>
+<div class="fragment">
+<p>When marginal damage is constant, the Pigouvian tax is straightforward. When it varies, setting the right tax schedule becomes much harder.</p>
+</div>
+</section>
+<section id="approach-3-cap-and-trade" class="level2">
+<h2 class="anchored" data-anchor-id="approach-3-cap-and-trade">Approach 3: Cap and Trade</h2>
+<p>The Pigouvian tax doesn’t fully use the Coase theorem. The state sets the price, not the market. Can we do better by <strong>assigning property rights</strong> to pollution?</p>
+<div class="fragment">
+<p>The optimal total pollution is <span class="math inline">\(50^2 + \frac{1}{2}(100^2) = 7{,}500\)</span> cubic feet. The government could issue <strong>7,500 permits</strong>, each allowing 1 cubic foot of smog. Permits can be traded.</p>
+</div>
+</section>
+<section id="case-1-permits-given-to-plant-2" class="level2">
+<h2 class="anchored" data-anchor-id="case-1-permits-given-to-plant-2">Case 1: Permits Given to Plant 2</h2>
+<p>Plant 2 (the more efficient refinery) receives all 7,500 permits. It could:</p>
+<ol type="1">
+<li><strong>Use all permits itself:</strong> produce 122.4 gallons (profit: $122.40)</li>
+<li><strong>Produce 100 gallons, sell 2,500 permits to Plant 1:</strong> Plant 1 produces 50 gallons and pays up to $50 for permits. Plant 2 earns $150 total.</li>
+</ol>
+<div class="fragment">
+<p>Plant 2 <strong>cannot do better</strong> than option 2. The market leads it to the efficient allocation.</p>
+</div>
+</section>
+<section id="case-2-permits-given-to-plant-1" class="level2">
+<h2 class="anchored" data-anchor-id="case-2-permits-given-to-plant-1">Case 2: Permits Given to Plant 1</h2>
+<p>Now Plant 1 (the dirtier refinery) receives all 7,500 permits. It could:</p>
+<ol type="1">
+<li>Use all permits: produce 86.6 gallons (profit: $86.60)</li>
+<li>Sell all permits to Plant 2 (profit: $122.40)</li>
+<li><strong>Keep 2,500 permits, sell 5,000 to Plant 2:</strong> Plant 1 produces 50 gallons, Plant 2 produces 100 gallons, and Plant 1 earns up to $150</li>
+</ol>
+<div class="fragment">
+<p>Again, the efficient allocation emerges. <strong>Regardless of who receives the permits</strong>, the key economic outcome (fuel produced, pollution produced, and the allocation across plants) is <strong>identical</strong>.</p>
+</div>
+</section>
+<section id="what-differs" class="level2">
+<h2 class="anchored" data-anchor-id="what-differs">What Differs?</h2>
+<p>Only <strong>which plant makes the profits</strong> (a transfer among plant owners).</p>
+<div class="fragment">
+<p>This is the power of the Coase theorem in action. By assigning property rights to pollution, the government allows the <strong>market</strong> to correct the externality.</p>
+<p>The initial allocation of permits is a major <strong>political</strong> question, but it has no effect on <strong>economic efficiency</strong>.</p>
+</div>
+</section>
+</section>
+<section id="comparing-the-three-approaches" class="level1">
+<h1>Comparing the Three Approaches</h1>
+<section id="summary-of-regulatory-instruments" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-regulatory-instruments">Summary of Regulatory Instruments</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Command &amp; Control</th>
+<th>Pigouvian Tax</th>
+<th>Cap &amp; Trade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Sets</strong></td>
+<td>Quantity for each firm</td>
+<td>Price of pollution</td>
+<td>Total quantity</td>
+</tr>
+<tr class="even">
+<td><strong>Information needed</strong></td>
+<td>Each firm’s costs</td>
+<td>Marginal damage</td>
+<td>Total efficient pollution</td>
+</tr>
+<tr class="odd">
+<td><strong>Self-correcting?</strong></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td><strong>Firms optimize?</strong></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="why-cap-and-trade-has-special-virtues" class="level2">
+<h2 class="anchored" data-anchor-id="why-cap-and-trade-has-special-virtues">Why Cap and Trade Has Special Virtues</h2>
+<ol type="1">
+<li>Like command and control, it allows the regulator to set the <strong>total amount</strong> of pollution</li>
+<li>Like the Pigouvian tax, it’s simple to implement (no separate law per firm needed)</li>
+<li>Unlike either alternative, it causes firms to <strong>optimally reallocate pollution</strong> through trade, even if the regulator doesn’t know firms’ cost structures</li>
+</ol>
+<div class="fragment">
+<p>The SO<span class="math inline">\(_2\)</span> cap-and-trade program in the U.S. dramatically exceeded expectations: it reduced emissions at <strong>far lower cost</strong> than anticipated, because the market revealed that firms’ true abatement costs were lower than what they had told regulators under command-and-control.</p>
+</div>
+</section>
+<section id="a-caveat" class="level2">
+<h2 class="anchored" data-anchor-id="a-caveat">A Caveat</h2>
+<p>Cap and trade may not work well if the regulator cares about <strong>which</strong> plant does the polluting.</p>
+<div class="fragment">
+<p>If all the low-cost polluters happen to be concentrated in one geographic area, cap and trade could lead to <strong>localized pollution hotspots</strong>, even if total pollution is efficient.</p>
+</div>
+</section>
+</section>
+<section id="wrap-up" class="level1">
+<h1>Wrap Up</h1>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<div class="incremental">
+<ol class="incremental" type="1">
+<li><strong>Externalities</strong> arise when private and social costs diverge, so agents face the “wrong” price</li>
+<li>The <strong>Coase theorem</strong> shows that well-defined property rights + costless bargaining lead to efficient outcomes regardless of who holds the rights</li>
+<li>Three regulatory instruments address externalities: <strong>command and control</strong>, <strong>Pigouvian taxes</strong>, and <strong>cap and trade</strong>, each with different information requirements and incentive properties</li>
+<li>Cap and trade has special virtues: it sets total pollution, lets firms optimize, and generates efficient reallocation through trade</li>
+<li>Rectifying an externality often means finding a way to restore market conditions so the Coase theorem can hold; when that isn’t feasible, external regulation may be needed</li>
+</ol>
+</div>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>Nicholson &amp; Snyder, <em>Microeconomic Theory</em>, 13e, Chapter 19</li>
+<li>Coase, “The Problem of Social Cost” (1960)</li>
+<li>Pigou, <em>The Economics of Welfare</em> (1920)</li>
+<li>Schmalensee et al., on SO<span class="math inline">\(_2\)</span> cap and trade</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>2026 Div Bhagia | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 License</a> |Made with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

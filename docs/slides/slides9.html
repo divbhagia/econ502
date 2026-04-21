@@ -1006,23 +1006,22 @@ Div Bhagia
 <section class="slide level2">
 <h2>When Markets Fail</h2>
 <p>Under the conditions of the First Welfare Theorem, competitive markets deliver Pareto-efficient outcomes. But those conditions are demanding: complete markets, well-defined property rights, price-taking behavior, and no spillover effects between agents.</p>
-<p>In this lecture we study two classic sources of market failure:</p>
+<div class="fragment">
+<p>We studied one source of market failure: <strong>asymmetric information</strong>. In this lecture we study two more classic sources of market failure:</p>
 <ul>
 <li><strong>Externalities:</strong> one agent’s action affects another’s welfare without passing through the price system</li>
 <li><strong>Public goods:</strong> goods whose consumption is non-rival and non-excludable, so markets under-provide them</li>
 </ul>
 <p>In both cases, private incentives diverge from social incentives and there is a potential role for policy.</p>
-</section>
-<section class="slide level2">
-<h2>Roadmap</h2>
-<ol type="1">
-<li>What is an externality? Positive and negative spillovers</li>
-<li>Why externalities cause inefficiency</li>
-<li>Private solutions: Coase theorem and bargaining</li>
-<li>Public solutions: Pigouvian taxes, subsidies, quotas, and tradable permits</li>
-<li>Public goods: definition, free riding, and optimal provision</li>
-<li>Mechanisms for provision: Lindahl prices, voting, and political economy</li>
-</ol>
+</div>
+<!-- ## Roadmap
+
+1. What is an externality? Positive and negative spillovers
+2. Why externalities cause inefficiency
+3. Private solutions: Coase theorem and bargaining
+4. Public solutions: Pigouvian taxes, subsidies, quotas, and tradable permits
+5. Public goods: definition, free riding, and optimal provision
+6. Mechanisms for provision: Lindahl prices, voting, and political economy -->
 </section></section>
 <section>
 <section class="title-slide slide level1 section-slide no-print center">
@@ -1031,177 +1030,285 @@ Div Bhagia
 </section>
 <section class="slide level2">
 <h2>What Is an Externality?</h2>
-<p>An <strong>externality</strong> exists when the action of one agent directly affects the utility or production possibilities of another agent, and this effect is not reflected in market prices.</p>
 <ul>
-<li><strong>Negative externality:</strong> the action imposes a cost on others (pollution, traffic congestion, second-hand smoke)</li>
-<li><strong>Positive externality:</strong> the action confers a benefit on others (vaccination, education, R&amp;D spillovers, a neighbor’s well-kept garden)</li>
+<li><p>An <strong>externality</strong> arises when an economic actor does not face the correct price for taking a specific action. The correct price is the <strong>marginal social cost</strong> of that action.</p></li>
+<li><p>When markets work properly, they align private costs and benefits with social costs and benefits. When private benefits differ from social benefits (either higher or lower), externalities result.</p></li>
+<li><p>Put differently: externalities occur when one agent’s action directly affects another’s welfare, and this effect is <strong>not reflected in market prices</strong>.</p></li>
 </ul>
-<p>The key feature is that the externality is <strong>not priced</strong>. The decision-maker compares private costs and benefits but ignores the effect on third parties.</p>
 </section>
 <section class="slide level2">
-<h2>Private vs. Social Costs</h2>
-<p>Consider a firm whose production generates pollution.</p>
+<h2>Classic Examples</h2>
 <ul>
-<li><strong>Private marginal cost (PMC):</strong> the cost the firm pays for inputs</li>
-<li><strong>External marginal cost (EMC):</strong> the harm pollution imposes on others</li>
-<li><strong>Social marginal cost (SMC)</strong> <span class="math inline">\(= PMC + EMC\)</span></li>
+<li><p><strong>Traffic congestion:</strong> When I take the highway, I increase congestion for other drivers. But my decision to drive is based on my private cost (time, fuel) and does not account for the additional delay I impose on others.</p></li>
+<li><p><strong>Disease transmission:</strong> When deciding whether to vaccinate, individuals are most likely to weigh only private costs and benefits, ignoring the positive externality of reduced disease spread to others.</p></li>
+<li><p><strong>Pollution:</strong> Because clean air is not priced, we pay essentially no cost to pollute. The marginal cost of our polluting actions do not incorporate the social cost of additional pollution, so we pollute more than is socially optimal.</p></li>
 </ul>
-<p>The firm chooses output to equate price with its <em>private</em> marginal cost. The socially efficient level equates price with the <em>social</em> marginal cost.</p>
+</section>
+<section class="slide level2">
+<h2>A Key Question</h2>
+<h3>Can Externalities Be Resolved by the Market?</h3>
+<p>Until the publication of Ronald Coase’s 1960 paper, most economists would have answered <strong>no</strong>.</p>
+<p>Coase made them reconsider that view. Coase gave the example of a <strong>doctor and a baker</strong> who share an office building. The baker’s loud machinery disturbed the doctor’s medical practice.</p>
 <div class="fragment">
-<p>When <span class="math inline">\(EMC &gt; 0\)</span>, the firm produces <strong>too much</strong> from society’s point of view.</p>
+<p>The standard reasoning (at the time): the baker should compensate the doctor for the harm, since the baker was “causing” the externality.</p>
+</div>
+<div class="fragment">
+<p>But Coase pointed out a re-framing: suppose the doctor sets up his office <em>after</em> the baker is already there, and then demands the baker shut down. Who is responsible for the externality now?</p>
 </div>
 </section>
 <section class="slide level2">
-<h2>Graphical Analysis: Negative Externality</h2>
-<p>At the market equilibrium, <span class="math inline">\(Q^m\)</span>, where demand meets <span class="math inline">\(PMC\)</span>, the marginal social cost exceeds the marginal benefit. Reducing output from <span class="math inline">\(Q^m\)</span> toward <span class="math inline">\(Q^*\)</span> (where demand meets <span class="math inline">\(SMC\)</span>) raises welfare.</p>
-<p>The shaded triangle between <span class="math inline">\(SMC\)</span> and demand, from <span class="math inline">\(Q^*\)</span> to <span class="math inline">\(Q^m\)</span>, is the <strong>deadweight loss</strong> from over-production.</p>
+<h2>The Reciprocal Nature of Externalities</h2>
+<p>One can argue that the <em>doctor</em> is creating an externality by requiring the baker to bake in silence. The baker’s noise is an “input” into his production of baked goods.</p>
 <div class="fragment">
-<p>Two things to notice:</p>
+<p>From a legal point of view, the answer may be clear. From an economic point of view, the answer is <strong>indeterminate</strong> based only on this information. We need to know the <em>costs</em> of the different solutions.</p>
+</div>
+<div class="fragment">
+<p>Suppose:</p>
 <ul>
-<li>Efficiency does <strong>not</strong> require zero pollution</li>
-<li>It requires that the marginal damage equals the marginal benefit of the activity</li>
+<li>The baker could buy <strong>quieter machinery</strong> for <strong>$50</strong></li>
+<li>The doctor could <strong>soundproof</strong> his walls for <strong>$100</strong></li>
 </ul>
+<p>Economic efficiency demands the lowest-cost solution. The baker should buy quieter machinery.</p>
+</div>
+<div class="fragment">
+<p>But does this mean the baker should <em>pay</em> to abate? <strong>Not necessarily.</strong></p>
 </div>
 </section>
 <section class="slide level2">
-<h2>Positive Externalities</h2>
-<p>For a positive externality, the roles are flipped. Private agents enjoy only part of the benefit of an action; the rest accrues to others.</p>
+<h2>Two Scenarios</h2>
+<p><strong>Scenario 1:</strong> The town council assigns the doctor the right to control noise. The baker spends $50 for quieter machinery.</p>
+<div class="fragment">
+<p><strong>Scenario 2:</strong> The town council assigns the baker the right to make noise. Will the doctor spend $100 to soundproof? If the parties can negotiate, they should arrange for the doctor to pay the baker $50 for quieter machinery instead.</p>
+</div>
+<div class="fragment">
+<p>In <strong>both</strong> cases, the efficient outcome occurs: quieter machinery is purchased. The assignment of rights determines only <strong>who pays</strong>, not what happens.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The Coase Theorem (Formal Statement)</h2>
+<p>If (1) <strong>property rights are complete</strong> (one party clearly owns the relevant right) and (2) <strong>parties can negotiate costlessly</strong>, then the parties will always negotiate an <strong>efficient solution</strong> to the externality.</p>
+<div class="fragment">
+<p>The law determines who pays the cost, but the <strong>outcome is the same</strong>.</p>
+</div>
+<div class="fragment">
+<p>Note the parallel with the Welfare Theorems: <strong>efficiency and distribution are separable problems</strong>.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>When Does Coase Fail?</h2>
+<p>The Coase theorem implies the market will solve externalities <em>unless</em>:</p>
 <ul>
-<li>Private marginal benefit (PMB) lies <strong>below</strong> social marginal benefit (SMB)</li>
-<li>The market produces <span class="math inline">\(Q^m\)</span> where PMB = MC, which is <strong>less</strong> than the efficient <span class="math inline">\(Q^*\)</span> where SMB = MC</li>
+<li><strong>Property rights are incomplete</strong> (e.g., no one owns the air)</li>
+<li><strong>Negotiation is costly</strong> (e.g., the entire population cannot simultaneously negotiate about pollution)</li>
 </ul>
 <div class="fragment">
-<p>So markets <strong>under-provide</strong> goods with positive externalities. Examples: education, basic research, vaccination, open-source software.</p>
-</div>
-</section></section>
-<section>
-<section class="title-slide slide level1 section-slide no-print center">
-<h1>Correcting Externalities</h1>
-
-</section>
-<section class="slide level2">
-<h2>The Pigouvian Approach</h2>
-<p>A.C. Pigou (1920) proposed correcting externalities with a tax equal to the marginal external damage at the efficient quantity.</p>
-<p><span class="math display">\[ t^* = EMC(Q^*) \]</span></p>
-<p>After the tax, the firm’s private cost is <span class="math inline">\(PMC + t^* = SMC\)</span>, so its private optimum coincides with the social optimum.</p>
-<div class="fragment">
-<p>The logic for positive externalities is symmetric: use a <strong>subsidy</strong> equal to the marginal external benefit.</p>
+<p>The theorem is often misinterpreted to suggest markets will solve <em>all</em> externalities. This is not true. The market can <em>potentially</em> solve externalities <strong>if</strong> property rights are clearly assigned and negotiation is feasible.</p>
 </div>
 <div class="fragment">
-<p>Pigouvian instruments correct the price signal rather than banning the activity outright.</p>
+<p>And in many cases, Coasian bargaining is infeasible due to large numbers of affected parties, high transaction costs, or asymmetric information. In those cases, government intervention may be necessary to correct the externality.</p>
 </div>
 </section>
 <section class="slide level2">
-<h2>Quantity Instruments</h2>
-<p>The government can also fix the quantity directly.</p>
+<h2>Reducing Pollution: A Numerical Example</h2>
+<p>Consider two oil refineries that both produce fuel.</p>
 <ul>
-<li><strong>Standards and quotas:</strong> mandate a maximum level of pollution</li>
-<li><strong>Tradable permits:</strong> issue a fixed number of permits and let firms trade</li>
+<li>Market <strong>price of fuel is $3</strong> per gallon</li>
+<li>Each refinery uses <strong>$2 in raw inputs</strong> to produce 1 gallon of fuel</li>
+<li>Each plant also produces <strong>smog</strong>, which causes <strong>$0.01</strong> of environmental damage per cubic foot</li>
+<li>Each plant can produce a maximum of <strong>200 gallons</strong></li>
 </ul>
+</section>
+<section class="slide level2">
+<h2>Smog Production Differs Across Plants</h2>
+<p>The amount of smog <em>per gallon</em> differs at the two plants:</p>
+<p><span class="math display">\[s_1 = y_1^2, \qquad s_2 = \frac{1}{2}y_2^2\]</span></p>
+<p>where <span class="math inline">\(y_1, y_2\)</span> are gallons of fuel produced at each plant.</p>
 <div class="fragment">
-<p>With tradable permits, the equilibrium permit price plays the role of a Pigouvian tax. Firms with low abatement costs sell permits; firms with high abatement costs buy them. Abatement is concentrated where it is cheapest.</p>
-</div>
-<div class="fragment">
-<p>Price and quantity instruments are equivalent under perfect information. Under uncertainty about costs or benefits, Weitzman (1974) showed they differ: use prices when marginal costs are steep relative to marginal benefits, and quantities when marginal benefits are steep.</p>
+<p>Plant 2 pollutes only <span class="math inline">\(\frac{1}{2}\)</span> as much as Plant 1 for a given level of production.</p>
 </div>
 </section>
 <section class="slide level2">
-<h2>Coase Theorem</h2>
-<p>Coase (1960) argued that the externality problem is really a problem of <strong>missing markets</strong> or unclear property rights.</p>
-<p><strong>Coase Theorem (informal):</strong> If property rights are well-defined and bargaining is costless, private parties will negotiate to the efficient outcome regardless of who holds the rights.</p>
+<h2>Competitive Outcome (No Regulation)</h2>
+<p>Without any legal framework for resolving the externality, each firm solves:</p>
+<p><span class="math display">\[\max_{y_1} \pi_1 = y_1 \cdot (3-2) \;\; s.t. \;\; y_1 \leq 200\]</span> <span class="math display">\[\max_{y_2} \pi_2 = y_2 \cdot (3-2) \;\; s.t. \;\; y_2 \leq 200\]</span></p>
 <div class="fragment">
+<p><strong>Result:</strong> <span class="math inline">\(y_1^* = y_2^* = 200\)</span>. Each firm produces at capacity.</p>
+<p>Pollution: <span class="math inline">\(s_1 = 40{,}000\)</span>, <span class="math inline">\(s_2 = 20{,}000\)</span> cubic feet. The externality costs are $400 and $200 respectively.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The Socially Efficient Level</h2>
+<p>To find the efficient level, equate marginal social benefit to marginal social cost:</p>
+<p><span class="math display">\[MB_s = MC_s\]</span></p>
+<p>The social benefit of a gallon of fuel is $3 (from the demand curve). The social cost is $2 in inputs <strong>plus</strong> the pollution damage.</p>
+<div class="fragment">
+<p>At the margin, no plant should produce more than <strong>$1 of environmental damage</strong> per gallon. So no plant should produce more than <strong>100 cubic feet of smog</strong> per gallon.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Welfare-Maximizing Output</h2>
+<p>If each plant faced private <em>plus</em> social costs:</p>
+<p><span class="math display">\[\max_{y_1} \pi_1 = y_1(3-2) - 0.01 \cdot y_1^2 \;\;\; s.t. \;\; y_1 \leq 200\]</span></p>
+<p><span class="math display">\[\max_{y_2} \pi_2 = y_2(3-2) - 0.01 \cdot \tfrac{1}{2}y_2^2 \;\;\; s.t. \;\; y_2 \leq 200\]</span></p>
+<div class="fragment">
+<p><strong>Efficient output:</strong> <span class="math inline">\(y_1^{**} = 50, \;\; y_2^{**} = 100\)</span></p>
+<p>Plant 1 produces less because it is the dirtier plant. Optimal pollution is <strong>not zero</strong>. It reflects the tradeoff between production benefits and environmental harm.</p>
+</div>
+<div class="fragment">
+<p>What regulation can achieve this outcome? We will discuss three approaches: command and control, Pigouvian taxes, and cap-and-trade.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Approach 1: Command and Control</h2>
+<p>The traditional approach: set numerical <strong>quantity limits</strong> on polluting activities.</p>
+<div class="fragment">
+<p>If the regulator knows each plant’s cost structure, they could mandate: “Plant 1 may produce 50 gallons, Plant 2 may produce 100 gallons.” This achieves the efficient outcome.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Problems with Command and Control</h2>
+<p>This kind of regulation is clumsy:</p>
 <ul>
-<li>The <strong>efficient level</strong> of the externality is independent of who is assigned the right</li>
-<li>The <strong>distribution</strong> of gains, however, depends on the initial assignment</li>
+<li>It’s difficult to write laws that regulate each plant <strong>individually</strong></li>
+<li>Once passed, such laws are difficult to <strong>modify</strong> as technology or costs change</li>
+<li>If the regulator makes a mistake (e.g., reverses the allocations), there is <strong>no self-correcting mechanism</strong>, so the incentives are inefficient</li>
 </ul>
+<div class="fragment">
+<p>If the law cannot differentiate across plants and must impose a <strong>uniform cap</strong>, further inefficiencies result. (The optimal uniform cap is <em>not</em> simply 75 gallons; work this out as an exercise.)</p>
+</div>
+<div class="fragment">
+<p>Despite these weaknesses, command and control is the <strong>most common</strong> approach to regulating externalities.</p>
 </div>
 </section>
 <section class="slide level2">
-<h2>Example: Factory and Fishery</h2>
-<p>A factory dumps waste upstream; a fishery is harmed downstream.</p>
+<h2>Approach 2: Pigouvian Tax</h2>
+<p>An alternative: use the <strong>price system</strong> to internalize the externality.</p>
+<p>If we set a tax of <span class="math inline">\(t = \$0.01\)</span> per cubic foot of smog, each plant’s problem becomes:</p>
+<p><span class="math display">\[\max_{y_1} \pi = y_1(3-2) - t \cdot y_1^2 \implies y_1^p = 50\]</span> <span class="math display">\[\max_{y_2} \pi = y_2(3-2) - t \cdot \tfrac{1}{2}y_2^2 \implies y_2^p = 100\]</span></p>
+<div class="fragment">
+<p>The tax achieves the efficient result with <strong>less information</strong>: we don’t need to know firms’ production functions, only the <strong>marginal social damage</strong> of pollution.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Advantages and Risks of Pigouvian Taxes</h2>
+<p><strong>Advantage:</strong> Each firm optimally chooses its own level of pollution given the tax. No need to write a separate law for each plant.</p>
+<div class="fragment">
+<p><strong>Risk:</strong> If marginal damage varies with the <em>quantity</em> of pollution (e.g., pollution above a threshold causes mass extinction), setting the tax slightly wrong could be <strong>catastrophic</strong>.</p>
+</div>
+<div class="fragment">
+<p>When marginal damage is constant, the Pigouvian tax is straightforward. When it varies, setting the right tax schedule becomes much harder.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Approach 3: Cap and Trade</h2>
+<p>The Pigouvian tax doesn’t fully use the Coase theorem. The state sets the price, not the market. Can we do better by <strong>assigning property rights</strong> to pollution?</p>
+<div class="fragment">
+<p>The optimal total pollution is <span class="math inline">\(50^2 + \frac{1}{2}(100^2) = 7{,}500\)</span> cubic feet. The government could issue <strong>7,500 permits</strong>, each allowing 1 cubic foot of smog. Permits can be traded.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Case 1: Permits Given to Plant 2</h2>
+<p>Plant 2 (the more efficient refinery) receives all 7,500 permits. It could:</p>
+<ol type="1">
+<li><strong>Use all permits itself:</strong> produce 122.4 gallons (profit: $122.40)</li>
+<li><strong>Produce 100 gallons, sell 2,500 permits to Plant 1:</strong> Plant 1 produces 50 gallons and pays up to $50 for permits. Plant 2 earns $150 total.</li>
+</ol>
+<div class="fragment">
+<p>Plant 2 <strong>cannot do better</strong> than option 2. The market leads it to the efficient allocation.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Case 2: Permits Given to Plant 1</h2>
+<p>Now Plant 1 (the dirtier refinery) receives all 7,500 permits. It could:</p>
+<ol type="1">
+<li>Use all permits: produce 86.6 gallons (profit: $86.60)</li>
+<li>Sell all permits to Plant 2 (profit: $122.40)</li>
+<li><strong>Keep 2,500 permits, sell 5,000 to Plant 2:</strong> Plant 1 produces 50 gallons, Plant 2 produces 100 gallons, and Plant 1 earns up to $150</li>
+</ol>
+<div class="fragment">
+<p>Again, the efficient allocation emerges. <strong>Regardless of who receives the permits</strong>, the key economic outcome (fuel produced, pollution produced, and the allocation across plants) is <strong>identical</strong>.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>What Differs?</h2>
+<p>Only <strong>which plant makes the profits</strong> (a transfer among plant owners).</p>
+<div class="fragment">
+<p>This is the power of the Coase theorem in action. By assigning property rights to pollution, the government allows the <strong>market</strong> to correct the externality.</p>
+<p>The initial allocation of permits is a major <strong>political</strong> question, but it has no effect on <strong>economic efficiency</strong>.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Comparing the Three Approaches</h2>
 <table class="caption-top">
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Who has the right?</th>
-<th>Outcome</th>
+<th>Feature</th>
+<th>Command &amp; Control</th>
+<th>Pigouvian Tax</th>
+<th>Cap &amp; Trade</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Factory may pollute</td>
-<td>Fishery pays factory to reduce pollution up to the point where its marginal benefit equals the factory’s marginal cost of abatement</td>
+<td><strong>Sets</strong></td>
+<td>Quantity for each firm</td>
+<td>Price of pollution</td>
+<td>Total quantity</td>
 </tr>
 <tr class="even">
-<td>Fishery has clean water</td>
-<td>Factory pays fishery for the right to pollute up to the same point</td>
-</tr>
-</tbody>
-</table>
-<div class="fragment">
-<p>Either way, the <strong>efficient</strong> level of pollution is reached. The assignment of rights determines only <em>who pays whom</em>.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Limits of Coasian Bargaining</h2>
-<p>In practice, bargaining rarely produces the efficient outcome because:</p>
-<ul>
-<li><strong>Transaction costs</strong> are high when many parties are involved</li>
-<li><strong>Information is asymmetric</strong> about damages and benefits</li>
-<li><strong>Holdout and free-rider problems</strong> can block deals</li>
-<li><strong>Ill-defined or contested property rights</strong></li>
-</ul>
-<div class="fragment">
-<p>This is why Coase’s insight is most useful for small-number problems (neighbors, adjacent firms). Large-scale externalities like air pollution and climate change typically require public policy.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Comparing Instruments</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Instrument</th>
-<th>Information need</th>
-<th>Distributional effect</th>
-<th>Flexibility</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Pigouvian tax</td>
+<td><strong>Information needed</strong></td>
+<td>Each firm’s costs</td>
 <td>Marginal damage</td>
-<td>Revenue to government</td>
-<td>Firms choose abatement</td>
-</tr>
-<tr class="even">
-<td>Standard/quota</td>
-<td>Efficient quantity</td>
-<td>No revenue</td>
-<td>Rigid</td>
+<td>Total efficient pollution</td>
 </tr>
 <tr class="odd">
-<td>Tradable permits</td>
-<td>Efficient quantity</td>
-<td>Depends on allocation</td>
-<td>Trade finds low-cost abatement</td>
+<td><strong>Self-correcting?</strong></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr class="even">
-<td>Coasian bargaining</td>
-<td>Rights assignment</td>
-<td>Depends on bargaining</td>
-<td>Only small groups</td>
+<td><strong>Firms optimize?</strong></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 </tbody>
 </table>
+</section>
+<section class="slide level2">
+<h2>Why Cap and Trade Has Special Virtues</h2>
+<ol type="1">
+<li>Like command and control, it allows the regulator to set the <strong>total amount</strong> of pollution</li>
+<li>Like the Pigouvian tax, it’s simple to implement (no separate law per firm needed)</li>
+<li>Unlike either alternative, it causes firms to <strong>optimally reallocate pollution</strong> through trade, even if the regulator doesn’t know firms’ cost structures</li>
+</ol>
+<div class="fragment">
+<p>The SO<span class="math inline">\(_2\)</span> cap-and-trade program in the U.S. dramatically exceeded expectations: it reduced emissions at <strong>far lower cost</strong> than anticipated, because the market revealed that firms’ true abatement costs were lower than what they had told regulators under command-and-control.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>A Caveat</h2>
+<p>Cap and trade may not work well if the regulator cares about <strong>which</strong> plant does the polluting.</p>
+<div class="fragment">
+<p>If all the low-cost polluters happen to be concentrated in one geographic area, cap and trade could lead to <strong>localized pollution hotspots</strong>, even if total pollution is efficient.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Key Takeaways</h2>
+<ol type="1">
+<li class="fragment"><strong>Externalities</strong> arise when private and social costs diverge, so agents face the “wrong” price</li>
+<li class="fragment">The <strong>Coase theorem</strong> shows that well-defined property rights + costless bargaining lead to efficient outcomes regardless of who holds the rights</li>
+<li class="fragment">Three regulatory instruments address externalities: <strong>command and control</strong>, <strong>Pigouvian taxes</strong>, and <strong>cap and trade</strong>, each with different information requirements and incentive properties</li>
+<li class="fragment">Cap and trade has special virtues: it sets total pollution, lets firms optimize, and generates efficient reallocation through trade</li>
+<li class="fragment">Rectifying an externality often means finding a way to restore market conditions so the Coase theorem can hold; when that isn’t feasible, external regulation may be needed</li>
+</ol>
 </section></section>
 <section>
 <section class="title-slide slide level1 section-slide no-print center">
@@ -1210,13 +1317,13 @@ Div Bhagia
 </section>
 <section class="slide level2">
 <h2>Defining Public Goods</h2>
-<p>Goods can be classified along two dimensions: <strong>rivalry</strong> and <strong>excludability</strong>.</p>
+<p>Goods can be classified along two dimensions:</p>
+<ol type="1">
+<li><strong>Rivalry:</strong> whether one person’s consumption reduces availability to others</li>
+<li><strong>Excludability:</strong> whether it is possible to prevent anyone from consuming the good</li>
+</ol>
+<div class="fragment">
 <table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th></th>
@@ -1227,200 +1334,154 @@ Div Bhagia
 <tbody>
 <tr class="odd">
 <td><strong>Rival</strong></td>
-<td>Private good (apple)</td>
-<td>Common resource (ocean fishery)</td>
+<td>Private good</td>
+<td>Common good</td>
 </tr>
 <tr class="even">
 <td><strong>Non-rival</strong></td>
-<td>Club good (Netflix)</td>
-<td><strong>Pure public good</strong> (national defense)</td>
+<td>Club good</td>
+<td><em>Public good</em></td>
 </tr>
 </tbody>
 </table>
-<div class="fragment">
-<p>A <strong>pure public good</strong> has two properties:</p>
-<ul>
-<li><strong>Non-rivalrous:</strong> one person’s consumption does not reduce availability to others</li>
-<li><strong>Non-excludable:</strong> it is infeasible to prevent anyone from consuming it</li>
-</ul>
 </div>
 </section>
 <section class="slide level2">
-<h2>Classic Examples</h2>
-<ul>
+<h2>Can You Classify These Goods?</h2>
+<ol type="1">
+<li>A slice of pizza</li>
 <li>National defense</li>
 <li>Street lighting</li>
+<li>Fish in the ocean</li>
+<li>A Netflix subscription</li>
+<li>A public park bench</li>
+<li>A toll road</li>
 <li>Clean air</li>
-<li>Basic scientific research</li>
+<li>A podcast episode</li>
+<li>Open-source software</li>
 <li>Fireworks displays</li>
-<li>Lighthouses (Samuelson’s favorite example, though Coase disputed its historical accuracy)</li>
-</ul>
-<div class="fragment">
-<p>Most real-world goods are not “pure” in either dimension. But many goods are close enough to pure public goods that the logic below applies.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>The Free-Rider Problem</h2>
-<p>Because public goods are non-excludable, each consumer has an incentive to understate their willingness to pay and hope that <strong>someone else</strong> provides the good.</p>
-<div class="fragment">
-<p>If everyone free-rides, the public good is under-provided or not provided at all. Voluntary contribution schemes typically produce <strong>less</strong> than the efficient amount.</p>
-</div>
-<div class="fragment">
-<p>This is not irrationality. It is individually rational behavior leading to a collectively bad outcome, a classic prisoner’s dilemma at the level of the whole society.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Optimal Provision: Samuelson Condition</h2>
-<p>For a <strong>private good</strong>, efficiency requires that each consumer’s marginal rate of substitution equals the marginal rate of transformation:</p>
-<p><span class="math display">\[ MRS_i = MRT \quad \text{for each } i \]</span></p>
-<p>For a <strong>public good</strong>, because everyone consumes the same quantity, efficiency requires that the <strong>sum</strong> of marginal rates of substitution equals the marginal rate of transformation:</p>
-<p><span class="math display">\[ \sum_{i=1}^n MRS_i = MRT \]</span></p>
-<div class="fragment">
-<p>This is the <strong>Samuelson condition</strong> (1954). The intuition: one extra unit of the public good benefits everyone simultaneously, so we should sum those benefits and compare to the cost.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Graphical Intuition</h2>
-<p>For a private good, the market demand curve is the <strong>horizontal sum</strong> of individual demands: at each price, add up quantities.</p>
-<p>For a public good, the market demand curve is the <strong>vertical sum</strong> of individual demands: at each quantity, add up willingness to pay.</p>
-<div class="fragment">
-<p>Efficient provision is where this vertically summed demand curve crosses marginal cost.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>A Simple Example</h2>
-<p>Two consumers A and B with inverse demand for a public good <span class="math inline">\(G\)</span>:</p>
-<p><span class="math display">\[ P_A = 10 - G, \qquad P_B = 8 - G \]</span></p>
-<p>Marginal cost: <span class="math inline">\(MC = 12\)</span>.</p>
-<div class="fragment">
-<p><strong>Private provision:</strong> consumer A alone provides to <span class="math inline">\(P_A = MC\)</span>, giving <span class="math inline">\(G = -2\)</span>, i.e., nothing. Neither consumer alone will fund it.</p>
-</div>
-<div class="fragment">
-<p><strong>Efficient provision:</strong> sum vertically, <span class="math inline">\(P_A + P_B = 18 - 2G\)</span>, set equal to MC:</p>
-<p><span class="math display">\[ 18 - 2G = 12 \implies G^* = 3 \]</span></p>
-<p>The socially efficient level is positive, but the market produces zero.</p>
-</div>
-</section></section>
-<section>
-<section class="title-slide slide level1 section-slide no-print center">
-<h1>Provision Mechanisms</h1>
-
-</section>
-<section class="slide level2">
-<h2>Lindahl Equilibrium</h2>
-<p>Erik Lindahl (1919) proposed a benefit-based pricing rule. Each consumer pays a <strong>personalized price</strong> <span class="math inline">\(\tau_i\)</span> equal to their marginal willingness to pay at the efficient quantity. The prices sum to the marginal cost.</p>
-<p><span class="math display">\[ \tau_i = MRS_i, \qquad \sum_i \tau_i = MC \]</span></p>
-<div class="fragment">
-<p>At these prices, each consumer’s demand for the public good coincides with the efficient level. The Lindahl outcome is Pareto efficient.</p>
-</div>
-<div class="fragment">
-<p><strong>Problem:</strong> it requires truthful revelation of willingness to pay, which consumers have no incentive to provide. The Lindahl equilibrium is a benchmark, not an implementable mechanism.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Voting and Public Goods</h2>
-<p>In practice, public goods are often provided by governments funded through taxes, with the level chosen through some political process. This raises the question of how preferences are aggregated through voting.</p>
-<div class="fragment">
-<p><strong>Median voter theorem</strong> (Black, 1948; Downs, 1957): If voters have single-peaked preferences over a one-dimensional policy, majority rule selects the policy favored by the <strong>median voter</strong>.</p>
-</div>
-<div class="fragment">
-<p>The median voter outcome is generally <strong>not</strong> Samuelson-efficient: it reflects the median voter’s <span class="math inline">\(MRS\)</span>, not the sum of MRSs. But it is a stable political equilibrium.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Arrow’s Impossibility Theorem</h2>
-<p>Kenneth Arrow (1951) asked whether any voting rule can aggregate individual preferences into a consistent social ranking while satisfying a few reasonable conditions (unrestricted domain, non-dictatorship, Pareto efficiency, independence of irrelevant alternatives).</p>
-<div class="fragment">
-<p><strong>Answer:</strong> No. With three or more alternatives, no rule satisfies all the conditions simultaneously.</p>
-</div>
-<div class="fragment">
-<p>Implication: aggregating preferences for public-good provision is hard in principle. Democratic decisions involve tradeoffs that cannot all be satisfied at once.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Rent-Seeking and Political Failure</h2>
-<p>Just as markets can fail, political processes can fail too. Governments may over- or under-provide public goods because of:</p>
-<ul>
-<li><strong>Concentrated benefits, diffuse costs:</strong> small, organized groups lobby effectively while large, unorganized groups do not</li>
-<li><strong>Rent-seeking:</strong> resources are spent capturing transfers rather than creating value</li>
-<li><strong>Information problems:</strong> voters are rationally ignorant about complex policies</li>
-<li><strong>Bureaucratic incentives:</strong> agencies may maximize budget rather than welfare</li>
-</ul>
-<div class="fragment">
-<p>The right comparison is not “market vs. perfect government” but “imperfect market vs. imperfect government.” Policy design has to take both failures seriously.</p>
-</div>
-</section></section>
-<section>
-<section class="title-slide slide level1 section-slide no-print center">
-<h1>Applications</h1>
-
-</section>
-<section class="slide level2">
-<h2>Climate Change</h2>
-<p>Climate change is the textbook externality and public-good problem combined.</p>
-<ul>
-<li><strong>Negative externality:</strong> emissions impose costs on everyone, especially future generations</li>
-<li><strong>Global public good:</strong> a stable climate is non-rival and non-excludable worldwide</li>
-<li><strong>Free-rider problem at the country level:</strong> each country benefits from others’ abatement</li>
-</ul>
-<div class="fragment">
-<p>Policy instruments in use: carbon taxes (Sweden, British Columbia), cap-and-trade (EU ETS, California), direct regulation (fuel economy standards), subsidies for clean energy.</p>
-</div>
-<div class="fragment">
-<p>International cooperation is hard precisely because of the free-rider problem across sovereign states.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Vaccination</h2>
-<p>Vaccination is a positive externality: each vaccinated person reduces the probability that others get sick.</p>
-<ul>
-<li>Private decision ignores the benefit to others</li>
-<li>Market equilibrium vaccination rate is below the social optimum</li>
-<li>Below a critical “herd-immunity” threshold, outbreaks become self-sustaining</li>
-</ul>
-<div class="fragment">
-<p>Policy responses: free or subsidized vaccines, school entry requirements, public information campaigns. These correspond to subsidies, quantity regulation, and information provision respectively.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Knowledge and R&amp;D</h2>
-<p>Ideas are the classic example of a <strong>non-rival</strong> good: one person’s use of an idea does not diminish another’s.</p>
-<div class="fragment">
-<p>Without intervention, firms under-invest in research because they cannot capture all the benefits.</p>
-<p>Policy responses:</p>
-<ul>
-<li><strong>Patents:</strong> temporary exclusion rights trading off static distortion for dynamic incentives</li>
-<li><strong>Public funding</strong> of basic research (NSF, NIH)</li>
-<li><strong>R&amp;D tax credits</strong></li>
-</ul>
-</div>
-</section></section>
-<section>
-<section class="title-slide slide level1 section-slide no-print center">
-<h1>Wrap Up</h1>
-
-</section>
-<section class="slide level2">
-<h2>Key Takeaways</h2>
-<ol type="1">
-<li class="fragment"><strong>Externalities</strong> and <strong>public goods</strong> break the First Welfare Theorem because private and social incentives diverge</li>
-<li class="fragment">With externalities, Pigouvian taxes and tradable permits restore efficiency by pricing the spillover</li>
-<li class="fragment">The <strong>Coase theorem</strong> shows that well-defined property rights can lead to efficiency without intervention, but only when bargaining is cheap</li>
-<li class="fragment">Public goods suffer from free-riding; efficient provision requires the <strong>Samuelson condition</strong> <span class="math inline">\(\sum MRS_i = MRT\)</span></li>
-<li class="fragment">Lindahl pricing is an elegant benchmark but not implementable because of truth-telling problems</li>
-<li class="fragment">Governments provide public goods, but political processes have their own failures: the relevant comparison is <strong>imperfect markets vs. imperfect governments</strong></li>
+<li>Public Wi-Fi at a cafe</li>
 </ol>
 </section>
 <section class="slide level2">
-<h2>References</h2>
+<h2>Public Goods Model: Setup</h2>
 <ul>
-<li>Nicholson &amp; Snyder, <em>Microeconomic Theory</em>, 13e, Chapters 19 and 20</li>
-<li>Pigou, <em>The Economics of Welfare</em> (1920)</li>
-<li>Coase, “The Problem of Social Cost” (1960)</li>
-<li>Samuelson, “The Pure Theory of Public Expenditure” (1954)</li>
-<li>Arrow, <em>Social Choice and Individual Values</em> (1951)</li>
-<li>Weitzman, “Prices vs. Quantities” (1974)</li>
+<li>Economy with <span class="math inline">\(N\)</span> households, indexed <span class="math inline">\(i = 1, \ldots, N\)</span></li>
+<li>Two goods: a private good <span class="math inline">\(X\)</span> and a public good <span class="math inline">\(G\)</span></li>
+<li>Each household consumes private good <span class="math inline">\(X_i\)</span>, with <span class="math inline">\(X = \sum_{i=1}^N X_i\)</span></li>
+<li>Public good is <strong>non-rival</strong>: every household consumes the same <span class="math inline">\(G\)</span></li>
+<li>Public good is funded by individual contributions <span class="math inline">\(g_i\)</span>, so <span class="math inline">\(G = \sum_{i=1}^N g_i\)</span></li>
+<li>Utility: <span class="math inline">\(U_i(X_i, G)\)</span>, increasing in both arguments</li>
+<li>Each household has income <span class="math inline">\(Y_i\)</span> and faces the budget constraint: <span class="math inline">\(X_i + g_i = Y_i\)</span></li>
 </ul>
+</section>
+<section class="slide level2">
+<h2>Social Planner’s Problem</h2>
+<p>The social planner chooses <span class="math inline">\(X_i\)</span> for each household and <span class="math inline">\(G\)</span> to maximize a weighted sum of utilities subject to the resource constraint:</p>
+<p><span class="math display">\[\max_{X_1, \ldots, X_N, G} \sum_{i=1}^N \beta_i U_i(X_i, G) \quad s.t. \quad \sum_{i=1}^N X_i + G = \sum_{i=1}^N Y_i\]</span></p>
+<p><strong>First-order conditions:</strong> <span class="math display">\[\begin{align*}
+\beta_i \frac{\partial U_i}{\partial X_i} &amp;= \lambda  \quad \text{for each } i \\
+\sum_{i=1}^N \beta_i \frac{\partial U_i}{\partial G} &amp;= \lambda
+\end{align*}\]</span></p>
+</section>
+<section class="slide level2">
+<h2>Social Planner’s Optimal</h2>
+<p>Plugging <span class="math inline">\(\beta_i = \lambda / \frac{\partial U_i}{\partial X_i}\)</span> from the first condition into the second condition gives:</p>
+<p><span class="math display">\[ \sum_{i=1}^N  \underbrace{\ \frac{\partial U_i / \partial G}{\partial U_i / \partial X_i}}_{\text{MRS}_i} = 1 \]</span></p>
+<p>This is the <strong>Samuelson condition</strong> for optimal provision of a public good.</p>
+<p><strong>Remember</strong>: <span class="math inline">\(MRS_i\)</span> is the amount of private good <span class="math inline">\(X\)</span> that household <span class="math inline">\(i\)</span> is willing to give up for one more unit of public good <span class="math inline">\(G\)</span>.</p>
+<p>The Samuelson condition says that the total willingness to pay for an additional unit of <span class="math inline">\(G\)</span> across all households must equal the relative cost of providing that unit (which is 1 in this case, since <span class="math inline">\(G\)</span> uses up one unit of resources that could have been used for <span class="math inline">\(X\)</span>).</p>
+</section>
+<section class="slide level2">
+<h2>Decentralized Solution</h2>
+<p>With no intervention, individuals choose their own contributions to the public good, taking others’ contributions as given (<strong>Nash equilibrium</strong>). Each household solves:</p>
+<p><span class="math display">\[\max_{X_i, g_i} U_i(X_i, g_1+g_2+...+g_N) \quad s.t. \quad X_i + g_i = Y_i\]</span></p>
+<p>Nash equilibrium outcome will satisfy: <span class="math display">\[MRS_i = \frac{\partial U_i / \partial G}{\partial U_i / \partial X_i} = 1\]</span></p>
+<p>Since <span class="math inline">\(MRS_i=1\)</span>, total willingness to pay is <span class="math inline">\(\sum_{i=1}^N MRS_i = N&gt;1\)</span>. This means the Nash equilibrium will under-provide the public good compared to the social optimum. This is the <strong>free-rider problem</strong>.</p>
+</section>
+<section class="slide level2">
+<h2>Numerical Example</h2>
+<ul>
+<li>Two roommates <span class="math inline">\(i=1,2\)</span> sharing an apartment</li>
+<li>Each has $100 to allocate between:
+<ul>
+<li><strong>Private consumption</strong> <span class="math inline">\(X_i\)</span>: food, clothes, personal stuff</li>
+<li><strong>Contribution to shared goods</strong> <span class="math inline">\(g_i\)</span>: WiFi, cleaning supplies, Netflix</li>
+</ul></li>
+<li>Budget constraint: <span class="math inline">\(X_i + g_i = 100\)</span> for each <span class="math inline">\(i\)</span></li>
+<li>Total public good quality: <span class="math inline">\(G = g_1 + g_2\)</span>
+<ul>
+<li>Both roommates enjoy <span class="math inline">\(G\)</span> equally, regardless of who paid</li>
+</ul></li>
+<li>Utility: <span class="math inline">\(U_i = X_i \cdot G\)</span></li>
+<li><strong>The question:</strong> How much does each roommate voluntarily contribute?</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Nash Equilibrium</h2>
+<p>Each roommate takes the other’s contribution as given and chooses their own contribution to maximize utility. For roommate 1: <span class="math display">\[ \max_{X_1, g_1} \; X_1 \cdot (g_1 + g_2) \quad s.t. \quad X_1 + g_1 = 100 \]</span></p>
+<p>First-order conditions: (1) <span class="math inline">\(g_1 + g_2 = \lambda\)</span>, (2) <span class="math inline">\(X_1 = \lambda\)</span>, (3) <span class="math inline">\(X_1 + g_1 = 100\)</span>.</p>
+<p>Solving these gives us the <strong>best response function</strong> for roommate 1: <span class="math display">\[ g_1^* = 50 - \frac{g_2}{2} \]</span></p>
+<p>By symmetry, <span class="math inline">\(g_2^* = 50 - \frac{g_1}{2}\)</span>. So <strong>Nash equilibrium</strong> contributions are given by: <span class="math display">\[ g^*_1 = g^*_2 = 33.33 \]</span></p>
+</section>
+<section class="slide level2">
+<h2>Social Planner’s Problem</h2>
+<p>The planner chooses <span class="math inline">\(X_1, X_2, G\)</span> to maximize total welfare:</p>
+<p><span class="math display">\[ \max_{X_1, X_2, G} \;  X_1 G +  X_2 G \quad s.t. \quad X_1  + X_2 + G = 200 \]</span></p>
+<p>Note, this is equivalent to maximizing <span class="math inline">\(XG\)</span> subject to <span class="math inline">\(X + G = 200\)</span>. The solution is <span class="math inline">\(X = 100\)</span>, <span class="math inline">\(G = 100\)</span>.</p>
+<p><strong>Intuition</strong>: The planner internalizes the fact that one unit of <span class="math inline">\(G\)</span> benefits both roommates, so the efficient level of <span class="math inline">\(G\)</span> is higher than in the Nash equilibrium.</p>
+</section>
+<section class="slide level2">
+<h2>Comparing Outcomes</h2>
+<h3>Nash Equilibrium</h3>
+<ul>
+<li>Each roommate contributes <span class="math inline">\(g_i = 33.33\)</span>, so <span class="math inline">\(G = 66.67\)</span></li>
+<li>Private consumption: <span class="math inline">\(X_i = 100 - g_i = 66.67\)</span></li>
+<li>Utility: <span class="math inline">\(U_i = 66.67 \times 66.67 \approx 4{,}445\)</span></li>
+<li>$MRS_i = X_i/G = 1 $ (price ratio)</li>
+</ul>
+<h3>Social Optimum</h3>
+<ul>
+<li>Planner sets <span class="math inline">\(G = 100\)</span>, with <span class="math inline">\(X_i = 50\)</span></li>
+<li>Utility: <span class="math inline">\(U_i = 50 \times 100 = 5{,}000\)</span></li>
+<li><span class="math inline">\(MRS_i = X_i/G = 0.5\)</span>, so $_i MRS_i = 1 $ (<strong>Samuelson condition</strong>)</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Free-Rider Problem</h2>
+<p>Free-riding occurs because each roommate benefits from the public good regardless of their own contribution, which leads to under-provision of the public good compared to the social optimum.</p>
+<p>Are individuals really free-riders?</p>
+<div class="fragment">
+<p>Early <strong>lab experiments testing free-rider behavior</strong> (Marwell &amp; Ames, 1981)</p>
+<ul>
+<li>Groups of 5 subjects, each given 10 tokens.</li>
+<li>Can invest in either individual account (private good) or group account (public good).
+<ul>
+<li>Individual account: 1 token = $1 for the individual.</li>
+<li>Group account: 1 token = $0.50 for each group member.</li>
+</ul></li>
+<li>What’s the Nash equilibrium? What’s the social optimum?</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+<h2>Free-Riding Evidence</h2>
+<ul>
+<li>They found 40-60% of token were still invested in the public good.</li>
+<li>The experiment was run on various groups of high school and college students.</li>
+<li>Only one group free-rode alot: 1st-year Econ graduate students (donation rate: 20%).</li>
+<li>Andreoni (1988, 1993) implements experiments with repeated contributions and finds that contributions remain positive but decline over time.</li>
+</ul>
+<div class="fragment">
+<p><strong>Key question</strong>: How can we solve the underprovision problem?</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Addressing Underprovision</h2>
+<p><strong>Government provision:</strong> Set <span class="math inline">\(G\)</span> directly, funded by mandatory taxes. Solves free-riding but requires knowing preferences to choose <span class="math inline">\(G\)</span> efficiently.</p>
+<p><strong>Subsidizing private contributions:</strong> Reduce the private cost of contributing (e.g., tax deductions for charitable giving). Narrows the gap but may not eliminate underprovision.</p>
+<p><strong>Lindahl pricing:</strong> Charge each person a personalized price equal to their <span class="math inline">\(MRS_i\)</span>. Achieves efficiency in theory, but people have incentives to misrepresent their willingness to pay.</p>
+<p>All three face the same fundamental challenge: the government needs information about individual preferences that people have incentives to hide.</p>
 
 
 </section></section>

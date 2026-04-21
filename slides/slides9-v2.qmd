@@ -1,5 +1,5 @@
 ---
-title: "Externalities and Public Goods"
+title: "Externalities, the Coase Theorem, and Market Remedies"
 author: "Div Bhagia"
 subtitle: "Lecture 9"
 format:
@@ -12,53 +12,41 @@ format:
 
 # Introduction
 
-## When Markets Fail
-
-Under the conditions of the First Welfare Theorem, competitive markets deliver Pareto-efficient outcomes. But those conditions are demanding: complete markets, well-defined property rights, price-taking behavior, and no spillover effects between agents.
-
-:::{.fragment}
-We studied one source of market failure: **asymmetric information**. In this lecture we study two more classic sources of market failure:
-
-  - **Externalities:** one agent's action affects another's welfare without passing through the price system
-  - **Public goods:** goods whose consumption is non-rival and non-excludable, so markets under-provide them
-
-In both cases, private incentives diverge from social incentives and there is a potential role for policy.
-:::
-
-<!-- ## Roadmap
-
-1. What is an externality? Positive and negative spillovers
-2. Why externalities cause inefficiency
-3. Private solutions: Coase theorem and bargaining
-4. Public solutions: Pigouvian taxes, subsidies, quotas, and tradable permits
-5. Public goods: definition, free riding, and optimal provision
-6. Mechanisms for provision: Lindahl prices, voting, and political economy -->
-
-# Externalities
-
 ## What Is an Externality?
 
-- An **externality** arises when an economic actor does not face the correct price for taking a specific action. The correct price is the **marginal social cost** of that action.
+An **externality** arises when an economic actor does not face the correct price for taking a specific action. The correct price is the **marginal social cost** of that action.
 
-- When markets work properly, they align private costs and benefits with social costs and benefits. When private benefits differ from social benefits (either higher or lower), externalities result.
+When markets work properly, they align private costs and benefits with social costs and benefits. When private benefits differ from social benefits (either higher or lower), externalities result.
 
-- Put differently: externalities occur when one agent's action directly affects another's welfare, and this effect is **not reflected in market prices**.
+::: {.fragment}
+Put differently: externalities occur when one agent's action directly affects another's welfare, and this effect is **not reflected in market prices**.
+:::
 
 ## Classic Examples
 
-- **Traffic congestion:** When I take the highway, I increase congestion for other drivers. But my decision to drive is based on my private cost (time, fuel) and does not account for the additional delay I impose on others.
+- **Traffic congestion:** When I take the highway, I increase congestion for other drivers. The toll doesn't vary with traffic conditions, so I face the wrong price (too high at non-peak hours, too low at peak hours)
 
-- **Disease transmission:** When deciding whether to vaccinate, individuals are most likely to weigh only private costs and benefits, ignoring the positive externality of reduced disease spread to others.
+- **Disease transmission:** When deciding whether to vaccinate my children, I weigh only private costs and benefits. I don't account for the protection my children's vaccination provides to others at their school
 
-- **Pollution:** Because clean air is not priced, we pay essentially no cost to pollute. The marginal cost of our polluting actions do not incorporate the social cost of additional pollution, so we pollute more than is socially optimal.
+::: {.fragment}
+- **Pollution:** Because clean air is not priced, I pay essentially no cost to pollute. My marginal cost of driving does not incorporate the social cost of additional pollution, so I drive too much relative to the social optimum
+:::
 
-## A Key Question
-
-### Can Externalities Be Resolved by the Market?
+## Are Externalities Ever Resolved by the Market?
 
 Until the publication of Ronald Coase's 1960 paper, most economists would have answered **no**.
 
-Coase made them reconsider that view. Coase gave the example of a **doctor and a baker** who share an office building. The baker's loud machinery disturbed the doctor's medical practice.
+Coase made them reconsider that view.
+
+::: {.fragment}
+But before we get to Coase, let's establish the framework for thinking about externalities and how different policy instruments address them.
+:::
+
+# The Coase Theorem
+
+## Coase's Key Insight
+
+Coase gave the example of a **doctor and a baker** who share an office building. The baker's loud machinery disturbed the doctor's medical practice.
 
 ::: {.fragment}
 The standard reasoning (at the time): the baker should compensate the doctor for the harm, since the baker was "causing" the externality.
@@ -73,15 +61,21 @@ But Coase pointed out a re-framing: suppose the doctor sets up his office *after
 One can argue that the *doctor* is creating an externality by requiring the baker to bake in silence. The baker's noise is an "input" into his production of baked goods.
 
 ::: {.fragment}
-From a legal point of view, the answer may be clear. From an economic point of view, the answer is **indeterminate** based only on this information. We need to know the *costs* of the different solutions.
+From a legal point of view, the answer may be clear. From an economic point of view, the answer is **indeterminate** based only on this information.
 :::
 
 ::: {.fragment}
+We need to know the *costs* of the different solutions.
+:::
+
+## Adding Cost Information
+
 Suppose:
 
 - The baker could buy **quieter machinery** for **\$50**
 - The doctor could **soundproof** his walls for **\$100**
 
+::: {.fragment}
 Economic efficiency demands the lowest-cost solution. The baker should buy quieter machinery.
 :::
 
@@ -124,17 +118,23 @@ The Coase theorem implies the market will solve externalities *unless*:
 The theorem is often misinterpreted to suggest markets will solve *all* externalities. This is not true. The market can *potentially* solve externalities **if** property rights are clearly assigned and negotiation is feasible.
 :::
 
+## Practical Limits
+
+In some cases, Coasian bargaining is clearly infeasible:
+
+- Airlines cannot realistically negotiate with individual homeowners for overflight rights
+- You cannot negotiate with all handicapped drivers for the use of an empty handicap space in an emergency
+
 ::: {.fragment}
-And in many cases, Coasian bargaining is infeasible due to large numbers of affected parties, high transaction costs, or asymmetric information. In those cases, government intervention may be necessary to correct the externality.
+**Key inference:** The best solution to an externality may not be to regulate it out of existence, but to **assign property rights** or **facilitate bargaining** so that the affected parties achieve an efficient solution themselves.
 :::
 
+# Remedying Pollution: A Numerical Example
 
+## Setup
 
-## Reducing Pollution: A Numerical Example
+Consider two oil refineries that both produce fuel at a market price of **\$3 per gallon**. Demand is infinitely elastic (price is fixed).
 
-Consider two oil refineries that both produce fuel. 
-
-- Market **price of fuel is \$3** per gallon
 - Each refinery uses **\$2 in raw inputs** to produce 1 gallon of fuel
 - Each plant also produces **smog**, which causes **\$0.01** of environmental damage per cubic foot
 - Each plant can produce a maximum of **200 gallons**
@@ -190,9 +190,7 @@ $$\max_{y_2} \pi_2 = y_2(3-2) - 0.01 \cdot \tfrac{1}{2}y_2^2 \;\;\; s.t. \;\; y_
 Plant 1 produces less because it is the dirtier plant. Optimal pollution is **not zero**. It reflects the tradeoff between production benefits and environmental harm.
 :::
 
-::: {.fragment}
-What regulation can achieve this outcome? We will discuss three approaches: command and control, Pigouvian taxes, and cap-and-trade.
-:::
+# Three Regulatory Approaches
 
 ## Approach 1: Command and Control
 
@@ -284,7 +282,9 @@ This is the power of the Coase theorem in action. By assigning property rights t
 The initial allocation of permits is a major **political** question, but it has no effect on **economic efficiency**.
 :::
 
-## Comparing the Three Approaches
+# Comparing the Three Approaches
+
+## Summary of Regulatory Instruments
 
 | Feature | Command & Control | Pigouvian Tax | Cap & Trade |
 |---|---|---|---|
@@ -311,6 +311,8 @@ Cap and trade may not work well if the regulator cares about **which** plant doe
 If all the low-cost polluters happen to be concentrated in one geographic area, cap and trade could lead to **localized pollution hotspots**, even if total pollution is efficient.
 :::
 
+# Wrap Up
+
 ## Key Takeaways
 
 ::: {.incremental}
@@ -321,169 +323,9 @@ If all the low-cost polluters happen to be concentrated in one geographic area, 
 5. Rectifying an externality often means finding a way to restore market conditions so the Coase theorem can hold; when that isn't feasible, external regulation may be needed
 :::
 
-# Public Goods
+## References
 
-## Defining Public Goods
-
-Goods can be classified along two dimensions: 
-
-1. **Rivalry:** whether one person's consumption reduces availability to others
-2. **Excludability:** whether it is possible to prevent anyone from consuming the good
-
-::: {.fragment}
-|  | Excludable | Non-excludable |
-|---|---|---|
-| **Rival** | Private good  | Common good |
-| **Non-rival** | Club good  | *Public good* |
-
-:::
-
-## Can You Classify These Goods?
-
-1. A slice of pizza
-2. National defense
-3. Street lighting
-4. Fish in the ocean
-5. A Netflix subscription
-6. A public park bench
-7. A toll road
-8. Clean air
-9. A podcast episode
-10. Open-source software
-11. Fireworks displays
-12. Public Wi-Fi at a cafe
-
-
-## Public Goods Model: Setup
-
-- Economy with $N$ households, indexed $i = 1, \ldots, N$
-- Two goods: a private good $X$ and a public good $G$
-- Each household consumes private good $X_i$, with $X = \sum_{i=1}^N X_i$
-- Public good is **non-rival**: every household consumes the same $G$
-- Public good is funded by individual contributions $g_i$, so $G = \sum_{i=1}^N g_i$
-- Utility: $U_i(X_i, G)$, increasing in both arguments
-- Each household has income $Y_i$ and faces the budget constraint: $X_i + g_i = Y_i$
-
-## Social Planner's Problem
-
-The social planner chooses $X_i$ for each household and $G$ to maximize a weighted sum of utilities subject to the resource constraint:
-
-$$\max_{X_1, \ldots, X_N, G} \sum_{i=1}^N \beta_i U_i(X_i, G) \quad s.t. \quad \sum_{i=1}^N X_i + G = \sum_{i=1}^N Y_i$$
-
-**First-order conditions:**
-\begin{align*}
- \beta_i \frac{\partial U_i}{\partial X_i} &= \lambda  \quad \text{for each } i \\
- \sum_{i=1}^N \beta_i \frac{\partial U_i}{\partial G} &= \lambda 
-\end{align*}
-
-## Social Planner's Optimal
-
-Plugging $\beta_i = \lambda / \frac{\partial U_i}{\partial X_i}$ from the first condition into the second condition gives:
-
-$$ \sum_{i=1}^N  \underbrace{\ \frac{\partial U_i / \partial G}{\partial U_i / \partial X_i}}_{\text{MRS}_i} = 1 $$
-
-This is the **Samuelson condition** for optimal provision of a public good. 
-
-**Remember**: $MRS_i$ is the amount of private good $X$ that household $i$ is willing to give up for one more unit of public good $G$. 
-
-The Samuelson condition says that the total willingness to pay for an additional unit of $G$ across all households must equal the relative cost of providing that unit (which is 1 in this case, since $G$ uses up one unit of resources that could have been used for $X$).
-
-## Decentralized Solution
-
-With no intervention, individuals choose their own contributions to the public good, taking others' contributions as given (**Nash equilibrium**). Each household solves:
-
-$$\max_{X_i, g_i} U_i(X_i, g_1+g_2+...+g_N) \quad s.t. \quad X_i + g_i = Y_i$$
-
-Nash equilibrium outcome will satisfy:
-$$MRS_i = \frac{\partial U_i / \partial G}{\partial U_i / \partial X_i} = 1$$
-
-Since $MRS_i=1$, total willingness to pay is $\sum_{i=1}^N MRS_i = N>1$. This means the Nash equilibrium will under-provide the public good compared to the social optimum. This is the **free-rider problem**.
-
-## Numerical Example
-
-- Two roommates $i=1,2$ sharing an apartment
-- Each has $100 to allocate between:
-  - **Private consumption** $X_i$: food, clothes, personal stuff
-  - **Contribution to shared goods** $g_i$: WiFi, cleaning supplies, Netflix
-- Budget constraint: $X_i + g_i = 100$ for each $i$
-- Total public good quality: $G = g_1 + g_2$
-  - Both roommates enjoy $G$ equally, regardless of who paid
-- Utility: $U_i = X_i \cdot G$
-- **The question:** How much does each roommate voluntarily contribute?
-
-## Nash Equilibrium
-
-Each roommate takes the other's contribution as given and chooses their own contribution to maximize utility. For roommate 1:
-$$ \max_{X_1, g_1} \; X_1 \cdot (g_1 + g_2) \quad s.t. \quad X_1 + g_1 = 100 $$
-
-First-order conditions: (1) $g_1 + g_2 = \lambda$, (2) $X_1 = \lambda$, (3) $X_1 + g_1 = 100$.
-
-Solving these gives us the **best response function** for roommate 1:
-$$ g_1^* = 50 - \frac{g_2}{2} $$
-
-By symmetry, $g_2^* = 50 - \frac{g_1}{2}$. So **Nash equilibrium** contributions are given by:
-$$ g^*_1 = g^*_2 = 33.33 $$
-
-
-## Social Planner's Problem
-
-The planner chooses $X_1, X_2, G$ to maximize total welfare:
-
-$$ \max_{X_1, X_2, G} \;  X_1 G +  X_2 G \quad s.t. \quad X_1  + X_2 + G = 200 $$
-
-Note, this is equivalent to maximizing $XG$ subject to $X + G = 200$. The solution is $X = 100$, $G = 100$.
-
-**Intuition**: The planner internalizes the fact that one unit of $G$ benefits both roommates, so the efficient level of $G$ is higher than in the Nash equilibrium.
-
-## Comparing Outcomes
-
-### Nash Equilibrium
-
-- Each roommate contributes $g_i = 33.33$, so $G = 66.67$
-- Private consumption: $X_i = 100 - g_i = 66.67$
-- Utility: $U_i = 66.67 \times 66.67 \approx 4{,}445$
-- $MRS_i = X_i/G = 1 $ (price ratio) 
-
-### Social Optimum
-
-- Planner sets $G = 100$, with $X_i = 50$
-- Utility: $U_i = 50 \times 100 = 5{,}000$
-- $MRS_i = X_i/G = 0.5$, so $\sum_i MRS_i = 1 $ (**Samuelson condition**)
-
-## Free-Rider Problem
-
-Free-riding occurs because each roommate benefits from the public good regardless of their own contribution, which leads to under-provision of the public good compared to the social optimum.
-
-Are individuals really free-riders?
-
-:::{.fragment}
-Early **lab experiments testing free-rider behavior** (Marwell & Ames, 1981)
-
-- Groups of 5 subjects, each given 10 tokens.
-- Can invest in either individual account (private good) or group account (public good).
-  - Individual account: 1 token = \$1 for the individual.
-  - Group account: 1 token = \$0.50 for each group member.
-- What's the Nash equilibrium? What's the social optimum?
-:::
-
-## Free-Riding Evidence
-
-- They found 40-60% of token were still invested in the public good.
-- The experiment was run on various groups of high school and college students.
-- Only one group free-rode alot: 1st-year Econ graduate students (donation rate: 20%).
-- Andreoni (1988, 1993) implements experiments with repeated contributions and finds that contributions remain positive but decline over time.
-
-:::{.fragment}
-**Key question**: How can we solve the underprovision problem?
-:::
-
-
-## Addressing Underprovision
-
-**Government provision:** Set $G$ directly, funded by mandatory taxes. Solves free-riding but requires knowing preferences to choose $G$ efficiently.
-
-**Subsidizing private contributions:** Reduce the private cost of contributing (e.g., tax deductions for charitable giving). Narrows the gap but may not eliminate underprovision.
-
-**Lindahl pricing:** Charge each person a personalized price equal to their $MRS_i$. Achieves efficiency in theory, but people have incentives to misrepresent their willingness to pay.
-
-All three face the same fundamental challenge: the government needs information about individual preferences that people have incentives to hide.
+- Nicholson & Snyder, *Microeconomic Theory*, 13e, Chapter 19
+- Coase, "The Problem of Social Cost" (1960)
+- Pigou, *The Economics of Welfare* (1920)
+- Schmalensee et al., on SO$_2$ cap and trade

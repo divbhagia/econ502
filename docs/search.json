@@ -783,7 +783,7 @@
   {
     "objectID": "content/lecture9.html",
     "href": "content/lecture9.html",
-    "title": "Lecture 10: Externalities and Public Goods",
+    "title": "Lecture 9: Externalities and Public Goods",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
@@ -795,7 +795,7 @@
   {
     "objectID": "content/lecture9.html#topics",
     "href": "content/lecture9.html#topics",
-    "title": "Lecture 10: Externalities and Public Goods",
+    "title": "Lecture 9: Externalities and Public Goods",
     "section": "",
     "text": "Textbook references:",
     "crumbs": [
@@ -807,9 +807,9 @@
   {
     "objectID": "content/lecture9.html#slides",
     "href": "content/lecture9.html#slides",
-    "title": "Lecture 10: Externalities and Public Goods",
+    "title": "Lecture 9: Externalities and Public Goods",
     "section": "Slides",
-    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.",
+    "text": "Slides\nThe slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.\n\nView slides in new window Download PDF",
     "crumbs": [
       "Content",
       "III. Market Failures",
@@ -1336,5 +1336,208 @@
     "title": "Asymmetric Information",
     "section": "Key Takeaways",
     "text": "Key Takeaways\n\n\nMoral hazard arises when insurance changes behavior because the insured party doesn’t bear the full cost of their actions\nThe hidden action (effort, care, risk-taking) cannot be contracted on: only outcomes are observable\nThe fundamental tradeoff is insurance vs. incentives: full insurance eliminates risk but also eliminates effort\nThe optimal policy provides incomplete insurance: enough to protect against bad outcomes, not so much that it kills incentives"
+  },
+  {
+    "objectID": "slides/slides9-v2.html",
+    "href": "slides/slides9-v2.html",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "",
+    "text": "An externality arises when an economic actor does not face the correct price for taking a specific action. The correct price is the marginal social cost of that action.\nWhen markets work properly, they align private costs and benefits with social costs and benefits. When private benefits differ from social benefits (either higher or lower), externalities result.\n\nPut differently: externalities occur when one agent’s action directly affects another’s welfare, and this effect is not reflected in market prices.\n\n\n\n\n\nTraffic congestion: When I take the highway, I increase congestion for other drivers. The toll doesn’t vary with traffic conditions, so I face the wrong price (too high at non-peak hours, too low at peak hours)\nDisease transmission: When deciding whether to vaccinate my children, I weigh only private costs and benefits. I don’t account for the protection my children’s vaccination provides to others at their school\n\n\n\nPollution: Because clean air is not priced, I pay essentially no cost to pollute. My marginal cost of driving does not incorporate the social cost of additional pollution, so I drive too much relative to the social optimum\n\n\n\n\n\nUntil the publication of Ronald Coase’s 1960 paper, most economists would have answered no.\nCoase made them reconsider that view.\n\nBut before we get to Coase, let’s establish the framework for thinking about externalities and how different policy instruments address them."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#what-is-an-externality",
+    "href": "slides/slides9-v2.html#what-is-an-externality",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "",
+    "text": "An externality arises when an economic actor does not face the correct price for taking a specific action. The correct price is the marginal social cost of that action.\nWhen markets work properly, they align private costs and benefits with social costs and benefits. When private benefits differ from social benefits (either higher or lower), externalities result.\n\nPut differently: externalities occur when one agent’s action directly affects another’s welfare, and this effect is not reflected in market prices."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#classic-examples",
+    "href": "slides/slides9-v2.html#classic-examples",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "",
+    "text": "Traffic congestion: When I take the highway, I increase congestion for other drivers. The toll doesn’t vary with traffic conditions, so I face the wrong price (too high at non-peak hours, too low at peak hours)\nDisease transmission: When deciding whether to vaccinate my children, I weigh only private costs and benefits. I don’t account for the protection my children’s vaccination provides to others at their school\n\n\n\nPollution: Because clean air is not priced, I pay essentially no cost to pollute. My marginal cost of driving does not incorporate the social cost of additional pollution, so I drive too much relative to the social optimum"
+  },
+  {
+    "objectID": "slides/slides9-v2.html#are-externalities-ever-resolved-by-the-market",
+    "href": "slides/slides9-v2.html#are-externalities-ever-resolved-by-the-market",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "",
+    "text": "Until the publication of Ronald Coase’s 1960 paper, most economists would have answered no.\nCoase made them reconsider that view.\n\nBut before we get to Coase, let’s establish the framework for thinking about externalities and how different policy instruments address them."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#coases-key-insight",
+    "href": "slides/slides9-v2.html#coases-key-insight",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Coase’s Key Insight",
+    "text": "Coase’s Key Insight\nCoase gave the example of a doctor and a baker who share an office building. The baker’s loud machinery disturbed the doctor’s medical practice.\n\nThe standard reasoning (at the time): the baker should compensate the doctor for the harm, since the baker was “causing” the externality.\n\n\nBut Coase pointed out a re-framing: suppose the doctor sets up his office after the baker is already there, and then demands the baker shut down. Who is responsible for the externality now?"
+  },
+  {
+    "objectID": "slides/slides9-v2.html#the-reciprocal-nature-of-externalities",
+    "href": "slides/slides9-v2.html#the-reciprocal-nature-of-externalities",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "The Reciprocal Nature of Externalities",
+    "text": "The Reciprocal Nature of Externalities\nOne can argue that the doctor is creating an externality by requiring the baker to bake in silence. The baker’s noise is an “input” into his production of baked goods.\n\nFrom a legal point of view, the answer may be clear. From an economic point of view, the answer is indeterminate based only on this information.\n\n\nWe need to know the costs of the different solutions."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#adding-cost-information",
+    "href": "slides/slides9-v2.html#adding-cost-information",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Adding Cost Information",
+    "text": "Adding Cost Information\nSuppose:\n\nThe baker could buy quieter machinery for $50\nThe doctor could soundproof his walls for $100\n\n\nEconomic efficiency demands the lowest-cost solution. The baker should buy quieter machinery.\n\n\nBut does this mean the baker should pay to abate? Not necessarily."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#two-scenarios",
+    "href": "slides/slides9-v2.html#two-scenarios",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Two Scenarios",
+    "text": "Two Scenarios\nScenario 1: The town council assigns the doctor the right to control noise. The baker spends $50 for quieter machinery.\n\nScenario 2: The town council assigns the baker the right to make noise. Will the doctor spend $100 to soundproof? If the parties can negotiate, they should arrange for the doctor to pay the baker $50 for quieter machinery instead.\n\n\nIn both cases, the efficient outcome occurs: quieter machinery is purchased. The assignment of rights determines only who pays, not what happens."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#the-coase-theorem-formal-statement",
+    "href": "slides/slides9-v2.html#the-coase-theorem-formal-statement",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "The Coase Theorem (Formal Statement)",
+    "text": "The Coase Theorem (Formal Statement)\nIf (1) property rights are complete (one party clearly owns the relevant right) and (2) parties can negotiate costlessly, then the parties will always negotiate an efficient solution to the externality.\n\nThe law determines who pays the cost, but the outcome is the same.\n\n\nNote the parallel with the Welfare Theorems: efficiency and distribution are separable problems."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#when-does-coase-fail",
+    "href": "slides/slides9-v2.html#when-does-coase-fail",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "When Does Coase Fail?",
+    "text": "When Does Coase Fail?\nThe Coase theorem implies the market will solve externalities unless:\n\nProperty rights are incomplete (e.g., no one owns the air)\nNegotiation is costly (e.g., the entire population cannot simultaneously negotiate about pollution)\n\n\nThe theorem is often misinterpreted to suggest markets will solve all externalities. This is not true. The market can potentially solve externalities if property rights are clearly assigned and negotiation is feasible."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#practical-limits",
+    "href": "slides/slides9-v2.html#practical-limits",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Practical Limits",
+    "text": "Practical Limits\nIn some cases, Coasian bargaining is clearly infeasible:\n\nAirlines cannot realistically negotiate with individual homeowners for overflight rights\nYou cannot negotiate with all handicapped drivers for the use of an empty handicap space in an emergency\n\n\nKey inference: The best solution to an externality may not be to regulate it out of existence, but to assign property rights or facilitate bargaining so that the affected parties achieve an efficient solution themselves."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#setup",
+    "href": "slides/slides9-v2.html#setup",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Setup",
+    "text": "Setup\nConsider two oil refineries that both produce fuel at a market price of $3 per gallon. Demand is infinitely elastic (price is fixed).\n\nEach refinery uses $2 in raw inputs to produce 1 gallon of fuel\nEach plant also produces smog, which causes $0.01 of environmental damage per cubic foot\nEach plant can produce a maximum of 200 gallons"
+  },
+  {
+    "objectID": "slides/slides9-v2.html#smog-production-differs-across-plants",
+    "href": "slides/slides9-v2.html#smog-production-differs-across-plants",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Smog Production Differs Across Plants",
+    "text": "Smog Production Differs Across Plants\nThe amount of smog per gallon differs at the two plants:\n\\[s_1 = y_1^2, \\qquad s_2 = \\frac{1}{2}y_2^2\\]\nwhere \\(y_1, y_2\\) are gallons of fuel produced at each plant.\n\nPlant 2 pollutes only \\(\\frac{1}{2}\\) as much as Plant 1 for a given level of production."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#competitive-outcome-no-regulation",
+    "href": "slides/slides9-v2.html#competitive-outcome-no-regulation",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Competitive Outcome (No Regulation)",
+    "text": "Competitive Outcome (No Regulation)\nWithout any legal framework for resolving the externality, each firm solves:\n\\[\\max_{y_1} \\pi_1 = y_1 \\cdot (3-2) \\;\\; s.t. \\;\\; y_1 \\leq 200\\] \\[\\max_{y_2} \\pi_2 = y_2 \\cdot (3-2) \\;\\; s.t. \\;\\; y_2 \\leq 200\\]\n\nResult: \\(y_1^* = y_2^* = 200\\). Each firm produces at capacity.\nPollution: \\(s_1 = 40{,}000\\), \\(s_2 = 20{,}000\\) cubic feet. The externality costs are $400 and $200 respectively."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#the-socially-efficient-level",
+    "href": "slides/slides9-v2.html#the-socially-efficient-level",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "The Socially Efficient Level",
+    "text": "The Socially Efficient Level\nTo find the efficient level, equate marginal social benefit to marginal social cost:\n\\[MB_s = MC_s\\]\nThe social benefit of a gallon of fuel is $3 (from the demand curve). The social cost is $2 in inputs plus the pollution damage.\n\nAt the margin, no plant should produce more than $1 of environmental damage per gallon. So no plant should produce more than 100 cubic feet of smog per gallon."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#welfare-maximizing-output",
+    "href": "slides/slides9-v2.html#welfare-maximizing-output",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Welfare-Maximizing Output",
+    "text": "Welfare-Maximizing Output\nIf each plant faced private plus social costs:\n\\[\\max_{y_1} \\pi_1 = y_1(3-2) - 0.01 \\cdot y_1^2 \\;\\;\\; s.t. \\;\\; y_1 \\leq 200\\]\n\\[\\max_{y_2} \\pi_2 = y_2(3-2) - 0.01 \\cdot \\tfrac{1}{2}y_2^2 \\;\\;\\; s.t. \\;\\; y_2 \\leq 200\\]\n\nEfficient output: \\(y_1^{**} = 50, \\;\\; y_2^{**} = 100\\)\nPlant 1 produces less because it is the dirtier plant. Optimal pollution is not zero. It reflects the tradeoff between production benefits and environmental harm."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#approach-1-command-and-control",
+    "href": "slides/slides9-v2.html#approach-1-command-and-control",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Approach 1: Command and Control",
+    "text": "Approach 1: Command and Control\nThe traditional approach: set numerical quantity limits on polluting activities.\n\nIf the regulator knows each plant’s cost structure, they could mandate: “Plant 1 may produce 50 gallons, Plant 2 may produce 100 gallons.” This achieves the efficient outcome."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#problems-with-command-and-control",
+    "href": "slides/slides9-v2.html#problems-with-command-and-control",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Problems with Command and Control",
+    "text": "Problems with Command and Control\nThis kind of regulation is clumsy:\n\nIt’s difficult to write laws that regulate each plant individually\nOnce passed, such laws are difficult to modify as technology or costs change\nIf the regulator makes a mistake (e.g., reverses the allocations), there is no self-correcting mechanism, so the incentives are inefficient\n\n\nIf the law cannot differentiate across plants and must impose a uniform cap, further inefficiencies result. (The optimal uniform cap is not simply 75 gallons; work this out as an exercise.)\n\n\nDespite these weaknesses, command and control is the most common approach to regulating externalities."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#approach-2-pigouvian-tax",
+    "href": "slides/slides9-v2.html#approach-2-pigouvian-tax",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Approach 2: Pigouvian Tax",
+    "text": "Approach 2: Pigouvian Tax\nAn alternative: use the price system to internalize the externality.\nIf we set a tax of \\(t = \\$0.01\\) per cubic foot of smog, each plant’s problem becomes:\n\\[\\max_{y_1} \\pi = y_1(3-2) - t \\cdot y_1^2 \\implies y_1^p = 50\\] \\[\\max_{y_2} \\pi = y_2(3-2) - t \\cdot \\tfrac{1}{2}y_2^2 \\implies y_2^p = 100\\]\n\nThe tax achieves the efficient result with less information: we don’t need to know firms’ production functions, only the marginal social damage of pollution."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#advantages-and-risks-of-pigouvian-taxes",
+    "href": "slides/slides9-v2.html#advantages-and-risks-of-pigouvian-taxes",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Advantages and Risks of Pigouvian Taxes",
+    "text": "Advantages and Risks of Pigouvian Taxes\nAdvantage: Each firm optimally chooses its own level of pollution given the tax. No need to write a separate law for each plant.\n\nRisk: If marginal damage varies with the quantity of pollution (e.g., pollution above a threshold causes mass extinction), setting the tax slightly wrong could be catastrophic.\n\n\nWhen marginal damage is constant, the Pigouvian tax is straightforward. When it varies, setting the right tax schedule becomes much harder."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#approach-3-cap-and-trade",
+    "href": "slides/slides9-v2.html#approach-3-cap-and-trade",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Approach 3: Cap and Trade",
+    "text": "Approach 3: Cap and Trade\nThe Pigouvian tax doesn’t fully use the Coase theorem. The state sets the price, not the market. Can we do better by assigning property rights to pollution?\n\nThe optimal total pollution is \\(50^2 + \\frac{1}{2}(100^2) = 7{,}500\\) cubic feet. The government could issue 7,500 permits, each allowing 1 cubic foot of smog. Permits can be traded."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#case-1-permits-given-to-plant-2",
+    "href": "slides/slides9-v2.html#case-1-permits-given-to-plant-2",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Case 1: Permits Given to Plant 2",
+    "text": "Case 1: Permits Given to Plant 2\nPlant 2 (the more efficient refinery) receives all 7,500 permits. It could:\n\nUse all permits itself: produce 122.4 gallons (profit: $122.40)\nProduce 100 gallons, sell 2,500 permits to Plant 1: Plant 1 produces 50 gallons and pays up to $50 for permits. Plant 2 earns $150 total.\n\n\nPlant 2 cannot do better than option 2. The market leads it to the efficient allocation."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#case-2-permits-given-to-plant-1",
+    "href": "slides/slides9-v2.html#case-2-permits-given-to-plant-1",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Case 2: Permits Given to Plant 1",
+    "text": "Case 2: Permits Given to Plant 1\nNow Plant 1 (the dirtier refinery) receives all 7,500 permits. It could:\n\nUse all permits: produce 86.6 gallons (profit: $86.60)\nSell all permits to Plant 2 (profit: $122.40)\nKeep 2,500 permits, sell 5,000 to Plant 2: Plant 1 produces 50 gallons, Plant 2 produces 100 gallons, and Plant 1 earns up to $150\n\n\nAgain, the efficient allocation emerges. Regardless of who receives the permits, the key economic outcome (fuel produced, pollution produced, and the allocation across plants) is identical."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#what-differs",
+    "href": "slides/slides9-v2.html#what-differs",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "What Differs?",
+    "text": "What Differs?\nOnly which plant makes the profits (a transfer among plant owners).\n\nThis is the power of the Coase theorem in action. By assigning property rights to pollution, the government allows the market to correct the externality.\nThe initial allocation of permits is a major political question, but it has no effect on economic efficiency."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#summary-of-regulatory-instruments",
+    "href": "slides/slides9-v2.html#summary-of-regulatory-instruments",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Summary of Regulatory Instruments",
+    "text": "Summary of Regulatory Instruments\n\n\n\n\n\n\n\n\n\nFeature\nCommand & Control\nPigouvian Tax\nCap & Trade\n\n\n\n\nSets\nQuantity for each firm\nPrice of pollution\nTotal quantity\n\n\nInformation needed\nEach firm’s costs\nMarginal damage\nTotal efficient pollution\n\n\nSelf-correcting?\nNo\nYes\nYes\n\n\nFirms optimize?\nNo\nYes\nYes"
+  },
+  {
+    "objectID": "slides/slides9-v2.html#why-cap-and-trade-has-special-virtues",
+    "href": "slides/slides9-v2.html#why-cap-and-trade-has-special-virtues",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Why Cap and Trade Has Special Virtues",
+    "text": "Why Cap and Trade Has Special Virtues\n\nLike command and control, it allows the regulator to set the total amount of pollution\nLike the Pigouvian tax, it’s simple to implement (no separate law per firm needed)\nUnlike either alternative, it causes firms to optimally reallocate pollution through trade, even if the regulator doesn’t know firms’ cost structures\n\n\nThe SO\\(_2\\) cap-and-trade program in the U.S. dramatically exceeded expectations: it reduced emissions at far lower cost than anticipated, because the market revealed that firms’ true abatement costs were lower than what they had told regulators under command-and-control."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#a-caveat",
+    "href": "slides/slides9-v2.html#a-caveat",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "A Caveat",
+    "text": "A Caveat\nCap and trade may not work well if the regulator cares about which plant does the polluting.\n\nIf all the low-cost polluters happen to be concentrated in one geographic area, cap and trade could lead to localized pollution hotspots, even if total pollution is efficient."
+  },
+  {
+    "objectID": "slides/slides9-v2.html#key-takeaways",
+    "href": "slides/slides9-v2.html#key-takeaways",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\n\nExternalities arise when private and social costs diverge, so agents face the “wrong” price\nThe Coase theorem shows that well-defined property rights + costless bargaining lead to efficient outcomes regardless of who holds the rights\nThree regulatory instruments address externalities: command and control, Pigouvian taxes, and cap and trade, each with different information requirements and incentive properties\nCap and trade has special virtues: it sets total pollution, lets firms optimize, and generates efficient reallocation through trade\nRectifying an externality often means finding a way to restore market conditions so the Coase theorem can hold; when that isn’t feasible, external regulation may be needed"
+  },
+  {
+    "objectID": "slides/slides9-v2.html#references",
+    "href": "slides/slides9-v2.html#references",
+    "title": "Externalities, the Coase Theorem, and Market Remedies",
+    "section": "References",
+    "text": "References\n\nNicholson & Snyder, Microeconomic Theory, 13e, Chapter 19\nCoase, “The Problem of Social Cost” (1960)\nPigou, The Economics of Welfare (1920)\nSchmalensee et al., on SO\\(_2\\) cap and trade"
   }
 ]
