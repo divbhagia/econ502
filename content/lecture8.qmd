@@ -6,9 +6,17 @@ format: html
 
 ## Topics 
 
+- Adverse Selection: Definition; Market for Lemons
+- Simple Model of Adverse Selection in Insurance Markets
+- Moral Hazard in Unemployment Insurance
 
+**References**: Nicholson & Snyder, *Microeconomic Theory*, 13e, Chapter 18
 
-**Textbook references**: 
+## Lecture Notes
+
+Detailed notes with full derivations and explanations are available below.
+
+- [Lecture 8 Notes: Asymmetric Information](/add-content/lec8-notes.qmd)
 
 ## Slides 
 The slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.

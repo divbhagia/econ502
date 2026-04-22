@@ -23,6 +23,8 @@ So far, we've mostly modeled agents as making decisions against an anonymous mar
 - Countries choosing whether to honor a trade agreement
 - A central bank setting policy while private actors anticipate it
 
+---
+
 ## What Makes a Game?
 
 Every game has three ingredients:
@@ -39,6 +41,8 @@ We'll also need to specify the **information structure** (who knows what when) a
 A game is fully specified once you know all of these.
 :::
 
+---
+
 ## Two Representations
 
 Games come in two standard forms:
@@ -54,26 +58,29 @@ Both representations can describe the same game. The choice is about which aspec
 
 ## The Prisoner's Dilemma
 
-Two suspects are arrested. Each can either **Cooperate** (stay silent) or **Defect** (confess). Payoffs in years of freedom (higher is better):
+Two prisoners are separated into individual rooms and cannot communicate with each other. Each has two options: **Cooperate** (stay silent) or **Defect** (testify). The payoffs in years they will have to serve are:
 
-|  | B: Cooperate | B: Defect |
+|  | **B Cooperates** | **B Defects** |
 |---|---|---|
-| **A: Cooperate** | (3, 3) | (0, 5) |
-| **A: Defect** | (5, 0) | (1, 1) |
+| **A Cooperates** | (-1, -1) | (-3, 0) |
+| **A Defects** | (0, -3) | (-2, -2) |
+|
 
 ::: {.fragment}
 Each player does better by defecting regardless of what the other does:
 
-- If B cooperates: A gets 5 by defecting vs. 3 by cooperating
-- If B defects: A gets 1 by defecting vs. 0 by cooperating
+- If B cooperates: A gets 0 years by defecting vs. 1 year by cooperating
+- If B defects: A gets 2 years by defecting vs. 3 years by cooperating
 :::
+
+---
 
 ## Dominant Strategies
 
 A strategy is **strictly dominant** for a player if it yields a strictly higher payoff than any alternative, regardless of what opponents do.
 
 ::: {.fragment}
-In the Prisoner's Dilemma, **Defect** is strictly dominant for both players. So the prediction is (Defect, Defect), giving both players 1 year each, even though (Cooperate, Cooperate) would give them 3 each.
+In the Prisoner's Dilemma, **Defect** is strictly dominant for both players. So the prediction is (Defect, Defect), giving both players 2 years each, even though (Cooperate, Cooperate) would give them 1 year each.
 
 This is the central puzzle: individually rational behavior leads to a collectively bad outcome.
 :::
@@ -81,6 +88,8 @@ This is the central puzzle: individually rational behavior leads to a collective
 ::: {.fragment}
 The Prisoner's Dilemma shows up everywhere: arms races, price wars, overfishing, tax evasion, doping in sports.
 :::
+
+---
 
 ## Nash Equilibrium
 
@@ -94,60 +103,74 @@ $$ u_i(s_i^*, s_{-i}^*) \geq u_i(s_i, s_{-i}^*) \quad \text{for all } s_i, \text
 Interpretation: a Nash equilibrium is a "no regrets" profile. Given what everyone else is doing, no one wishes they had chosen differently.
 :::
 
+---
+
 ## Finding Nash Equilibria
 
-To find pure-strategy Nash equilibria in a normal-form game:
+**To find Nash equilibria in a normal-form game:**
 
-1. For each opponent strategy, find your best response
-2. Underline or circle your best-response payoffs
-3. A Nash equilibrium is a cell where **both** players' payoffs are best responses
+1. For each player, fix the opponent’s strategy and find the best response
+2. Underline or circle the payoffs corresponding to those best responses
+3. A Nash equilibrium is any cell where **both players are playing best responses**
+
 
 ::: {.fragment}
 In the Prisoner's Dilemma, (Defect, Defect) is the unique Nash equilibrium: both cells where the other defects have Defect underlined, and both cells where the other cooperates also have Defect underlined.
 :::
 
+---
+
 ## Example: Coordination Game
 
 Two friends want to meet but can't communicate. Each can go to a **Cafe** or a **Bar**.
 
-|  | B: Cafe | B: Bar |
+|  | **B: Cafe** | **B: Bar** |
 |---|---|---|
 | **A: Cafe** | (2, 2) | (0, 0) |
 | **A: Bar** | (0, 0) | (1, 1) |
+|
 
 ::: {.fragment}
 Two pure-strategy Nash equilibria: (Cafe, Cafe) and (Bar, Bar).
 
-The game has **multiple equilibria**, raising the question of how players coordinate on one, and possibly whether some equilibria are more "focal" than others (Schelling's focal point).
+The game has **multiple equilibria**, raising the question of how players coordinate on one, and possibly whether some equilibria are more "focal" than others.
 :::
+
+---
 
 ## Example: Battle of the Sexes
 
 Same structure, but the players prefer different outcomes. A prefers **Opera**, B prefers **Football**, but both prefer being together.
 
-|  | B: Opera | B: Football |
+|  | **B: Opera** | **B: Football** |
 |---|---|---|
 | **A: Opera** | (2, 1) | (0, 0) |
 | **A: Football** | (0, 0) | (1, 2) |
+|
 
 ::: {.fragment}
 Two pure-strategy Nash equilibria: (Opera, Opera) and (Football, Football). Coordination is good, but there's **conflict** about which equilibrium to land on.
 :::
 
+---
+
 ## Example: Matching Pennies
 
 A zero-sum game. Player A wants the pennies to **match**, Player B wants them to **differ**.
 
-|  | B: Heads | B: Tails |
+|  | **B: Heads** | **B: Tails** |
 |---|---|---|
 | **A: Heads** | (1, −1) | (−1, 1) |
 | **A: Tails** | (−1, 1) | (1, −1) |
+|
 
 ::: {.fragment}
 **No pure-strategy Nash equilibrium**. For any pure profile, one player wants to switch.
 
 We need **mixed strategies**.
 :::
+
+---
 
 ## Mixed Strategies
 
@@ -158,6 +181,8 @@ A mixed-strategy Nash equilibrium is a profile of randomizations such that each 
 ::: {.fragment}
 **Why indifference?** If a player were strictly better off playing one pure strategy, they would play it with probability 1, not mix. Mixing is only rational when you are indifferent.
 :::
+
+---
 
 ## Matching Pennies: Solving for the Mix
 
@@ -174,6 +199,8 @@ By symmetry, $p = 1/2$. The unique Nash equilibrium is $(p, q) = (1/2, 1/2)$: ea
 
 Expected payoff: 0 for each player. Exactly what you'd guess by symmetry.
 :::
+
+---
 
 ## Existence
 
@@ -196,6 +223,8 @@ The extensive form uses a **game tree**:
 - Payoffs sit at the end of each path
 - Information sets capture what a player knows when deciding
 
+---
+
 ## Entry Game
 
 An entrant (E) decides whether to **Enter** or **Stay Out** of a market. If E enters, the incumbent (I) decides to **Fight** or **Accommodate**.
@@ -205,10 +234,85 @@ An entrant (E) decides whether to **Enter** or **Stay Out** of a market. If E en
 | Stay Out | (0, 10) |
 | Enter, Accommodate | (2, 5) |
 | Enter, Fight | (−3, 0) |
+|
 
 ::: {.fragment}
 What happens? It depends on what E believes I will do if entry occurs.
 :::
+
+---
+
+## Extensive Form for Entry Game
+
+```{python}
+
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+
+fig, ax = plt.subplots(1, 1, figsize=(8, 6))
+ax.set_xlim(-1, 11)
+ax.set_ylim(-1, 9)
+ax.axis('off')
+
+# Node positions
+root = (5, 8)          # Entrant's decision
+enter_node = (8, 4)    # Incumbent's decision
+stay_out = (2, 4)      # Terminal: Stay Out
+
+accommodate = (6, 0.5) # Terminal: Accommodate
+fight = (10, 0.5)      # Terminal: Fight
+
+# Draw edges
+# Entrant -> Stay Out
+ax.annotate('', xy=stay_out, xytext=root,
+            arrowprops=dict(arrowstyle='-', lw=2, color='black'))
+# Entrant -> Enter
+ax.annotate('', xy=enter_node, xytext=root,
+            arrowprops=dict(arrowstyle='-', lw=2, color='black'))
+# Incumbent -> Accommodate
+ax.annotate('', xy=accommodate, xytext=enter_node,
+            arrowprops=dict(arrowstyle='-', lw=2, color='black'))
+# Incumbent -> Fight
+ax.annotate('', xy=fight, xytext=enter_node,
+            arrowprops=dict(arrowstyle='-', lw=2, color='black'))
+
+# Decision nodes (filled circles)
+for pos in [root, enter_node]:
+    ax.plot(*pos, 'o', markersize=14, color='black', zorder=5)
+
+# Terminal nodes (small dots)
+for pos in [stay_out, accommodate, fight]:
+    ax.plot(*pos, 'o', markersize=8, color='black', zorder=5)
+
+# Player labels
+ax.text(root[0], root[1] + 0.25, 'E', fontsize=20, fontweight='bold',
+        ha='center', va='bottom')
+ax.text(enter_node[0], enter_node[1] + 0.25, 'I', fontsize=20,
+        fontweight='bold', ha='center', va='bottom')
+
+# Action labels
+ax.text(3, 5, 'Stay Out', fontsize=18, ha='center', va='bottom',
+        rotation=50)
+ax.text(6.5, 5.75, 'Enter', fontsize=18, ha='center', va='bottom',
+        rotation=-50)
+ax.text(6.75, 1, 'Accommodate', fontsize=18, ha='center', va='bottom',
+        rotation=57)
+ax.text(9.15, 2, 'Fight', fontsize=18, ha='center', va='bottom',
+        rotation=-57)
+
+# Payoffs (E, I)
+ax.text(stay_out[0], stay_out[1] - 0.35, '(0, 10)', fontsize=18,
+        ha='center', va='top', fontstyle='italic')
+ax.text(accommodate[0], accommodate[1] - 0.35, '(2, 5)', fontsize=18,
+        ha='center', va='top', fontstyle='italic')
+ax.text(fight[0], fight[1] - 0.35, '(−3, 0)', fontsize=18,
+        ha='center', va='top', fontstyle='italic')
+
+plt.tight_layout()
+plt.show()
+
+```
+
 
 ## Backward Induction
 
@@ -226,6 +330,8 @@ Solve **from the end** of the tree back to the beginning.
 **Prediction:** (Enter, Accommodate), payoffs (2, 5).
 :::
 
+---
+
 ## Non-Credible Threats
 
 In the entry game, the normal form actually has *two* Nash equilibria: (Enter, Accommodate) and (Stay Out, Fight).
@@ -238,6 +344,8 @@ At (Stay Out, Fight), neither player wants to deviate: given that E stays out, I
 But the Fight threat is **not credible**: if entry actually occurred, I would not carry it out. Backward induction rules out such non-credible threats.
 :::
 
+---
+
 ## Subgame Perfect Equilibrium
 
 **Subgame perfect equilibrium (SPE):** a strategy profile that induces a Nash equilibrium in *every* subgame, not just the whole game.
@@ -249,6 +357,8 @@ In finite games of perfect information, the SPE is exactly what **backward induc
 ::: {.fragment}
 In the entry game, (Enter, Accommodate) is the unique SPE; (Stay Out, Fight) is Nash but not subgame perfect.
 :::
+
+---
 
 ## Commitment and Credibility
 
@@ -264,7 +374,7 @@ Schelling (1960): sometimes you are better off **limiting your own options**. A 
 Commitment is valuable not despite restricting your future choices but *because* it does.
 :::
 
-# Repeated and Incomplete-Information Games
+# Repeated Games
 
 ## Repeated Prisoner's Dilemma
 
@@ -278,6 +388,8 @@ In the one-shot Prisoner's Dilemma, the only Nash equilibrium is (Defect, Defect
 **Infinitely repeated (or unknown horizon):** cooperation can be sustained as an equilibrium if players are patient enough, using strategies that punish defection (e.g., **tit-for-tat** or **grim trigger**).
 :::
 
+---
+
 ## The Folk Theorem (Sketch)
 
 In an infinitely repeated game with a sufficiently patient discount factor, essentially *any* individually rational payoff can be supported as a subgame perfect equilibrium.
@@ -289,87 +401,3 @@ In an infinitely repeated game with a sufficiently patient discount factor, esse
 ::: {.fragment}
 The flip side: repeated interaction gives us cooperation, but at the cost of a huge **multiplicity of equilibria**. Predicting what will actually happen is hard.
 :::
-
-## Incomplete Information
-
-So far, everyone knew the game. In many real situations, players have **private information** about their types (think back to adverse selection from Lecture 8).
-
-::: {.fragment}
-**Bayesian Nash equilibrium:** each type of each player chooses a best response given the distribution of other players' types and strategies.
-
-Signaling games, screening games, and auctions are all built on this foundation.
-:::
-
-::: {.fragment}
-We'll come back to these tools in Lectures 11 and 12 when we discuss uncertainty and strategic behavior in more depth.
-:::
-
-# Applications
-
-## Cournot Duopoly
-
-Two firms simultaneously choose quantities $q_1, q_2$. Inverse demand: $P = a - b(q_1 + q_2)$. Constant marginal cost $c$.
-
-Firm 1's best response:
-
-$$ q_1 = \frac{a - c}{2b} - \frac{q_2}{2} $$
-
-::: {.fragment}
-By symmetry the Nash equilibrium has $q_1 = q_2 = (a-c)/(3b)$. Industry output exceeds the monopoly output but falls short of the competitive level. Classic application of simultaneous-move Nash.
-:::
-
-## Bertrand Competition
-
-Two firms simultaneously set prices for a homogeneous good. Consumers buy from whoever is cheaper.
-
-::: {.fragment}
-**Nash equilibrium:** $p_1 = p_2 = MC$. Any price above MC is undercut; any price below MC loses money. With just two firms, price competition gives the competitive outcome.
-:::
-
-::: {.fragment}
-This "Bertrand paradox" shows how sensitive predictions are to the strategic variable (quantities vs. prices) and motivates richer models with capacity constraints or differentiation.
-:::
-
-## Stackelberg Leadership
-
-Same demand and costs as Cournot, but Firm 1 moves first and Firm 2 observes before choosing.
-
-**Solution by backward induction:**
-
-- Firm 2's best response: $q_2 = (a-c)/(2b) - q_1/2$
-- Firm 1 anticipates this and maximizes profit, choosing $q_1 = (a-c)/(2b)$
-
-::: {.fragment}
-Firm 1 ends up producing **more** than in Cournot and earning **higher** profits. The first-mover advantage is a value of commitment.
-:::
-
-# Wrap Up
-
-## Key Takeaways
-
-::: {.incremental}
-1. **Games** have players, strategies, and payoffs, and strategic interdependence makes each player's best action depend on others'
-2. **Nash equilibrium** is a profile where every player is best-responding; it always exists in finite games (possibly in mixed strategies)
-3. **Dominant strategies** give a particularly sharp prediction, as in the Prisoner's Dilemma
-4. **Sequential games** are analyzed by backward induction, which yields **subgame perfect equilibrium** and rules out non-credible threats
-5. **Commitment** can be valuable because it changes what others believe you'll do
-6. **Repeated interaction** can sustain cooperation, especially with patient players and unknown horizons
-:::
-
-## Looking Ahead
-
-In the next lectures, we'll use these tools to study:
-
-- Decision-making under uncertainty (expected utility, risk aversion)
-- More on strategic interaction with asymmetric information
-- Auctions, bargaining, and mechanism design
-
-The key message: wherever outcomes depend on what others do, game theory gives us a common language for thinking about it.
-
-## References
-
-- Nicholson & Snyder, *Microeconomic Theory*, 13e, Chapter 8
-- Nash, "Non-Cooperative Games" (1950)
-- Schelling, *The Strategy of Conflict* (1960)
-- Gibbons, *Game Theory for Applied Economists* (1992)
-- Osborne, *An Introduction to Game Theory* (2003)

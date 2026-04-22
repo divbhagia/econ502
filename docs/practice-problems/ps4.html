@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lecture 9: Externalities and Public Goods – Advanced Microeconomics</title>
+<title>Problem Set 4 – Advanced Microeconomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,11 +69,40 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -99,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../content/lecture1.html" aria-current="page"> 
+    <a class="nav-link" href="../content/lecture1.html"> 
 <span class="menu-text">Content</span></a>
   </li>  
   <li class="nav-item">
@@ -117,172 +146,40 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/lecture8.html">III. Market Failures</a></li><li class="breadcrumb-item"><a href="../content/lecture9.html">9. Externalities and Public Goods</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">I. Competitive Markets</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. Consumer Preferences and Choice</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2. Demand Analysis and Consumer Welfare</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3. Production, Costs, and Firm Supply</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4. Competitive Market Equilibrium</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5. Welfare Analysis and Efficiency</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/part1-add-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Additional Content</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">II. Market Power</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6. Market Power in Goods Markets</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">7. Market Power in Goods Markets (cont.)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/part2-add-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Additional Content</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">III. Market Failures</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8. Asymmetric Information</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture9.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">9. Externalities and Public Goods</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/part3-add-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Additional Content</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">IV. Introduction to Game Theory</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">10. Introduction to Game Theory</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/part4-add-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Additional Content</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#topics" id="toc-topics" class="nav-link active" data-scroll-target="#topics">Topics</a></li>
-  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
+  <li><a href="#problem-1-adverse-selection-in-the-used-laptop-market" id="toc-problem-1-adverse-selection-in-the-used-laptop-market" class="nav-link active" data-scroll-target="#problem-1-adverse-selection-in-the-used-laptop-market">Problem 1: Adverse Selection in the Used Laptop Market</a></li>
+  <li><a href="#problem-2-moral-hazard-in-unemployment-insurance" id="toc-problem-2-moral-hazard-in-unemployment-insurance" class="nav-link" data-scroll-target="#problem-2-moral-hazard-in-unemployment-insurance">Problem 2: Moral Hazard in Unemployment Insurance</a></li>
+  <li><a href="#problem-3-externalities-and-regulatory-policy" id="toc-problem-3-externalities-and-regulatory-policy" class="nav-link" data-scroll-target="#problem-3-externalities-and-regulatory-policy">Problem 3: Externalities and Regulatory Policy</a></li>
+  <li><a href="#problem-4-public-goods-and-free-riding" id="toc-problem-4-public-goods-and-free-riding" class="nav-link" data-scroll-target="#problem-4-public-goods-and-free-riding">Problem 4: Public Goods and Free Riding</a>
+  <ul class="collapse">
+  <li><a href="#part-i-decentralized-equilibrium" id="toc-part-i-decentralized-equilibrium" class="nav-link" data-scroll-target="#part-i-decentralized-equilibrium">Part I: Decentralized Equilibrium</a></li>
+  <li><a href="#part-ii-social-optimum" id="toc-part-ii-social-optimum" class="nav-link" data-scroll-target="#part-ii-social-optimum">Part II: Social Optimum</a></li>
+  <li><a href="#part-iii-policy" id="toc-part-iii-policy" class="nav-link" data-scroll-target="#part-iii-policy">Part III: Policy</a></li>
+  </ul></li>
+  <li><a href="#problem-5-game-theory" id="toc-problem-5-game-theory" class="nav-link" data-scroll-target="#problem-5-game-theory">Problem 5: Game Theory</a>
+  <ul class="collapse">
+  <li><a href="#part-i-normal-form-games" id="toc-part-i-normal-form-games" class="nav-link" data-scroll-target="#part-i-normal-form-games">Part I: Normal Form Games</a></li>
+  <li><a href="#part-ii-sequential-games" id="toc-part-ii-sequential-games" class="nav-link" data-scroll-target="#part-ii-sequential-games">Part II: Sequential Games</a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ps4.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/lecture8.html">III. Market Failures</a></li><li class="breadcrumb-item"><a href="../content/lecture9.html">9. Externalities and Public Goods</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lecture 9: Externalities and Public Goods</h1>
+<h1 class="title">Problem Set 4</h1>
+<p class="subtitle lead">Econ 502: Advanced Microeconomics</p>
 </div>
 
 
@@ -299,25 +196,114 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="topics" class="level2">
-<h2 class="anchored" data-anchor-id="topics">Topics</h2>
+<section id="problem-1-adverse-selection-in-the-used-laptop-market" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1-adverse-selection-in-the-used-laptop-market">Problem 1: Adverse Selection in the Used Laptop Market</h2>
+<p>A market for used laptops has two quality types:</p>
 <ul>
-<li>Externalities: Definition, Coase Theorem</li>
-<li>Solution to Externalities: Quotas, Pigouvian Taxes, Tradable Permits</li>
-<li>Public Goods: Definition, Samuelson Condition, Free-Rider Problem</li>
+<li><strong>High quality (H):</strong> worth $600 to sellers and $1,000 to buyers</li>
+<li><strong>Low quality (L):</strong> worth $200 to sellers and $400 to buyers</li>
 </ul>
-<p><strong>Textbook references</strong>: 19.3; 20.1-20.3</p>
+<p>Let <span class="math inline">\(\lambda \in [0,1]\)</span> denote the fraction of laptops that are high quality. Sellers know the quality of their own laptop; buyers cannot observe quality before purchase.</p>
+<ol type="a">
+<li><p><strong>Symmetric information.</strong> Suppose buyers can perfectly observe quality. Describe the competitive equilibrium. Which types trade?</p></li>
+<li><p><strong>Asymmetric information with <span class="math inline">\(\lambda = 0.3\)</span>.</strong> Buyers cannot observe quality and believe a fraction <span class="math inline">\(\lambda = 0.3\)</span> of laptops are high quality. What is a buyer’s expected value of a laptop? Given this expected value, which sellers are willing to sell? What is the highest possible equilibrium price in this market?</p></li>
+<li><p><strong>Asymmetric information with <span class="math inline">\(\lambda = 0.6\)</span>.</strong> Repeat part (b) with <span class="math inline">\(\lambda = 0.6\)</span>. Does the market unravel in this case? Explain why the outcome differs from part (b).</p></li>
+</ol>
+<hr>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>The slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.</p>
-<p style="text-align:center;">
-<a class="btn btn-primary" href="../slides/slides9.html" target="_blank" role="button">View slides in new window</a> <a class="btn btn-primary" href="../slides/slides9.pdf" target="_blank" role="button">Download PDF</a>
-</p>
-<iframe src="../slides/slides9.html" width="100%" height="500" style="border:none;">
-</iframe>
+<section id="problem-2-moral-hazard-in-unemployment-insurance" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2-moral-hazard-in-unemployment-insurance">Problem 2: Moral Hazard in Unemployment Insurance</h2>
+<p>A worker is laid off and enters a two-period model. In period 1, she is unemployed and receives UI benefit <span class="math inline">\(b\)</span>. She chooses search effort <span class="math inline">\(e \geq 0\)</span> at personal cost <span class="math inline">\(c(e)\)</span>. With probability <span class="math inline">\(e\)</span>, she finds a job paying wage <span class="math inline">\(w\)</span> in period 2; with probability <span class="math inline">\(1-e\)</span>, she remains unemployed and receives <span class="math inline">\(b\)</span> again in period 2. The worker has utility <span class="math inline">\(u(c)\)</span> with <span class="math inline">\(u' &gt; 0\)</span> and <span class="math inline">\(u'' &lt; 0\)</span> (strictly risk-averse). The cost of search function <span class="math inline">\(c(e)\)</span> is increasing and convex, with <span class="math inline">\(c(0) = 0\)</span>, <span class="math inline">\(c' &gt; 0\)</span>, and <span class="math inline">\(c'' &gt; 0\)</span>.</p>
+<ol type="a">
+<li><p>Write down the worker’s expected utility as a function of <span class="math inline">\(e\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(w\)</span>. Derive the first-order condition for the optimal effort level <span class="math inline">\(e^*\)</span> and give an economic interpretation.</p></li>
+<li><p>Show that <span class="math inline">\(\frac{de^*}{db} &lt; 0\)</span>. Explain intuitively why higher benefits reduce search effort.</p></li>
+<li><p>Now suppose <span class="math inline">\(u(z) = \sqrt{z}\)</span>, <span class="math inline">\(c(e) = \frac{1}{2}e^2\)</span>, and <span class="math inline">\(w = 9\)</span>. Find <span class="math inline">\(e^*(b)\)</span> explicitly. At what benefit level does the worker exert zero effort?</p></li>
+</ol>
+<hr>
+</section>
+<section id="problem-3-externalities-and-regulatory-policy" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3-externalities-and-regulatory-policy">Problem 3: Externalities and Regulatory Policy</h2>
+<p>A chemical plant produces <span class="math inline">\(q\)</span> units of output per day and earns a profit: <span class="math display">\[\pi(q) = 80q - q^2\]</span> Its production generates pollution that imposes a total external cost on a neighboring farm of: <span class="math display">\[EC(q) = 10q\]</span></p>
+<ol type="a">
+<li><p>Find the chemical plant’s privately optimal output <span class="math inline">\(q_{\text{priv}}\)</span> and the associated profit. What is the total external cost imposed on the farm at this output level?</p></li>
+<li><p>Find the socially efficient output <span class="math inline">\(q^*\)</span> that maximizes total surplus (plant profit minus external cost). Calculate the deadweight loss from unregulated production.</p></li>
+<li><p>Derive the Pigouvian tax <span class="math inline">\(t^*\)</span> per unit of output that induces the plant to choose the efficient output. Verify that the tax achieves the social optimum.</p></li>
+<li><p><strong>Coase Theorem.</strong> Suppose bargaining between the plant and the farm is costless.</p>
+<ol type="i">
+<li><p><strong>Farm holds the right</strong> to zero pollution. Explain how the two parties negotiate. What output level emerges? What is the range of feasible payments from plant to farm?</p></li>
+<li><p><strong>Plant holds the right</strong> to pollute freely. Starting from the plant’s privately optimal output, show that there are gains from trade from reducing output to <span class="math inline">\(q^*\)</span>. Describe the negotiation and the range of feasible payments.</p></li>
+<li><p>Compare the outcomes in (i) and (ii). What does the Coase theorem predict, and how does the assignment of property rights matter?</p></li>
+</ol></li>
+</ol>
+<hr>
+</section>
+<section id="problem-4-public-goods-and-free-riding" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4-public-goods-and-free-riding">Problem 4: Public Goods and Free Riding</h2>
+<p>Two roommates (1 and 2) share an apartment and jointly consume a “household quality” public good <span class="math inline">\(G\)</span> (WiFi, cleaning supplies, shared subscriptions) funded by their individual contributions <span class="math inline">\(g_i \geq 0\)</span>, so <span class="math inline">\(G = g_1 + g_2\)</span>. Roommate 1 has income <span class="math inline">\(Y_1 = 120\)</span> and roommate 2 has income <span class="math inline">\(Y_2 = 180\)</span>. Each roommate’s budget constraint is <span class="math inline">\(x_i + g_i = Y_i\)</span>, and their utility is: <span class="math display">\[U_i(x_i, G) = x_i \cdot G\]</span> where <span class="math inline">\(x_i = Y_i - g_i\)</span> is private consumption.</p>
+<section id="part-i-decentralized-equilibrium" class="level3">
+<h3 class="anchored" data-anchor-id="part-i-decentralized-equilibrium">Part I: Decentralized Equilibrium</h3>
+<ol type="a">
+<li><p>Taking the other roommate’s contribution as given, derive roommate <span class="math inline">\(i\)</span>’s best response function <span class="math inline">\(g_i^*(g_j)\)</span>. How does the best response depend on <span class="math inline">\(g_j\)</span>? What does this reveal about the free-rider problem?</p></li>
+<li><p>Find the Nash equilibrium contributions <span class="math inline">\((g_1^*, g_2^*)\)</span>, total public good <span class="math inline">\(G^*\)</span>, private consumption <span class="math inline">\(x_i^*\)</span>, and utility <span class="math inline">\(U_i^*\)</span> for each roommate. Note any surprising feature of the equilibrium given the income difference.</p></li>
+</ol>
+</section>
+<section id="part-ii-social-optimum" class="level3">
+<h3 class="anchored" data-anchor-id="part-ii-social-optimum">Part II: Social Optimum</h3>
+<ol start="3" type="a">
+<li><p>A social planner maximizes total welfare <span class="math inline">\(U_1 + U_2\)</span> subject to the resource constraint <span class="math inline">\(x_1 + x_2 + G = Y_1 + Y_2\)</span>. Find the efficient total public good <span class="math inline">\(G^{**}\)</span>. (<em>Hint</em>: Let <span class="math inline">\(X = x_1 + x_2\)</span> and note that <span class="math inline">\(U_1 + U_2 = X \cdot G\)</span>.)</p></li>
+<li><p>If the planner allocates private consumption equally (<span class="math inline">\(x_1^{**} = x_2^{**}\)</span>), find each roommate’s contribution <span class="math inline">\(g_i^{**}\)</span> and utility <span class="math inline">\(U_i^{**}\)</span>. Compare <span class="math inline">\(G^*\)</span> to <span class="math inline">\(G^{**}\)</span>: by what fraction does decentralized provision fall short of the efficient level? Is each roommate better or worse off at the social optimum?</p></li>
+</ol>
+</section>
+<section id="part-iii-policy" class="level3">
+<h3 class="anchored" data-anchor-id="part-iii-policy">Part III: Policy</h3>
+<ol start="5" type="a">
+<li>Suppose the government subsidizes contributions at rate <span class="math inline">\(s\)</span>: each dollar contributed costs the roommate only <span class="math inline">\((1-s)\)</span> dollars (the government covers the rest). Find the subsidy rate <span class="math inline">\(s^*\)</span> that induces the efficient total public good <span class="math inline">\(G^{**}\)</span> in the Nash equilibrium.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="problem-5-game-theory" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5-game-theory">Problem 5: Game Theory</h2>
+<section id="part-i-normal-form-games" class="level3">
+<h3 class="anchored" data-anchor-id="part-i-normal-form-games">Part I: Normal Form Games</h3>
+<p>Consider the following simultaneous-move game. The row player is A and the column player is B.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>L</strong></th>
+<th style="text-align: center;"><strong>R</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>U</strong></td>
+<td style="text-align: center;">(6, 2)</td>
+<td style="text-align: center;">(0, 4)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>D</strong></td>
+<td style="text-align: center;">(3, 3)</td>
+<td style="text-align: center;">(5, 1)</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Identify any strictly dominant or strictly dominated strategies. Eliminate any dominated strategies and explain your reasoning.</p></li>
+<li><p>Find all pure-strategy Nash equilibria, or explain why none exist.</p></li>
+<li><p>Find the unique mixed-strategy Nash equilibrium. Let <span class="math inline">\(p\)</span> = probability A plays U and <span class="math inline">\(q\)</span> = probability B plays L. Derive <span class="math inline">\(p^*\)</span> and <span class="math inline">\(q^*\)</span> and compute the expected payoff for each player.</p></li>
+</ol>
+</section>
+<section id="part-ii-sequential-games" class="level3">
+<h3 class="anchored" data-anchor-id="part-ii-sequential-games">Part II: Sequential Games</h3>
+<ol start="4" type="a">
+<li><p>Now modify the game to be sequential: Player A moves first (choosing U or D), then Player B observes A’s choice and responds. Draw the game tree. Using backward induction, find the subgame perfect equilibrium (SPE). What is the equilibrium outcome and what are the payoffs?</p></li>
+<li><p>Compare the SPE outcome to the mixed-strategy equilibrium payoffs from part (c). Is moving first an advantage or a disadvantage for Player A in this game?</p></li>
+</ol>
+<hr>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

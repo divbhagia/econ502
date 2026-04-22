@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Problem Set 4: Solutions – Advanced Microeconomics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6633c62d358394232bc599d39e38c5c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-40de7c3d014d17db877f778cb01e6f5d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Advanced Microeconomics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/lecture1.html"> 
+<span class="menu-text">Content</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../practice.html"> 
+<span class="menu-text">Practice</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://divbhagia.github.io/econ502/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-1-adverse-selection-in-the-used-laptop-market" id="toc-problem-1-adverse-selection-in-the-used-laptop-market" class="nav-link active" data-scroll-target="#problem-1-adverse-selection-in-the-used-laptop-market">Problem 1: Adverse Selection in the Used Laptop Market</a>
+  <ul class="collapse">
+  <li><a href="#part-a-symmetric-information" id="toc-part-a-symmetric-information" class="nav-link" data-scroll-target="#part-a-symmetric-information">Part (a): Symmetric Information</a></li>
+  <li><a href="#part-b-asymmetric-information-with-lambda-0.3" id="toc-part-b-asymmetric-information-with-lambda-0.3" class="nav-link" data-scroll-target="#part-b-asymmetric-information-with-lambda-0.3">Part (b): Asymmetric Information with <span class="math inline">\(\lambda = 0.3\)</span></a></li>
+  <li><a href="#part-c-asymmetric-information-with-lambda-0.6" id="toc-part-c-asymmetric-information-with-lambda-0.6" class="nav-link" data-scroll-target="#part-c-asymmetric-information-with-lambda-0.6">Part (c): Asymmetric Information with <span class="math inline">\(\lambda = 0.6\)</span></a></li>
+  </ul></li>
+  <li><a href="#problem-2-moral-hazard-in-unemployment-insurance" id="toc-problem-2-moral-hazard-in-unemployment-insurance" class="nav-link" data-scroll-target="#problem-2-moral-hazard-in-unemployment-insurance">Problem 2: Moral Hazard in Unemployment Insurance</a>
+  <ul class="collapse">
+  <li><a href="#part-a-expected-utility-and-optimal-effort" id="toc-part-a-expected-utility-and-optimal-effort" class="nav-link" data-scroll-target="#part-a-expected-utility-and-optimal-effort">Part (a): Expected Utility and Optimal Effort</a></li>
+  <li><a href="#part-b-effect-of-benefits-on-effort" id="toc-part-b-effect-of-benefits-on-effort" class="nav-link" data-scroll-target="#part-b-effect-of-benefits-on-effort">Part (b): Effect of Benefits on Effort</a></li>
+  <li><a href="#part-c-explicit-effort-function" id="toc-part-c-explicit-effort-function" class="nav-link" data-scroll-target="#part-c-explicit-effort-function">Part (c): Explicit Effort Function</a></li>
+  </ul></li>
+  <li><a href="#problem-3-externalities-and-regulatory-policy" id="toc-problem-3-externalities-and-regulatory-policy" class="nav-link" data-scroll-target="#problem-3-externalities-and-regulatory-policy">Problem 3: Externalities and Regulatory Policy</a>
+  <ul class="collapse">
+  <li><a href="#part-a-private-optimum" id="toc-part-a-private-optimum" class="nav-link" data-scroll-target="#part-a-private-optimum">Part (a): Private Optimum</a></li>
+  <li><a href="#part-b-social-optimum-and-deadweight-loss" id="toc-part-b-social-optimum-and-deadweight-loss" class="nav-link" data-scroll-target="#part-b-social-optimum-and-deadweight-loss">Part (b): Social Optimum and Deadweight Loss</a></li>
+  <li><a href="#part-c-pigouvian-tax" id="toc-part-c-pigouvian-tax" class="nav-link" data-scroll-target="#part-c-pigouvian-tax">Part (c): Pigouvian Tax</a></li>
+  <li><a href="#part-d-coase-theorem" id="toc-part-d-coase-theorem" class="nav-link" data-scroll-target="#part-d-coase-theorem">Part (d): Coase Theorem</a></li>
+  </ul></li>
+  <li><a href="#problem-4-public-goods-and-free-riding" id="toc-problem-4-public-goods-and-free-riding" class="nav-link" data-scroll-target="#problem-4-public-goods-and-free-riding">Problem 4: Public Goods and Free Riding</a>
+  <ul class="collapse">
+  <li><a href="#part-a-best-response-function" id="toc-part-a-best-response-function" class="nav-link" data-scroll-target="#part-a-best-response-function">Part (a): Best Response Function</a></li>
+  <li><a href="#part-b-nash-equilibrium" id="toc-part-b-nash-equilibrium" class="nav-link" data-scroll-target="#part-b-nash-equilibrium">Part (b): Nash Equilibrium</a></li>
+  <li><a href="#part-c-social-optimum" id="toc-part-c-social-optimum" class="nav-link" data-scroll-target="#part-c-social-optimum">Part (c): Social Optimum</a></li>
+  <li><a href="#part-d-efficient-allocation-and-comparison" id="toc-part-d-efficient-allocation-and-comparison" class="nav-link" data-scroll-target="#part-d-efficient-allocation-and-comparison">Part (d): Efficient Allocation and Comparison</a></li>
+  <li><a href="#part-e-optimal-subsidy-rate" id="toc-part-e-optimal-subsidy-rate" class="nav-link" data-scroll-target="#part-e-optimal-subsidy-rate">Part (e): Optimal Subsidy Rate</a></li>
+  </ul></li>
+  <li><a href="#problem-5-game-theory" id="toc-problem-5-game-theory" class="nav-link" data-scroll-target="#problem-5-game-theory">Problem 5: Game Theory</a>
+  <ul class="collapse">
+  <li><a href="#part-a-dominant-and-dominated-strategies" id="toc-part-a-dominant-and-dominated-strategies" class="nav-link" data-scroll-target="#part-a-dominant-and-dominated-strategies">Part (a): Dominant and Dominated Strategies</a></li>
+  <li><a href="#part-b-pure-strategy-nash-equilibria" id="toc-part-b-pure-strategy-nash-equilibria" class="nav-link" data-scroll-target="#part-b-pure-strategy-nash-equilibria">Part (b): Pure-Strategy Nash Equilibria</a></li>
+  <li><a href="#part-c-mixed-strategy-nash-equilibrium" id="toc-part-c-mixed-strategy-nash-equilibrium" class="nav-link" data-scroll-target="#part-c-mixed-strategy-nash-equilibrium">Part (c): Mixed-Strategy Nash Equilibrium</a></li>
+  <li><a href="#part-d-subgame-perfect-equilibrium-sequential-game" id="toc-part-d-subgame-perfect-equilibrium-sequential-game" class="nav-link" data-scroll-target="#part-d-subgame-perfect-equilibrium-sequential-game">Part (d): Subgame Perfect Equilibrium (Sequential Game)</a></li>
+  <li><a href="#part-e-first-mover-advantage" id="toc-part-e-first-mover-advantage" class="nav-link" data-scroll-target="#part-e-first-mover-advantage">Part (e): First-Mover Advantage?</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ps4-solutions.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Problem Set 4: Solutions</h1>
+<p class="subtitle lead">Econ 502: Advanced Microeconomics</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="problem-1-adverse-selection-in-the-used-laptop-market" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1-adverse-selection-in-the-used-laptop-market">Problem 1: Adverse Selection in the Used Laptop Market</h2>
+<section id="part-a-symmetric-information" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-symmetric-information">Part (a): Symmetric Information</h3>
+<p>With observable quality, each type trades in its own market. Gains from trade exist for both types since buyer values exceed seller values:</p>
+<ul>
+<li><strong>High quality:</strong> seller value = $600, buyer value = $1,000. Gains from trade = $400 per unit.</li>
+<li><strong>Low quality:</strong> seller value = $200, buyer value = $400. Gains from trade = $200 per unit.</li>
+</ul>
+<p>In a competitive equilibrium, prices are somewhere between seller and buyer values for each type. Both types trade and all gains from trade are realized.</p>
+</section>
+<section id="part-b-asymmetric-information-with-lambda-0.3" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-asymmetric-information-with-lambda-0.3">Part (b): Asymmetric Information with <span class="math inline">\(\lambda = 0.3\)</span></h3>
+<p>A buyer who cannot observe quality values a laptop at its expected worth: <span class="math display">\[\bar{V}^B =  0.3 \times 1{,}000 + 0.7 \times 400  = \$580\]</span></p>
+<p>$580 is the highest price buyers are willing to pay. A high-quality seller values their laptop at $600. Since <span class="math inline">\(\$580 &lt; \$600\)</span>, high-quality sellers are not willing to sell. Only low-quality sellers (value $200) are willing to sell at $580.</p>
+<p>With only lemons on the market, buyers revise their valuation to $400 (the value of a lemon). So the highest possible equilibrium price is $400. The market for high-quality laptops collapses entirely.</p>
+</section>
+<section id="part-c-asymmetric-information-with-lambda-0.6" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-asymmetric-information-with-lambda-0.6">Part (c): Asymmetric Information with <span class="math inline">\(\lambda = 0.6\)</span></h3>
+<p>Expected buyer value: <span class="math display">\[\bar{V}^B = 0.6 \times \$1{,}000 + 0.4 \times \$400  = \$760\]</span></p>
+<p>High-quality sellers value their laptops at $600. Since <span class="math inline">\(\$760 &gt; \$600\)</span>, they are willing to sell. Low-quality sellers (value $200) are also willing. Both types sell. The market does not unravel.</p>
+<p>Outcome differs from part (b) as now there are enough high-quality laptops that the average price is high enough for high-quality sellers to participate.</p>
+<hr>
+</section>
+</section>
+<section id="problem-2-moral-hazard-in-unemployment-insurance" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2-moral-hazard-in-unemployment-insurance">Problem 2: Moral Hazard in Unemployment Insurance</h2>
+<section id="part-a-expected-utility-and-optimal-effort" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-expected-utility-and-optimal-effort">Part (a): Expected Utility and Optimal Effort</h3>
+<p><strong>Expected utility.</strong> The worker receives <span class="math inline">\(b\)</span> in period 1 (always unemployed), <span class="math inline">\(w\)</span> in period 2 if employed (prob <span class="math inline">\(e\)</span>), and <span class="math inline">\(b\)</span> in period 2 if unemployed (prob <span class="math inline">\(1-e\)</span>). Net of effort cost: <span class="math display">\[EU = u(b) + e \cdot u(w) + (1-e) \cdot u(b) - c(e) \]</span></p>
+<p><strong>First-order condition.</strong> Maximizing over <span class="math inline">\(e\)</span>: <span class="math display">\[\frac{\partial EU}{\partial e} = u(w) -u(b) - c'(e) = 0\]</span> <span class="math display">\[c'(e^*) = u(w) - u(b)\]</span></p>
+<p><strong>Interpretation.</strong> The worker searches until the marginal cost of effort equals the marginal benefit of finding a job. The right-hand side is the utility gain from moving from unemployment to employment. The larger this gap, the harder the worker searches. (Note: Since <span class="math inline">\(c\)</span> is convex (<span class="math inline">\(c'' &gt; 0\)</span>), marginal cost is increasing, so a larger gap implies higher optimal effort <span class="math inline">\(e^*\)</span>.)</p>
+</section>
+<section id="part-b-effect-of-benefits-on-effort" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-effect-of-benefits-on-effort">Part (b): Effect of Benefits on Effort</h3>
+<p>Taking the derivative on both sides of the equation <span class="math inline">\(c'(e^*) = u(w) - u(b)\)</span> with respect to <span class="math inline">\(b\)</span>: <span class="math display">\[c''(e^*) \cdot \frac{de^*}{db} = -u'(b) \implies \frac{de^*}{db} = -\frac{u'(b)}{c''(e^*)} &lt; 0\]</span></p>
+<p>since <span class="math inline">\(u'(b) &gt; 0\)</span> and <span class="math inline">\(c''(e^*) &gt; 0\)</span>.</p>
+<p><strong>Intuition.</strong> Higher benefits <span class="math inline">\(b\)</span> raise <span class="math inline">\(u(b)\)</span>: unemployment becomes less painful. This shrinks the utility gain from finding a job, <span class="math inline">\(u(w) - u(b)\)</span>, which is the marginal benefit of search. With a lower marginal benefit, the worker searches less.</p>
+</section>
+<section id="part-c-explicit-effort-function" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-explicit-effort-function">Part (c): Explicit Effort Function</h3>
+<p>With <span class="math inline">\(u(z) = \sqrt{z}\)</span>, <span class="math inline">\(c(e) = \frac{1}{2}e^2\)</span>, and <span class="math inline">\(w = 9\)</span>, the first-order condition <span class="math inline">\(c'(e^*) = u(w) - u(b)\)</span> becomes: <span class="math display">\[e^* = \sqrt{9} - \sqrt{b} = 3 - \sqrt{b}\]</span></p>
+<p>From here, we can see that <span class="math inline">\(e^* = 0\)</span> when <span class="math inline">\(\sqrt{b} = 3\)</span>, i.e., <span class="math inline">\(b = 9 = w\)</span>. When the UI benefit equals the wage, the worker is indifferent between being employed and unemployed, so the worker exerts zero search effort.</p>
+<hr>
+</section>
+</section>
+<section id="problem-3-externalities-and-regulatory-policy" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3-externalities-and-regulatory-policy">Problem 3: Externalities and Regulatory Policy</h2>
+<section id="part-a-private-optimum" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-private-optimum">Part (a): Private Optimum</h3>
+<p>The plant maximizes private profit <span class="math inline">\(\pi(q) = 80q - q^2\)</span>: <span class="math display">\[\frac{d\pi}{dq} = 80 - 2q = 0 \implies q_{\text{priv}} = 40\]</span></p>
+<p>Private profit: <span class="math inline">\(\pi(40) = 80(40) - 40^2 = 3{,}200 - 1{,}600 = \$1{,}600\)</span></p>
+<p>Total external cost at <span class="math inline">\(q = 40\)</span>: <span class="math inline">\(EC(40) = 10 \times 40 = \$400\)</span></p>
+</section>
+<section id="part-b-social-optimum-and-deadweight-loss" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-social-optimum-and-deadweight-loss">Part (b): Social Optimum and Deadweight Loss</h3>
+<p>The social planner maximizes total surplus (profit minus external cost): <span class="math display">\[SW(q) = \pi(q) - EC(q) = 80q - q^2 - 10q = 70q - q^2\]</span></p>
+<p>First-order condition: <span class="math display">\[\frac{dSW}{dq} = 70 - 2q = 0 \implies q^* = 35\]</span></p>
+<p>Social welfare at <span class="math inline">\(q^* = 35\)</span>: <span class="math inline">\(SW(35) = 70(35) - 35^2 = 2{,}450 - 1{,}225 = \$1{,}225\)</span></p>
+<p>Social welfare at <span class="math inline">\(q_{\text{priv}} = 40\)</span>: <span class="math inline">\(SW(40) = 70(40) - 40^2 = 2{,}800 - 1{,}600 = \$1{,}200\)</span></p>
+<p><strong>Deadweight loss:</strong> <span class="math inline">\(DWL = SW(35) - SW(40) = \$1{,}225 - \$1{,}200 = \$25\)</span></p>
+</section>
+<section id="part-c-pigouvian-tax" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-pigouvian-tax">Part (c): Pigouvian Tax</h3>
+<p>A Pigouvian tax of <span class="math inline">\(t^*\)</span> per unit of output makes the plant internalize the external cost. The plant solves: <span class="math display">\[\max_q \; (80 - t^*)q - q^2 \implies \frac{d\pi}{dq} = 80 - t^* - 2q = 0 \implies t^* = 80 - 2q^*\]</span></p>
+<p>So for <span class="math inline">\(q^* = 35\)</span>, <span class="math inline">\(t^* = 80 - 2(35) = \$10\)</span>. The Pigouvian tax equals the marginal external cost: <span class="math inline">\(t^* = EC'(q) = 10\)</span>.</p>
+</section>
+<section id="part-d-coase-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="part-d-coase-theorem">Part (d): Coase Theorem</h3>
+<p><strong>Part (i): Farm holds the right to zero pollution.</strong></p>
+<p>Starting from <span class="math inline">\(q = 0\)</span>, the plant wants to produce. It must compensate the farm for any pollution damage.</p>
+<p>At <span class="math inline">\(q = 35\)</span>: plant profit = <span class="math inline">\(80(35) - 35^2 = 2{,}800 - 1{,}225 = \$1{,}575\)</span>. Farm damage = <span class="math inline">\(10 \times 35 = \$350\)</span>.</p>
+<p>The plant will negotiate to produce <span class="math inline">\(q^* = 35\)</span> and compensate the farm for damages. Both parties gain from this outcome compared to <span class="math inline">\(q = 0\)</span> (where the plant earns nothing). The plant is willing to pay up to $1,575 (all its profit) to be allowed to produce; the farm requires at least $350 to allow it. The negotiated payment lies in the range <span class="math inline">\([\$350, \$1{,}575]\)</span>.</p>
+<p>The efficient output <span class="math inline">\(q^* = 35\)</span> emerges because it maximizes the joint surplus available to split.</p>
+<p><strong>Part (ii): Plant holds the right to pollute freely.</strong></p>
+<p>Starting from <span class="math inline">\(q_{\text{priv}} = 40\)</span>: farm damage = $400. Moving from <span class="math inline">\(q = 40\)</span> to <span class="math inline">\(q = 35\)</span>:</p>
+<ul>
+<li>Plant’s profit <em>loss</em>: <span class="math inline">\(\pi(40) - \pi(35) = \$1{,}600 - \$1{,}575 = \$25\)</span></li>
+<li>Farm’s damage <em>savings</em>: <span class="math inline">\(EC(40) - EC(35) = \$400 - \$350 = \$50\)</span></li>
+</ul>
+<p>Gains from trade = <span class="math inline">\(\$50 - \$25 = \$25 &gt; 0\)</span>. The farm can pay the plant to reduce output. The farm is willing to pay up to $50; the plant requires at least $25. The negotiated payment lies in <span class="math inline">\([\$25, \$50]\)</span>, and output falls to <span class="math inline">\(q^* = 35\)</span>.</p>
+<p><strong>Part (iii): Comparison.</strong></p>
+<p>In both cases, the efficient output <span class="math inline">\(q^* = 35\)</span> emerges. This confirms the <strong>Coase theorem</strong>: when property rights are well-defined and bargaining is costless, the parties negotiate the efficient outcome regardless of who holds the rights.</p>
+<p>What differs is <em>distribution</em>: when the farm holds rights, the plant pays the farm (between $350 and $1,575). When the plant holds rights, the farm pays the plant (between $25 and $50). The assignment of rights determines who captures the gains from trade but not the total amount of trade.</p>
+<hr>
+</section>
+</section>
+<section id="problem-4-public-goods-and-free-riding" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4-public-goods-and-free-riding">Problem 4: Public Goods and Free Riding</h2>
+<section id="part-a-best-response-function" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-best-response-function">Part (a): Best Response Function</h3>
+<p>Roommate <span class="math inline">\(i\)</span> solves: <span class="math display">\[\max_{g_i} \; U_i = (Y_i - g_i)(g_i + g_j)\]</span></p>
+<p>Taking the first-order condition: <span class="math display">\[\frac{\partial U_i}{\partial g_i} = -(g_i + g_j) + (Y_i - g_i) = 0\]</span> <span class="math display">\[Y_i - 2g_i - g_j = 0\]</span></p>
+<p><span class="math display">\[\boxed{g_i^*(g_j) = \frac{Y_i - g_j}{2}}\]</span></p>
+<p>The best response is <strong>decreasing</strong> in <span class="math inline">\(g_j\)</span>: the more the other roommate contributes, the less roommate <span class="math inline">\(i\)</span> wants to contribute. Each dollar the other contributes reduces <span class="math inline">\(i\)</span>’s best response by <span class="math inline">\(\$0.50\)</span>. This is the free-rider motive: <span class="math inline">\(i\)</span> benefits from <span class="math inline">\(j\)</span>’s contribution without paying for it, so <span class="math inline">\(i\)</span> reduces their own contribution in response.</p>
+</section>
+<section id="part-b-nash-equilibrium" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-nash-equilibrium">Part (b): Nash Equilibrium</h3>
+<p>Solving the two best-response functions simultaneously with <span class="math inline">\(Y_1 = 120\)</span>, <span class="math inline">\(Y_2 = 180\)</span>: <span class="math display">\[g_1 = \frac{120 - g_2}{2}, \qquad g_2 = \frac{180 - g_1}{2}\]</span></p>
+<p>Substituting the second into the first: <span class="math display">\[g_1 = \frac{120 - \frac{180 - g_1}{2}}{2} \implies 4g_1 = 240 - 180 + g_1 \implies 3g_1 = 60 \implies g_1^* = 20\]</span> <span class="math display">\[g_2^* = \frac{180 - 20}{2} = 80\]</span></p>
+<p><span class="math display">\[G^* = 20 + 80 = 100, \qquad x_1^* = 120 - 20 = 100, \qquad x_2^* = 180 - 80 = 100\]</span> <span class="math display">\[U_1^* = 100 \times 100 = 10{,}000, \qquad U_2^* = 100 \times 100 = 10{,}000\]</span></p>
+<p><strong>Surprising feature.</strong> Despite earning very different incomes (<span class="math inline">\(Y_1 = 120\)</span> vs.&nbsp;<span class="math inline">\(Y_2 = 180\)</span>), both roommates end up with the <em>same</em> private consumption (<span class="math inline">\(x_1^* = x_2^* = 100\)</span>) and the same utility. The richer roommate contributes four times as much to the public good (<span class="math inline">\(g_2^* = 80\)</span> vs.&nbsp;<span class="math inline">\(g_1^* = 20\)</span>). This equalization of private consumption is a property of the Nash equilibrium with <span class="math inline">\(U_i = x_i G\)</span>: each roommate’s optimal private consumption equals <span class="math inline">\(G^*\)</span> (i.e., <span class="math inline">\(x_i^* = G^* = (Y_1+Y_2)/3\)</span>), regardless of individual income.</p>
+</section>
+<section id="part-c-social-optimum" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-social-optimum">Part (c): Social Optimum</h3>
+<p>The planner maximizes <span class="math inline">\(U_1 + U_2 = (x_1 + x_2) \cdot G = X \cdot G\)</span> subject to <span class="math inline">\(X + G = Y_1 + Y_2 = 300\)</span>.</p>
+<p>Substituting <span class="math inline">\(X = 300 - G\)</span>: <span class="math display">\[\max_G \; (300 - G) \cdot G\]</span></p>
+<p>First-order condition: <span class="math display">\[300 - 2G = 0 \implies G^{**} = 150\]</span></p>
+<p><span class="math display">\[X^{**} = 300 - 150 = 150\]</span></p>
+</section>
+<section id="part-d-efficient-allocation-and-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="part-d-efficient-allocation-and-comparison">Part (d): Efficient Allocation and Comparison</h3>
+<p>With equal private consumption (<span class="math inline">\(x_1^{**} = x_2^{**} = X^{**}/2 = 75\)</span>): <span class="math display">\[g_1^{**} = Y_1 - x_1^{**} = 120 - 75 = 45, \qquad g_2^{**} = Y_2 - x_2^{**} = 180 - 75 = 105\]</span> <span class="math display">\[U_1^{**} = 75 \times 150 = 11{,}250, \qquad U_2^{**} = 75 \times 150 = 11{,}250\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Nash Equilibrium</th>
+<th>Social Optimum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Roommate 1 contribution <span class="math inline">\(g_1\)</span></td>
+<td>20</td>
+<td>45</td>
+</tr>
+<tr class="even">
+<td>Roommate 2 contribution <span class="math inline">\(g_2\)</span></td>
+<td>80</td>
+<td>105</td>
+</tr>
+<tr class="odd">
+<td>Total public good <span class="math inline">\(G\)</span></td>
+<td>100</td>
+<td>150</td>
+</tr>
+<tr class="even">
+<td>Private consumption <span class="math inline">\(x_i\)</span></td>
+<td>100 (both)</td>
+<td>75 (both)</td>
+</tr>
+<tr class="odd">
+<td>Utility <span class="math inline">\(U_i\)</span></td>
+<td>10,000 (both)</td>
+<td>11,250 (both)</td>
+</tr>
+</tbody>
+</table>
+<p>The Nash equilibrium public good (<span class="math inline">\(G^* = 100\)</span>) is only <span class="math inline">\(\frac{2}{3}\)</span> of the efficient level (<span class="math inline">\(G^{**} = 150\)</span>): decentralized provision falls <strong>33% short</strong>. Both roommates are worse off under free riding. Each earns utility 10,000 in the Nash equilibrium versus 11,250 at the social optimum. The loss is borne equally because the Nash equilibrium happens to equalize utilities across the two roommates, and the planner’s equal-split allocation does so as well.</p>
+</section>
+<section id="part-e-optimal-subsidy-rate" class="level3">
+<h3 class="anchored" data-anchor-id="part-e-optimal-subsidy-rate">Part (e): Optimal Subsidy Rate</h3>
+<p>With subsidy rate <span class="math inline">\(s\)</span>, the effective budget constraint becomes <span class="math inline">\(x_i + (1-s)g_i = Y_i\)</span>. Roommate <span class="math inline">\(i\)</span> maximizes <span class="math inline">\((Y_i - (1-s)g_i)(g_i + g_j)\)</span>:</p>
+<p><span class="math display">\[\frac{\partial U_i}{\partial g_i} = -(1-s)(g_i+g_j) + (Y_i-(1-s)g_i) = 0 \implies g_i^*(g_j) = \frac{Y_i}{2(1-s)} - \frac{g_j}{2}\]</span></p>
+<p>Solving the Nash equilibrium with subsidy (using the same method as part (b)): <span class="math display">\[g_1^*(s) = \frac{2Y_1 - Y_2}{3(1-s)} = \frac{60}{3(1-s)} = \frac{20}{1-s}, \qquad g_2^*(s) = \frac{2Y_2 - Y_1}{3(1-s)} = \frac{240}{3(1-s)} = \frac{80}{1-s}\]</span></p>
+<p><span class="math display">\[G^*(s) = g_1^*(s) + g_2^*(s) = \frac{100}{1-s}\]</span></p>
+<p>Setting <span class="math inline">\(G^*(s^*) = G^{**} = 150\)</span>: <span class="math display">\[\frac{100}{1-s^*} = 150 \implies 1-s^* = \frac{2}{3} \implies s^* = \frac{1}{3}\]</span></p>
+<p>A subsidy rate of <span class="math inline">\(s^* = 1/3\)</span> induces the efficient total public good.</p>
+<hr>
+</section>
+</section>
+<section id="problem-5-game-theory" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5-game-theory">Problem 5: Game Theory</h2>
+<section id="part-a-dominant-and-dominated-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-dominant-and-dominated-strategies">Part (a): Dominant and Dominated Strategies</h3>
+<p>The payoff matrix:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>L</strong></th>
+<th style="text-align: center;"><strong>R</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>U</strong></td>
+<td style="text-align: center;">(6, 2)</td>
+<td style="text-align: center;">(0, 4)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>D</strong></td>
+<td style="text-align: center;">(3, 3)</td>
+<td style="text-align: center;">(5, 1)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Player A’s strategies.</strong> Compare U and D for each of B’s strategies:</p>
+<ul>
+<li>If B plays L: A gets 6 (U) vs.&nbsp;3 (D). A prefers U.</li>
+<li>If B plays R: A gets 0 (U) vs.&nbsp;5 (D). A prefers D.</li>
+</ul>
+<p>Neither U nor D dominates the other for A. No dominant strategy for A.</p>
+<p><strong>Player B’s strategies.</strong> Compare L and R for each of A’s strategies:</p>
+<ul>
+<li>If A plays U: B gets 2 (L) vs.&nbsp;4 (R). B prefers R.</li>
+<li>If A plays D: B gets 3 (L) vs.&nbsp;1 (R). B prefers L.</li>
+</ul>
+<p>Neither L nor R dominates the other for B. No dominant strategy for B.</p>
+<p><strong>Conclusion.</strong> There are no strictly dominant or strictly dominated strategies. The game cannot be reduced by iterated elimination.</p>
+</section>
+<section id="part-b-pure-strategy-nash-equilibria" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-pure-strategy-nash-equilibria">Part (b): Pure-Strategy Nash Equilibria</h3>
+<p>A Nash equilibrium requires each player to be best-responding to the other.</p>
+<p><strong>Check each cell:</strong></p>
+<ul>
+<li><strong>(U, L):</strong> A’s BR to L is U (<span class="math inline">\(6 &gt; 3\)</span>). B’s BR to U is R (<span class="math inline">\(4 &gt; 2\)</span>). B is not best-responding. Not a NE.</li>
+<li><strong>(U, R):</strong> A’s BR to R is D (<span class="math inline">\(5 &gt; 0\)</span>). A is not best-responding. Not a NE.</li>
+<li><strong>(D, L):</strong> A’s BR to L is U (<span class="math inline">\(6 &gt; 3\)</span>). A is not best-responding. Not a NE.</li>
+<li><strong>(D, R):</strong> A’s BR to R is D (<span class="math inline">\(5 &gt; 0\)</span>). B’s BR to D is L (<span class="math inline">\(3 &gt; 1\)</span>). B is not best-responding. Not a NE.</li>
+</ul>
+<p><strong>No pure-strategy Nash equilibrium exists.</strong> This game has a cyclical best-response structure: A wants to match B’s strategy (play U when B plays L, play D when B plays R), while B wants to mismatch (play R when A plays U, play L when A plays D). This is analogous to Matching Pennies.</p>
+</section>
+<section id="part-c-mixed-strategy-nash-equilibrium" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-mixed-strategy-nash-equilibrium">Part (c): Mixed-Strategy Nash Equilibrium</h3>
+<p>Let <span class="math inline">\(p = P(\text{A plays U})\)</span> and <span class="math inline">\(q = P(\text{B plays L})\)</span>.</p>
+<p><strong>Finding <span class="math inline">\(p^*\)</span> (make B indifferent).</strong></p>
+<p>B’s expected payoff from L: <span class="math inline">\(2p + 3(1-p) = 3 - p\)</span></p>
+<p>B’s expected payoff from R: <span class="math inline">\(4p + 1(1-p) = 1 + 3p\)</span></p>
+<p>Setting equal: <span class="math display">\[3 - p = 1 + 3p \implies 2 = 4p \implies p^* = \frac{1}{2}\]</span></p>
+<p><strong>Finding <span class="math inline">\(q^*\)</span> (make A indifferent).</strong></p>
+<p>A’s expected payoff from U: <span class="math inline">\(6q + 0(1-q) = 6q\)</span></p>
+<p>A’s expected payoff from D: <span class="math inline">\(3q + 5(1-q) = 5 - 2q\)</span></p>
+<p>Setting equal: <span class="math display">\[6q = 5 - 2q \implies 8q = 5 \implies q^* = \frac{5}{8}\]</span></p>
+<p><strong>Mixed-strategy Nash equilibrium:</strong> A plays U with probability <span class="math inline">\(p^* = 1/2\)</span>; B plays L with probability <span class="math inline">\(q^* = 5/8\)</span>.</p>
+<p><strong>Expected payoffs.</strong></p>
+<p>Player A’s expected payoff (use either pure strategy at equilibrium, since A is indifferent): <span class="math display">\[EU_A = 6 \times \frac{5}{8} + 0 \times \frac{3}{8} = \frac{30}{8} = \frac{15}{4} = 3.75\]</span></p>
+<p>Player B’s expected payoff: <span class="math display">\[EU_B = 2 \times \frac{1}{2} + 4 \times \frac{1}{2} = 3 \quad \text{(using A's mix and either of B's strategies)}\]</span></p>
+<p>Verification: B’s payoff from L: <span class="math inline">\(2(1/2) + 3(1/2) = 1 + 1.5 = 2.5\)</span>. B’s payoff from R: <span class="math inline">\(4(1/2) + 1(1/2) = 2 + 0.5 = 2.5\)</span>. <span class="math inline">\(EU_B = 2.5\)</span>.</p>
+</section>
+<section id="part-d-subgame-perfect-equilibrium-sequential-game" class="level3">
+<h3 class="anchored" data-anchor-id="part-d-subgame-perfect-equilibrium-sequential-game">Part (d): Subgame Perfect Equilibrium (Sequential Game)</h3>
+<p><strong>Game tree:</strong></p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+  A((A)) --&gt;|U| BU((B))
+  A --&gt;|D| BD((B))
+  BU --&gt;|L| P1["(6, 2)"]
+  BU --&gt;|R| P2["(0, 4)"]
+  BD --&gt;|L| P3["(3, 3)"]
+  BD --&gt;|R| P4["(5, 1)"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>Backward induction.</strong></p>
+<p><strong>Step 1: B’s optimal responses (bottom of the tree).</strong></p>
+<ul>
+<li>After <strong>U</strong>: B chooses L (payoff 2) or R (payoff 4). B plays <strong>R</strong>.</li>
+<li>After <strong>D</strong>: B chooses L (payoff 3) or R (payoff 1). B plays <strong>L</strong>.</li>
+</ul>
+<p><strong>Step 2: A anticipates B’s responses and chooses at the top.</strong></p>
+<ul>
+<li>Play <strong>U</strong> → B responds R → A gets <strong>0</strong>.</li>
+<li>Play <strong>D</strong> → B responds L → A gets <strong>3</strong>.</li>
+</ul>
+<p>A prefers D (<span class="math inline">\(3 &gt; 0\)</span>), so A plays <strong>D</strong>.</p>
+<p><strong>Subgame perfect equilibrium:</strong> A plays D; B’s strategy is (R after U, L after D). The equilibrium outcome is <strong>(D, L)</strong> with payoffs <strong>(A: 3, B: 3)</strong>.</p>
+</section>
+<section id="part-e-first-mover-advantage" class="level3">
+<h3 class="anchored" data-anchor-id="part-e-first-mover-advantage">Part (e): First-Mover Advantage?</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>A’s payoff</th>
+<th>B’s payoff</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mixed-strategy NE (simultaneous)</td>
+<td>3.75</td>
+<td>2.5</td>
+</tr>
+<tr class="even">
+<td>SPE (A moves first)</td>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Moving first is a <strong>disadvantage for A</strong>. By committing to D, A reveals its strategy, allowing B to exploit it with L and holding A to a payoff of 3. In the simultaneous game, B faces uncertainty about A’s move, which works in A’s favor — A’s expected payoff is 3.75 &gt; 3. Commitment hurts A here because B’s best responses are “adversarial”: whichever action A commits to, B has a response that limits A’s payoff (R after U gives A zero; L after D gives A only 3). Neither commitment is beneficial for A, so revealing a move first strictly reduces A’s payoff.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>2026 Div Bhagia | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 License</a> |Made with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

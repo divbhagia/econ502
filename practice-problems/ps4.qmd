@@ -1,0 +1,114 @@
+---
+title: "Problem Set 4"
+subtitle: "Econ 502: Advanced Microeconomics"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      file: ../assets/pset-preamble.tex
+format-links: [pdf]
+---
+
+## Problem 1: Adverse Selection in the Used Laptop Market
+
+A market for used laptops has two quality types:
+
+- **High quality (H):** worth \$600 to sellers and \$1,000 to buyers
+- **Low quality (L):** worth \$200 to sellers and \$400 to buyers
+
+Let $\lambda \in [0,1]$ denote the fraction of laptops that are high quality. Sellers know the quality of their own laptop; buyers cannot observe quality before purchase.
+
+a) **Symmetric information.** Suppose buyers can perfectly observe quality. Describe the competitive equilibrium. Which types trade? 
+
+b) **Asymmetric information with $\lambda = 0.3$.** Buyers cannot observe quality and believe a fraction $\lambda = 0.3$ of laptops are high quality. What is a buyer's expected value of a laptop? Given this expected value, which sellers are willing to sell? What is the highest possible equilibrium price in this market?
+
+c) **Asymmetric information with $\lambda = 0.6$.** Repeat part (b) with $\lambda = 0.6$. Does the market unravel in this case? Explain why the outcome differs from part (b).
+
+---
+
+## Problem 2: Moral Hazard in Unemployment Insurance
+
+A worker is laid off and enters a two-period model. In period 1, she is unemployed and receives UI benefit $b$. She chooses search effort $e \geq 0$ at personal cost $c(e)$. With probability $e$, she finds a job paying wage $w$ in period 2; with probability $1-e$, she remains unemployed and receives $b$ again in period 2. The worker has utility $u(c)$ with $u' > 0$ and $u'' < 0$ (strictly risk-averse). The cost of search function $c(e)$ is increasing and convex, with $c(0) = 0$, $c' > 0$, and $c'' > 0$.
+
+a) Write down the worker's expected utility as a function of $e$, $b$, and $w$. Derive the first-order condition for the optimal effort level $e^*$ and give an economic interpretation.
+
+b) Show that $\frac{de^*}{db} < 0$. Explain intuitively why higher benefits reduce search effort.
+
+c) Now suppose $u(z) = \sqrt{z}$, $c(e) = \frac{1}{2}e^2$, and $w = 9$. Find $e^*(b)$ explicitly. At what benefit level does the worker exert zero effort?
+
+---
+
+## Problem 3: Externalities and Regulatory Policy
+
+A chemical plant produces $q$ units of output per day and earns a profit:
+$$\pi(q) = 80q - q^2$$
+Its production generates pollution that imposes a total external cost on a neighboring farm of:
+$$EC(q) = 10q$$
+
+a) Find the chemical plant's privately optimal output $q_{\text{priv}}$ and the associated profit. What is the total external cost imposed on the farm at this output level?
+
+b) Find the socially efficient output $q^*$ that maximizes total surplus (plant profit minus external cost). Calculate the deadweight loss from unregulated production.
+
+c) Derive the Pigouvian tax $t^*$ per unit of output that induces the plant to choose the efficient output. Verify that the tax achieves the social optimum.
+
+d) **Coase Theorem.** Suppose bargaining between the plant and the farm is costless.
+
+   i. **Farm holds the right** to zero pollution. Explain how the two parties negotiate. What output level emerges? What is the range of feasible payments from plant to farm?
+
+   ii. **Plant holds the right** to pollute freely. Starting from the plant's privately optimal output, show that there are gains from trade from reducing output to $q^*$. Describe the negotiation and the range of feasible payments.
+
+   iii. Compare the outcomes in (i) and (ii). What does the Coase theorem predict, and how does the assignment of property rights matter?
+
+---
+
+## Problem 4: Public Goods and Free Riding
+
+Two roommates (1 and 2) share an apartment and jointly consume a "household quality" public good $G$ (WiFi, cleaning supplies, shared subscriptions) funded by their individual contributions $g_i \geq 0$, so $G = g_1 + g_2$. Roommate 1 has income $Y_1 = 120$ and roommate 2 has income $Y_2 = 180$. Each roommate's budget constraint is $x_i + g_i = Y_i$, and their utility is:
+$$U_i(x_i, G) = x_i \cdot G$$
+where $x_i = Y_i - g_i$ is private consumption.
+
+### Part I: Decentralized Equilibrium
+
+a) Taking the other roommate's contribution as given, derive roommate $i$'s best response function $g_i^*(g_j)$. How does the best response depend on $g_j$? What does this reveal about the free-rider problem?
+
+b) Find the Nash equilibrium contributions $(g_1^*, g_2^*)$, total public good $G^*$, private consumption $x_i^*$, and utility $U_i^*$ for each roommate. Note any surprising feature of the equilibrium given the income difference.
+
+### Part II: Social Optimum
+
+c) A social planner maximizes total welfare $U_1 + U_2$ subject to the resource constraint $x_1 + x_2 + G = Y_1 + Y_2$. Find the efficient total public good $G^{**}$. (*Hint*: Let $X = x_1 + x_2$ and note that $U_1 + U_2 = X \cdot G$.)
+
+d) If the planner allocates private consumption equally ($x_1^{**} = x_2^{**}$), find each roommate's contribution $g_i^{**}$ and utility $U_i^{**}$. Compare $G^*$ to $G^{**}$: by what fraction does decentralized provision fall short of the efficient level? Is each roommate better or worse off at the social optimum?
+
+### Part III: Policy
+
+e) Suppose the government subsidizes contributions at rate $s$: each dollar contributed costs the roommate only $(1-s)$ dollars (the government covers the rest). Find the subsidy rate $s^*$ that induces the efficient total public good $G^{**}$ in the Nash equilibrium.
+
+---
+
+## Problem 5: Game Theory
+
+### Part I: Normal Form Games
+
+Consider the following simultaneous-move game. The row player is A and the column player is B.
+
+|          | **L**  | **R**  |
+|:---:|:---:|:---:|
+| **U**    | (6, 2) | (0, 4) |
+| **D**    | (3, 3) | (5, 1) |
+
+a) Identify any strictly dominant or strictly dominated strategies. Eliminate any dominated strategies and explain your reasoning.
+
+b) Find all pure-strategy Nash equilibria, or explain why none exist.
+
+c) Find the unique mixed-strategy Nash equilibrium. Let $p$ = probability A plays U and $q$ = probability B plays L. Derive $p^*$ and $q^*$ and compute the expected payoff for each player.
+
+### Part II: Sequential Games
+
+d) Now modify the game to be sequential: Player A moves first (choosing U or D), then Player B observes A's choice and responds. Draw the game tree. Using backward induction, find the subgame perfect equilibrium (SPE). What is the equilibrium outcome and what are the payoffs?
+
+e) Compare the SPE outcome to the mixed-strategy equilibrium payoffs from part (c). Is moving first an advantage or a disadvantage for Player A in this game? 
+
+---

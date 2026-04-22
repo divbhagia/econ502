@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Lecture 8: Asymmetric Information – Advanced Microeconomics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6633c62d358394232bc599d39e38c5c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-40de7c3d014d17db877f778cb01e6f5d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Advanced Microeconomics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/lecture1.html"> 
+<span class="menu-text">Content</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../practice.html"> 
+<span class="menu-text">Practice</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://divbhagia.github.io/econ502/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#part-i-adverse-selection-and-the-market-for-lemons" id="toc-part-i-adverse-selection-and-the-market-for-lemons" class="nav-link" data-scroll-target="#part-i-adverse-selection-and-the-market-for-lemons">Part I: Adverse Selection and the Market for Lemons</a>
+  <ul class="collapse">
+  <li><a href="#akerlofs-market-for-lemons" id="toc-akerlofs-market-for-lemons" class="nav-link" data-scroll-target="#akerlofs-market-for-lemons">1.1 Akerlof’s “Market for Lemons”</a></li>
+  <li><a href="#the-unraveling-logic" id="toc-the-unraveling-logic" class="nav-link" data-scroll-target="#the-unraveling-logic">1.2 The Unraveling Logic</a></li>
+  <li><a href="#solutions-to-adverse-selection" id="toc-solutions-to-adverse-selection" class="nav-link" data-scroll-target="#solutions-to-adverse-selection">1.3 Solutions to Adverse Selection</a></li>
+  </ul></li>
+  <li><a href="#part-ii-adverse-selection-in-health-insurance-a-quantitative-model" id="toc-part-ii-adverse-selection-in-health-insurance-a-quantitative-model" class="nav-link" data-scroll-target="#part-ii-adverse-selection-in-health-insurance-a-quantitative-model">Part II: Adverse Selection in Health Insurance: A Quantitative Model</a>
+  <ul class="collapse">
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">2.1 Setup</a></li>
+  <li><a href="#willingness-to-pay-for-insurance-step-by-step-derivation" id="toc-willingness-to-pay-for-insurance-step-by-step-derivation" class="nav-link" data-scroll-target="#willingness-to-pay-for-insurance-step-by-step-derivation">2.2 Willingness to Pay for Insurance: Step-by-Step Derivation</a></li>
+  <li><a href="#the-adverse-selection-problem-the-naive-policy" id="toc-the-adverse-selection-problem-the-naive-policy" class="nav-link" data-scroll-target="#the-adverse-selection-problem-the-naive-policy">2.3 The Adverse Selection Problem: The Naive Policy</a></li>
+  <li><a href="#the-break-even-policy" id="toc-the-break-even-policy" class="nav-link" data-scroll-target="#the-break-even-policy">2.4 The Break-Even Policy</a></li>
+  <li><a href="#why-the-insurance-market-doesnt-collapse-unlike-used-cars" id="toc-why-the-insurance-market-doesnt-collapse-unlike-used-cars" class="nav-link" data-scroll-target="#why-the-insurance-market-doesnt-collapse-unlike-used-cars">2.5 Why the Insurance Market Doesn’t Collapse (Unlike Used Cars)</a></li>
+  <li><a href="#adverse-selection-through-the-demandsupply-lens" id="toc-adverse-selection-through-the-demandsupply-lens" class="nav-link" data-scroll-target="#adverse-selection-through-the-demandsupply-lens">2.6 Adverse Selection Through the Demand/Supply Lens</a></li>
+  <li><a href="#policy-responses" id="toc-policy-responses" class="nav-link" data-scroll-target="#policy-responses">2.7 Policy Responses</a></li>
+  </ul></li>
+  <li><a href="#part-iii-moral-hazard" id="toc-part-iii-moral-hazard" class="nav-link" data-scroll-target="#part-iii-moral-hazard">Part III: Moral Hazard</a>
+  <ul class="collapse">
+  <li><a href="#the-basic-idea" id="toc-the-basic-idea" class="nav-link" data-scroll-target="#the-basic-idea">3.1 The Basic Idea</a></li>
+  <li><a href="#moral-hazard-in-unemployment-insurance" id="toc-moral-hazard-in-unemployment-insurance" class="nav-link" data-scroll-target="#moral-hazard-in-unemployment-insurance">3.2 Moral Hazard in Unemployment Insurance</a></li>
+  <li><a href="#a-two-period-model" id="toc-a-two-period-model" class="nav-link" data-scroll-target="#a-two-period-model">3.3 A Two-Period Model</a></li>
+  <li><a href="#how-benefits-affect-effort" id="toc-how-benefits-affect-effort" class="nav-link" data-scroll-target="#how-benefits-affect-effort">3.4 How Benefits Affect Effort</a></li>
+  <li><a href="#the-insuranceincentives-tradeoff" id="toc-the-insuranceincentives-tradeoff" class="nav-link" data-scroll-target="#the-insuranceincentives-tradeoff">3.5 The Insurance–Incentives Tradeoff</a></li>
+  <li><a href="#the-governments-problem" id="toc-the-governments-problem" class="nav-link" data-scroll-target="#the-governments-problem">3.6 The Government’s Problem</a></li>
+  <li><a href="#first-best-versus-second-best" id="toc-first-best-versus-second-best" class="nav-link" data-scroll-target="#first-best-versus-second-best">3.7 First Best versus Second Best</a></li>
+  <li><a href="#moral-hazard-beyond-ui" id="toc-moral-hazard-beyond-ui" class="nav-link" data-scroll-target="#moral-hazard-beyond-ui">3.8 Moral Hazard Beyond UI</a></li>
+  </ul></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lec8-notes.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lecture 8: Asymmetric Information</h1>
+<p class="subtitle lead">Econ 502: Advanced Microeconomics</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The First Welfare Theorem tells us that competitive equilibria are Pareto efficient, but only under demanding conditions, including that all parties share the same information. In reality, one side of a transaction often knows more than the other.</p>
+<p>This lecture studies two fundamental forms of <strong>asymmetric information</strong>:</p>
+<ol type="1">
+<li><p><strong>Adverse selection (hidden types):</strong> One party has private information about a fixed characteristic <em>before</em> the transaction. The uninformed party, unable to distinguish types, must deal with the average, which drives out the best types and can cause market failure.</p></li>
+<li><p><strong>Moral hazard (hidden actions):</strong> After a contract is in place, one party takes an action that the other cannot observe. Because the action is unobservable, incentives are distorted relative to the efficient outcome.</p></li>
+</ol>
+<p>Both problems are studied through specific, tractable models. Understanding them is essential for health policy, financial regulation, labor economics, and public economics more broadly.</p>
+<hr>
+</section>
+<section id="part-i-adverse-selection-and-the-market-for-lemons" class="level2">
+<h2 class="anchored" data-anchor-id="part-i-adverse-selection-and-the-market-for-lemons">Part I: Adverse Selection and the Market for Lemons</h2>
+<section id="akerlofs-market-for-lemons" class="level3">
+<h3 class="anchored" data-anchor-id="akerlofs-market-for-lemons">1.1 Akerlof’s “Market for Lemons”</h3>
+<p>George Akerlof’s 1970 paper, “The Market for Lemons,” studied used-car markets where sellers know the quality of their car but buyers do not. He showed that this information asymmetry can cause the high-quality segment of the market to collapse entirely.</p>
+<p><strong>The simplified setup.</strong> There are two types of used cars:</p>
+<ul>
+<li><strong>Good cars (G):</strong> worth $16,000 to sellers and $20,000 to buyers</li>
+<li><strong>Lemons (L):</strong> worth $8,000 to sellers and $10,000 to buyers</li>
+</ul>
+<p>Half of the cars on the lot are good cars and half are lemons. Buyers cannot distinguish quality before purchase, but they know this 50/50 distribution.</p>
+<p><strong>With symmetric information</strong> (buyers can observe quality), both types trade efficiently: good cars at some price between $16,000 and $20,000, lemons at some price between $8,000 and $10,000. Total gains from trade are realized.</p>
+<p><strong>With asymmetric information,</strong> buyers must form an expectation about quality. Since they cannot tell types apart, the most they are willing to pay for any car is the <em>expected</em> value: <span class="math display">\[\bar{V}^B = 0.5 \times \$20{,}000 + 0.5 \times \$10{,}000 = \$15{,}000\]</span></p>
+<p>Now ask: will sellers of good cars sell at $15,000? A good car is worth $16,000 to its seller. Since $15,000 &lt; $16,000, the answer is <strong>no</strong>: good-car sellers will not part with their cars at the going price. Only lemon sellers (who value their cars at $8,000) are willing to sell at $15,000.</p>
+<p>But if buyers anticipate that only lemons are on the market, they revise their valuation downward to $10,000, and the price falls accordingly. The market for good cars <strong>collapses</strong>, and only lemons trade.</p>
+</section>
+<section id="the-unraveling-logic" class="level3">
+<h3 class="anchored" data-anchor-id="the-unraveling-logic">1.2 The Unraveling Logic</h3>
+<p>The used-car example captures the beginning of a general unraveling process. When quality is continuous rather than binary, the logic applies step by step:</p>
+<ol type="1">
+<li>Buyers cannot observe quality → they offer a price based on <strong>average quality</strong></li>
+<li>The average price is below the value of the best sellers → the <strong>best types exit</strong></li>
+<li>With the best types gone, average quality falls → buyers <strong>lower their price</strong></li>
+<li>More sellers exit → quality falls further</li>
+<li>This process continues until <strong>only the worst types remain</strong> (or the market collapses entirely)</li>
+</ol>
+<p><strong>Akerlof’s key insight.</strong> Quality is <em>endogenous to price</em>. Unlike standard supply and demand, where the composition of sellers is fixed and price simply clears the market, here the price itself determines who is willing to sell. A higher price draws in better quality; a lower price drives quality down. This feedback is the source of the adverse selection problem.</p>
+<p><strong>The welfare cost.</strong> In the symmetric information world, all cars trade (good cars, lemons, and everything in between) at prices reflecting their true quality. Under asymmetric information, high-quality goods may not trade at all even though buyers value them more than sellers do. The surplus that would have been generated by those trades is lost. This is a deadweight loss created purely by the information asymmetry.</p>
+</section>
+<section id="solutions-to-adverse-selection" class="level3">
+<h3 class="anchored" data-anchor-id="solutions-to-adverse-selection">1.3 Solutions to Adverse Selection</h3>
+<p>Since the problem arises from asymmetric information, solutions work by reducing or eliminating the asymmetry.</p>
+<p><strong>Signaling.</strong> The <em>informed party</em> takes a costly, observable action to credibly reveal their type. For a signal to work, it must be <strong>costly to fake</strong>: high-quality sellers must find it worth taking the action, while low-quality sellers must not.</p>
+<ul>
+<li><em>Warranties and guarantees:</em> A seller of a good car is willing to offer a full warranty because the car rarely needs repairs. A seller of a lemon cannot afford to offer the same warranty. The warranty credibly reveals quality.</li>
+<li><em>The signal must be costly to fake:</em> If a lemon seller could offer a warranty as cheaply as a good-car seller, the warranty would convey no information. The signal works only when its cost is inversely related to quality.</li>
+</ul>
+<p><strong>Reputation and repeated interaction.</strong> In markets where the same parties transact repeatedly, sellers have an incentive to maintain a reputation for quality: the value of future business is at stake.</p>
+<ul>
+<li>Brand names and franchise systems</li>
+<li>Rating platforms (eBay, Carfax, Yelp, Airbnb)</li>
+<li>Buying from the same dealer over many transactions</li>
+</ul>
+<p><strong>Certification and screening.</strong> A <em>third party</em> observes quality and certifies it to buyers who cannot.</p>
+<ul>
+<li>Third-party inspections (JD Power, Certified Pre-Owned programs)</li>
+<li>Diplomas and professional credentials signal worker quality to employers</li>
+</ul>
+<p><strong>Non-market (government) solutions.</strong> When private solutions are insufficient:</p>
+<ul>
+<li><em>Government certification:</em> FDA approval, USDA organic labeling, occupational licensing. The government acts as a certifier, replacing the private information asymmetry with a public standard.</li>
+<li><em>Legal liability (lemon laws):</em> Sellers must disclose known defects, on pain of legal penalties. This raises the cost of concealing bad quality.</li>
+<li><em>Mandated information provision:</em> Disclosure requirements (nutritional labels, car safety ratings, financial prospectuses) force the informed party to share information.</li>
+</ul>
+<p>All of these work by the same mechanism: reducing the information asymmetry and making it harder for low-quality sellers to hide among high-quality ones.</p>
+<hr>
+</section>
+</section>
+<section id="part-ii-adverse-selection-in-health-insurance-a-quantitative-model" class="level2">
+<h2 class="anchored" data-anchor-id="part-ii-adverse-selection-in-health-insurance-a-quantitative-model">Part II: Adverse Selection in Health Insurance: A Quantitative Model</h2>
+<p>The used-car example shows <em>why</em> adverse selection causes market failure. The following model, adapted from David Autor’s lecture notes, shows <em>how much</em> damage it does and evaluates policy responses.</p>
+<section id="setup" class="level3">
+<h3 class="anchored" data-anchor-id="setup">2.1 Setup</h3>
+<p><strong>Consumers.</strong> There is a continuum of consumers indexed by <span class="math inline">\(i \in [0, 1]\)</span>. Consumer <span class="math inline">\(i\)</span>:</p>
+<ul>
+<li>Has utility <span class="math inline">\(U(w) = \ln(w)\)</span>, which is strictly concave (so consumers are risk-averse)</li>
+<li>Has initial wealth <span class="math inline">\(w_0 = 150\)</span></li>
+<li>Faces a 50% probability of a health loss of size <span class="math inline">\(L_i = 100i\)</span></li>
+</ul>
+<p>The type index <span class="math inline">\(i\)</span> captures risk: <span class="math inline">\(i = 0\)</span> is perfectly healthy (zero potential loss), while <span class="math inline">\(i = 1\)</span> faces a potential loss of $100. Types are uniformly distributed on <span class="math inline">\([0,1]\)</span>.</p>
+<p><strong>Information.</strong> Each consumer knows their own type <span class="math inline">\(i\)</span>. Insurers observe only that types are drawn from <span class="math inline">\(U[0,1]\)</span>; they cannot identify any individual’s <span class="math inline">\(i\)</span>.</p>
+</section>
+<section id="willingness-to-pay-for-insurance-step-by-step-derivation" class="level3">
+<h3 class="anchored" data-anchor-id="willingness-to-pay-for-insurance-step-by-step-derivation">2.2 Willingness to Pay for Insurance: Step-by-Step Derivation</h3>
+<p>Before studying market outcomes, we need to know how much each consumer type is willing to pay for full insurance (a policy that compensates for the entire loss).</p>
+<p><strong>Step 1: Expected wealth without insurance.</strong></p>
+<p>Consumer <span class="math inline">\(i\)</span> has wealth <span class="math inline">\(w_0 = 150\)</span> if healthy (probability 0.5) and <span class="math inline">\(w_0 - L_i = 150 - 100i\)</span> if sick (probability 0.5): <span class="math display">\[E[w_i] = 0.5 \times 150 + 0.5 \times (150 - 100i) = 150 - 50i\]</span></p>
+<p><strong>Step 2: Expected utility without insurance.</strong></p>
+<p><span class="math display">\[E[U(w_i)] = 0.5\ln(150) + 0.5\ln(150 - 100i)\]</span></p>
+<p><strong>Step 3: Certainty equivalent.</strong></p>
+<p>The <em>certainty equivalent</em> <span class="math inline">\(CE_i\)</span> is the guaranteed wealth level that gives the same utility as the risky prospect. It solves: <span class="math display">\[\ln(CE_i) = E[U(w_i)]\]</span> <span class="math display">\[CE_i = e^{E[U(w_i)]} = e^{0.5\ln(150) + 0.5\ln(150-100i)} = \sqrt{150 \cdot (150 - 100i)}\]</span></p>
+<p>The certainty equivalent is below expected wealth, <span class="math inline">\(CE_i &lt; E[w_i]\)</span>, because <span class="math inline">\(\ln\)</span> is concave. This gap is the <strong>risk premium</strong> <span class="math inline">\(RP_i = E[w_i] - CE_i &gt; 0\)</span>.</p>
+<p><strong>Step 4: Willingness to pay.</strong></p>
+<p>With full insurance at premium <span class="math inline">\(P\)</span>, the consumer receives <span class="math inline">\(w_0 - P\)</span> with certainty. The consumer buys if: <span class="math display">\[\ln(w_0 - P) \geq E[U(w_i)]\]</span></p>
+<p>The maximum premium they are willing to pay solves this with equality: <span class="math display">\[w_0 - WTP_i = CE_i \implies WTP_i = w_0 - CE_i\]</span></p>
+<p>Expanding: <span class="math display">\[\boxed{WTP_i = 150 - \sqrt{150(150 - 100i)}}\]</span></p>
+<p>Note that <span class="math inline">\(WTP_i = (w_0 - E[w_i]) + RP_i = 50i + RP_i\)</span>. The WTP has two components:</p>
+<ul>
+<li>The <strong>actuarially fair premium</strong> <span class="math inline">\(50i\)</span>: exactly what the consumer expects to lose, so a risk-neutral person would pay no more</li>
+<li>The <strong>risk premium</strong> <span class="math inline">\(RP_i &gt; 0\)</span>: the extra amount the risk-averse consumer is willing to pay on top of the actuarially fair price to eliminate risk</li>
+</ul>
+<p><strong>Worked example: Consumer <span class="math inline">\(i = 0.60\)</span>.</strong></p>
+<ul>
+<li>Expected wealth: <span class="math inline">\(150 - 50 \times 0.60 = \$120\)</span></li>
+<li>Expected utility: <span class="math inline">\(0.5\ln(150) + 0.5\ln(90) = 0.5(5.011) + 0.5(4.500) = 4.756\)</span></li>
+<li>Certainty equivalent: <span class="math inline">\(e^{4.756} = \$116.19\)</span></li>
+<li>Risk premium: <span class="math inline">\(\$120 - \$116.19 = \$3.81\)</span></li>
+<li>Actuarially fair premium: <span class="math inline">\(0.5 \times 60 = \$30\)</span></li>
+<li><strong>WTP: <span class="math inline">\(\$30 + \$3.81 = \$33.81\)</span></strong>, or equivalently <span class="math inline">\(WTP = 150 - 116.19 = \$33.81\)</span></li>
+</ul>
+<p>The key observation is that WTP <em>exceeds</em> the actuarially fair cost for every consumer <span class="math inline">\(i &gt; 0\)</span>. Every risk-averse consumer is willing to pay a premium above the expected loss to get insurance.</p>
+</section>
+<section id="the-adverse-selection-problem-the-naive-policy" class="level3">
+<h3 class="anchored" data-anchor-id="the-adverse-selection-problem-the-naive-policy">2.3 The Adverse Selection Problem: The Naive Policy</h3>
+<p>An insurer who does not know individual types might naively offer insurance at the <strong>population-average</strong> expected loss: <span class="math display">\[P^{\text{naive}} = 0.5 \times E[L_i] = 0.5 \times E[100i] = 0.5 \times 50 = \$25\]</span></p>
+<p>where <span class="math inline">\(E[i] = 0.5\)</span> since <span class="math inline">\(i \sim U[0,1]\)</span>.</p>
+<p><strong>Which consumers buy at <span class="math inline">\(P = \$25\)</span>?</strong></p>
+<p>Consumer <span class="math inline">\(i\)</span> buys if <span class="math inline">\(WTP_i \geq \$25\)</span>, i.e., if <span class="math inline">\(150 - CE_i \geq 25\)</span>, i.e., if <span class="math inline">\(CE_i \leq 125\)</span>.</p>
+<p>The cutoff type <span class="math inline">\(i_0\)</span> is indifferent: their expected utility without insurance equals the utility of paying <span class="math inline">\(\$25\)</span> and having <span class="math inline">\(\$125\)</span> for certain: <span class="math display">\[0.5\ln(150) + 0.5\ln(150 - 100i_0) = \ln(125)\]</span></p>
+<p>Taking exponentials of both sides: <span class="math display">\[\sqrt{150(150 - 100i_0)} = 125\]</span> <span class="math display">\[150(150 - 100i_0) = 15{,}625\]</span> <span class="math display">\[150 - 100i_0 = 104.17\]</span> <span class="math display">\[i_0 \approx 0.46\]</span></p>
+<p>Only consumers with <span class="math inline">\(i \geq 0.46\)</span> (the sicker 54%) buy insurance at $25. The healthiest 46% opt out because the $25 premium exceeds their WTP.</p>
+<p><strong>Does the insurer break even?</strong></p>
+<p>The insurer’s cost per policy is the expected payout to the insured pool: <span class="math display">\[\text{Cost} = 0.5 \times E[L_i \mid i \geq 0.46] = 0.5 \times 100 \times E[i \mid i \geq 0.46]\]</span></p>
+<p>Since <span class="math inline">\(i \mid i \geq 0.46\)</span> is uniform on <span class="math inline">\([0.46, 1]\)</span>, its mean is <span class="math inline">\((0.46 + 1)/2 = 0.73\)</span>: <span class="math display">\[\text{Cost} = 50 \times 0.73 = \$36.50\]</span></p>
+<p>The insurer collects $25 but pays $36.50 on average, a <strong>loss of $11.50 per policy</strong>. The naive policy is unsustainable.</p>
+<p><strong>Why?</strong> The insurer priced the policy for the average consumer, but only the sicker-than-average consumers found it worthwhile to buy. This is adverse selection: the insured pool is “adversely selected” toward high-cost types, relative to the general population.</p>
+</section>
+<section id="the-break-even-policy" class="level3">
+<h3 class="anchored" data-anchor-id="the-break-even-policy">2.4 The Break-Even Policy</h3>
+<p>A profit-maximizing insurer must raise the premium until it breaks even on its actual customer pool. Let <span class="math inline">\(i_0\)</span> be the cutoff type (who is indifferent between buying and not buying) and <span class="math inline">\(P\)</span> be the premium. Two conditions must hold simultaneously:</p>
+<p><strong>Break-even condition</strong> (insurer covers its costs): <span class="math display">\[P = 0.5 \times E[L_i \mid i \geq i_0] = 0.5 \times 100 \times \frac{1 + i_0}{2} = 25 \cdot \frac{1 + i_0}{2}\]</span></p>
+<p><strong>Indifference condition</strong> (the cutoff consumer is just willing to buy): <span class="math display">\[0.5\ln(150) + 0.5\ln(150 - 100i_0) = \ln(150 - P)\]</span></p>
+<p>which is equivalent to <span class="math inline">\(CE_{i_0} = 150 - P\)</span>, or <span class="math inline">\(P = 150 - CE_{i_0} = WTP_{i_0}\)</span>.</p>
+<p>Substituting the break-even premium into the indifference condition and solving numerically: <span class="math display">\[i_0 = 0.75, \qquad P = 25 \times \frac{1 + 0.75}{2} = 25 \times 0.875 = \$43.75\]</span></p>
+<p><strong>Verification.</strong> At <span class="math inline">\(i_0 = 0.75\)</span>: <span class="math display">\[CE_{0.75} = \sqrt{150(150 - 75)} = \sqrt{150 \times 75} = \sqrt{11{,}250} \approx 106.07\]</span> <span class="math display">\[WTP_{0.75} = 150 - 106.07 \approx \$43.93 \approx \$43.75 \checkmark\]</span></p>
+<p>In the break-even equilibrium, only the sickest 25% of consumers (<span class="math inline">\(i \geq 0.75\)</span>) are insured. The other 75% (who would genuinely benefit from insurance at their actuarially fair price) are priced out.</p>
+</section>
+<section id="why-the-insurance-market-doesnt-collapse-unlike-used-cars" class="level3">
+<h3 class="anchored" data-anchor-id="why-the-insurance-market-doesnt-collapse-unlike-used-cars">2.5 Why the Insurance Market Doesn’t Collapse (Unlike Used Cars)</h3>
+<p>Unlike the used-car market, the health insurance market doesn’t necessarily collapse to zero coverage. Why?</p>
+<p><strong>Risk aversion saves the market, partially.</strong> The sickest consumers are willing to pay <em>more</em> than their actuarially fair cost precisely because they are risk-averse. Even if the premium is very high (well above the expected loss), consumers with severe illness risk prefer insurance to no insurance. This keeps at least the high-risk segment of the market alive.</p>
+<p><strong>But the outcome is still highly inefficient.</strong> High-risk types impose a negative externality on low-risk types: because the insured pool is dominated by expensive cases, the premium must be high, which prices out the low-risk consumers who might have bought at a lower premium. Most consumers who <em>could</em> benefit from insurance end up uninsured.</p>
+</section>
+<section id="adverse-selection-through-the-demandsupply-lens" class="level3">
+<h3 class="anchored" data-anchor-id="adverse-selection-through-the-demandsupply-lens">2.6 Adverse Selection Through the Demand/Supply Lens</h3>
+<p>The market for insurance has an unusual feature: the demand curve and the cost curves all run in the same direction (the diagram uses risk type <span class="math inline">\(i\)</span> on the horizontal axis, with high-risk consumers on the right).</p>
+<ul>
+<li><strong>Demand (WTP) curve:</strong> Downward sloping from right to left: sicker consumers (<span class="math inline">\(i\)</span> near 1) are willing to pay more.</li>
+<li><strong>Marginal cost (MC):</strong> Also downward sloping: the cost of insuring consumer <span class="math inline">\(i\)</span> is <span class="math inline">\(50i\)</span>, which is higher for sicker consumers.</li>
+<li><strong>Average cost (AC):</strong> The cost of insuring <em>all consumers with type <span class="math inline">\(\geq i_0\)</span></em>, which lies above MC because the insured pool always includes some high-cost types above <span class="math inline">\(i_0\)</span>.</li>
+</ul>
+<p>The competitive equilibrium is where <strong>demand = average cost</strong>, not where <strong>demand = marginal cost</strong>. This is the source of the inefficiency: Einav and Finkelstein (2011) summarize it precisely:</p>
+<blockquote class="blockquote">
+<p>“The fundamental inefficiency created by adverse selection arises because the efficient allocation is determined by the relationship between marginal cost and demand, but the equilibrium allocation is determined by the relationship between average cost and demand.”</p>
+</blockquote>
+<p>At the efficient allocation, every consumer for whom WTP exceeds marginal cost (<span class="math inline">\(50i\)</span>) should be insured. At the market equilibrium, only consumers for whom WTP exceeds average cost are insured. Since AC &gt; MC (due to adverse selection), the equilibrium pool is smaller than the efficient pool: too few consumers are insured.</p>
+</section>
+<section id="policy-responses" class="level3">
+<h3 class="anchored" data-anchor-id="policy-responses">2.7 Policy Responses</h3>
+<p><strong>Option 1: Mandatory insurance at $25.</strong></p>
+<p>The government requires <em>everyone</em> to buy insurance at the average-cost premium of $25.</p>
+<ul>
+<li>The insurer breaks even: all consumers are pooled, and the premium exactly equals the average expected loss.</li>
+<li>Every consumer is insured. For all <span class="math inline">\(i &gt; 0\)</span>, the actuarially fair premium <span class="math inline">\(50i &lt; WTP_i\)</span>, so every consumer has positive net benefit from insurance <em>at their fair price</em>. But at $25, consumers with <span class="math inline">\(i &lt; 0.46\)</span> are paying above their fair price — they are <strong>cross-subsidizing</strong> the sicker consumers.</li>
+<li>From a social welfare standpoint, the mandate provides two benefits:
+<ul>
+<li><strong>Risk pooling:</strong> All consumers are insured, eliminating wealth risk for all types.</li>
+<li><strong>Income spreading (redistribution):</strong> Low-risk consumers transfer to high-risk consumers. Under concave utility (diminishing marginal utility of wealth), this transfer raises aggregate welfare: a dollar transferred from the low-risk (who would have healthy wealth even without insurance) to the high-risk (who would face large wealth losses when sick) generates a net welfare gain.</li>
+</ul></li>
+</ul>
+<p><strong>Option 2: Free screening.</strong></p>
+<p>A free genetic test or health examination reveals each consumer’s type <span class="math inline">\(i\)</span> to insurers. Insurers then offer actuarially fair individual premiums <span class="math inline">\(P_i = 50i\)</span>.</p>
+<ul>
+<li>Every consumer is fully insured at their fair price. Adverse selection is completely eliminated.</li>
+<li><strong>Why would everyone take the test?</strong> The “full disclosure principle” explains: the unraveling logic works in reverse. The healthiest consumers benefit most from revealing their type (they get a low premium). As they reveal, the pool of untested consumers skews sicker, raising the premium for the untested. The next-healthiest group now also benefits from disclosure. This continues until everyone has tested, a complete “unraveling” toward full disclosure.</li>
+</ul>
+<p><strong>Which policy is better?</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Policy</th>
+<th>Insured?</th>
+<th>Redistribution?</th>
+<th>Avg. welfare</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No insurance</td>
+<td>No</td>
+<td>No</td>
+<td>Lowest</td>
+</tr>
+<tr class="even">
+<td>Free market (break-even)</td>
+<td>25%</td>
+<td>No</td>
+<td>Low</td>
+</tr>
+<tr class="odd">
+<td>Individual pricing (screening)</td>
+<td>100%</td>
+<td>No</td>
+<td>Medium</td>
+</tr>
+<tr class="even">
+<td>Mandatory pool ($25)</td>
+<td>100%</td>
+<td>Yes</td>
+<td><strong>Highest</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Surprisingly, the <strong>mandatory pool dominates screening</strong> on average welfare, even though screening eliminates adverse selection. The reason: the mandate both insures everyone <em>and</em> redistributes from low-risk to high-risk. Because utility is concave, this redistribution is welfare-enhancing in aggregate: the marginal utility of wealth is higher for the sick (who would otherwise face large losses) than for the healthy. The dollar-for-dollar transfer raises total utility.</p>
+<p>Screening achieves the insurance benefit but foregoes redistribution. The mandated pool achieves both.</p>
+<hr>
+</section>
+</section>
+<section id="part-iii-moral-hazard" class="level2">
+<h2 class="anchored" data-anchor-id="part-iii-moral-hazard">Part III: Moral Hazard</h2>
+<section id="the-basic-idea" class="level3">
+<h3 class="anchored" data-anchor-id="the-basic-idea">3.1 The Basic Idea</h3>
+<p>Adverse selection is a problem of <em>hidden types</em>: characteristics that are fixed before the contract. Moral hazard is a problem of <em>hidden actions</em>: choices the insured party makes <em>after</em> the contract is in place.</p>
+<p><strong>Core idea:</strong> When you do not bear the full cost of a bad outcome, you have less incentive to prevent it.</p>
+<ul>
+<li><em>Fully insured car:</em> You are less likely to lock it, less likely to park carefully, more willing to park in unsafe areas.</li>
+<li><em>Health insurance:</em> Insured patients visit the doctor more frequently, invest less in preventive care, and choose riskier activities.</li>
+<li><em>Bank bailout guarantee:</em> A bank that knows it will be rescued takes on riskier investments. If the bet pays off, it keeps the profit. If it fails, taxpayers bear the loss.</li>
+</ul>
+<p>In each case, the insurer (or government) can observe the <strong>outcome</strong> (car stolen, patient got sick, bank failed) but not the <strong>action</strong> (did you lock the car? exercise? manage risk carefully?). This is the <strong>hidden action</strong> problem.</p>
+</section>
+<section id="moral-hazard-in-unemployment-insurance" class="level3">
+<h3 class="anchored" data-anchor-id="moral-hazard-in-unemployment-insurance">3.2 Moral Hazard in Unemployment Insurance</h3>
+<p><strong>The setting.</strong> A worker loses their job and qualifies for unemployment insurance (UI), which pays benefit <span class="math inline">\(b\)</span> per period while unemployed. The government cannot observe whether the worker is searching hard or sitting at home. This is the key informational asymmetry.</p>
+<p><strong>Without UI:</strong> The worker bears the full cost of unemployment. Lost income is the penalty for not finding a job quickly. The worker has a strong incentive to search intensively and accept reasonable offers.</p>
+<p><strong>With UI:</strong> The cost of remaining unemployed falls from “no income” to “<span class="math inline">\(b\)</span> per period.” At the margin, the worker searches less intensively, is pickier about which offers to accept, and stays unemployed longer.</p>
+<p>The government observes only whether the worker is employed or not. It <strong>cannot observe</strong>:</p>
+<ul>
+<li>How many applications the worker sent</li>
+<li>How hard the worker prepared for interviews</li>
+<li>Whether the worker turned down a reasonable offer</li>
+<li>Whether the worker is genuinely “looking” for work</li>
+</ul>
+<p>Search effort is the hidden action. If effort were observable, the government could simply write a contract: “receive <span class="math inline">\(b\)</span> but search at intensity <span class="math inline">\(\bar{e}\)</span>.” Because effort is hidden, that contract is unenforceable, and benefits distort incentives.</p>
+</section>
+<section id="a-two-period-model" class="level3">
+<h3 class="anchored" data-anchor-id="a-two-period-model">3.3 A Two-Period Model</h3>
+<p><strong>Setup.</strong></p>
+<ul>
+<li>Period 1: Worker is unemployed, receives benefit <span class="math inline">\(b\)</span></li>
+<li>Worker chooses search effort <span class="math inline">\(e \in [0,1]\)</span>, at cost <span class="math inline">\(c(e) = \frac{1}{2}e^2\)</span></li>
+<li>Period 2: With probability <span class="math inline">\(e\)</span>, finds a job earning wage <span class="math inline">\(w\)</span>; with probability <span class="math inline">\(1-e\)</span>, remains unemployed and receives <span class="math inline">\(b\)</span></li>
+<li>The worker has utility function <span class="math inline">\(u(\cdot)\)</span> with <span class="math inline">\(u' &gt; 0\)</span>, <span class="math inline">\(u'' &lt; 0\)</span></li>
+</ul>
+<p>Worker’s consumption in each state:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>State</th>
+<th>Consumption</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Period 1</td>
+<td>Unemployed (certain)</td>
+<td><span class="math inline">\(b\)</span></td>
+</tr>
+<tr class="even">
+<td>Period 2</td>
+<td>Employed (prob <span class="math inline">\(e\)</span>)</td>
+<td><span class="math inline">\(w\)</span></td>
+</tr>
+<tr class="odd">
+<td>Period 2</td>
+<td>Unemployed (prob <span class="math inline">\(1-e\)</span>)</td>
+<td><span class="math inline">\(b\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Worker’s expected utility.</strong></p>
+<p>The worker maximizes expected utility minus effort cost: <span class="math display">\[\max_{e} \quad EU = u(b) + e \cdot u(w) + (1-e) \cdot u(b) - \frac{1}{2}e^2\]</span></p>
+<p>Collecting terms: <span class="math display">\[EU = (2 - e)\,u(b) + e\,u(w) - \frac{1}{2}e^2\]</span></p>
+<p><strong>First-order condition.</strong> Differentiating with respect to <span class="math inline">\(e\)</span> and setting equal to zero: <span class="math display">\[\frac{\partial EU}{\partial e} = -u(b) + u(w) - e = 0\]</span></p>
+<p><span class="math display">\[\boxed{e^* = u(w) - u(b)}\]</span></p>
+<p><strong>Interpretation.</strong> The worker searches until the marginal cost of effort (<span class="math inline">\(e\)</span>, i.e., the <span class="math inline">\(e\)</span>-th unit costs <span class="math inline">\(e\)</span> in utility terms given the quadratic cost function) equals the marginal benefit: the utility gain from being employed (<span class="math inline">\(u(w)\)</span>) rather than remaining unemployed (<span class="math inline">\(u(b)\)</span>).</p>
+</section>
+<section id="how-benefits-affect-effort" class="level3">
+<h3 class="anchored" data-anchor-id="how-benefits-affect-effort">3.4 How Benefits Affect Effort</h3>
+<p>From <span class="math inline">\(e^* = u(w) - u(b)\)</span>, we can directly read off how UI benefits affect search effort:</p>
+<p><span class="math display">\[\frac{de^*}{db} = -u'(b) &lt; 0\]</span></p>
+<p>Since <span class="math inline">\(u'(b) &gt; 0\)</span> (more wealth is always better), an increase in benefits <em>unambiguously reduces</em> search effort. The mechanism:</p>
+<ul>
+<li>Higher <span class="math inline">\(b\)</span> raises <span class="math inline">\(u(b)\)</span>: being unemployed is now less painful</li>
+<li>This shrinks the gap <span class="math inline">\(u(w) - u(b)\)</span>: the gain from finding a job falls</li>
+<li>So <span class="math inline">\(e^*\)</span> falls: the worker searches less</li>
+</ul>
+<p>At the extremes: - If <span class="math inline">\(b = 0\)</span>: maximum effort <span class="math inline">\(e^* = u(w) - u(0)\)</span>. With no income while unemployed, the worker has maximum incentive to find a job. - If <span class="math inline">\(b = w\)</span> (full insurance): <span class="math inline">\(e^* = u(w) - u(w) = 0\)</span>. With the same income regardless of employment status, the worker has zero incentive to search.</p>
+<p><strong>The takeaway.</strong> Full insurance (<span class="math inline">\(b = w\)</span>) completely eliminates the incentive to search. Any UI system that provides meaningful income support must accept some reduction in search effort. This is the core tension.</p>
+</section>
+<section id="the-insuranceincentives-tradeoff" class="level3">
+<h3 class="anchored" data-anchor-id="the-insuranceincentives-tradeoff">3.5 The Insurance–Incentives Tradeoff</h3>
+<p>More generous UI (<span class="math inline">\(\uparrow b\)</span>) has two opposing effects:</p>
+<p><strong>Insurance value increases</strong> (<span class="math inline">\(+\)</span>): - Smooths consumption across employment states: the worker has income in both period 2 states, not just when employed - Protects workers from income loss due to unemployment, which is partly involuntary (layoffs due to business conditions, not just worker behavior) - Particularly valuable for risk-averse workers: the utility gain from reducing income volatility can be large</p>
+<p><strong>Moral hazard cost increases</strong> (<span class="math inline">\(-\)</span>): - Reduces search effort <span class="math inline">\(e^*\)</span> - Workers stay unemployed longer on average: expected unemployment duration = <span class="math inline">\(1/e^*\)</span> (in a simple model) - Government pays more in benefits (longer spells, same benefit level) - Output is lost: the job that would have been filled quickly is filled later</p>
+<p>The <strong>optimal <span class="math inline">\(b\)</span></strong> balances these two forces. Neither extreme is optimal:</p>
+<ul>
+<li><span class="math inline">\(b = 0\)</span>: maximizes effort but leaves workers fully exposed to income risk; zero insurance value is socially suboptimal if workers are risk-averse</li>
+<li><span class="math inline">\(b = w\)</span>: provides full insurance but eliminates effort, which is also suboptimal because search output falls to zero</li>
+</ul>
+</section>
+<section id="the-governments-problem" class="level3">
+<h3 class="anchored" data-anchor-id="the-governments-problem">3.6 The Government’s Problem</h3>
+<p>The government chooses <span class="math inline">\(b\)</span> to maximize the worker’s expected welfare subject to two constraints:</p>
+<p><span class="math display">\[\max_b \quad u(b) + e^*(b)\,u(w) + (1-e^*(b))\,u(b) - \tfrac{1}{2}(e^*(b))^2\]</span></p>
+<p><strong>Incentive compatibility:</strong> The worker’s effort responds to <span class="math inline">\(b\)</span> according to <span class="math inline">\(e^* = u(w) - u(b)\)</span>. The government takes this as given; it cannot directly dictate effort.</p>
+<p><strong>Budget constraint:</strong> UI benefits must be funded, e.g., through payroll taxes on employed workers. A higher <span class="math inline">\(b\)</span> raises both the per-period payout and the expected duration of unemployment, increasing the fiscal cost.</p>
+<p>The key constraint is that the government <strong>cannot choose <span class="math inline">\(e\)</span> directly</strong>: it can only choose <span class="math inline">\(b\)</span> and let <span class="math inline">\(e\)</span> adjust through the worker’s optimization. This is why the second-best policy involves incomplete insurance.</p>
+</section>
+<section id="first-best-versus-second-best" class="level3">
+<h3 class="anchored" data-anchor-id="first-best-versus-second-best">3.7 First Best versus Second Best</h3>
+<p><strong>First best (effort observable).</strong></p>
+<p>If the government could observe and contract on effort, it would choose:</p>
+<ul>
+<li><strong>Full insurance:</strong> <span class="math inline">\(b = w\)</span>. This perfectly smooths consumption across employment states, eliminating the income risk from unemployment. A risk-averse worker strictly prefers this.</li>
+<li><strong>Mandated effort:</strong> The government also mandates the effort level that maximizes total surplus: choose <span class="math inline">\(e\)</span> to maximize <span class="math inline">\(e \cdot w - \frac{1}{2}e^2\)</span>, giving <span class="math inline">\(e^{FB} = w\)</span> (in utility units).</li>
+</ul>
+<p>Under the first best, the worker is fully insured and faces the correct incentives. Risk and incentives are <em>separable</em> because effort is contractible.</p>
+<p><strong>Second best (effort hidden).</strong></p>
+<p>Now the government can only choose <span class="math inline">\(b\)</span>, and <span class="math inline">\(e\)</span> responds through <span class="math inline">\(e^* = u(w) - u(b)\)</span>. Two things are true:</p>
+<ol type="1">
+<li>Setting <span class="math inline">\(b = w\)</span> (full insurance) implies <span class="math inline">\(e^* = 0\)</span>: no search.</li>
+<li>Setting <span class="math inline">\(b &lt; w\)</span> restores positive effort but exposes the worker to income risk.</li>
+</ol>
+<p>The second best requires <strong>incomplete insurance</strong> (<span class="math inline">\(b &lt; w\)</span>) to preserve search incentives. The worker must bear some income risk as the price of maintaining incentives. This is the <strong>cost of moral hazard</strong>: the gap between the first-best welfare level (full insurance + optimal effort) and the second-best level (partial insurance + lower-than-optimal effort) is the welfare loss created by the hidden action problem.</p>
+</section>
+<section id="moral-hazard-beyond-ui" class="level3">
+<h3 class="anchored" data-anchor-id="moral-hazard-beyond-ui">3.8 Moral Hazard Beyond UI</h3>
+<p>The same structure (insurance reduces effort, creating an insurance/incentives tradeoff) appears across many domains.</p>
+<p><strong>Health insurance.</strong> Insured patients consume more health care (more frequent doctor visits, more procedures, less prevention). Deductibles and copayments are the standard policy response: they make the patient bear part of the marginal cost, preserving at least some incentive to economize on care while still providing most of the insurance value.</p>
+<p><strong>Banking.</strong> Deposit insurance and implicit “too big to fail” guarantees protect depositors and the financial system. But they give banks an incentive to take on excessive risk: heads, the bank keeps the profit; tails, taxpayers bear the loss. Capital requirements (forcing banks to fund themselves partly with equity) are the policy response, giving banks “skin in the game.”</p>
+<p><strong>Employment contracts.</strong> In the Gibbons principal-agent model, a firm (principal) hires a worker (agent) whose effort is unobservable. The contract pays <span class="math inline">\(s + b \cdot y\)</span>, where <span class="math inline">\(y\)</span> is measurable output. Steeper incentive pay (higher <span class="math inline">\(b\)</span>) induces more effort, but also imposes risk on the worker because <span class="math inline">\(y\)</span> is stochastic. The optimal contract trades off incentive provision against risk imposition.</p>
+<hr>
+</section>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Adverse Selection</th>
+<th>Moral Hazard</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Type of problem</strong></td>
+<td>Hidden type (before contract)</td>
+<td>Hidden action (after contract)</td>
+</tr>
+<tr class="even">
+<td><strong>Example</strong></td>
+<td>Used cars, health insurance</td>
+<td>UI, car insurance, banking</td>
+</tr>
+<tr class="odd">
+<td><strong>Market failure</strong></td>
+<td>Bad types drive out good types</td>
+<td>Over-consumption of insurance/under-provision of effort</td>
+</tr>
+<tr class="even">
+<td><strong>Private fix</strong></td>
+<td>Signals, screening, reputation</td>
+<td>Deductibles, copays, incentive pay</td>
+</tr>
+<tr class="odd">
+<td><strong>Public fix</strong></td>
+<td>Mandatory participation, disclosure</td>
+<td>Time limits, monitoring, experience rating</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The core lesson of adverse selection.</strong> When sellers know quality and buyers do not, the price must reflect average quality, which drives out above-average sellers, lowering average quality further. This feedback can unravel markets. Policy works by reducing the information asymmetry or mandating participation to prevent the most severe unraveling.</p>
+<p><strong>The core lesson of moral hazard.</strong> Full insurance eliminates risk but also eliminates incentives. Any practical insurance system must leave the insured party bearing some fraction of losses to maintain incentives. The optimal policy balances the welfare gain from consumption smoothing against the welfare loss from distorted behavior.</p>
+<p><strong>Together:</strong> adverse selection determines who gets coverage; moral hazard determines how the covered party behaves. Both create a wedge between what competitive markets deliver and what a fully-informed planner could achieve.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>2026 Div Bhagia | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 License</a> |Made with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
