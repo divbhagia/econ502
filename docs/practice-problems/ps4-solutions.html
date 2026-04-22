@@ -68,9 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -454,24 +451,10 @@ window.Quarto = {
 <section id="part-d-subgame-perfect-equilibrium-sequential-game" class="level3">
 <h3 class="anchored" data-anchor-id="part-d-subgame-perfect-equilibrium-sequential-game">Part (d): Subgame Perfect Equilibrium (Sequential Game)</h3>
 <p><strong>Game tree:</strong></p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-  A((A)) --&gt;|U| BU((B))
-  A --&gt;|D| BD((B))
-  BU --&gt;|L| P1["(6, 2)"]
-  BU --&gt;|R| P2["(0, 4)"]
-  BD --&gt;|L| P3["(3, 3)"]
-  BD --&gt;|R| P4["(5, 1)"]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<!-- ```{mermaid}
+flowchart TD
+  A((A)) -->
+<p>|U| BU((B)) A –&gt;|D| BD((B)) BU –&gt;|L| P1[“(6, 2)”] BU –&gt;|R| P2[“(0, 4)”] BD –&gt;|L| P3[“(3, 3)”] BD –&gt;|R| P4[“(5, 1)”] ``` –&gt;</p>
 <p><strong>Backward induction.</strong></p>
 <p><strong>Step 1: B’s optimal responses (bottom of the tree).</strong></p>
 <ul>
@@ -509,7 +492,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>Moving first is a <strong>disadvantage for A</strong>. By committing to D, A reveals its strategy, allowing B to exploit it with L and holding A to a payoff of 3. In the simultaneous game, B faces uncertainty about A’s move, which works in A’s favor — A’s expected payoff is 3.75 &gt; 3. Commitment hurts A here because B’s best responses are “adversarial”: whichever action A commits to, B has a response that limits A’s payoff (R after U gives A zero; L after D gives A only 3). Neither commitment is beneficial for A, so revealing a move first strictly reduces A’s payoff.</p>
+<p>Moving first is a <strong>disadvantage for A</strong>. By committing to D, A reveals its strategy, allowing B to exploit it with L and holding A to a payoff of 3. In the simultaneous game, B faces uncertainty about A’s move, which works in A’s favor. A’s expected payoff is 3.75 &gt; 3. Commitment hurts A here because B’s best responses are “adversarial”: whichever action A commits to, B has a response that limits A’s payoff (R after U gives A zero; L after D gives A only 3). Neither commitment is beneficial for A, so revealing a move first strictly reduces A’s payoff.</p>
 
 
 </section>

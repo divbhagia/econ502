@@ -289,7 +289,7 @@ Verification: B's payoff from L: $2(1/2) + 3(1/2) = 1 + 1.5 = 2.5$. B's payoff f
 
 **Game tree:**
 
-```{mermaid}
+<!-- ```{mermaid}
 flowchart TD
   A((A)) -->|U| BU((B))
   A -->|D| BD((B))
@@ -297,7 +297,7 @@ flowchart TD
   BU -->|R| P2["(0, 4)"]
   BD -->|L| P3["(3, 3)"]
   BD -->|R| P4["(5, 1)"]
-```
+``` -->
 
 **Backward induction.**
 
