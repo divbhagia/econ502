@@ -245,6 +245,7 @@ What happens? It depends on what E believes I will do if entry occurs.
 ## Extensive Form for Entry Game
 
 ```{python}
+#| echo: false
 
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
