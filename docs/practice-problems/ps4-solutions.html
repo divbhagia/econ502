@@ -445,16 +445,24 @@ window.Quarto = {
 <p><strong>Mixed-strategy Nash equilibrium:</strong> A plays U with probability <span class="math inline">\(p^* = 1/2\)</span>; B plays L with probability <span class="math inline">\(q^* = 5/8\)</span>.</p>
 <p><strong>Expected payoffs.</strong></p>
 <p>Player A’s expected payoff (use either pure strategy at equilibrium, since A is indifferent): <span class="math display">\[EU_A = 6 \times \frac{5}{8} + 0 \times \frac{3}{8} = \frac{30}{8} = \frac{15}{4} = 3.75\]</span></p>
-<p>Player B’s expected payoff: <span class="math display">\[EU_B = 2 \times \frac{1}{2} + 4 \times \frac{1}{2} = 3 \quad \text{(using A's mix and either of B's strategies)}\]</span></p>
-<p>Verification: B’s payoff from L: <span class="math inline">\(2(1/2) + 3(1/2) = 1 + 1.5 = 2.5\)</span>. B’s payoff from R: <span class="math inline">\(4(1/2) + 1(1/2) = 2 + 0.5 = 2.5\)</span>. <span class="math inline">\(EU_B = 2.5\)</span>.</p>
+<p>Player B’s expected payoff: <span class="math display">\[EU_B = 2 \times \frac{1}{2} + 3 \times \frac{1}{2} = 2.5 \quad \text{(using A's mix and either of B's strategies)}\]</span></p>
 </section>
 <section id="part-d-subgame-perfect-equilibrium-sequential-game" class="level3">
 <h3 class="anchored" data-anchor-id="part-d-subgame-perfect-equilibrium-sequential-game">Part (d): Subgame Perfect Equilibrium (Sequential Game)</h3>
-<p><strong>Game tree:</strong></p>
-<!-- ```{mermaid}
-flowchart TD
-  A((A)) -->
-<p>|U| BU((B)) A –&gt;|D| BD((B)) BU –&gt;|L| P1[“(6, 2)”] BU –&gt;|R| P2[“(0, 4)”] BD –&gt;|L| P3[“(3, 3)”] BD –&gt;|R| P4[“(5, 1)”] ``` –&gt;</p>
+<div id="cell-fig-game-tree" class="cell" data-fig-height="4.5" data-fig-width="7" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div id="fig-game-tree" class="quarto-float quarto-figure quarto-figure-center anchored" height="422" width="662">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-game-tree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ps4-solutions_files/figure-html/fig-game-tree-output-1.png" id="fig-game-tree" width="662" height="422" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-game-tree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <p><strong>Backward induction.</strong></p>
 <p><strong>Step 1: B’s optimal responses (bottom of the tree).</strong></p>
 <ul>

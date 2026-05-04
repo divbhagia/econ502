@@ -281,23 +281,72 @@ Player A's expected payoff (use either pure strategy at equilibrium, since A is 
 $$EU_A = 6 \times \frac{5}{8} + 0 \times \frac{3}{8} = \frac{30}{8} = \frac{15}{4} = 3.75$$
 
 Player B's expected payoff:
-$$EU_B = 2 \times \frac{1}{2} + 4 \times \frac{1}{2} = 3 \quad \text{(using A's mix and either of B's strategies)}$$
+$$EU_B = 2 \times \frac{1}{2} + 3 \times \frac{1}{2} = 2.5 \quad \text{(using A's mix and either of B's strategies)}$$
 
-Verification: B's payoff from L: $2(1/2) + 3(1/2) = 1 + 1.5 = 2.5$. B's payoff from R: $4(1/2) + 1(1/2) = 2 + 0.5 = 2.5$. $EU_B = 2.5$.
 
 ### Part (d): Subgame Perfect Equilibrium (Sequential Game)
 
-**Game tree:**
 
-<!-- ```{mermaid}
-flowchart TD
-  A((A)) -->|U| BU((B))
-  A -->|D| BD((B))
-  BU -->|L| P1["(6, 2)"]
-  BU -->|R| P2["(0, 4)"]
-  BD -->|L| P3["(3, 3)"]
-  BD -->|R| P4["(5, 1)"]
-``` -->
+```{python}
+#| label: fig-game-tree
+#| echo: false
+#| fig-width: 7
+#| fig-height: 4.5
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, ax = plt.subplots(figsize=(7, 4.5))
+ax.set_xlim(0, 10)
+ax.set_ylim(0.5, 6)
+ax.axis('off')
+
+A  = (5.0, 5.5)
+BL = (2.5, 3.5)
+BR = (7.5, 3.5)
+UL = (1.0, 1.5)
+UR = (4.0, 1.5)
+DL = (6.0, 1.5)
+DR = (9.0, 1.5)
+
+def draw_line(ax, p1, p2):
+    ax.plot([p1[0], p2[0]], [p1[1], p2[1]], 'k-', lw=1.5, zorder=1)
+
+def label_edge(ax, p1, p2, label, left=True):
+    mx, my = (p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2
+    offset = -0.25 if left else 0.25
+    ha = 'right' if left else 'left'
+    ax.text(mx + offset, my, label, ha=ha, va='center', fontsize=10, zorder=4)
+
+def draw_node(ax, xy, label):
+    c = plt.Circle(xy, 0.3, color='white', ec='black', lw=1.8, zorder=3)
+    ax.add_patch(c)
+    ax.text(*xy, label, ha='center', va='center', fontsize=11, fontweight='bold', zorder=4)
+
+def draw_leaf(ax, xy, text):
+    ax.text(*xy, text, ha='center', va='center', fontsize=10, zorder=4,
+            bbox=dict(boxstyle='round,pad=0.25', fc='#f8f8f8', ec='#888888', lw=0.8))
+
+draw_line(ax, A, BL);  label_edge(ax, A, BL, 'U', left=True)
+draw_line(ax, A, BR);  label_edge(ax, A, BR, 'D', left=False)
+draw_line(ax, BL, UL); label_edge(ax, BL, UL, 'L', left=True)
+draw_line(ax, BL, UR); label_edge(ax, BL, UR, 'R', left=False)
+draw_line(ax, BR, DL); label_edge(ax, BR, DL, 'L', left=True)
+draw_line(ax, BR, DR); label_edge(ax, BR, DR, 'R', left=False)
+
+draw_node(ax, A, 'A')
+draw_node(ax, BL, 'B')
+draw_node(ax, BR, 'B')
+
+draw_leaf(ax, UL, '(6, 2)')
+draw_leaf(ax, UR, '(0, 4)')
+draw_leaf(ax, DL, '(3, 3)')
+draw_leaf(ax, DR, '(5, 1)')
+
+plt.tight_layout()
+plt.show()
+```
+
 
 **Backward induction.**
 
