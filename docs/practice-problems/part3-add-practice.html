@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Part 3: Market Failures Practice Problems – Advanced Microeconomics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6633c62d358394232bc599d39e38c5c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-40de7c3d014d17db877f778cb01e6f5d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Advanced Microeconomics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../content/lecture1.html"> 
+<span class="menu-text">Content</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../practice.html"> 
+<span class="menu-text">Practice</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://divbhagia.github.io/econ502/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#asymmetric-information" id="toc-asymmetric-information" class="nav-link active" data-scroll-target="#asymmetric-information">Asymmetric Information</a>
+  <ul class="collapse">
+  <li><a href="#adverse-selection-in-insurance-with-two-types" id="toc-adverse-selection-in-insurance-with-two-types" class="nav-link" data-scroll-target="#adverse-selection-in-insurance-with-two-types">1. Adverse Selection in Insurance with Two Types</a></li>
+  <li><a href="#signaling-through-education-spence-model" id="toc-signaling-through-education-spence-model" class="nav-link" data-scroll-target="#signaling-through-education-spence-model">2. Signaling Through Education (Spence Model)</a></li>
+  <li><a href="#moral-hazard-principal-agent-problem" id="toc-moral-hazard-principal-agent-problem" class="nav-link" data-scroll-target="#moral-hazard-principal-agent-problem">3. Moral Hazard: Principal-Agent Problem</a></li>
+  </ul></li>
+  <li><a href="#externalities" id="toc-externalities" class="nav-link" data-scroll-target="#externalities">Externalities</a>
+  <ul class="collapse">
+  <li><a href="#pigouvian-tax-with-heterogeneous-firms" id="toc-pigouvian-tax-with-heterogeneous-firms" class="nav-link" data-scroll-target="#pigouvian-tax-with-heterogeneous-firms">4. Pigouvian Tax with Heterogeneous Firms</a></li>
+  <li><a href="#cap-and-trade-with-heterogeneous-abatement-costs" id="toc-cap-and-trade-with-heterogeneous-abatement-costs" class="nav-link" data-scroll-target="#cap-and-trade-with-heterogeneous-abatement-costs">5. Cap-and-Trade with Heterogeneous Abatement Costs</a></li>
+  <li><a href="#coase-theorem-with-reciprocal-externalities" id="toc-coase-theorem-with-reciprocal-externalities" class="nav-link" data-scroll-target="#coase-theorem-with-reciprocal-externalities">6. Coase Theorem with Reciprocal Externalities</a></li>
+  </ul></li>
+  <li><a href="#public-goods" id="toc-public-goods" class="nav-link" data-scroll-target="#public-goods">Public Goods</a>
+  <ul class="collapse">
+  <li><a href="#public-good-provision-with-three-contributors" id="toc-public-good-provision-with-three-contributors" class="nav-link" data-scroll-target="#public-good-provision-with-three-contributors">7. Public Good Provision with Three Contributors</a></li>
+  <li><a href="#lindahl-prices" id="toc-lindahl-prices" class="nav-link" data-scroll-target="#lindahl-prices">8. Lindahl Prices</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="part3-add-practice.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Part 3: Market Failures Practice Problems</h1>
+<p class="subtitle lead">Econ 502: Advanced Microeconomics</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="asymmetric-information" class="level1">
+<h1>Asymmetric Information</h1>
+<section id="adverse-selection-in-insurance-with-two-types" class="level2">
+<h2 class="anchored" data-anchor-id="adverse-selection-in-insurance-with-two-types">1. Adverse Selection in Insurance with Two Types</h2>
+<p>A population of consumers each has wealth <span class="math inline">\(w = 100\)</span>. With probability <span class="math inline">\(p_i\)</span>, they suffer a loss of <span class="math inline">\(L = 75\)</span>. Consumers have utility <span class="math inline">\(u(z) = \ln(z)\)</span> and so are risk-averse. There are two risk types:</p>
+<ul>
+<li><strong>Low-risk</strong> consumers have <span class="math inline">\(p_L = 0.2\)</span></li>
+<li><strong>High-risk</strong> consumers have <span class="math inline">\(p_H = 0.6\)</span></li>
+</ul>
+<p>A fraction <span class="math inline">\(\lambda\)</span> of the population is high-risk. Each consumer knows their own type; the insurer cannot tell types apart. Insurance is “full insurance” at premium <span class="math inline">\(P\)</span> (the insurer pays <span class="math inline">\(L\)</span> if the loss occurs).</p>
+<ol type="a">
+<li><p>For each type <span class="math inline">\(i \in \{L, H\}\)</span>, compute the maximum premium <span class="math inline">\(P_i^{\max}\)</span> that makes the consumer just indifferent between buying full insurance and not. (This is the type’s willingness to pay.) Verify that <span class="math inline">\(P_H^{\max} &gt; P_L^{\max}\)</span>.</p></li>
+<li><p>Suppose the insurer charges the <strong>actuarially fair pooled premium</strong>: <span class="math display">\[P_{\text{pool}} = [\lambda p_H + (1-\lambda) p_L] \cdot L\]</span> For <span class="math inline">\(\lambda = 0.5\)</span>, compute <span class="math inline">\(P_{\text{pool}}\)</span>. Which types are willing to buy at this premium? Will the insurer break even?</p></li>
+<li><p>For what range of <span class="math inline">\(\lambda\)</span> does the market unravel completely (only high-risk types buy at any premium that an insurer would offer)? Explain the economic logic in words.</p></li>
+<li><p>Suppose the government mandates that everyone purchase insurance at the pooled premium <span class="math inline">\(P_{\text{pool}}\)</span>. Compare each type’s expected utility under the mandate with their expected utility without insurance. Who is better off? Who is worse off? Why might this still be a desirable policy from a social welfare perspective?</p></li>
+</ol>
+</section>
+<section id="signaling-through-education-spence-model" class="level2">
+<h2 class="anchored" data-anchor-id="signaling-through-education-spence-model">2. Signaling Through Education (Spence Model)</h2>
+<p>A labor market has two types of workers:</p>
+<ul>
+<li><strong>High-ability (H):</strong> productivity <span class="math inline">\(w_H = 100\)</span>, fraction <span class="math inline">\(\lambda\)</span> of the workforce</li>
+<li><strong>Low-ability (L):</strong> productivity <span class="math inline">\(w_L = 40\)</span>, fraction <span class="math inline">\(1-\lambda\)</span> of the workforce</li>
+</ul>
+<p>Workers can choose to obtain <span class="math inline">\(e \geq 0\)</span> years of education. Education is purely a signal — it does not raise productivity. The cost of acquiring <span class="math inline">\(e\)</span> years of education is: <span class="math display">\[c_H(e) = 5e \qquad \text{(high types)}\]</span> <span class="math display">\[c_L(e) = 15e \qquad \text{(low types)}\]</span> Firms observe a worker’s education <span class="math inline">\(e\)</span> but not their type, and pay a wage equal to expected productivity given <span class="math inline">\(e\)</span>.</p>
+<ol type="a">
+<li><p>Why is the cost of education lower for high-ability workers? What real-world feature of education does this represent?</p></li>
+<li><p><strong>Pooling equilibrium.</strong> Suppose all workers choose <span class="math inline">\(e = 0\)</span> and firms pay the average wage <span class="math inline">\(\bar{w} = \lambda w_H + (1-\lambda) w_L\)</span>. Is this an equilibrium? Under what condition on <span class="math inline">\(\lambda\)</span> would each type prefer this to revealing their type? (Take <span class="math inline">\(\lambda = 0.5\)</span> for a numerical answer.)</p></li>
+<li><p><strong>Separating equilibrium.</strong> Find a level of education <span class="math inline">\(e^*\)</span> such that high types choose <span class="math inline">\(e^*\)</span> and low types choose <span class="math inline">\(e = 0\)</span>, with firms paying <span class="math inline">\(w_H\)</span> to anyone with <span class="math inline">\(e \geq e^*\)</span> and <span class="math inline">\(w_L\)</span> to anyone with <span class="math inline">\(e &lt; e^*\)</span>. Specifically, derive the range <span class="math inline">\([e_{\min}, e_{\max}]\)</span> such that:</p>
+<ul>
+<li>Low types prefer <span class="math inline">\(e = 0\)</span> (and wage <span class="math inline">\(w_L\)</span>) to mimicking <span class="math inline">\(e^*\)</span> (and getting wage <span class="math inline">\(w_H\)</span>)</li>
+<li>High types prefer <span class="math inline">\(e^*\)</span> (and wage <span class="math inline">\(w_H\)</span>) to <span class="math inline">\(e = 0\)</span> (and getting <span class="math inline">\(w_L\)</span>)</li>
+</ul></li>
+<li><p>Compute total social welfare under the separating equilibrium of part (c) (using <span class="math inline">\(e^* = e_{\min}\)</span>) versus under symmetric information (each type works without education). Is signaling socially wasteful? Explain.</p></li>
+</ol>
+</section>
+<section id="moral-hazard-principal-agent-problem" class="level2">
+<h2 class="anchored" data-anchor-id="moral-hazard-principal-agent-problem">3. Moral Hazard: Principal-Agent Problem</h2>
+<p>A risk-neutral firm hires a worker who can choose effort <span class="math inline">\(e \in \{0, 1\}\)</span> (low or high). Output <span class="math inline">\(y\)</span> is stochastic and depends on effort:</p>
+<ul>
+<li>If <span class="math inline">\(e = 0\)</span>: <span class="math inline">\(y = 100\)</span> with probability <span class="math inline">\(0.4\)</span>, <span class="math inline">\(y = 0\)</span> with probability <span class="math inline">\(0.6\)</span></li>
+<li>If <span class="math inline">\(e = 1\)</span>: <span class="math inline">\(y = 100\)</span> with probability <span class="math inline">\(0.8\)</span>, <span class="math inline">\(y = 0\)</span> with probability <span class="math inline">\(0.2\)</span></li>
+</ul>
+<p>The worker’s utility is <span class="math inline">\(u(w) - c(e)\)</span> where <span class="math inline">\(u(w) = \sqrt{w}\)</span>, <span class="math inline">\(c(0) = 0\)</span>, <span class="math inline">\(c(1) = 2\)</span>. The worker’s outside option gives utility <span class="math inline">\(\bar{u} = 5\)</span>.</p>
+<ol type="a">
+<li><p><strong>First-best (effort observable).</strong> Suppose effort is contractible. The firm offers a fixed wage conditional on effort. What is the wage <span class="math inline">\(w_1\)</span> that induces <span class="math inline">\(e = 1\)</span> at minimum cost? What is the firm’s expected profit when it implements <span class="math inline">\(e = 1\)</span> vs.&nbsp;<span class="math inline">\(e = 0\)</span>? Which effort level does it want to implement?</p></li>
+<li><p><strong>Second-best (effort hidden).</strong> Now effort is unobservable. The firm offers a contract <span class="math inline">\((w_H, w_L)\)</span>: wage <span class="math inline">\(w_H\)</span> if output is high, <span class="math inline">\(w_L\)</span> if output is low. Write down (i) the <strong>participation constraint</strong> (worker accepts) and (ii) the <strong>incentive compatibility constraint</strong> (worker chooses <span class="math inline">\(e=1\)</span> over <span class="math inline">\(e=0\)</span>).</p></li>
+<li><p>Solve for the optimal <span class="math inline">\((w_H, w_L)\)</span> that implements <span class="math inline">\(e = 1\)</span> at minimum expected wage cost. (Hint: both constraints bind at the optimum.) Verify that <span class="math inline">\(w_H &gt; w_L\)</span> and explain why.</p></li>
+<li><p>Compare the firm’s expected wage bill under first-best and second-best. The difference is the “cost of moral hazard.” Explain intuitively why hidden effort forces the firm to expose the worker to risk.</p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="externalities" class="level1">
+<h1>Externalities</h1>
+<section id="pigouvian-tax-with-heterogeneous-firms" class="level2">
+<h2 class="anchored" data-anchor-id="pigouvian-tax-with-heterogeneous-firms">4. Pigouvian Tax with Heterogeneous Firms</h2>
+<p>Two firms produce a chemical, with pollution as a byproduct. Firm <span class="math inline">\(i\)</span>’s private marginal cost of producing <span class="math inline">\(q_i\)</span> units is: <span class="math display">\[MC_1(q_1) = 2q_1, \qquad MC_2(q_2) = 4q_2\]</span> The market price is <span class="math inline">\(P = 40\)</span> per unit. Each unit of output produces 1 unit of pollution, and each unit of pollution causes $10 of damage to a downstream community.</p>
+<ol type="a">
+<li><p>Find each firm’s privately optimal output <span class="math inline">\(q_i^{\text{priv}}\)</span> (where <span class="math inline">\(P = MC_i\)</span>). Compute total output and total pollution damage.</p></li>
+<li><p>Find the socially efficient output <span class="math inline">\(q_i^*\)</span> for each firm (where <span class="math inline">\(P = MC_i + 10\)</span>). Compute total output, total damage, and the deadweight loss from unregulated production.</p></li>
+<li><p><strong>Pigouvian tax.</strong> The regulator imposes a per-unit tax <span class="math inline">\(t = 10\)</span> on output of both firms. Show that the tax decentralizes the efficient outcome.</p></li>
+<li><p><strong>Uniform quota.</strong> Suppose instead the regulator imposes a single quota <span class="math inline">\(\bar{q}\)</span> on each firm, where total output equals the efficient total from part (b). Compute <span class="math inline">\(\bar{q}\)</span>. Does the uniform quota replicate the efficient allocation? If not, compute the welfare loss relative to the Pigouvian tax. Explain why a uniform regulation is generally inferior when firms differ.</p></li>
+</ol>
+</section>
+<section id="cap-and-trade-with-heterogeneous-abatement-costs" class="level2">
+<h2 class="anchored" data-anchor-id="cap-and-trade-with-heterogeneous-abatement-costs">5. Cap-and-Trade with Heterogeneous Abatement Costs</h2>
+<p>Two power plants currently emit a total of 200 tons of CO<span class="math inline">\(_2\)</span>. The marginal cost of abatement (reducing emissions by one ton) is: <span class="math display">\[MAC_1(a_1) = 2a_1, \qquad MAC_2(a_2) = a_2\]</span> where <span class="math inline">\(a_i\)</span> is the number of tons abated by plant <span class="math inline">\(i\)</span>. Society’s marginal damage from each ton of emissions is constant at $80.</p>
+<ol type="a">
+<li><p><strong>Efficient abatement.</strong> Find the socially efficient total abatement and the efficient allocation <span class="math inline">\((a_1^*, a_2^*)\)</span> across the two plants. (Hint: at the efficient allocation, $MAC_1 = MAC_2 = $ marginal damage.)</p></li>
+<li><p><strong>Uniform standard.</strong> Suppose the regulator requires each plant to abate the same amount such that total abatement equals the efficient total from part (a). Compute the total abatement cost. How does it compare to the efficient total abatement cost?</p></li>
+<li><p><strong>Cap-and-trade.</strong> The regulator issues a number of permits equal to total efficient emissions and distributes 100 permits to each plant. Plants can trade permits at price <span class="math inline">\(\tau\)</span>. Each plant chooses abatement to minimize <span class="math inline">\(MAC_i(a_i) \cdot a_i\)</span> plus the cost (or minus the revenue) of net permit purchases. Find the equilibrium permit price <span class="math inline">\(\tau^*\)</span> and the equilibrium abatement allocation. Verify that the market replicates the efficient allocation.</p></li>
+<li><p><strong>Initial allocation neutrality.</strong> Suppose instead the regulator gives all permits to Plant 1 (the high-cost abater). Show that the equilibrium abatement allocation is unchanged. What does change? Connect this result to the Coase theorem.</p></li>
+</ol>
+</section>
+<section id="coase-theorem-with-reciprocal-externalities" class="level2">
+<h2 class="anchored" data-anchor-id="coase-theorem-with-reciprocal-externalities">6. Coase Theorem with Reciprocal Externalities</h2>
+<p>A bakery and a doctor share a building. The bakery’s machinery generates noise. Profits depend on whether the bakery uses noisy or quiet machinery and whether the doctor’s office is soundproofed:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 36%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Doctor not soundproofed</th>
+<th style="text-align: center;">Doctor soundproofed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bakery noisy</td>
+<td style="text-align: center;"><span class="math inline">\(\pi_B = 200, \pi_D = 60\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\pi_B = 200, \pi_D = 100\)</span></td>
+</tr>
+<tr class="even">
+<td>Bakery quiet</td>
+<td style="text-align: center;"><span class="math inline">\(\pi_B = 150, \pi_D = 130\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\pi_B = 150, \pi_D = 130\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Soundproofing costs the doctor $30 (reflected above). Switching to quiet machinery costs the bakery $50 in foregone profit.</p>
+<ol type="a">
+<li><p>Compute total surplus <span class="math inline">\(\pi_B + \pi_D\)</span> for each cell. Which combination is socially efficient?</p></li>
+<li><p><strong>Right to silence.</strong> Suppose the doctor has the legal right to a quiet office. Without bargaining, what does the bakery do? With Coasian bargaining, what is the efficient outcome and what is the range of feasible payments from doctor to bakery?</p></li>
+<li><p><strong>Right to be noisy.</strong> Suppose the bakery has the legal right to make noise. Without bargaining, what does the doctor do? With Coasian bargaining, what is the efficient outcome and what is the range of feasible payments?</p></li>
+<li><p>Compare your answers in (b) and (c). What does this illustrate about the Coase theorem? Why might the assignment of property rights still matter in practice?</p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="public-goods" class="level1">
+<h1>Public Goods</h1>
+<section id="public-good-provision-with-three-contributors" class="level2">
+<h2 class="anchored" data-anchor-id="public-good-provision-with-three-contributors">7. Public Good Provision with Three Contributors</h2>
+<p>Three neighbors share a small park. Each has income <span class="math inline">\(Y_i = 60\)</span> and chooses how much to contribute <span class="math inline">\(g_i \geq 0\)</span> to park maintenance. Total park quality is <span class="math inline">\(G = g_1 + g_2 + g_3\)</span>. Each neighbor’s utility is: <span class="math display">\[U_i(x_i, G) = x_i \cdot G\]</span> where <span class="math inline">\(x_i = Y_i - g_i\)</span> is private consumption.</p>
+<ol type="a">
+<li><p>Derive each neighbor’s best response function <span class="math inline">\(g_i^*(g_{-i})\)</span>, where <span class="math inline">\(g_{-i} = \sum_{j \neq i} g_j\)</span>. By symmetry, find the Nash equilibrium contributions <span class="math inline">\(g_i^*\)</span> and total provision <span class="math inline">\(G^*\)</span>.</p></li>
+<li><p><strong>Social optimum.</strong> A planner chooses <span class="math inline">\((x_1, x_2, x_3, G)\)</span> to maximize <span class="math inline">\(\sum_i U_i\)</span> subject to <span class="math inline">\(\sum_i x_i + G = \sum_i Y_i\)</span>. Find <span class="math inline">\(G^{**}\)</span> and the equal-private-consumption allocation <span class="math inline">\(x_i^{**}\)</span>. (Hint: with utility <span class="math inline">\(x_i G\)</span>, total welfare is <span class="math inline">\(X G\)</span> where <span class="math inline">\(X = \sum x_i\)</span>.)</p></li>
+<li><p>Verify that the Nash equilibrium satisfies <span class="math inline">\(MRS_i = 1\)</span> for each <span class="math inline">\(i\)</span> but the social optimum satisfies <span class="math inline">\(\sum_i MRS_i = 1\)</span> (the <strong>Samuelson condition</strong>). Compute the ratio <span class="math inline">\(G^* / G^{**}\)</span>. As the number of contributors <span class="math inline">\(N\)</span> grows, what happens to the fraction of the efficient public good that is voluntarily provided?</p></li>
+<li><p>Suppose each contributor receives a subsidy <span class="math inline">\(s\)</span> on their contribution: a contribution of <span class="math inline">\(g_i\)</span> costs them only <span class="math inline">\((1-s) g_i\)</span>, with the government covering the rest. Find the subsidy rate <span class="math inline">\(s^*\)</span> that decentralizes the efficient public good level <span class="math inline">\(G^{**}\)</span>.</p></li>
+</ol>
+</section>
+<section id="lindahl-prices" class="level2">
+<h2 class="anchored" data-anchor-id="lindahl-prices">8. Lindahl Prices</h2>
+<p>Two consumers fund a public good <span class="math inline">\(G\)</span>. They have utility: <span class="math display">\[U_1(x_1, G) = x_1 + 10 \ln G, \qquad U_2(x_2, G) = x_2 + 6 \ln G\]</span> Each unit of <span class="math inline">\(G\)</span> costs $1 to produce (so the resource constraint is <span class="math inline">\(x_1 + x_2 + G = Y_1 + Y_2\)</span>). Both have ample income.</p>
+<ol type="a">
+<li><p><strong>Samuelson condition.</strong> Compute each consumer’s <span class="math inline">\(MRS_i = (\partial U_i/\partial G)/(\partial U_i/\partial x_i)\)</span> and find the efficient <span class="math inline">\(G^{**}\)</span>.</p></li>
+<li><p><strong>Lindahl prices.</strong> Suppose each consumer is charged a personalized price-per-unit <span class="math inline">\(\tau_i\)</span> for the public good, where <span class="math inline">\(\tau_1 + \tau_2 = 1\)</span> (the prices add up to the marginal cost of <span class="math inline">\(G\)</span>). Each consumer takes <span class="math inline">\(\tau_i\)</span> as given and chooses how much <span class="math inline">\(G\)</span> they want to “demand,” then the level of <span class="math inline">\(G\)</span> is set so both demand the same quantity. Find the Lindahl prices <span class="math inline">\((\tau_1^*, \tau_2^*)\)</span> that support the efficient <span class="math inline">\(G^{**}\)</span>.</p></li>
+<li><p>Verify that at the Lindahl prices, each consumer “demands” exactly <span class="math inline">\(G^{**}\)</span>. Why does this mechanism elicit efficient provision in theory?</p></li>
+<li><p>Why is implementing Lindahl pricing difficult in practice? What incentive do consumers have when reporting their preferences to the planner?</p></li>
+</ol>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>2026 Div Bhagia | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 License</a> |Made with <a href="https://quarto.org/">Quarto</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

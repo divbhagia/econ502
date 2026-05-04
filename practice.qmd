@@ -19,3 +19,5 @@ Here are the problem sets for the course. Please complete and submit them by the
 
 1. Practice Problems for Part I: [Competitive Markets](practice-problems/part1-add-practice.qmd) [[Solutions](practice-problems/part1-add-solutions.qmd)]
 2. Practice Problems for Part II: [Market Power](practice-problems/part2-add-practice.qmd) [[Solutions](practice-problems/part2-add-solutions.qmd)]
+3. Practice Problems for Part III: [Market Failures](practice-problems/part3-add-practice.qmd) [[Solutions](practice-problems/part3-add-solutions.qmd)]
+4. Practice Problems for Part IV: [Game Theory](practice-problems/part4-add-practice.qmd) [[Solutions](practice-problems/part4-add-solutions.qmd)]

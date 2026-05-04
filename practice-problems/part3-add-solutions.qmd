@@ -1,0 +1,311 @@
+---
+title: "Part 3: Market Failures Practice Problem Solutions"
+subtitle: "Econ 502: Advanced Microeconomics"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      file: ../assets/pset-preamble.tex
+format-links: [pdf]
+---
+
+
+## Problem 1: Adverse Selection in Insurance
+
+### Part (a): Certainty equivalent and maximum premium
+
+Without insurance, expected utility for a type-$i$ consumer is
+
+$$EU_i = (1-p_i)\sqrt{w} + p_i \sqrt{w - L} = (1-p_i)(10) + p_i(8) = 10 - 2 p_i$$
+
+The **certainty equivalent** $CE_i$ is the certain wealth that yields the same utility as the gamble:
+
+$$u(CE_i) = EU_i \;\;\Longrightarrow\;\; \sqrt{CE_i} = 10 - 2p_i \;\;\Longrightarrow\;\; CE_i = (10 - 2 p_i)^2$$
+
+Plugging in:
+
+$$CE_L = (9.6)^2 = 92.16, \qquad CE_H = (8.8)^2 = 77.44$$
+
+The consumer is indifferent between full insurance at premium $P_i^{\max}$ and going uninsured when $u(w - P_i^{\max}) = EU_i$, i.e., $w - P_i^{\max} = CE_i$:
+
+$$\boxed{P_i^{\max} = w - CE_i}$$
+
+$$P_L^{\max} = 100 - 92.16 = 7.84, \qquad P_H^{\max} = 100 - 77.44 = 22.56$$
+
+Verification: $P_H^{\max} = 22.56 > 7.84 = P_L^{\max}$. $\checkmark$
+
+Note that each willingness-to-pay exceeds the corresponding actuarially fair premium $p_i L$ ($p_L L = 7.20$, $p_H L = 21.60$). The gap is the **risk premium** — the extra amount the risk-averse consumer is willing to pay above the expected loss to avoid the gamble.
+
+
+### Part (b): Pooled premium at $\lambda = 0.5$
+
+$$P_{\text{pool}} = (0.5 \cdot 0.6 + 0.5 \cdot 0.2) \cdot 36 = 0.4 \cdot 36 = 14.40$$
+
+- **Low-risk:** $P_L^{\max} = 7.84 < 14.40$. They will **not** buy.
+- **High-risk:** $P_H^{\max} = 22.56 > 14.40$. They **will** buy.
+
+If only high-risk types buy, the insurer's expected payout per policy is $p_H \cdot L = 21.60$, but it collects only $14.40$ per policy. The insurer **loses \$7.20 per policy** and does not break even.
+
+
+### Part (c): Range of $\lambda$ for unraveling
+
+The pooled premium as a function of the high-risk share is
+
+$$P_{\text{pool}}(\lambda) = (0.4 \lambda + 0.2) \cdot 36 = 14.4 \lambda + 7.2$$
+
+Low-risk types drop out when $P_{\text{pool}}(\lambda) > P_L^{\max}$:
+
+$$14.4 \lambda + 7.2 > 7.84 \;\;\Longrightarrow\;\; \lambda > \frac{0.64}{14.4} = \frac{2}{45} \approx 0.044$$
+
+$$\boxed{\text{Market unravels for } \lambda > 2/45 \approx 4.4\%}$$
+
+**Logic.** At the pooled premium, low-risk types subsidize high-risk types. The maximum subsidy a low-risk type tolerates equals their risk premium ($P_L^{\max} - p_L L = 0.64$). As soon as the pool contains enough high-risk types to push the pooled premium above $P_L^{\max}$, low-risk consumers prefer to self-insure. Their exit raises the average risk in the pool, forcing the premium even higher — the classic adverse-selection death spiral. With only two types here, the dynamic stops once all low-risk are out and only high-risk remain (paying near $p_H L$).
+
+
+### Part (d): Compulsory insurance at $P_{\text{pool}} = 14.40$
+
+Wealth under insurance is $w - P_{\text{pool}} = 85.60$ in both states, giving utility $\sqrt{85.60} \approx 9.252$.
+
+| Type | $EU$ no insurance | $u$ with mandate | Change |
+|:---:|:---:|:---:|:---:|
+| Low-risk  | $9.600$ | $9.252$ | $-0.348$ |
+| High-risk | $8.800$ | $9.252$ | $+0.452$ |
+
+- **Low-risk are worse off** (forced to subsidize the bad pool).
+- **High-risk are better off** (get coverage at a price below their willingness to pay).
+
+The insurer collects $14.40$ per policy and pays out $0.5(0.6) + 0.5(0.2) = 0.4$ in probability $\times$ $L = 36$ on average $= 14.40$, so it **breaks even**.
+
+**Why the policy can still be desirable.** A utilitarian planner adds the changes: net gain $= -0.348 + 0.452 = +0.104$ utils per person — total welfare rises. More fundamentally, the mandate solves the adverse-selection failure: high-risk types receive coverage they could otherwise obtain only at much higher prices, while low-risk types lose only their small risk-aversion benefit. There are also equity arguments: people generally do not choose their risk type, and pooling spreads the cost of bad luck. This logic underlies, e.g., the individual mandate in the Affordable Care Act.
+
+
+---
+
+## Problem 2: Pigouvian Tax and Cap-and-Trade
+
+### Part (a): Privately optimal output
+
+Each firm equates $P$ to its private $MC$:
+
+- Firm 1: $40 = 2 q_1 \Longrightarrow q_1^{\text{priv}} = 20$
+- Firm 2: $40 = 4 q_2 \Longrightarrow q_2^{\text{priv}} = 10$
+
+$$\boxed{Q^{\text{priv}} = 30, \quad \text{damage} = 8 \cdot 30 = 240}$$
+
+
+### Part (b): Socially efficient output
+
+The planner adds the marginal external damage of $8$ to each firm's $MC$:
+
+- Firm 1: $40 = 2 q_1 + 8 \Longrightarrow q_1^{*} = 16$
+- Firm 2: $40 = 4 q_2 + 8 \Longrightarrow q_2^{*} = 8$
+
+$$\boxed{Q^{*} = 24, \quad \text{damage} = 8 \cdot 24 = 192}$$
+
+**Deadweight loss** from unregulated production. For each firm, the social $MC + d$ exceeds $P$ over the overproduced range:
+
+$$DWL_1 = \int_{16}^{20} (2q + 8 - 40) \, dq = \big[ q^2 - 32 q \big]_{16}^{20} = (-240) - (-256) = 16$$
+
+$$DWL_2 = \int_{8}^{10} (4q + 8 - 40) \, dq = \big[ 2 q^2 - 32 q \big]_{8}^{10} = (-120) - (-128) = 8$$
+
+$$\boxed{DWL = 16 + 8 = 24}$$
+
+
+### Part (c): Pigouvian tax
+
+With per-unit tax $t$, each firm now faces the maximization $\max_{q_i}\, P q_i - C_i(q_i) - t q_i$, with FOC $P - t = MC_i$. Setting $t = 8$ (the marginal external damage):
+
+- Firm 1: $32 = 2 q_1 \Longrightarrow q_1 = 16$ $\checkmark$
+- Firm 2: $32 = 4 q_2 \Longrightarrow q_2 = 8$ $\checkmark$
+
+$$\boxed{t^{*} = 8 \text{ decentralizes the efficient outcome}}$$
+
+The tax forces each firm to internalize the full social cost of the externality. The price instrument applies to both firms uniformly because the marginal damage per unit is the same.
+
+
+### Part (d): Cap-and-trade
+
+The cap is $\bar{Q} = Q^{*} = 24$ permits, with $\bar{e}_1 = \bar{e}_2 = 12$.
+
+Firm $i$ chooses $q_i$ to maximize $P q_i - C_i(q_i) - \tau (q_i - \bar{e}_i)$. The FOC gives $P = MC_i + \tau$, so each firm produces at the level where $MC_i = P - \tau$:
+
+$$q_1 = \frac{40 - \tau}{2}, \qquad q_2 = \frac{40 - \tau}{4}$$
+
+The permit market clears when total demand equals the cap, $q_1 + q_2 = 24$:
+
+$$\frac{40 - \tau}{2} + \frac{40 - \tau}{4} = \frac{3(40 - \tau)}{4} = 24 \;\;\Longrightarrow\;\; 40 - \tau = 32 \;\;\Longrightarrow\;\; \tau^{*} = 8$$
+
+Plugging back: $q_1 = 16$, $q_2 = 8$ — exactly the efficient allocation.
+
+**Trades.** Firm 1 needs 16 permits but starts with 12, so it **buys 4** from firm 2 (which holds 12 but uses only 8).
+
+**Comparison with the Pigouvian tax.** The equilibrium permit price equals the Pigouvian tax rate ($\tau^{*} = t^{*} = 8$), and the equilibrium quantities are identical. The two instruments are dual: the tax fixes the price of pollution and lets the quantity adjust; cap-and-trade fixes the quantity and lets the market price adjust. Under the certainty assumed here, they produce the same outcome.
+
+
+---
+
+## Problem 3: Coase Theorem
+
+### Part (a): Total surplus
+
+|                | Doctor not SP | Doctor SP |
+|----------------|:-------------:|:---------:|
+| Bakery noisy   | $260$         | $\boxed{300}$ |
+| Bakery quiet   | $280$         | $250$     |
+
+The efficient combination is **bakery noisy + doctor soundproofed** (total surplus $300$). Soundproofing eliminates a $\$70$ noise damage at a cost of only $\$30$, while letting the bakery keep its higher-profit noisy machinery.
+
+
+### Part (b): Doctor has the right to silence
+
+**Without bargaining.** The bakery is forced to be quiet. The doctor compares $130$ (no soundproofing) with $100$ (soundproofing) and chooses **no soundproofing**. Outcome: (quiet, no SP), with payoffs $(\pi_B, \pi_D) = (150, 130)$ and total surplus $280$.
+
+**With bargaining.** The parties move to (noisy, SP), where the doctor agrees to soundproof and the bakery pays the doctor $X$ for permission to be noisy. Joint surplus rises by $20$.
+
+- Bakery accepts if $200 - X \geq 150 \Longrightarrow X \leq 50$
+- Doctor accepts if $100 + X \geq 130 \Longrightarrow X \geq 30$
+
+$$\boxed{30 \leq X \leq 50}$$
+
+
+### Part (c): Bakery has the right to be noisy
+
+**Without bargaining.** The bakery chooses to be noisy. The doctor compares $60$ (no soundproofing) with $100$ (soundproofing) and chooses to **soundproof**. Outcome: (noisy, SP), total surplus $300$ — already efficient. **No bargaining is required.**
+
+The doctor unilaterally adopts the efficient response because the cost of soundproofing ($\$30$) is less than the noise damage avoided ($\$70$).
+
+
+### Part (d): Comparison and the Coase theorem
+
+In both regimes, the efficient outcome (noisy, SP) is reached with frictionless bargaining. **The assignment of property rights does not affect efficiency, only the distribution of payoffs:**
+
+| Regime | $\pi_B$ | $\pi_D$ |
+|---|:-:|:-:|
+| Doctor's right (bargained, $X = 30$) | $170$ | $130$ |
+| Doctor's right (bargained, $X = 50$) | $150$ | $150$ |
+| Bakery's right (no bargaining)       | $200$ | $100$ |
+
+This is the **Coase theorem**: with well-defined property rights and zero transaction costs, private bargaining yields an efficient allocation regardless of the initial assignment of rights.
+
+**Why the assignment of rights still matters in practice:**
+
+- Real bargaining has **transaction costs** (lawyers, time, search) that may exceed the gains from trade.
+- **Asymmetric information** about the parties' valuations can prevent agreement (each side may misrepresent reservation values).
+- **Wealth and credit constraints**: if the loser cannot afford to pay the winner, the inefficient status quo persists.
+- **Many parties** (multiple residents, multiple polluters) make Coasian bargaining infeasible due to free-riding and coordination costs.
+- **Distributional / equity** considerations: even if efficient, society may prefer one assignment over another.
+
+
+---
+
+## Problem 4: Public Good Provision
+
+### Part (a): Best response and Nash equilibrium
+
+Person $i$ chooses $g_i$ to maximize
+
+$$U_i = (Y_i - g_i)(g_i + g_{-i}) = (60 - g_i)(g_i + g_{-i})$$
+
+The FOC is $-(g_i + g_{-i}) + (60 - g_i) = 0$, giving
+
+$$\boxed{g_i^{*}(g_{-i}) = 30 - \frac{g_{-i}}{2}}$$
+
+In a symmetric Nash equilibrium $g_1 = g_2 = g_3 = g$ and $g_{-i} = 2g$:
+
+$$g = 30 - g \;\;\Longrightarrow\;\; g_i^{*} = 15$$
+
+$$\boxed{G^{*} = 45, \quad x_i^{*} = 45}$$
+
+
+### Part (b): Social optimum
+
+Total welfare $\sum_i x_i G = X G$, with $X = \sum_i x_i$ and the resource constraint $X + G = 180$. Substituting,
+
+$$\max_G \; G(180 - G) \;\;\Longrightarrow\;\; G^{**} = 90$$
+
+The equal allocation gives $X^{**} = 90$ and
+
+$$\boxed{x_i^{**} = 30, \quad G^{**} = 90}$$
+
+
+### Part (c): Samuelson and the free-rider gap
+
+For $U_i = x_i G$, $MRS_i = (\partial U_i/\partial G)/(\partial U_i/\partial x_i) = x_i / G$.
+
+- **Nash:** $MRS_i = 45/45 = 1$ for each $i$. Each person privately equates $MRS_i$ to the price of the public good, but $\sum_i MRS_i = 3$ — so collectively they massively under-provide.
+- **Social optimum:** $MRS_i = 30/90 = 1/3$ for each $i$, and $\sum_i MRS_i = 1$. This is the **Samuelson condition** $\sum_i MRS_i = MRT$. $\checkmark$
+
+$$\boxed{\frac{G^{*}}{G^{**}} = \frac{45}{90} = \frac{1}{2}}$$
+
+**Generalizing.** With $N$ symmetric contributors, the symmetric Nash satisfies $g_i^{*} = (60 - (N-1) g_i^{*})/2$, giving $g_i^{*} = 60/(N+1)$ and $G^{*} = 60 N/(N+1)$. The social optimum gives $G^{**} = NY/2 = 30 N$. So
+
+$$\frac{G^{*}}{G^{**}} = \frac{2}{N+1}$$
+
+As $N \to \infty$, this ratio $\to 0$. The free-rider problem becomes overwhelming as the number of contributors grows.
+
+
+### Part (d): Pigouvian-style subsidy
+
+With subsidy rate $s$, the consumer's budget is $x_i = 60 - (1-s) g_i$ and
+
+$$U_i = (60 - (1-s) g_i)(g_i + g_{-i})$$
+
+FOC: $-(1-s)(g_i + g_{-i}) + (60 - (1-s) g_i) = 0$, giving $60 = (1-s)(2 g_i + g_{-i})$.
+
+Symmetric: $60 = (1-s)\cdot 4 g \Longrightarrow g = 15/(1 - s)$ and $G = 45/(1-s)$.
+
+Setting $G = G^{**} = 90$:
+
+$$\frac{45}{1 - s} = 90 \;\;\Longrightarrow\;\; 1 - s = \frac{1}{2} \;\;\Longrightarrow\;\; \boxed{s^{*} = \frac{1}{2}}$$
+
+The government covers half the cost of each contribution, exactly internalizing the externality each contributor imposes on the other two. (More generally, for $N$ contributors, $s^{*} = (N-1)/(N+1)$.)
+
+
+---
+
+## Problem 5: Lindahl Prices
+
+### Part (a): Efficient public-good level
+
+$\partial U_i / \partial x_i = 1$ and $\partial U_i / \partial G = \alpha_i / G$ with $\alpha_1 = 10$, $\alpha_2 = 6$. So
+
+$$MRS_1 = \frac{10}{G}, \qquad MRS_2 = \frac{6}{G}$$
+
+The Samuelson condition $\sum_i MRS_i = MRT = 1$ gives
+
+$$\frac{10}{G} + \frac{6}{G} = 1 \;\;\Longrightarrow\;\; \boxed{G^{**} = 16}$$
+
+
+### Part (b): Lindahl prices
+
+Consumer $i$ takes $\tau_i$ as given and chooses $G$ to maximize
+
+$$U_i = (Y_i - \tau_i G) + \alpha_i \ln G$$
+
+FOC: $-\tau_i + \alpha_i / G = 0 \Longrightarrow G_i^{d}(\tau_i) = \alpha_i / \tau_i$.
+
+For the Lindahl mechanism to deliver $G^{**} = 16$, we need $G_i^{d}(\tau_i^{*}) = 16$ for both consumers:
+
+$$\tau_1^{*} = \frac{10}{16} = \frac{5}{8}, \qquad \tau_2^{*} = \frac{6}{16} = \frac{3}{8}$$
+
+Check: $\tau_1^{*} + \tau_2^{*} = 5/8 + 3/8 = 1 = MC$. $\checkmark$
+
+$$\boxed{\tau_1^{*} = 5/8, \quad \tau_2^{*} = 3/8}$$
+
+
+### Part (c): Verification and intuition
+
+At $\tau_1 = 5/8$: $G_1^{d} = 10 \div (5/8) = 16$. $\checkmark$
+At $\tau_2 = 3/8$: $G_2^{d} = 6 \div (3/8) = 16$. $\checkmark$
+
+Both consumers, individually, demand exactly $G^{**}$ at the Lindahl prices. The mechanism works because each consumer is charged a personalized price equal to their own marginal willingness-to-pay at the efficient quantity. Setting individual demand equal to the efficient quantity ($\alpha_i / \tau_i = G^{**}$) is equivalent to requiring $\tau_i = MRS_i$, and summing gives back the Samuelson condition $\sum_i \tau_i = \sum_i MRS_i = MC$. So a personalized-price equilibrium reproduces efficient provision.
+
+
+### Part (d): Why it is hard in practice
+
+Lindahl pricing requires the planner to know each consumer's $MRS_i$, which is **private information**. Each consumer has a strict incentive to **understate** how much they value $G$ — claiming a low MRS lowers their personalized price while still benefiting from the public good (free-riding through misreporting).
+
+This is the classic **demand-revelation problem** for public goods. Mechanisms like the Vickrey-Clarke-Groves (VCG) tax can elicit truthful reports as a dominant strategy, but only at the cost of running a budget surplus or deficit. There is no mechanism that simultaneously achieves efficiency, truth-telling in dominant strategies, and budget balance (a consequence of the Gibbard-Satterthwaite-style impossibility results for non-dictatorial mechanisms).

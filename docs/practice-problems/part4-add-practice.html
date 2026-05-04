@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lecture 10: Introduction to Game Theory – Advanced Microeconomics</title>
+<title>Part 4: Game Theory Practice Problems – Advanced Microeconomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,11 +69,40 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -99,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../content/lecture1.html" aria-current="page"> 
+    <a class="nav-link" href="../content/lecture1.html"> 
 <span class="menu-text">Content</span></a>
   </li>  
   <li class="nav-item">
@@ -117,172 +146,42 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/lecture10.html">IV. Introduction to Game Theory</a></li><li class="breadcrumb-item"><a href="../content/lecture10.html">10. Introduction to Game Theory</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">I. Competitive Markets</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. Consumer Preferences and Choice</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2. Demand Analysis and Consumer Welfare</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3. Production, Costs, and Firm Supply</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4. Competitive Market Equilibrium</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5. Welfare Analysis and Efficiency</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/part1-add-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Additional Content</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">II. Market Power</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6. Market Power in Goods Markets</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">7. Market Power in Goods Markets (cont.)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/part2-add-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Additional Content</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">III. Market Failures</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8. Asymmetric Information</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9. Externalities and Public Goods</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/part3-add-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Additional Content</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">IV. Introduction to Game Theory</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/lecture10.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">10. Introduction to Game Theory</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/part4-add-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Additional Content</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#topics" id="toc-topics" class="nav-link active" data-scroll-target="#topics">Topics</a></li>
-  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
+  <li><a href="#normal-form-games" id="toc-normal-form-games" class="nav-link active" data-scroll-target="#normal-form-games">Normal Form Games</a>
+  <ul class="collapse">
+  <li><a href="#dominant-strategies-and-nash-equilibrium" id="toc-dominant-strategies-and-nash-equilibrium" class="nav-link" data-scroll-target="#dominant-strategies-and-nash-equilibrium">1. Dominant Strategies and Nash Equilibrium</a></li>
+  <li><a href="#battle-of-the-sexes-mixed-strategies" id="toc-battle-of-the-sexes-mixed-strategies" class="nav-link" data-scroll-target="#battle-of-the-sexes-mixed-strategies">2. Battle of the Sexes (Mixed Strategies)</a></li>
+  <li><a href="#stag-hunt-risk-vs.-payoff-dominance" id="toc-stag-hunt-risk-vs.-payoff-dominance" class="nav-link" data-scroll-target="#stag-hunt-risk-vs.-payoff-dominance">3. Stag Hunt: Risk vs.&nbsp;Payoff Dominance</a></li>
+  </ul></li>
+  <li><a href="#sequential-games-and-commitment" id="toc-sequential-games-and-commitment" class="nav-link" data-scroll-target="#sequential-games-and-commitment">Sequential Games and Commitment</a>
+  <ul class="collapse">
+  <li><a href="#entry-deterrence-with-capacity-commitment" id="toc-entry-deterrence-with-capacity-commitment" class="nav-link" data-scroll-target="#entry-deterrence-with-capacity-commitment">4. Entry Deterrence with Capacity Commitment</a></li>
+  <li><a href="#ultimatum-bargaining" id="toc-ultimatum-bargaining" class="nav-link" data-scroll-target="#ultimatum-bargaining">5. Ultimatum Bargaining</a></li>
+  </ul></li>
+  <li><a href="#repeated-games" id="toc-repeated-games" class="nav-link" data-scroll-target="#repeated-games">Repeated Games</a>
+  <ul class="collapse">
+  <li><a href="#repeated-prisoners-dilemma-and-grim-trigger" id="toc-repeated-prisoners-dilemma-and-grim-trigger" class="nav-link" data-scroll-target="#repeated-prisoners-dilemma-and-grim-trigger">6. Repeated Prisoner’s Dilemma and Grim Trigger</a></li>
+  <li><a href="#trigger-strategies-in-a-cournot-duopoly" id="toc-trigger-strategies-in-a-cournot-duopoly" class="nav-link" data-scroll-target="#trigger-strategies-in-a-cournot-duopoly">7. Trigger Strategies in a Cournot Duopoly</a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="part4-add-practice.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/lecture10.html">IV. Introduction to Game Theory</a></li><li class="breadcrumb-item"><a href="../content/lecture10.html">10. Introduction to Game Theory</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lecture 10: Introduction to Game Theory</h1>
+<h1 class="title">Part 4: Game Theory Practice Problems</h1>
+<p class="subtitle lead">Econ 502: Advanced Microeconomics</p>
 </div>
 
 
@@ -299,20 +198,208 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="topics" class="level2">
-<h2 class="anchored" data-anchor-id="topics">Topics</h2>
-<p><strong>Textbook references</strong>:</p>
+<section id="normal-form-games" class="level1">
+<h1>Normal Form Games</h1>
+<section id="dominant-strategies-and-nash-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="dominant-strategies-and-nash-equilibrium">1. Dominant Strategies and Nash Equilibrium</h2>
+<p>Consider the following <span class="math inline">\(3 \times 3\)</span> simultaneous-move game. Player A is the row player, Player B is the column player.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>L</strong></th>
+<th style="text-align: center;"><strong>C</strong></th>
+<th style="text-align: center;"><strong>R</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>U</strong></td>
+<td style="text-align: center;">(4, 3)</td>
+<td style="text-align: center;">(5, 1)</td>
+<td style="text-align: center;">(6, 2)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>M</strong></td>
+<td style="text-align: center;">(2, 1)</td>
+<td style="text-align: center;">(8, 4)</td>
+<td style="text-align: center;">(3, 6)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>D</strong></td>
+<td style="text-align: center;">(3, 0)</td>
+<td style="text-align: center;">(9, 6)</td>
+<td style="text-align: center;">(2, 8)</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Recall that a strategy is <strong>strictly dominated</strong> if some other strategy yields a strictly higher payoff regardless of what the opponent does. Identify any strictly dominated strategy in this game and the strategy that dominates it.</p></li>
+<li><p>Using best-response analysis, find all pure-strategy Nash equilibria of the original game.</p></li>
+<li><p>Suppose each player believes their opponent is rational and so will not play a strictly dominated strategy. Use the dominance you found in (a) to eliminate one strategy, then re-examine the resulting smaller game. If a further strategy becomes strictly dominated, eliminate that too and continue. What outcome does this reasoning predict, and how does it relate to your answer in (b)?</p></li>
+<li><p>Strict dominance is a <em>stronger</em> requirement than Nash equilibrium: a strictly dominant-strategy equilibrium is always a Nash equilibrium, but the converse fails. Give an example of a Nash-equilibrium strategy in the game above that is <strong>not</strong> strictly dominant for the player who plays it, and explain why this does not contradict its being part of a Nash equilibrium.</p></li>
+</ol>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>The slides are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.</p>
-<p style="text-align:center;">
-<a class="btn btn-primary" href="../slides/slides10.html" target="_blank" role="button">View slides in new window</a> <a class="btn btn-primary" href="../slides/slides10.pdf" target="_blank" role="button">Download PDF</a>
-</p>
-<iframe src="../slides/slides10.html" width="100%" height="500" style="border:none;">
-</iframe>
+<section id="battle-of-the-sexes-mixed-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="battle-of-the-sexes-mixed-strategies">2. Battle of the Sexes (Mixed Strategies)</h2>
+<p>A couple is deciding where to spend the evening. Player A prefers the <strong>Opera</strong>, Player B prefers the <strong>Football</strong> game, but both would rather be together than alone.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>B: Opera</strong></th>
+<th style="text-align: center;"><strong>B: Football</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>A: Opera</strong></td>
+<td style="text-align: center;">(3, 1)</td>
+<td style="text-align: center;">(0, 0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>A: Football</strong></td>
+<td style="text-align: center;">(0, 0)</td>
+<td style="text-align: center;">(1, 3)</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Find the two pure-strategy Nash equilibria. Which player prefers each equilibrium? Why is this game called a “coordination game with conflict”?</p></li>
+<li><p>Find the mixed-strategy Nash equilibrium. Let <span class="math inline">\(p\)</span> be the probability A plays Opera and <span class="math inline">\(q\)</span> be the probability B plays Opera. Derive <span class="math inline">\(p^*\)</span> and <span class="math inline">\(q^*\)</span>.</p></li>
+<li><p>Compute each player’s expected payoff in the mixed-strategy equilibrium. How does it compare to either of the pure-strategy equilibria? Why might players prefer to coordinate on a pure equilibrium even if the choice favors the other player?</p></li>
+<li><p>Suppose A can commit (publicly and credibly) to going to the Opera before B chooses. What is the equilibrium outcome? What does this illustrate about the value of commitment?</p></li>
+</ol>
+</section>
+<section id="stag-hunt-risk-vs.-payoff-dominance" class="level2">
+<h2 class="anchored" data-anchor-id="stag-hunt-risk-vs.-payoff-dominance">3. Stag Hunt: Risk vs.&nbsp;Payoff Dominance</h2>
+<p>Two hunters can either cooperate to hunt a stag (large payoff but requires both) or hunt a hare alone (small payoff, guaranteed).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>B: Stag</strong></th>
+<th style="text-align: center;"><strong>B: Hare</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>A: Stag</strong></td>
+<td style="text-align: center;">(5, 5)</td>
+<td style="text-align: center;">(0, 4)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>A: Hare</strong></td>
+<td style="text-align: center;">(4, 0)</td>
+<td style="text-align: center;">(4, 4)</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Find all pure-strategy Nash equilibria. Show that one equilibrium is <strong>payoff-dominant</strong> (both players prefer it) and another is <strong>risk-dominant</strong> (each player’s best response if they think the opponent is equally likely to choose either action).</p></li>
+<li><p>Find the mixed-strategy Nash equilibrium. What is the probability each player puts on Stag?</p></li>
+<li><p>Suppose A believes B will choose Stag with probability <span class="math inline">\(\pi\)</span>. For what values of <span class="math inline">\(\pi\)</span> does A play Stag? Use this to discuss why coordination failure (both choosing Hare) can be a stable outcome even though both players prefer (Stag, Stag).</p></li>
+<li><p>The Stag Hunt is sometimes used as a metaphor for collective action problems (e.g., environmental treaties, vaccinations, financial crises). Pick one example and explain how the Stag Hunt structure applies.</p></li>
+</ol>
+</section>
+</section>
+<section id="sequential-games-and-commitment" class="level1">
+<h1>Sequential Games and Commitment</h1>
+<section id="entry-deterrence-with-capacity-commitment" class="level2">
+<h2 class="anchored" data-anchor-id="entry-deterrence-with-capacity-commitment">4. Entry Deterrence with Capacity Commitment</h2>
+<p>An incumbent firm (I) faces a potential entrant (E). The game has two stages:</p>
+<ol type="1">
+<li>The incumbent chooses <strong>capacity</strong> <span class="math inline">\(k \in \{\)</span> Low, High <span class="math inline">\(\}\)</span> before E moves.</li>
+<li>E observes <span class="math inline">\(k\)</span> and chooses to <strong>Enter</strong> or <strong>Stay Out</strong>. If E enters, both firms compete in the market.</li>
+</ol>
+<p>The payoffs (Entrant, Incumbent) for each combination are:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Capacity</th>
+<th style="text-align: center;">E: Stay Out</th>
+<th style="text-align: center;">E: Enter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Low</td>
+<td style="text-align: center;">(0, 12)</td>
+<td style="text-align: center;">(3, 6)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">High</td>
+<td style="text-align: center;">(0, 8)</td>
+<td style="text-align: center;">(−2, 4)</td>
+</tr>
+</tbody>
+</table>
+<p>(Building capacity is a sunk cost for the incumbent — High capacity always yields lower profit for I than Low. But High capacity also commits the incumbent to flood the market post-entry, hurting the entrant enough that E stays out.)</p>
+<ol type="a">
+<li><p>Draw the game tree (extensive form).</p></li>
+<li><p>Solve the game by backward induction. What is the subgame perfect equilibrium? What is the equilibrium outcome (capacity choice and entry decision)?</p></li>
+<li><p>Suppose the incumbent could not commit to High capacity (i.e., capacity could be changed costlessly after E’s decision). What would happen? Why does the ability to commit to High capacity benefit the incumbent?</p></li>
+<li><p>Connect this game to the concept of a <strong>non-credible threat</strong>. If the incumbent simply <em>threatened</em> aggressive post-entry competition (without building capacity), would E believe it? Explain.</p></li>
+</ol>
+</section>
+<section id="ultimatum-bargaining" class="level2">
+<h2 class="anchored" data-anchor-id="ultimatum-bargaining">5. Ultimatum Bargaining</h2>
+<p>Two players bargain over $10. Player 1 (the proposer) offers a split <span class="math inline">\((s_1, s_2)\)</span> where <span class="math inline">\(s_1 + s_2 = 10\)</span> and <span class="math inline">\(s_2 \geq 0\)</span>. Player 2 (the responder) either accepts (each gets their proposed share) or rejects (both get 0). Assume <span class="math inline">\(s_2\)</span> can take any nonnegative real value (in dollars or cents).</p>
+<ol type="a">
+<li><p>Solve the game by backward induction. What does Player 2 do when offered <span class="math inline">\(s_2 &gt; 0\)</span>? What does Player 2 do when offered <span class="math inline">\(s_2 = 0\)</span>? Assume that when indifferent, Player 2 accepts.</p></li>
+<li><p>What is Player 1’s optimal offer in the subgame perfect equilibrium? What are the equilibrium payoffs?</p></li>
+<li><p>Empirically, in laboratory ultimatum games, responders frequently reject offers below about 30% of the pie, and proposers often offer close to 50–50. How does this evidence challenge the standard prediction? Suggest one modification of the standard model that could rationalize the observed behavior.</p></li>
+<li><p>Now suppose the game has <strong>two rounds</strong>: if Player 2 rejects in round 1, Player 2 makes a counteroffer in round 2 over a pie that has shrunk to <span class="math inline">\(\delta \cdot 10\)</span> (where <span class="math inline">\(\delta \in (0,1)\)</span> is a discount factor reflecting the cost of delay). If Player 1 rejects the round-2 offer, both get 0. Solve by backward induction. How much does Player 1 offer in round 1? How does the equilibrium depend on <span class="math inline">\(\delta\)</span>?</p></li>
+</ol>
+</section>
+</section>
+<section id="repeated-games" class="level1">
+<h1>Repeated Games</h1>
+<section id="repeated-prisoners-dilemma-and-grim-trigger" class="level2">
+<h2 class="anchored" data-anchor-id="repeated-prisoners-dilemma-and-grim-trigger">6. Repeated Prisoner’s Dilemma and Grim Trigger</h2>
+<p>Two firms play the following stage game in each period:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>B: Cooperate</strong></th>
+<th style="text-align: center;"><strong>B: Defect</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>A: Cooperate</strong></td>
+<td style="text-align: center;">(4, 4)</td>
+<td style="text-align: center;">(0, 5)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>A: Defect</strong></td>
+<td style="text-align: center;">(5, 0)</td>
+<td style="text-align: center;">(1, 1)</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Confirm that (Defect, Defect) is the unique Nash equilibrium of the one-shot game.</p></li>
+<li><p>Suppose the game is repeated infinitely with discount factor <span class="math inline">\(\delta \in (0,1)\)</span>. Each player considers the <strong>grim trigger</strong> strategy: “Cooperate in period 1, and continue to cooperate as long as the opponent has always cooperated; defect forever after the first deviation.”</p>
+<p>Compute the present discounted value of (i) always cooperating and (ii) deviating in period 1 (defect once and trigger permanent defection thereafter). Find the <strong>critical discount factor</strong> <span class="math inline">\(\delta^*\)</span> above which grim trigger sustains cooperation as a subgame perfect equilibrium.</p></li>
+<li><p><strong>Finitely repeated game.</strong> Now suppose the game is repeated <span class="math inline">\(T &lt; \infty\)</span> times. Show that defection in every period is the unique subgame perfect equilibrium. (Hint: argue by backward induction starting from period <span class="math inline">\(T\)</span>.)</p></li>
+<li><p>Why does the prediction differ between the finitely and infinitely repeated games? What real-world feature do infinitely repeated games capture that finite ones do not?</p></li>
+</ol>
+</section>
+<section id="trigger-strategies-in-a-cournot-duopoly" class="level2">
+<h2 class="anchored" data-anchor-id="trigger-strategies-in-a-cournot-duopoly">7. Trigger Strategies in a Cournot Duopoly</h2>
+<p>Two firms produce a homogeneous good with inverse demand <span class="math inline">\(P = 100 - Q\)</span> where <span class="math inline">\(Q = q_1 + q_2\)</span>. Both have constant marginal cost <span class="math inline">\(c = 20\)</span>. Each period they simultaneously choose quantities, and the stage game is the standard Cournot game.</p>
+<ol type="a">
+<li><p>Find (i) the Cournot Nash quantities, price, and per-firm profit and (ii) the joint-monopoly (collusive) quantities, price, and per-firm profit (assuming firms split monopoly output equally).</p></li>
+<li><p>Suppose firms play the infinitely repeated game with discount factor <span class="math inline">\(\delta\)</span> and use the following grim-trigger strategy: produce the collusive quantity each period as long as both firms have always done so; revert to the Cournot Nash quantity forever upon any deviation.</p>
+<p>Compute the <strong>best-deviation profit</strong>: the one-period payoff if firm 1 deviates optimally, taking firm 2’s collusive output as given. Then derive the critical <span class="math inline">\(\delta^*\)</span> above which collusion is sustainable.</p></li>
+<li><p>Suppose firms suspect each other of cheating (so <span class="math inline">\(\delta\)</span> effectively falls). What does the model predict about the sustainability of collusion when firms become impatient or when the future is uncertain?</p></li>
+<li><p>Real cartels (e.g., OPEC, vitamin cartels) often break down. Identify two features of real markets that make collusion harder to sustain than the simple model predicts.</p></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -1,0 +1,385 @@
+---
+title: "Part 4: Game Theory Practice Problem Solutions"
+subtitle: "Econ 502: Advanced Microeconomics"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header:
+      file: ../assets/pset-preamble.tex
+format-links: [pdf]
+---
+
+
+## Problem 1: Dominant Strategies and Nash Equilibrium
+
+### Part (a): Strictly dominated strategy
+
+Compare each of B's columns:
+
+- L vs R: $L = (3, 1, 0)$ across rows U, M, D; $R = (2, 6, 8)$. L beats R in U but loses in M, D — neither dominates.
+- L vs C: similar, neither dominates.
+- **C vs R:** $C = (1, 4, 6)$, $R = (2, 6, 8)$. We see $1 < 2$, $4 < 6$, $6 < 8$. R yields a strictly higher payoff for B regardless of A's choice, so **C is strictly dominated by R for Player B**.
+
+(No row of A is strictly dominated. For instance, U is best when B plays L; D is best when B plays C; so neither U nor D dominates the other.)
+
+
+### Part (b): Pure-strategy Nash equilibria
+
+Best responses:
+
+- A's best response: against L, U (4); against C, D (9); against R, U (6).
+- B's best response: against U, L (3); against M, R (6); against D, R (8).
+
+Mutual best response only at $(U, L)$ — A best-responds U to L, and B best-responds L to U.
+
+$$\boxed{\text{Unique pure-strategy Nash equilibrium: } (U, L), \text{ payoffs } (4, 3)}$$
+
+
+### Part (c): Eliminating dominated strategies, then re-checking
+
+Eliminate C (strictly dominated for B). The reduced game is:
+
+|   | **L** | **R** |
+|:-:|:-----:|:-----:|
+| **U** | (4, 3) | (6, 2) |
+| **M** | (2, 1) | (3, 6) |
+| **D** | (3, 0) | (2, 8) |
+
+Now A compares rows: $U = (4, 6)$ beats $M = (2, 3)$ in both columns and $D = (3, 2)$ in both columns. So **U strictly dominates both M and D**. Eliminate M and D:
+
+|   | **L** | **R** |
+|:-:|:-----:|:-----:|
+| **U** | (4, 3) | (6, 2) |
+
+Finally B compares L (payoff 3) vs R (payoff 2): L is better. Eliminate R.
+
+The lone surviving outcome is $(U, L)$ — exactly the Nash equilibrium from part (b). The "I-know-you-are-rational" reasoning narrows the prediction down to a unique outcome by chaining together strict-dominance arguments.
+
+
+### Part (d): A Nash strategy that is not strictly dominant
+
+In the equilibrium $(U, L)$:
+
+- **U is not strictly dominant for A.** If B plays C, A's best response is D (payoff 9), not U (payoff 5). So U does not yield a strictly higher payoff against *every* strategy of B.
+- **L is not strictly dominant for B.** If A plays M, B's best response is R (payoff 6), not L (payoff 1).
+
+Yet $(U, L)$ is a Nash equilibrium because each player only needs to be a best response to the *specific* equilibrium choice of the opponent — not to every possible opponent strategy. Strict dominance demands the latter (much stronger), which is why dominant-strategy equilibria are always Nash equilibria but not vice versa.
+
+
+---
+
+## Problem 2: Battle of the Sexes (Mixed Strategies)
+
+### Part (a): Pure equilibria
+
+- $(O, O)$: A's BR to $O$ is $O$ ($3 > 0$); B's BR to $O$ is $O$ ($1 > 0$). $\checkmark$ NE.
+- $(F, F)$: by symmetry. $\checkmark$ NE.
+- $(O, F)$ and $(F, O)$: each player wants to switch.
+
+A prefers $(O, O)$ (gets 3 vs 1); B prefers $(F, F)$ (gets 3 vs 1). The game is a "coordination game with conflict" because both players want to coordinate on *some* equilibrium (avoid the $(0, 0)$ off-diagonal cells), but they disagree about which one.
+
+
+### Part (b): Mixed equilibrium
+
+Let $p = \Pr(\text{A plays O})$ and $q = \Pr(\text{B plays O})$.
+
+**A is indifferent** between O and F:
+$$EU_A(O) = 3q + 0(1-q) = 3q$$
+$$EU_A(F) = 0 \cdot q + 1(1-q) = 1 - q$$
+$$3q = 1 - q \;\;\Longrightarrow\;\; q^{*} = \tfrac{1}{4}$$
+
+**B is indifferent**:
+$$EU_B(O) = 1 \cdot p + 0(1-p) = p$$
+$$EU_B(F) = 0 \cdot p + 3(1-p) = 3 - 3p$$
+$$p = 3 - 3p \;\;\Longrightarrow\;\; p^{*} = \tfrac{3}{4}$$
+
+$$\boxed{p^{*} = 3/4, \quad q^{*} = 1/4}$$
+
+A plays her preferred activity (Opera) with high probability; B plays *his* preferred activity (Football) with high probability. Each player puts higher weight on their own favorite — a striking and counterintuitive feature of the mixed equilibrium. (Intuition: each player must mix in a way that makes the *opponent* indifferent. To make A indifferent between Opera and Football, B has to choose Opera relatively rarely.)
+
+
+### Part (c): Expected payoffs
+
+At the mixed NE, A's expected payoff is $3 q^{*} = 3 \cdot 1/4 = 3/4$. By symmetry, B's expected payoff is also $3/4$.
+
+Compare to the pure equilibria, where the worse-off player still gets 1. So **both players prefer either pure equilibrium to the mixed equilibrium**, even the one that favors their partner.
+
+The reason is coordination failure at the mixed NE. The probability of miscoordination (one chooses O, the other F) is
+
+$$p^{*} (1 - q^{*}) + (1 - p^{*}) q^{*} = \tfrac{3}{4} \cdot \tfrac{3}{4} + \tfrac{1}{4} \cdot \tfrac{1}{4} = \tfrac{10}{16} = \tfrac{5}{8}$$
+
+So 62.5% of the time the players miss each other entirely (payoff 0). Players prefer *any* coordinated equilibrium — even one that favors their partner — to the noisy mixing.
+
+
+### Part (d): Commitment by A
+
+If A can publicly and credibly commit to Opera before B chooses, B's best response is Opera (1 > 0). The outcome is $(O, O)$ with payoffs $(3, 1)$. A captures her preferred equilibrium.
+
+This illustrates the **value of commitment in coordination games with conflict**: when there are multiple equilibria, the player who can commit first selects the equilibrium that favors them. Schelling-style commitment devices (announcements, public schedules, contracts) help break ties in the proposer's favor.
+
+
+---
+
+## Problem 3: Stag Hunt
+
+### Part (a): Pure equilibria, payoff vs. risk dominance
+
+- $(S, S)$: A's BR to S is S ($5 > 4$); B symmetric. NE.
+- $(H, H)$: A's BR to H is H ($4 > 0$); B symmetric. NE.
+- $(S, H)$, $(H, S)$: not NE.
+
+Both equilibria are Pareto-rankable: $(S, S)$ gives $(5, 5)$ and $(H, H)$ gives $(4, 4)$, so **$(S, S)$ is payoff-dominant**.
+
+For risk dominance, suppose each player believes the opponent randomizes 50-50:
+
+$$EU(S) = 0.5(5) + 0.5(0) = 2.5, \qquad EU(H) = 0.5(4) + 0.5(4) = 4$$
+
+Each player prefers Hare against an uninformative belief. So **$(H, H)$ is risk-dominant**.
+
+The two equilibrium-selection criteria therefore disagree: payoff dominance favors cooperation; risk dominance favors safety.
+
+
+### Part (b): Mixed equilibrium
+
+Let $\pi$ denote the probability of Stag (symmetric mixing). For Player A to be indifferent:
+
+$$5\pi + 0(1-\pi) = 4\pi + 4(1-\pi) \;\;\Longrightarrow\;\; 5\pi = 4 \;\;\Longrightarrow\;\; \pi^{*} = 4/5$$
+
+Each plays Stag with probability $4/5$.
+
+
+### Part (c): When does A choose Stag?
+
+Given belief $\pi$ on B's Stag,
+
+$$EU_A(S) = 5\pi + 0(1-\pi) = 5\pi, \qquad EU_A(H) = 4\pi + 4(1-\pi) = 4$$
+
+A plays Stag iff $5\pi \geq 4$, i.e., $\pi \geq 4/5$.
+
+**Coordination failure.** Even though both players strictly prefer $(S, S)$ to $(H, H)$, each requires very high confidence ($\pi \geq 4/5$) that the opponent will also choose Stag. With anything less than 80% confidence, the safe Hare is the best response. Mutual confidence is fragile, and the inferior $(H, H)$ equilibrium can be a stable outcome — a classical coordination failure.
+
+
+### Part (d): Real-world example
+
+(Any one of these is a valid answer.)
+
+- **Climate treaties.** All countries gain if everyone abates emissions (Stag). A country whose partners renege loses competitiveness while still paying abatement costs (the "Stag with everyone defecting" payoff). Lacking high mutual trust, all default to weaker pledges (Hare).
+- **Vaccinations.** Herd immunity is a public good of cooperation. If a critical mass vaccinates, everyone benefits (Stag). If trust in widespread participation collapses, individuals weigh personal cost-benefit and may opt out (Hare).
+- **Bank runs.** Depositors keep money in if confident others will too (Stag). Once doubts emerge, each rushes to withdraw first to avoid being left holding nothing (Hare). The bank fails not from fundamentals but from the self-fulfilling shift to the risk-dominant equilibrium.
+
+
+---
+
+## Problem 4: Entry Deterrence
+
+### Part (a): Game tree
+
+```
+                       Incumbent
+                      /         \
+                   Low           High
+                    |              |
+                  Entrant       Entrant
+                  /     \        /     \
+              Stay     Enter  Stay   Enter
+              Out               Out
+              (0,12) (3,6)    (0,8)  (-2,4)
+```
+
+(Payoffs in (Entrant, Incumbent) order.)
+
+
+### Part (b): Backward induction and SPE
+
+**Stage 2 — entrant's choice given $k$:**
+
+- If $k = $ Low: E compares Stay Out ($0$) vs Enter ($3$). E **enters**. I gets $6$.
+- If $k = $ High: E compares Stay Out ($0$) vs Enter ($-2$). E **stays out**. I gets $8$.
+
+**Stage 1 — incumbent's choice:** I gets $6$ if Low, $8$ if High. I picks **High**.
+
+$$\boxed{\text{SPE: I plays High; E plays ``Enter if Low, Stay Out if High''. Outcome: (High, Stay Out), payoffs } (0, 8).}$$
+
+
+### Part (c): No commitment
+
+If capacity is reversible, treat the game as if E moves first and I responds:
+
+- If E enters: I picks $\max(6, 4) = 6 \to$ Low. E gets $3$.
+- If E stays out: I picks $\max(12, 8) = 12 \to$ Low. E gets $0$.
+
+E compares $3$ (enter) vs $0$ (stay out) and **enters**. I plays Low and gets $6$.
+
+So commitment yields I = 8, no commitment yields I = 6. **Commitment benefits I by $\$2$**.
+
+The reason: with capacity reversible, post-entry I would prefer the cheaper Low capacity (profit 6 > 4), so the threat of "tough" post-entry behavior is empty. The entrant correctly anticipates accommodating behavior and enters. By committing to High capacity ex ante, the incumbent makes the aggressive post-entry stance an actual choice — the threat becomes credible, and entry is deterred.
+
+
+### Part (d): Non-credible threat
+
+A bare verbal threat ("I will compete aggressively if you enter") is **not credible** because, post-entry, the incumbent's best response in this game is to switch to Low capacity (6 > 4). The entrant would correctly ignore the threat and enter.
+
+Building capacity ex ante converts a non-credible threat into a credible one by changing the incumbent's actual post-entry payoffs (sunk capacity makes producing a lot the optimal response). This is the Schelling insight: commitment devices are valuable because they tie one's hands. Words alone are cheap; sunk investments are not.
+
+
+---
+
+## Problem 5: Ultimatum Bargaining
+
+### Part (a): Player 2's response
+
+- **$s_2 > 0$:** accepting yields $s_2 > 0$, rejecting yields $0$. Accept.
+- **$s_2 = 0$:** indifferent; the convention is to accept.
+
+So Player 2 accepts any offer $s_2 \geq 0$.
+
+
+### Part (b): Player 1's offer
+
+Player 1 wants to keep as much as possible. Since any $s_2 \geq 0$ is accepted, Player 1 offers $s_2 = 0$ and keeps $s_1 = 10$.
+
+$$\boxed{\text{SPE: } (s_1, s_2) = (10, 0), \text{ payoffs } (10, 0)}$$
+
+
+### Part (c): Empirical anomaly
+
+Lab subjects routinely reject offers below ~30% of the pie, and proposers often offer close to 50–50. This contradicts the rational, self-interested SPE prediction in two ways:
+
+1. Player 2 should accept any positive amount.
+2. Player 1 should offer close to zero.
+
+**One modification that rationalizes the data: inequity aversion (Fehr & Schmidt, 1999).** Suppose Player 2's utility includes a penalty for unfair distributions:
+
+$$U_2(s_1, s_2) = s_2 - \alpha \max(s_1 - s_2, 0) - \beta \max(s_2 - s_1, 0)$$
+
+where $\alpha > \beta \geq 0$ captures sensitivity to disadvantageous inequality. With $\alpha$ large enough, Player 2 prefers to reject lopsided offers (suffering $0$ rather than tolerating a humiliating allocation). Anticipating this, Player 1 offers a more equal split.
+
+Other modifications: reciprocity / intentions-based preferences (Rabin), social-image concerns, anger / negative emotions toward unkind proposers.
+
+
+### Part (d): Two-round bargaining
+
+Solve by backward induction.
+
+**Round 2.** The pie is $\delta \cdot 10$. Player 2 makes the offer. Player 1 will accept any non-negative amount, so Player 2 offers Player 1 = 0 and keeps $10\delta$. Round-2 payoffs: $(0, 10\delta)$.
+
+**Round 1.** Player 2's continuation value of rejecting is $10\delta$. So Player 2 accepts iff $s_2 \geq 10\delta$.
+
+Player 1 offers exactly $s_2 = 10\delta$ (and keeps $s_1 = 10 - 10\delta = 10(1 - \delta)$). Player 2 accepts.
+
+$$\boxed{\text{SPE round-1 offer: } s_1 = 10(1-\delta), \; s_2 = 10\delta. \text{ Payoffs: } (10(1-\delta), 10\delta).}$$
+
+Comparative statics:
+
+- **As $\delta \to 1$ (no shrinkage / Player 2 very patient):** equal split.
+- **As $\delta \to 0$ (Player 2 very impatient):** Player 1 captures everything, just like the one-shot ultimatum game.
+
+Player 2's bargaining power comes entirely from the credible threat to reject and counter-offer. The lower $\delta$ is, the weaker that threat — and the more Player 1 can extract.
+
+
+---
+
+## Problem 6: Repeated Prisoner's Dilemma
+
+### Part (a): One-shot equilibrium
+
+For each player, Defect strictly dominates Cooperate:
+
+- If opponent C: own C → 4, own D → 5. D better.
+- If opponent D: own C → 0, own D → 1. D better.
+
+Each player's dominant strategy is D, so the unique Nash equilibrium is $(D, D)$ with payoffs $(1, 1)$. (Compare to the cooperative outcome $(4, 4)$ — the central PD inefficiency.)
+
+
+### Part (b): Critical discount factor for grim trigger
+
+**(i) PV of always cooperating:**
+$$V_C = 4 + 4\delta + 4\delta^2 + \cdots = \frac{4}{1-\delta}$$
+
+**(ii) PV of deviating today, then triggering forever:**
+$$V_D = 5 + \delta(1) + \delta^2(1) + \cdots = 5 + \frac{\delta}{1-\delta}$$
+
+Cooperation is sustainable as a subgame-perfect equilibrium iff $V_C \geq V_D$:
+
+$$\frac{4}{1-\delta} \geq 5 + \frac{\delta}{1-\delta} \;\;\Longleftrightarrow\;\; \frac{4 - \delta}{1-\delta} \geq 5 \;\;\Longleftrightarrow\;\; 4 - \delta \geq 5 - 5\delta$$
+
+$$\Longleftrightarrow\;\; 4\delta \geq 1 \;\;\Longleftrightarrow\;\; \boxed{\delta \geq \delta^{*} = 1/4}$$
+
+
+### Part (c): Finitely repeated game
+
+**Backward induction.** In period $T$ (the last period), there is no continuation payoff to lose, so the stage-game equilibrium is played: $(D, D)$.
+
+In period $T-1$, both players know $T$'s outcome will be $(D, D)$ regardless of $T-1$ actions. So $T-1$ is effectively a one-shot game, and again $(D, D)$ is played.
+
+Iterating this argument backwards, the unique subgame-perfect equilibrium is **defect in every period**.
+
+
+### Part (d): Why infinite vs. finite differs
+
+In the infinite horizon (or unknown end), there is always a "tomorrow" — punishment threats remain credible for any horizon. Future losses can outweigh today's gain from defecting, so cooperation is sustainable for $\delta \geq \delta^{*}$.
+
+The finite-horizon game has a clear last period with no future, which lets backward induction unravel cooperation all the way to period 1.
+
+Real-world ongoing relationships (firm-to-firm, country-to-country, employer-employee) typically have no clear endpoint. Repeated games with random termination, infinite horizons, or reputational concerns are better models. The take-away is that **cooperation depends on patience and on the perceived continuation of the relationship**.
+
+
+---
+
+## Problem 7: Trigger Strategies in a Cournot Duopoly
+
+### Part (a): Stage-game outcomes
+
+**(i) Cournot Nash.** Each firm chooses $q_i$ to maximize $(100 - q_1 - q_2 - 20) q_i = (80 - q_1 - q_2) q_i$. FOC: $80 - 2 q_i - q_{-i} = 0$, giving best response $q_i = 40 - q_{-i}/2$.
+
+Symmetric equilibrium $q_i = q$:
+$$q = 40 - q/2 \;\;\Longrightarrow\;\; q^{C} = 80/3 \approx 26.67$$
+$$Q^{C} = 160/3, \quad P^{C} = 100 - 160/3 = 140/3 \approx 46.67$$
+$$\pi^{C} = (P^C - 20) q^C = \frac{80}{3} \cdot \frac{80}{3} = \frac{6400}{9} \approx 711.11 \text{ per firm}$$
+
+**(ii) Joint monopoly.** Total profit $(80 - Q) Q$ is maximized at $Q^M = 40$ with $P^M = 60$. Splitting equally,
+$$q^{M} = 20, \qquad \pi^{M} = (60 - 20)(20) = 800 \text{ per firm}$$
+
+
+### Part (b): Critical $\delta$ for collusion
+
+**Best deviation.** Given firm 2 plays $q_2 = q^M = 20$, firm 1 maximizes $(80 - q_1 - 20) q_1 = (60 - q_1) q_1$. FOC: $q_1^{D} = 30$, with $P = 100 - 30 - 20 = 50$ and
+
+$$\pi^{D} = (50 - 20)(30) = 900$$
+
+**Cooperation requires:**
+$$\frac{\pi^M}{1 - \delta} \geq \pi^D + \frac{\delta \, \pi^C}{1 - \delta}$$
+
+$$\frac{800}{1 - \delta} \geq 900 + \frac{\delta \cdot 6400/9}{1 - \delta}$$
+
+Multiply both sides by $9(1 - \delta)$:
+
+$$7{,}200 \geq 8{,}100 (1 - \delta) + 6{,}400 \delta = 8{,}100 - 1{,}700 \delta$$
+
+$$1{,}700 \delta \geq 900 \;\;\Longrightarrow\;\; \boxed{\delta^{*} = 9/17 \approx 0.529}$$
+
+Above this threshold, grim trigger sustains the collusive outcome as a subgame-perfect equilibrium.
+
+
+### Part (c): Falling effective $\delta$
+
+If firms become less patient (impatience or higher risk that the relationship ends), the present value of future punishment shrinks and the one-period gain from cheating dominates. Below $\delta^{*}$, no grim-trigger strategy can sustain collusion: collusion collapses and the market reverts to the Cournot Nash quantities.
+
+The same logic applies to suspicion of cheating. If a firm believes its rival is *likely* to defect (effective $\delta$ falls because future cooperation is unreliable), the gains from preemptive defection outweigh the diminished cooperative continuation value. Mutual suspicion can be self-fulfilling.
+
+
+### Part (d): Why real cartels often break down
+
+Several real-world features make collusion harder to sustain than the simple model predicts:
+
+- **Imperfect monitoring.** Firms cannot perfectly observe each other's prices, quantities, or sales. Demand shocks make it difficult to distinguish a market downturn from a rival's defection — punishments may be triggered by mistake or postponed when they shouldn't be (Green-Porter).
+- **Many firms / heterogeneity.** More parties, asymmetric costs, or differentiated products complicate agreement on the "right" collusive price and create different incentives to defect.
+- **Entry threats.** New entrants undercut cartel prices and force renegotiation. Cartels need significant entry barriers to survive long-term.
+- **Antitrust enforcement.** Explicit collusion is illegal in most jurisdictions; leniency programs reward whistleblowers, destabilizing cartels from within.
+- **Innovation and quality competition.** Even when prices are fixed, firms can compete via product features, marketing, or service quality — a covert form of defection that's hard to punish.
+- **Demand fluctuations.** Sustaining the same collusive quantity through booms and busts requires constant re-negotiation; price wars often break out in slumps.
+
+Real cartels (OPEC, the lysine cartel, the vitamin cartel) display all of these tensions: short periods of effective coordination interrupted by rivalry, cheating, or external shocks.
