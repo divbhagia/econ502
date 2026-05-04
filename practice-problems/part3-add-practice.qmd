@@ -32,8 +32,6 @@ c) For what range of $\lambda$ does the market unravel (low-risk types drop out,
 
 d) Suppose the government mandates that everyone purchase insurance at the pooled premium $P_{\text{pool}}$ with $\lambda = 0.5$. Compare each type's expected utility under the mandate with their expected utility without insurance. Who is better off? Who is worse off? Why might this still be a desirable policy from a social welfare perspective?
 
----
-
 
 ## 2. Pigouvian Tax and Cap-and-Trade with Heterogeneous Firms
 
@@ -67,10 +65,6 @@ b) **Right to silence.** Suppose the doctor has the legal right to a quiet offic
 c) **Right to be noisy.** Suppose the bakery has the legal right to make noise. Without bargaining, what does the doctor do? Is bargaining required to reach the efficient outcome?
 
 d) Compare your answers in (b) and (c). What does this illustrate about the Coase theorem? Why might the assignment of property rights still matter in practice?
-
----
-
-# Public Goods
 
 ## 4. Public Good Provision with Three Contributors
 
