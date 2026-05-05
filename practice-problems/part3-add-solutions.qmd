@@ -37,7 +37,7 @@ $$P_L^{\max} = 100 - 92.16 = 7.84, \qquad P_H^{\max} = 100 - 77.44 = 22.56$$
 
 Verification: $P_H^{\max} = 22.56 > 7.84 = P_L^{\max}$. $\checkmark$
 
-Note that each willingness-to-pay exceeds the corresponding actuarially fair premium $p_i L$ ($p_L L = 7.20$, $p_H L = 21.60$). The gap is the **risk premium** — the extra amount the risk-averse consumer is willing to pay above the expected loss to avoid the gamble.
+Note that each willingness-to-pay exceeds the corresponding actuarially fair premium $p_i L$ ($p_L L = 7.20$, $p_H L = 21.60$). The gap is the **risk premium** - the extra amount the risk-averse consumer is willing to pay above the expected loss to avoid the gamble.
 
 
 ### Part (b): Pooled premium at $\lambda = 0.5$
@@ -62,7 +62,7 @@ $$14.4 \lambda + 7.2 > 7.84 \;\;\Longrightarrow\;\; \lambda > \frac{0.64}{14.4} 
 
 $$\boxed{\text{Market unravels for } \lambda > 2/45 \approx 4.4\%}$$
 
-**Logic.** At the pooled premium, low-risk types subsidize high-risk types. The maximum subsidy a low-risk type tolerates equals their risk premium ($P_L^{\max} - p_L L = 0.64$). As soon as the pool contains enough high-risk types to push the pooled premium above $P_L^{\max}$, low-risk consumers prefer to self-insure. Their exit raises the average risk in the pool, forcing the premium even higher — the classic adverse-selection death spiral. With only two types here, the dynamic stops once all low-risk are out and only high-risk remain (paying near $p_H L$).
+**Logic.** At the pooled premium, low-risk types subsidize high-risk types. The maximum subsidy a low-risk type tolerates equals their risk premium ($P_L^{\max} - p_L L = 0.64$). As soon as the pool contains enough high-risk types to push the pooled premium above $P_L^{\max}$, low-risk consumers prefer to self-insure. Their exit raises the average risk in the pool, forcing the premium even higher - the classic adverse-selection death spiral. With only two types here, the dynamic stops once all low-risk are out and only high-risk remain (paying near $p_H L$).
 
 
 ### Part (d): Compulsory insurance at $P_{\text{pool}} = 14.40$
@@ -79,70 +79,96 @@ Wealth under insurance is $w - P_{\text{pool}} = 85.60$ in both states, giving u
 
 The insurer collects $14.40$ per policy and pays out $0.5(0.6) + 0.5(0.2) = 0.4$ in probability $\times$ $L = 36$ on average $= 14.40$, so it **breaks even**.
 
-**Why the policy can still be desirable.** A utilitarian planner adds the changes: net gain $= -0.348 + 0.452 = +0.104$ utils per person — total welfare rises. More fundamentally, the mandate solves the adverse-selection failure: high-risk types receive coverage they could otherwise obtain only at much higher prices, while low-risk types lose only their small risk-aversion benefit. There are also equity arguments: people generally do not choose their risk type, and pooling spreads the cost of bad luck. This logic underlies, e.g., the individual mandate in the Affordable Care Act.
+**Why the policy can still be desirable.** A utilitarian planner adds the changes: net gain $= -0.348 + 0.452 = +0.104$ utils per person - total welfare rises. More fundamentally, the mandate solves the adverse-selection failure: high-risk types receive coverage they could otherwise obtain only at much higher prices, while low-risk types lose only their small risk-aversion benefit. There are also equity arguments: people generally do not choose their risk type, and pooling spreads the cost of bad luck. This logic underlies, e.g., the individual mandate in the Affordable Care Act.
 
 
 ---
 
 ## Problem 2: Pigouvian Tax and Cap-and-Trade
 
-### Part (a): Privately optimal output
+### Part (a): Unregulated equilibrium
 
-Each firm equates $P$ to its private $MC$:
+Each plant ignores pollution damage and maximizes $y_i (P - c) = 2 y_i$ subject to $y_i \leq 250$. The per-gallon profit is positive, so each plant produces at capacity:
 
-- Firm 1: $40 = 2 q_1 \Longrightarrow q_1^{\text{priv}} = 20$
-- Firm 2: $40 = 4 q_2 \Longrightarrow q_2^{\text{priv}} = 10$
+$$y_1 = y_2 = 250$$
 
-$$\boxed{Q^{\text{priv}} = 30, \quad \text{damage} = 8 \cdot 30 = 240}$$
+Total smog: $s_1 + s_2 = 250^2 + \tfrac{1}{2}(250^2) = 62{,}500 + 31{,}250 = 93{,}750$ cubic feet.
+
+$$\boxed{\text{Total damage} = 0.01 \times 93{,}750 = \$937.50}$$
 
 
-### Part (b): Socially efficient output
+### Part (b): Socially efficient outcome
 
-The planner adds the marginal external damage of $8$ to each firm's $MC$:
+The planner internalizes the damage. Each plant's social objective is
 
-- Firm 1: $40 = 2 q_1 + 8 \Longrightarrow q_1^{*} = 16$
-- Firm 2: $40 = 4 q_2 + 8 \Longrightarrow q_2^{*} = 8$
+$$\max_{y_i} \; (P - c) y_i - 0.01 \cdot s_i(y_i)$$
 
-$$\boxed{Q^{*} = 24, \quad \text{damage} = 8 \cdot 24 = 192}$$
+**Plant 1:** $\max\, 2 y_1 - 0.01 y_1^2$. FOC: $2 = 0.02 y_1 \Longrightarrow y_1^{*} = 100$.
 
-**Deadweight loss** from unregulated production. For each firm, the social $MC + d$ exceeds $P$ over the overproduced range:
+**Plant 2:** $\max\, 2 y_2 - 0.005 y_2^2$. FOC: $2 = 0.01 y_2 \Longrightarrow y_2^{*} = 200$.
 
-$$DWL_1 = \int_{16}^{20} (2q + 8 - 40) \, dq = \big[ q^2 - 32 q \big]_{16}^{20} = (-240) - (-256) = 16$$
+Both interior (under capacity 250). The dirtier plant (Plant 1) is cut back more - exactly the asymmetric reallocation that command-and-control with a uniform cap would miss.
 
-$$DWL_2 = \int_{8}^{10} (4q + 8 - 40) \, dq = \big[ 2 q^2 - 32 q \big]_{8}^{10} = (-120) - (-128) = 8$$
+Total smog at the efficient outcome:
+$$s_1^{*} + s_2^{*} = 100^2 + \tfrac{1}{2}(200^2) = 10{,}000 + 20{,}000 = 30{,}000 \text{ cubic feet}$$
 
-$$\boxed{DWL = 16 + 8 = 24}$$
+$$\boxed{y_1^{*} = 100, \;\; y_2^{*} = 200, \;\; \text{total smog} = 30{,}000}$$
 
 
 ### Part (c): Pigouvian tax
 
-With per-unit tax $t$, each firm now faces the maximization $\max_{q_i}\, P q_i - C_i(q_i) - t q_i$, with FOC $P - t = MC_i$. Setting $t = 8$ (the marginal external damage):
+With tax $t = 0.01$ per cubic foot of smog, each plant now solves
 
-- Firm 1: $32 = 2 q_1 \Longrightarrow q_1 = 16$ $\checkmark$
-- Firm 2: $32 = 4 q_2 \Longrightarrow q_2 = 8$ $\checkmark$
+$$\max_{y_i} \; (P - c) y_i - t \cdot s_i(y_i)$$
 
-$$\boxed{t^{*} = 8 \text{ decentralizes the efficient outcome}}$$
+This is identical to the planner's problem in part (b), so each plant chooses the efficient output $y_1 = 100$, $y_2 = 200$. $\checkmark$
 
-The tax forces each firm to internalize the full social cost of the externality. The price instrument applies to both firms uniformly because the marginal damage per unit is the same.
+Total tax revenue: $t \times \text{total smog} = 0.01 \times 30{,}000 = \$300$.
+
+The tax decentralizes the efficient outcome with minimal information: the regulator only needs to know the marginal damage of smog, not each plant's pollution function.
 
 
 ### Part (d): Cap-and-trade
 
-The cap is $\bar{Q} = Q^{*} = 24$ permits, with $\bar{e}_1 = \bar{e}_2 = 12$.
+The regulator issues $\bar{S} = 30{,}000$ permits. Plant $i$ holds initial allocation $e_i$ (with $e_1 + e_2 = 30{,}000$) and faces market permit price $\tau$. Each plant's profit is
 
-Firm $i$ chooses $q_i$ to maximize $P q_i - C_i(q_i) - \tau (q_i - \bar{e}_i)$. The FOC gives $P = MC_i + \tau$, so each firm produces at the level where $MC_i = P - \tau$:
+$$\pi_i = (P - c) y_i - \tau \big( s_i(y_i) - e_i \big)$$
 
-$$q_1 = \frac{40 - \tau}{2}, \qquad q_2 = \frac{40 - \tau}{4}$$
+(the second term is the cost of using $s_i$ permits on top of its endowment $e_i$ - negative if the plant ends up a seller). The FOC is the same as under the tax: $P - c = \tau \cdot s_i^{\prime}(y_i)$, so
 
-The permit market clears when total demand equals the cap, $q_1 + q_2 = 24$:
+$$2 = 2 \tau y_1 \Longrightarrow y_1 = \frac{1}{\tau}, \qquad 2 = \tau y_2 \Longrightarrow y_2 = \frac{2}{\tau}$$
 
-$$\frac{40 - \tau}{2} + \frac{40 - \tau}{4} = \frac{3(40 - \tau)}{4} = 24 \;\;\Longrightarrow\;\; 40 - \tau = 32 \;\;\Longrightarrow\;\; \tau^{*} = 8$$
+**Market clearing.** Total permit demand equals supply:
 
-Plugging back: $q_1 = 16$, $q_2 = 8$ — exactly the efficient allocation.
+$$y_1^2 + \tfrac{1}{2} y_2^2 = \frac{1}{\tau^2} + \frac{2}{\tau^2} = \frac{3}{\tau^2} = 30{,}000$$
 
-**Trades.** Firm 1 needs 16 permits but starts with 12, so it **buys 4** from firm 2 (which holds 12 but uses only 8).
+$$\tau^{*2} = \frac{1}{10{,}000} \;\;\Longrightarrow\;\; \tau^{*} = \$0.01$$
 
-**Comparison with the Pigouvian tax.** The equilibrium permit price equals the Pigouvian tax rate ($\tau^{*} = t^{*} = 8$), and the equilibrium quantities are identical. The two instruments are dual: the tax fixes the price of pollution and lets the quantity adjust; cap-and-trade fixes the quantity and lets the market price adjust. Under the certainty assumed here, they produce the same outcome.
+Plugging in: $y_1 = 100$, $y_2 = 200$ - same as the efficient allocation, and $\tau^{*}$ equals the Pigouvian tax rate.
+
+**(i) All permits to Plant 1 ($e_1 = 30{,}000$, $e_2 = 0$).**
+
+- Plant 1 uses $s_1 = 100^2 = 10{,}000$ permits and **sells the remaining 20{,}000 to Plant 2** at $\tau = 0.01$.
+- Plant 1 profit: $\pi_1 = 100(2) - 0.01(10{,}000) + 0.01(30{,}000) = 200 - 100 + 300 = \$400$.
+- Plant 2 profit: $\pi_2 = 200(2) - 0.01(20{,}000) + 0 = 400 - 200 = \$200$.
+
+**(ii) All permits to Plant 2 ($e_1 = 0$, $e_2 = 30{,}000$).**
+
+The first-order conditions and market-clearing equation are unchanged, so $\tau^{*} = 0.01$ and $y_1 = 100$, $y_2 = 200$ as before.
+
+What changes is the trade direction and profits:
+
+- Plant 2 keeps 20{,}000 permits for its own use and **sells 10{,}000 to Plant 1**.
+- Plant 1 profit: $\pi_1 = 200 - 100 + 0 = \$100$.
+- Plant 2 profit: $\pi_2 = 400 - 200 + 300 = \$500$.
+
+Both plants produce the efficient quantities - only the distribution of profits shifts (totals are $\$600$ in both cases, redistributed by the permit revenue).
+
+**(iii) Connection to the Coase theorem.**
+
+With well-defined property rights (permits) and frictionless trade, the **efficient allocation arises regardless of who initially holds the rights**. The initial allocation only redistributes surplus; it has no effect on which plant pollutes how much. The regulator does not need to know plants' cost or pollution functions - the market reveals them through trading.
+
+The price-based (Pigouvian tax) and quantity-based (cap-and-trade) instruments are dual: in this stylized environment, $\tau^{*} = t^{*}$ and the same outputs arise. Cap-and-trade has the additional virtue of fixing the *total* quantity of pollution (useful when the regulator cares about an absolute pollution ceiling), while the Pigouvian tax fixes the *price* of pollution (useful when there is uncertainty about quantities).
 
 
 ---
@@ -173,7 +199,7 @@ $$\boxed{30 \leq X \leq 50}$$
 
 ### Part (c): Bakery has the right to be noisy
 
-**Without bargaining.** The bakery chooses to be noisy. The doctor compares $60$ (no soundproofing) with $100$ (soundproofing) and chooses to **soundproof**. Outcome: (noisy, SP), total surplus $300$ — already efficient. **No bargaining is required.**
+**Without bargaining.** The bakery chooses to be noisy. The doctor compares $60$ (no soundproofing) with $100$ (soundproofing) and chooses to **soundproof**. Outcome: (noisy, SP), total surplus $300$ - already efficient. **No bargaining is required.**
 
 The doctor unilaterally adopts the efficient response because the cost of soundproofing ($\$30$) is less than the noise damage avoided ($\$70$).
 
@@ -235,8 +261,8 @@ $$\boxed{x_i^{**} = 30, \quad G^{**} = 90}$$
 
 For $U_i = x_i G$, $MRS_i = (\partial U_i/\partial G)/(\partial U_i/\partial x_i) = x_i / G$.
 
-- **Nash:** $MRS_i = 45/45 = 1$ for each $i$. Each person privately equates $MRS_i$ to the price of the public good, but $\sum_i MRS_i = 3$ — so collectively they massively under-provide.
-- **Social optimum:** $MRS_i = 30/90 = 1/3$ for each $i$, and $\sum_i MRS_i = 1$. This is the **Samuelson condition** $\sum_i MRS_i = MRT$. $\checkmark$
+- **Nash:** $MRS_i = 45/45 = 1$ for each $i$. Each person privately equates $MRS_i$ to the price of the public good, but $\sum_i MRS_i = 3$ - so collectively they massively under-provide.
+- **Social optimum:** $MRS_i = 30/90 = 1/3$ for each $i$, and $\sum_i MRS_i = 1$. This is the **Samuelson condition** $\sum_i MRS_i = 1$ (the relative price of the public good in terms of the private good). $\checkmark$
 
 $$\boxed{\frac{G^{*}}{G^{**}} = \frac{45}{90} = \frac{1}{2}}$$
 
@@ -262,50 +288,3 @@ Setting $G = G^{**} = 90$:
 $$\frac{45}{1 - s} = 90 \;\;\Longrightarrow\;\; 1 - s = \frac{1}{2} \;\;\Longrightarrow\;\; \boxed{s^{*} = \frac{1}{2}}$$
 
 The government covers half the cost of each contribution, exactly internalizing the externality each contributor imposes on the other two. (More generally, for $N$ contributors, $s^{*} = (N-1)/(N+1)$.)
-
-
----
-
-## Problem 5: Lindahl Prices
-
-### Part (a): Efficient public-good level
-
-$\partial U_i / \partial x_i = 1$ and $\partial U_i / \partial G = \alpha_i / G$ with $\alpha_1 = 10$, $\alpha_2 = 6$. So
-
-$$MRS_1 = \frac{10}{G}, \qquad MRS_2 = \frac{6}{G}$$
-
-The Samuelson condition $\sum_i MRS_i = MRT = 1$ gives
-
-$$\frac{10}{G} + \frac{6}{G} = 1 \;\;\Longrightarrow\;\; \boxed{G^{**} = 16}$$
-
-
-### Part (b): Lindahl prices
-
-Consumer $i$ takes $\tau_i$ as given and chooses $G$ to maximize
-
-$$U_i = (Y_i - \tau_i G) + \alpha_i \ln G$$
-
-FOC: $-\tau_i + \alpha_i / G = 0 \Longrightarrow G_i^{d}(\tau_i) = \alpha_i / \tau_i$.
-
-For the Lindahl mechanism to deliver $G^{**} = 16$, we need $G_i^{d}(\tau_i^{*}) = 16$ for both consumers:
-
-$$\tau_1^{*} = \frac{10}{16} = \frac{5}{8}, \qquad \tau_2^{*} = \frac{6}{16} = \frac{3}{8}$$
-
-Check: $\tau_1^{*} + \tau_2^{*} = 5/8 + 3/8 = 1 = MC$. $\checkmark$
-
-$$\boxed{\tau_1^{*} = 5/8, \quad \tau_2^{*} = 3/8}$$
-
-
-### Part (c): Verification and intuition
-
-At $\tau_1 = 5/8$: $G_1^{d} = 10 \div (5/8) = 16$. $\checkmark$
-At $\tau_2 = 3/8$: $G_2^{d} = 6 \div (3/8) = 16$. $\checkmark$
-
-Both consumers, individually, demand exactly $G^{**}$ at the Lindahl prices. The mechanism works because each consumer is charged a personalized price equal to their own marginal willingness-to-pay at the efficient quantity. Setting individual demand equal to the efficient quantity ($\alpha_i / \tau_i = G^{**}$) is equivalent to requiring $\tau_i = MRS_i$, and summing gives back the Samuelson condition $\sum_i \tau_i = \sum_i MRS_i = MC$. So a personalized-price equilibrium reproduces efficient provision.
-
-
-### Part (d): Why it is hard in practice
-
-Lindahl pricing requires the planner to know each consumer's $MRS_i$, which is **private information**. Each consumer has a strict incentive to **understate** how much they value $G$ — claiming a low MRS lowers their personalized price while still benefiting from the public good (free-riding through misreporting).
-
-This is the classic **demand-revelation problem** for public goods. Mechanisms like the Vickrey-Clarke-Groves (VCG) tax can elicit truthful reports as a dominant strategy, but only at the cost of running a budget surplus or deficit. There is no mechanism that simultaneously achieves efficiency, truth-telling in dominant strategies, and budget balance (a consequence of the Gibbard-Satterthwaite-style impossibility results for non-dictatorial mechanisms).

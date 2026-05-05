@@ -33,19 +33,25 @@ c) For what range of $\lambda$ does the market unravel (low-risk types drop out,
 d) Suppose the government mandates that everyone purchase insurance at the pooled premium $P_{\text{pool}}$ with $\lambda = 0.5$. Compare each type's expected utility under the mandate with their expected utility without insurance. Who is better off? Who is worse off? Why might this still be a desirable policy from a social welfare perspective?
 
 
-## 2. Pigouvian Tax and Cap-and-Trade with Heterogeneous Firms
+## 2. Pigouvian Tax and Cap-and-Trade
 
-Two firms produce a chemical, with pollution as a byproduct. Firm $i$'s private marginal cost of producing $q_i$ units is:
-$$MC_1(q_1) = 2q_1, \qquad MC_2(q_2) = 4q_2$$
-The market price is $P = 40$ per unit. Each unit of output produces 1 unit of pollution, and each unit of pollution causes \$8 of damage to a downstream community.
+Two refineries produce fuel and emit smog as a byproduct. The market price of fuel is $P = \$3$ per gallon, and each plant uses $c = \$1$ in raw inputs per gallon. The two plants differ in pollution intensity:
+$$s_1(y_1) = y_1^2, \qquad s_2(y_2) = \tfrac{1}{2} y_2^2$$
+where $y_i$ is gallons of fuel and $s_i$ is cubic feet of smog. Each cubic foot of smog causes \$0.01 of environmental damage. Each plant's production capacity is $\bar{y} = 250$ gallons.
 
-a) Find each firm's privately optimal output $q_i^{\text{priv}}$ (where $P = MC_i$). Compute total output and total pollution damage.
+a) **Unregulated equilibrium.** Find each plant's privately optimal output (ignoring pollution damage). Compute total smog and total damage.
 
-b) Find the socially efficient output $q_i^{*}$ for each firm (where $P = MC_i + 8$). Compute total output, total damage, and the deadweight loss from unregulated production.
+b) **Socially efficient outcome.** A planner internalizes the pollution damage. Find the efficient output of each plant. Compute total smog at the efficient outcome.
 
-c) **Pigouvian tax.** The regulator imposes a per-unit tax $t$ on output of both firms. Find the tax rate that decentralizes the efficient outcome and verify the equilibrium quantities.
+c) **Pigouvian tax.** Show that a per-unit tax $t = \$0.01$ on smog (paid by each plant on each cubic foot it emits) decentralizes the efficient outcome. What is total tax revenue?
 
-d) **Cap-and-trade.** The regulator instead issues permits equal to the efficient total emissions from part (b) and distributes them equally between the two firms. Plants can trade permits at price $\tau$. Each firm chooses $q_i$ to maximize $P q_i - C_i(q_i) - \tau(q_i - \bar{e}_i)$, where $\bar{e}_i$ is its initial allocation. Find the equilibrium permit price $\tau^{*}$ and the equilibrium quantities. Which firm buys, which sells, and how many permits change hands? How does the equilibrium compare to part (c)?
+d) **Cap-and-trade.** The regulator issues permits totaling the efficient quantity of smog from part (b), each allowing one cubic foot of pollution. Permits can be freely traded at a market price $\tau$.
+
+(i) Suppose **all permits are given to Plant 1**. Find the equilibrium permit price $\tau^{*}$ and the equilibrium outputs. How many permits does Plant 1 sell to Plant 2, and what are each plant's final profits?
+
+(ii) Suppose instead **all permits are given to Plant 2**. Show that the equilibrium outputs and permit price are unchanged, but profits are reallocated.
+
+(iii) Connect your findings to the **Coase theorem**.
 
 ## 3. Coase Theorem with Reciprocal Externalities
 
@@ -79,17 +85,3 @@ b) **Social optimum.** A planner chooses $(x_1, x_2, x_3, G)$ to maximize $\sum_
 c) Verify that the Nash equilibrium satisfies $MRS_i = 1$ for each $i$ but the social optimum satisfies $\sum_i MRS_i = 1$ (the **Samuelson condition**). Compute the ratio $G^{*} / G^{**}$. As the number of contributors $N$ grows, what happens to the fraction of the efficient public good that is voluntarily provided?
 
 d) Suppose each contributor receives a subsidy $s$ on their contribution: a contribution of $g_i$ costs them only $(1-s) g_i$, with the government covering the rest. Find the subsidy rate $s^{*}$ that decentralizes the efficient public good level $G^{**}$.
-
-## 5. Lindahl Prices
-
-Two consumers fund a public good $G$. They have utility:
-$$U_1(x_1, G) = x_1 + 10 \ln G, \qquad U_2(x_2, G) = x_2 + 6 \ln G$$
-Each unit of $G$ costs \$1 to produce (so the resource constraint is $x_1 + x_2 + G = Y_1 + Y_2$). Both have ample income.
-
-a) **Samuelson condition.** Compute each consumer's $MRS_i = (\partial U_i/\partial G)/(\partial U_i/\partial x_i)$ and find the efficient $G^{**}$.
-
-b) **Lindahl prices.** Suppose each consumer is charged a personalized price-per-unit $\tau_i$ for the public good, where $\tau_1 + \tau_2 = 1$ (the prices add up to the marginal cost of $G$). Each consumer takes $\tau_i$ as given and chooses how much $G$ they would like to "demand," then the level of $G$ is set so both demand the same quantity. Find the Lindahl prices $(\tau_1^{*}, \tau_2^{*})$ that support the efficient $G^{**}$.
-
-c) Verify that at the Lindahl prices, each consumer "demands" exactly $G^{**}$. Why does this mechanism elicit efficient provision in theory?
-
-d) Why is implementing Lindahl pricing difficult in practice? What incentive do consumers have when reporting their preferences to the planner?

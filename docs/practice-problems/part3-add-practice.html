@@ -157,10 +157,9 @@ window.Quarto = {
    
   <ul>
   <li><a href="#adverse-selection-in-insurance-with-two-types" id="toc-adverse-selection-in-insurance-with-two-types" class="nav-link active" data-scroll-target="#adverse-selection-in-insurance-with-two-types">1. Adverse Selection in Insurance with Two Types</a></li>
-  <li><a href="#pigouvian-tax-and-cap-and-trade-with-heterogeneous-firms" id="toc-pigouvian-tax-and-cap-and-trade-with-heterogeneous-firms" class="nav-link" data-scroll-target="#pigouvian-tax-and-cap-and-trade-with-heterogeneous-firms">2. Pigouvian Tax and Cap-and-Trade with Heterogeneous Firms</a></li>
+  <li><a href="#pigouvian-tax-and-cap-and-trade" id="toc-pigouvian-tax-and-cap-and-trade" class="nav-link" data-scroll-target="#pigouvian-tax-and-cap-and-trade">2. Pigouvian Tax and Cap-and-Trade</a></li>
   <li><a href="#coase-theorem-with-reciprocal-externalities" id="toc-coase-theorem-with-reciprocal-externalities" class="nav-link" data-scroll-target="#coase-theorem-with-reciprocal-externalities">3. Coase Theorem with Reciprocal Externalities</a></li>
   <li><a href="#public-good-provision-with-three-contributors" id="toc-public-good-provision-with-three-contributors" class="nav-link" data-scroll-target="#public-good-provision-with-three-contributors">4. Public Good Provision with Three Contributors</a></li>
-  <li><a href="#lindahl-prices" id="toc-lindahl-prices" class="nav-link" data-scroll-target="#lindahl-prices">5. Lindahl Prices</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="part3-add-practice.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -202,14 +201,19 @@ window.Quarto = {
 <li><p>Suppose the government mandates that everyone purchase insurance at the pooled premium <span class="math inline">\(P_{\text{pool}}\)</span> with <span class="math inline">\(\lambda = 0.5\)</span>. Compare each type’s expected utility under the mandate with their expected utility without insurance. Who is better off? Who is worse off? Why might this still be a desirable policy from a social welfare perspective?</p></li>
 </ol>
 </section>
-<section id="pigouvian-tax-and-cap-and-trade-with-heterogeneous-firms" class="level2">
-<h2 class="anchored" data-anchor-id="pigouvian-tax-and-cap-and-trade-with-heterogeneous-firms">2. Pigouvian Tax and Cap-and-Trade with Heterogeneous Firms</h2>
-<p>Two firms produce a chemical, with pollution as a byproduct. Firm <span class="math inline">\(i\)</span>’s private marginal cost of producing <span class="math inline">\(q_i\)</span> units is: <span class="math display">\[MC_1(q_1) = 2q_1, \qquad MC_2(q_2) = 4q_2\]</span> The market price is <span class="math inline">\(P = 40\)</span> per unit. Each unit of output produces 1 unit of pollution, and each unit of pollution causes $8 of damage to a downstream community.</p>
+<section id="pigouvian-tax-and-cap-and-trade" class="level2">
+<h2 class="anchored" data-anchor-id="pigouvian-tax-and-cap-and-trade">2. Pigouvian Tax and Cap-and-Trade</h2>
+<p>Two refineries produce fuel and emit smog as a byproduct. The market price of fuel is <span class="math inline">\(P = \$3\)</span> per gallon, and each plant uses <span class="math inline">\(c = \$1\)</span> in raw inputs per gallon. The two plants differ in pollution intensity: <span class="math display">\[s_1(y_1) = y_1^2, \qquad s_2(y_2) = \tfrac{1}{2} y_2^2\]</span> where <span class="math inline">\(y_i\)</span> is gallons of fuel and <span class="math inline">\(s_i\)</span> is cubic feet of smog. Each cubic foot of smog causes $0.01 of environmental damage. Each plant’s production capacity is <span class="math inline">\(\bar{y} = 250\)</span> gallons.</p>
 <ol type="a">
-<li><p>Find each firm’s privately optimal output <span class="math inline">\(q_i^{\text{priv}}\)</span> (where <span class="math inline">\(P = MC_i\)</span>). Compute total output and total pollution damage.</p></li>
-<li><p>Find the socially efficient output <span class="math inline">\(q_i^{*}\)</span> for each firm (where <span class="math inline">\(P = MC_i + 8\)</span>). Compute total output, total damage, and the deadweight loss from unregulated production.</p></li>
-<li><p><strong>Pigouvian tax.</strong> The regulator imposes a per-unit tax <span class="math inline">\(t\)</span> on output of both firms. Find the tax rate that decentralizes the efficient outcome and verify the equilibrium quantities.</p></li>
-<li><p><strong>Cap-and-trade.</strong> The regulator instead issues permits equal to the efficient total emissions from part (b) and distributes them equally between the two firms. Plants can trade permits at price <span class="math inline">\(\tau\)</span>. Each firm chooses <span class="math inline">\(q_i\)</span> to maximize <span class="math inline">\(P q_i - C_i(q_i) - \tau(q_i - \bar{e}_i)\)</span>, where <span class="math inline">\(\bar{e}_i\)</span> is its initial allocation. Find the equilibrium permit price <span class="math inline">\(\tau^{*}\)</span> and the equilibrium quantities. Which firm buys, which sells, and how many permits change hands? How does the equilibrium compare to part (c)?</p></li>
+<li><p><strong>Unregulated equilibrium.</strong> Find each plant’s privately optimal output (ignoring pollution damage). Compute total smog and total damage.</p></li>
+<li><p><strong>Socially efficient outcome.</strong> A planner internalizes the pollution damage. Find the efficient output of each plant. Compute total smog at the efficient outcome.</p></li>
+<li><p><strong>Pigouvian tax.</strong> Show that a per-unit tax <span class="math inline">\(t = \$0.01\)</span> on smog (paid by each plant on each cubic foot it emits) decentralizes the efficient outcome. What is total tax revenue?</p></li>
+<li><p><strong>Cap-and-trade.</strong> The regulator issues permits totaling the efficient quantity of smog from part (b), each allowing one cubic foot of pollution. Permits can be freely traded at a market price <span class="math inline">\(\tau\)</span>.</p></li>
+</ol>
+<ol type="i">
+<li><p>Suppose <strong>all permits are given to Plant 1</strong>. Find the equilibrium permit price <span class="math inline">\(\tau^{*}\)</span> and the equilibrium outputs. How many permits does Plant 1 sell to Plant 2, and what are each plant’s final profits?</p></li>
+<li><p>Suppose instead <strong>all permits are given to Plant 2</strong>. Show that the equilibrium outputs and permit price are unchanged, but profits are reallocated.</p></li>
+<li><p>Connect your findings to the <strong>Coase theorem</strong>.</p></li>
 </ol>
 </section>
 <section id="coase-theorem-with-reciprocal-externalities" class="level2">
@@ -257,16 +261,6 @@ window.Quarto = {
 <li><p><strong>Social optimum.</strong> A planner chooses <span class="math inline">\((x_1, x_2, x_3, G)\)</span> to maximize <span class="math inline">\(\sum_i U_i\)</span> subject to <span class="math inline">\(\sum_i x_i + G = \sum_i Y_i\)</span>. Find <span class="math inline">\(G^{**}\)</span> and the equal-private-consumption allocation <span class="math inline">\(x_i^{**}\)</span>. (Hint: with utility <span class="math inline">\(x_i G\)</span>, total welfare is <span class="math inline">\(X G\)</span> where <span class="math inline">\(X = \sum x_i\)</span>.)</p></li>
 <li><p>Verify that the Nash equilibrium satisfies <span class="math inline">\(MRS_i = 1\)</span> for each <span class="math inline">\(i\)</span> but the social optimum satisfies <span class="math inline">\(\sum_i MRS_i = 1\)</span> (the <strong>Samuelson condition</strong>). Compute the ratio <span class="math inline">\(G^{*} / G^{**}\)</span>. As the number of contributors <span class="math inline">\(N\)</span> grows, what happens to the fraction of the efficient public good that is voluntarily provided?</p></li>
 <li><p>Suppose each contributor receives a subsidy <span class="math inline">\(s\)</span> on their contribution: a contribution of <span class="math inline">\(g_i\)</span> costs them only <span class="math inline">\((1-s) g_i\)</span>, with the government covering the rest. Find the subsidy rate <span class="math inline">\(s^{*}\)</span> that decentralizes the efficient public good level <span class="math inline">\(G^{**}\)</span>.</p></li>
-</ol>
-</section>
-<section id="lindahl-prices" class="level2">
-<h2 class="anchored" data-anchor-id="lindahl-prices">5. Lindahl Prices</h2>
-<p>Two consumers fund a public good <span class="math inline">\(G\)</span>. They have utility: <span class="math display">\[U_1(x_1, G) = x_1 + 10 \ln G, \qquad U_2(x_2, G) = x_2 + 6 \ln G\]</span> Each unit of <span class="math inline">\(G\)</span> costs $1 to produce (so the resource constraint is <span class="math inline">\(x_1 + x_2 + G = Y_1 + Y_2\)</span>). Both have ample income.</p>
-<ol type="a">
-<li><p><strong>Samuelson condition.</strong> Compute each consumer’s <span class="math inline">\(MRS_i = (\partial U_i/\partial G)/(\partial U_i/\partial x_i)\)</span> and find the efficient <span class="math inline">\(G^{**}\)</span>.</p></li>
-<li><p><strong>Lindahl prices.</strong> Suppose each consumer is charged a personalized price-per-unit <span class="math inline">\(\tau_i\)</span> for the public good, where <span class="math inline">\(\tau_1 + \tau_2 = 1\)</span> (the prices add up to the marginal cost of <span class="math inline">\(G\)</span>). Each consumer takes <span class="math inline">\(\tau_i\)</span> as given and chooses how much <span class="math inline">\(G\)</span> they would like to “demand,” then the level of <span class="math inline">\(G\)</span> is set so both demand the same quantity. Find the Lindahl prices <span class="math inline">\((\tau_1^{*}, \tau_2^{*})\)</span> that support the efficient <span class="math inline">\(G^{**}\)</span>.</p></li>
-<li><p>Verify that at the Lindahl prices, each consumer “demands” exactly <span class="math inline">\(G^{**}\)</span>. Why does this mechanism elicit efficient provision in theory?</p></li>
-<li><p>Why is implementing Lindahl pricing difficult in practice? What incentive do consumers have when reporting their preferences to the planner?</p></li>
 </ol>
 
 

@@ -156,22 +156,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#normal-form-games" id="toc-normal-form-games" class="nav-link active" data-scroll-target="#normal-form-games">Normal Form Games</a>
-  <ul class="collapse">
-  <li><a href="#dominant-strategies-and-nash-equilibrium" id="toc-dominant-strategies-and-nash-equilibrium" class="nav-link" data-scroll-target="#dominant-strategies-and-nash-equilibrium">1. Dominant Strategies and Nash Equilibrium</a></li>
-  <li><a href="#battle-of-the-sexes-mixed-strategies" id="toc-battle-of-the-sexes-mixed-strategies" class="nav-link" data-scroll-target="#battle-of-the-sexes-mixed-strategies">2. Battle of the Sexes (Mixed Strategies)</a></li>
-  <li><a href="#stag-hunt-risk-vs.-payoff-dominance" id="toc-stag-hunt-risk-vs.-payoff-dominance" class="nav-link" data-scroll-target="#stag-hunt-risk-vs.-payoff-dominance">3. Stag Hunt: Risk vs.&nbsp;Payoff Dominance</a></li>
-  </ul></li>
-  <li><a href="#sequential-games-and-commitment" id="toc-sequential-games-and-commitment" class="nav-link" data-scroll-target="#sequential-games-and-commitment">Sequential Games and Commitment</a>
-  <ul class="collapse">
-  <li><a href="#entry-deterrence-with-capacity-commitment" id="toc-entry-deterrence-with-capacity-commitment" class="nav-link" data-scroll-target="#entry-deterrence-with-capacity-commitment">4. Entry Deterrence with Capacity Commitment</a></li>
-  <li><a href="#ultimatum-bargaining" id="toc-ultimatum-bargaining" class="nav-link" data-scroll-target="#ultimatum-bargaining">5. Ultimatum Bargaining</a></li>
-  </ul></li>
-  <li><a href="#repeated-games" id="toc-repeated-games" class="nav-link" data-scroll-target="#repeated-games">Repeated Games</a>
-  <ul class="collapse">
-  <li><a href="#repeated-prisoners-dilemma-and-grim-trigger" id="toc-repeated-prisoners-dilemma-and-grim-trigger" class="nav-link" data-scroll-target="#repeated-prisoners-dilemma-and-grim-trigger">6. Repeated Prisoner’s Dilemma and Grim Trigger</a></li>
-  <li><a href="#trigger-strategies-in-a-cournot-duopoly" id="toc-trigger-strategies-in-a-cournot-duopoly" class="nav-link" data-scroll-target="#trigger-strategies-in-a-cournot-duopoly">7. Trigger Strategies in a Cournot Duopoly</a></li>
-  </ul></li>
+  <li><a href="#battle-of-the-sexes-mixed-strategies" id="toc-battle-of-the-sexes-mixed-strategies" class="nav-link active" data-scroll-target="#battle-of-the-sexes-mixed-strategies">1. Battle of the Sexes (Mixed Strategies)</a></li>
+  <li><a href="#stag-hunt-risk-vs.-payoff-dominance" id="toc-stag-hunt-risk-vs.-payoff-dominance" class="nav-link" data-scroll-target="#stag-hunt-risk-vs.-payoff-dominance">2. Stag Hunt: Risk vs.&nbsp;Payoff Dominance</a></li>
+  <li><a href="#entry-deterrence-with-capacity-commitment" id="toc-entry-deterrence-with-capacity-commitment" class="nav-link" data-scroll-target="#entry-deterrence-with-capacity-commitment">3. Entry Deterrence with Capacity Commitment</a></li>
+  <li><a href="#ultimatum-bargaining" id="toc-ultimatum-bargaining" class="nav-link" data-scroll-target="#ultimatum-bargaining">4. Ultimatum Bargaining</a></li>
+  <li><a href="#repeated-prisoners-dilemma-and-grim-trigger" id="toc-repeated-prisoners-dilemma-and-grim-trigger" class="nav-link" data-scroll-target="#repeated-prisoners-dilemma-and-grim-trigger">5. Repeated Prisoner’s Dilemma and Grim Trigger</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="part4-add-practice.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -198,50 +187,8 @@ window.Quarto = {
 </header>
 
 
-<section id="normal-form-games" class="level1">
-<h1>Normal Form Games</h1>
-<section id="dominant-strategies-and-nash-equilibrium" class="level2">
-<h2 class="anchored" data-anchor-id="dominant-strategies-and-nash-equilibrium">1. Dominant Strategies and Nash Equilibrium</h2>
-<p>Consider the following <span class="math inline">\(3 \times 3\)</span> simultaneous-move game. Player A is the row player, Player B is the column player.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;"><strong>L</strong></th>
-<th style="text-align: center;"><strong>C</strong></th>
-<th style="text-align: center;"><strong>R</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>U</strong></td>
-<td style="text-align: center;">(4, 3)</td>
-<td style="text-align: center;">(5, 1)</td>
-<td style="text-align: center;">(6, 2)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>M</strong></td>
-<td style="text-align: center;">(2, 1)</td>
-<td style="text-align: center;">(8, 4)</td>
-<td style="text-align: center;">(3, 6)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><strong>D</strong></td>
-<td style="text-align: center;">(3, 0)</td>
-<td style="text-align: center;">(9, 6)</td>
-<td style="text-align: center;">(2, 8)</td>
-</tr>
-</tbody>
-</table>
-<ol type="a">
-<li><p>Recall that a strategy is <strong>strictly dominated</strong> if some other strategy yields a strictly higher payoff regardless of what the opponent does. Identify any strictly dominated strategy in this game and the strategy that dominates it.</p></li>
-<li><p>Using best-response analysis, find all pure-strategy Nash equilibria of the original game.</p></li>
-<li><p>Suppose each player believes their opponent is rational and so will not play a strictly dominated strategy. Use the dominance you found in (a) to eliminate one strategy, then re-examine the resulting smaller game. If a further strategy becomes strictly dominated, eliminate that too and continue. What outcome does this reasoning predict, and how does it relate to your answer in (b)?</p></li>
-<li><p>Strict dominance is a <em>stronger</em> requirement than Nash equilibrium: a strictly dominant-strategy equilibrium is always a Nash equilibrium, but the converse fails. Give an example of a Nash-equilibrium strategy in the game above that is <strong>not</strong> strictly dominant for the player who plays it, and explain why this does not contradict its being part of a Nash equilibrium.</p></li>
-</ol>
-</section>
 <section id="battle-of-the-sexes-mixed-strategies" class="level2">
-<h2 class="anchored" data-anchor-id="battle-of-the-sexes-mixed-strategies">2. Battle of the Sexes (Mixed Strategies)</h2>
+<h2 class="anchored" data-anchor-id="battle-of-the-sexes-mixed-strategies">1. Battle of the Sexes (Mixed Strategies)</h2>
 <p>A couple is deciding where to spend the evening. Player A prefers the <strong>Opera</strong>, Player B prefers the <strong>Football</strong> game, but both would rather be together than alone.</p>
 <table class="caption-top table">
 <thead>
@@ -272,7 +219,7 @@ window.Quarto = {
 </ol>
 </section>
 <section id="stag-hunt-risk-vs.-payoff-dominance" class="level2">
-<h2 class="anchored" data-anchor-id="stag-hunt-risk-vs.-payoff-dominance">3. Stag Hunt: Risk vs.&nbsp;Payoff Dominance</h2>
+<h2 class="anchored" data-anchor-id="stag-hunt-risk-vs.-payoff-dominance">2. Stag Hunt: Risk vs.&nbsp;Payoff Dominance</h2>
 <p>Two hunters can either cooperate to hunt a stag (large payoff but requires both) or hunt a hare alone (small payoff, guaranteed).</p>
 <table class="caption-top table">
 <thead>
@@ -302,17 +249,14 @@ window.Quarto = {
 <li><p>The Stag Hunt is sometimes used as a metaphor for collective action problems (e.g., environmental treaties, vaccinations, financial crises). Pick one example and explain how the Stag Hunt structure applies.</p></li>
 </ol>
 </section>
-</section>
-<section id="sequential-games-and-commitment" class="level1">
-<h1>Sequential Games and Commitment</h1>
 <section id="entry-deterrence-with-capacity-commitment" class="level2">
-<h2 class="anchored" data-anchor-id="entry-deterrence-with-capacity-commitment">4. Entry Deterrence with Capacity Commitment</h2>
+<h2 class="anchored" data-anchor-id="entry-deterrence-with-capacity-commitment">3. Entry Deterrence with Capacity Commitment</h2>
 <p>An incumbent firm (I) faces a potential entrant (E). The game has two stages:</p>
 <ol type="1">
 <li>The incumbent chooses <strong>capacity</strong> <span class="math inline">\(k \in \{\)</span> Low, High <span class="math inline">\(\}\)</span> before E moves.</li>
 <li>E observes <span class="math inline">\(k\)</span> and chooses to <strong>Enter</strong> or <strong>Stay Out</strong>. If E enters, both firms compete in the market.</li>
 </ol>
-<p>The payoffs (Entrant, Incumbent) for each combination are:</p>
+<p>The payoffs (Incumbent, Entrant) for each combination are:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -324,17 +268,17 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">Low</td>
-<td style="text-align: center;">(0, 12)</td>
-<td style="text-align: center;">(3, 6)</td>
+<td style="text-align: center;">(12, 0)</td>
+<td style="text-align: center;">(6, 3)</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">High</td>
-<td style="text-align: center;">(0, 8)</td>
-<td style="text-align: center;">(−2, 4)</td>
+<td style="text-align: center;">(8, 0)</td>
+<td style="text-align: center;">(4, −2)</td>
 </tr>
 </tbody>
 </table>
-<p>(Building capacity is a sunk cost for the incumbent — High capacity always yields lower profit for I than Low. But High capacity also commits the incumbent to flood the market post-entry, hurting the entrant enough that E stays out.)</p>
+<p>(Building capacity is a sunk cost for the incumbent - High capacity always yields lower profit for I than Low. But High capacity also commits the incumbent to flood the market post-entry, hurting the entrant enough that E stays out.)</p>
 <ol type="a">
 <li><p>Draw the game tree (extensive form).</p></li>
 <li><p>Solve the game by backward induction. What is the subgame perfect equilibrium? What is the equilibrium outcome (capacity choice and entry decision)?</p></li>
@@ -343,7 +287,7 @@ window.Quarto = {
 </ol>
 </section>
 <section id="ultimatum-bargaining" class="level2">
-<h2 class="anchored" data-anchor-id="ultimatum-bargaining">5. Ultimatum Bargaining</h2>
+<h2 class="anchored" data-anchor-id="ultimatum-bargaining">4. Ultimatum Bargaining</h2>
 <p>Two players bargain over $10. Player 1 (the proposer) offers a split <span class="math inline">\((s_1, s_2)\)</span> where <span class="math inline">\(s_1 + s_2 = 10\)</span> and <span class="math inline">\(s_2 \geq 0\)</span>. Player 2 (the responder) either accepts (each gets their proposed share) or rejects (both get 0). Assume <span class="math inline">\(s_2\)</span> can take any nonnegative real value (in dollars or cents).</p>
 <ol type="a">
 <li><p>Solve the game by backward induction. What does Player 2 do when offered <span class="math inline">\(s_2 &gt; 0\)</span>? What does Player 2 do when offered <span class="math inline">\(s_2 = 0\)</span>? Assume that when indifferent, Player 2 accepts.</p></li>
@@ -352,11 +296,8 @@ window.Quarto = {
 <li><p>Now suppose the game has <strong>two rounds</strong>: if Player 2 rejects in round 1, Player 2 makes a counteroffer in round 2 over a pie that has shrunk to <span class="math inline">\(\delta \cdot 10\)</span> (where <span class="math inline">\(\delta \in (0,1)\)</span> is a discount factor reflecting the cost of delay). If Player 1 rejects the round-2 offer, both get 0. Solve by backward induction. How much does Player 1 offer in round 1? How does the equilibrium depend on <span class="math inline">\(\delta\)</span>?</p></li>
 </ol>
 </section>
-</section>
-<section id="repeated-games" class="level1">
-<h1>Repeated Games</h1>
 <section id="repeated-prisoners-dilemma-and-grim-trigger" class="level2">
-<h2 class="anchored" data-anchor-id="repeated-prisoners-dilemma-and-grim-trigger">6. Repeated Prisoner’s Dilemma and Grim Trigger</h2>
+<h2 class="anchored" data-anchor-id="repeated-prisoners-dilemma-and-grim-trigger">5. Repeated Prisoner’s Dilemma and Grim Trigger</h2>
 <p>Two firms play the following stage game in each period:</p>
 <table class="caption-top table">
 <thead>
@@ -383,23 +324,9 @@ window.Quarto = {
 <li><p>Confirm that (Defect, Defect) is the unique Nash equilibrium of the one-shot game.</p></li>
 <li><p>Suppose the game is repeated infinitely with discount factor <span class="math inline">\(\delta \in (0,1)\)</span>. Each player considers the <strong>grim trigger</strong> strategy: “Cooperate in period 1, and continue to cooperate as long as the opponent has always cooperated; defect forever after the first deviation.”</p>
 <p>Compute the present discounted value of (i) always cooperating and (ii) deviating in period 1 (defect once and trigger permanent defection thereafter). Find the <strong>critical discount factor</strong> <span class="math inline">\(\delta^*\)</span> above which grim trigger sustains cooperation as a subgame perfect equilibrium.</p></li>
-<li><p><strong>Finitely repeated game.</strong> Now suppose the game is repeated <span class="math inline">\(T &lt; \infty\)</span> times. Show that defection in every period is the unique subgame perfect equilibrium. (Hint: argue by backward induction starting from period <span class="math inline">\(T\)</span>.)</p></li>
-<li><p>Why does the prediction differ between the finitely and infinitely repeated games? What real-world feature do infinitely repeated games capture that finite ones do not?</p></li>
-</ol>
-</section>
-<section id="trigger-strategies-in-a-cournot-duopoly" class="level2">
-<h2 class="anchored" data-anchor-id="trigger-strategies-in-a-cournot-duopoly">7. Trigger Strategies in a Cournot Duopoly</h2>
-<p>Two firms produce a homogeneous good with inverse demand <span class="math inline">\(P = 100 - Q\)</span> where <span class="math inline">\(Q = q_1 + q_2\)</span>. Both have constant marginal cost <span class="math inline">\(c = 20\)</span>. Each period they simultaneously choose quantities, and the stage game is the standard Cournot game.</p>
-<ol type="a">
-<li><p>Find (i) the Cournot Nash quantities, price, and per-firm profit and (ii) the joint-monopoly (collusive) quantities, price, and per-firm profit (assuming firms split monopoly output equally).</p></li>
-<li><p>Suppose firms play the infinitely repeated game with discount factor <span class="math inline">\(\delta\)</span> and use the following grim-trigger strategy: produce the collusive quantity each period as long as both firms have always done so; revert to the Cournot Nash quantity forever upon any deviation.</p>
-<p>Compute the <strong>best-deviation profit</strong>: the one-period payoff if firm 1 deviates optimally, taking firm 2’s collusive output as given. Then derive the critical <span class="math inline">\(\delta^*\)</span> above which collusion is sustainable.</p></li>
-<li><p>Suppose firms suspect each other of cheating (so <span class="math inline">\(\delta\)</span> effectively falls). What does the model predict about the sustainability of collusion when firms become impatient or when the future is uncertain?</p></li>
-<li><p>Real cartels (e.g., OPEC, vitamin cartels) often break down. Identify two features of real markets that make collusion harder to sustain than the simple model predicts.</p></li>
 </ol>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

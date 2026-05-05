@@ -12,27 +12,7 @@ format:
 format-links: [pdf]
 ---
 
-# Normal Form Games
-
-## 1. Dominant Strategies and Nash Equilibrium
-
-Consider the following $3 \times 3$ simultaneous-move game. Player A is the row player, Player B is the column player.
-
-|        | **L**  | **C**  | **R**  |
-|:------:|:------:|:------:|:------:|
-| **U**  | (4, 3) | (5, 1) | (6, 2) |
-| **M**  | (2, 1) | (8, 4) | (3, 6) |
-| **D**  | (3, 0) | (9, 6) | (2, 8) |
-
-a) Recall that a strategy is **strictly dominated** if some other strategy yields a strictly higher payoff regardless of what the opponent does. Identify any strictly dominated strategy in this game and the strategy that dominates it.
-
-b) Using best-response analysis, find all pure-strategy Nash equilibria of the original game.
-
-c) Suppose each player believes their opponent is rational and so will not play a strictly dominated strategy. Use the dominance you found in (a) to eliminate one strategy, then re-examine the resulting smaller game. If a further strategy becomes strictly dominated, eliminate that too and continue. What outcome does this reasoning predict, and how does it relate to your answer in (b)?
-
-d) Strict dominance is a *stronger* requirement than Nash equilibrium: a strictly dominant-strategy equilibrium is always a Nash equilibrium, but the converse fails. Give an example of a Nash-equilibrium strategy in the game above that is **not** strictly dominant for the player who plays it, and explain why this does not contradict its being part of a Nash equilibrium.
-
-## 2. Battle of the Sexes (Mixed Strategies)
+## 1. Battle of the Sexes (Mixed Strategies)
 
 A couple is deciding where to spend the evening. Player A prefers the **Opera**, Player B prefers the **Football** game, but both would rather be together than alone.
 
@@ -49,7 +29,7 @@ c) Compute each player's expected payoff in the mixed-strategy equilibrium. How 
 
 d) Suppose A can commit (publicly and credibly) to going to the Opera before B chooses. What is the equilibrium outcome? What does this illustrate about the value of commitment?
 
-## 3. Stag Hunt: Risk vs. Payoff Dominance
+## 2. Stag Hunt: Risk vs. Payoff Dominance
 
 Two hunters can either cooperate to hunt a stag (large payoff but requires both) or hunt a hare alone (small payoff, guaranteed).
 
@@ -66,23 +46,21 @@ c) Suppose A believes B will choose Stag with probability $\pi$. For what values
 
 d) The Stag Hunt is sometimes used as a metaphor for collective action problems (e.g., environmental treaties, vaccinations, financial crises). Pick one example and explain how the Stag Hunt structure applies.
 
-# Sequential Games and Commitment
-
-## 4. Entry Deterrence with Capacity Commitment
+## 3. Entry Deterrence with Capacity Commitment
 
 An incumbent firm (I) faces a potential entrant (E). The game has two stages:
 
 1. The incumbent chooses **capacity** $k \in \{$ Low, High $\}$ before E moves.
 2. E observes $k$ and chooses to **Enter** or **Stay Out**. If E enters, both firms compete in the market.
 
-The payoffs (Entrant, Incumbent) for each combination are:
+The payoffs (Incumbent, Entrant) for each combination are:
 
 | Capacity | E: Stay Out | E: Enter |
 |:--------:|:------------:|:--------:|
-| Low      | (0, 12) | (3, 6) |
-| High     | (0, 8) | (−2, 4) |
+| Low      | (12, 0) | (6, 3) |
+| High     | (8, 0) | (4, −2) |
 
-(Building capacity is a sunk cost for the incumbent — High capacity always yields lower profit for I than Low. But High capacity also commits the incumbent to flood the market post-entry, hurting the entrant enough that E stays out.)
+(Building capacity is a sunk cost for the incumbent - High capacity always yields lower profit for I than Low. But High capacity also commits the incumbent to flood the market post-entry, hurting the entrant enough that E stays out.)
 
 a) Draw the game tree (extensive form).
 
@@ -92,7 +70,7 @@ c) Suppose the incumbent could not commit to High capacity (i.e., capacity could
 
 d) Connect this game to the concept of a **non-credible threat**. If the incumbent simply *threatened* aggressive post-entry competition (without building capacity), would E believe it? Explain.
 
-## 5. Ultimatum Bargaining
+## 4. Ultimatum Bargaining
 
 Two players bargain over \$10. Player 1 (the proposer) offers a split $(s_1, s_2)$ where $s_1 + s_2 = 10$ and $s_2 \geq 0$. Player 2 (the responder) either accepts (each gets their proposed share) or rejects (both get 0). Assume $s_2$ can take any nonnegative real value (in dollars or cents).
 
@@ -104,9 +82,7 @@ c) Empirically, in laboratory ultimatum games, responders frequently reject offe
 
 d) Now suppose the game has **two rounds**: if Player 2 rejects in round 1, Player 2 makes a counteroffer in round 2 over a pie that has shrunk to $\delta \cdot 10$ (where $\delta \in (0,1)$ is a discount factor reflecting the cost of delay). If Player 1 rejects the round-2 offer, both get 0. Solve by backward induction. How much does Player 1 offer in round 1? How does the equilibrium depend on $\delta$?
 
-# Repeated Games
-
-## 6. Repeated Prisoner's Dilemma and Grim Trigger
+## 5. Repeated Prisoner's Dilemma and Grim Trigger
 
 Two firms play the following stage game in each period:
 
@@ -120,21 +96,3 @@ a) Confirm that (Defect, Defect) is the unique Nash equilibrium of the one-shot 
 b) Suppose the game is repeated infinitely with discount factor $\delta \in (0,1)$. Each player considers the **grim trigger** strategy: "Cooperate in period 1, and continue to cooperate as long as the opponent has always cooperated; defect forever after the first deviation."
 
    Compute the present discounted value of (i) always cooperating and (ii) deviating in period 1 (defect once and trigger permanent defection thereafter). Find the **critical discount factor** $\delta^*$ above which grim trigger sustains cooperation as a subgame perfect equilibrium.
-
-c) **Finitely repeated game.** Now suppose the game is repeated $T < \infty$ times. Show that defection in every period is the unique subgame perfect equilibrium. (Hint: argue by backward induction starting from period $T$.)
-
-d) Why does the prediction differ between the finitely and infinitely repeated games? What real-world feature do infinitely repeated games capture that finite ones do not?
-
-## 7. Trigger Strategies in a Cournot Duopoly
-
-Two firms produce a homogeneous good with inverse demand $P = 100 - Q$ where $Q = q_1 + q_2$. Both have constant marginal cost $c = 20$. Each period they simultaneously choose quantities, and the stage game is the standard Cournot game.
-
-a) Find (i) the Cournot Nash quantities, price, and per-firm profit and (ii) the joint-monopoly (collusive) quantities, price, and per-firm profit (assuming firms split monopoly output equally).
-
-b) Suppose firms play the infinitely repeated game with discount factor $\delta$ and use the following grim-trigger strategy: produce the collusive quantity each period as long as both firms have always done so; revert to the Cournot Nash quantity forever upon any deviation.
-
-   Compute the **best-deviation profit**: the one-period payoff if firm 1 deviates optimally, taking firm 2's collusive output as given. Then derive the critical $\delta^*$ above which collusion is sustainable.
-
-c) Suppose firms suspect each other of cheating (so $\delta$ effectively falls). What does the model predict about the sustainability of collusion when firms become impatient or when the future is uncertain?
-
-d) Real cartels (e.g., OPEC, vitamin cartels) often break down. Identify two features of real markets that make collusion harder to sustain than the simple model predicts.
