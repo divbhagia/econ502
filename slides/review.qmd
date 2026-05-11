@@ -10,29 +10,26 @@ format:
       - ../assets/section-slides.lua
 ---
 
-# Roadmap
-
 ## What We Covered
 
-::: {.incremental}
+
 - **Part I - Competitive Markets** (Lectures 1–5): consumer theory, production, partial equilibrium, general equilibrium, welfare theorems
 - **Part II - Market Power** (Lectures 6–7): monopoly, price discrimination, oligopoly (Cournot, Bertrand, Stackelberg)
 - **Part III - Market Failures** (Lectures 8–9): adverse selection, externalities, public goods
 - **Part IV - Game Theory** (Lecture 10): Nash equilibrium, mixed strategies, sequential games, repeated games
-:::
+
 
 ---
 
 ## What to Expect on the Exam
 
-::: {.incremental}
 - **Final exam content:** Lecture 4 + Parts II–IV (lectures 6–10)
 - **Comprehensive exam content:** all lectures
 - **Format:** 4-5 problems, similar to problem sets and practice problems. Closed book, 2 hours.
 
 # Part I: Competitive Markets
 
-## Consumer Theory: The Toolkit (Lec 1–2)
+## Consumer Theory (Lec 1-2)
 
 ::: {.incremental}
 - **Preferences and utility:** axioms (completeness, transitivity, monotonicity, convexity); MRS = ratio of marginal utilities = slope of indifference curve
@@ -44,7 +41,7 @@ format:
 
 ---
 
-## Welfare Measures (Lec 2)
+## Welfare Measures 
 
 For a price change $p_0 \to p_1$:
 
@@ -59,25 +56,12 @@ When are $CV$ and $CS$ equal?
 ## Things to Remember
 
 Cobb-Douglas shortcut: $U(x,y) = x^\alpha y^{\beta}$:
-$$x^M = \dfrac{\alpha}{\alpha + \beta} \cdot \dfrac{I}{p_x}$, $y^M = \dfrac{\beta}{\alpha + \beta} \cdot \dfrac{I}{p_y}$$
+$$x^M = \dfrac{\alpha}{\alpha + \beta} \cdot \dfrac{I}{p_x}, \quad y^M = \dfrac{\beta}{\alpha + \beta} \cdot \dfrac{I}{p_y}$$
 
 With $\alpha + \beta = 1$, 
 $$x^M = \dfrac{\alpha I}{p_x}, \quad y^M = \dfrac{\beta I}{p_y}$$
 
 
-
----
-
-## Practice Problem: A Sugary-Drink Tax
-
-A consumer has preferences $U(s, x) = s^{0.3} x^{0.7}$ over sugary drinks $s$ and a composite good $x$. Income is $I = \$300$ per month. Initially $p_s = \$0.05$ per ounce, $p_x = \$1$. The city imposes a tax $t = \$0.015$ per ounce, raising the consumer price to $p_s' = \$0.065$.
-
-::: {.incremental}
-- Find the optimal bundle and utility before and after the tax.
-- Compute the **compensating variation** for the price change.
-- Compute tax revenue $R = t \cdot s^{**}$ and deadweight loss $DWL = CV - R$.
-- If a rebate returns all revenue as a lump sum, is the consumer back to where she started? Why or why not?
-:::
 
 ---
 
@@ -160,52 +144,22 @@ Two firms, inverse demand $P = a - bQ$, $Q = q_1 + q_2$, equal MC $c$:
 **Note:** the leader gains from commitment because quantities are strategic substitutes. With strategic complements (prices), being the price leader can *hurt* you.
 :::
 
----
-
-## Practice Problem: Stackelberg
-
-Two firms compete in quantities. Inverse demand $P = 150 - Q$ where $Q = q_1 + q_2$, and both firms have marginal cost $c = 30$.
-
-::: {.incremental}
-- Find the **Cournot** Nash quantities, price, and profit per firm.
-- Suppose Firm 1 is the **Stackelberg leader**: chooses $q_1$ first, Firm 2 observes and chooses $q_2$. Find the equilibrium quantities, price, and profits.
-- Compare: who gains, who loses? Why does first-mover commitment work here?
-- Compute consumer surplus and total welfare under each regime. Which is better for consumers?
-:::
-
 # Part III: Market Failures
 
 ## Adverse Selection (Lec 8)
 
 - **Lemons problem (Akerlof):** when sellers know quality but buyers don't, the average quality of cars on the market is below the unconditional average $\Rightarrow$ market unravels
 - **Insurance:** types differ in risk $p_i$. Risk-averse $u$ concave $\Rightarrow$ everyone willing to pay above the actuarially fair premium $p_i L$ (the gap is the **risk premium**)
-- **Certainty equivalent:** $\sqrt{CE_i} = (1-p_i)\sqrt{w} + p_i\sqrt{w-L}$; $P_i^{\max} = w - CE_i$
-- **Pooling premium** $[\lambda p_H + (1-\lambda) p_L] L$: low-risk types may refuse $\Rightarrow$ unraveling. Government mandate can solve
-
-::: {.fragment}
-**Key insight:** asymmetric information drives a wedge between competitive equilibrium and efficiency - even with rational agents and well-defined property rights.
-:::
+- **Certainty equivalent:** $CE_i$ solves $u(CE_i) = E[u(z)]$. Max premium $P_i^{\max} = w - CE_i$. High-risk types have higher $P_i^{\max}$.
+- **Pooling equilibrium:** if insurer can't price discriminate, must set $P$ based on average risk. If $P > P_L^{\max}$, low-risk types drop out and market unravels. 
 
 ---
 
-## Practice Problem: Insurance with Two Types
-
-Consumers have wealth $w = 100$ and face a loss $L = 36$ with probability $p_i$. Utility is $u(z) = \sqrt{z}$. Low-risk types have $p_L = 0.2$, high-risk types $p_H = 0.6$; fraction $\lambda$ are high-risk. Insurance is full coverage at premium $P$.
-
-::: {.incremental}
-- For each type, find the **certainty equivalent** $CE_i$ and the maximum premium $P_i^{\max} = w - CE_i$. Verify $P_H^{\max} > P_L^{\max}$.
-- At $\lambda = 0.5$, compute the **actuarially fair pooled premium** $P_{\text{pool}} = [\lambda p_H + (1-\lambda)p_L] L$. Which types buy? Does the insurer break even?
-- For what range of $\lambda$ does the market **unravel** (low-risk types drop out)? Explain.
-- If the government **mandates** insurance at $P_{\text{pool}}$, who gains, who loses, and why might it still be desirable?
-:::
-
----
-
-## Externalities and Public Solutions (Lec 9)
+## Externalities (Lec 9)
 
 - **Externality:** private MC $\neq$ social MC. Unregulated market over-produces (negative ext.) or under-produces (positive)
 - **Coase theorem:** with well-defined property rights and zero transaction costs, private bargaining yields efficiency *regardless of who holds the rights* (only distribution differs)
-- **Pigouvian tax:** set $t = $ marginal damage; firms internalize externality
+- **Pigouvian tax:** set $t=$ marginal damage; firms internalize externality
 - **Cap and trade:** issue permits = efficient pollution; market trading achieves efficient allocation regardless of initial allocation (Coase logic)
 
 ::: {.fragment}
@@ -218,27 +172,13 @@ Tax fixes **price**, lets quantity adjust. Cap fixes **quantity**, lets price ad
 
 Non-rival + non-excludable goods.
 
-- **Voluntary contribution:** each agent sets their own $MRS_i = $ price ($= 1$ when public good costs \$1 per unit). Severe under-provision
+- **Voluntary contribution:** each agent sets their own $MRS_i=$ price ($= 1$ when public good costs \$1 per unit). Severe under-provision
 - **Samuelson condition (efficient):** $\sum_i MRS_i = 1$ - sum of willingness-to-pay equals marginal cost
-- **Free-rider problem:** with $N$ symmetric contributors, $G^*/G^{**} = 2/(N+1) \to 0$
-- **Pigouvian-style subsidy:** $s^* = (N-1)/(N+1)$ decentralizes efficiency
+- **Free-rider problem:** each agent wants to benefit from others' contributions without paying. Leads to under-provision of the public good.
 
----
+# Part IV: Game Theory (Lec 10)
 
-## Practice Problem: Public Good Provision
-
-Three neighbors share a small park. Each has income $Y_i = 60$ and contributes $g_i \geq 0$. Total park quality is $G = g_1 + g_2 + g_3$. Utility is $U_i(x_i, G) = x_i \cdot G$ where $x_i = 60 - g_i$. Each unit of $G$ costs \$1.
-
-::: {.incremental}
-- Derive each neighbor's best response $g_i^*(g_{-i})$ and find the symmetric Nash contribution $g_i^*$ and total $G^*$.
-- Find the social optimum $G^{**}$ and equal-private-consumption allocation $x_i^{**}$.
-- Compute $G^*/G^{**}$. What does this tell us about free-riding?
-- Find the subsidy rate $s^*$ on contributions that decentralizes $G^{**}$.
-:::
-
-# Part IV: Game Theory
-
-## Normal-Form Games (Lec 10)
+## Normal-Form Games 
 
 - **Strict dominance:** strategy $s$ strictly dominates $s'$ if $u(s, s_{-i}) > u(s', s_{-i})$ for all $s_{-i}$
 - **Nash equilibrium:** profile $(s_1^*, ..., s_n^*)$ such that no one wants to unilaterally deviate. Each plays best response to others
@@ -250,7 +190,7 @@ Three neighbors share a small park. Each has income $Y_i = 60$ and contributes $
 
 ---
 
-## Sequential Games (Lec 10)
+## Sequential Games
 
 - **Extensive form (game tree):** decision nodes, branches, payoffs at terminals
 - **Backward induction:** solve from the end. At each decision node, the player picks her best action given anticipated future play
@@ -259,38 +199,6 @@ Three neighbors share a small park. Each has income $Y_i = 60$ and contributes $
 
 ::: {.fragment}
 **Entry deterrence:** sunk capacity makes the threat of post-entry aggression credible. Words alone do not.
-:::
-
----
-
-## Repeated Games (Lec 10)
-
-- **Finitely repeated PD:** unique SPE is defect every period (backward induction unravels cooperation)
-- **Infinitely repeated PD with grim trigger:** cooperation sustainable iff $\delta \geq \delta^*$. Critical $\delta^*$ from
-$$\frac{\pi^C}{1 - \delta} \geq \pi^D + \frac{\delta \pi^N}{1 - \delta}$$
-- **Folk theorem:** for $\delta$ high enough, almost any individually rational payoff is supportable in SPE
-
-::: {.fragment}
-**Real-world parallel:** ongoing relationships (firms, countries) have no clear last period - closer to infinite horizon. Cooperation depends on patience and the perceived continuation of the relationship.
-:::
-
----
-
-## Practice Problem: Repeated Prisoner's Dilemma
-
-Two firms play the following stage game in each period:
-
-\begin{center}
-\begin{tabular}{c|cc}
- & B: Cooperate & B: Defect \\ \hline
-A: Cooperate & (4, 4) & (0, 5) \\
-A: Defect & (5, 0) & (1, 1)
-\end{tabular}
-\end{center}
-
-::: {.incremental}
-- Show that (Defect, Defect) is the unique Nash equilibrium of the one-shot game.
-- Suppose the game is repeated infinitely with discount factor $\delta$. Under **grim trigger**, compute the PV of always cooperating and of deviating once. Find the critical $\delta^*$ above which cooperation is sustainable.
 :::
 
 
